@@ -1,0 +1,19 @@
+site:
+  title: ted-rdf-docs
+  start_page: rdf-docs::index.adoc
+content:
+  edit_url: false
+  sources:
+#    - url: https://github.com/OP-TED/ted-rdf-conversion-pipeline.git
+    - url: /mnt/c/Users/user/Desktop/ted-rdf-docs
+      branches:
+      - main
+      start_path: docs/antora
+asciidoc:
+  attributes:
+    page-toclevels: 6@
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./antora/supplemental-ui

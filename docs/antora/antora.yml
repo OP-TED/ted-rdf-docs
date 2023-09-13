@@ -1,0 +1,9 @@
+name: rdf-docs
+version: master
+title: XML to RDF Conversion
+start_page: ROOT:index.adoc
+asciidoc:
+  attributes:
+    page-toclevels: 6@
+nav:
+- modules/ROOT/nav.adoc

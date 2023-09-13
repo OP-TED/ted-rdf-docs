@@ -1,0 +1,9 @@
+
+* xref:index.adoc[Home]
+
+* [.separated]#**General References**#
+** xref:ted-sws-introduction.adoc[About TED-SWS]
+
+* [.separated]#**For End User Developers**#
+** xref:ted_data/using_procurement_data.adoc[Accessing data in Cellar]
+** link:https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement ontology (latest)^]
