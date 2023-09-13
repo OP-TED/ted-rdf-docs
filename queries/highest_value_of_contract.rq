@@ -1,0 +1,28 @@
+# Which is the highest value published for a contract award for a given date?
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+
+SELECT
+?Notice
+?NoticePublicationDate
+?Lot
+?AmmountValue
+?CurrencyCode
+WHERE {
+
+    VALUES ?Date {
+        "20230905"
+    }
+
+    ?Notice epo:hasPublicationDate ?NoticePublicationDate .
+
+    ?Notice epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot .
+    ?LotAwardOutcome epo:hasAwardedValue ?MonetaryValue .
+    ?MonetaryValue a epo:MonetaryValue;
+        epo:hasAmountValue ?AmmountValue;
+        epo:hasCurrency ?CurrencyCode .
+
+}
+ORDER BY DESC(?AmmountValue)
+LIMIT 1

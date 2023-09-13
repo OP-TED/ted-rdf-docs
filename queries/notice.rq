@@ -1,0 +1,7 @@
+# Query notice by id
+
+SELECT * WHERE {
+    graph <http://data.europa.eu/a4g/resource/2023/536107_2023> {
+        ?s ?p ?o .
+    }
+}
