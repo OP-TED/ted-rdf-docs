@@ -1,9 +1,10 @@
+* xref:ted_data/using_procurement_data.adoc[Accessing data in Cellar]
+* xref:repository-structure.adoc[Repository structure]
+* xref:mapping-suite-structure.adoc[Mapping suite anatomy]
+* xref:code-list-resources.adoc[Code list mappings]
+* xref:methodology.adoc[Methodology]
+* xref:cli-toolchain.adoc[Toolchain]
+* xref:preparing-test-data.adoc[Data samples]
+* xref:mapping-priorities.adoc[Mapping priorities]
+* xref:versioning.adoc[Versioning]
 
-* xref:index.adoc[Home]
-
-* [.separated]#**General References**#
-** xref:ted-sws-introduction.adoc[About TED-SWS]
-
-* [.separated]#**For End User Developers**#
-** xref:ted_data/using_procurement_data.adoc[Accessing data in Cellar]
-** link:https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement ontology (latest)^]
