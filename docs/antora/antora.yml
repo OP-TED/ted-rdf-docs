@@ -1,4 +1,4 @@
-name: rdf-docs
+name: ted-rdf-docs
 version: master
 title: XML to RDF Conversion
 start_page: ROOT:index.adoc
