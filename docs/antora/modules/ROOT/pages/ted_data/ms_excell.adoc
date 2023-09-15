@@ -67,4 +67,4 @@ image:user_manual/ms_excell/image6.png[image,width=601,height=464]
 == How to download a Notice file?
 To download a notice file, it is necessary to use the previous query, and in the result that appears, to access the link of the object linked with the object item.
 
-image:user_manual/ms_excell/image7.png[image,width=601,height=464]
+image:user_manual/ms_excell/image7.png[image,width=801,height=464]
