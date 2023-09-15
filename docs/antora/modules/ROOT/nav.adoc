@@ -1,6 +1,6 @@
 .Using TED Data
-** xref:ted_data/jupyter_notebook.adoc[Jupyter notebook]
-** xref:ted_data/ms_excell.adoc[MS Excell]
+** xref:ted_data/jupyter_notebook.adoc[Jupyter Notebook]
+** xref:ted_data/ms_excell.adoc[MS Excel]
 
 .Using Mapping Suites
 ** xref:repository-structure.adoc[Repository structure]
