@@ -1,4 +1,4 @@
-= Mapping Suite Versioning Rules
+== Mapping Suite Versioning Rules
 
 This section presents the versioning rules for mapping suites which considers the mapping suite structure, the conceptual and technical mappings (which impact the structure of the output), and the metadata. These rules play a crucial role in maintaining compatibility and ensuring smooth transitions between different mapping suite versions, especially when considering the potential impact on SPARQL queries on the transformation output.
 
