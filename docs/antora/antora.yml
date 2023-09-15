@@ -1,6 +1,6 @@
 name: ted-rdf-docs
 version: master
-title: XML to RDF Conversion
+title: TED-RDF Conversion Pipeline
 start_page: ROOT:index.adoc
 asciidoc:
   attributes:

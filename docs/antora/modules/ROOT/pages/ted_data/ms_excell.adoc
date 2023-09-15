@@ -38,11 +38,11 @@ SELECT * WHERE {
 
 * Push the “Run Query” button
 
-image:user_manual/ms_excell/image1.png[image,width=407,height=466]
+image:user_manual/ms_excell/image1.png[image,width=607,height=466]
 
 * Copy entire link of the result
 
-image:user_manual/ms_excell/image2.png[image,width=601,height=281]
+image:user_manual/ms_excell/image2.png[image,width=801,height=281]
 
 [arabic, start=2]
 . Access result table via Excel:

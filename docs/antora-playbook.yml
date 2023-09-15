@@ -1,6 +1,6 @@
 site:
   title: ted-rdf-docs
-  start_page: rdf-docs::index.adoc
+  start_page: ted-rdf-docs::index.adoc
 content:
   edit_url: false
   sources:
