@@ -1,5 +1,5 @@
 site:
-  title: ted-rdf-docs
+  title: TED SWS Documentation
   start_page: ted-rdf-docs::index.adoc
 content:
   edit_url: false
