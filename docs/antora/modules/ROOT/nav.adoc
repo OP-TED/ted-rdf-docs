@@ -1,0 +1,10 @@
+.Using TED Data
+** xref:ted_data/jupyter_notebook.adoc[Jupyter Notebook]
+** xref:ted_data/ms_excell.adoc[MS Excel]
+
+.Using Mapping Suites
+** xref:repository-structure.adoc[Repository structure]
+** xref:mapping-suite-structure.adoc[Mapping suite anatomy]
+** xref:code-list-resources.adoc[Code list mappings]
+** xref:preparing-test-data.adoc[Data samples]
+** xref:versioning.adoc[Versioning]

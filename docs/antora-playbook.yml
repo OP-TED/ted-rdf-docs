@@ -1,0 +1,19 @@
+site:
+  title: ted-rdf-docs
+  start_page: ted-rdf-docs::index.adoc
+content:
+  edit_url: false
+  sources:
+    - url: https://github.com/OP-TED/ted-rdf-docs.git
+      branches:
+      - main
+      # Use local path for testing. Example:
+      start_path: docs/antora
+asciidoc:
+  attributes:
+    page-toclevels: 6@
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./antora/supplemental-ui

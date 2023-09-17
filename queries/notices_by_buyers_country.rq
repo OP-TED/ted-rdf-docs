@@ -1,0 +1,21 @@
+# Which notices have been published by Buyers from a specific country for a given date?
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+
+SELECT DISTINCT
+?Notice
+?Organization
+?LegalName
+WHERE {
+    VALUES (?PublicationDate ?countryCode) {
+            ("20230905" <http://publications.europa.eu/resource/authority/country/DEU>)
+    }
+    ?Notice epo:hasPublicationDate ?PublicationDate .
+    ?Notice epo:announcesRole ?Buyer .
+    ?Buyer epo:playedBy ?Organization .
+    ?Organization cccev:registeredAddress / epo:hasCountryCode ?countryCode .
+    ?Organization epo:hasLegalName ?LegalName .
+
+}
