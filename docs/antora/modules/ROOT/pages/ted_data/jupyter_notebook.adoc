@@ -29,9 +29,8 @@ SELECT (COUNT (DISTINCT(?Notice)) as ?NrOfNotices) WHERE {
 To run Python sample:
 
 [arabic]
-. Download Jupyter Notebook file:
+. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_python.ipynb[Download Jupyter Notebook file]
 
-https://github.com/OP-TED/ted-rdf-conversion-pipeline/blob/main/notebooks/query_cellar_python.ipynb[[.underline]#https://github.com/OP-TED/ted-rdf-conversion-pipeline/blob/main/notebooks/query_cellar_python.ipynb#]
 
 [arabic, start=2]
 . Download & Install Python 3.8:
@@ -104,8 +103,7 @@ To run R sample:
 https://cran.r-project.org/bin/windows/base/R-4.2.2-win.exe[[.underline]#download#]
 
 [arabic, start=2]
-. Download Jupyter Notebook file:
-https://github.com/OP-TED/ted-rdf-conversion-pipeline/blob/main/notebooks/query_cellar_R.ipynb[[.underline]#https://github.com/OP-TED/ted-rdf-conversion-pipeline/blob/main/notebooks/query_cellar_R.ipynb#]
+. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_R.ipynb[Download Jupyter Notebook file]
 
 [arabic, start=3]
 . Download SPARQL package archive and put in same folder as Notebook file:

@@ -7,10 +7,10 @@ The users shall use TED specific SPARQL queries to fetch needed data.
 
 == Microsoft Excel
 
-This chapter shows an example of getting data from Cellar using Microsoft Excel.
+This chapter shows an example of getting data from Cellar using Microsoft Excel. You can download https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsx[this sample Ms Excel File], or follow the tutorial below.
 
 [arabic]
-. Prepare link with necessary query:
+. Prepare the link with necessary query:
 
 * Access:
 https://publications.europa.eu/webapi/rdf/sparql[[.underline]#https://publications.europa.eu/webapi/rdf/sparql#]
@@ -36,7 +36,7 @@ SELECT * WHERE {
     FILTER (regex(str(?psi), '/ted/'))
 } order by desc(?lastmodif)
 
-* Push the “Run Query” button
+* Push the “Run Query” button to test that the query is correct.
 
 image:user_manual/ms_excell/image1.png[image,width=607,height=466]
 
