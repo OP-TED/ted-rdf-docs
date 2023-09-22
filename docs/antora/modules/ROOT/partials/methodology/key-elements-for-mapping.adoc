@@ -44,5 +44,6 @@ The output of the XML notice transformation will be an *RDF graph* instantiating
 
 The key element enabling transformation automation are the mapping files: *conceptual* and *technical* mappings. They are developed according to the <<_mapping_creation_method,mapping creation methodology>>.
 
-The mapping rules are organised in mapping suites, described xref:mapping-suite-structure.adoc[here].
+The mapping rules are organised in mapping suites, described xref:mapping_suite/mapping-suite-structure.adoc[here].
+
 

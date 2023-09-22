@@ -1,0 +1,23 @@
+= Getting started
+
+== Who are these docs written for
+
+== Glossary
+
+== Assumptions we make about the skills of the reader
+
+=== Prerequisites
+
+== what the user can achieve through these pages
+
+== Repository structure
+
+== Mapping suite anatomy
+
+== Code list mappings
+
+== Data samples
+
+== Versioning
+
+== References
