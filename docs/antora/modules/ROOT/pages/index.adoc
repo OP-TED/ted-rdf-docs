@@ -37,6 +37,16 @@ format) available on the TED Website into RDF format, publishes them
 into CELLAR and makes them available to the public through CELLAR’s
 SPARQL endpoint.
 
+== Audience
+
+This documentation is written for a wide audience, with different interests in the TED-SWS project, and different levels of expertise Semantic Web, EU e-Procurement and software infrastructure. More specifically this documentation can be of interest to:
+
+- *Semantic Engineers* interested in understanding and writing mappings from XML to RDF, in particular in the EU eProcurement domain;
+- *Software Engineers* interested in integrating mapping suite packages into processing pipelines;
+- *End-Users*, such as *Semantic Web Practitioners* or *Experts in eProcurement Domain*, who are interested in understanding how the RDF representation of the e-procurement notices look like, and how this representation conforms to the eProcurement Ontology (ePO).
+
+== Contents
+
 [.tile-container]
 --
 

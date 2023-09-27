@@ -1,4 +1,4 @@
-= Repository structure
+== Repository structure
 
 Transformation rules and other artefacts for the https://github.com/OP-TED/ted-rdf-conversion-pipeline[TED Semantic Web Services (TED-SWS)] system are organised in https://github.com/OP-TED/ted-rdf-mapping[this repository].
 

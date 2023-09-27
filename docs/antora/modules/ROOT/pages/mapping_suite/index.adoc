@@ -1,15 +1,6 @@
-= What is a Mapping suite?
+= Mapping suite documentation
 
 A *mapping suite* is a set of "mappings" that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which we refer to as a *mapping suite package*.
-
-== Who are these docs written for?
-
-This documentation is written for a wide audience, with different interests in the TED-SWS project, and different levels of expertise Semantic Web, EU e-Procurement and software infrastructure. More specifically this documentation can be of interest to:
-
-- *Semantic Engineers* interested in understanding and writing mappings from XML to RDF, in particular in the EU eProcurement domain;
-- *Software Engineers* interested in integrating mapping suite packages into processing pipelines;
-- *End-Users*, such as *Semantic Web Practitioners* or *Experts in eProcurement Domain*, who are interested in understanding how the RDF representation of the e-procurement notices look like, and how this representation conforms to the eProcurement Ontology (ePO).
-
 
 == Prerequisites
 
@@ -61,10 +52,8 @@ https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas
 == Further readings
 Depending on the interest of the reader the following pages can be explored (in this logical order):
 
-** xref:mapping_suite/ted-sws-introduction.adoc[]
 ** xref:mapping_suite/repository-structure.adoc[GitHub Repository structure]
 ** xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite anatomy]
 ** xref:mapping_suite/code-list-resources.adoc[Code list mappings]
 ** xref:mapping_suite/preparing-test-data.adoc[Data samples]
 ** xref:mapping_suite/versioning.adoc[Versioning]
-** xref:mapping_suite/ [References]

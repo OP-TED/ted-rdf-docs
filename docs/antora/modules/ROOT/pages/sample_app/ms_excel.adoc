@@ -1,4 +1,4 @@
-= Using procurement data
+== MS Excel
 
 This page explains how to use procurement data accessed from *Cellar* with Microsoft Excel. There are different ways to access TED notices in CELLAR
 and use the data. The methods described below work with TED notice and other type of semantic assets.
@@ -25,11 +25,11 @@ NOTE: There is a macros event after editing Query cell. After updating this cell
 [arabic, start=2]
 . After data is updated, in "Response Query" sheet you will find updated table:
 
-.Result query table
+.Query result table
 image::user_manual/ms_excell/image9.png[image,width=907,height=466]
 
 [arabic, start=3]
-. In "Sample analysis" sheet you can find an example of analysis of the result query. Press "Update tables" button to update Pivot tables and plots:
+. In "Sample analysis" sheet you can find an example of analysis of the query result. Press "Update tables" button to update Pivot tables and plots:
 
 .Sample analysis
 image::user_manual/ms_excell/image10.png[image,width=807,height=166]

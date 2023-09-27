@@ -9,8 +9,6 @@
     ** xref:mapping_suite/code-list-resources.adoc[Code list mappings]
     ** xref:mapping_suite/preparing-test-data.adoc[Data samples]
     ** xref:mapping_suite/versioning.adoc[Versioning]
-    ** References
-
 
     * xref:sample_app/index.adoc[Sample application Docs]
     ** xref:sample_app/jupyter_notebook_python.adoc[Python Jupyter Notebook]
