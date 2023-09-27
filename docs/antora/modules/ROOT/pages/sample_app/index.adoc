@@ -4,19 +4,19 @@ A sample application, often referred to as a demo or prototype, is a functional 
 
 == Glossary
 
-* RDF - Stands for Resource Description Framework. RDF is a standardized data model used to represent information on the web. RDF plays a crucial role in TED-SWS because it provides a standardized and structured format for representing the procurement data made available through the service. This allows for efficient querying, processing, and integration of the data into various applications and systems.
+* *RDF* stands for Resource Description Framework. RDF is a standardized data model used to represent information on the web. RDF plays a crucial role in xref:ROOT:index.adoc[TED-SWS] because it provides a standardized and structured format for representing the procurement data made available through the service. This allows for efficient querying, processing, and integration of the data into various applications and systems.
 
-* SPARQL Query - Represents query language used to retrieve and manipulate data stored in RDF (Resource Description Framework) format. RDF is a standard model for representing information on the web, often used for semantic web applications.
+* *SPARQL Query* represents query language used to retrieve and manipulate data stored in RDF format. RDF is a standard model for representing information on the web, often used for semantic web applications.
 
-* Jupyter Notebook - Is an interactive computing environment that allows users to create and share documents containing live code, equations, visualizations, and explanatory text. It's particularly useful for working with data and performing data analysis, making it a valuable tool for accessing and processing data from TED-SWS.
+* *Jupyter Notebook* is an interactive computing environment that allows users to create and share documents containing live code, equations, visualizations, and explanatory text. It's particularly useful for working with data and performing data analysis, making it a valuable tool for xref:ROOT:mapping_suite/index.adoc[accessing and processing] data from TED-SWS.
 
-* Python - A widely used programming language that can be employed to retrieve data and perform various operations on the RDF data provided by TED-SWS.
+* *Python* is a widely used programming language that can be employed to retrieve data and xref:ROOT:sample_app/jupyter_notebook_python.adoc[perform operations] on the RDF data provided by TED-SWS.
 
-* R language - R language refers to a popular programming language and environment specifically relevant for statistical computing, data analysis, and graphical representation that is used to retrieve data, and perform various operations on the RDF data provided by TED-SWS.
+* *R language* refers to a popular programming language and environment specifically relevant for statistical computing, xref:ROOT:sample_app/jupyter_notebook_r.adoc[data analysis], and graphical representation that is used to retrieve and perform operations on the RDF data provided by TED-SWS.
 
-* MS Excel -Refers to Microsoft Excel, which is a widely used spreadsheet program developed by Microsoft used as a versatile tool for handling and analyzing data obtained from TED-SWS.
+* *MS Excel* refers to Microsoft Excel, which is a widely used spreadsheet program developed by Microsoft used as a versatile tool for xref:ROOT:sample_app/ms_excel.adoc[handling and analyzing] data obtained from TED-SWS.
 
-* Code Editor - Refers to a software tool or environment where users can write, edit, and execute code. It allows easily to create scripts or programs to retrieve data from TED-SWS and perform operations on the RDF data.
+* *Code Editor* refers to a software tool or environment where users can write, edit, and execute code. It allows easily to create scripts or programs to retrieve data from TED-SWS and perform operations on the RDF data.
 
 == Prerequisites
 
