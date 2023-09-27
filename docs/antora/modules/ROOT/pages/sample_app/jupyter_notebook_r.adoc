@@ -54,7 +54,8 @@ install.packages('XML')
 [loweralpha, start=2]
 . In appeared window, select first mirror and press OK:
 
-image:user_manual/jupyter_notebook/image4.png[image,width=240,height=309]
+.Secure download mirrors
+image::user_manual/jupyter_notebook/image4.png[image,width=240,height=309]
 
 [loweralpha, start=3]
 . After installation is completed, type:
@@ -67,15 +68,18 @@ IRkernel::installspec()
 
 . Select R interpreter;
 
-image:user_manual/jupyter_notebook/image5.png[image,width=901,height=142]
+.Interpreter selection
+image::user_manual/jupyter_notebook/image5.png[image,width=901,height=142]
 
 
 [arabic, start=7]
 . Run all cells
 
-image:user_manual/jupyter_notebook/image6.png[image,width=502,height=100]
+.Button that runs all cells
+image::user_manual/jupyter_notebook/image6.png[image,width=502,height=100]
 
 [arabic, start=8]
 . After running, after last cell we can see results:
 
-image:user_manual/jupyter_notebook/image7.png[image,width=887,height=211]
+.Result Table
+image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]

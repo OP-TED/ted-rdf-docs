@@ -55,18 +55,18 @@ To run Python sample:
 . Download & Install Python 3.8:
 [loweralpha]
 .. Windows 64bit:
-https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe[[.underline]#download#]
+https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe[[.underline]#download#];
 
 .. Windows 86bit:
-https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe[[.underline]#download#]
+https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe[[.underline]#download#].
 
 . Open Jupyter Notebook file with code editor (VS Code):
 
-. In code editor, select interpreter for Python that was installed
+. In code editor, select interpreter for Python that was installed:
 
-Example in VS Code:
+.Interpreter selection
+image::user_manual/jupyter_notebook/image1.png[image,width=817,height=204]
 
-image:user_manual/jupyter_notebook/image1.png[image,width=817,height=204]
 
 [arabic, start=5]
 . Install dependencies:
@@ -81,10 +81,12 @@ NOTE: After installation, restart kernel to update it with new dependencies.
 [arabic, start=6]
 . Run Cells (example in VS Code):
 
-image:user_manual/jupyter_notebook/image2.png[image,width=801,height=84]
+.Button that runs all cells
+image::user_manual/jupyter_notebook/image2.png[image,width=501,height=84]
 
 [arabic, start=7]
-. If all works good, on last output cell we can see results:
+. If all works good after running all cells (Figure 2), on last output cell we can see results:
 
-image:user_manual/jupyter_notebook/image3.png[image,width=887,height=420]
+.Result table
+image::user_manual/jupyter_notebook/image3.png[image,width=987,height=420]
 

@@ -17,94 +17,18 @@ The following steps show how to insert or update data using sample app:
 
 . Open Excel sheet and add necessary SPARQL query in "Query" sheet:
 
-NOTE: There is a macros event after editing Query cell. After updating this cell, the macros will automatically trigger data updating.
+.Example SPARQL Query
+image::user_manual/ms_excell/image8.png[image,width=807,height=466]
 
-image:user_manual/ms_excell/image8.png[image,width=807,height=466]
+NOTE: There is a macros event after editing Query cell. After updating this cell, the macros will automatically trigger data updating.
 
 [arabic, start=2]
 . After data is updated, in "Response Query" sheet you will find updated table:
 
-image:user_manual/ms_excell/image9.png[image,width=907,height=466]
+.Result query table
+image::user_manual/ms_excell/image9.png[image,width=907,height=466]
 
 . In "Sample analysis" sheet you can find an example of analysis of the result query. Press "Update tables" button to update Pivot tables and plots:
 
-image:user_manual/ms_excell/image10.png[image,width=807,height=466]
-
-
-== Accessing data from web in Microsoft Excel
-
-This chapter shows an example of getting data from Cellar using Microsoft Excel. You can download https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsx[this sample Ms Excel File] and follow the tutorial below.
-
-[arabic]
-. Prepare the link with necessary query:
-
-* Access:
-https://publications.europa.eu/webapi/rdf/sparql[[.underline]#https://publications.europa.eu/webapi/rdf/sparql#]
-
-* Insert query
-
-Example query:
-[source, sparql]
-PREFIX epo: <http://data.europa.eu/a4g/ontology#>
-PREFIX org: <http://www.w3.org/ns/org#>
-PREFIX cccev: <http://data.europa.eu/m8g/>
-select distinct
-?Lot
-?Winner
-?WinnerCountryCode
-?LotAwardetAmountValue
-?LotAwardetValueCurrency
-where {
-    values ?NoticePublicationDate {
-       "20230921"
-    }
-    ?NoticeId a epo:ResultNotice;
-                   epo:hasPublicationDate ?NoticePublicationDate;
-                   epo:refersToLot ?Lot.
-    ?Lot a epo:Lot.
-    ?LotAwardOutcome epo:describesLot ?Lot;
-                   a epo:LotAwardOutcome;
-                   epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
-    ?TenderAwardOutcome a epo:TenderAwardOutcome;
-                          epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
-    ?Winner a org:Organization.
-    optional {
-        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
-    }
-    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardetValue.
-    ?LotAwardetValue a epo:MonetaryValue;
-                epo:hasAmountValue ?LotAwardetAmountValue;
-                epo:hasCurrency ?LotAwardetValueCurrency.
-}
-
-* Push the “Run Query” button to test that the query is correct.
-
-image:user_manual/ms_excell/image1.png[image,width=607,height=466]
-
-* Copy entire link of the result
-
-image:user_manual/ms_excell/image2.png[image,width=801,height=281]
-
-[arabic, start=2]
-. Access result table via Excel:
-
-* Click on Data -> From Web button
-
-
-image:user_manual/ms_excell/image3.png[image,width=601,height=264]
-
-* In appeared window insert result link then press OK:
-
-image:user_manual/ms_excell/image4.png[image,width=601,height=320]
-
-* In result window select necessary table, press Connect:
-
-image:user_manual/ms_excell/image5.png[image,width=601,height=464]
-
-* In result window select necessary table, press load:
-
-image:user_manual/ms_excell/image6.png[image,width=601,height=464]
-
-TIP: To download a notice file, it is necessary to use the previous query, and in the result that appears, to access the link of the object linked with the object item.
-
-image:user_manual/ms_excell/image7.png[image,width=801,height=464]
+.Sample analysis
+image::user_manual/ms_excell/image10.png[image,width=807,height=466]
