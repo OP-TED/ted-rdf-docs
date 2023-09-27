@@ -13,7 +13,7 @@ This documentation is written for a wide audience, with different interests in t
 
 == Prerequisites
 
-To allow for a proper understanding of this documentation, the reader should have a basic level of familiarity with the following topics:
+To allow for a proper understanding of the Mapping Suite Documentation, the reader should have a basic level of familiarity with the following topics:
 
 - RDF
 - RML
@@ -24,19 +24,21 @@ To allow for a proper understanding of this documentation, the reader should hav
 
 == Glossary
 
-- [[gloss:cm]] *Conceptual Mapping*, often abbreviated as *CM*, is a more abstract level mapping of XPaths identifying XML elements to ePO classes and properties that need to be instantiated in the output RDF graph
+- [[gloss:cm]] *Conceptual Mapping*, often abbreviated as *CM*, is an abstract level mapping of XPaths, which identify certain XML elements, to those ePO classes and properties that need to be instantiated in the output RDF graph
 
 - [[gloss:mapping_package]] *Mapping package*, see xref:gloss:ms_package[*Mapping suite package*]
 
-- [[gloss:ms_package]] *Mapping suite package* is a collection of files organized in a tree of folders, containing the conceptual mapping (CM), the technical mapping (TM)
+- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organized in folders, containing the conceptual mapping (CM), the technical mappings, the test data sample, the output of
 
 - [[gloss:package]] *Package*, often used as a short name for xref:gloss:ms_package[*Mapping suite package*]
 
-- [[gloss:rml]] *RML* or *RDF Mapping Language* is a
+- [[gloss:rml]] *RML*, or the *RDF Mapping Language* is a
 
-- [[gloss:tm]] *Technical Mapping* , often abbreviated as *TM*, is
+- [[gloss:tm]] *Technical Mapping*, often abbreviated as *TM*, is
 
--
+- [[gloss:ted]] *Tenders Electronic Daily (TED)*, is an online portal that publishes hundreds of thousands of public procurement notices per year.  A cornerstone of European public procurement, TED helps economic operators find business opportunities from around the EU.
+
+- [[gloss:test_data]] *Test data* - a carefully selected, representative sample of real notices published on TED, which cover all the different XPaths that can appear in the entire set of Public Procurement data of a certain type.
 
 
 == Further readings
