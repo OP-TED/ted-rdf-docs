@@ -13,33 +13,50 @@ This documentation is written for a wide audience, with different interests in t
 
 == Prerequisites
 
-To allow for a proper understanding of the Mapping Suite Documentation, the reader should have a basic level of familiarity with the following topics:
+To allow for a proper understanding of the Mapping Suite Documentation, the reader should have:
 
-- RDF
-- RML
-- ePO
-- eProcurement process
-- ...
+Knowledge of Semantic Web Technologies:: A good understanding of Semantic Web concepts and technologies is crucial. This includes knowledge of RDF triples, ontologies, and linked data principles.
 
+Understanding of RDF, RML and SPARQL:: Familiarity with RDF (Resource Description Framework) and the RML (the RDF Mapping Language) is important, while experience with SPARQL (SPARQL Protocol and RDF Query Language) is highly beneficial. TED-SWS provides data in RDF format and utilizes SPARQL for querying.
+
+Understanding of EU Procurement Data and Familiarity with ePO:: If your goal is to understand how the mappings are used to transform specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts, and the associated https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].
+
+Familiarity with Spreadsheet editing tools:: Since most of the Conceptual mappings is done in spreadsheet working experience with spreadsheet editing tools such as MS Excel or Google Sheets, is desirable.
 
 == Glossary
 
-- [[gloss:cm]] *Conceptual Mapping*, often abbreviated as *CM*, is an abstract level mapping of XPaths, which identify certain XML elements, to those ePO classes and properties that need to be instantiated in the output RDF graph
+- [[gloss:cm]] *Conceptual Mapping*, often abbreviated as *CM*, is an abstract level mapping of XPaths in the input data to those ePO classes that need to be instantiated and properties are used to link the instances in the output RDF graph
 
-- [[gloss:mapping_package]] *Mapping package*, see xref:gloss:ms_package[*Mapping suite package*]
+- [[gloss:epo]] *eProcurement Ontology (ePO)* is an ontology that defines the concepts and relations that are needed to fully describe the eProcurement domain of the EU. For more information check out the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology Documentation].
 
-- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organized in folders, containing the conceptual mapping (CM), the technical mappings, the test data sample, the output of
+- [[gloss:eForm]] *eForms* is the notification standard for public procurement procedures in the EU. For more information on this, see the https://docs.ted.europa.eu/eforms/latest/index.html[eForms SDK documentation]
 
-- [[gloss:package]] *Package*, often used as a short name for xref:gloss:ms_package[*Mapping suite package*]
+- [[gloss:form]] *Form* - To enable the publishing of the EU public procurement data in the Official Journal, the European Commission has created standard forms aligned with each of the EU legal bases in place for publishing this data, namely: the *TED schema forms* set out in Regulation (EU) 2015/1986, and the *eForms* set out in Regulation (EU) 2019/1780. In this documentation the term "form", if not otherwise specified, will refer to xref:gloss:stdForm[Standard Form]
 
-- [[gloss:rml]] *RML*, or the *RDF Mapping Language* is a
+- [[gloss:mapping_package]] *Mapping package* - see xref:gloss:ms_package[*Mapping suite package*]
 
-- [[gloss:tm]] *Technical Mapping*, often abbreviated as *TM*, is
+- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organized in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some xref:gloss:test_data[test data], the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref::mapping_suite/mapping-suite-structure.adoc[Mapping Suite Structure].
 
-- [[gloss:ted]] *Tenders Electronic Daily (TED)*, is an online portal that publishes hundreds of thousands of public procurement notices per year.  A cornerstone of European public procurement, TED helps economic operators find business opportunities from around the EU.
+- [[gloss:notice]] *Notice*, short for *public procurement notice*, refers to a procurement notice published on xref:gloss:ted[TED]. To explore some of these notices please visit: https://ted.europa.eu/TED/
 
-- [[gloss:test_data]] *Test data* - a carefully selected, representative sample of real notices published on TED, which cover all the different XPaths that can appear in the entire set of Public Procurement data of a certain type.
+- [[gloss:package]] *Package* - often used as a short name for xref:gloss:ms_package[*Mapping suite package*]
 
+- [[gloss:rml]] *RDF Mapping Language (RML)* is a generic mapping language defined to express customized mapping rules from heterogeneous data structures and serializations to the RDF data model. RML is defined as a superset of the W3C-standardized mapping language [R2RML] and follows exactly the same syntax as https://www.w3.org/TR/r2rml/[R2RML]; therefore, RML mappings are themselves RDF graphs. For more information on RML, please see https://rml.io/specs/rml/.
+
+- *Standard Form* - see xref:gloss:stdForm[TED Standard Form]
+
+- [[gloss:tm]] *Technical Mapping*, often abbreviated as *TM*, is set of RML rules that can be used to transform notice XML, into its which are split in multiple reusable modules that can be combined to represent a full RML
+
+- [[gloss:ted]] *Tenders Electronic Daily (TED)*, is an online portal that publishes hundreds of thousands of public procurement notices per year.  A cornerstone of European public procurement, TED helps economic operators find business opportunities from around the EU. For more information see: https://ted.europa.eu/TED/main/HomePage.do
+
+- [[gloss:stdForm]] *TED Standard Form* or *TED schema forms* refers to the "TED Standard forms for public procurement" described here: https://simap.ted.europa.eu/en_GB/web/simap/standard-forms-for-public-procurement. These forms are numbered F01-F08, F12-F25 and T01-T02, and must conform to a specific version the xref:gloss:xsd[TED XML Schema].
+
+- [[gloss:xsd]] *TED XML schema* refers to the XML schema (XSD) specified for validating the notices that are published according to the Regulation (EU) 2015/1986. For a full documentation of the various XSD schemas, and their versions, please check out:
+https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas
+
+- [[gloss:test_data]] *Test data* - a carefully selected, representative sample of real notices published on TED, which, together, cover all the different XPaths that can appear in the entire set of Public Procurement Data (PPD) of a certain type (i.e. created based on a specific Form, specific XSD version), and published in a certain date range. For more detailed documentation, please check out the xref:mapping_suite/preparing-test-data.adoc[] section
+
+- [[gloss:xpath]] *XPath* - the XML Path Language (XPath) Version 1.0. See https://www.w3.org/TR/xpath-10/
 
 == Further readings
 Depending on the interest of the reader the following pages can be explored (in this logical order):
