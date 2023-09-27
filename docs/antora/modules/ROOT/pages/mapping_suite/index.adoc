@@ -1,23 +1,51 @@
-= Getting started
+= What is a Mapping suite?
 
-== Who are these docs written for
+A *mapping suite* is a set of "mappings" that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which we refer to as a *mapping suite package*.
+
+== Who are these docs written for?
+
+This documentation is written for a wide audience, with different interests in the TED-SWS project, and different levels of expertise Semantic Web, EU e-Procurement and software infrastructure. More specifically this documentation can be of interest to:
+
+- *Semantic Engineers* interested in understanding and writing mappings from XML to RDF, in particular in the EU eProcurement domain;
+- *Software Engineers* interested in integrating mapping suite packages into processing pipelines;
+- *End-Users*, such as *Semantic Web Practitioners* or *Experts in eProcurement Domain*, who are interested in understanding how the RDF representation of the e-procurement notices look like, and how this representation conforms to the eProcurement Ontology (ePO).
+
+
+== Prerequisites
+
+To allow for a proper understanding of this documentation, the reader should have a basic level of familiarity with the following topics:
+
+- RDF
+- RML
+- ePO
+- eProcurement process
+- ...
+
 
 == Glossary
 
-== Assumptions we make about the skills of the reader
+- [[gloss:cm]] *Conceptual Mapping*, often abbreviated as *CM*, is a more abstract level mapping of XPaths identifying XML elements to ePO classes and properties that need to be instantiated in the output RDF graph
 
-=== Prerequisites
+- [[gloss:mapping_package]] *Mapping package*, see xref:gloss:ms_package[*Mapping suite package*]
 
-== what the user can achieve through these pages
+- [[gloss:ms_package]] *Mapping suite package* is a collection of files organized in a tree of folders, containing the conceptual mapping (CM), the technical mapping (TM)
 
-== Repository structure
+- [[gloss:package]] *Package*, often used as a short name for xref:gloss:ms_package[*Mapping suite package*]
 
-== Mapping suite anatomy
+- [[gloss:rml]] *RML* or *RDF Mapping Language* is a
 
-== Code list mappings
+- [[gloss:tm]] *Technical Mapping* , often abbreviated as *TM*, is
 
-== Data samples
+-
 
-== Versioning
 
-== References
+== Further readings
+Depending on the interest of the reader the following pages can be explored (in this logical order):
+
+** xref:mapping_suite/ted-sws-introduction.adoc[]
+** xref:mapping_suite/repository-structure.adoc[GitHub Repository structure]
+** xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite anatomy]
+** xref:mapping_suite/code-list-resources.adoc[Code list mappings]
+** xref:mapping_suite/preparing-test-data.adoc[Data samples]
+** xref:mapping_suite/versioning.adoc[Versioning]
+** xref:mapping_suite/ [References]
