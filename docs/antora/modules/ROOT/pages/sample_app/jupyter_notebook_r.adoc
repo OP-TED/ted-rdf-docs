@@ -10,20 +10,39 @@ the cellar and display the results in tabular form.
 
 Example query:
 
-**How many contractors are SMEs for a given country and given date?**
+**Who are the contract winners for a given date?**
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
-SELECT (COUNT (DISTINCT(?Notice)) as ?NrOfNotices) WHERE {
-    ?Notice epo:hasPublicationDate ?Date .
-    ?Notice epo:announcesRole ?Buyer .
-    ?Buyer epo:playedBy ?Organization .
-    ?Oganization epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/sme> .
-    ?Organization cccev:registeredAddress / epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/DEU> .
-    VALUES ?Date {
-        "20230905" "20230906"
+select distinct
+?Lot
+?Winner
+?WinnerCountryCode
+?LotAwardetAmountValue
+?LotAwardetValueCurrency
+where {
+    values ?NoticePublicationDate {
+       "20230921"
     }
+    ?NoticeId a epo:ResultNotice;
+                   epo:hasPublicationDate ?NoticePublicationDate;
+                   epo:refersToLot ?Lot.
+    ?Lot a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?Lot;
+                   a epo:LotAwardOutcome;
+                   epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                          epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization.
+    optional {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardetValue.
+    ?LotAwardetValue a epo:MonetaryValue;
+                epo:hasAmountValue ?LotAwardetAmountValue;
+                epo:hasCurrency ?LotAwardetValueCurrency.
 }
 
 To run R sample:

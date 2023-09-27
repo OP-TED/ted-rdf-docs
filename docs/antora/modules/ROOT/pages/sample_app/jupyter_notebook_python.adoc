@@ -10,7 +10,7 @@ form.
 
 Example query:
 
-**Who are the winners for a given date?**
+**Who are the contract winners for a given date?**
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>

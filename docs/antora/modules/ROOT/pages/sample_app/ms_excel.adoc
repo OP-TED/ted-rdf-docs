@@ -18,7 +18,7 @@ The following steps show how to insert or update data using sample app:
 . Open Excel sheet and add necessary SPARQL query in "Query" sheet:
 
 .Example SPARQL Query
-image::user_manual/ms_excell/image8.png[image,width=807,height=466]
+image::user_manual/ms_excell/image8.png[image,width=507,height=466]
 
 NOTE: There is a macros event after editing Query cell. After updating this cell, the macros will automatically trigger data updating.
 
@@ -28,7 +28,8 @@ NOTE: There is a macros event after editing Query cell. After updating this cell
 .Result query table
 image::user_manual/ms_excell/image9.png[image,width=907,height=466]
 
+[arabic, start=3]
 . In "Sample analysis" sheet you can find an example of analysis of the result query. Press "Update tables" button to update Pivot tables and plots:
 
 .Sample analysis
-image::user_manual/ms_excell/image10.png[image,width=807,height=466]
+image::user_manual/ms_excell/image10.png[image,width=807,height=166]
