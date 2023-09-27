@@ -1,27 +1,24 @@
 * xref:index.adoc[Home]
-    ** What is TED SWS
-    ** What is sample app?
-    ** What is mapping?
-    ** How to use TED SWS
-    ** What y’ll find in this documentation
-    ** How to contribute to TED SWS
 
-* xref:mapping_suite/index.adoc[Mapping Suites]
+* [.separated]#**Mapping Suite**#
+    * Mapping Suite Docs
     ** Getting started
     ** Who are these docs written for
     ** Glossary
     ** Assumptions we make about the skills of the reader
         *** Prerequisites
     ** what the user can achieve through these pages
-    ** xref:mapping_suite/repository-structure.adoc[Repository structure]
-    ** xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite anatomy]
-    ** xref:mapping_suite/code-list-resources.adoc[Code list mappings]
-    ** xref:mapping_suite/preparing-test-data.adoc[Data samples]
-    ** xref:mapping_suite/versioning.adoc[Versioning]
-    ** References
+    * xref:mapping_suite/repository-structure.adoc[Repository structure]
+    * xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite anatomy]
+    * xref:mapping_suite/code-list-resources.adoc[Code list mappings]
+    * xref:mapping_suite/preparing-test-data.adoc[Data samples]
+    * xref:mapping_suite/versioning.adoc[Versioning]
+    * References
 
-* xref:sample_app/index.adoc[TED Data Sample application]
-    ** xref:sample_app/jupyter_notebook.adoc[Jupyter Notebook]
-    ** xref:sample_app/ms_excell.adoc[MS Excel]
+* [.separated]#**Sample application**#
+* xref:sample_app/index.adoc[Sample application Docs]
+* xref:sample_app/jupyter_notebook_python.adoc[Python Jupyter Notebook]
+* xref:sample_app/jupyter_notebook_r.adoc[R Jupyter Notebook]
+* xref:sample_app/ms_excel.adoc[MS Excel]
 
 

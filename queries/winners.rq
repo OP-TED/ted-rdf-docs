@@ -1,0 +1,33 @@
+# Who are the winners for a given date?
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+select distinct
+?Lot
+?Winner
+?WinnerCountryCode
+?LotAwardetAmountValue
+?LotAwardetValueCurrency
+where {
+    values ?NoticePublicationDate {
+       "20230921"
+    }
+    ?NoticeId a epo:ResultNotice;
+                   epo:hasPublicationDate ?NoticePublicationDate;
+                   epo:refersToLot ?Lot.
+    ?Lot a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?Lot;
+                   a epo:LotAwardOutcome;
+                   epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                          epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization.
+    optional {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardetValue.
+    ?LotAwardetValue a epo:MonetaryValue;
+                epo:hasAmountValue ?LotAwardetAmountValue;
+                epo:hasCurrency ?LotAwardetValueCurrency.
+}

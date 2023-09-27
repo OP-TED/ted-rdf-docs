@@ -1,22 +1,23 @@
-= TED-RDF Conversion Pipeline Documentation
+= Documentation for End Users
 
-The TED-RDF Conversion Pipeline, is part of the TED Semantic Web Services (TED-SWS system) and provides tools an infrastructure to convert TED notices available in XML format into RDF. This conversion pipeline is designed to work with the https://docs.ted.europa.eu/rdf-mapping/index.html[TED-SWS Mapping Suites] - self containing packages with transformation rules and resources.
+[.tile-container]
+--
 
-== What is TED SWS
+[.tile]
+.Mapping Suite
+****
+The TED-RDF Mappings are mainly the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED Semantic Web Services, aka TED-SWS system) to convert TED notices available in XML format to RDF.
 
-
-== What is sample app?
-
-
-== What is mapping?
-
-
-== How to use TED SWS
+<<ted-rdf-docs:ROOT:mapping_suite/index.adoc#, Read the docs>>
+****
 
 
-== What y’ll find in this documentation
+[.tile]
+.Sample application
+****
+Sample application represents a set of examples that shows how to interact with TED-SWS Data using tools like Python, R or Excel.
 
+<<ted-rdf-docs:ROOT:sample_app/index.adoc#, Read the docs>>
+****
 
-== How to contribute to TED SWS
-
-
+--
