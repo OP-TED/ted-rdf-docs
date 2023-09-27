@@ -48,44 +48,44 @@ where {
 To run Python sample:
 
 [arabic]
-. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_python.ipynb[Download Jupyter Notebook file]
+. Download Jupyter Notebook https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_python.ipynb[[.underline]#file#]
 
 
 [arabic, start=2]
-. Download & Install Python 3.8:
+. Download & Install Python 3.8
 [loweralpha]
 .. Windows 64bit:
-https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe[[.underline]#download#];
+https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe[[.underline]#download#]
 
 .. Windows 86bit:
-https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe[[.underline]#download#].
+https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe[[.underline]#download#]
 
-. Open Jupyter Notebook file with code editor (VS Code):
+. Open the Jupyter Notebook file with the code editor
 
-. In code editor, select interpreter for Python that was installed:
+. In the code editor, select the Python interpreter that was installed in the previous step
 
 .Interpreter selection
 image::user_manual/jupyter_notebook/image1.png[image,width=817,height=204]
 
 
 [arabic, start=5]
-. Install dependencies:
+. Install dependencies
 
-* Use OS command line and type:
+* Use OS command line and run the following command
 
 [source, python]
 pip3 install sparqlwrapper pandas Jinja2 matplotlib
 
-NOTE: After installation, restart kernel to update it with new dependencies.
+NOTE: After installation, restart kernel from Jupyter Notebook to update it with new dependencies. This can be done by clicking on the "Restart" button in your code editor.
 
 [arabic, start=6]
-. Run Cells (example in VS Code):
+. Run all Jupyter Notebook Cells
 
 .Button that runs all cells
 image::user_manual/jupyter_notebook/image2.png[image,width=501,height=84]
 
 [arabic, start=7]
-. If all works good after running all cells (Figure 2), on last output cell we can see results:
+. After running successfully all the cells in the Jupyter Notebook, we can see the result table
 
 .Result table
 image::user_manual/jupyter_notebook/image3.png[image,width=987,height=420]

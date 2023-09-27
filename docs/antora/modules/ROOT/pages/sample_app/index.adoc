@@ -18,6 +18,8 @@ A sample application, often referred to as a demo or prototype, is a functional 
 
 * *Code Editor* refers to a software tool or environment where users can write, edit, and execute code. It allows easily to create scripts or programs to retrieve data from TED-SWS and perform operations on the RDF data.
 
+* *Jupyter Notebook Kernel* refers to the computational engine that executes the code within a Jupyter Notebook. It determines which programming language is used to run the code in the notebook. For example, if you're working with TED-SWS in a Jupyter Notebook, you might choose to use a Python kernel, which means that you'll be writing and executing Python code.
+
 == Prerequisites
 
 To use TED-SWS sample apps, you'll need the following prerequisites:
