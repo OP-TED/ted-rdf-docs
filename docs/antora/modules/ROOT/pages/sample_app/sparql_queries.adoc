@@ -1,0 +1,133 @@
+== SPARQL Query examples
+
+In the context of TED-SWS, SPARQL queries refer to a specialized query language designed for retrieving and manipulating data stored in RDF (Resource Description Framework) format. SPARQL stands for SPARQL Protocol and RDF Query Language. It allows users to express complex queries to retrieve specific information from RDF datasets. In this document we will explain examples of queries to respond to some business questions.
+
+
+=== BQ 1. How many contractors are SMEs for a given country and given date?
+
+[source,sparql]
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+SELECT COUNT DISTINCT(?Notice) WHERE {
+    VALUES (?PublicationDate ?countryCode ?businessSize) {
+            ("20230905"
+            <http://publications.europa.eu/resource/authority/country/DEU>
+            <http://publications.europa.eu/resource/authority/economic-operator-size/sme>)
+    }
+    ?Notice epo:hasPublicationDate ?NoticePublicationDate .
+    ?Notice epo:announcesRole ?Buyer .
+    ?Buyer epo:playedBy ?Organization .
+    ?Oganization epo:hasBusinessSize ?businessSize .
+    ?Organization cccev:registeredAddress / epo:hasCountryCode ?countryCode .
+}
+
+This SPARQL query aims to count the number of distinct procurement notices that meet specific criteria related to publication date, country code (Germany), and business size (SME).
+
+
+=== BQ 2. Which notices have been published by Buyers from a specific country for a given date?
+
+[source,sparql]
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+SELECT DISTINCT
+?Notice
+?Organization
+?LegalName
+WHERE {
+    VALUES (?PublicationDate ?countryCode) {
+            ("20230905" <http://publications.europa.eu/resource/authority/country/DEU>)
+    }
+    ?Notice epo:hasPublicationDate ?PublicationDate .
+    ?Notice epo:announcesRole ?Buyer .
+    ?Buyer epo:playedBy ?Organization .
+    ?Organization cccev:registeredAddress / epo:hasCountryCode ?countryCode .
+    ?Organization epo:hasLegalName ?LegalName .
+}
+
+This SPARQL query aims to retrieve distinct procurement notices that have been published by buyers from a specific country (Germany) on a specific date ("20230905" or 05-09-2023). It does so by specifying a set of values and then querying the RDF data based on those values. The query returns information about the notices, the organizations (buyers), and their legal names.
+
+
+=== BQ 3. Who are the winners for a given date?
+
+[source,sparql]
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+select distinct
+?Lot
+?Winner
+?WinnerCountryCode
+?LotAwardetAmountValue
+?LotAwardetValueCurrency
+where {
+    values ?NoticePublicationDate {
+       "20230921"
+    }
+    ?NoticeId a epo:ResultNotice;
+                   epo:hasPublicationDate ?NoticePublicationDate;
+                   epo:refersToLot ?Lot.
+    ?Lot a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?Lot;
+                   a epo:LotAwardOutcome;
+                   epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                          epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization.
+    optional {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardetValue.
+    ?LotAwardetValue a epo:MonetaryValue;
+                epo:hasAmountValue ?LotAwardetAmountValue;
+                epo:hasCurrency ?LotAwardetValueCurrency.
+}
+
+This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
+
+=== BQ 4. Which is the highest value published for a contract award for a given date?
+
+[source,sparql]
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+SELECT
+?Notice
+?NoticePublicationDate
+?Lot
+?AmmountValue
+?CurrencyCode
+WHERE {
+    VALUES ?Date {
+        "20230905"
+    }
+    ?Notice epo:hasPublicationDate ?NoticePublicationDate .
+    ?Notice epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot .
+    ?LotAwardOutcome epo:hasAwardedValue ?MonetaryValue .
+    ?MonetaryValue a epo:MonetaryValue;
+        epo:hasAmountValue ?AmmountValue;
+        epo:hasCurrency ?CurrencyCode .
+}
+ORDER BY DESC(?AmmountValue)
+LIMIT 1
+
+This SPARQL query aims to retrieve the procurement notice, its publication date, the corresponding lot, and the highest awarded amount along with the currency code for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the date and then querying the RDF data based on that value. The query returns the information in descending order of the awarded amount, with only the highest value being displayed.
+
+NOTE: Other examples of SPARQL queries can be found https://github.com/OP-TED/ted-rdf-docs/tree/main/queries[here].
+
+== Querying data using Virtuoso SPARQL Endpoint
+
+Virtuoso SPARQL Endpoint refers to a specific type of web service provided by Virtuoso, which is a high-performance, scalable, and feature-rich RDF database and SPARQL query engine. It provides a means to interact with the RDF data representing TED notices, allowing users to perform advanced querying and analysis tasks on the procurement information available in the system. It can be accessed https://publications.europa.eu/webapi/rdf/sparql[here].
+
+The following instruction explains how to query Virtuoso SPARQL Query Endpoint using a query from the examples above:
+
+. Copy an example of query and access Virtuoso SPARQL Query endpoint Webpage
+
+. As shown in _Figure 1_, Insert the query in the "Query Text" box and press "Run Query" button
+
+.Querying TED-SWS data using Virtuoso SPARQL Query endpoint
+image::user_manual/sparql_queries/image1.png[image,width=601,height=84]
+
+The result of the query is displayed as a data table (_Figure 2_).
+
+.Query result table
+image::user_manual/sparql_queries/image2.png[image,width=801,height=84]

@@ -1,4 +1,4 @@
-=== Resources for Code List Mappings
+== Resources for Code List Mappings
 
 The table below provides a list of resources that are used to map the various code lists used in the XML files to URIs in the RDF representation.
 

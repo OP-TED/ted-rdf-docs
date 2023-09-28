@@ -1,6 +1,6 @@
 name: ted-rdf-docs
 version: master
-title: TED-RDF Conversion Pipeline
+title: TED-SWS documentation
 start_page: ROOT:index.adoc
 asciidoc:
   attributes:

@@ -1,0 +1,92 @@
+== Jupyter Notebook - Python
+
+This document shows an example using the Jupyter Notebook in Python. The
+Jupyter Notebook is an application for creating and sharing
+computational documents. Python represents a programming language for
+writing computational documents. To realize the proposed scenario, it is
+necessary to install the special tools and use the Python code that will
+perform a query to the cellar and display the results in tabular
+form.
+
+Example query:
+
+**Who are the contract winners for a given date?**
+
+[source,sparql]
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+select distinct
+?Lot
+?Winner
+?WinnerCountryCode
+?LotAwardetAmountValue
+?LotAwardetValueCurrency
+where {
+    values ?NoticePublicationDate {
+       "20230921"
+    }
+    ?NoticeId a epo:ResultNotice;
+                   epo:hasPublicationDate ?NoticePublicationDate;
+                   epo:refersToLot ?Lot.
+    ?Lot a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?Lot;
+                   a epo:LotAwardOutcome;
+                   epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                          epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization.
+    optional {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardetValue.
+    ?LotAwardetValue a epo:MonetaryValue;
+                epo:hasAmountValue ?LotAwardetAmountValue;
+                epo:hasCurrency ?LotAwardetValueCurrency.
+}
+
+To run the sample application using Python language follow the steps below:
+
+[arabic]
+. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_python.ipynb[Download Jupyter Notebook ]
+
+
+[arabic, start=2]
+. Download & Install Python 3.8
+[loweralpha]
+.. Windows 64bit:
+https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe[[.underline]#download#]
+
+.. Windows 86bit:
+https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe[[.underline]#download#]
+
+. Open the Jupyter Notebook file with the code editor
+
+. In the code editor, select the Python interpreter that was installed in the previous step
+
+.Interpreter selection
+image::user_manual/jupyter_notebook/image1.png[image,width=817,height=204]
+
+
+[arabic, start=5]
+. Install dependencies
+
+* Use OS command line and run the following command
+
+[source, python]
+pip3 install sparqlwrapper pandas Jinja2 matplotlib
+
+NOTE: After installation, restart kernel from Jupyter Notebook to update it with new dependencies. This can be done by clicking on the "Restart" button in your code editor.
+
+[arabic, start=6]
+. Run all Jupyter Notebook Cells
+
+.Button that runs all cells
+image::user_manual/jupyter_notebook/image2.png[image,width=501,height=84]
+
+[arabic, start=7]
+. After running successfully all the cells in the Jupyter Notebook, we can see the result table
+
+.Result table
+image::user_manual/jupyter_notebook/image3.png[image,width=987,height=420]
+
