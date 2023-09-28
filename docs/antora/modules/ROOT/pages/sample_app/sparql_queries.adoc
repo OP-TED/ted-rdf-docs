@@ -112,22 +112,22 @@ LIMIT 1
 
 This SPARQL query aims to retrieve the procurement notice, its publication date, the corresponding lot, and the highest awarded amount along with the currency code for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the date and then querying the RDF data based on that value. The query returns the information in descending order of the awarded amount, with only the highest value being displayed.
 
-NOTE: Other examples of queries can be found https://github.com/OP-TED/ted-rdf-docs/tree/main/queries[here].
+NOTE: Other examples of SPARQL queries can be found https://github.com/OP-TED/ted-rdf-docs/tree/main/queries[here].
 
 == Querying data using Virtuoso SPARQL Endpoint
 
 Virtuoso SPARQL Endpoint refers to a specific type of web service provided by Virtuoso, which is a high-performance, scalable, and feature-rich RDF database and SPARQL query engine. It provides a means to interact with the RDF data representing TED notices, allowing users to perform advanced querying and analysis tasks on the procurement information available in the system. It can be accessed https://publications.europa.eu/webapi/rdf/sparql[here].
 
-The following instruction explains how to query Virtuoso SPARQL Query Endpoint using query from examples:
+The following instruction explains how to query Virtuoso SPARQL Query Endpoint using a query from the examples above:
 
 . Copy an example of query and access Virtuoso SPARQL Query endpoint Webpage
 
-. As shown in _Figure 1_, Insert query in "Query Text" and press "Run Query"
+. As shown in _Figure 1_, Insert the query in the "Query Text" box and press "Run Query" button
 
-.Querying TED-SWS using Virtuoso SPARQL Query endpoint
+.Querying TED-SWS data using Virtuoso SPARQL Query endpoint
 image::user_manual/sparql_queries/image1.png[image,width=601,height=84]
 
-As a result will show a table with data (_Figure 2_) depending on query that was inserted.
+The result of the query is displayed as a data table (_Figure 2_).
 
-.Result table
+.Query result table
 image::user_manual/sparql_queries/image2.png[image,width=801,height=84]
