@@ -45,10 +45,10 @@ where {
                 epo:hasCurrency ?LotAwardetValueCurrency.
 }
 
-To run Python sample:
+To run the sample application using Python language follow the steps below:
 
 [arabic]
-. Download Jupyter Notebook https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_python.ipynb[[.underline]#file#]
+. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_python.ipynb[Download Jupyter Notebook ]
 
 
 [arabic, start=2]

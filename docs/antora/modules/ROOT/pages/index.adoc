@@ -1,4 +1,4 @@
-= Documentation for End Users
+= TED-SWS End-User Documentation
 
 Although TED notice data is already available to the general public
 through the search API provided by the TED website, the current offering

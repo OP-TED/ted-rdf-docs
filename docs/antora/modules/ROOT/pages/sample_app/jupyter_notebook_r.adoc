@@ -45,26 +45,22 @@ where {
                 epo:hasCurrency ?LotAwardetValueCurrency.
 }
 
-To run R sample:
+To run the sample application using R language follow the steps below:
 
 [arabic]
-. Install & install R language:
-
-* Windows 64bit:
-https://cran.r-project.org/bin/windows/base/R-4.2.2-win.exe[[.underline]#download#]
+. https://cran.r-project.org/bin/windows/base/R-4.3.1-win.exe[Download] & install R language.
 
 [arabic, start=2]
-. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_R.ipynb[Download Jupyter Notebook file]
+. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_R.ipynb[Download Jupyter Notebook file].
 
 [arabic, start=3]
-. Download SPARQL package archive and put in same folder as Notebook file:
-https://cran.r-project.org/src/contrib/Archive/SPARQL/SPARQL_1.16.tar.gz[[.underline]#download SPARQL#]
+.  https://cran.r-project.org/src/contrib/Archive/SPARQL/SPARQL_1.16.tar.gz[Download SPARQL package archive] and put it in same folder as Notebook file.
 
 [arabic, start=4]
-. Install IRKernel
+. Install the IRKernel.
 
 [loweralpha]
-.. Run R in OS command line and type
+.. Run R in OS command line and type.
 
 [source,bash]
 install.packages("IRkernel")
@@ -72,34 +68,34 @@ install.packages('RCurl')
 install.packages('XML')
 
 [loweralpha, start=2]
-. In the window prompt, select first option (mirror) and then press OK
+. In the window prompt, select first option (mirror) and then press OK.
 
 .Secure download mirrors
 image::user_manual/jupyter_notebook/image4.png[image,width=240,height=309]
 
 [loweralpha, start=3]
-. After the installation is completed, run the following command in the terminal
+. After the installation is completed, run the following command in the terminal.
 [source,bash]
 IRkernel::installspec()
 
 
 [arabic, start=5]
-. Open the Jupyter Notebook file in the code editor
+. Open the Jupyter Notebook file with the code editor.
 
-. Select R interpreter
+. Select R interpreter.
 
 .Interpreter selection
 image::user_manual/jupyter_notebook/image5.png[image,width=901,height=142]
 
 
 [arabic, start=7]
-. Run all Jupyter Notebook Cells
+. Run all Jupyter Notebook Cells.
 
 .Button that runs all cells
 image::user_manual/jupyter_notebook/image6.png[image,width=502,height=100]
 
 [arabic, start=8]
-. After running successfully all the cells in the Jupyter Notebook, we can see the result table
+. After running successfully all the cells in the Jupyter Notebook, we can see the result table.
 
 .Result Table
 image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]

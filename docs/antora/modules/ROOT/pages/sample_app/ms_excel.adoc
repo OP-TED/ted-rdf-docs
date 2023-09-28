@@ -11,25 +11,33 @@ In this example you can find following sheets:
 
 ** Query - sheet containing SPARQL query
 ** Result Query - sheet containing result table after querying
-** Sample analysis - Example with analysis of table from Resul Query sheet
+** Sample analysis - Example with analysis of table from Result Query sheet
 
 The following steps shows how to insert or update data using sample app:
 
-. Open Excel sheet and add necessary SPARQL query in the "Query" sheet:
+. Depending on the version of MS Excel used, when opening the downloaded spreadsheet a dialog box obout privacy levels might pop up. Set it to ignore privacy levels checks as the query is accessing a public website. To do this tick the checkbox to ignore Privacy Levels for this file in the prompted dialog box and then click Save.
+
+.Change privacy levels
+image::user_manual/ms_excell/image11.png[image,width=507,height=466]
+
+[arabic, start=2]
+. In the opened Excel spreadsheet, add the necessary SPARQL query in the "Query" sheet.
 
 .Example SPARQL Query
 image::user_manual/ms_excell/image8.png[image,width=507,height=466]
 
-NOTE: After updating the query cell, the macros script will automatically trigger data updates.
+NOTE: After updating the query cell, the macros script will automatically trigger data updates. If the SPARQL query returns an empty result, MS Excel will create an error such as below
 
-[arabic, start=2]
-. After data is updated, in the "Response Query" sheet you will find the updated table:
+image::user_manual/ms_excell/image12.png[image,width=507,height=466]
+
+[arabic, start=3]
+. After data is updated, in the "Response Query" sheet you will find the updated table.
 
 .Query result table
 image::user_manual/ms_excell/image9.png[image,width=907,height=466]
 
-[arabic, start=3]
-. In the "Sample analysis" sheet you can find an example of analysis of the query result. Press "Update tables" button to update the Pivot tables and plots:
+[arabic, start=4]
+. In the "Sample analysis" sheet you can find an example of analysis of the query result. Press "Update tables" button to update the Pivot tables and plots.
 
 .Sample analysis
 image::user_manual/ms_excell/image10.png[image,width=807,height=166]
