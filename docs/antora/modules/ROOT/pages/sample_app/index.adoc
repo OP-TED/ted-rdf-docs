@@ -20,6 +20,8 @@ A sample application, often referred to as a demo or prototype, is a functional 
 
 * *Jupyter Notebook Kernel* refers to the computational engine that executes the code within a Jupyter Notebook. It determines which programming language is used to run the code in the notebook. For example, if you're working with TED-SWS in a Jupyter Notebook, you might choose to use a Python kernel, which means that you'll be writing and executing Python code.
 
+* *Business Questions* (BQ) refer to specific inquiries or information needs that pertain to business operations, procurement activities, or related aspects. These questions are typically posed by organizations, researchers, or individuals seeking to gain insights, make informed decisions, or conduct analyses based on the data provided by TED-SWS.
+
 == Prerequisites
 
 To use TED-SWS sample apps, you will need the following:
@@ -49,3 +51,9 @@ Example of using R language and to access data.
 * <<ted-rdf-docs:ROOT:sample_app/ms_excel.adoc#, MS Excel Workbook>>
 
 Example of accessing data in a MS Excel workbook.
+
+== SPARQL Query examples
+
+* <<ted-rdf-docs:ROOT:sample_app/sparql_queries.adoc#, SPARQL Query examples>>
+
+Example of accessing data using SPARQL Query examples

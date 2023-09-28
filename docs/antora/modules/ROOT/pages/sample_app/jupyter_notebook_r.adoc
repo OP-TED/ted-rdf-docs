@@ -4,8 +4,8 @@ This document  shows an example using Jupyter Notebook in R language. R is
 software environment for statistical computing and graphic
 representation. In this case, R represents the programming language for
 writing notebook documents. To realize the proposed scenario, it is
-necessary to install the special tools (xref:references[Running R Jupyter Notebooks]) and
-use the R code that will perform a query (xref:references[SPARQL with R]) to
+necessary to install the special tools and
+use the R code that will perform a query to
 the cellar and display the results in tabular form.
 
 Example query:
