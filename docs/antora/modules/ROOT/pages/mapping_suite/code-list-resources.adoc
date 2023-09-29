@@ -8,11 +8,11 @@ The *specific URIs* are directly used in the
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation/mappings[technical mapping files], and they can also be found in the
 https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/transformation/conceptual_mappings.xlsx[conceptual mapping file].
 
-*Imortant note:* Please ensure you adapt the above paths to the resources to match the tag and mapping suite package that you wish to check. For example, for the `tx1.3.beta` tag and for form `F20`, the links mentioned above will be:
+*Imortant note:* Please ensure you adapt the above paths to the resources to match the tag and mapping suite package that you wish to check. For example, for the `2.1.1-rc.1` tag and for form `F20`, the links mentioned above will be:
 
-* https://github.com/OP-TED/ted-rdf-mapping/tree/tx1.3.beta/mappings/package_F20/transformation/resources
-* https://github.com/OP-TED/ted-rdf-mapping/tree/tx1.3.beta/mappings/package_F20/transformation/mappings
-* https://github.com/OP-TED/ted-rdf-mapping/blob/tx1.3.beta/mappings/package_F20/transformation/conceptual_mappings.xlsx
+* https://github.com/OP-TED/ted-rdf-mapping/tree/2.1.1-rc.1/mappings/package_F20/transformation/resources
+* https://github.com/OP-TED/ted-rdf-mapping/tree/2.1.1-rc.1/mappings/package_F20/transformation/mappings
+* https://github.com/OP-TED/ted-rdf-mapping/blob/2.1.1-rc.1/mappings/package_F20/transformation/conceptual_mappings.xlsx
 
 [cols="30%,20%,~"]
 |===
