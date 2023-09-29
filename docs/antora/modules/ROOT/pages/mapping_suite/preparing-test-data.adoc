@@ -94,3 +94,17 @@ Below we present two tables with statistics indicating the total number for each
 |*Total*|*668381*|*100%*|*454*
 |===
 
+=== Sampling of TED notices based on XSD versions
+
+We also made a separate sampling on *all the TED notices published between 2014 and 2022*. We split up these samples based on the various XSD versions according to which they were created. These samples can be found in the following folder structure
+```
+test_data
+   sampling_2014_2022
+      R2.0.9.S01.E01            (702 notices)
+      R2.0.9.S02.E01            (808 notices)
+      R2.0.9.S03.E01            (809 notices)
+      R2.0.9.S04.E01            (778 notices)
+      R2.0.9.S05.E01            (662 notices)
+```
+
+Each of this folder contains separate samples for each of the Standard forms and eForms subtypes. 
