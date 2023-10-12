@@ -1,6 +1,6 @@
-name: ted-rdf-docs
-version: master
-title: TED-SWS documentation
+name: SWS
+version: ~
+title: TED Semantic Web Service
 start_page: ROOT:index.adoc
 asciidoc:
   attributes:

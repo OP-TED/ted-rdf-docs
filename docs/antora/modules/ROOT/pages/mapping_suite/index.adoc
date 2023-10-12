@@ -1,4 +1,4 @@
-= Mapping suite documentation
+= Mapping Suites
 
 A *mapping suite* is a set of "mappings" that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which we refer to as a *mapping suite package*.
 

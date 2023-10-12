@@ -1,5 +1,5 @@
 site:
-  title: TED SWS Documentation
+  title: TED Semantic Web Service
   start_page: ted-rdf-docs::index.adoc
 content:
   edit_url: false
