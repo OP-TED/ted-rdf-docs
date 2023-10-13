@@ -1,8 +1,9 @@
 = The TED Semantic Web Service
 
-The TED Semantic Web Service (TED-SWS) continuously converts public procurement notices from the XML format available on the TED Website, into RDF format, and stores them in the CELLAR repository. From CELLAR, they can then be queried by the public through CELLAR’s SPARQL endpoint.
+The TED Semantic Web Service (TED-SWS) continuously converts Contract Award Notices from the xml standard form format available on the TED Website, into RDF format. The RDF is stored in the CELLAR repository. The data can be queried from the https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] on the EU Vocabularies.
 
-The TED-SWS makes information on public procurement notices accessible and reusable as Linked Open Data (LOD), by connecting to the data provided by https://data.europa.eu[data.europa.eu], a portal that makes many European datasets available to the public for reuse. The rationale for making public procurement notice data available can be found on the  xref:motivation.adoc[motivation page].
+Paragraph 2 Under Review:
+_The TED-SWS makes information on public procurement notices accessible and reusable as Linked Open Data (LOD), by connecting to the data provided by https://data.europa.eu[data.europa.eu], a portal that makes many European datasets available to the public for reuse. The rationale for making public procurement notice data available can be found on the  xref:motivation.adoc[motivation page]._
 
 
 == Contents
