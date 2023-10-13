@@ -12,14 +12,6 @@ notices with the infrastructure of http://data.europa.eu/[data.europa.eu]
 in order to make public procurement data accessible and reusable as
 Linked Open Data (LOD) by users and stakeholders (see xref:motivation.adoc[the detailed motivation]).
 
-== Audience
-
-This documentation is written for a wide audience, with different interests in the TED-SWS project, and different levels of expertise Semantic Web, EU e-Procurement and software infrastructure. More specifically this documentation can be of interest to:
-
-- *End-Users*, such as *Semantic Web Practitioners* or *Experts in eProcurement Domain*, who are interested in understanding how the RDF representation of the e-procurement notices look like, and how this representation conforms to the eProcurement Ontology (ePO).
-- *Software Engineers* interested in integrating mapping suite packages into processing pipelines;
-- *Semantic Engineers* interested in understanding and writing mappings from XML to RDF, in particular in the EU eProcurement domain;
-
 == Contents
 
 [.tile-container]
@@ -35,7 +27,7 @@ The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversi
 
 
 [.tile]
-.Sample applications
+.Sample Applications
 ****
 Sample application represents a set of examples that shows how to interact with TED RDF Data (available in CELLAR) using tools like Python, R or Excel.
 
@@ -43,3 +35,12 @@ Sample application represents a set of examples that shows how to interact with 
 ****
 
 --
+
+== Audience
+
+This documentation is written for a wide audience, with different interests in the TED-SWS project, and different levels of expertise Semantic Web, EU e-Procurement and software infrastructure. More specifically this documentation can be of interest to:
+
+- *End-Users*, such as *Semantic Web Practitioners* or *Experts in eProcurement Domain*, who are interested in understanding how the RDF representation of the e-procurement notices look like, and how this representation conforms to the eProcurement Ontology (ePO).
+- *Software Engineers* interested in integrating mapping suite packages into processing pipelines;
+- *Semantic Engineers* interested in understanding and writing mappings from XML to RDF, in particular in the EU eProcurement domain;
+
