@@ -3,7 +3,7 @@
 * xref:index.adoc[Home]
 
 
-    * xref:mapping_suite/index.adoc[Mapping Suites]
+    * xref:mapping_suite/index.adoc[Mapping suites]
     ** xref:mapping_suite/repository-structure.adoc[Repository structure]
     ** xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite anatomy]
     ** xref:mapping_suite/code-list-resources.adoc[Code list mappings]
