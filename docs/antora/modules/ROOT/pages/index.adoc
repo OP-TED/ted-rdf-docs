@@ -30,7 +30,7 @@ This documentation is written for a wide audience, with different interests in t
 ****
 The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED Semantic Web Services, aka TED-SWS system) to convert TED notices available in XML format to RDF.
 
-<<ted-rdf-docs:ROOT:mapping_suite/index.adoc#, Read the docs>>
+<<SWS:ROOT:mapping_suite/index.adoc#, Read the docs>>
 ****
 
 
@@ -39,7 +39,7 @@ The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversi
 ****
 Sample application represents a set of examples that shows how to interact with TED RDF Data (available in CELLAR) using tools like Python, R or Excel.
 
-<<ted-rdf-docs:ROOT:sample_app/index.adoc#, Read the docs>>
+<<SWS:ROOT:sample_app/index.adoc#, Read the docs>>
 ****
 
 --
