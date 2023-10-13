@@ -8,4 +8,3 @@ Current data is available in different xml formats which evolved historically in
 
 A consistent format of data will enable a much larger number of use-cases, and an increased availability of analytics. The ability to perform complex queries on public procurement data will be open equally to both large information systems, and single users with a copy of Excel and an internet connection.
 
-TED Semantic Web Service (TED-SWS) continuously converts the public procurement notices from the XML format, available on the TED Website, into RDF format, and stores them in the CELLAR repository. From CELLAR, they can then be queried by the public through CELLAR’s SPARQL endpoint.
