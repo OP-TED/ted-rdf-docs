@@ -38,22 +38,22 @@ Understanding of EU Procurement Data:: If your goal is to work with specific typ
 
 == Using Jupyter Notebook
 
-* <<ted-rdf-docs:ROOT:sample_app/jupyter_notebook_python.adoc#, Jupyter Notebook - Python>>
+* <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, Jupyter Notebook - Python>>
 
 Example of using Python language and to access data.
 
-* <<ted-rdf-docs:ROOT:sample_app/jupyter_notebook_r.adoc#, Jupyter Notebook - R>>
+* <<SWS:ROOT:sample_app/jupyter_notebook_r.adoc#, Jupyter Notebook - R>>
 
 Example of using R language and to access data.
 
 == Using MS Excel
 
-* <<ted-rdf-docs:ROOT:sample_app/ms_excel.adoc#, MS Excel Workbook>>
+* <<SWS:ROOT:sample_app/ms_excel.adoc#, MS Excel Workbook>>
 
 Example of accessing data in a MS Excel workbook.
 
 == SPARQL Query examples
 
-* <<ted-rdf-docs:ROOT:sample_app/sparql_queries.adoc#, SPARQL Query examples>>
+* <<SWS:ROOT:sample_app/sparql_queries.adoc#, SPARQL Query examples>>
 
 Example of accessing data using SPARQL Query examples
