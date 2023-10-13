@@ -13,7 +13,7 @@ The TED-SWS makes information on public procurement notices accessible and reusa
 [.tile]
 .Mapping Suites
 ****
-The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED Semantic Web Services, aka TED-SWS system) to convert TED notices available in XML format to RDF.
+The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED-SWS) to convert TED notices available in XML format to RDF.
 
 <<SWS:ROOT:mapping_suite/index.adoc#, Read the docs>>
 ****
@@ -22,7 +22,7 @@ The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversi
 [.tile]
 .Sample Applications
 ****
-Sample application represents a set of examples that shows how to interact with TED RDF Data (available in CELLAR) using tools like Python, R or Excel.
+The Sample Applications page provides a set of examples that demonstrate how to extract TED RDF data from CELLAR using tools like Excel, Python, or R.
 
 <<SWS:ROOT:sample_app/index.adoc#, Read the docs>>
 ****
