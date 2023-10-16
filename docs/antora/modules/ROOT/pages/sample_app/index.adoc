@@ -36,16 +36,6 @@ Development Environment:: Set up a development environment for your chosen progr
 
 Understanding of EU Procurement Data:: If your goal is to work with specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts and the associated https://docs.ted.europa.eu/EPO/latest/index.html[ontology].
 
-== Using Jupyter Notebook
-
-* <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, Jupyter Notebook - Python>>
-
-Example of using Python language and to access data.
-
-* <<SWS:ROOT:sample_app/jupyter_notebook_r.adoc#, Jupyter Notebook - R>>
-
-Example of using R language and to access data.
-
 == Using MS Excel
 
 * <<SWS:ROOT:sample_app/ms_excel.adoc#, MS Excel Workbook>>
@@ -57,3 +47,16 @@ Example of accessing data in a MS Excel workbook.
 * <<SWS:ROOT:sample_app/sparql_queries.adoc#, SPARQL Query examples>>
 
 Example of accessing data using SPARQL Query examples
+
+== Using Jupyter Notebook
+
+* <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, Jupyter Notebook - Python>>
+
+Example of using Python language and to access data.
+
+* <<SWS:ROOT:sample_app/jupyter_notebook_r.adoc#, Jupyter Notebook - R>>
+
+Example of using R language and to access data.
+
+
+

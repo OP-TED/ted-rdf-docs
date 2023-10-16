@@ -1,12 +1,16 @@
 == Repository structure
 
-Transformation rules and other artefacts for the https://github.com/OP-TED/ted-rdf-conversion-pipeline[TED Semantic Web Services (TED-SWS)] system are organised in https://github.com/OP-TED/ted-rdf-mapping[this repository].
+Transformation rules and other artefacts for the https://github.com/OP-TED/ted-rdf-conversion-pipeline[TED Semantic Web Services (TED-SWS)] system are organised in the https://github.com/OP-TED/ted-rdf-mapping[ted-rdf-mapping] repository.
 
-The repository is organised as presented below. Next we describe the important folders and their purpose.
+The repository structure and folder descriptions are shown below:
+// Next we describe the important folders and their purpose.
+
+
 
 ----
 /docs
     /antora
+
 /mappings
     /package_F03
     /package_F06
