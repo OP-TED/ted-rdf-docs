@@ -81,27 +81,31 @@ https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F25[/packag
 
 NB: the example provided here is for Standard Form F03 but can be applied in the same way for the mapping suites for the other forms covered by the mappings.
 
-a|folder contains xref:mapping_suite/mapping-suite-structure.adoc[mapping suite packages] organised based on the standard forms numbers. Their name is formed based on the form number (e.g. F03, F06) prefixed with package_ for readability. When the eForms are mapped, the corresponding appropriate organisation will be chosen.
+a|Contains xref:mapping_suite/mapping-suite-structure.adoc[mapping suite packages] organised based on the standard forms numbers. Their name is formed based on the form number (e.g. F03, F06) prefixed with package_ for readability. When the eForms are mapped, the corresponding appropriate organisation will be chosen.
 
 NB: one example provided here is for Standard Form F03 but can be applied in the same way for the mapping suites for the other forms covered by the mappings.
 
+| /mappings continued: subfolders
+|/package_F03/test_data/form_number_F03_2021
+
+/package_F03/test_data/form_number_F03_S01
+
+/package_F03/test_data/form_number_F03_S02
+
+/package_F03/test_data_form_number_F03_S03
+
+/package_F03/test_data_form_number_F03_S04
+
+/package_F03/test_data_form_number_F03_S05
+
+|Contains example notices extracted from the TED website with real data for the forms concerned in this example F03.
 
 |https://github.com/OP-TED/ted-rdf-mapping/tree/main/src[/src]
 a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/src/mappings[/mappings]
-*.rml.ttl
 
-https://github.com/OP-TED/ted-rdf-mapping/tree/main/src/validation[/validation]
+    *.rml.ttl
 
-
-|contains "single source of truth" for the mapping rules across various mapping suite packages. This is necessary because of the modularisation and reuse method adopted in this project. The basic idea is that the mapping rules are organised in modules and all are stored in the source folder. Each mapping suite provides in the conceptual mapping workbook the list of modules that be used to compose the complete set of transformation rules of the mapped form number.
-
-|/test_data
-
-a|
-
-
-
-|automatically generated notice samples that are in the /sampling_2021 subfolder are described here. In the sampling_2014_2022 subfolder there are samples, generated from all available notices in the 2014-2022 period that cover the various changes in the XML Schema over the years. More automatically generated samples will follow.
+|Contains "single source of truth" for the mapping rules across various mapping suite packages. This is necessary because of the modularisation and reuse method adopted in this project. The basic idea is that the mapping rules are organised in modules and all are stored in the source folder. Each mapping suite provides in the conceptual mapping workbook the list of modules that be used to compose the complete set of transformation rules of the mapped form number.
 
 |===
 
