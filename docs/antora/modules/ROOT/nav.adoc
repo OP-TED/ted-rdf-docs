@@ -11,7 +11,7 @@
 * xref:SWS::glossary.adoc[Glossary]
 * xref:mapping_suite/versioning.adoc[Versioning]
 
-* [.separated]#**Mapping Suite Contents**#
+* [.separated]#**Mapping suite contents**#
 * xref:mapping_suite/index.adoc[Mapping suites]
 //** xref:mapping_suite/repository-structure.adoc[Repository structure]
 * xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite anatomy]
@@ -19,7 +19,7 @@
 * xref:mapping_suite/preparing-test-data.adoc[Data samples]
 
 
-* [.separated]#**Sample Applications**#
+* [.separated]#**Reusing semantic web service artefacts**#
 * xref:sample_app/sparql_queries.adoc[SPARQL Queries]
 * xref:sample_app/ms_excel.adoc[MS Excel]
 * xref:sample_app/jupyter_notebook_r.adoc[R Jupyter Notebook]
