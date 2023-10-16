@@ -1,0 +1,2 @@
+:stylesdir: {asciidoctorconfigdir}/.asciidoctor
+:stylesheet: site.css

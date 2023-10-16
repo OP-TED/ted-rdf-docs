@@ -1,12 +1,29 @@
-= The TED Semantic Web Service
+= The TED Semantic Web Service Documentation
 
-The TED Semantic Web Service (TED-SWS) continuously converts Contract Award Notices from the xml standard form format available on the TED Website, into RDF format. The RDF is stored in the CELLAR repository. The data can be queried from the https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] on the EU Vocabularies.
+== Introduction to the TED Semantic Web Service
 
-Paragraph 2 Under Review:
-_The TED-SWS makes information on public procurement notices accessible and reusable as Linked Open Data (LOD), by connecting to the data provided by https://data.europa.eu[data.europa.eu], a portal that makes many European datasets available to the public for reuse. The rationale for making public procurement notice data available can be found on the  xref:motivation.adoc[motivation page]._
+Currently, the TED Semantic Web Service (TED-SWS) continuously converts Contract Award Notices from the xml standard form format available on the TED Website, into RDF format.  The RDF is stored in the CELLAR repository. The data in CELLAR can be queried from the https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] on the EU Vocabularies. It should be noted that the Contract Award Notices should not be confused with the Result Notices resulting from eForms.
+
+This project falls clearly in the European data strategy which foresees a single market for data will allow it to flow freely within the EU and across sectors for the benefit of businesses, researchers and public administrations.
+
+== Audience
+
+This documentation is written for a wide audience:
+
+*Procurement specialists* and analysts will find the conceptual mappings provided in Excel format, and the code list mappings section relevant.  These mappings will enable them to understand the process from a business point of view, and its conformance with the eProcurement Ontology.  They may also find the SPARQL Queries section of use, to learn how to query the Contract Award Notices in CELLAR.
+
+*Software Engineers* will find the information generally of interest as it will enable them to integrate mapping suites into processing pipelines.
+
+*Semantic Engineers* will find most of the information interesting as it will enable them to understand and write mappings from XML to RDF, in particular when using the eProcurement Ontology.
+
+The following topics are included in this version of the Semantic Web Service Documentation:
+
+////
+== Mapping Suites
+A mapping suite within the TED Semantic Web Service is a set of mappings that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation in conformance with the eProcurement ontology. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which we refer to as a *mapping suite package*.A mapping suite can be further broken down into mapping suite packages, one per type of standard form mapped.
+////
 
 
-== Contents
 
 [.tile-container]
 --
@@ -15,6 +32,8 @@ _The TED-SWS makes information on public procurement notices accessible and reus
 .Mapping Suites
 ****
 The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED-SWS) to convert TED notices available in XML format to RDF.
+Mapping Suites and Mapping Suite Packages are explained in this section.
+
 
 <<SWS:ROOT:mapping_suite/index.adoc#, Read the docs>>
 ****
@@ -30,7 +49,7 @@ The Sample applications page provides a set of examples that demonstrate how to 
 
 --
 
-
+////
 == Audience
 
 This documentation is written for a wide audience, with different interests in the TED-SWS project, and different levels of expertise Semantic Web, EU e-Procurement and software infrastructure. More specifically this documentation can be of interest to:
@@ -38,4 +57,4 @@ This documentation is written for a wide audience, with different interests in t
 - *End-Users*, such as *Semantic Web Practitioners* or *Experts in eProcurement Domain*, who are interested in understanding how the RDF representation of the e-procurement notices look like, and how this representation conforms to the eProcurement Ontology (ePO).
 - *Software Engineers* interested in integrating mapping suite packages into processing pipelines;
 - *Semantic Engineers* interested in understanding and writing mappings from XML to RDF, in particular in the EU eProcurement domain;
-
+////

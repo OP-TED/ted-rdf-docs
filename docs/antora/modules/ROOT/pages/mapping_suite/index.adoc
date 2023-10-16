@@ -1,7 +1,12 @@
 = Mapping Suites
 
-A *mapping suite* is a set of "mappings" that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which we refer to as a *mapping suite package*.
+A mapping suite within the TED Semantic Web Service is a set of mappings that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation in conformance with the eProcurement ontology. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which we refer to as a *mapping suite package*.A mapping suite can be further broken down into mapping suite packages, one per type of standard form mapped.
 
+== General Reference
+
+to be added
+
+////
 == Prerequisites
 
 To allow for a proper understanding of the Mapping Suite Documentation, the reader should have:
@@ -13,9 +18,10 @@ Understanding of RDF, RML and SPARQL:: Familiarity with RDF (Resource Descriptio
 Understanding of EU Procurement Data and Familiarity with ePO:: If your goal is to understand how the mappings are used to transform specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts, and the associated https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].
 
 Familiarity with Spreadsheet editing tools:: Since most of the Conceptual mappings is done in spreadsheet working experience with spreadsheet editing tools such as MS Excel or Google Sheets, is desirable.
+////
 
-== Glossary
 
+////
 - [[gloss:cm]] *Conceptual Mapping*, often abbreviated as *CM*, is an abstract level mapping of XPaths in the input data to those ePO classes that need to be instantiated and properties are used to link the instances in the output RDF graph
 
 - [[gloss:epo]] *eProcurement Ontology (ePO)* is an ontology that defines the concepts and relations that are needed to fully describe the eProcurement domain of the EU. For more information check out the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology Documentation].
@@ -49,7 +55,11 @@ https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas
 
 - [[gloss:xpath]] *XPath* - the XML Path Language (XPath) Version 1.0. See https://www.w3.org/TR/xpath-10/
 
-== Further readings
+////
+
+include::../glossary.adoc[]
+
+== Mapping Suite Contents
 Depending on the interest of the reader the following pages can be explored (in this logical order):
 
 ** xref:mapping_suite/repository-structure.adoc[GitHub Repository structure]
