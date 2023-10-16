@@ -10,7 +10,7 @@ The TED Semantic Web Service (TED-SWS) is plugging together
 the TED infrastructure for the collection and publication of public procurement
 notices with the infrastructure of http://data.europa.eu/[data.europa.eu]
 in order to make public procurement data accessible and reusable as
-Linked Open Data (LOD) by users and stakeholders (see xref:motivation.adoc[the detailed motivation]).
+Linked Open Data (LOD) by users and stakeholders (see xref:genref.adoc[the detailed motivation]).
 
 == Contents
 
