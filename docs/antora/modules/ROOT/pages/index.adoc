@@ -40,9 +40,9 @@ Mapping Suites and Mapping Suite Packages are explained in this section.
 
 
 [.tile]
-.Sample Applications
+.Reusing semantic web service artefacts
 ****
-The Sample applications page provides a set of examples that demonstrate how to extract TED RDF data from CELLAR using tools like Excel, Python, or R.
+This section provides a set of examples that demonstrate how to extract TED RDF data from CELLAR using tools like Excel, Python, or R.
 
 <<SWS:ROOT:sample_app/index.adoc#, Read the docs>>
 ****
