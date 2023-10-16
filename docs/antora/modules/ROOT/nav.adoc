@@ -3,23 +3,23 @@
 * xref:SWS::index.adoc[Home]
 
 //* [.separated]#**General Reference**#
-** xref:SWS::genref.adoc[General Reference]
-** xref:SWS::glossary.adoc[Glossary]
-** xref:mapping_suite/versioning.adoc[Versioning]
+* xref:SWS::genref.adoc[General Reference]
+* xref:SWS::glossary.adoc[Glossary]
+* xref:mapping_suite/versioning.adoc[Versioning]
 
 * [.separated]#**Mapping Suite Contents**#
-** xref:mapping_suite/index.adoc[Mapping suites]
+* xref:mapping_suite/index.adoc[Mapping suites]
 //** xref:mapping_suite/repository-structure.adoc[Repository structure]
-** xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite anatomy]
-    ** xref:mapping_suite/code-list-resources.adoc[Code list mappings]
-    ** xref:mapping_suite/preparing-test-data.adoc[Data samples]
+* xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite anatomy]
+* xref:mapping_suite/code-list-resources.adoc[Code list mappings]
+* xref:mapping_suite/preparing-test-data.adoc[Data samples]
 
 
 * [.separated]#**Sample Applications**#
-** xref:sample_app/sparql_queries.adoc[SPARQL Queries]
-** xref:sample_app/ms_excel.adoc[MS Excel]
-** xref:sample_app/jupyter_notebook_r.adoc[R Jupyter Notebook]
-** xref:sample_app/jupyter_notebook_python.adoc[Python Jupyter Notebook]
+* xref:sample_app/sparql_queries.adoc[SPARQL Queries]
+* xref:sample_app/ms_excel.adoc[MS Excel]
+* xref:sample_app/jupyter_notebook_r.adoc[R Jupyter Notebook]
+* xref:sample_app/jupyter_notebook_python.adoc[Python Jupyter Notebook]
 
 
 

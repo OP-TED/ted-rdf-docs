@@ -69,15 +69,14 @@ The repository structure and folder descriptions are shown below.  The base of t
 |Contains the documentation for the ted-rdf mapping
 
 |https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings[/mappings]
-a|/package_F03
-/package_F06
-/package_F13
-/package_F20
-/package_F21
-/package_F22
-/package_F23
-/package_F25
-/package_es16
+a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03[/package_F03]
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F06[/package_F06]
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F13[/package_F13]
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F20[/package_F20]
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F21[/package_F21]
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F23[/package_F22]
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F23[/package_F23]
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F25[/package_F25]
 
 
 NB: the example provided here is for Standard Form F03 but can be applied in the same way for the mapping suites for the other forms covered by the mappings.
