@@ -99,7 +99,7 @@ folder contains xref:mapping_suite/mapping-suite-structure.adoc [mapping suite p
 |===
 
 
-** xref:mapping_suite/repository-structure.adoc[GitHub Repository structure]
+// ** xref:mapping_suite/repository-structure.adoc[GitHub Repository structure]
 ** xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite anatomy]
 ** xref:mapping_suite/code-list-resources.adoc[Code list mappings]
 ** xref:mapping_suite/preparing-test-data.adoc[Data samples]
