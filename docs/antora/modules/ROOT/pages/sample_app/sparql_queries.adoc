@@ -91,9 +91,6 @@ WHERE {
     ?Organization epo:hasLegalName ?LegalName .
 }
 
-This SPARQL query aims to retrieve distinct procurement notices that have been published by buyers from a specific country (Germany) on a specific date ("20230905" or 05-09-2023). It does so by specifying a set of values and then querying the RDF data based on those values. The query returns information about the notices, the organizations (buyers), and their legal names.
-
-This SPARQL query aims to count the number of distinct procurement notices that meet specific criteria related to publication date, country code (Germany), and business size (SME).
 
 ////
 
