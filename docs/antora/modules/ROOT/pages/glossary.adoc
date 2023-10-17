@@ -1,11 +1,12 @@
-== Glossary
+== Mapping Suite Glossary
+
 
 [cols="1,3"]
 |===
 |Term |Explanation
 
 a|*Conceptual Mapping* (often abbreviated as CM)
-|An abstract level mapping of XPaths in the input data to those ePO classes and properties that need to be instantiated the output RDF graph.  The conceptual model is in the form of an excel file and is a valuable resource for the Procurement specialist that may not have an understanding of the technical files
+|An abstract level mapping of XPaths in the input data to those ePO classes and properties that need to be instantiated the output RDF graph.  The conceptual model is in the form of an Excel file and is a valuable resource for the Procurement specialist that may not have an understanding of the technical files
 
 |*eProcurement Ontology (ePO)*
 |An ontology that defines the concepts and relations that are needed to fully describe the eProcurement domain of the European Union. For more information see the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology Documentation].

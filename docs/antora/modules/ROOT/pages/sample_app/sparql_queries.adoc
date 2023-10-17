@@ -45,7 +45,7 @@ This SPARQL query aims to count the number of distinct procurement notices that 
 
 
 
-=== BQ 1. Which notices have been published by Buyers from a specific country for a given date?
+=== Query:  Which notices have been published by Buyers from a specific country for a given date?
 
 
 This SPARQL query retrieves information about contract award notices that have been published by buyers from Germany and published on TED on 05-09-2023.
