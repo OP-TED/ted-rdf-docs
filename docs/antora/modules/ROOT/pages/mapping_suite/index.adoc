@@ -1,8 +1,5 @@
 = Mapping Suites
 
-
-
-
 ////
 == Prerequisites
 
@@ -56,12 +53,12 @@ https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas
 
 // include::../glossary.adoc[]
 
-== Mapping Suite Content
+== Mapping Suite Contents
 Transformation rules and other artefacts used for the mapping of Standard Forms and eForms  for the TED Semantic Web Services (TED-SWS) system are organised in the ted-rdf-mapping repository.
 The repository structure and folder descriptions are shown below.  The base of the folder path is https://github.com/OP-TED/ted-rdf-mapping/tree/main/  however if the reader wants to see a specific release, then the path is adapted by replacing main by the given release for example if release 2.1.1-rc.1 is required, the path will be https://github.com/OP-TED/ted-rdf-mapping/tree/2.1.1-rc.1
 
-////
-=== Upper Level of the GitHub Repository
+
+=== Upper Level folders of the GitHub Repository
 
 This section describes the upper level of the GitHub repository, the next section describes the lower levels of the GitHub repository where the more granular artefacts can be found. The aim of this section is to give the reader an overview of the repository structure.
 
@@ -140,5 +137,122 @@ The samples are broken down by a mapping to the eForms sub-type:
 Test data is also provided in the mapping suite packages that are specific to the mapping suites.
 
 |===
-////
+
+=== The lower level folders of the GitHub Repository
+
+This section provides more detailed information on the content available in the lower levels of the repository:
+
+* Mapping suite package structure
+
+** output
+
+** test-data
+
+** transformation
+
+** validation
+
+* source files
+
+** mappings
+
+** validation
+
+=== Mapping suite package structure
+
+In this section we describe the structure of a mapping suite package in GitHub. Such a package contains everything that is needed for the development and testing of a given “mapping suite” that is applicable to a certain set of notices. After the package is finalised, it can be used by a process to apply it to a large number of notices stored in a database, and transform those notices into RDF data.
+
+A package is represented by a well-defined folder structure containing certain files. This folder structure is repeated for every developed mapping. Initial organisation of these packages is per Form number, but it may evolve.
+
+The table below shows the structure for the F03 package, where /output refers to ted-rdf-mapping/mappings/package_F03/output, where package_F03 can be replaced by the identifier of the other packages mapped (F06,13, F21, F22, F23 -F20 and es16 should be ignored).
+
+[cols="1,2,2"]
+
+|===
+
+|Folder|Subfolder|Description
+
+|/output
+|/Noticeid/test_suite_report, where the NoticeID is the ID of the notice published on TED  for example:
+
+000163-2021/test_suite_report
+|Contains the semantic map of the concepts of the given notice these files only exist for the F03 package.
+
+a|/output
+cont.
+|/form_number_F03_2021
+
+/form_number_F03_S01
+
+/form_number_F03_S02
+
+/form_number_F03_S03
+
+/form_number_F03_S04
+
+/form_number_F03_S05
+
+
+a|Each folder contains a subfolder for each of the rdf files produced from the sample data (see section on data sampling to understand the folder structure) which is named by the NoticeID of the sample concerned (eg 000163-2021)
+
+Each subfolder contains:
+
+The RDF output e.g., 000163-2021.ttl
+
+Another subfolder /test_suite report which in turn contains different files for validating the transformation (see validating transformsations)
+
+|/output
+cont.
+|/rml_report/html
+
+/shacl_validations.html
+
+/shacl_validations.json
+|
+
+|/test_data
+|/form_number_F03_2021
+
+/form_number_F03_S01
+
+/form_number_F03_S02
+
+/form_number_F03_S03
+
+/form_number_F03_S04
+
+/form_number_F03_S05
+a|Each folder contains the xml file as published on the TED website of the Notices to be transformed
+//(see section on data sampling to understand the folder structure).
+
+Each xml notice is named by the NoticeID of the sample concerned (eg 000163-2021)
+
+|/transformation
+|/mappings
+|Contains the rml files used for the transformation.  There is one rml file per section of each notice.
+
+|/transformation
+|/resources
+|Contains files concerning the code list mappings
+
+|/transformation
+|conceptual_mappings.xlsx
+|Contains the initial conceptual mapping which is used right the rml.
+
+|/validation
+|/shac
+|
+
+|/validation
+|/sparql/assertions
+|
+
+|/validation
+|/sparql/integration_tests
+|
+|===
+
+include::methodology.adoc[]
+
+include::toolchain.adoc[]
 
