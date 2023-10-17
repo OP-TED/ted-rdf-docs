@@ -6,7 +6,7 @@ In order to not write transformation rules twice (for section 1 of F03 and secti
 
 * Not to rewrite several times the same rules for different forms (avoid duplication of rules).
 
-* In the case of an update of the ePO ontology, we will have to implement the modification only once in the module(s) affected by the modification which, and the modififacation will be passed into all the forms.
+* In the case of an update of the ePO ontology, we will have to implement the modification only once in the module(s) affected by the modification which, and the modification will be passed into all the forms.
 
 
 As explained in the
