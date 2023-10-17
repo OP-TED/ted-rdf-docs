@@ -5,8 +5,8 @@
 :docdate: October 2023
 
 * xref:SWS::index.adoc[Home]
-* xref:mapping_suite/versioning.adoc[Versioning]
 * xref:audience.adoc[Target Audience]
+
 * [.separated]#**Mapping suite contents**#
 * xref:SWS::genref.adoc[General Reference]
 * xref:SWS::glossary.adoc[Glossary]
@@ -23,7 +23,8 @@
 * xref:sample_app/jupyter_notebook_r.adoc[R Jupyter Notebook]
 * xref:sample_app/jupyter_notebook_python.adoc[Python Jupyter Notebook]
 
-
+* [.separated]#**Reference**#
+* xref:mapping_suite/versioning.adoc[Versioning]
 
 
 

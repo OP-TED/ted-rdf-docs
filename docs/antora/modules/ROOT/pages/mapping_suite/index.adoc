@@ -86,17 +86,17 @@ NB: the example provided here is for Standard Form F03 but can be applied in the
 a|Contains xref:mapping_suite/mapping-suite-structure.adoc[mapping suite packages] organised based on the standard forms numbers. Their name is formed based on the form number (e.g. F03, F06) prefixed with package_ for readability. When the eForms are mapped, the corresponding appropriate organisation will be chosen.
 
 | /mappings continued: subfolders
-a|/package_F03/test_data/form_number_F03_2021
+a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_2021[/package_F03/test_data/form_number_F03_2021]
 
-/package_F03/test_data/form_number_F03_S01
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S01[/package_F03/test_data/form_number_F03_S01]
 
-/package_F03/test_data/form_number_F03_S02
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S02[/package_F03/test_data/form_number_F03_S02]
 
-/package_F03/test_data_form_number_F03_S03
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S03[/package_F03/test_data_form_number_F03_S03]
 
-/package_F03/test_data_form_number_F03_S04
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S04[/package_F03/test_data_form_number_F03_S04]
 
-/package_F03/test_data_form_number_F03_S05
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S05[/package_F03/test_data_form_number_F03_S05]
 
 NB the example provided here is for Standard Form F03 but can be applied in the same way to the other form package.
 
@@ -121,11 +121,11 @@ a|Contains the "single source of truth" for the mapping rules across various map
 Each mapping suite provides in the conceptual mapping workbook the list of modules that be used to compose the complete set of transformation rules of the mapped form number.
 
 |/test_data
-a|/sampling_2014_2022
+a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/test_data/sampling_2014_2022[/sampling_2014_2022]
 
-/sampling_2021
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/test_data/sampling_2021[/sampling_2021]
 
-/sampling_manual
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/test_data/sampling_manual/form_number_F03[/sampling_manual]
 a|Covers samples of notices across all form types whether they are covered by the actual mappings covered to date.
 
 The samples are broken down by a mapping to the eForms sub-type:
@@ -180,17 +180,11 @@ The table below shows the structure for the F03 package, where /output refers to
 
 a|/output
 cont.
-|/form_number_F03_2021
+|/rml_report/html
 
-/form_number_F03_S01
+/shacl_validations.html
 
-/form_number_F03_S02
-
-/form_number_F03_S03
-
-/form_number_F03_S04
-
-/form_number_F03_S05
+/shacl_validations.json
 
 
 a|Each folder contains a subfolder for each of the rdf files produced from the sample data (see section on data sampling to understand the folder structure) which is named by the NoticeID of the sample concerned (eg 000163-2021)
@@ -201,38 +195,32 @@ The RDF output e.g., 000163-2021.ttl
 
 Another subfolder /test_suite report which in turn contains different files for validating the transformation (see validating transformsations)
 
-|/output
-cont.
-|/rml_report/html
 
-/shacl_validations.html
-
-/shacl_validations.json
-|
 
 |/test_data
-|/form_number_F03_2021
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_2021[/test_data/form_number_F03_2021]
 
-/form_number_F03_S01
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S01[/test_data/form_number_F03_S01]
 
-/form_number_F03_S02
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S02[/test_data/form_number_F03_S02]
 
-/form_number_F03_S03
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S03[/test_data/form_number_F03_S03]
 
-/form_number_F03_S04
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S04[/test_data/form_number_F03_S04]
 
-/form_number_F03_S05
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S05[/test_data/form_number_F03_S05]
+
 a|Each folder contains the xml file as published on the TED website of the Notices to be transformed
 //(see section on data sampling to understand the folder structure).
 
 Each xml notice is named by the NoticeID of the sample concerned (eg 000163-2021)
 
 |/transformation
-|/mappings
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation/mappings[/mappings]
 |Contains the rml files used for the transformation.  There is one rml file per section of each notice.
 
 |/transformation
-|/resources
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation/resources[/resources]
 |Contains files concerning the code list mappings
 
 |/transformation
@@ -240,19 +228,19 @@ Each xml notice is named by the NoticeID of the sample concerned (eg 000163-2021
 |Contains the initial conceptual mapping which is used right the rml.
 
 |/validation
-|/shac
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/shacl[/shacl]
 |
 
 |/validation
-|/sparql/assertions
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/sparql/cm_assertions[/sparql/assertions]
 |
 
 |/validation
-|/sparql/integration_tests
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/sparql/integration_tests[/sparql/integration_tests]
 |
 |===
 
-include::methodology.adoc[]
+// include::methodology.adoc[]
 
-include::toolchain.adoc[]
+// include::toolchain.adoc[]
 
