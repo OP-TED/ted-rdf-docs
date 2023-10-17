@@ -5,13 +5,11 @@
 :docdate: October 2023
 
 * xref:SWS::index.adoc[Home]
-
-//* [.separated]#**General Reference**#
+* xref:mapping_suite/versioning.adoc[Versioning]
+* xref:audience.adoc[Target Audience]
+* [.separated]#**Mapping suite contents**#
 * xref:SWS::genref.adoc[General Reference]
 * xref:SWS::glossary.adoc[Glossary]
-* xref:mapping_suite/versioning.adoc[Versioning]
-
-* [.separated]#**Mapping suite contents**#
 * xref:mapping_suite/index.adoc[Mapping suites]
 //** xref:mapping_suite/repository-structure.adoc[Repository structure]
 * xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite anatomy]

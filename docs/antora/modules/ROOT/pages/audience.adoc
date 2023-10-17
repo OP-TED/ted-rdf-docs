@@ -1,0 +1,9 @@
+== Audience
+
+This documentation is written for a wide audience:
+
+*Procurement specialists* and analysts will find the conceptual mappings provided in Excel format, and the code list mappings section relevant.  These mappings will enable them to understand the process from a business point of view, and its conformance with the eProcurement Ontology.  They may also find the SPARQL Queries section of use, to learn how to query the Contract Award Notices in CELLAR.
+
+*Software Engineers* will find the information generally of interest as it will enable them to integrate mapping suites into processing pipelines.
+
+*Semantic Engineers* will find most of the information interesting as it will enable them to understand and write mappings from XML to RDF, in particular when using the eProcurement Ontology.
