@@ -176,15 +176,15 @@ The table below shows the structure for the F03 package, where /output refers to
 |/Noticeid/test_suite_report, where the NoticeID is the ID of the notice published on TED  for example:
 
 000163-2021/test_suite_report
-|Contains the semantic map of the concepts of the given notice these files only exist for the F03 package.
+|Contains the semantic map of the concepts of the given notice (in this case, the F03 package).
 
 a|/output
 cont.
-|/rml_report/html
+|rml_report/html
 
-/shacl_validations.html
+shacl_validations.html
 
-/shacl_validations.json
+shacl_validations.json
 
 
 a|Each folder contains a subfolder for each of the rdf files produced from the sample data (see section on data sampling to understand the folder structure) which is named by the NoticeID of the sample concerned (eg 000163-2021)

@@ -1,7 +1,26 @@
 == SPARQL Query examples
 
-In the context of TED-SWS, SPARQL queries refer to a specialized query language designed for retrieving and manipulating data stored in RDF (Resource Description Framework) format. SPARQL stands for SPARQL Protocol and RDF Query Language. It allows users to express complex queries to retrieve specific information from RDF datasets. In this document we will explain examples of queries to respond to some business questions.
+In the context of TED-SWS, SPARQL queries can be used to query the data of notices published in RDF by the Publications Office.  These queries can be made on the
+https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] available in EU Vocabularies
 
+SPARQL queries refer to a specialized query language designed for retrieving and manipulating data stored in RDF (Resource Description Framework) format. SPARQL stands for SPARQL Protocol and RDF Query Language. It allows users to write complex queries to retrieve specific information from RDF datasets.
+
+The data available covers Contract Award Notices published after 28/08/2023.  Data on eForm Result notices are not available yet.
+
+A query is submitted to the SPARQL end point by replacing the text highlighted below in blue in the Query Text box below with your query:
+
+image:sparql.png[SPARQL End Point]
+
+The format of the result can be changed using the drop down box of the Results format.
+
+
+
+Once the query is in place, and the Results format chosen, the query can be run by pressing “Run Query”
+
+
+Below you will find an example of a query:
+
+////
 
 === BQ 1. How many contractors are SMEs for a given country and given date?
 
@@ -22,9 +41,36 @@ SELECT COUNT DISTINCT(?Notice) WHERE {
 }
 
 This SPARQL query aims to count the number of distinct procurement notices that meet specific criteria related to publication date, country code (Germany), and business size (SME).
+////
 
 
-=== BQ 2. Which notices have been published by Buyers from a specific country for a given date?
+
+=== BQ 1. Which notices have been published by Buyers from a specific country for a given date?
+
+
+This SPARQL query retrieves information about contract award notices that have been published by buyers from Germany and published on TED on 05-09-2023.
+
+The query retrieves:
+
+* The ID of the resource which contains the Notice ID
+
+* The URI of the organisation within the notice
+
+* The name of the buyer.
+
+It does so by specifying a set of values and then querying the RDF data based on those values. The query returns information about the notices, the organizations (buyers), and their legal names.
+
+The date and country can be changed to create other queries.
+
+* To change the date, change the value:
+
+VALUES (?PublicationDate ?countryCode) {
+
+            ("20230905"
+
+* To change the country change the value:
+
+<http://publications.europa.eu/resource/authority/country/DEU>
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -47,8 +93,11 @@ WHERE {
 
 This SPARQL query aims to retrieve distinct procurement notices that have been published by buyers from a specific country (Germany) on a specific date ("20230905" or 05-09-2023). It does so by specifying a set of values and then querying the RDF data based on those values. The query returns information about the notices, the organizations (buyers), and their legal names.
 
+This SPARQL query aims to count the number of distinct procurement notices that meet specific criteria related to publication date, country code (Germany), and business size (SME).
 
-=== BQ 3. Who are the winners for a given date?
+////
+
+=== BQ 2. Who are the winners for a given date?
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -85,6 +134,7 @@ where {
 
 This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
 
+
 === BQ 4. Which is the highest value published for a contract award for a given date?
 
 [source,sparql]
@@ -114,6 +164,7 @@ This SPARQL query aims to retrieve the procurement notice, its publication date,
 
 NOTE: Other examples of SPARQL queries can be found https://github.com/OP-TED/ted-rdf-docs/tree/main/queries[here].
 
+
 == Querying data using Virtuoso SPARQL Endpoint
 
 Virtuoso SPARQL Endpoint refers to a specific type of web service provided by Virtuoso, which is a high-performance, scalable, and feature-rich RDF database and SPARQL query engine. It provides a means to interact with the RDF data representing TED notices, allowing users to perform advanced querying and analysis tasks on the procurement information available in the system. It can be accessed https://publications.europa.eu/webapi/rdf/sparql[here].
@@ -131,3 +182,4 @@ The result of the query is displayed as a data table (_Figure 2_).
 
 .Query result table
 image::user_manual/sparql_queries/image2.png[image,width=801,height=84]
+////
