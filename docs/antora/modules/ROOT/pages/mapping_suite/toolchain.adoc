@@ -14,7 +14,9 @@ Consult the authority tables used in the EPO available from the https://op.europ
 For more detailed documentation on its usage please check out the https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html#_cmd_resources_injector[dedicated section in the Mapping Suite CLI Toolchain] documentation.
 
 === RML Modules Injector (rml_modules_injector)
-This CLI injects the technical mappings modules from the `src/mappings` folder (see xref:methodology.adoc#_technical-mapping-modularisation-chapter[modules chapter]) into the mapping suite. Each form has a module list that is needed in order to run the mapping_runner.
+This CLI injects the technical mappings modules from the `src/mappings`folder
+//(see xref:toolchain.adoc#_technical-mapping-modularisation-chapter[modules chapter])//
+into the mapping suite. Each form has a module list that is needed in order to run the mapping_runner.
 The modules name are listed on the "RML_Modules" spreadsheet of the Conceptual Mappings
 
 For more detailed documentation on its usage please check out the https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html#_cmd_rml_modules_injector[dedicated section in the Mapping Suite CLI Toolchain] documentation.

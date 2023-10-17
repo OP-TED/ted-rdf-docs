@@ -9,7 +9,10 @@ In order to not write transformation rules twice (for section 1 of F03 and secti
 * In the case of an update of the ePO ontology, we will have to implement the modification only once in the module(s) affected by the modification which, and the modififacation will be passed into all the forms.
 
 
-As explained in xref:methodology.adoc#_mapping_creation_method[technical mapping creation] section, a TripleMap represent a mapping of an XML element and its content with one class in the ontology and a set of its predicates objects. In order to have a module that can be reused on many forms we only define in these module files the predicates objects of a TripleMap. The logical sources and subjects map, needed in every TripleMap object, are described separately in the main file as they contain information specific to every form, making these parts of the TripleMap object non-reusable. For example a module that contain an organisation looked like that:
+As explained in the
+// xref:mapping_suite/toolchain.adoc#_mapping_creation_method[
+//
+technical mapping creation section, a TripleMap represent a mapping of an XML element and its content with one class in the ontology, and a set of its predicates objects. In order to have a module that can be reused on many forms we only define in these module files the predicates objects of a TripleMap. The logical sources and subjects map, needed in every TripleMap object, are described separately in the main file as they contain information specific to every form, making these parts of the TripleMap object non-reusable. For example a module that contain an organisation looked like that:
 
 ----
 <#OrganisationMapping> a rr:TriplesMap ;
