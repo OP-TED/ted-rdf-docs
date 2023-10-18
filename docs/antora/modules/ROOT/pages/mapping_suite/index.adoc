@@ -138,7 +138,7 @@ Test data is also provided in the mapping suite packages that are specific to th
 
 |===
 
-////
+
 === The lower level folders of the GitHub Repository
 
 This section provides more detailed information on the content available in the lower levels of the repository:
@@ -159,10 +159,10 @@ This section provides more detailed information on the content available in the 
 
 ** validation
 
-////
 
 
-// include::methodology.adoc[]
 
-// include::toolchain.adoc[]
+include::methodology.adoc[]
+
+include::toolchain.adoc[]
 

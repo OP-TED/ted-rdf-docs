@@ -82,7 +82,7 @@ Each xml notice is named by the NoticeID of the sample concerned (eg 000163-2021
 |
 |===
 
-////
+
 === Mapping suite package description for Semantic Engineers
 
 In the first, initial, phase, when the Semantic Engineers start working on a new mapping suite, they will have to set up a package folder structure similar to the one described below, and will work on (or with) the files contained there.
@@ -205,4 +205,3 @@ After the “execution” of a mapping, the mapping package will be further enri
 * `/output/<notice_file1>` for each example file we create a folder that will contain all the generated artefacts for that sample file
 * `/output/test_suite_report`  validation reports summarising all individual reports
 * `/output/<notice_file1>/<notice_file1>.ttl` the output of the transformation
-////

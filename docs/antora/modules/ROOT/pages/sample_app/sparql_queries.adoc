@@ -92,7 +92,7 @@ WHERE {
 }
 
 
-////
+
 
 === BQ 2. Who are the winners for a given date?
 
@@ -179,4 +179,3 @@ The result of the query is displayed as a data table (_Figure 2_).
 
 .Query result table
 image::user_manual/sparql_queries/image2.png[image,width=801,height=84]
-////
