@@ -1,4 +1,9 @@
-= General Reference
+:doctitle: General Reference
+:doccode: sws-main-prod-003
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 // = The Motivation for the TED-Semantic Web Service
 
@@ -6,3 +11,4 @@
 
 A mapping suite within the TED Semantic Web Service is a set of mappings that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation in conformance with the eProcurement ontology. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which we refer to as a *mapping suite package*.A mapping suite can be further broken down into mapping suite packages, one per type of standard form mapped.
 
+include::partial$feedback.adoc[]

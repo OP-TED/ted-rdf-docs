@@ -1,5 +1,8 @@
-== Mapping Suite Glossary
-
+:doctitle: Mapping Suite Glossary
+:doccode: sws-main-prod-005
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
 
 [cols="1,3"]
 |===
@@ -46,4 +49,4 @@ a|*XPath - the XML Path Language (XPath) Version 1.0.*
 a|See https://www.w3.org/TR/xpath-10/
 |===
 
-
+include::partial$feedback.adoc[]

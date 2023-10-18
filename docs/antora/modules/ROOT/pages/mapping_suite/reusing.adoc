@@ -1,3 +1,9 @@
+:doctitle: Reusing Mapping suite packages
+:doccode: sws-main-prod-016
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 === Reusing Mapping suite packages
 
 The structure of the package evolves during through the different phases of the mapping development process. Three phases of the mapping development are described in this section.
@@ -139,4 +145,4 @@ Data samples
 
 Versioning
 
-=== Reusing semantic web service artefacts and the mapping suites
+include::partial$feedback.adoc[]

@@ -1,4 +1,9 @@
-== Glossary: Reusing semantic web service artefacts
+:doctitle: Glossary: Reusing semantic web service artefacts
+:doccode: sws-main-prod-024
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 [cols="1,3"]
 |===
@@ -22,3 +27,5 @@ a|*RDF* |Stands for Resource Description Framework. RDF is a standardized data m
 |*Business Questions* |(BQ) refer to specific inquiries or information needs that pertain to business operations, procurement activities, or related aspects. These questions are typically posed by organizations, researchers, or individuals seeking to gain insights, make informed decisions, or conduct analyses based on the data provided by TED-SWS.
 
 |===
+
+include::partial$feedback.adoc[]

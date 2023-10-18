@@ -1,4 +1,9 @@
-== Jupyter Notebook - R
+:doctitle: Jupyter Notebook - R
+:doccode: sws-main-prod-022
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 This document  shows an example using Jupyter Notebook in R language. R is
 software environment for statistical computing and graphic
@@ -99,3 +104,5 @@ image::user_manual/jupyter_notebook/image6.png[image,width=502,height=100]
 
 .Result Table
 image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]
+
+include::partial$feedback.adoc[]

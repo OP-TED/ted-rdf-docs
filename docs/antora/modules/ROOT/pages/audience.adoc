@@ -1,4 +1,9 @@
-== Target Audience
+:doctitle: Target Audience
+:doccode: sws-main-prod-002
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 This documentation is written for a wide audience:
 
@@ -7,3 +12,5 @@ This documentation is written for a wide audience:
 *Software Engineers* will find the information generally of interest as it will enable them to integrate mapping suites into processing pipelines.
 
 *Semantic Engineers* will find most of the information interesting as it will enable them to understand and write mappings from XML to RDF, in particular when using the eProcurement Ontology.
+
+include::partial$feedback.adoc[]

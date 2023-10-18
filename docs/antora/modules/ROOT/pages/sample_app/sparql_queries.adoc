@@ -1,4 +1,9 @@
-== SPARQL Query examples
+:doctitle: SPARQL Queries
+:doccode: sws-main-prod-025
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 In the context of TED-SWS, SPARQL queries can be used to query the data of notices published in RDF by the Publications Office.  These queries can be made on the
 https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] available in EU Vocabularies
@@ -180,3 +185,5 @@ The result of the query is displayed as a data table (_Figure 2_).
 .Query result table
 image::user_manual/sparql_queries/image2.png[image,width=801,height=84]
 ////
+
+include::partial$feedback.adoc[]

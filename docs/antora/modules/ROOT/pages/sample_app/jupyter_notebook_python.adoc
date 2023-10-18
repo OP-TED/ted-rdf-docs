@@ -1,4 +1,9 @@
-== Jupyter Notebook - Python
+:doctitle: Jupyter Notebook - Python
+:doccode: sws-main-prod-021
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 This document shows an example using the Jupyter Notebook in Python. The
 Jupyter Notebook is an application for creating and sharing
@@ -90,3 +95,4 @@ image::user_manual/jupyter_notebook/image2.png[image,width=501,height=84]
 .Result table
 image::user_manual/jupyter_notebook/image3.png[image,width=987,height=420]
 
+include::partial$feedback.adoc[]

@@ -1,4 +1,9 @@
-= Sample Applications
+:doctitle: Sample Applications
+:doccode: sws-main-prod-020
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 A sample application, often referred to as a demo or prototype, is a functional representation of a software program or system that demonstrates its basic features, functionalities, and capabilities. In the context of TED-SWS (TED Semantic Web Services), a sample application would refer to a functional representation of how to access data processed by the system.
 
@@ -43,5 +48,8 @@ Example of using Python language and to access data.
 
 Example of using R language and to access data.
 ////
+
+include::partial$feedback.adoc[]
+
 
 
