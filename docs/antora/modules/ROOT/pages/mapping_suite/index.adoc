@@ -1,6 +1,6 @@
 = Mapping Suites
 
-////
+
 == Prerequisites
 
 To allow for a proper understanding of the Mapping Suite Documentation, the reader should have:
@@ -12,7 +12,7 @@ Understanding of RDF, RML and SPARQL:: Familiarity with RDF (Resource Descriptio
 Understanding of EU Procurement Data and Familiarity with ePO:: If your goal is to understand how the mappings are used to transform specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts, and the associated https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].
 
 Familiarity with Spreadsheet editing tools:: Since most of the Conceptual mappings is done in spreadsheet working experience with spreadsheet editing tools such as MS Excel or Google Sheets, is desirable.
-////
+
 
 
 ////
