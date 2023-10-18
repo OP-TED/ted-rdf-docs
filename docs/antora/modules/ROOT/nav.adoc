@@ -10,12 +10,14 @@
 * [.separated]#**Mapping suite contents**#
 * xref:SWS::genref.adoc[General Reference]
 * xref:SWS::glossary.adoc[Glossary]
-* xref:mapping_suite/index.adoc[Mapping suites - see old intro, methodology & toolchain at bottom of page]
-** xref:mapping_suite/repository-structure.adoc[Repository structure - to review]
-* xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite package structure - to review]
+* xref:mapping_suite/index.adoc[Mapping suites]
 * xref:mapping_suite/code-list-resources.adoc[Code list mappings]
 * xref:mapping_suite/preparing-test-data.adoc[Data samples]
-
+* xref:mapping_suite/ted-sws-introduction.adoc[Old Introduction - to review]
+* xref:mapping_suite/repository-structure.adoc[Repository structure - to review]
+* xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite package structure - to review]
+* xref:mapping_suite/methodology.adoc[Methodology - to review]
+* xref:mapping_suite/toolchain.adoc[Toolchain - to review]
 
 * [.separated]#**Reusing semantic web service artefacts**#
 * xref:sample_app/sa_glossary.adoc[Glossary]
