@@ -74,7 +74,7 @@ After the package processing/expansion, the structure of the example mapping pac
         /sparql
             /cm_assertions
                 *.rq
-        /shacl # this is a constant, when we know what the SHACL is (currently unknown)
+        /shacl # this is a constant, when  the SHACL is known (currently unknown)
             *.shacl.ttl # data shape file(s)
     /test_data # manually and carefully selected test data
         *.xml
@@ -127,7 +127,7 @@ After the “execution” of a mapping, the mapping package will be further enri
         <notice_file3>.xml
         *.xml
 
-/output/<notice_file1> for each example file we create a folder that will contain all the generated artefacts for that sample file
+/output/<notice_file1> for each example file a folder is creatated that contains all the generated artefacts for that sample file
 
 /output/test_suite_report validation reports summarising all individual reports
 

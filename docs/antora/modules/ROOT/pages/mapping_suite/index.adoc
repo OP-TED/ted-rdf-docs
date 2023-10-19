@@ -163,7 +163,7 @@ This section provides more detailed information on the content available in the 
 
 include::ted-sws-introduction.adoc[Old Introduction]
 
-include::methodology.adoc[]
+//include::methodology.adoc[]
 
-include::toolchain.adoc[]
+//include::toolchain.adoc[]
 

@@ -1,5 +1,5 @@
 == Introduction - the old introduction of the mapping suite section
-*In case there is anything here we want to keep*
+#In case there is anything here we want to keep#
 
 Although TED notice data is already available to the general public
 through the search API provided by the TED website, the current offering

@@ -95,7 +95,7 @@ image::user_manual/jupyter_notebook/image5.png[image,width=901,height=142]
 image::user_manual/jupyter_notebook/image6.png[image,width=502,height=100]
 
 [arabic, start=8]
-. After running successfully all the cells in the Jupyter Notebook, we can see the result table.
+. After running successfully all the cells in the Jupyter Notebook, the results table can be viewed.
 
 .Result Table
 image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]

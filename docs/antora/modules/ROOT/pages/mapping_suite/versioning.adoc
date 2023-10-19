@@ -48,7 +48,7 @@ _Implications:_
 _Implications:_
 
 * If the output of the mappings impacts a SPARQL query, it is considered a minor change in the mapping suite, even if the impact on the query is major.
-* At first glance, these types of changes may appear quite substantial and potentially incompatible with previous versions. However, it's important to note the definition of backward compatibility we discussed earlier in this section. Backward compatibility is considered broken only when developers are required to make modifications to enable an application to read the new version while still being able to interpret the previous version. Fortunately, in the rules mentioned above, none of the changes require any adjustments within the application itself. Hence, these modifications can be seamlessly adopted without any impact on the application's functionality.
+* At first glance, these types of changes may appear quite substantial and potentially incompatible with previous versions. However, it's important to note the definition of backward compatibility that was discussed earlier in this section. Backward compatibility is considered broken only when developers are required to make modifications to enable an application to read the new version while still being able to interpret the previous version. Fortunately, in the rules mentioned above, none of the changes require any adjustments within the application itself. Hence, these modifications can be seamlessly adopted without any impact on the application's functionality.
 * The RDF metadata in the output should indicate the ontology version it is compliant with, and the mapping suite version used to generate them, specifying only the major and minor versions (without the patch).
 
 === Patch version increment
