@@ -6,7 +6,7 @@ In this section we describe the structure of a mapping suite package in GitHub. 
 
 A package is represented by a well-defined folder structure containing certain files. This folder structure is repeated for every developed mapping. Initial organisation of these packages is per Form number, but it may evolve.
 
-The table below shows the structure for the F03 package, where /output refers to ted-rdf-mapping/mappings/package_F03/output, where package_F03 can be replaced by the identifier of the other packages mapped (F06,13, F21, F22, F23 -F20 and es16 should be ignored).
+The table below shows the structure for the https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03[F03 package], where /output refers to ted-rdf-mapping/mappings/package_F03/output, where package_F03 can be replaced by the identifier of the other packages mapped (F06,13, F21, F22, F23 -F20 and es16 should be ignored).
 
 [cols="1,2,2"]
 
@@ -14,19 +14,19 @@ The table below shows the structure for the F03 package, where /output refers to
 
 |Folder|Subfolder|Description
 
-|/output
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/output[/output]
 |/Noticeid/test_suite_report, where the NoticeID is the ID of the notice published on TED  for example:
 
 000163-2021/test_suite_report
 |Contains the semantic map of the concepts of the given notice (in this case, the F03 package).
 
-a|/output
+a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/output[/output]
 cont.
-|rml_report/html
+|https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/output/rml_report.html[rml_report/html]
 
-shacl_validations.html
+https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/output/shacl_validations.html[shacl_validations.html]
 
-shacl_validations.json
+https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/output/shacl_validations.json[shacl_validations.json]
 
 
 a|Each folder contains a subfolder for each of the rdf files produced from the sample data (see section on data sampling to understand the folder structure) which is named by the NoticeID of the sample concerned (eg 000163-2021)
@@ -39,7 +39,7 @@ Another subfolder /test_suite report which in turn contains different files for 
 
 
 
-|/test_data
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data[/test_data]
 |https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_2021[/test_data/form_number_F03_2021]
 
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S01[/test_data/form_number_F03_S01]
@@ -57,27 +57,27 @@ a|Each folder contains the xml file as published on the TED website of the Notic
 
 Each xml notice is named by the NoticeID of the sample concerned (eg 000163-2021)
 
-|/transformation
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation[/transformation]
 |https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation/mappings[/mappings]
 |Contains the rml files used for the transformation.  There is one rml file per section of each notice.
 
-|/transformation
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation[/transformation]
 |https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation/resources[/resources]
 |Contains files concerning the code list mappings
 
-|/transformation
-|conceptual_mappings.xlsx
-|Contains the initial conceptual mapping which is used right the rml.
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation[/transformation]
+|https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/transformation/conceptual_mappings.xlsx[conceptual_mappings.xlsx]
+|Contains the initial conceptual mapping which is used to write the rml.
 
-|/validation
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation[/validation]
 |https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/shacl[/shacl]
 |
 
-|/validation
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation[/validation]
 |https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/sparql/cm_assertions[/sparql/assertions]
 |
 
-|/validation
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation[/validation]
 |https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/sparql/integration_tests[/sparql/integration_tests]
 |
 |===
