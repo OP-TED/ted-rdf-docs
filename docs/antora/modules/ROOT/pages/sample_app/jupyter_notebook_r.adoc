@@ -71,7 +71,7 @@ image::user_manual/jupyter_notebook/image6.png[image,width=502,height=100]
 .Result Table
 image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]
 
-==== Explaining the query
+== Explaining the query
 
 **Question: Who are the winners for a given date?**
 
@@ -79,13 +79,13 @@ This SPARQL query aims to retrieve information about the winners of procurement 
 
 This query is composed of:
 
-* 'Prefix' section, used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).
+* The Prefix section is used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).
 
     PREFIX epo: <http://data.europa.eu/a4g/ontology#>
     PREFIX org: <http://www.w3.org/ns/org#>
     PREFIX cccev: <http://data.europa.eu/m8g/>
 
-* 'Select' section, that is responsible for specifying which variables or values to be retrieved from the dataset.
+* The Select section is responsible for specifying which variables or values are to be retrieved from the dataset.
 
     SELECT DISTINCT
     ?Lot
@@ -94,7 +94,7 @@ This query is composed of:
     ?AwardedValue
     ?AwardedValueCurrency
 
-* 'Where' section, used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:
+* The Where section is used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:
 
 ** Specifying specific filters for output
 
@@ -118,7 +118,7 @@ This query is composed of:
     ?TenderAwardOutcome a epo:TenderAwardOutcome;
                         epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
 
-** Defining winner
+** Defining the winner according to EPO ontology
 
     ?Winner a org:Organization;
             epo:hasLegalName ?WinnerLegalName .
@@ -126,7 +126,7 @@ This query is composed of:
         ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
     }
 
-** Defining award value and currency
+** Defining award value and currency according to EPO ontology
 
     ?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
     ?LotAwardedValue a epo:MonetaryValue;
@@ -142,23 +142,23 @@ The query retrieves:
 * The value awarded to winner
 * The currency of the awarded value
 
-The notice publication date and winner legal name language can be changed to create other queries.
+The notice publication date and winner legal name language can be changed to create other queries. To do this, change the following section:
 
-To change the publication date change the value:
 
     VALUES ?NoticePublicationDate {
         "20230921"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
-* For publication date:
+* Existing value for publication date in example above:
 
  "20230921"
 
-* For winner legal name language:
+* Existing value for winner legal name language in example above:
 
  'en'
 
+=== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>

@@ -21,8 +21,8 @@
 * xref:sample_app/sa_glossary.adoc[Glossary]
 * xref:sample_app/sparql_queries.adoc[SPARQL Queries]
 * xref:sample_app/ms_excel.adoc[MS Excel]
-* xref:sample_app/jupyter_notebook_r.adoc[R Jupyter Notebook]
-* xref:sample_app/jupyter_notebook_python.adoc[Python Jupyter Notebook]
+* xref:sample_app/jupyter_notebook_r.adoc[Jupyter Notebook - R]
+* xref:sample_app/jupyter_notebook_python.adoc[Jupyter Notebook - Python]
 
 * [.separated]#**Reference**#
 * xref:mapping_suite/versioning.adoc[Versioning]
