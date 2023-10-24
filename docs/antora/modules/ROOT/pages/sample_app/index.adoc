@@ -23,6 +23,8 @@ Development Environment:: Set up a development environment for your chosen progr
 
 Understanding of EU Procurement Data:: If your goal is to work with specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts and the associated https://docs.ted.europa.eu/EPO/latest/index.html[ontology].
 
+The sample applications can be accessed via the menu on the left.
+
 ////
 == Using MS Excel
 
@@ -31,12 +33,14 @@ Understanding of EU Procurement Data:: If your goal is to work with specific typ
 Example of accessing data in a MS Excel workbook.
 ////
 
+////
 == SPARQL Query examples
 
 * <<SWS:ROOT:sample_app/sparql_queries.adoc#, SPARQL Query examples>>
 
 Example of accessing data using SPARQL Query examples
 
+////
 ////
 == Using Jupyter Notebook
 
