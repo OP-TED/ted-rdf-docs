@@ -3,31 +3,40 @@
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
-select distinct
-?Lot
-?Winner
+SELECT DISTINCT
+?ProcedureNr
+?LotNr
+?WinnerLegalName
 ?WinnerCountryCode
-?LotAwardetAmountValue
-?LotAwardetValueCurrency
-where {
-    values ?NoticePublicationDate {
-       "20230921"
+?AwardedValue
+?AwardedValueCurrency
+WHERE {
+    VALUES ?NoticePublicationDate {
+        "20230921"
     }
+    FILTER(LANG(?WinnerLegalName) = 'en')
     ?NoticeId a epo:ResultNotice;
-                   epo:hasPublicationDate ?NoticePublicationDate;
-                   epo:refersToLot ?Lot.
+              epo:hasPublicationDate ?NoticePublicationDate;
+              epo:refersToLot ?Lot.
     ?Lot a epo:Lot.
     ?LotAwardOutcome epo:describesLot ?Lot;
-                   a epo:LotAwardOutcome;
-                   epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+                     a epo:LotAwardOutcome;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
     ?TenderAwardOutcome a epo:TenderAwardOutcome;
-                          epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
-    ?Winner a org:Organization.
-    optional {
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
         ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
     }
-    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardetValue.
-    ?LotAwardetValue a epo:MonetaryValue;
-                epo:hasAmountValue ?LotAwardetAmountValue;
-                epo:hasCurrency ?LotAwardetValueCurrency.
+    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
+    ?LotAwardedValue a epo:MonetaryValue;
+                     epo:hasAmountValue ?AwardedValue;
+                     epo:hasCurrency ?AwardedValueCurrency.
+  OPTIONAL {
+          ?Lot epo:hasID / epo:hasIdentifierValue ?LotNr .
+  }
+  ?Procedure epo:hasProcurementScopeDividedIntoLot ?Lot;
+             a epo:Procedure ;
+             epo:hasID / epo:hasIdentifierValue ?ProcedureNr .
 }

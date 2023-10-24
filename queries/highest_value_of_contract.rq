@@ -1,28 +1,34 @@
 # Which is the highest value published for a contract award for a given date?
 
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
-
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
 SELECT
-?Notice
-?NoticePublicationDate
 ?Lot
-?AmmountValue
-?CurrencyCode
+?WinnerLegalName
+?WinnerCountryCode
+?AwardedValue
+?AwardedValueCurrency
 WHERE {
-
-    VALUES ?Date {
+    VALUES ?NoticePublicationDate {
         "20230905"
     }
-
-    ?Notice epo:hasPublicationDate ?NoticePublicationDate .
-
-    ?Notice epo:refersToLot ?Lot .
-    ?LotAwardOutcome epo:describesLot ?Lot .
-    ?LotAwardOutcome epo:hasAwardedValue ?MonetaryValue .
+    FILTER(LANG(?WinnerLegalName) = 'en')
+    ?Notice epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot ;
+                     epo:hasAwardedValue ?MonetaryValue ;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+        OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
     ?MonetaryValue a epo:MonetaryValue;
-        epo:hasAmountValue ?AmmountValue;
-        epo:hasCurrency ?CurrencyCode .
-
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
 }
 ORDER BY DESC(?AmmountValue)
 LIMIT 1

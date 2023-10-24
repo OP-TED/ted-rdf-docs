@@ -13,43 +13,6 @@ necessary to install the special tools and use the Python code that will
 perform a query to the cellar and display the results in tabular
 form.
 
-Example query:
-
-**Who are the contract winners for a given date?**
-
-[source,sparql]
-PREFIX epo: <http://data.europa.eu/a4g/ontology#>
-PREFIX org: <http://www.w3.org/ns/org#>
-PREFIX cccev: <http://data.europa.eu/m8g/>
-select distinct
-?Lot
-?Winner
-?WinnerCountryCode
-?LotAwardetAmountValue
-?LotAwardetValueCurrency
-where {
-    values ?NoticePublicationDate {
-       "20230921"
-    }
-    ?NoticeId a epo:ResultNotice;
-                   epo:hasPublicationDate ?NoticePublicationDate;
-                   epo:refersToLot ?Lot.
-    ?Lot a epo:Lot.
-    ?LotAwardOutcome epo:describesLot ?Lot;
-                   a epo:LotAwardOutcome;
-                   epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
-    ?TenderAwardOutcome a epo:TenderAwardOutcome;
-                          epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
-    ?Winner a org:Organization.
-    optional {
-        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
-    }
-    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardetValue.
-    ?LotAwardetValue a epo:MonetaryValue;
-                epo:hasAmountValue ?LotAwardetAmountValue;
-                epo:hasCurrency ?LotAwardetValueCurrency.
-}
-
 To run the sample application using Python language follow the steps below:
 
 [arabic]
@@ -94,5 +57,130 @@ image::user_manual/jupyter_notebook/image2.png[image,width=501,height=84]
 
 .Result table
 image::user_manual/jupyter_notebook/image3.png[image,width=987,height=420]
+
+==== Explaining the query
+
+**Question: Who are the winners for a given date?**
+
+This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
+
+This query is composed of:
+
+* 'Prefix' section, used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).
+
+    PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+    PREFIX org: <http://www.w3.org/ns/org#>
+    PREFIX cccev: <http://data.europa.eu/m8g/>
+
+* 'Select' section, that is responsible for specifying which variables or values to be retrieved from the dataset.
+
+    SELECT DISTINCT
+    ?Lot
+    ?WinnerLegalName
+    ?WinnerCountryCode
+    ?AwardedValue
+    ?AwardedValueCurrency
+
+* 'Where' section, used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:
+
+** Specifying specific filters for output
+
+    VALUES ?NoticePublicationDate {
+        "20230921"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+
+** Defining notice according to EPO ontology
+
+    ?NoticeId a epo:ResultNotice;
+              epo:hasPublicationDate ?NoticePublicationDate;
+              epo:refersToLot ?Lot.
+
+** Defining lot and lot award outcome according to EPO ontology
+
+    ?Lot a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?Lot;
+                     a epo:LotAwardOutcome;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+
+** Defining winner
+
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+
+** Defining award value and currency
+
+    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
+    ?LotAwardedValue a epo:MonetaryValue;
+                     epo:hasAmountValue ?AwardedValue;
+                     epo:hasCurrency ?AwardedValueCurrency.
+
+
+The query retrieves:
+
+* Lot URI
+* The legal name of the winner
+* The winners country code as URI
+* The value awarded to winner
+* The currency of the awarded value
+
+The notice publication date and winner legal name language can be changed to create other queries.
+
+To change the publication date change the value:
+
+    VALUES ?NoticePublicationDate {
+        "20230921"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+
+* For publication date:
+
+ "20230921"
+
+* For winner legal name language:
+
+ 'en'
+
+
+[source,sparql]
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+SELECT DISTINCT
+?Lot
+?WinnerLegalName
+?WinnerCountryCode
+?AwardedValue
+?AwardedValueCurrency
+WHERE {
+    VALUES ?NoticePublicationDate {
+        "20230921"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+    ?NoticeId a epo:ResultNotice;
+              epo:hasPublicationDate ?NoticePublicationDate;
+              epo:refersToLot ?Lot.
+    ?Lot a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?Lot;
+                     a epo:LotAwardOutcome;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
+    ?LotAwardedValue a epo:MonetaryValue;
+                     epo:hasAmountValue ?AwardedValue;
+                     epo:hasCurrency ?AwardedValueCurrency.
+}
+
 
 include::partial$feedback.adoc[]

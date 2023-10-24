@@ -3,7 +3,6 @@
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 PREFIX org: <http://www.w3.org/ns/org#>
-
 SELECT DISTINCT
 ?Notice
 ?Organization
@@ -17,5 +16,4 @@ WHERE {
     ?Buyer epo:playedBy ?Organization .
     ?Organization cccev:registeredAddress / epo:hasCountryCode ?countryCode .
     ?Organization epo:hasLegalName ?LegalName .
-
 }
