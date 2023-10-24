@@ -25,6 +25,8 @@ Understanding of EU Procurement Data:: If your goal is to work with specific typ
 
 The sample applications can be accessed via the menu on the left.
 
+The sample applications can be accessed via the menu on the left.
+
 ////
 == Using MS Excel
 
@@ -53,4 +55,9 @@ Example of using Python language and to access data.
 Example of using R language and to access data.
 ////
 
+
 include::partial$feedback.adoc[]
+
+
+
+

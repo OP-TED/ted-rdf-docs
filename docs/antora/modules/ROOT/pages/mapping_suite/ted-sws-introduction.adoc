@@ -1,5 +1,12 @@
+
 == Introduction - the old introduction of the mapping suite section
-#In case there is anything here we want to keep#
+
+:doctitle: Introduction
+:doccode: sws-main-prod-017
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 Although TED notice data is already available to the general public
 through the search API provided by the TED website, the current offering
@@ -37,3 +44,5 @@ system that continuously converts the public procurement notices (in XML
 format) available on the TED Website into RDF format, publishes them
 into CELLAR and makes them available to the public through CELLAR’s
 SPARQL endpoint.
+
+include::partial$feedback.adoc[]

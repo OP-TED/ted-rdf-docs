@@ -2,21 +2,17 @@
 
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
-
-SELECT COUNT DISTINCT(?Notice) WHERE {
-
-    VALUES (?PublicationDate ?countryCode ?businessSize) {
+SELECT
+(COUNT(DISTINCT ?Notice) as ?NrOfNotices)
+WHERE {
+    VALUES (?NoticePublicationDate ?CountryCode ?BusinessSize) {
             ("20230905"
             <http://publications.europa.eu/resource/authority/country/DEU>
             <http://publications.europa.eu/resource/authority/economic-operator-size/sme>)
     }
-
     ?Notice epo:hasPublicationDate ?NoticePublicationDate .
-
     ?Notice epo:announcesRole ?Buyer .
     ?Buyer epo:playedBy ?Organization .
-    ?Oganization epo:hasBusinessSize ?businessSize .
-
-    ?Organization cccev:registeredAddress / epo:hasCountryCode ?countryCode .
-
+    ?Organization epo:hasBusinessSize ?BusinessSize .
+    ?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
 }

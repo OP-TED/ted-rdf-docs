@@ -1,3 +1,10 @@
+:doctitle: Preparing Test Data
+:doccode: sws-main-prod-014
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
+
 == Representative sample data selection
 
 This section describes TED notice data samples and methods used to generate them. At first a sampling is performed on the notices from 2021, and then on a wider set.
@@ -96,7 +103,9 @@ Below are two tables with statistics indicating the total number for each select
 
 === Sampling of TED notices based on XSD versions
 
+
 A separate sampling on *all the TED notices published between 2014 and 2022* was also made. The samples were split up based on the various XSD versions according to which they were created. These samples can be found in the following folder structure
+
 ----
 test_data
    sampling_2014_2022
@@ -107,4 +116,5 @@ test_data
       R2.0.9.S05.E01            (662 notices)
 ----
 
-Each of this folder contains separate samples for each of the Standard forms and eForms subtypes. 
+
+include::partial$feedback.adoc[]

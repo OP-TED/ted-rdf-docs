@@ -1,8 +1,15 @@
+:doctitle: Mapping suite package structure
+:doccode: sws-main-prod-012
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 
 == Mapping suite package structure
 
 This section describes the structure of a mapping suite package in GitHub. A package contains everything that is needed for the development and testing of a mapping suite that is applicable to a certain set of notices. After the package is finalised, it can be used by a process to apply it to a larger number of notices stored in a database, and transform these into RDF data.
+
 
 A package is represented by a well-defined folder structure. This folder structure is duplicated for every mapping developed. The listing of these packages is by Form number.
 
@@ -203,3 +210,7 @@ After the execution of a mapping, the mapping package will be further enriched, 
 * `/output/<notice_file1>` for each example file a folder is created that contains all the generated artefacts for that sample file
 * `/output/test_suite_report`  validation reports summarising all individual reports
 * `/output/<notice_file1>/<notice_file1>.ttl` the output of the transformation
+
+
+include::partial$feedback.adoc[]
+

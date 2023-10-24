@@ -1,4 +1,9 @@
-== MS Excel
+:doctitle: MS Excel
+:doccode: sws-main-prod-023
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 This page explains how to use procurement data accessed from *Cellar* with Microsoft Excel. There are different ways to access TED notices in CELLAR
 and use the data. The methods described below work with TED notices and other type of semantic assets.
@@ -41,3 +46,7 @@ image::user_manual/ms_excell/image9.png[image,width=907,height=466]
 
 .Sample analysis
 image::user_manual/ms_excell/image10.png[image,width=807,height=166]
+{nbsp}
+
+include::partial$feedback.adoc[]
+

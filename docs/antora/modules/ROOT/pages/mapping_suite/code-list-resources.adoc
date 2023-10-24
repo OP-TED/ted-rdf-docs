@@ -1,4 +1,9 @@
-== Resources for Code List Mappings
+:doctitle: Resources for Code List Mappings
+:doccode: sws-main-prod-011
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 The table below provides a list of resources that are used to map the various code lists used in the XML files to URIs in the RDF representation.
 
@@ -35,3 +40,4 @@ https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/transfo
 |at-voc:direct-award-justification|URI|Used only when mapping to o a specific value from the EU voc
 |===
 
+include::partial$feedback.adoc[]

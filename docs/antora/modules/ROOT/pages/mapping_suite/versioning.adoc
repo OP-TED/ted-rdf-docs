@@ -1,3 +1,9 @@
+:doctitle: Mapping Suite Versioning Rules
+:doccode: sws-main-prod-019
+:author: Meaningfy
+:authoremail:
+:docdate: October 2023
+
 == Mapping Suite Versioning Rules
 
 This section presents the versioning rules for mapping suites which considers the mapping suite structure, the conceptual and technical mappings (which impact the structure of the output), and the metadata. These rules play a crucial role in maintaining compatibility and ensuring smooth transitions between different mapping suite versions, especially when considering the potential impact on SPARQL queries on the transformation output.
@@ -71,3 +77,5 @@ _Implications:_
 === Conclusion
 
 By adhering to the versioning rules outlined in this section, developers and maintainers can effectively manage versioning for mapping suites, ensuring compatibility and smooth transitions between different versions. These rules provide clear guidelines for when to increment major, minor and patch versions, considering the potential impact on SPARQL queries on the transformation output. Following these rules will help maintain consistency and compatibility across various systems that rely on the mapping suites.
+
+include::partial$feedback.adoc[]

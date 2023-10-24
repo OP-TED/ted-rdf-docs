@@ -1,4 +1,10 @@
-= The toolchain used in the mapping development process
+:doctitle: The Toolchain used in the Mapping Development Process
+:doccode: sws-main-prod-018
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
+
 
 The mapping artefacts, including the various mapping suite packages that developed in the process described in this document, are stored and maintained in the https://github.com/OP-TED/ted-rdf-mapping[OP-TED/ted-rdf-mapping] GitHub repository.
 
@@ -101,6 +107,6 @@ The https://github.com/rmlio/yarrrml-parser[RMLio/yarrrml-parser] library, avail
 
 The https://github.com/RMLio/rmlmapper-java[RMLio/rmlmapper-java] library, available on GitHub, allows the execution of a set of RML mappings on a set of data sources, to generate high quality RDF data.
 
-
+include::partial$feedback.adoc[]
 
 
