@@ -13,7 +13,7 @@ image::maping_development_lifecycle.png[]
 
 The process starts with the decision of **which notice type to map**. The notice classification schemes currently targeted are the https://simap.ted.europa.eu/web/simap/standard-forms-for-public-procurement["standard forms"], and the https://simap.ted.europa.eu/web/simap/eforms["eForms"]. New classification schemes will follow in the future.
 
-Once the target form is selected, **a set of representative data is selected** which serve as the test set for the developed mapping.
+Once the target form is chosen, **a set of representative data is selected** which serves as the test set for the mapping.
 
 The notice classification scheme is usually subject to regulations, and described in multiple forms, PDF documents, XSD schemes, and other documents. All possible documentation and modelling artefacts are **analysed and used to produce a conceptual mapping** (described in the <<_conceptual-mapping-structure,Conceptual mapping structure>> section). This artefact, stored as a workbook, establishes the correspondence of the TED notice fields to XPath expressions and EPO structures.
 
@@ -21,8 +21,8 @@ Once the conceptual mapping is established between the XPath expressions and ont
 
 Reading RML for revision or debugging purposes can be difficult. To simplify this process, the *RML files can be turned into a more human-friendly HTML report*. This detailed document can facilitate e.g., parsing the sets of conceptual and technical mapping rules to *check their completeness and/or consistency*. This check is a manual step but not the only quality assurance mechanism foreseen in the lifecycle process.
 
-The setup and conventions of the conceptual mapping file  permits the generation of several additional artefacts. In particular, *a set of SPARQL assertion queries can be generated*. These queries can be used to assess whether  the fields mapped in the conceptual mapping are found in the same form in the RDF file generated from an XML notice.
+The setup and conventions of the conceptual mapping file  permits the generation of several additional artefacts, specifically, *a set of SPARQL assertion queries*. These queries are used to assess whether the fields mapped in the conceptual mapping are in the same form in the RDF file generated from an XML notice.
 
-To put the SPARQL assertions into practice, *sample data is automatically transformed into RDF*, using the RML mapping rules. The *SPARQL queries are then applied* on each output resulting in validation reports indicating whether the individual queries generated a positive or negative result. The reports are then analysed for errors in the RML transformation rules or the conceptual mapping.
+To put the SPARQL assertions into practice, *sample data is transformed into RDF* automatically using the RML mapping rules. The *SPARQL queries are then applied* to each output resulting in validation reports indicating whether the individual queries generated a positive or negative result. The reports are then analysed for errors in the RML transformation rules or the conceptual mapping.
 
 The final step is the assessment of the generated data: the *fingerprinting*. This procedure generates a report which *reconstructs the data shape instantiated in a particular notice*. This facilitates the identification of errors related to the EPO ontology.
