@@ -1,47 +1,47 @@
 = Sample Applications
 
-A sample application, often referred to as a demo or prototype, is a functional representation of a software program or system that demonstrates its basic features, functionalities, and capabilities. In the context of TED-SWS (TED Semantic Web Services), a sample application would refer to a functional representation of how to access data processed by the system.
+Sample applications, often referred to as demos or prototypes, are functional representations of a software programs or systems that demonstrate their basic features, functionalities, and capabilities. In the context of TED-SWS (TED Semantic Web Services), a sample application would refer to a functional representation of how to access data processed by the system.
 
 
 
 == Prerequisites
 
-To use TED-SWS sample applications, you will need the following:
+To use TED-SWS sample applications, the following are needed:
 
 Understanding of RDF and SPARQL:: Familiarity with RDF (Resource Description Framework) and SPARQL (SPARQL Protocol and RDF Query Language) is crucial. TED-SWS provides data in RDF format and utilizes SPARQL for querying.
 
-Access to a Programming Language:: You should have proficiency in a programming language capable of making HTTP requests and processing data. Common choices include Python or R.
+Access to a Programming Language:: Proficiency in a programming language capable of making HTTP requests and processing data is necessary. Common choices include Python or R.
 
 Knowledge of Semantic Web Technologies:: A basic understanding of Semantic Web concepts and technologies is beneficial. This includes knowledge of RDF triples, ontologies, and linked data principles.
 
-Development Environment:: Set up a development environment for your chosen programming language or at least ensure that you have installed MS Excel.
+Development Environment:: Setting up a development environment for your chosen programming language, or at least having MS Excel installed, is necessary.
 
-Understanding of EU Procurement Data:: If your goal is to work with specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts and the associated https://docs.ted.europa.eu/EPO/latest/index.html[ontology].
+Understanding of EU Procurement Data:: If the goal is to work with specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts and the associated https://docs.ted.europa.eu/EPO/latest/index.html[ontology].
 
 
 == Using MS Excel
 
 * <<SWS:ROOT:sample_app/ms_excel.adoc#, MS Excel Workbook>>
 
-Example of accessing data in a MS Excel workbook.
+Example accessing data from a MS Excel workbook.
 
 
 == SPARQL Query examples
 
 * <<SWS:ROOT:sample_app/sparql_queries.adoc#, SPARQL Query examples>>
 
-Example of accessing data using SPARQL Query examples
+Example accessing data using SPARQL Queries
 
 
 == Using Jupyter Notebook
 
 * <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, Jupyter Notebook - Python>>
 
-Example of using Python language and to access data.
+Example using Python to access data.
 
 * <<SWS:ROOT:sample_app/jupyter_notebook_r.adoc#, Jupyter Notebook - R>>
 
-Example of using R language and to access data.
+Example using R to access data.
 
 
 
