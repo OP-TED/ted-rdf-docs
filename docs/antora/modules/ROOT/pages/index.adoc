@@ -9,14 +9,14 @@
 
 Currently, the TED Semantic Web Service (TED-SWS) continuously converts Contract Award Notices from the xml standard form format available on the TED Website, into RDF format.  The RDF is stored in the CELLAR repository. The data in CELLAR can be queried from the https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] on the EU Vocabularies. It should be noted that the Contract Award Notices should not be confused with the Result Notices resulting from eForms.
 
-This project falls clearly in the European data strategy which foresees a single market for data will allow it to flow freely within the EU and across sectors for the benefit of businesses, researchers and public administrations.
+This project falls clearly in the European data strategy which foresees a single market for data that will allow it to flow freely within the EU, and across sectors, for the benefit of businesses, researchers and public administrations.
 
 
 The following topics are included in this version of the Semantic Web Service Documentation:
 
 ////
 == Mapping Suites
-A mapping suite within the TED Semantic Web Service is a set of mappings that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation in conformance with the eProcurement ontology. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which we refer to as a *mapping suite package*.A mapping suite can be further broken down into mapping suite packages, one per type of standard form mapped.
+A mapping suite within the TED Semantic Web Service is a set of mappings that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation in conformance with the eProcurement ontology. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which is referred to as a *mapping suite package*.A mapping suite can be further broken down into mapping suite packages, one per type of standard form mapped.
 ////
 
 

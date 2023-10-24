@@ -21,7 +21,9 @@ Knowledge of Semantic Web Technologies:: A basic understanding of Semantic Web c
 
 Development Environment:: Set up a development environment for your chosen programming language or at least ensure that you have installed MS Excel.
 
-Understanding of EU Procurement Data:: If your goal is to work with specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts and the associated https://docs.ted.europa.eu/EPO/latest/index.html[ontology].
+Understanding of EU Procurement Data:: If your goal is to work with specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts, and the associated https://docs.ted.europa.eu/EPO/latest/index.html[ontology].
+
+The sample applications can be accessed via the menu on the left.
 
 The sample applications can be accessed via the menu on the left.
 
@@ -53,7 +55,9 @@ Example of using Python language and to access data.
 Example of using R language and to access data.
 ////
 
+
 include::partial$feedback.adoc[]
+
 
 
 

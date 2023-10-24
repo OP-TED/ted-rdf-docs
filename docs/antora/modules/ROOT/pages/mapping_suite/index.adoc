@@ -5,7 +5,7 @@
 :docdate: October 2023
 
 
-////
+
 == Prerequisites
 
 To allow for a proper understanding of the Mapping Suite Documentation, the reader should have:
@@ -16,8 +16,8 @@ Understanding of RDF, RML and SPARQL:: Familiarity with RDF (Resource Descriptio
 
 Understanding of EU Procurement Data and Familiarity with ePO:: If your goal is to understand how the mappings are used to transform specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts, and the associated https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].
 
-Familiarity with Spreadsheet editing tools:: Since most of the Conceptual mappings is done in spreadsheet working experience with spreadsheet editing tools such as MS Excel or Google Sheets, is desirable.
-////
+Familiarity with Spreadsheet editing tools:: Since most of the Conceptual mappings is done in spreadsheet working experience with spreadsheet editing tools such as MS Excel or Google Sheets, is beneficial.
+
 
 
 ////
@@ -79,7 +79,7 @@ This section describes the upper level of the GitHub repository, the next sectio
 a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03[/package_F03]
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F06[/package_F06]
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F13[/package_F13]
-https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F20[/package_F20]
+//https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F20[/package_F20]
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F21[/package_F21]
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F23[/package_F22]
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F23[/package_F23]
@@ -143,7 +143,7 @@ Test data is also provided in the mapping suite packages that are specific to th
 
 |===
 
-////
+
 === The lower level folders of the GitHub Repository
 
 This section provides more detailed information on the content available in the lower levels of the repository:
@@ -164,11 +164,12 @@ This section provides more detailed information on the content available in the 
 
 ** validation
 
-////
 
 
-// include::methodology.adoc[]
+//include::ted-sws-introduction.adoc[Old Introduction]
 
-// include::toolchain.adoc[]
+//include::methodology.adoc[]
+
+//include::toolchain.adoc[]
 
 include::partial$feedback.adoc[]
