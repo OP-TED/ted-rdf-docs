@@ -1,4 +1,4 @@
-= The toolchain used in the mapping development process - needs review
+= The toolchain used in the mapping development process
 
 The mapping artefacts, including the various mapping suite packages that developed in the process described in this document, are stored and maintained in the https://github.com/OP-TED/ted-rdf-mapping[OP-TED/ted-rdf-mapping] GitHub repository.
 
