@@ -1,6 +1,6 @@
 = Sample Applications
 
-Sample applications, often referred to as demos or prototypes, are functional representations of a software programs or systems that demonstrate their basic features, functionalities, and capabilities. In the context of TED-SWS (TED Semantic Web Services), a sample application would refer to a functional representation of how to access data processed by the system.
+Sample applications, often referred to as demos or prototypes, are functional representations of a software programs or systems that demonstrate their basic features, functionalities, and capabilities. In the context of TED-SWS (TED Semantic Web Services), a sample application would refer to a functional representation of how to access data processed by the TED Semantic Web Service.
 
 
 

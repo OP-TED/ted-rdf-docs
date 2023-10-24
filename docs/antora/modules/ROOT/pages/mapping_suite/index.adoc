@@ -74,7 +74,7 @@ This section describes the upper level of the GitHub repository, the next sectio
 a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03[/package_F03]
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F06[/package_F06]
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F13[/package_F13]
-https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F20[/package_F20]
+//https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F20[/package_F20]
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F21[/package_F21]
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F23[/package_F22]
 https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F23[/package_F23]
