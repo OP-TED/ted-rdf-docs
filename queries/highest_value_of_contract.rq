@@ -4,31 +4,31 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 SELECT
-?Lot
+?LotURI
 ?WinnerLegalName
 ?WinnerCountryCode
-?AwardedValue
-?AwardedValueCurrency
+?LotAwardedValue
+?LotAwardedValueCurrency
 WHERE {
     VALUES ?NoticePublicationDate {
-        "20230905"
+        "20230921"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
     ?Notice epo:hasPublicationDate ?NoticePublicationDate ;
-            epo:refersToLot ?Lot .
-    ?LotAwardOutcome epo:describesLot ?Lot ;
+            epo:refersToLot ?LotURI .
+    ?LotAwardOutcome epo:describesLot ?LotURI ;
                      epo:hasAwardedValue ?MonetaryValue ;
                      epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
     ?TenderAwardOutcome a epo:TenderAwardOutcome;
                         epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
     ?Winner a org:Organization;
             epo:hasLegalName ?WinnerLegalName .
-        OPTIONAL {
+    OPTIONAL {
         ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
     }
     ?MonetaryValue a epo:MonetaryValue;
-                   epo:hasAmountValue ?AwardedValue;
-                   epo:hasCurrency ?AwardedValueCurrency .
+                   epo:hasAmountValue ?LotAwardedValue;
+                   epo:hasCurrency ?LotAwardedValueCurrency .
 }
-ORDER BY DESC(?AmmountValue)
+ORDER BY DESC(?LotAwardedValue)
 LIMIT 1
