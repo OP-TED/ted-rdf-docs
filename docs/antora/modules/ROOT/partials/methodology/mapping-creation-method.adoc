@@ -3,7 +3,7 @@
 
 This section gives a high-level overview of the process for creating the mapping rules for transforming XML TED notices into RDF triples that use ePO terms.
 
-The methodology described focuses on the steps and artefacts at the core of  <<mapping-creation>>. This diagram shows a subsection of the xref:mapping_suite/methodology.adoc#_mapping-lifecycle[mapping lifecycle].
+The methodology described focuses on the steps and artefacts at the core of  <<mapping-creation>>. This diagram shows a subsection of the mapping lifecycle.
 
 [#mapping-creation]
 .Mapping creation steps in the development lifecycle
@@ -144,7 +144,7 @@ IMPORTANT: The path to the source files should be specified relative to the RML 
 
 The xref:mapping_suite/preparing-test-data.adoc[representative sample data selection chapter] should be referred to.
 
-==== #Writing YARRRML Rules (optional)#
+==== Writing YARRRML Rules (optional)
 
 During the initial phase of the mapping creation process, the writing of the mapping rules in https://rml.io/yarrrml/spec/[YARRRML] (a human-readable text-based representation for declarative generation rules), instead of RML took place, because it seemed simpler, and the end result was more human friendly. However, as we gained more experience and confidence in how the mappings should be defined, we realised that writing RML rules directly could be even more powerful, and we started to rewrite all our YARRRML mapping rules into RML. If this transition proves to be successful, and writing RML rules directly will be more convenient, our process will not require writing YARRRML rules in the future. This is the reason for why this step is optional. It could be useful for small test cases, quick demos, or showcases, and in cases when some people are more familiar with YARRRML than RML. If people decide to write YARRRML rules, the next step will become unnecessary, as the RML rules will be automatically generated from the YARRRML rules, using xref:mapping_suite/toolchain.adoc[dedicated tools] that were developed for this purpose.
 
