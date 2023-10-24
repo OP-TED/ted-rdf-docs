@@ -1,12 +1,10 @@
 == Jupyter Notebook - R
 
-This document  shows an example using Jupyter Notebook in R language. R is
+This document  shows an example in the R language using Jupyter Notebook. R is
 software environment for statistical computing and graphic
-representation. In this case, R represents the programming language for
-writing notebook documents. To realize the proposed scenario, it is
-necessary to install the special tools and
-use the R code that will perform a query to
-the cellar and display the results in tabular form.
+representation. In this case, R is the programming language used for
+writing notebook documents. To work with, it is
+necessary to insta R and Jupiter Notebook, it is necessary to install some tools and applications. After installation, R code can be used to perform a query on the CELLAR database and display the results in tabular format.
 
 Example query:
 
@@ -45,13 +43,13 @@ where {
                 epo:hasCurrency ?LotAwardetValueCurrency.
 }
 
-To run the sample application using R language follow the steps below:
+To run the sample application using the R language follow the steps below:
 
 [arabic]
-. https://cran.r-project.org/bin/windows/base/R-4.3.1-win.exe[Download] & install R language.
+. https://cran.r-project.org/bin/windows/base/R-4.3.1-win.exe[Download] & install R.
 
 [arabic, start=2]
-. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_R.ipynb[Download Jupyter Notebook file].
+. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_R.ipynb[Download the Jupyter Notebook file].
 
 [arabic, start=3]
 .  https://cran.r-project.org/src/contrib/Archive/SPARQL/SPARQL_1.16.tar.gz[Download SPARQL package archive] and put it in same folder as Notebook file.
@@ -60,7 +58,7 @@ To run the sample application using R language follow the steps below:
 . Install the IRKernel.
 
 [loweralpha]
-.. Run R in OS command line and type.
+.. Run R in the OS command line and type in:
 
 [source,bash]
 install.packages("IRkernel")
@@ -68,7 +66,7 @@ install.packages('RCurl')
 install.packages('XML')
 
 [loweralpha, start=2]
-. In the window prompt, select first option (mirror) and then press OK.
+. In the window prompt, select the first option (mirror) and press OK.
 
 .Secure download mirrors
 image::user_manual/jupyter_notebook/image4.png[image,width=240,height=309]
@@ -82,7 +80,7 @@ IRkernel::installspec()
 [arabic, start=5]
 . Open the Jupyter Notebook file with the code editor.
 
-. Select R interpreter.
+. Select the R interpreter.
 
 .Interpreter selection
 image::user_manual/jupyter_notebook/image5.png[image,width=901,height=142]

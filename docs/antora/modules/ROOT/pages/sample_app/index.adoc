@@ -6,7 +6,7 @@ A sample application, often referred to as a demo or prototype, is a functional 
 
 == Prerequisites
 
-To use TED-SWS sample apps, you will need the following:
+To use TED-SWS sample applications, you will need the following:
 
 Understanding of RDF and SPARQL:: Familiarity with RDF (Resource Description Framework) and SPARQL (SPARQL Protocol and RDF Query Language) is crucial. TED-SWS provides data in RDF format and utilizes SPARQL for querying.
 

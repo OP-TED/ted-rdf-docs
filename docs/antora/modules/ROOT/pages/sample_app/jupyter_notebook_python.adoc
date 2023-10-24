@@ -1,12 +1,12 @@
 == Jupyter Notebook - Python
 
-This document shows an example using the Jupyter Notebook in Python. The
+This document shows an example using Jupyter Notebook in Python.
 Jupyter Notebook is an application for creating and sharing
-computational documents. Python represents a programming language for
-writing computational documents. To realize the proposed scenario, it is
-necessary to install the special tools and use the Python code that will
-perform a query to the cellar and display the results in tabular
-form.
+computational documents. Python is a programming language for
+writing computational documents. To work with Jupyter Notebook and Python, it is
+necessary to install some tools and applications to run Python code that will
+perform a query to the CELLAR database and display the results in tabular
+format.
 
 Example query:
 
@@ -76,7 +76,7 @@ image::user_manual/jupyter_notebook/image1.png[image,width=817,height=204]
 [source, python]
 pip3 install sparqlwrapper pandas Jinja2 matplotlib
 
-NOTE: After installation, restart kernel from Jupyter Notebook to update it with new dependencies. This can be done by clicking on the "Restart" button in your code editor.
+NOTE: After installation, restart the kernel from Jupyter Notebook to update it with new dependencies. This can be done by clicking on the "Restart" button in your code editor.
 
 [arabic, start=6]
 . Run all Jupyter Notebook Cells
@@ -85,8 +85,8 @@ NOTE: After installation, restart kernel from Jupyter Notebook to update it with
 image::user_manual/jupyter_notebook/image2.png[image,width=501,height=84]
 
 [arabic, start=7]
-. After running successfully all the cells in the Jupyter Notebook, the results table can be viewed
+. After running all the cells in the Jupyter Notebook successfully, the results table can be viewed
 
-.Result table
+.Results table
 image::user_manual/jupyter_notebook/image3.png[image,width=987,height=420]
 
