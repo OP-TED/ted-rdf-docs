@@ -58,7 +58,7 @@ image::user_manual/jupyter_notebook/image2.png[image,width=501,height=84]
 .Results table
 image::user_manual/jupyter_notebook/image3.png[image,width=987,height=420]
 
-== Explaining the query
+=== Explaining the query
 
 **Question: Who are the winners for a given date?**
 

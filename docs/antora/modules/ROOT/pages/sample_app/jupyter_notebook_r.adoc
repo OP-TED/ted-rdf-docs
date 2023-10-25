@@ -68,7 +68,7 @@ image::user_manual/jupyter_notebook/image6.png[image,width=502,height=100]
 .Result Table
 image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]
 
-== Explaining the query
+=== Explaining the query
 
 **Question: Who are the winners for a given date?**
 
@@ -155,7 +155,7 @@ The notice publication date and winner legal name language can be changed to cre
 
  'en'
 
-=== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
