@@ -7,11 +7,11 @@
 In the context of TED-SWS, SPARQL queries can be used to query the data of notices published in RDF by the Publications Office.  These queries can be made on the
 https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] available in EU Vocabularies
 
-SPARQL queries refer to a specialized query language designed for retrieving and manipulating data stored in RDF (Resource Description Framework) format. SPARQL stands for SPARQL Protocol and RDF Query Language. It allows users to write complex queries to retrieve specific information from RDF datasets.
+SPARQL stands for "SPARQL Protocol and RDF Query Language". SPARQL queries retrieve and manipulate data stored in RDF (Resource Description Framework) format.  It allows users to write complex queries to retrieve specific information from RDF datasets.
 
-The data available covers Contract Award Notices published after 28/08/2023.  Data on eForm Result notices are not available yet.
+The data available covers Contract Award Notices published after 28/08/2023. Data on eForm Result notices are not yet available.
 
-A query is submitted to the SPARQL end point by replacing the text highlighted below in blue in the Query Text box below with your query:
+A query is submitted to the SPARQL end point by replacing the text highlighted below in blue in the Query Text box below with the desired query:
 
 .End point user interface
 image::sparql.png[SPARQL End Point]
@@ -23,7 +23,7 @@ The format of the result can be changed using the drop-down box of the Results f
 Once the query is in place, and the Results format chosen, the query can be run by pressing “Run Query”.
 
 
-Below you will find an example of queries.
+Below are some query examples:
 
 
 
@@ -57,7 +57,7 @@ The notice publication date, organization country and organization size can be c
 
     <http://publications.europa.eu/resource/authority/economic-operator-size/sme>
 
-=== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -110,7 +110,7 @@ The publication date and organization country can be changed to create other que
 
     <http://publications.europa.eu/resource/authority/country/DEU>
 
-=== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -165,7 +165,7 @@ The notice publication date and winner legal name language can be changed to cre
 
  'en'
 
-=== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -243,7 +243,7 @@ The notice publication date and winner legal name language can be changed to cre
 
  'en'
 
-=== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
