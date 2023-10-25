@@ -1,3 +1,6 @@
+
+== Introduction - the old introduction of the mapping suite section
+
 :doctitle: Introduction
 :doccode: sws-main-prod-017
 :author: NPJ

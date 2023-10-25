@@ -5,7 +5,7 @@
 :docdate: October 2023
 
 
-Transformation rules and other artefacts for the https://github.com/OP-TED/ted-rdf-conversion-pipeline[TED Semantic Web Services (TED-SWS)] system are organised in the https://github.com/OP-TED/ted-rdf-mapping[ted-rdf-mapping] repository.
+Transformation rules and other artefacts for the TED Semantic Web Services (TED-SWS) are organised in the https://github.com/OP-TED/ted-rdf-mapping[ted-rdf-mapping] repository.
 
 The repository structure and folder descriptions are shown below:
 // Next we describe the important folders and their purpose.
@@ -32,7 +32,7 @@ Makefile
 requirements.txt
 ----
 
-`/docs` folder contains this documentation. It is written in https://asciidoc.org/[AsciiDoc format] and compiled with https://antora.org/[Antora system].
+`/docs` folder contains this documentation. It is written in https://asciidoc.org/[AsciiDoc format] and compiled with the https://antora.org/[Antora engine].
 
 `/mappings` folder contains xref:mapping_suite/mapping-suite-structure.adoc[mapping suite packages] organised based on the standard forms numbers. Their name is formed based on the form number (e.g. `F03`, `F06`) prefixed with `package_` for readability. When the eForms will be mapped, then the corresponding appropriate organisation will be chosen.
 
