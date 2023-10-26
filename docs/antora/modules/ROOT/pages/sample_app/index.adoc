@@ -7,11 +7,7 @@
 
 A sample application, often referred to as a demo or prototype, is a functional representation of a software program or system that demonstrates its basic features, functionalities, and capabilities. In the context of TED-SWS (TED Semantic Web Services), a sample application would refer to a functional representation of how to access data processed by the system.
 
-
-
-== Prerequisites
-
-To use TED-SWS sample apps, you will need the following:
+Using TED-SWS sample apps may need some of the following:
 
 Understanding of RDF and SPARQL:: Familiarity with RDF (Resource Description Framework) and SPARQL (SPARQL Protocol and RDF Query Language) is crucial. TED-SWS provides data in RDF format and utilizes SPARQL for querying.
 
