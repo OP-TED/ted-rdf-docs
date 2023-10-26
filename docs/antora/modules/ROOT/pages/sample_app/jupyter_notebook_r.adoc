@@ -8,7 +8,7 @@
 This page shows an example in the R language using Jupyter Notebook. R is a
 software environment for statistical computing and graphical
 representation. In this example, R is the programming language used for
-writing notebook documents. To use R and Jupiter Notebook, it may first be necessary to install some tools and applications. Once installed, R code can be used to perform a query on the CELLAR database, and display the results in tabular format.
+writing notebook documents. To use R and Jupiter Notebook, it may first be necessary to install some tools and applications. Once installed, the R code can perform a query on the CELLAR database, and display the results in tabular format.
 
 Before proceeding, ensure that Python and Jupyter Notebook are already installed. This can be done using the steps in the <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, Jupyter Notebook - Python>> section.
 
