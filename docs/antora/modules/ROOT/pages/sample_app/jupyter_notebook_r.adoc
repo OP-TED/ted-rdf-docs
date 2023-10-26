@@ -10,7 +10,7 @@ software environment for statistical computing and graphic
 representation. In this example, R is the programming language used for
 writing notebook documents. To work with R and Jupiter Notebook, it is first necessary to install some tools and applications. After installation, R code can be used to perform a query on the CELLAR database, and display the results in tabular format.
 
-Before preceding, ensure that Python and Jupyter Notebook are already installed. This can be done using tutorial in <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, this>> section.
+Before proceeding, ensure that Python and Jupyter Notebook are already installed. This can be done using the tutorial in <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, this>> section.
 
 
 To run the sample application using R, follow the steps below:
@@ -70,9 +70,9 @@ image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]
 
 == Explaining the query
 
-**Question: Who are the winners for a given date?**
+**Query: Who are the winners for a given date?**
 
-This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
+This SPARQL query retrieve information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
 
 This query is composed of:
 
@@ -155,7 +155,7 @@ The notice publication date and winner legal name language can be changed to cre
 
  'en'
 
-==== Query text:
+=== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
