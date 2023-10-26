@@ -6,11 +6,11 @@
 
 
 This page shows an example in the R language using Jupyter Notebook. R is a
-software environment for statistical computing and graphic
+software environment for statistical computing and graphical
 representation. In this example, R is the programming language used for
-writing notebook documents. To work with R and Jupiter Notebook, it is first necessary to install some tools and applications. After installation, R code can be used to perform a query on the CELLAR database, and display the results in tabular format.
+writing notebook documents. To use R and Jupiter Notebook, it may first be necessary to install some tools and applications. Once installed, R code can be used to perform a query on the CELLAR database, and display the results in tabular format.
 
-Before proceeding, ensure that Python and Jupyter Notebook are already installed. This can be done using the tutorial in <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, this>> section.
+Before proceeding, ensure that Python and Jupyter Notebook are already installed. This can be done using the steps in the <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, Jupyter Notebook - Python>> section.
 
 
 To run the sample application using R, follow the steps below:
@@ -19,13 +19,13 @@ To run the sample application using R, follow the steps below:
 . https://cran.r-project.org/bin/windows/base/R-4.3.1-win.exe[Download] & install R.
 
 [arabic, start=2]
-. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_R.ipynb[Download the Jupyter Notebook file].
+. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_R.ipynb[Download the Jupyter Notebook example file].
 
 [arabic, start=3]
 .  https://cran.r-project.org/src/contrib/Archive/SPARQL/SPARQL_1.16.tar.gz[Download SPARQL package archive] and put it in same folder as Notebook file.
 
 [arabic, start=4]
-. Install the IRKernel.
+. Install the IRKernel:
 
 [loweralpha]
 .. Run R in the OS command line and type in:
@@ -63,7 +63,7 @@ image::user_manual/jupyter_notebook/image5.png[image,width=901,height=142]
 image::user_manual/jupyter_notebook/image6.png[image,width=502,height=100]
 
 [arabic, start=8]
-. After running successfully all the cells in the Jupyter Notebook, the results table can be viewed.
+. After running all the cells in the Jupyter Notebook successfully, the results table can be viewed:
 
 .Result Table
 image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]
@@ -72,9 +72,9 @@ image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]
 
 **Query: Who are the winners for a given date?**
 
-This SPARQL query retrieve information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
+This SPARQL query retrieves information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
 
-This query is composed of:
+The query is composed of:
 
 * The Prefix section: used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).
 
@@ -100,13 +100,13 @@ This query is composed of:
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
-** Defining notice according to EPO ontology
+** Defining the notice according to EPO ontology
 
     ?NoticeId a epo:ResultNotice;
               epo:hasPublicationDate ?NoticePublicationDate;
               epo:refersToLot ?Lot.
 
-** Defining lot and lot award outcome according to EPO ontology
+** Defining the lot and lot award outcome according to eProcurement ontology
 
     ?Lot a epo:Lot.
     ?LotAwardOutcome epo:describesLot ?Lot;
@@ -115,7 +115,7 @@ This query is composed of:
     ?TenderAwardOutcome a epo:TenderAwardOutcome;
                         epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
 
-** Defining the winner according to EPO ontology
+** Defining the winner according to eProcurement ontology
 
     ?Winner a org:Organization;
             epo:hasLegalName ?WinnerLegalName .
@@ -133,7 +133,7 @@ This query is composed of:
 
 The query retrieves:
 
-* Lot URI
+* The Lot URI
 * The legal name of the winner
 * The winners country code as URI
 * The value awarded to winner
