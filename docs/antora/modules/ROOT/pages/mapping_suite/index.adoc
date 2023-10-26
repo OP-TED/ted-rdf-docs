@@ -11,7 +11,7 @@ Knowledge of Semantic Web Technologies:: A good understanding of Semantic Web co
 
 Understanding of RDF, RML and SPARQL:: Familiarity with RDF (Resource Description Framework) and the RML (the RDF Mapping Language) is important, while experience with SPARQL (SPARQL Protocol and RDF Query Language) is highly beneficial. TED-SWS provides data in RDF format and utilises SPARQL for querying.
 
-Understanding of EU Procurement Data and Familiarity with ePO:: If your goal is to understand how the mappings are used to transform specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts, and the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].
+Understanding of EU Procurement Data and Familiarity with eProcurement ontology:: If your goal is to understand how the mappings are used to transform specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts, and the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].
 
 Familiarity with Spreadsheet editing tools:: Since most of the Conceptual mappings is done in spreadsheet working experience with spreadsheet editing tools such as MS Excel would be beneficial.
 
