@@ -25,4 +25,4 @@ The setup and conventions of the conceptual mapping file  permits the generation
 
 To put the SPARQL assertions into practice, *sample data is transformed into RDF* automatically using the RML mapping rules. The *SPARQL queries are then applied* to each output resulting in validation reports indicating whether the individual queries generated a positive or negative result. The reports are then analysed for errors in the RML transformation rules or the conceptual mapping.
 
-The final step is the assessment of the generated data: the *fingerprinting*. This procedure generates a report which *reconstructs the data shape instantiated in a particular notice*. This facilitates the identification of errors related to the EPO ontology.
+The final step is the assessment of the generated data: the *fingerprinting*. This procedure generates a report which *reconstructs the data shape instantiated in a particular notice*. This facilitates the identification of errors related to the eProcurement ontology.

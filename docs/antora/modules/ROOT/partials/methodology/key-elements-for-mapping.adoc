@@ -1,10 +1,10 @@
 
 ==  Key elements involved in the mapping process
-This section provides descriptions and references to the key elements (concepts or resources) that are involved in the creation of mappings or the mapping process itself.
+This section provides descriptions and references to the key elements (concepts or resources) that are involved in the creation of mappings, or to the mapping process itself.
 
 The purpose of the mapping process is to generate a “mapping table” (described in the conceptual mapping artefact section) that can be processed by the automated workflow of the
 //https://github.com/OP-TED/ted-rdf-conversion-pipeline
-TED-SWS system. The mapping table us used to convert the TED XML input data into an RDF graph (the output of the mapping) that conforms with the eProcurement Ontology. The mapping table is encoded as a spreadsheet containing multiple worksheets.
+TED-SWS. The mapping table us used to convert the TED XML input data into an RDF graph (the output of the mapping) that conforms with the eProcurement Ontology. The mapping table is encoded as a spreadsheet containing multiple worksheets.
 //, whose structure is described elsewhere.
 
 
@@ -15,11 +15,11 @@ The inputs for the transformation process are *XML files* that contain TED notic
 The XML files must conform to the official Publication Schema.
 //TED XML format defined by https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas[TED XML Schema] (XSD).
 
-Over time, different schema have been developed and there is a significant amount of XML data published that conform to the historical versions. The latest XML notices conform to the https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas[version R2.0.9.S05] of the Schema.
+Over time, different schema have been developed and there is a significant amount of XML data published that conform to the historical versions. The latest XML notices conform to  https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas[version R2.0.9.S05] of the schema.
 
 === Contributing Resources
 
-To create these mappings a number of resources produced by earlier or concurrent TED projects were used. The following table contains some of these with short descriptions and links to where the resources can be found.
+To create these mappings, a number of resources produced by earlier or concurrent TED projects were used. The following table contains some of these with short descriptions and links to where the resources can be found.
 
 |===
 |*Resource Name*|*Description*
@@ -53,7 +53,7 @@ that can identify the notice or the different component parts of a notice. These
 
 === Mapping files produced
 
-The key element enabling transformation automation are the mapping files: *conceptual* and *technical* mappings that are developed according to the mapping creation methodology>>.
+The key element enabling transformation automation are the mapping files: *conceptual* and *technical* mappings that are developed according to the mapping creation methodology.
 
 The mapping rules are organised in mapping suites, described in the xref:mapping_suite/mapping-suite-structure.adoc[Mapping Suite Structure].
 

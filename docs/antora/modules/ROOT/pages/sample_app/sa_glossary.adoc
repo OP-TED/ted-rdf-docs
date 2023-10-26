@@ -8,7 +8,7 @@
 [cols="1,3"]
 |===
 s|Term |Explanation
-a|*RDF* |Stands for Resource Description Framework. RDF is a standardized data model used to represent information on the web. RDF plays a crucial role in xref:ROOT:index.adoc[TED-SWS] because it provides a standardized and structured format for representing the procurement data made available through the service. This allows for efficient querying, processing, and integration of the data into various applications and systems.
+a|*RDF* |Stands for Resource Description Framework. RDF is a standardised data model used to represent information on the web. RDF plays a crucial role in xref:ROOT:index.adoc[TED-SWS] because it provides a standardized and structured format for representing the procurement data made available through the service. This allows for efficient querying, processing, and integration of the data into various applications and systems.
 
 |*SPARQL Query* |Represents query language used to retrieve and manipulate data stored in RDF format.
 

@@ -55,7 +55,7 @@ complex queries on public procurement data will be equally open to large
 information systems as well as to simple desktop users with a copy of
 Excel and an internet connection.
 
-To summarize, the TED Semantic Web Service (TED SWS) is a pipeline
+To summarise, the TED Semantic Web Service (TED SWS) is a pipeline
 system that continuously converts the public procurement notices (in XML
 format) available on the TED Website into RDF format, publishes them
 into CELLAR and makes them available to the public through CELLAR’s
