@@ -85,7 +85,7 @@ This query is composed of:
 ** Specifying specific filters for output
 
     VALUES ?NoticePublicationDate {
-        "20230921"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
@@ -132,13 +132,13 @@ The notice publication date and winner legal name language can be changed to cre
 
 
     VALUES ?NoticePublicationDate {
-        "20230921"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
 * Existing value for publication date in example above:
 
- "20230921"
+ "20230905"
 
 * Existing value for winner legal name language in example above:
 
@@ -150,7 +150,7 @@ The notice publication date and winner legal name language can be changed to cre
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
-SELECT
+SELECT DISTINCT
 ?Lot
 ?WinnerLegalName
 ?WinnerCountryCode
@@ -161,7 +161,8 @@ WHERE {
         "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
-    ?Notice epo:hasPublicationDate ?NoticePublicationDate ;
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
             epo:refersToLot ?Lot .
     ?LotAwardOutcome epo:describesLot ?Lot ;
                      epo:hasAwardedValue ?MonetaryValue ;
@@ -177,8 +178,6 @@ WHERE {
                    epo:hasAmountValue ?AwardedValue;
                    epo:hasCurrency ?AwardedValueCurrency .
 }
-ORDER BY DESC(?AwardedValue)
-LIMIT 1
 
 
 include::partial$feedback.adoc[]
