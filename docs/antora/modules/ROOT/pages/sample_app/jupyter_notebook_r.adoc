@@ -70,11 +70,11 @@ image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]
 
 == Explaining the query
 
-**Query: Who are the winners for a given date?**
+**Question: Who are the winners for a given date?**
 
-This SPARQL query retrieves information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
+This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
 
-The query is composed of:
+This query is composed of:
 
 * The Prefix section: used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).
 
@@ -96,17 +96,17 @@ The query is composed of:
 ** Specifying specific filters for output
 
     VALUES ?NoticePublicationDate {
-        "20230921"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
-** Defining the notice according to EPO ontology
+** Defining notice according to EPO ontology
 
-    ?NoticeId a epo:ResultNotice;
-              epo:hasPublicationDate ?NoticePublicationDate;
-              epo:refersToLot ?Lot.
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
 
-** Defining the lot and lot award outcome according to eProcurement ontology
+** Defining lot and lot award outcome according to EPO ontology
 
     ?Lot a epo:Lot.
     ?LotAwardOutcome epo:describesLot ?Lot;
@@ -115,7 +115,7 @@ The query is composed of:
     ?TenderAwardOutcome a epo:TenderAwardOutcome;
                         epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
 
-** Defining the winner according to eProcurement ontology
+** Defining the winner according to EPO ontology
 
     ?Winner a org:Organization;
             epo:hasLegalName ?WinnerLegalName .
@@ -125,15 +125,14 @@ The query is composed of:
 
 ** Defining award value and currency according to EPO ontology
 
-    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
-    ?LotAwardedValue a epo:MonetaryValue;
-                     epo:hasAmountValue ?AwardedValue;
-                     epo:hasCurrency ?AwardedValueCurrency.
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
 
 
 The query retrieves:
 
-* The Lot URI
+* Lot URI
 * The legal name of the winner
 * The winners country code as URI
 * The value awarded to winner
@@ -143,13 +142,13 @@ The notice publication date and winner legal name language can be changed to cre
 
 
     VALUES ?NoticePublicationDate {
-        "20230921"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
 * Existing value for publication date in example above:
 
- "20230921"
+ "20230905"
 
 * Existing value for winner legal name language in example above:
 
@@ -169,15 +168,14 @@ SELECT DISTINCT
 ?AwardedValueCurrency
 WHERE {
     VALUES ?NoticePublicationDate {
-        "20230921"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
-    ?NoticeId a epo:ResultNotice;
-              epo:hasPublicationDate ?NoticePublicationDate;
-              epo:refersToLot ?Lot.
-    ?Lot a epo:Lot.
-    ?LotAwardOutcome epo:describesLot ?Lot;
-                     a epo:LotAwardOutcome;
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot ;
+                     epo:hasAwardedValue ?MonetaryValue ;
                      epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
     ?TenderAwardOutcome a epo:TenderAwardOutcome;
                         epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
@@ -186,10 +184,9 @@ WHERE {
     OPTIONAL {
         ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
     }
-    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
-    ?LotAwardedValue a epo:MonetaryValue;
-                     epo:hasAmountValue ?AwardedValue;
-                     epo:hasCurrency ?AwardedValueCurrency.
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
 }
 
 include::partial$feedback.adoc[]

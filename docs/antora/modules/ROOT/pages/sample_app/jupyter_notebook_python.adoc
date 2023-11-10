@@ -61,7 +61,7 @@ image::user_manual/jupyter_notebook/image3.png[image,width=987,height=420]
 
 **Question: Who are the winners for a given date?**
 
-This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
+This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
 
 This query is composed of:
 
@@ -85,15 +85,15 @@ This query is composed of:
 ** Specifying specific filters for output
 
     VALUES ?NoticePublicationDate {
-        "20230921"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
 ** Defining notice according to EPO ontology
 
-    ?NoticeId a epo:ResultNotice;
-              epo:hasPublicationDate ?NoticePublicationDate;
-              epo:refersToLot ?Lot.
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
 
 ** Defining lot and lot award outcome according to EPO ontology
 
@@ -114,10 +114,9 @@ This query is composed of:
 
 ** Defining award value and currency according to EPO ontology
 
-    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
-    ?LotAwardedValue a epo:MonetaryValue;
-                     epo:hasAmountValue ?AwardedValue;
-                     epo:hasCurrency ?AwardedValueCurrency.
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
 
 
 The query retrieves:
@@ -132,25 +131,25 @@ The notice publication date and winner legal name language can be changed to cre
 
 
     VALUES ?NoticePublicationDate {
-        "20230921"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
 * Existing value for publication date in example above:
 
- "20230921"
+ "20230905"
 
 * Existing value for winner legal name language in example above:
 
  'en'
 
-==== Query text:
+=== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
-SELECT
+SELECT DISTINCT
 ?Lot
 ?WinnerLegalName
 ?WinnerCountryCode
@@ -161,7 +160,8 @@ WHERE {
         "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
-    ?Notice epo:hasPublicationDate ?NoticePublicationDate ;
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
             epo:refersToLot ?Lot .
     ?LotAwardOutcome epo:describesLot ?Lot ;
                      epo:hasAwardedValue ?MonetaryValue ;
@@ -177,8 +177,6 @@ WHERE {
                    epo:hasAmountValue ?AwardedValue;
                    epo:hasCurrency ?AwardedValueCurrency .
 }
-ORDER BY DESC(?AwardedValue)
-LIMIT 1
 
 
 include::partial$feedback.adoc[]
