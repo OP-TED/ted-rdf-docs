@@ -91,9 +91,9 @@ This query is composed of:
 
 ** Defining notice according to EPO ontology
 
-    ?NoticeId a epo:ResultNotice;
-              epo:hasPublicationDate ?NoticePublicationDate;
-              epo:refersToLot ?Lot.
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
 
 ** Defining lot and lot award outcome according to EPO ontology
 
@@ -114,10 +114,9 @@ This query is composed of:
 
 ** Defining award value and currency according to EPO ontology
 
-    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
-    ?LotAwardedValue a epo:MonetaryValue;
-                     epo:hasAmountValue ?AwardedValue;
-                     epo:hasCurrency ?AwardedValueCurrency.
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
 
 
 The query retrieves:
@@ -144,7 +143,7 @@ The notice publication date and winner legal name language can be changed to cre
 
  'en'
 
-==== Query text:
+=== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
