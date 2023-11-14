@@ -12,7 +12,8 @@ WHERE {
     }
     ?Notice epo:hasPublicationDate ?NoticePublicationDate .
     ?Notice epo:announcesRole ?Buyer .
-    ?Buyer epo:playedBy ?Organization .
+    ?Buyer a epo:Winner ;
+            epo:playedBy ?Organization .
     ?Organization epo:hasBusinessSize ?BusinessSize .
     ?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
 }
