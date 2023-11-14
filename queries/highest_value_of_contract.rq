@@ -10,8 +10,8 @@ SELECT
 ?LotAwardedValue
 ?LotAwardedValueCurrency
 WHERE {
-    VALUES ?NoticePublicationDate {
-        "20230921"
+    VALUES (?NoticePublicationDate ?LotAwardedValueCurrency) {
+        ("20230905" <http://publications.europa.eu/resource/authority/currency/EUR>)
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
     ?Notice epo:hasPublicationDate ?NoticePublicationDate ;
