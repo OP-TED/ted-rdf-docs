@@ -85,11 +85,10 @@ This query is composed of:
 * The Select section: responsible for specifying which variables or values are to be retrieved from the dataset.
 
     SELECT DISTINCT
-    ?Lot
     ?WinnerLegalName
-    ?WinnerCountryCode
-    ?AwardedValue
-    ?AwardedValueCurrency
+    (SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+    (SUM(?AwardedValue) as ?TotalAwardedValue)
+    (?AwardedValueCurrency as ?AwardedValueCurrencyURI)
 
 * The Where section: used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:
 
@@ -130,13 +129,18 @@ This query is composed of:
                    epo:hasCurrency ?AwardedValueCurrency .
 
 
+* The Group By section: used to group the results by a specific variable. In the example above group by means that the results will be grouped by the winner legal name and the awarded value currency:
+
+    GROUP BY ?WinnerLegalName ?AwardedValueCurrency
+
+
+
 The query retrieves:
 
-* Lot URI
 * The legal name of the winner
 * The winners country code as URI
 * The value awarded to winner
-* The currency of the awarded value
+* The currency of the awarded value as URI
 
 The notice publication date and winner legal name language can be changed to create other queries. To do this, change the following section:
 
@@ -161,11 +165,10 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 SELECT DISTINCT
-?Lot
 ?WinnerLegalName
-?WinnerCountryCode
-?AwardedValue
-?AwardedValueCurrency
+(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SUM(?AwardedValue) as ?TotalAwardedValue)
+(?AwardedValueCurrency as ?AwardedValueCurrencyURI)
 WHERE {
     VALUES ?NoticePublicationDate {
         "20230905"
@@ -188,5 +191,7 @@ WHERE {
                    epo:hasAmountValue ?AwardedValue;
                    epo:hasCurrency ?AwardedValueCurrency .
 }
+GROUP BY ?WinnerLegalName ?AwardedValueCurrency
+
 
 include::partial$feedback.adoc[]
