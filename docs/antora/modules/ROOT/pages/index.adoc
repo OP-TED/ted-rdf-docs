@@ -7,7 +7,7 @@
 
 == Introduction to the TED Semantic Web Service
 
-The TED Semantic Web Service (TED-SWS) continuously converts Contract Award Notices from the xml standard form format available on the TED Website, into RDF format.  The RDF is stored in the CELLAR repository. From there, the data can be queried from the https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] on the EU Vocabularies. It should be noted that the Contract Award Notices should not be confused with the Result Notices issued from eForms.
+The TED Semantic Web Service (TED-SWS) continuously converts Contract Award Notices from the xml standard form format available on the TED Website, into RDF format.  The RDF is stored in the Cellar repository, the semantic repository of the EU Publications Office. From there, the data can be queried from the https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] on the EU Vocabularies. It should be noted that the Contract Award Notices should not be confused with the Result Notices issued from eForms.
 
 This project falls clearly within the European data strategy which foresees a single market for data, allowing it to flow freely within the EU and across sectors for the benefit of businesses, researchers and public administrations.
 
@@ -37,7 +37,7 @@ Mapping Suites and Mapping Suite Packages are explained in this section.
 [.tile]
 .Reusing semantic web service artefacts
 ****
-This section provides a set of examples that demonstrate how to extract TED RDF data from CELLAR via the SPARQL Endpoint, or by using tools like Excel, Python, or R.
+This section provides a set of examples that demonstrate how to extract TED RDF data from Cellar via the SPARQL Endpoint, or by using tools like Excel, Python, or R.
 
 <<SWS:ROOT:sample_app/index.adoc#, Read the docs>>
 ****

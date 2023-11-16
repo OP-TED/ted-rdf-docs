@@ -5,8 +5,8 @@
 :docdate: October 2023
 
 
-This page explains how to use procurement data accessed from *CELLAR* with Microsoft Excel.
-// There are different ways to access TED notices in CELLAR and use the data. The methods described below work with TED notices and other type of semantic assets.
+This page explains how to use procurement data accessed from *Cellar* with Microsoft Excel.
+// There are different ways to access TED notices in Cellar and use the data. The methods described below work with TED notices and other type of semantic assets.
 
 == Using sample data with macros in Microsoft Excel
 
