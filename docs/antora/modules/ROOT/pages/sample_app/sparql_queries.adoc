@@ -69,8 +69,8 @@ WHERE {
             <http://publications.europa.eu/resource/authority/economic-operator-size/sme>)
     }
     ?Notice epo:hasPublicationDate ?NoticePublicationDate .
-    ?Notice epo:announcesRole ?Buyer .
-    ?Buyer a epo:Winner ;
+    ?Notice epo:announcesRole ?Winner .
+    ?Winner a epo:Winner ;
             epo:playedBy ?Organization .
     ?Organization epo:hasBusinessSize ?BusinessSize .
     ?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
@@ -138,7 +138,6 @@ This SPARQL query aims to retrieve information about the winners of procurement 
 The query retrieves:
 
 
-* Lot URI
 * Winner Legal Name
 * Winner Country Code
 * Lot value awarded to winner
@@ -166,11 +165,10 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 SELECT DISTINCT
-?Lot
 ?WinnerLegalName
-?WinnerCountryCode
-?AwardedValue
-?AwardedValueCurrency
+(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SUM(?AwardedValue) as ?TotalAwardedValue)
+(?AwardedValueCurrency as ?AwardedValueCurrencyURI)
 WHERE {
     VALUES ?NoticePublicationDate {
         "20230905"
@@ -193,6 +191,7 @@ WHERE {
                    epo:hasAmountValue ?AwardedValue;
                    epo:hasCurrency ?AwardedValueCurrency .
 }
+GROUP BY ?WinnerLegalName ?AwardedValueCurrency
 
 
 == Query: Which is the highest value published for a contract award for a given date ?
