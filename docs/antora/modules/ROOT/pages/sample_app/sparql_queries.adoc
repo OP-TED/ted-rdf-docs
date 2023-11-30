@@ -25,8 +25,29 @@ Once the query is in place, and the Results format chosen, the query can be run 
 
 Below are some query examples:
 
+=== Query 1: Find a notice using the (known) notice ID
+
+[,sparql]
+----
+SELECT * WHERE { graph <http://data.europa.eu/a4g/resource/2023/536107_2023> {?s ?p ?o } }
+----
+
+image::#insert results#
+
+=== Query 2: How many notices have been published by buyer for a given date?
+
+#insert graphic#
+
+#insert results#
+
+=== Query 3: Which is the highest value published for a contract award for a given date by currency? (FULL DATA)
+
+#insert graphic#
+
+#insert results#
 
 
+////
 == Query: How many contractors are SMEs for a given country and given date ?
 {nbsp}
 
@@ -76,7 +97,7 @@ WHERE {
     ?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
 }
 
-
+////
 
 == Query:  Which notices have been published by Buyers from a specific country for a given date ?
 {nbsp}
