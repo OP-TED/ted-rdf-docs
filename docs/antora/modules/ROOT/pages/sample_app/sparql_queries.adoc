@@ -50,6 +50,8 @@ NOTE: The results contain each piece of data that references the requested notic
 
 This query returns the count of notices published by buyers on a specified date. The data returned are the buyers' country codes, the buyers' legal names, and the number of notices (count). The data is ordered by notice count descending.
 
+[red]#Red#
+
 TIP: Fields that can be changed in this query are: the fields selected under "SELECT", and the date.
 
 === Query Code
@@ -63,6 +65,8 @@ SELECT
 ?BuyerCountryCode
 ?BuyerLegalNameTrim
 `COUNT` ( DISTINCT ?OJSNumber) as ?NumberOfNotices
+
+[red]#Red#
 
 WHERE {
 
