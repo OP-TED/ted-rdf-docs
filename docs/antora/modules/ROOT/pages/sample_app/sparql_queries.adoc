@@ -30,7 +30,7 @@ This query returns all data found relating to a specific notice ID. From this da
 TIP: The field that can be changed in this query is the notice ID.
 
 === Query Code
-[source,sparql]
+[,sparql]
 ----
 SELECT * WHERE { graph <http://data.europa.eu/a4g/resource/2023/536107_2023> {?s ?p ?o } }
 ----
@@ -53,7 +53,7 @@ This query returns the count of notices published by buyers on a specified date.
 TIP: Fields that can be changed in this query are: the fields selected under "SELECT", and the date.
 
 === Query Code
-[source,sparql]
+[,sparql]
 ----
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
@@ -62,7 +62,7 @@ SELECT
 ?Date
 ?BuyerCountryCode
 ?BuyerLegalNameTrim
-'COUNT' ( DISTINCT ?OJSNumber) as ?NumberOfNotices
+COUNT ( DISTINCT ?OJSNumber) as ?NumberOfNotices
 
 WHERE {
 
