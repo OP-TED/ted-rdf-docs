@@ -29,7 +29,7 @@ This query returns all data found relating to a specific notice ID. From this da
 
 TIP: The field that can be changed in this query is the notice ID.
 
-=== Source Code
+=== Query Code
 [,sparql]
 ----
 SELECT * WHERE { graph <http://data.europa.eu/a4g/resource/2023/536107_2023> {?s ?p ?o } }
@@ -52,7 +52,7 @@ This query returns the count of notices published by buyers on a specified date.
 
 TIP: Fields that can be changed in this query are: the fields selected under "SELECT", and the date.
 
-=== Source Code
+=== Query Code
 [,sparql]
 ----
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -101,7 +101,7 @@ This query returns the count of notices published by buyers on a specified date.
 
 TIP: Fields that can be changed in this query are: the fields selected under "SELECT", and the date.
 
-=== Source Code
+=== Query Code
 [,sparql]
 ----
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -150,7 +150,7 @@ This query returns data on the values of published notices on a specific day in 
 
 TIP: Fields that can be changed in this query are the those under the "SELECT DISTINCT" section, and the DATE section.:
 
-=== Source Code
+=== Query Code
 [,sparql]
 ----
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -198,7 +198,7 @@ This query returns the count of how many tenders foresee subcontracting on the s
 
 TIP: The fields that can be changed in this query is the date.
 
-=== Source Code
+=== Query Code
 [,sparql]
 ----
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -228,7 +228,7 @@ As in query 4a, this query returns the count of those tenders on a specific date
 
 TIP: Fields that can be changed in this query are those under the "SELECT DISTINCT" section, the desired displayed fields following the VALUES line, and the date.
 
-=== Source Code
+=== Query Code
 [,sparql]
 ----
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -276,7 +276,7 @@ This query returns the count of the winning contractors that are SMEs on a speci
 
 TIP: Fields that can be changed in this query are those under the "SELECT" section and the date.
 
-=== Source Code
+=== Query Code
 
 [,sparql]
 ----
@@ -325,7 +325,7 @@ This query returns the count of the winning contractors that are SMEs on a speci
 
 TIP: Fields that can be changed in this query are those under the "SELECT" section and the date.
 
-=== Source Code
+=== Query Code
 
 [,sparql]
 ----
