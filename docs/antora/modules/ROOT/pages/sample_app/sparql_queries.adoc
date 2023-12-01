@@ -46,7 +46,7 @@ NOTE: The results contain each piece of data that references the requested notic
 
 '''
 
-=== Query 2a: How many notices have been published by a buyer for a given date?
+=== Query 2a: How many notices have been published by a buyer for a given date (count only)?
 
 This query returns the count of notices published by buyers on a specified date. The data returned are the buyers' country codes, the buyers' legal names, and the number of notices (count). The data is ordered by notice count descending.
 
