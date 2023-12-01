@@ -347,7 +347,7 @@ ORDER BY ASC (?WinnerCountryCode)
 === Results Returned
 image::sparql/sparql_answer_5f.png[]
 
-NOTE: w#why the results look as they do, urls again#.
+NOTE: #why the results look as they do, urls again#.
 
 
 include::partial$feedback.adoc[]
