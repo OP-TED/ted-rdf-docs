@@ -38,6 +38,7 @@ SELECT * WHERE { graph <http://data.europa.eu/a4g/resource/2023/536107_2023> {?s
 
 
 === Results Returned
+(To enlarge the image, right-click on it and choose "Open image in new tab")
 
 image::sparql/sparql_answer_1.png[]
 
@@ -49,7 +50,7 @@ NOTE: The results contain each piece of data that references the requested notic
 
 This query returns the count of notices published by buyers on a specified date. The data returned are the buyers' country codes, the buyers' legal names, and the number of notices (count). The data is ordered by notice count descending.
 
-TIP: Fields that can be changed in this query are: the fields selected under "SELECT", and the date under the "WHERE" statement.
+TIP: Fields that can be changed in this query are: the fields selected under "SELECT", and the date.
 
 === Source Code
 [,sparql]
@@ -86,6 +87,8 @@ bind (replace(str(?BuyerLegalName),"(^.*[@])(.*)$","$1") as ?BuyerLegalNameTrim)
 ORDER BY DESC(?BuyerLegalNameTrim)
 ----
 === Results Returned
+(To enlarge the image, right-click on it and choose "Open image in new tab")
+
 image::sparql/sparql_answer_2c.png[]
 
 NOTE: #The country codes are returned in the form of a url?#.
@@ -96,7 +99,7 @@ NOTE: #The country codes are returned in the form of a url?#.
 
 This query returns the count of notices published by buyers on a specified date. The data returned are the buyers' country codes, the buyers' legal names, and the number of notices (count). The data is ordered by notice count descending.
 
-TIP: Fields that can be changed in this query are: the fields selected under "SELECT", and the date under the "WHERE" statement.
+TIP: Fields that can be changed in this query are: the fields selected under "SELECT", and the date.
 
 === Source Code
 [,sparql]
@@ -133,6 +136,8 @@ bind (replace(str(?BuyerLegalName),"(^.*[@])(.*)$","$1") as ?BuyerLegalNameTrim)
 ORDER BY DESC(?BuyerLegalNameTrim)
 ----
 === Results Returned
+(To enlarge the image, right-click on it and choose "Open image in new tab")
+
 image::sparql/sparql_answer_2f.png[]
 
 NOTE: #why are some columns returned in the form of urls?#.
@@ -179,6 +184,8 @@ bind( FLOOR(?LotAwardedValue) as ?Lot_AwardedValue).
 ORDER BY ASC(?LotAwardedValueCurrency), DESC(?LotAwardedValue)
 ----
 === Results Returned
+(To enlarge the image, right-click on it and choose "Open image in new tab")
+
 image::sparql/sparql_answer_3.png[]
 
 NOTE: The values are stated in different currencies, so to get comparable values, all non-euro currencies will need to be converted to euros (or the same currency) manually.
@@ -255,6 +262,8 @@ bind( FLOOR(?LotAwardedValue) as ?Lot_AwardedValue).
 ORDER BY ASC(?LotAwardedValueCurrency), DESC(?LotAwardedValue)
 ----
 === Results Returned
+(To enlarge the image, right-click on it and choose "Open image in new tab")
+
 image::sparql/sparql_answer_4f.png[]
 
 NOTE: #why the results look as they do (URLs again)#
@@ -354,6 +363,8 @@ bind (replace(str(?WinnerLegalName),"(^.*[@])(.*)$","$1") as ?WinnerLegalNameTri
 ORDER BY ASC (?WinnerCountryCode)
 ----
 === Results Returned
+(To enlarge the image, right-click on it and choose "Open image in new tab")
+
 image::sparql/sparql_answer_5f.png[]
 
 NOTE: #why the results look as they do, urls again#.
