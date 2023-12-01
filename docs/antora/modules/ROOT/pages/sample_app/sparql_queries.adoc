@@ -62,7 +62,7 @@ SELECT
 ?Date
 ?BuyerCountryCode
 ?BuyerLegalNameTrim
-COUNT ( DISTINCT ?OJSNumber) as ?NumberOfNotices
+`COUNT` ( DISTINCT ?OJSNumber) as ?NumberOfNotices
 
 WHERE {
 
