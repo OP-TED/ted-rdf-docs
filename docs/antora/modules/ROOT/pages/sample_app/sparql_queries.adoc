@@ -37,7 +37,7 @@ SELECT * WHERE { graph <http://data.europa.eu/a4g/resource/2023/536107_2023> {?s
 
 
 
-=== Results Returned
+=== Data Returned
 (To enlarge the image, right-click on it and choose "Open image in new tab")
 
 image::sparql/sparql_answer_1.png[]
@@ -85,7 +85,7 @@ bind (replace(str(?BuyerLegalName),"(^.*[@])(.*)$","$1") as ?BuyerLegalNameTrim)
 }
 ORDER BY DESC(?NumberOfNotices)
 ----
-=== Results Returned
+=== Data  Returned
 (To enlarge the image, right-click on it and choose "Open image in new tab")
 
 image::sparql/sparql_answer_2c.png[]
@@ -134,7 +134,7 @@ bind (replace(str(?BuyerLegalName),"(^.*[@])(.*)$","$1") as ?BuyerLegalNameTrim)
 }
 ORDER BY DESC(?BuyerLegalNameTrim)
 ----
-=== Results Returned
+=== Data  Returned
 (To enlarge the image, right-click on it and choose "Open image in new tab")
 
 image::sparql/sparql_answer_2f.png[]
@@ -182,7 +182,7 @@ bind( FLOOR(?LotAwardedValue) as ?Lot_AwardedValue).
 }
 ORDER BY ASC(?LotAwardedValueCurrency), DESC(?LotAwardedValue)
 ----
-=== Results Returned
+=== Data  Returned
 (To enlarge the image, right-click on it and choose "Open image in new tab")
 
 image::sparql/sparql_answer_3.png[]
@@ -214,7 +214,7 @@ WHERE {
    ?Tender epo:foreseesSubcontracting ?Subcontrating .
 }
 ----
-=== Results Returned
+=== Data  Returned
 image::sparql/sparql_answer_4c.png[]
 
 NOTE: This count can be compared to the total contract count - see previous queries.
@@ -260,7 +260,7 @@ bind( FLOOR(?LotAwardedValue) as ?Lot_AwardedValue).
 }
 ORDER BY ASC(?LotAwardedValueCurrency), DESC(?LotAwardedValue)
 ----
-=== Results Returned
+=== Data  Returned
 (To enlarge the image, right-click on it and choose "Open image in new tab")
 
 image::sparql/sparql_answer_4f.png[]
@@ -311,7 +311,7 @@ bind (replace(str(?WinnerLegalName),"(^.*[@])(.*)$","$1") as ?WinnerLegalNameTri
 }
 ORDER BY DESC (?NrOfWinners)
 ----
-=== Results Returned
+=== Data  Returned
 image::sparql/sparql_answer_5c.png[]
 
 NOTE: #why the results look as they do, urls again#.
@@ -361,7 +361,7 @@ bind (replace(str(?WinnerLegalName),"(^.*[@])(.*)$","$1") as ?WinnerLegalNameTri
 }
 ORDER BY ASC (?WinnerCountryCode)
 ----
-=== Results Returned
+=== Data  Returned
 (To enlarge the image, right-click on it and choose "Open image in new tab")
 
 image::sparql/sparql_answer_5f.png[]
