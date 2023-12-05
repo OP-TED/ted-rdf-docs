@@ -157,13 +157,10 @@ PREFIX cccev: <http://data.europa.eu/m8g/>
 
 SELECT DISTINCT
 ?Date
-# ?OJSNumber
 ?OJS_and_Lot_Number
-#?WinnerLegalNameTrim
 ?Winner_Name
 ?Winner_Country
 ?Lot_AwardedValue
-#?LotAwardedValueCurrency
 ?Currency
 
 WHERE {
