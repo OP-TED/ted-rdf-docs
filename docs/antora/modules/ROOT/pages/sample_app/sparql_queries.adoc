@@ -142,7 +142,7 @@ ORDER BY DESC(?NumberOfNotices)
 
 image::sparql/sparql_answer_new2b.png[]
 
-NOTE: Some cleaning up of the data is necessary - the bind (replace(str etc statements - to return only the information requested.
+NOTE: Some cleaning up of the data is necessary (the bind (replace(str etc statements) to return only the information requested.
 
 '''
 
@@ -150,7 +150,7 @@ NOTE: Some cleaning up of the data is necessary - the bind (replace(str etc stat
 
 This query returns data on the values of published notices on a specific day in descending order of value according to the field, "Lot_AwardedValue".
 
-TIP: Fields that can be changed in this query are the those under the "SELECT DISTINCT" section, and the DATE section.:
+TIP: Fields that can be changed in this query are the those under the "SELECT DISTINCT" section, and the DATE section.
 
 === Query Code
 [,sparql]
