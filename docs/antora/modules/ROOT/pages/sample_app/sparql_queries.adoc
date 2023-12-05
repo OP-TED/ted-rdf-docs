@@ -46,7 +46,7 @@ NOTE: The results contain each piece of data that references the requested notic
 
 '''
 ////
-=== Query 1a: How many notices have been published by a country on a given date (count only)?
+=== Query 1: How many notices have been published by a country on a given date (count only)?
 
 This query returns the count of contract winners by country on a specified date. The data returned are the country name, and the number of contract winners. The data is ordered by winner count descending.
 
@@ -61,43 +61,40 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 
 SELECT
-?WinnerCountry
-COUNT( DISTINCT ?WinnerLegalNameTrim) as ?NrOfWinners
+?Date
+?Buyer_Country
+?BuyerLegalNameTrim
+COUNT ( DISTINCT ?OJSNumber) as ?NumberOfNotices
 
 WHERE {
 
-VALUES (?Date ?BusinessSize) {
-(
-"20230905"
-<http://publications.europa.eu/resource/authority/economic-operator-size/sme>
-)
-}
+VALUES (?Date) {("20230905")}
 
 ?Notice epo:hasPublicationDate ?Date .
 ?Notice epo:hasID/epo:hasIdentifierValue ?OJSNumber.
 
 ?Notice epo:announcesRole ?Agent .
-?Agent a epo:Winner.
+?Agent a epo:Buyer.
 ?Agent epo:playedBy ?Organization .
 ?Organization owl:sameAs ?SameAsOrganization.
 
-?SameAsOrganization epo:hasBusinessSize ?BusinessSize .
-?SameAsOrganization epo:hasLegalName ?WinnerLegalName.
-?SameAsOrganization cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode .
+?SameAsOrganization epo:hasLegalName ?BuyerLegalName.
+?SameAsOrganization cccev:registeredAddress / epo:hasCountryCode ?BuyerCountryCode .
 
-bind (replace(str(?WinnerLegalName),"(^.*[@])(.*)$","$1") as ?WinnerLegalNameTrim)
-bind (replace(str(?WinnerCountryCode),"http://publications.europa.eu/resource/authority/country/","") as ?WinnerCountry)
+bind (replace(str(?BuyerLegalName),"(^.*[@])(.*)$","$1") as ?BuyerLegalNameTrim)
+bind (replace(str(?BuyerCountryCode),"http://publications.europa.eu/resource/authority/country/","") as ?Buyer_Country)
+
 }
-ORDER BY DESC (?NrOfWinners)
+ORDER BY DESC(?NumberOfNotices)
 ----
 === Data  Returned
 
-image::sparql/sparql_answer_new2a.png[]
+image::sparql/2a.png[]
 
 NOTE: Some cleaning up of the data is necessary - the bind (replace(str etc statements - to return only the information requested.
 
 '''
-
+////
 === Query 1b: How many notices have been published by a buyer for a given date (full data)?
 
 This query returns the count of notices published by buyers on a specified date. The data returned are the buyers' country , the buyers' names, and the number of notices (count). The data is ordered by notice count descending.
@@ -145,7 +142,7 @@ image::sparql/sparql_answer_new2b.png[]
 NOTE: Some cleaning up of the data is necessary (the bind (replace(str etc statements) to return only the information requested.
 
 '''
-
+////
 === Query 2: Which is the highest value published for a contract award for a given date by currency (full data)?
 
 This query returns data on the values of published notices on a specific day in descending order of value according to the field, "Lot_AwardedValue".
@@ -202,9 +199,9 @@ NOTE: The values shown are only those at the beginning of a much longer list in 
 
 '''
 
-=== Query 3a: How many tenders foresee subcontracting for a given date (count only)?
+=== Query 3a: How many awarded contracts foresee subcontracting for a given date (count only)?
 
-This query returns the count of how many tenders foresee subcontracting on the specified date. A simple count is returned.
+This query returns the count of how many awarded contracts foresee subcontracting on the specified date. A simple count is returned.
 
 TIP: The fields that can be changed in this query is the date.
 
@@ -232,9 +229,9 @@ NOTE: This count can be compared to the total contract count - see previous quer
 
 '''
 
-=== Query 3b: How many tenders on the date specified foresee subcontracting (full data)?
+=== Query 3b: How many awarded contracts on the date specified foresee subcontracting (full data)?
 
-As in query 3a, this query returns the count of those tenders on a specific date that foresee using subcontractors, but returns the full data. The data is ordered by "LotAwardedValueCurrency" ascending, and by "LotAwardedValue" descending.
+As in query 3a, this query returns the count of those contracts awarded on a specific date that foresee using subcontractors, but returns the full data. The data is ordered by "LotAwardedValueCurrency" ascending, and by "LotAwardedValue" descending.
 
 TIP: Fields that can be changed in this query are those under the "SELECT DISTINCT" section, the desired displayed fields following the VALUES line, and the date.
 
@@ -279,7 +276,7 @@ ORDER BY ASC(?Currency), DESC(?LotAwardedValue)
 === Data  Returned
 (To enlarge the image, right-click on it and choose "Open image in new tab")
 
-image::sparql/sparql_answer_4b.png[]
+image::sparql/5b.png[]
 
 NOTE: The values shown are only those at the beginning of a much longer list in different currencies (in alphabetic order). The others e.g., euros, follow. To get comparable values, all currencies will need to be converted to euros (or the same currency) manually.
 
