@@ -23,7 +23,7 @@ Once the query is in place, and the Results format chosen, the query can be run 
 
 == Examples
 ////
-=== Query 1: Find a notice using the (known) notice ID
+=== Query : Find a notice using the (known) notice ID
 
 This query returns all data found relating to a specific notice ID. From this data, the results can be filtered and manipulated further.
 
@@ -199,7 +199,7 @@ NOTE: The values shown are only those at the beginning of a much longer list in 
 
 '''
 
-=== Query 3a: How many awarded contracts foresee subcontracting for a given date (count only)?
+=== Query 3: How many awarded contracts foresee subcontracting for a given date (count only)?
 
 This query returns the count of how many awarded contracts foresee subcontracting on the specified date. A simple count is returned.
 
@@ -226,7 +226,7 @@ WHERE {
 image::sparql/sparql_answer_4c.png[]
 
 NOTE: This count can be compared to the total contract count - see previous queries.
-
+////
 '''
 
 === Query 3b: How many awarded contracts on the date specified foresee subcontracting (full data)?
@@ -238,40 +238,7 @@ TIP: Fields that can be changed in this query are those under the "SELECT DISTIN
 === Query Code
 [,sparql]
 ----
-PREFIX epo: <http://data.europa.eu/a4g/ontology#>
-PREFIX cccev: <http://data.europa.eu/m8g/>
 
-SELECT DISTINCT
-?Date
-#?OJSNumber
-?OJS_and_Lot_Number
-?WinnerName
-?WinnerCountry
-?Lot_AwardedValue
-?Currency
-
-WHERE {
-
- VALUES (?Date ) {("20230905")}
-
-?Notice epo:hasPublicationDate ?Date ; epo:hasID/epo:hasIdentifierValue ?OJSNumber ; epo:announcesContract/epo:includesLot ?Lot .
-?LotAwardOutcome epo:describesLot ?Lot ; epo:comprisesTenderAwardOutcome/epo:indicatesAwardOfLotToWinner ?Winner; epo:hasAwardedValue ?LotAwardedValueURI .
-
-?Winner epo:playedBy ?Organization .
-?Organization owl:sameAs ?SameAsOrganization.
-?SameAsOrganization epo:hasLegalName ?WinnerLegalName. bind (replace(str(?WinnerLegalName),"(^.*[@])(.*)$","$1") as ?WinnerName).
-?SameAsOrganization cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode .
-
-?LotAwardedValueURI epo:hasAmountValue ?LotAwardedValue ; epo:hasCurrency ?Lot_Currency.
-
-bind( FLOOR(?LotAwardedValue) as ?Lot_AwardedValue).
-bind (replace(str(?Lot),"http://data.europa.eu/a4g/resource/id_","") as ?OJS_and_Lot_Number)
-bind (replace(str(?WinnerCountryCode),"http://publications.europa.eu/resource/authority/country/","") as ?WinnerCountry)
-bind (replace(str(?Lot_Currency),"http://publications.europa.eu/resource/authority/currency/","") as ?Currency)
-
-
-}
-ORDER BY ASC(?Currency), DESC(?LotAwardedValue)
 ----
 === Data  Returned
 (To enlarge the image, right-click on it and choose "Open image in new tab")
@@ -279,10 +246,10 @@ ORDER BY ASC(?Currency), DESC(?LotAwardedValue)
 image::sparql/5b.png[]
 
 NOTE: The values shown are only those at the beginning of a much longer list in different currencies (in alphabetic order). The others e.g., euros, follow. To get comparable values, all currencies will need to be converted to euros (or the same currency) manually.
-
+////
 '''
 
-=== Query 4a: How many contractors are SMEs by country for a given date (count only)?
+=== Query 4: How many contractors are SMEs by country for a given date (count only)?
 
 This query returns the count of the winning contractors that are SMEs on a specified date. The data is displayed per country, by count descending.
 
@@ -334,7 +301,7 @@ NOTE: NOTE: This data may not be complete as the field requesting business size 
 
 '''
 
-=== Query 4b: How many contractors are SMEs by country for a given date (full data)?
+=== Query 5: How many contractors are SMEs by country for a given date (full data)?
 
 This query returns the count of the winning contractors that are SMEs on a specified date. All the data is returned which can then be manipulated manually.
 
@@ -345,37 +312,6 @@ TIP: Fields that can be changed in this query are those under the "SELECT" secti
 [,sparql]
 ----
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
-PREFIX cccev: <http://data.europa.eu/m8g/>
-
-SELECT DISTINCT
-?Date
-?OJSNumber
-?Organization
-?SameAsOrganization
-?WinnerLegalName
-?WinnerLegalNameTrim
-?BusinessSize
-?WinnerCountryCode
-
-WHERE {
-
-VALUES (?Date ) {("20230905")}
-
-?Notice epo:hasPublicationDate ?Date .
-?Notice epo:hasID/epo:hasIdentifierValue ?OJSNumber.
-
-?Notice epo:announcesRole ?Agent .
-?Agent a epo:Winner.
-?Agent epo:playedBy ?Organization .
-?Organization owl:sameAs ?SameAsOrganization.
-
-optional {?SameAsOrganization epo:hasBusinessSize ?BusinessSize .}
-?SameAsOrganization epo:hasLegalName ?WinnerLegalName.
-?SameAsOrganization cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode .
-
-bind (replace(str(?WinnerLegalName),"(^.*[@])(.*)$","$1") as ?WinnerLegalNameTrim)
-}
-ORDER BY ASC (?WinnerCountryCode)PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 
 SELECT DISTINCT
@@ -409,6 +345,8 @@ bind (replace(str(?BusinessSize),"http://publications.europa.eu/resource/authori
 FILTER (?Business_Size = "sme" )
 }
 ORDER BY ASC (?OJSNumber)
+
+
 ----
 === Data  Returned
 (To enlarge the image, right-click on it and choose "Open image in new tab")
