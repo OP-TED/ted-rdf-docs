@@ -23,13 +23,13 @@ Once the query is in place, and the Results format chosen, the query can be run 
 
 == Examples
 
-=== Query 1: How many notices have been published by buyer for a given date?
+=== Query 1: Notices published by buyer on a given date:
 
-This query returns the count of notices published by buyer  on a specified date. The data returned are the date, buyer country, buyer name, number of notices. The data is ordered by notice count descending.
+This query returns the  notices published by buyer  on a specified date. The data returned are the date, buyer country, buyer name, number of notices. The data is ordered by notice count, descending.
 
 
 
-TIP: Fields that can be changed in this query are: the fields selected under "SELECT", and the date.
+//TIP: Fields that can be changed in this query are: the fields selected under "SELECT", and the date.
 
 === Query Code
 [,sparql]
@@ -78,15 +78,15 @@ ORDER BY DESC(?NumberOfNotices) ASC(?BuyerLegalName)
 
 image::sparql/Q1.png[]
 
-NOTE: Some cleaning up of the data is necessary - the bind (replace(str etc statements - to return only the information requested.
+NOTE: Some cleaning up of the data might be necessary to remove URL strings, (bind (replace(str statements, - to make the information returned more readable.
 
 '''
 
-=== Query 2: What contracts were awarded on a specific date?
+=== Query 2: Contracts awarded on a specific date:
 
 This query returns data on the contracts awarded on a specific day.
 
-TIP: Fields that can be changed in this query are the those under the "SELECT DISTINCT" section, and the DATE section.
+//TIP: Fields that can be changed in this query are the those under the "SELECT DISTINCT" section, and the DATE section.
 
 === Query Code
 [,sparql]
@@ -141,11 +141,11 @@ NOTE: The values shown are only those at the beginning of a much longer list in 
 
 '''
 
-=== Query 3: Which is the highest value published for a contract award for a given date by currency? (FULL DATA)
+=== Query 3: The highest value contract award published for a specific date by currency? (FULL DATA)
 
-This query returns the count of how many awarded contracts foresee subcontracting on the specified date. A simple count is returned.
+This query returns the contracts awarded on a specific data in descending order of value per currency.
 
-TIP: The fields that can be changed in this query is the date.
+//TIP: The fields that can be changed in this query is the date.
 
 === Query Code
 [,sparql]
@@ -206,7 +206,7 @@ ORDER BY ASC(?LotAwardedValueCurrency) DESC(?LotAwardedValue)
 === Data  Returned
 image::sparql/Q3.png[]
 
-NOTE: This count can be compared to the total contract count - see previous queries.
+NOTE: The data contains all the currencies used in the EU arranged alphabetically (only the beginning of the list is shown here). For a true comparison, all currencies will need to be converted to the same one.
 ////
 '''
 
@@ -230,11 +230,11 @@ NOTE: The values shown are only those at the beginning of a much longer list in 
 ////
 '''
 
-=== Query 4: How many tenders foresee subcontracting for a given date?
+=== Query 4: Count of notices awarded on a specific date where the economic operator foresees subcontracting:
 
-This query returns the count of the winning contractors that are SMEs on a specified date. The data is displayed per country, by count descending.
+This query returns the count of the winning economic operator where the operator forsees subcontracting to other organisations. The data is displayed as a simple count.
 
-TIP: Fields that can be changed in this query are those under the "SELECT" section and the date.
+//TIP: Fields that can be changed in this query are those under the "SELECT" section and the date.
 
 === Query Code
 
@@ -257,15 +257,15 @@ WHERE {
 === Data  Returned
 image::sparql/Q4.png[]
 
-NOTE: NOTE: This data may not be complete as the field requesting business size is not mandatory.
+NOTE: NOTE: This data may not be complete or accurate as this information may change during provision.
 
 '''
 
-=== Query 5: How many tenders foresee subcontracting for a given date? (FULL DATA)
+=== Query 5: Notices awarded on a specific date where the economic operator foresees subcontracting:
 
-This query returns the count of the winning contractors that are SMEs on a specified date. All the data is returned which can then be manipulated manually.
+This query returns a list of the winning economic operator where the operator forsees subcontracting to other organisations. The data is displayed in columns.
 
-TIP: Fields that can be changed in this query are those under the "SELECT" section and the date.
+//TIP: Fields that can be changed in this query are those under the "SELECT" section and the date.
 
 === Query Code
 
@@ -301,9 +301,13 @@ ORDER BY ASC(?OJSNumber) ASC(?Lot)
 
 image::sparql/Q5.png[]
 
-NOTE: This data may not be complete as the field requesting business size is not mandatory.
+NOTE: NOTE: This data may not be complete or accurate as this information may change during provision.
 
-Query 6: How many contractors are SMEs by country for a given date?
+''''
+
+=== Query 6: The number of economic operators awarded contracts on a specific date that are SMEs.
+
+The data is displayed per country and by count descending.
 
 === Query Code
 
@@ -357,9 +361,14 @@ SELECT
 }
 ORDER BY DESC (?NrOfSmeWinners)
 ----
+
+=== Data  Returned
 image::sparql/Q6.png[]
 
-Query 7: How many contractors are SMEs by country for a given date? (FULL DATA)
+''''
+=== Query 7: The list of economic operators awarded contracts on a specific day who are SMEs.
+
+The data returned are data, ojs number, operator name, operator country, and business size.
 
 === Query Code
 
@@ -415,6 +424,8 @@ bind (replace(str(?Business_Size),"(^.*[/])(.*)$","$2") as ?BusinessSize)
 }
 ORDER BY ASC (?WinnerCountry) DESC (?WinnerLegalName)
 ----
+
+=== Data  Returned
 image::sparql/Q7.png[]
 
 include::partial$feedback.adoc[]
