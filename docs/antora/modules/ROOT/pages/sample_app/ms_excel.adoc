@@ -10,7 +10,7 @@ This page explains how to use procurement data accessed from *Cellar* with Micro
 
 == Using sample data with macros in Microsoft Excel
 
-This chapter shows an example of a spreadsheet in MS Excel with macros that is using TED-SWS data. The spreadsheet can be found in the https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[GitHub Repository].
+This chapter shows an example of a spreadsheet in MS Excel with macros that is querying TED-SWS data. The spreadsheet can be found in the https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[GitHub Repository].
 
 In this example you will see the following sheets:
 
