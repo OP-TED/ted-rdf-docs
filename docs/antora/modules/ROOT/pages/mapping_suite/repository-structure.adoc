@@ -13,9 +13,6 @@ The repository structure and folder descriptions are shown below:
 
 
 ----
-/docs
-    /antora
-
 /mappings
     /package_F03
     /package_F06

@@ -7,17 +7,17 @@
 
 == Representative sample data selection
 
-This section describes TED notice data samples and methods used to generate them. At first a sampling is performed on the notices from 2021, and then on a wider set.
+This section describes TED notice data samples and methods used to generate them. At first a sampling is performed on notices from 2021, and then on a wider set.
 
 === Sample TED notices from 2021
 
-This data sample (`test_data/sampling_2021`) contains carefully selected TED notices based on the following criteria: maximise representativeness, minimise the number of selected documents. The selected notices are guaranteed to cover all possible XPath configurations available in the data. The sampling was performed automatically.
+This data sample (`test_data/sampling_2021`) contains carefully selected TED notices based on the following criteria: maximise representation, and minimise the number of selected documents. The selected notices are guaranteed to cover all possible XPath configurations available in the data. The sampling was performed automatically.
 
 * The current sampling exercise was performed on all records collected in 2021;
 
 * The data space was partitioned twice based on two criteria: the notice form number (e.g. `F03`, `F06`) and the eForms Subtype (e.g. `cn-standard`, `can-utilities`);
 
-* The minimal set of the most representative notices have been selected for each form_number and eforms_subtype .
+* The minimal set of the most representative notices were selected for each form_number and eforms_subtype .
 
 
 === Sampling result statistics
@@ -104,7 +104,7 @@ Below are two tables with statistics indicating the total number for each select
 === Sampling of TED notices based on XSD versions
 
 
-A separate sampling on *all the TED notices published between 2014 and 2022* was also made. The samples were split up based on the various XSD versions according to which they were created. These samples can be found in the following folder structure
+A separate sampling on *all the TED notices published between 2014 and 2022* was also made. The samples were split up according to the various XSD versions upon which they were created. These samples can be found in the following folder structure:
 
 ----
 test_data

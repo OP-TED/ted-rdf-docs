@@ -6,9 +6,9 @@
 
 
 
-The mapping artefacts, including the various mapping suite packages that developed in the process described in this document, are stored and maintained in the https://github.com/OP-TED/ted-rdf-mapping[OP-TED/ted-rdf-mapping] GitHub repository.
+The mapping artefacts, including the various mapping suite packages developed in the process described in this document, are stored and maintained in the https://github.com/OP-TED/ted-rdf-mapping[OP-TED/ted-rdf-mapping] GitHub repository.
 
-To assist the semantic engineers in the development of mapping suites, an internal toolchain has been developed, which consists of a number of command line tools (CLIs)
+To assist semantic engineers in the development of mapping suites, an internal toolchain was developed, consisting of a number of command line tools (CLIs)
 //available in the https://github.com/OP-TED/ted-rdf-conversion-pipeline[OP-TED/ted-rdf-conversion-pipeline] GitHub repository
 that can be run on the mapping suites to produce various outputs.
 //In order to run these CLIs the ted-sws project needs to be installed in the rdf-mapping environment. This can be done by following the *installation instructions* provided https://github.com/OP-TED/ted-rdf-conversion-pipeline#installation--usage[here]. The documentation for the usage of these CLI tools can be found https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html[here], however we will provide below some more details about the most relevant ones.
@@ -37,7 +37,7 @@ The modules names are listed on the "RML_Modules" spreadsheet of the Conceptual 
 
 === SPARQL Test Generator (sparql_generator)
 
-This CLI generates a set of SPARQL queries from the conceptual mapping that will be executed by the `sparql_runner` CLI (described in the next section). Each generated query can be used to test if the related conceptual mapping is correctly generating RDF data or not.
+This CLI generates a set of SPARQL queries from the conceptual mapping that is then executed by the `sparql_runner` CLI (described in the next section). Each generated query can be used to test if the related conceptual mapping is correctly generating RDF data or not.
 
 //For more detailed documentation on its usage please check out the https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html#_cmd_sparql_generator[dedicated section in the Mapping Suite CLI Toolchain] documentation.
 
@@ -94,7 +94,7 @@ Generates SHACL Validation Reports for RDF files.
 //For more detailed documentation on its usage please check out the https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html#_cmd_shacl_runner[dedicated section in the Mapping Suite CLI Toolchain] documentation.
 
 === Mapping Suite Processor (mapping_suite_processor)
-This CLI runs all the necessary CLIs mentioned above in a logical order, to fully process a mapping suite, starting with the generation of metadata and finishing with running the mapping on all the (specified) tests data, and generating all the possible associated validation artefacts. It can be run for a certain package, (set of) notice(s), or groups of commands.
+This CLI runs all the necessary CLIs mentioned above in a logical order, to fully process a mapping suite, starting with the generation of metadata and finishing with running the mapping on all the (specified) tests data, generating all the possible associated validation artefacts. It can be run for a certain package, (set of) notice(s), or groups of commands.
 
 //For more detailed documentation on its usage please check out the https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html#_cmd_mapping_suite_processor[dedicated section in the Mapping Suite CLI Toolchain] documentation.
 
