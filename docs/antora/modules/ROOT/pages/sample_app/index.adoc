@@ -19,7 +19,7 @@ Development Environment:: Set up a development environment for your chosen progr
 
 Understanding of EU Procurement Data:: If your goal is to work with specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts, and the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement ontology].
 
-The sample applications can be accessed via the menu on the left.
+The sample applications can be accessed via the *Reusing semantic web service artefacts* menu on the left.
 
 ////
 == Using MS Excel
