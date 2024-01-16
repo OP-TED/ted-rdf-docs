@@ -8,6 +8,7 @@
 
 * [.separated]#**General Reference**#
 * xref:audience.adoc[Target Audience]
+* xref:mapping_suite/versioning.adoc[Versioning]
 
 * [.separated]#**Mapping suite contents**#
 * xref:SWS::genref.adoc[Introduction]
@@ -28,8 +29,7 @@
 * xref:sample_app/jupyter_notebook_python.adoc[Jupyter Notebook - Python]
 
 
-* [.separated]#**Reference**#
-* xref:mapping_suite/versioning.adoc[Versioning]
+
 
 
 

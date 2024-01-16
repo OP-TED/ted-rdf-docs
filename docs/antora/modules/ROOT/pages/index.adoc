@@ -12,6 +12,9 @@ The following topics are included in this version of the Semantic Web Service Do
 == General Reference
 * xref:audience.adoc[Target Audience] +
 The target audience for this documentation
+* xref:mapping_suite/versioning.adoc[Versioning] +
+The mapping Suite Versioning Rules
+
 
 == Mapping Suite Contents
 
