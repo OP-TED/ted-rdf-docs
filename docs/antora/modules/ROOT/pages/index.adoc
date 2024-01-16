@@ -1,4 +1,4 @@
-:doctitle: The TED Semantic Web Service Documentation
+:doctitle: The TED Semantic Web Service
 :doccode: sws-main-prod-001
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
