@@ -17,39 +17,38 @@ The target audiences for this documentation
 
 == Mapping Suite Contents
 
-* xref:genref.adoc[General reference] +
-Add content
-* xref:mapping_suite/index.adoc[Mapping suite contents] +
-Add content
+* xref:genref.adoc[Introduction] +
+Introduction to the Mapping suites
+
 * xref:glossary.adoc[Glossary] +
-Add content
+A glossary relating to the mapping suites
 * xref:mapping_suite/methodology.adoc[Methodology] +
-Add content
+Describes the methodology for creating mapping rules
 * xref:mapping_suite/repository-structure.adoc[Mapping Suite Repository Structure] +
-Add content
+Describes the repository structure for transformation rules and other artifacts
 * xref:mapping_suite/index.adoc[Mapping suites] +
-Add content
+A description of the Mapping Suite contents
 * xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite Package Structure] +
-Add content
+A description of a mapping suite package structure
 * xref:mapping_suite/code-list-resources.adoc[Code List Mappings] +
-Add content
+Resources used to map code lists in the XML files to URIs in the RDF representation
 * xref:mapping_suite/preparing-test-data.adoc[Data samples] +
-Add content
+Describes TED notice data samples and methods used to generate them
 * xref:mapping_suite/toolchain.adoc[Toolchain] +
-Add content
+Describes available CLI tools that can run on the mapping suites
 
 == Reusing semantic web service artifacts
 
 * xref:sample_app/sa_glossary.adoc[Glossary] +
-Add content
+A glossary relating to reusing semantic web service artefacts
 * xref:sample_app/sparql_queries.adoc[Sparql Queries] +
-Add content
+Example queries run on the https://publications.europa.eu/webapi/rdf/sparql[sparql endpoint]
 * xref:sample_app/ms_excel.adoc[MS Excel] +
-Add content
+Running queries using MS Excel macros
 * xref:sample_app/jupyter_notebook_r.adoc[Jupyter Notebook - R] +
-Add content
+Running queries using Jupyter Notebook and R
 * xref:sample_app/jupyter_notebook_python.adoc[Jupyter Notebook - Python] +
-Add content
+Running queries using Jupyter Notebook and Python
 
 
 
