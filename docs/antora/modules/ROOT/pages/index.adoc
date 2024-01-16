@@ -12,8 +12,8 @@ The TED Semantic Web Service (TED-SWS) continuously converts Contract Award Noti
 The following topics are included in this version of the Semantic Web Service Documentation:
 
 == General Reference
-* xref:audience.adoc[Target Audiences] +
-The target audiences for this documentation
+* xref:audience.adoc[Target Audience] +
+The target audience for this documentation
 
 == Mapping Suite Contents
 
