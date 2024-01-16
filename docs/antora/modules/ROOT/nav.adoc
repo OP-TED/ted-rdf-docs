@@ -5,6 +5,8 @@
 :docdate: October 2023
 
 * xref:SWS::index.adoc[Home]
+
+* [.separated]#**General Reference**#
 * xref:audience.adoc[Target Audience]
 
 * [.separated]#**Mapping suite contents**#

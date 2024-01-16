@@ -4,7 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-
+////
 To understand the Mapping Suite Documentation, it is beneficial to have:
 
 Knowledge of Semantic Web Technologies:: A good understanding of Semantic Web concepts and technologies is crucial. This includes knowledge of RDF triples, ontologies, and linked data principles.
@@ -17,7 +17,7 @@ Familiarity with Spreadsheet Editing Tools:: Since most of the Conceptual mappin
 
 
 
-////
+
 - [[gloss:cm]] *Conceptual Mapping*, often abbreviated as *CM*, is an abstract level mapping of XPaths in the input data to those ePO classes that need to be instantiated and properties are used to link the instances in the output RDF graph
 
 - [[gloss:epo]] *eProcurement Ontology (ePO)* is an ontology that defines the concepts and relations that are needed to fully describe the eProcurement domain of the EU. For more information check out the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology Documentation].
@@ -60,7 +60,7 @@ Transformation rules and other artefacts used for the mapping of Standard Forms 
 The repository structure and folder descriptions are shown below.  At the base of the folder path is https://github.com/OP-TED/ted-rdf-mapping/tree/main/.  However, if the reader wishes to view a specific release, then the path is adapted by replacing main by the given release. For example, if release 2.1.1-rc.1 is required, the path should be amended to https://github.com/OP-TED/ted-rdf-mapping/tree/2.1.1-rc.1
 
 
-=== Upper Level folders of the GitHub Repository
+=== Higher Level folders of the GitHub Repository
 
 This section describes the upper level of the GitHub repository
 ////
@@ -73,10 +73,6 @@ The aim of this section is to give the reader an overview of the repository stru
 [cols="1,1,2"]
 |===
 |Folder|Subfolders |Description
-
-|/docs
-|/antora
-|Contains the documentation for the ted-rdf mapping
 
 |https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings[/mappings]
 a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03[/package_F03]

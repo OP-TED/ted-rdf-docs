@@ -5,9 +5,6 @@
 :docdate: October 2023
 
 
-
-== Mapping suite package structure
-
 This section describes the structure of a mapping suite package in GitHub. A package contains everything that is needed for the development and testing of a mapping suite that is applicable to a certain set of notices. After the package is finalised, it can be used by a process to apply it to a larger number of notices stored in a database, and transform these into RDF data.
 
 
