@@ -10,7 +10,7 @@
 * xref:audience.adoc[Target Audience]
 
 * [.separated]#**Mapping suite contents**#
-* xref:SWS::genref.adoc[General Reference]
+* xref:SWS::genref.adoc[Introduction]
 * xref:SWS::glossary.adoc[Glossary]
 * xref:mapping_suite/methodology.adoc[Methodology]
 * xref:mapping_suite/repository-structure.adoc[Repository structure]
