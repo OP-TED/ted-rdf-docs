@@ -139,7 +139,7 @@ image::sparql/Q2.png[]
 
 === Query 3: The values of contract award notices published on a specific date by currency and then value.
 
-This query returns the contracts awarded on a specific data in descending order of value per currency.
+This query returns the contracts awarded on a specific date in descending order of value per currency.
 
 //TIP: The fields that can be changed in this query is the date.
 
@@ -259,7 +259,7 @@ image::sparql/Q4.png[]
 
 === Query 5: Contracts awarded on a specific date where the economic operator foresees subcontracting
 
-This query returns a list of the winning economic operator where the operator foresees subcontracting to other organisations. The data returned is the date, the OJS number, the notice lot, and "forsees subcontracting". This last field is filters the notices for those foreseeing subcontracting only.
+This query returns a list of the winning economic operators where the operator foresees subcontracting to other organisations. The data returned is the date, the OJS number, the notice lot, and "forsees subcontracting". This last field filters the notices for those foreseeing subcontracting only.
 
 //TIP: Fields that can be changed in this query are those under the "SELECT" section and the date.
 
@@ -299,9 +299,9 @@ image::sparql/Q5.png[]
 
 ''''
 
-=== Query 6: The number of economic operators awarded contracts on a specific date that are SMEs
+=== Query 6: The number of economic operators awarded contracts on a specific date per country that are SMEs
 
-The data returned are the country codes, and the count of awarded contracts per country, displayed by count, descending.
+The data returned are the country codes, and the count of awarded contracts per country displayed by count, descending.
 
 === Query Code
 
