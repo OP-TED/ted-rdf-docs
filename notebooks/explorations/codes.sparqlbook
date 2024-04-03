@@ -1,0 +1,20 @@
+[
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nPREFIX ns5: <http://publications.europa.eu/ontology/euvoc#>\n\nSELECT DISTINCT ?concept ?label ?narrower\nWHERE {\n  ?concept a skos:Concept ;\n          skos:prefLabel ?label ;\n          ns5:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> ;\n          skos:inScheme <http://data.europa.eu/cpv/cpv> .\n  FILTER(LANG(?label) = 'en')\n  \n  OPTIONAL {\n    ?concept skos:narrower ?narrower .\n  }\n}\nLIMIT 100\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nPREFIX ns5: <http://publications.europa.eu/ontology/euvoc#>\n\nSELECT DISTINCT ?concept ?label ?narrower ?narrowerLabel\nWHERE {\n  ?concept a skos:Concept ;\n          skos:prefLabel ?label ;\n          ns5:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .\n  FILTER(LANG(?label) = 'en')\n  \n  OPTIONAL {\n    ?concept skos:narrower ?narrower .\n    ?narrower skos:prefLabel ?narrowerLabel ;\n              ns5:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .\n    FILTER(LANG(?narrowerLabel) = 'en')\n  }\n}\nLIMIt 10\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n    PREFIX ns5: <http://publications.europa.eu/ontology/euvoc#>\n\n    SELECT DISTINCT ?parent ?label\n    WHERE {{\n      <http://data.europa.eu/cpv/cpv/45112000> skos:broader* ?parent .\n      ?parent skos:prefLabel ?label ;\n              ns5:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> ;\n              skos:inScheme <http://data.europa.eu/cpv/cpv> .\n      FILTER(LANG(?label) = 'en')\n    }}",
+    "metadata": {}
+  }
+]
