@@ -1,12 +1,14 @@
-# Post Draft
+# Untitled
 
 ## Introduction
 
 In this post, we'll explore how Linked Data can be queried from different datasets related to eProcurement.
 
-The eProcurement dataspace gathers data from various actors, For example while the European Union governs procurement contracts above certain thresholds, contracts of lower-value are distributed across national or regional levels in diverse formats. Linked Data technology is well-suited to bridge the gap. It allows the Publications Office, any agency and member states to independently publish data using RDF (Resource Description Framework) and then establish links between them.  [TODO: explain that agency-a does not speak with agency-b]
+The eProcurement dataspace gathers data from various actors, For example while the European Union governs procurement contracts above certain thresholds, contracts of lower-value are distributed across national or regional levels in diverse formats. Linked Data technology is well-suited to bridge the gap. It allows the Publications Office, any agency and member states to independently publish data using RDF (Resource Description Framework) and then establish links between them.  
 
 Our goal is to enhance transparency, integrity, and accountability in public spending through data discovery, querying, and analysis.
+
+[TODO: also explain that agency-a does not speak with agency-b]
 
 ### CPV codes
 
@@ -20,9 +22,9 @@ Primary Purpose of CPVs:
 
 ### Notices
 
-TODO
-
 Notices play a crucial role in public procurement. They serve as formal announcements related to contracts, events, or other relevant matters.
+
+[TODO: expand on this]
 
 ### The data
 
