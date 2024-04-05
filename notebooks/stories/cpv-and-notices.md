@@ -22,8 +22,6 @@ Primary Purpose of CPVs:
 
 Notices play a crucial role in public procurement. They serve as formal announcements related to contracts, events, or other relevant matters.
 
-[TODO: expand on this]
-
 ### The data
 
 We publish Linked Data versions of CPVs and Notices, adhering to these principles:
@@ -65,7 +63,7 @@ WHERE {
 }
 ```
 
-[(online)](https://api.triplydb.com/s/nAZDkuaun)Result:
+[Result](https://api.triplydb.com/s/nAZDkuaun):
 
 | Identifier                               | label                                                                                                                               |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -91,7 +89,7 @@ WHERE {
 }
 ```
 
-[(online)](https://api.triplydb.com/s/Wt5GJtAZ0)Result:
+[Result](https://api.triplydb.com/s/Wt5GJtAZ0):
 
 | broaderLabel               | label                                                                                                          |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -115,7 +113,7 @@ WHERE {
 }
 ```
 
-[(online)](https://api.triplydb.com/s/yvlfJCoq6)Result:
+[Result](https://api.triplydb.com/s/yvlfJCoq6):
 
 | NoticeCount |
 | ----------- |
@@ -136,7 +134,7 @@ WHERE {
 } LIMIT 10
 ```
 
-[(online)](https://api.triplydb.com/s/lrwVTJ_M8)Result:
+[Result](https://api.triplydb.com/s/lrwVTJ_M8):
 
 | title                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -189,7 +187,7 @@ ORDER BY DESC(?noticeCount)
 LIMIT 10
 ```
 
-[(online)](https://api.triplydb.com/s/BTqhK6CXz)Result:
+[Result](https://api.triplydb.com/s/BTqhK6CXz):
 
 | noticeCount | classificationLabel                                                 |
 | ----------- | ------------------------------------------------------------------- |
