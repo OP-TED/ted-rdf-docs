@@ -1,14 +1,12 @@
-# Untitled
+# CPVs and Notices
 
 ## Introduction
 
 In this post, we'll explore how Linked Data can be queried from different datasets related to eProcurement.
 
-The eProcurement dataspace gathers data from various actors, For example while the European Union governs procurement contracts above certain thresholds, contracts of lower-value are distributed across national or regional levels in diverse formats. Linked Data technology is well-suited to bridge the gap. It allows the Publications Office, any agency and member states to independently publish data using RDF (Resource Description Framework) and then establish links between them.  
+The [The Public Procurement Data Space](https://single-market-economy.ec.europa.eu/single-market/public-procurement/digital-procurement/public-procurement-data-space-ppds_en) gathers data from various actors, For example while the European Union governs procurement contracts above certain thresholds, contracts of lower-value are distributed across national or regional levels in diverse formats. [Linked Data](https://en.wikipedia.org/wiki/Linked_data) technology is well-suited to bridge the gap. It allows the Publications Office, any agency and member states to independently publish data using [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) (Resource Description Framework) and then establish links between them.
 
 Our goal is to enhance transparency, integrity, and accountability in public spending through data discovery, querying, and analysis.
-
-[TODO: also explain that agency-a does not speak with agency-b]
 
 ### CPV codes
 
@@ -34,7 +32,7 @@ We publish Linked Data versions of CPVs and Notices, adhering to these principle
 - HTTP URIs: Each identifier is also a URL, allowing you to directly access the data using, for example, a web browser.
 - Include links to other URIs. So we can connect the data together.
 
-Additionally, the Publications Office offers a SPARQL endpoint that allows querying its contents using SPARQL, a powerful language for querying RDF data.
+Additionally, the Publications Office offers an endpoint, https://publications.europa.eu/webapi/rdf/sparql, that allows querying its contents using [SPARQL](https://en.wikipedia.org/wiki/SPARQL), a powerful language for querying RDF data. The endpoint can be queried from several applications.
 
 This document provides some examples of how you can leverage SPARQL to unlock valuable insights from the eProcurement dataspace.
 
@@ -48,9 +46,9 @@ CPV codes are described using the SKOS (Simple Knowledge Organization System) vo
 
 Interesting SKOS Properties for CPVs:
 
-- skos:prefLabel: Describes the label (name) of each concept.
-- skos:broader: Indicates that one concept is broader (more general) than another (e.g., "Building construction work" is broader than "Construction work for schools").
-- skos:narrower: Indicates that one concept is narrower (more specific) than another (e.g., "Construction work for schools" is narrower than "Building construction work").
+- `skos:prefLabel`: Describes the label (name) of each concept.
+- `skos:broader`: Indicates that one concept is broader (more general) than another (e.g., "Building construction work" is broader than "Construction work for schools").
+- `skos:narrower`: Indicates that one concept is narrower (more specific) than another (e.g., "Construction work for schools" is narrower than "Building construction work").
 
 These relationships help organize CPV codes into a hierarchical structure.
 
@@ -67,7 +65,7 @@ WHERE {
 }
 ```
 
-Expected Result:
+[(online)](https://api.triplydb.com/s/nAZDkuaun)Result:
 
 | Identifier                               | label                                                                                                                               |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -75,8 +73,8 @@ Expected Result:
 
 The query retrieved two things:
 
-1. The Identifier (URI) of the CPV code.
-2. The label of the CPV code in French. (Clicking the URI in a web browser can lead you to more information about the CPV code.)
+1. The Identifier (URI) of the CPV code. Note that opening this UTL in a web browser can lead you to more information about the CPV code
+2. The label of the CPV code in French.
 
 We can delve deeper using another query to find the broader category of the CPV code with another query:
 
@@ -93,7 +91,7 @@ WHERE {
 }
 ```
 
-Expected Result:
+[(online)](https://api.triplydb.com/s/Wt5GJtAZ0)Result:
 
 | broaderLabel               | label                                                                                                          |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -102,6 +100,8 @@ Expected Result:
 Now we know that the CPV concept "Construction work for buildings relating to law and order or emergency services and for military buildings" belongs to the broader category of "Building construction work."
 
 ### Querying Notices: Exploring Daily Publications
+
+The Notices are described using the [eProcurement Ontology](https://docs.ted.europa.eu/EPO/latest/index.html), actively developed by the Publications Office.
 
 Notices are published daily. Let's say we want to find out how many notices were published on a specific date, say "2023-09-11":
 
@@ -115,7 +115,7 @@ WHERE {
 }
 ```
 
-Expected Result:
+[(online)](https://api.triplydb.com/s/yvlfJCoq6)Result:
 
 | NoticeCount |
 | ----------- |
@@ -135,6 +135,8 @@ WHERE {
     FILTER(LANG(?title) = 'en')
 } LIMIT 10
 ```
+
+[(online)](https://api.triplydb.com/s/lrwVTJ_M8)Result:
 
 | title                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -187,7 +189,7 @@ ORDER BY DESC(?noticeCount)
 LIMIT 10
 ```
 
-Expected Result:
+[(online)](https://api.triplydb.com/s/BTqhK6CXz)Result:
 
 | noticeCount | classificationLabel                                                 |
 | ----------- | ------------------------------------------------------------------- |
@@ -210,6 +212,10 @@ Explanation of the Query:
 - Purpose and Main Classification: It verifies if the purpose has a "main classification" linked using the epo:hasMainClassification property. This classification is most likely a CPV code.
 - CPV Label Retrieval: For the retrieved CPVs (identified by URIs in ?Identifier), the query gets the preferred labels (skos:prefLabel) in English using the FILTER clause.
 - Grouping and Ordering: The results are grouped by the CPV labels (?classificationLabel), ordered by the number of notices in descending order (DESC(?noticeCount)), and limited to the top 10 entries.
+
+## Importing your data
+
+You can use the [SPARQL endpoint](https://publications.europa.eu/webapi/rdf/sparql) to access and analyze data without the need of downloading all the notices. SPARQL queries act like precise search tools, retrieving only the specific information you require and then be imported within any application you are familiar with, such as Excel or Python. Look into the [examples] for more information.
 
 ## Conclusion
 
