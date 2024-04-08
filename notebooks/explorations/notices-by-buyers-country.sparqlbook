@@ -1,8 +1,0 @@
-[
-  {
-    "kind": 2,
-    "language": "sparql",
-    "value": "# Which notices have been published by Buyers from a specific country for a given date?\n\nPREFIX epo: <http://data.europa.eu/a4g/ontology#>\nPREFIX cccev: <http://data.europa.eu/m8g/>\nPREFIX org: <http://www.w3.org/ns/org#>\nSELECT DISTINCT\n?Notice\n?Organization\n?LegalName\nWHERE {\n    VALUES (?PublicationDate ?countryCode) {\n            (\"20230905\" <http://publications.europa.eu/resource/authority/country/DEU>)\n    }\n    ?Notice epo:hasPublicationDate ?PublicationDate .\n    ?Notice epo:announcesRole [\n        a epo:Buyer ;\n        epo:playedBy ?Organization\n    ] .\n    ?Organization cccev:registeredAddress / epo:hasCountryCode ?countryCode .\n    ?Organization epo:hasLegalName ?LegalName .\n}",
-    "metadata": {}
-  }
-]
