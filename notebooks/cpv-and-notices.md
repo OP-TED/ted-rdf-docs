@@ -32,7 +32,7 @@ We publish Linked Data versions of CPVs and Notices, adhering to these principle
 
 Additionally, the Publications Office offers an endpoint, https://publications.europa.eu/webapi/rdf/sparql, that allows querying its contents using [SPARQL](https://en.wikipedia.org/wiki/SPARQL), a powerful language for querying RDF data. The endpoint can be queried from several applications.
 
-This document provides some examples of how you can leverage SPARQL to unlock valuable insights from the eProcurement dataspace.
+This document provides some examples of how you can leverage SPARQL to unlock valuable insights from the eProcurement-related data.
 
 ## Example of integration
 
