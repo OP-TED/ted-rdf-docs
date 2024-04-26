@@ -4,7 +4,7 @@
 
 In this post, we'll explore how Linked Data can be queried from different datasets related to eProcurement.
 
-The [Publc Procurement Data Space](https://single-market-economy.ec.europa.eu/single-market/public-procurement/digital-procurement/public-procurement-data-space-ppds_en) gathers data from various actors, For example while notices of public procurement in the European Union above certain thresholds have to be published on TED (Tenders Electronic Daily), public procurement notices of lower-value are distributed across national or regional levels in diverse formats. [Linked Data](https://en.wikipedia.org/wiki/Linked_data) technology is well-suited to bridge the gap. It allows the Publications Office, any agency and Member States to independently publish data using [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) (Resource Description Framework) and then establish links between them.
+Notices of public procurement in the European Union above certain thresholds have to be published on TED (Tenders Electronic Daily), public procurement notices of lower-value are distributed across national or regional levels in diverse formats. [Linked Data](https://en.wikipedia.org/wiki/Linked_data) technology is well-suited to bridge the gap. It allows the Publications Office, any agency and Member States to independently publish data using [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) (Resource Description Framework) and then establish links between them.
 
 Our goal is to enhance transparency, integrity, and accountability in public spending through data discovery, querying, and analysis.
 
@@ -14,8 +14,8 @@ CPV stands for Common Procurement Vocabulary. This classification system, develo
 
 Primary Purpose of CPVs:
 
-- Standardize how contracting authorities describe the subject of procurement contracts.
-- Enable precise categorization of goods, services, or works involved in a contract using CPV codes.
+- Standardise how contracting authorities describe the subject of procurement contracts.
+- Enable precise categorisation of goods, services, or works involved in a contract using CPV codes.
 - Facilitate efficient communication and understanding across diverse procurement processes.
 
 ### Notices
@@ -128,13 +128,14 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 
 SELECT ?title
 WHERE {
-    ?notice epo:hasPublicationDate "20230911" ;
-            epo:refersToProcedure [ epo:hasTitle ?title ] .
+    ?notice a epo:Notice ;
+		epo:hasPublicationDate "20230911" ;
+		epo:refersToProcedure [ epo:hasTitle ?title ] .
     FILTER(LANG(?title) = 'en')
 } LIMIT 10
 ```
 
-[Result](https://api.triplydb.com/s/lrwVTJ_M8):
+[Result](https://api.triplydb.com/s/Bg3al6ejv):
 
 | title                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
