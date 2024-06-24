@@ -4,7 +4,7 @@ This section provides descriptions and references to the key elements (concepts 
 
 The purpose of the mapping process is to generate a “mapping table” (described in the conceptual mapping artefact section) that can be processed by the automated workflow of the
 //https://github.com/OP-TED/ted-rdf-conversion-pipeline
-TED-SWS system. The mapping table us used to convert the TED XML input data into an RDF graph (the output of the mapping) that conforms with the eProcurement Ontology. The mapping table is encoded as a spreadsheet containing multiple worksheets.
+TED-SWS system. The mapping table is used to convert the TED XML input data into an RDF graph (the output of the mapping) that conforms with the eProcurement Ontology. The mapping table is encoded as a spreadsheet containing multiple worksheets.
 //, whose structure is described elsewhere.
 
 
