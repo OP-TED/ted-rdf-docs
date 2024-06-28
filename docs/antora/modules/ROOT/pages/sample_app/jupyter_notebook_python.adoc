@@ -5,7 +5,7 @@
 :docdate: October 2023
 
 
-This document shows an example using Jupyter Notebook in Python.
+This page demonstrates a query example using Jupyter Notebook in Python.
 Jupyter Notebook is an application for creating and sharing
 computational documents. Python is a programming language for
 writing computational documents. To work with Jupyter Notebook and Python, it is

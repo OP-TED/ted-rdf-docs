@@ -1,16 +1,13 @@
 = TED-SWS End-User Documentation
 
-TED Semantic Web Service (TED-SWS) is a pipeline system that continuously
-converts the public procurement notices (in XML format) available on the
-TED Website into RDF format based on the eProcurement Ontology, and publishes
-them into CELLAR repository, hance making them available to the public
-through CELLAR’s SPARQL endpoint.
+TED Semantic Web Service (TED-SWS) is a process pipeline system that continuously
+converts the public procurement notices (in XML format) published on the
+TED Website into RDF format based on the eProcurement Ontology, outputs
+the RDF data into a triple store (RDF database) called the "CELLAR", and makes the data available to the public
+through a https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint].
 
-The TED Semantic Web Service (TED-SWS) is plugging together
-the TED infrastructure for the collection and publication of public procurement
-notices with the infrastructure of http://data.europa.eu/[data.europa.eu]
-in order to make public procurement data accessible and reusable as
-Linked Open Data (LOD) by users and stakeholders (see xref:genref.adoc[the detailed motivation]).
+The TED Semantic Web Service (TED-SWS) connects the TED infrastructure for the collection and publication of public procurement notices with the infrastructure of http://data.europa.eu/[data.europa.eu] 
+to make public procurement data accessible and reusable as Linked Open Data (LOD). See xref:genref.adoc[the detailed motivation for the project]).
 
 == Contents
 

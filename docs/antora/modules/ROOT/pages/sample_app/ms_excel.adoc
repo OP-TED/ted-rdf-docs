@@ -5,22 +5,26 @@
 :docdate: October 2023
 
 
-This page explains how to use procurement data accessed from *Cellar* with Microsoft Excel. There are different ways to access TED notices in CELLAR
+This page explains how to use procurement data accessed from *Cellar* with Microsoft Excel. A sample Excel file is provided for download that contains macros that connect to the endpoint, run the query, and return the results from within the file.
+
+////
+There are different ways to access TED notices in CELLAR 
 and use the data. The methods described below work with TED notices and other type of semantic assets.
+////
 
-== Using sample with macros in Microsoft Excel
+== Using the Microsoft Excel sample file 
 
-This chapter shows an example of spreadsheet in MS Excel with macros that is using TED-SWS data. The spreadsheet can be found https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[here].
+ The spreadsheet can be downloaded from https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[here].
 
-In this example you can find following sheets:
+In the file are the following sheets:
 
-** Query - sheet containing SPARQL query
+** Query - sheet for entering the SPARQL query
 ** Result Query - sheet containing result table after querying
-** Sample analysis - Example with analysis of table from Result Query sheet
+** Sample analysis -  analysis of results (charts, ect) using data from Result Query sheet
 
 The following steps shows how to insert or update data using the sample app:
 
-. When opening the downloaded spreadsheet and depending on the version of MS Excel used, a pop-up box might appear asking you to choose a privacy level. Set it to ignore privacy level checks, tick the checkbox to ignore Privacy Levels and then click "Save".
+. When opening the downloaded spreadsheet, and depending on the version of MS Excel used, a pop-up box might appear asking you to choose a privacy level. Set it to ignore privacy level checks: tick the checkbox to ignore Privacy Levels and then click "Save".
 
 .Change privacy levels
 image::user_manual/ms_excell/image11.png[image,width=507,height=466]

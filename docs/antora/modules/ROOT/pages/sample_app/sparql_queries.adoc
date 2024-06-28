@@ -4,39 +4,35 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-In the context of TED-SWS, SPARQL queries can be used to query the data of notices published in RDF by the Publications Office.  These queries can be made on the
-https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] available in EU Vocabularies
+Using the https://publications.europa.eu/webapi/rdf/sparql[EU Procurement SPARQL endpoint], SPARQL queries can return EU procurement notice data in RDF format published by the Publications Office.
 
-SPARQL queries refer to a specialized query language designed for retrieving and manipulating data stored in RDF (Resource Description Framework) format. SPARQL stands for SPARQL Protocol and RDF Query Language. It allows users to write complex queries to retrieve specific information from RDF datasets.
+SPARQL is a specialized query language designed for retrieving and manipulating data stored in RDF (Resource Description Framework) format. SPARQL stands for SPARQL Protocol and RDF Query Language.
 
 The data available covers Contract Award Notices published after 28/08/2023.  Data on eForm Result notices are not available yet.
 
-A query is submitted to the SPARQL end point by replacing the text highlighted below in blue in the Query Text box below with your query:
+A query is submitted to the SPARQL end point by replacing the text highlighted below in blue in the Query text box below with your own query:
 
 .End point user interface
 image::sparql.png[SPARQL End Point]
 
 The format of the result can be changed using the drop-down box of the Results format.
 
-
-
 Once the query is in place, and the Results format chosen, the query can be run by pressing “Run Query”.
 
-
-Below you will find an example of queries.
-
+Below are some examples of SPARQL queries that you can try out yourself in the https://publications.europa.eu/webapi/rdf/sparql[SPARQL Endpoint].
 
 
-== Query: How many contractors are SMEs for a given country and given date ?
+
+== Query: How many contract awards (count), published on a given date were awarded to suppliers who are SMEs, for a particular country?
 {nbsp}
 
-This SPARQL query aims to count the number of distinct procurement notices that meet specific criteria related to publication date, country code (Germany), and business size (SME).
+This SPARQL query counts the number of distinct procurement notices that meet specific criteria related to publication date, country code (Germany), and business size (SME).
 
 The query retrieves:
 
-* The number of distinct procurement notices
+* The number of distinct procurement notices. (Using "DISTINCT" in the query SELECT statement eliminates duplicate results)
 
-The notice publication date, organization country and organization size can be changed to create other queries. To do this, change the following section:
+The notice publication date, organization country and organization size can be changed to create other queries. To do this you can change values in the following section:
 
     VALUES (?NoticePublicationDate ?CountryCode ?BusinessSize) {
             (
@@ -45,15 +41,15 @@ The notice publication date, organization country and organization size can be c
             <http://publications.europa.eu/resource/authority/economic-operator-size/sme>
             )
 
-* Existing value for publication date in example above:
+* The value for publication date:
 
     "20230905"
 
-* Existing value for organization country in example above:
+* The value (code) for organization country:
 
     <http://publications.europa.eu/resource/authority/country/DEU>
 
-* Existing value for organization size in example above:
+* The value for organization size:
 
     <http://publications.europa.eu/resource/authority/economic-operator-size/sme>
 
@@ -81,10 +77,10 @@ WHERE {
 
 
 
-== Query:  Which notices have been published by Buyers from a specific country for a given date ?
+== Query:  Which notices were published by Buyers from a particular country on a given date ?
 {nbsp}
 
-This SPARQL query retrieves information about contract award notices that have been published by buyers from Germany and published on TED on 05-09-2023.
+This SPARQL query retrieves information about contract award notices that have been published by buyers from Germany  published on TED on 05-09-2023.
 
 The query retrieves:
 
@@ -102,11 +98,11 @@ The publication date and organization country can be changed to create other que
             ("20230905" <http://publications.europa.eu/resource/authority/country/DEU>)
     }
 
-* Existing value for publication date in example above:
+* The value for publication date in example above:
 
             "20230905"
 
-* Existing value for organization country in example above:
+* The value for organization country in example above:
 
     <http://publications.europa.eu/resource/authority/country/DEU>
 
@@ -132,17 +128,17 @@ WHERE {
 }
 
 
-== Query: Who are the winners for a given date ?
+== Query: List all winners published on a given date
 {nbsp}
 
-This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
+This SPARQL query retrieves information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
 
 The query retrieves:
 
 * Notice ID
 * Procedure ID
 * Notice publication date
-* Lot Number (optional, may be missing as it not specified in notice)
+* Lot Number (optional, may be missing if it is not specified in the notice)
 * The legal name of the winner
 * The winners country code as URI
 * Lot value awarded to winner
@@ -157,11 +153,11 @@ The notice publication date and winner legal name language can be changed to cre
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
-* Existing value for publication date in example above:
+* The value for publication date in example above:
 
  "20230831"
 
-* Existing value for winner legal name language in example above:
+* The value for winner legal name language in example above:
 
  'en'
 
@@ -215,10 +211,10 @@ WHERE {
 }
 
 
-== Query: Which is the highest value published for a contract award for a given date ?
+== Query: List the contract values for contract awards published on a particilar date. Order the results by value descending and filter by highest value.
 {nbsp}
 
-This SPARQL query aims to retrieve the procurement notice, its publication date, the corresponding lot, and the highest awarded amount along with the currency code for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the date and then querying the RDF data based on that value. The query returns the information in descending order of the awarded amount, with only the highest value being displayed.
+This SPARQL query retrieves the procurement notice, its publication date, the corresponding lot, and the highest awarded amount along with the currency code for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the date and then querying the RDF data based on that value. The query returns the information in descending order of the awarded amount, limiting the results to one row, with the effect that only the highest value is displayed.
 
 The query retrieves:
 
