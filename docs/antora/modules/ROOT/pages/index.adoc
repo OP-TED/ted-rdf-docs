@@ -7,11 +7,11 @@
 
 == Introduction to the Open Data Web Service
 
-The TED Open Data Web Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF is stored in the CELLAR repository. The data in CELLAR can be queried from the https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] on the EU Vocabularies. 
+The TED Open Data Web Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in the CELLAR repository. The data in CELLAR can be queried from the https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] Linked to from the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page]. 
 
 Currently, the service only converts contract award notices. It should be noted that contract award notices should not be confused with result notices in eForms.
 
-This project falls clearly in the European data strategy which foresees a single market for data that will allow it to flow freely within the EU, and across sectors, for the benefit of businesses, researchers and public administrations.
+This project falls clearly in the European data strategy which foresees a single market for data that will allow data to flow freely within the EU, and across sectors, for the benefit of businesses, researchers and public administrations.
 
 
 The following topics are included in this version of the Open Data Web Service Documentation:
@@ -29,7 +29,7 @@ A mapping suite within the TED Open Data Web Service is a set of mappings that d
 [.tile]
 .Mapping Suites
 ****
-The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED-SWS) to convert TED notices available in XML format to RDF.
+The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED Open Data Web Service) to convert TED notices available in XML format into RDF.
 Mapping Suites and Mapping Suite Packages are explained in this section.
 
 
