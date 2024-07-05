@@ -5,15 +5,15 @@
 :docdate: October 2023
 
 
-A sample application, often referred to as a demo or prototype, is a functional representation of a software program or system that demonstrates its basic features, functionalities, and capabilities. In the context of TED-SWS (TED Open Data Services), a sample application would refer to a functional representation of how to access data processed by the system.
+A sample application, often referred to as a demo or prototype, is a functional representation of a software program or system that demonstrates its basic features, functionalities, and capabilities. In the context of TED-ODS (TED Open Data Services), a sample application would refer to a functional representation of how to access data processed by the system.
 
 
 
 == Prerequisites
 
-To use TED-SWS sample apps, you will need the following:
+To use TED-ODS sample apps, you will need the following:
 
-Understanding of RDF and SPARQL:: Familiarity with RDF (Resource Description Framework) and SPARQL (SPARQL Protocol and RDF Query Language) is crucial. TED-SWS provides data in RDF format and utilizes SPARQL for querying.
+Understanding of RDF and SPARQL:: Familiarity with RDF (Resource Description Framework) and SPARQL (SPARQL Protocol and RDF Query Language) is crucial. TED-ODS provides data in RDF format and utilizes SPARQL for querying.
 
 Access to a Programming Language:: You should have proficiency in a programming language capable of making HTTP requests and processing data. Common choices include Python or R.
 

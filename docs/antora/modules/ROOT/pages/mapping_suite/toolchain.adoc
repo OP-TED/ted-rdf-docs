@@ -11,7 +11,7 @@ The mapping artefacts, including the various mapping suite packages that develop
 To assist the semantic engineers in the development of mapping suites, an internal toolchain has been developed, which consists of a number of command line tools (CLIs)
 //available in the https://github.com/OP-TED/ted-rdf-conversion-pipeline[OP-TED/ted-rdf-conversion-pipeline] GitHub repository
 that can be run on the mapping suites to produce various outputs.
-//In order to run these CLIs the ted-sws project needs to be installed in the rdf-mapping environment. This can be done by following the *installation instructions* provided https://github.com/OP-TED/ted-rdf-conversion-pipeline#installation--usage[here]. The documentation for the usage of these CLI tools can be found https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html[here], however we will provide below some more details about the most relevant ones.
+//In order to run these CLIs the TED-ODS project needs to be installed in the rdf-mapping environment. This can be done by following the *installation instructions* provided https://github.com/OP-TED/ted-rdf-conversion-pipeline#installation--usage[here]. The documentation for the usage of these CLI tools can be found https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html[here], however we will provide below some more details about the most relevant ones.
 
 //After the installation,
 The following CLIs are available (the name of the tools to be executed on the command line are specified in parentheses).

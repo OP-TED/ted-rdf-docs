@@ -1,7 +1,7 @@
 [#_mapping_creation_method]
 == Mapping development methodology
 
-This section gives a high-level overview of the process for creating the mapping rules for transforming XML TED notices into RDF triples that use ePO terms.
+This section gives a high-level overview of the process for creating the mapping rules for transforming XML TED notices into RDF triples that use ePO terms (classes).
 
 The methodology described focuses on the steps and artefacts at the core of  <<mapping-creation>>. This diagram shows a subsection of the mapping lifecycle.
 
@@ -14,32 +14,34 @@ Following this theoretical framework, and learning from the manual creation of m
 
 The focus here is on describing the steps by which the *conceptual mapping* and the *technical mapping* are created.
 
-*Creation of conceptual mappings:*
+== Summary of the Steps and sub-steps
 
-* The identification of the form elements (and the corresponding XML elements and XPaths) to be mapped
-* The identification of the eForm Business Terms (BT) corresponding to the XML elements (optional)
-* The identification of the ePO terms (classes and relations) that correspond to XML elements and their relationships
-* The identification of the value sets in XML
-* The identification of the value sets in ePO, and in other vocabularies corresponding to XML controlled values used in the XML files
-* Writing Turtle fragments that provide a template for the triples that should be generated, and which can be used in the RML mapping rules
+=== Creation of conceptual mappings:
+
+. The identification of the form elements (and the corresponding XML elements and XPaths) to be mapped
+. The identification of the eForm Business Terms (BT) corresponding to the XML elements (optional)
+. The identification of the ePO terms (classes and relations) that correspond to XML elements and their relationships
+. The identification of the value sets in XML
+. The identification of the value sets in ePO, and in other vocabularies corresponding to XML controlled values used in the XML files
+. Writing Turtle fragments that provide a template for the triples that should be generated, and which can be used in the RML mapping rules
 * The identification and documentation of problems/issue/questions that are to be clarified with external experts
 
-*Creation of technical mappings:*
+=== Creation of technical mappings:
 
-* The identification of the sources that are necessary to execute a mapping
-* The preparation of vocabulary files, and other “dictionaries” that are to be used as resources for the mapping
-* The preparation of test data
-* Writing YARRRML rules (optional)
-* Writing RML rules (or convert YARRRML rules to RML) and test them
-* Documenting problems and creating (Helpdesk)tasks to find solutions for them
+. The identification of the sources that are necessary to execute a mapping
+. The preparation of vocabulary files, and other “dictionaries” that are to be used as resources for the mapping
+. The preparation of test data
+. Writing YARRRML rules (optional)
+. Writing RML rules (or convert YARRRML rules to RML) and test them
+. Documenting problems and creating (Helpdesk)tasks to find solutions for them
 
-*Testing the mapping in various ways* to discover potential problems and improvments:
+=== Testing the mapping to identify potential problems and improvments:
 
-* Running the mapping on all test notices files and analysing the output
-* Generating the various validation outputs (SHACL shapes, SPARQL queries etc.), for all test data and analyse it
-* Executing any other steps in the mapping development lifecycle to find potential issues and refine the mapping
+. Running the mapping on all test notices files and analysing the output
+. Generating the various validation outputs (SHACL shapes, SPARQL queries etc.), for all test data and analyse it
+. Executing any other steps in the mapping development lifecycle to find potential issues and refine the mapping
 
-Next, a more detailed description of steps is provided.
+== A detailed description of the steps
 
 === Steps involved in the conceptual mapping process
 

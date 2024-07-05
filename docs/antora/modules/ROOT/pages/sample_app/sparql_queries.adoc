@@ -290,7 +290,7 @@ The following instruction explains how to query Virtuoso SPARQL Query Endpoint u
 
 . As shown in _Figure 1_, Insert the query in the "Query Text" box and press "Run Query" button
 
-.Querying TED-SWS data using Virtuoso SPARQL Query endpoint
+.Querying TED-ODS data using Virtuoso SPARQL Query endpoint
 image::user_manual/sparql_queries/image1.png[image,width=601,height=84]
 
 The result of the query is displayed as a data table (_Figure 2_).

@@ -8,11 +8,11 @@
 
 == Prerequisites
 
-To allow for a proper understanding of the Mapping Suite Documentation, the reader should have:
+To benefit thoroughly from the Mapping Suite Documentation, it is recommended that the reader have:
 
 Knowledge of Semantic Web Technologies:: A good understanding of Semantic Web concepts and technologies is crucial. This includes knowledge of RDF triples, ontologies, and linked data principles.
 
-Understanding of RDF, RML and SPARQL:: Familiarity with RDF (Resource Description Framework) and the RML (the RDF Mapping Language) is important, while experience with SPARQL (SPARQL Protocol and RDF Query Language) is highly beneficial. TED-SWS provides data in RDF format and utilizes SPARQL for querying.
+Understanding of RDF, RML and SPARQL:: Familiarity with RDF (Resource Description Framework) and the RML (the RDF Mapping Language) is important, while experience with SPARQL (SPARQL Protocol and RDF Query Language) is highly beneficial. TED-ODS provides data in RDF format and utilizes SPARQL for querying.
 
 Understanding of EU Procurement Data and Familiarity with ePO:: If your goal is to understand how the mappings are used to transform specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts, and the associated https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].
 
@@ -59,7 +59,7 @@ https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas
 // include::../glossary.adoc[]
 
 == Mapping Suite Contents
-Transformation rules and other artefacts used for the mapping of Standard Forms and eForms  for the TED Open Data Services (TED-SWS) system are organised in the ted-rdf-mapping repository.
+Transformation rules and other artefacts used for the mapping of Standard Forms and eForms  for the TED Open Data Services (TED-ODS) system are organised in the ted-rdf-mapping repository.
 The repository structure and folder descriptions are shown below.  The base of the folder path is https://github.com/OP-TED/ted-rdf-mapping/tree/main/  however if the reader wants to see a specific release, then the path is adapted by replacing main by the given release for example if release 2.1.1-rc.1 is required, the path will be https://github.com/OP-TED/ted-rdf-mapping/tree/2.1.1-rc.1
 
 
@@ -166,7 +166,7 @@ This section provides more detailed information on the content available in the 
 
 
 
-//include::ted-sws-introduction.adoc[Old Introduction]
+//include::TED-ODS-introduction.adoc[Old Introduction]
 
 //include::methodology.adoc[]
 

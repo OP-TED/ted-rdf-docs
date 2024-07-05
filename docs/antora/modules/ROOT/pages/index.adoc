@@ -7,9 +7,10 @@
 
 == Introduction to the Open Data Service
 
-The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in the CELLAR repository. The data in CELLAR can be queried from the https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] Linked to from the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page]. 
+The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in the "CELLAR", a RDF triplestore (database). The data in CELLAR can be queried from the https://publications.europa.eu/webapi/rdf/sparql[SPARQL end point] Linked to from the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page]. 
 
-Currently, the service only converts contract award notices. It should be noted that contract award notices should not be confused with result notices in eForms.
+Currently, the service only converts contract award notices. +
+(It should be noted that contract award notices should not be confused with result notices in eForms).
 
 This project falls clearly in the European data strategy which foresees a single market for data that will allow data to flow freely within the EU, and across sectors, for the benefit of businesses, researchers and public administrations.
 
@@ -38,7 +39,7 @@ Mapping Suites and Mapping Suite Packages are explained in this section.
 
 
 [.tile]
-.Reusing Open Data Service artefacts
+.Reusing Open Data Service Artefacts
 ****
 This section provides a set of examples that demonstrate how to extract TED RDF data from CELLAR using tools like Excel, Python, or R.
 
@@ -50,7 +51,7 @@ This section provides a set of examples that demonstrate how to extract TED RDF 
 ////
 == Audience
 
-This documentation is written for a wide audience, with different interests in the TED-SWS project, and different levels of expertise Semantic Web, EU e-Procurement and software infrastructure. More specifically this documentation can be of interest to:
+This documentation is written for a wide audience, with different interests in the TED-ODS project, and different levels of expertise Semantic Web, EU e-Procurement and software infrastructure. More specifically this documentation can be of interest to:
 
 - *End-Users*, such as *Semantic Web Practitioners* or *Experts in eProcurement Domain*, who are interested in understanding how the RDF representation of the e-procurement notices look like, and how this representation conforms to the eProcurement Ontology (ePO).
 - *Software Engineers* interested in integrating mapping suite packages into processing pipelines;
