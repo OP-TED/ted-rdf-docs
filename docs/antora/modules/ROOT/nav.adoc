@@ -4,12 +4,12 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-* xref:SWS::index.adoc[Home]
+* xref:ODS::index.adoc[Home]
 * xref:audience.adoc[Target Audience]
 
 * [.separated]#**Mapping suite contents**#
-* xref:SWS::genref.adoc[General Reference]
-* xref:SWS::glossary.adoc[Glossary]
+* xref:ODS::genref.adoc[General Reference]
+* xref:ODS::glossary.adoc[Glossary]
 * xref:mapping_suite/methodology.adoc[Methodology]
 * xref:mapping_suite/repository-structure.adoc[Repository structure]
 * xref:mapping_suite/index.adoc[Mapping suites]

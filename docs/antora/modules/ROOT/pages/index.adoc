@@ -35,7 +35,7 @@ The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversi
 Mapping Suites and Mapping Suite Packages are explained in this section.
 
 
-<<SWS:ROOT:mapping_suite/index.adoc#, Read the docs>>
+<<ODS:ROOT:mapping_suite/index.adoc#, Read the docs>>
 ****
 
 
@@ -44,7 +44,7 @@ Mapping Suites and Mapping Suite Packages are explained in this section.
 ****
 This section provides a set of examples that demonstrate how to extract TED RDF data from CELLAR using tools like Excel, Python, or R.
 
-<<SWS:ROOT:sample_app/index.adoc#, Read the docs>>
+<<ODS:ROOT:sample_app/index.adoc#, Read the docs>>
 ****
 
 --
