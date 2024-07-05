@@ -59,7 +59,7 @@ https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas
 // include::../glossary.adoc[]
 
 == Mapping Suite Contents
-Transformation rules and other artefacts used for the mapping of Standard Forms and eForms  for the TED Open Data Web Services (TED-SWS) system are organised in the ted-rdf-mapping repository.
+Transformation rules and other artefacts used for the mapping of Standard Forms and eForms  for the TED Open Data Services (TED-SWS) system are organised in the ted-rdf-mapping repository.
 The repository structure and folder descriptions are shown below.  The base of the folder path is https://github.com/OP-TED/ted-rdf-mapping/tree/main/  however if the reader wants to see a specific release, then the path is adapted by replacing main by the given release for example if release 2.1.1-rc.1 is required, the path will be https://github.com/OP-TED/ted-rdf-mapping/tree/2.1.1-rc.1
 
 

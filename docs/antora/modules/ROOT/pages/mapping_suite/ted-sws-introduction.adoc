@@ -23,7 +23,7 @@ flavours of the available XML schemas as well as to keep up with the
 schema's continuous evolution. Their search capabilities are therefore
 confined to a very limited set of metadata.
 
-The TED Open Data Web Service will remove these barriers by providing one
+The TED Open Data Service will remove these barriers by providing one
 common format for accessing and reusing all TED data. Coupled with the
 eProcurement Ontology, the TED data will also have semantics attached to
 them allowing users to directly link them with other datasets.
@@ -39,7 +39,7 @@ complex queries on public procurement data will be equally open to large
 information systems as well as to simple desktop users with a copy of
 Excel and an internet connection.
 
-To summarize, the TED Open Data Web Service (TED SWS) is a pipeline
+To summarize, the TED Open Data Service (TED SWS) is a pipeline
 system that continuously converts the public procurement notices (in XML
 format) available on the TED Website into RDF format, publishes them
 into CELLAR and makes them available to the public through CELLAR’s

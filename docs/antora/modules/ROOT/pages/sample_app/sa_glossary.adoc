@@ -1,4 +1,4 @@
-:doctitle: Glossary: Reusing Open Data Web Service artefacts
+:doctitle: Glossary: Reusing Open Data Service artefacts
 :doccode: sws-main-prod-024
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu

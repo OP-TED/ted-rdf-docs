@@ -1,12 +1,12 @@
 = TED-SWS End-User Documentation
 
-TED Open Data Web Service (TED-SWS) is a process pipeline system that continuously
+TED Open Data Service (TED-SWS) is a process pipeline system that continuously
 converts the public procurement notices (in XML format) published on the
 TED Website into RDF format based on the eProcurement Ontology, outputs
 the RDF data into a triple store (RDF database) called the "CELLAR", and makes the data available to the public
 through a https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint].
 
-The TED Open Data Web Service (TED-SWS) connects the TED infrastructure for the collection and publication of public procurement notices with the infrastructure of http://data.europa.eu/[data.europa.eu] 
+The TED Open Data Service (TED-SWS) connects the TED infrastructure for the collection and publication of public procurement notices with the infrastructure of http://data.europa.eu/[data.europa.eu] 
 to make public procurement data accessible and reusable as Linked Open Data (LOD). See xref:genref.adoc[the detailed motivation for the project]).
 
 == Contents
@@ -17,7 +17,7 @@ to make public procurement data accessible and reusable as Linked Open Data (LOD
 [.tile]
 .Mapping Suites
 ****
-The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED Open Data Web Services, aka TED-SWS system) to convert TED notices available in XML format to RDF.
+The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED Open Data Services, aka TED-SWS system) to convert TED notices available in XML format to RDF.
 
 <<SWS:ROOT:mapping_suite/index.adoc#, Read the docs>>
 ****

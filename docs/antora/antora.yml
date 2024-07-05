@@ -1,6 +1,6 @@
 name: SWS
 version: ~
-title: TED Open Data Web Service
+title: TED Open Data Service
 start_page: ROOT:index.adoc
 asciidoc:
   attributes:

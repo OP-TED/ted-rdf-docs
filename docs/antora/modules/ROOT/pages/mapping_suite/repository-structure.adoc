@@ -5,7 +5,7 @@
 :docdate: October 2023
 
 
-Transformation rules and other artefacts for the TED Open Data Web Services (TED-SWS) are organised in the https://github.com/OP-TED/ted-rdf-mapping[ted-rdf-mapping] repository.
+Transformation rules and other artefacts for the TED Open Data Services (TED-SWS) are organised in the https://github.com/OP-TED/ted-rdf-mapping[ted-rdf-mapping] repository.
 
 The repository structure and folder descriptions are shown below:
 // Next we describe the important folders and their purpose.

@@ -1,5 +1,5 @@
 site:
-  title: TED Open Data Web Service
+  title: TED Open Data Service
   start_page: ted-rdf-docs::index.adoc
 content:
   edit_url: false
