@@ -53,7 +53,7 @@ The notice publication date, organization country and organization size can be c
 
     <http://publications.europa.eu/resource/authority/economic-operator-size/sme>
 
-=== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -106,7 +106,7 @@ The publication date and organization country can be changed to create other que
 
     <http://publications.europa.eu/resource/authority/country/DEU>
 
-=== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -161,7 +161,7 @@ The notice publication date and winner legal name language can be changed to cre
 
  'en'
 
-=== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -239,7 +239,7 @@ The notice publication date and winner legal name language can be changed to cre
 
  'en'
 
-=== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
