@@ -145,7 +145,7 @@ The notice publication date and winner legal name language can be changed to cre
 
  'en'
 
-=== Query text:
+==== Query text
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
