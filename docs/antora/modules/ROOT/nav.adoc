@@ -27,8 +27,8 @@
 * xref:sample_app/jupyter_notebook_python.adoc[Jupyter Notebook - Python]
 
 * [.separated]#**Query Central**#
-* xref:../query_central/pages/index.adoc[Query Central]
-** xref:../query_central/pages/query1.adoc[Query 1: xyz]
+* xref:query_central:index.adoc[Query Central]
+** xref:query_central:query1.adoc[Query 1: xyz]
 
 
 * [.separated]#**Reference**#
