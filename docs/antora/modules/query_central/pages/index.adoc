@@ -26,3 +26,7 @@ In amost cases we will examine a scenario in which a question about EU public pr
 In other cases we might try and help with syntax questions or common difficulties with query construction. 
 
 Community members are encouraged to discuss problems and help each other via GitHub Discussions.
+
+== Query Examples
+
+xref:query1.adoc[Query 1: xyz]
