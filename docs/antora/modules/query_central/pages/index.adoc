@@ -4,7 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
-Welcome to Query Central. Here you will find some SPARQL query examples collected from interesting queries we came across via the interest group or collected from community questions.
+Welcome to Query Central. Here you will find some SPARQL query examples collected from queries encountered via the interest group or from community questions.
 
 In amost cases we will examine a scenario in which a question about EU public procurement is asked. The following steps will be presented:
 
