@@ -4,9 +4,9 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
-Welcome to Query Central. Here you will find some SPARQL query examples collected from queries encountered via the interest group or from community questions.
+Welcome to Query Central. Here you will find some SPARQL query examples collected from queries encountered via the  community.
 
-In amost cases we will examine a scenario in which a question about EU public procurement is asked. The following steps will be presented:
+In most cases we will examine a scenario in which a question about EU public procurement is asked. The following steps will be presented:
 
 == Step 1
 * Presentation of the scenario
@@ -23,7 +23,7 @@ In amost cases we will examine a scenario in which a question about EU public pr
 * Running the Query
 * Examining and refining the query results
 
-In other cases we might try and help with syntax questions or common difficulties with query construction. 
+In other cases we might try and help with syntax questions, or common difficulties with query construction. 
 
 Community members are encouraged to discuss problems and help each other via GitHub Discussions.
 
