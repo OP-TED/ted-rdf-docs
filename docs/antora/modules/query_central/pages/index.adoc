@@ -1,0 +1,28 @@
+:doctitle: Query Central
+:doccode: ods-main-prod-101
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+Welcome to Query Central. Here you will find some SPARQL query examples collected from interesting queries we came across via the interest group or collected from community questions.
+
+In amost cases we will examine a scenario in which a question about EU public procurement is asked. The following steps will be presented:
+
+== Step 1
+* Presentation of the scenario
+* A short discussion of the the extent to which the current data offering can assist/ Understanding data limitations
+* Refining the question
+
+== Step 2
+* Identifying the information to be returned
+* Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information
+* Constructing the query
+
+
+== Step 3
+* Running the Query
+* Examining and refining the query results
+
+In other cases we might try and help with syntax questions or common difficulties with query construction. 
+
+Community members are encouraged to discuss problems and help each other via GitHub Discussions.
