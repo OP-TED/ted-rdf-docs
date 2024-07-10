@@ -1,0 +1,31 @@
+:doctitle: Starting Querying the eProcurement data using SPARQL
+:doccode: ods-main-prod-102
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+== Topics:
+
+=== An overview of Proc data, 
+=== notice to rdf format process
+=== how rdf data is queried
+
+=== Links to good training resources for learning sparql:
+
+ * (rdf & sparql/ ePO lesson/ etc n)
+ * videos
+ * w3c
+ * YouTube lectures
+ * other web training courses
+
+=== Links to Achilles's guides
+
+=== Flow diagramme of frequently used classes: buyer, seller, value, date, country, business size, cpv codes, lots
+
+=== Short explanations of confusing things:
+
+* duplicate data
+* understanding lots
+* what data is available (from which notices and over what time period)?
+* how the evolution of ePO affects classes and data availability (history & evolution)
+* in WHERE statements: declaring a variable as an epo class

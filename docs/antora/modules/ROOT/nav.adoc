@@ -28,7 +28,9 @@
 
 * [.separated]#**Query Central**#
 * xref:query_central:index.adoc[Query Central]
-** xref:query_central:query1.adoc[Query 1: xyz]
+* xref:query_central:starting.adoc[Starting out with SPARQL Queries]
+* xref:query_central:snippets.adoc[Reusable snippets for SPARQL Queries]
+* xref:query_central:query1.adoc[Query examples]
 
 
 * [.separated]#**Reference**#

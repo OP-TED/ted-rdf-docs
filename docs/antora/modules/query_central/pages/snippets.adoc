@@ -1,0 +1,17 @@
+:doctitle: Reusable SPARQL query snippets for eProcurement data
+:doccode: ods-main-prod-103
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+Snippets are small sections of code that can be reused in any SPARQL query. They are things like:
+
+* filters for deduplicating results
+* navigating to classes in the WHERE section of the query
+
+Here is a list of useful snippets:
+
+. Snippet 1...
+. Snippet 2...
+
+Suggest or submit a snippet. You can search for snippets in GitHub (insert link).

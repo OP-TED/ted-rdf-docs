@@ -4,7 +4,9 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
-Welcome to Query Central. Here you will find some SPARQL query examples collected from queries encountered via the  community.
+Welcome to Query Central. Here you will find some SPARQL query examples from the community collection.
+
+If you are new to eProcurement and SPARQL Queries, you might want to read the xref:starting.adoc[Starting Querying the eProcurementdata using SPARQL] page first.
 
 In most cases we will examine a scenario in which a question about EU public procurement is asked. The following steps will be presented:
 
