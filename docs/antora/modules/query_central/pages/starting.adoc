@@ -4,28 +4,65 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
-== Topics:
+== Topics
 
-=== An overview of Proc data, 
-=== notice to rdf format process
-=== how rdf data is queried
+=== An overview of Procurement Data
+
+Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found using one of the several ways of searching for notices available on the site.
+
+Alternatively, you can use this short info session on Notice data: #<insert link># to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
+This will give you an overview of what concepts can be found in a notice.
+
+=== Converting Notice Data into rdf format
+
+On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well who wish to buy or supply a package of goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
+
+As part of the European Commission's strategy for data reuse and transparency, notice data is converted into RDF format using an automated "pipeline" service, described in technical detail in this documentation.
+
+The data, stored in the "CELLAR", the RDF database maintained by the Publications Office, enables anyone to query notice data as Linked Open Data using CELLAR's https://publications.europa.eu/webapi/rdf/sparql[SPARQL EndPoint].
+
+
+=== How RDF Data is queried
+
+RDF Data is queried using SPARQL, a query language specifically for RDF data. A guide for querying RDF data and constructing a query can be found #here# (update once the ePO guides are live). Once a query is ready, it is pasted into the SPARQL EndPoint's input field and executed.
 
 === Links to good training resources for learning sparql:
 
- * (rdf & sparql/ ePO lesson/ etc n)
- * videos
- * w3c
- * YouTube lectures
- * other web training courses
+ There are many good resources on SPARQL and constructing SPARQL queries that you can use to familiarise yourself with:
 
-=== Links to Achilles's guides
+ * The guides on the ePO page #(rdf & sparql/ ePO lesson/ etc n)#
+ * https://www.w3.org/TR/sparql11-query/[W3C]
+ * YouTube lectures:
+ ** https://www.youtube.com/watch?v=zkr_2HR4Pcs&list=PLakGkiOE3_q8Fq46-TSE-Te1cvx8yLLUF[LINKED Data and SPARQL]
+ ** https://www.youtube.com/playlist?list=PLoOmvuyo5UAfY6jb46jCpMoqb-dbVewxg[Linked data Engineering]
+ * Videos:
+ ** https://www.youtube.com/watch?v=FvGndkpa4K0[SPARQL in 11 Minutes]
+ ** https://www.youtube.com/watch?v=zteyEk9LADs&t=338s[RDF and OWL]
+ * Other web-based training courses on training sites like Udemy
+ * Books from publishers such as O'Reilly, The Dummies Guide to, Morgan Kaufmann, etc.
 
-=== Flow diagramme of frequently used classes: buyer, seller, value, date, country, business size, cpv codes, lots
+=== Links to Achilles's guides once live #change name#
 
-=== Short explanations of confusing things:
+Guides to using resources provided by the eProcurement Ontology to assist in constructing queries can be found #here#. These are specific to EU public procurement and will help find the term names or classes you will use in your queries.
 
-* duplicate data
-* understanding lots
-* what data is available (from which notices and over what time period)?
-* how the evolution of ePO affects classes and data availability (history & evolution)
-* in WHERE statements: declaring a variable as an epo class
+//=== Flow diagramme of frequently used classes: buyer, seller, value, date, country, business size, cpv codes, lots
+
+=== Some things to note
+
+==== What data is available (from which notices and over what time period)?
+
+Currently, the data available in CELLAR is restricted to Contract Award Notices published between 1 September 2023 and 31 December 2023. #check datas#
+
+==== Lots
+
+All purchases are organised in into lots. Lots are effectively supply packages that enable supply to e.g., different locations, proportions of goods over time, etc. Even if only one delivery is stipulated, there is still a single lot. When querying, this can be confusing because it could look like data with the same notice number is duplicated in the results table, when actually it is showing the lots rather than the whole order.
+ 
+==== Duplicate data in results
+
+Apart from the phenomenon of duplication caused by lots, there are other reasons why there might be a duplication in the results. Notices could be published more than one language, so unless you filter this in the query, the same notice mihgt be listed several times. #check accuracy and other reasons#
+
+==== Availability of classes for querying.
+
+The project to develop the eProcurement Ontology is quite advanced, however it is not yet complete. There are still some modules that are in development. Therefore, data from earlier notices will not have been collected against classes that only came into existance in a later version of the ontology. It is important to bear this in mind when choosing classes for a query. You will need to check the relevant version of the ontology and going forward, possibly use more than one class in your query to cover all time periods.
+
+//* in WHERE statements: declaring a variable as an epo class
