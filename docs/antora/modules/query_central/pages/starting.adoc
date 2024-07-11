@@ -45,24 +45,8 @@ RDF Data is queried using SPARQL, a query language specifically for RDF data. A 
 
 Guides to using resources provided by the eProcurement Ontology to assist in constructing queries can be found #here#. These are specific to EU public procurement and will help find the term names or classes you will use in your queries.
 
+Some tips regarding queries can be found xref:tips.adoc[here].
 //=== Flow diagramme of frequently used classes: buyer, seller, value, date, country, business size, cpv codes, lots
 
-=== Some things to note
-
-==== What data is available (from which notices and over what time period)?
-
-Currently, the data available in CELLAR is restricted to Contract Award Notices published between 1 September 2023 and 31 December 2023. #check datas#
-
-==== Lots
-
-All purchases are organised in into lots. Lots are effectively supply packages that enable supply to e.g., different locations, proportions of goods over time, etc. Even if only one delivery is stipulated, there is still a single lot. When querying, this can be confusing because it could look like data with the same notice number is duplicated in the results table, when actually it is showing the lots rather than the whole order.
- 
-==== Duplicate data in results
-
-Apart from the phenomenon of duplication caused by lots, there are other reasons why there might be a duplication in the results. Notices could be published more than one language, so unless you filter this in the query, the same notice mihgt be listed several times. #check accuracy and other reasons#
-
-==== Availability of classes for querying.
-
-The project to develop the eProcurement Ontology is quite advanced, however it is not yet complete. There are still some modules that are in development. Therefore, data from earlier notices will not have been collected against classes that only came into existance in a later version of the ontology. It is important to bear this in mind when choosing classes for a query. You will need to check the relevant version of the ontology and going forward, possibly use more than one class in your query to cover all time periods.
 
 //* in WHERE statements: declaring a variable as an epo class
