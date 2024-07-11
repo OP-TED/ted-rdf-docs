@@ -9,9 +9,4 @@ Snippets are small sections of code that can be reused in any SPARQL query. They
 * filters for deduplicating results
 * navigating to classes in the WHERE section of the query
 
-Here is a list of useful snippets:
-
-. Snippet 1...
-. Snippet 2...
-
-Suggest or submit a snippet. You can search for snippets in GitHub (insert link).
+Suggest or submit a snippet via #GitHub Discussions#. You can search for snippets in GitHub (insert link).

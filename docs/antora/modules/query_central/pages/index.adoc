@@ -4,7 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
-Welcome to Query Central. Here you will find some SPARQL query examples suggested by the community collection.
+Welcome to Query Central. Here you will find some SPARQL query examples suggested by the community.
 
 If you are new to eProcurement and SPARQL Queries, you might want to read the xref:starting.adoc[Starting out with SPARQL Queries] page first.
 
@@ -19,13 +19,13 @@ In most cases we will examine a scenario in which a question about EU public pro
 * Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information
 * Constructing the query
 
-== Executing the Query
-* Running the Query
+== Executing the query
+* Running the query
 * Examining and refining the query results
 
 In other cases we might try and help with syntax questions, or common difficulties with query construction. 
 
-Community members are encouraged to discuss problems and help each other via GitHub Discussions.
+Community members are encouraged to discuss problems and help each other via #GitHub Discussions#.
 
 == Query Examples
 
