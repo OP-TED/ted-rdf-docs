@@ -10,7 +10,7 @@
 
 Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found using one of the several ways of searching for notices available on the site.
 
-Alternatively, you can use this short info session on xref:attachment$Notice_Data/index.html[Notice data] and xref:attachment$Searching_Notices/index.html[Searching Notices]to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
+Alternatively, you can use this short info session on xref:attachment$notice_data/index.html[Notice Data] and xref:attachment$searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
 This will give you an overview of what concepts can be found in a notice.
 
 === Converting Notice Data into rdf format
@@ -26,7 +26,7 @@ The data, stored in the "CELLAR", the RDF database maintained by the Publication
 
 RDF Data is queried using SPARQL, a query language specifically for RDF data. A guide for querying RDF data and constructing a query can be found #here# (update once the ePO guides are live). Once a query is ready, it is pasted into the SPARQL EndPoint's input field and executed.
 
-=== Links to good training resources for learning sparql:
+=== Links to online training resources for learning sparql:
 
  There are many good resources on SPARQL and constructing SPARQL queries that you can use to familiarise yourself with:
 
