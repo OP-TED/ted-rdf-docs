@@ -3,7 +3,7 @@ pref:{
 acc:1,
 rkt:1,
 hsr:0,
-atp:false
+atp:true
 },
 si522:{
 name:'Image_1',
@@ -850,8 +850,8 @@ vb:[-1,-1,2,2]
 Slide548:{
 lb:'L1-4 Title',
 id:548,
-from:39376,
-to:39780,
+from:1,
+to:405,
 iols:0,
 i360qs:false,
 sdu:13.5,
@@ -27266,8 +27266,8 @@ vb:[-1,-1,2,2]
 Slide5338:{
 lb:'L1-4 End',
 id:5338,
-from:39781,
-to:40104,
+from:39052,
+to:39375,
 iols:0,
 i360qs:false,
 sdu:10.8,
@@ -27377,7 +27377,7 @@ passFailPassingScoreTypeInPrecent:true,
 passFailPassingScoreValue:80,
 showRetake:false,
 showReviewButtons:true,
-oid:'$$OBJECTIVE_ID',
+oid:'Quiz_202471213188',
 quizVariableVsIdMap:{
 learnerId:'var346',
 learnerName:'var347',
@@ -27773,7 +27773,7 @@ slideVideos:['si906','si952','si992','si1223','si1269','si1309','si1540','si1586
 questions:'',
 autoplay:false,
 preloader:true,
-preloaderFileName:'dr/loading.gif',
+preloaderFileName:'dr/05591.png',
 preloaderPercentage:100,
 pprtd:false,
 peon:false,
@@ -27810,7 +27810,7 @@ tocProperties:'{"tocConfig":{"labels":{"TITLE":"Table of Contents","SLIDE_DETAIL
 },
 trecs:[{
 link:548,
-text:['""']
+text:[]
 }
 ,{
 link:672,
@@ -27838,7 +27838,7 @@ text:[]
 }
 ,{
 link:5338,
-text:['""']
+text:[]
 }
 ]
 
@@ -28074,33 +28074,12 @@ resources:['dr/0419.png']
 ,{
 slideID:6,
 ResourceList:{
-resources:['dr/02105.png','dr/02129.png','dr/02256.png','dr/02380.png','dr/02504.png','dr/02628.png','dr/02752.png','dr/02875.svg']
-}
-
-}
-,{
-slideID:8,
-ResourceList:{
-resources:['dr/0419.png']
+resources:['dr/02105.png','dr/02129.png','dr/02256.png','dr/02380.png','dr/02504.png','dr/02628.png','dr/02752.png']
 }
 
 }
 ];
-cp.model.audioresources=[{
-slideID:1,
-ResourceList:{
-resources:['ar/412.mp3']
-}
-
-}
-,{
-slideID:7,
-ResourceList:{
-resources:['ar/5024.mp3']
-}
-
-}
-];
+cp.model.audioresources=[];
 cp.model.videos=[
 ];
 cp.model.slideVideos=[

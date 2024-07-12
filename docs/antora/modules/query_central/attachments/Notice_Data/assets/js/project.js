@@ -3,7 +3,7 @@ pref:{
 acc:1,
 rkt:1,
 hsr:0,
-atp:false
+atp:true
 },
 si526:{
 name:'Image_5',
@@ -19078,15 +19078,15 @@ bookmarks:[]
 ,
 qs:'',
 iph:{
-2159:{
-ts:''
-}
-,
 2181:{
 ts:''
 }
 ,
 2183:{
+ts:''
+}
+,
+2159:{
 ts:''
 }
 
@@ -45827,11 +45827,11 @@ bookmarks:[]
 ,
 qs:'',
 iph:{
-4039:{
+4017:{
 ts:''
 }
 ,
-4017:{
+4039:{
 ts:''
 }
 
@@ -59969,11 +59969,11 @@ bookmarks:[]
 ,
 qs:'',
 iph:{
-5001:{
+5023:{
 ts:''
 }
 ,
-5023:{
+5001:{
 ts:''
 }
 
@@ -61927,7 +61927,7 @@ passFailPassingScoreTypeInPrecent:true,
 passFailPassingScoreValue:80,
 showRetake:false,
 showReviewButtons:true,
-oid:'$$OBJECTIVE_ID',
+oid:'Quiz_2024712132143',
 quizVariableVsIdMap:{
 learnerId:'var346',
 learnerName:'var347',
@@ -62324,7 +62324,7 @@ slideVideos:['si818','si864','si904'],
 questions:'',
 autoplay:false,
 preloader:true,
-preloaderFileName:'dr/loading.gif',
+preloaderFileName:'dr/0419.png',
 preloaderPercentage:100,
 pprtd:false,
 peon:false,
@@ -62357,7 +62357,7 @@ noToolTips:false,
 locale:0
 },
 tocProperties:{
-tocProperties:'{"tocConfig":{"labels":{"TITLE":"Table of Contents","SLIDE_DETAILS":"SLIDE TITLE","DURATION":"DURATION","CLOSE_BUTTON_LABEL":"Close"},"slideDetails":[{"label":"L1-3 Title","type":"slide","parentId":null,"id":"Slide552","isVisible":true,"slideVisited":false,"originalId":552,"labelShouldBeInSync":true,"isQuizSlide":false,"isResultSlide":false},{"label":"L1-3 LOs","type":"slide","parentId":null,"id":"Slide683","isVisible":true,"slideVisited":false,"originalId":683,"labelShouldBeInSync":true,"isQuizSlide":false,"isResultSlide":false},{"label":"L1-3 Notice Features 1","type":"slide","parentId":null,"id":"Slide1028","isVisible":true,"slideVisited":false,"originalId":1028,"labelShouldBeInSync":true,"isQuizSlide":false,"isResultSlide":false},{"label":"L1-3 Notice Features 2","type":"slide","parentId":null,"id":"Slide1245","isVisible":true,"slideVisited":false,"originalId":1245,"labelShouldBeInSync":true,"isQuizSlide":false,"isResultSlide":false},{"label":"L1-3 eNotice Data","type":"slide","parentId":null,"id":"Slide2235","isVisible":true,"slideVisited":false,"originalId":2235,"labelShouldBeInSync":true,"isQuizSlide":false,"isResultSlide":false},{"label":"L1-3 ESPD Intro","type":"slide","parentId":null,"id":"Slide3215","isVisible":true,"slideVisited":false,"originalId":3215,"labelShouldBeInSync":true,"isQuizSlide":false,"isResultSlide":false},{"label":"L1-3 ESPD Supplier Process - 1","type":"slide","parentId":null,"id":"Slide4091","isVisible":true,"slideVisited":false,"originalId":4091,"labelShouldBeInSync":true,"isQuizSlide":false,"isResultSlide":false},{"label":"L1-3 ESPD Data","type":"slide","parentId":null,"id":"Slide5075","isVisible":true,"slideVisited":false,"originalId":5075,"labelShouldBeInSync":true,"isQuizSlide":false,"isResultSlide":false},{"label":"L1-3 End","type":"slide","parentId":null,"id":"Slide6052","isVisible":true,"slideVisited":false,"originalId":6052,"labelShouldBeInSync":true,"isQuizSlide":false,"isResultSlide":false}],"tocGeneratedOnPreviewClick":true,"preserveSlidesOrder":true},"playbarConfig":{"isShowPlaybarEnabled":true,"isHidePlaybarInQuizEnabled":false,"isShowTooltipsEnabled":true,"isPlaybarControlsPlayEnabled":true,"isPlaybarControlsBackEnabled":true,"isPlaybarControlsNextEnabled":true,"isPlaybarControlsMuteEnabled":true,"isPlaybarControlsClosedCaptionsEnabled":false,"isPlaybarControlsTOCEnabled":true}}'
+tocProperties:'{"tocConfig":{"labels":{"TITLE":"Table of Contents","SLIDE_DETAILS":"SLIDE TITLE","DURATION":"DURATION","CLOSE_BUTTON_LABEL":"Close"},"slideDetails":[{"parentId":null,"isVisible":true,"isResultSlide":false,"labelShouldBeInSync":true,"originalId":552,"isQuizSlide":false,"label":"L1-3 Title","slideVisited":false,"type":"slide","id":"Slide552"},{"parentId":null,"isVisible":true,"isResultSlide":false,"labelShouldBeInSync":true,"originalId":683,"isQuizSlide":false,"label":"L1-3 LOs","slideVisited":false,"type":"slide","id":"Slide683"},{"parentId":null,"isVisible":true,"isResultSlide":false,"labelShouldBeInSync":true,"originalId":1028,"isQuizSlide":false,"label":"L1-3 Notice Features 1","slideVisited":false,"type":"slide","id":"Slide1028"},{"parentId":null,"isVisible":true,"isResultSlide":false,"labelShouldBeInSync":true,"originalId":1245,"isQuizSlide":false,"label":"L1-3 Notice Features 2","slideVisited":false,"type":"slide","id":"Slide1245"},{"parentId":null,"isVisible":true,"isResultSlide":false,"labelShouldBeInSync":true,"originalId":2235,"isQuizSlide":false,"label":"L1-3 eNotice Data","slideVisited":false,"type":"slide","id":"Slide2235"},{"parentId":null,"isVisible":true,"isResultSlide":false,"labelShouldBeInSync":true,"originalId":3215,"isQuizSlide":false,"label":"L1-3 ESPD Intro","slideVisited":false,"type":"slide","id":"Slide3215"},{"parentId":null,"isVisible":true,"isResultSlide":false,"labelShouldBeInSync":true,"originalId":4091,"isQuizSlide":false,"label":"L1-3 ESPD Supplier Process - 1","slideVisited":false,"type":"slide","id":"Slide4091"},{"parentId":null,"isVisible":true,"isResultSlide":false,"labelShouldBeInSync":true,"originalId":5075,"isQuizSlide":false,"label":"L1-3 ESPD Data","slideVisited":false,"type":"slide","id":"Slide5075"},{"parentId":null,"isVisible":true,"isResultSlide":false,"labelShouldBeInSync":true,"originalId":6052,"isQuizSlide":false,"label":"L1-3 End","slideVisited":false,"type":"slide","id":"Slide6052"}],"tocGeneratedOnPreviewClick":true,"preserveSlidesOrder":true},"playbarConfig":{"isPlaybarControlsPlayEnabled":true,"isPlaybarControlsNextEnabled":true,"isPlaybarControlsTOCEnabled":true,"isShowPlaybarEnabled":true,"isShowTooltipsEnabled":true,"isPlaybarControlsBackEnabled":true,"isHidePlaybarInQuizEnabled":false,"isPlaybarControlsMuteEnabled":true,"isPlaybarControlsClosedCaptionsEnabled":false}}'
 },
 trecs:[{
 link:552,
