@@ -1,4 +1,4 @@
-:doctitle: Query Central
+:doctitle: Querying TED Open Data
 :doccode: ods-main-prod-101
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
@@ -6,7 +6,7 @@
 
 //Welcome to Query Central. Query Central is a place where the community can discuss, get help, submit queries and ask questions around using SPARQL to query Public procurement Data. You will also find some SPARQL query examples here.
 
-If you are new to eProcurement and SPARQL Queries, you might want to read the xref:starting.adoc[Starting out with SPARQL Queries] page first.
+If you are new to eProcurement and SPARQL Queries, you might want to read the xref:../../../query_central/pages/starting.adoc[Starting out with SPARQL Queries] page first.
 
 In most cases you will start the new query process by having a specific scenario or context in which a question about EU public procurement is asked. The following steps then followed:
 
