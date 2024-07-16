@@ -13,7 +13,7 @@ necessary to install some tools and applications to run Python code that will
 perform a query to the CELLAR database and display the results in tabular
 format.
 
-To run the sample application using Python language follow the steps below:
+To run the sample application using Python follow the steps below:
 
 [arabic]
 . https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_python.ipynb[Download Jupyter Notebook ]

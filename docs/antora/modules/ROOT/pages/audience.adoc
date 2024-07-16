@@ -7,7 +7,7 @@
 
 This documentation is relevant to a wide audience:
 
-*Procurement specialists* and analysts will find the conceptual mappings, provided in Excel format, and the code list mappings section relevant.  These mappings will enable them to understand the process from a business point of view and how it conforms to the eProcurement Ontology.  They may also find the SPARQL Queries section of use, to learn how to query the Contract Award Notices in CELLAR.
+*Procurement specialists* and analysts will find the conceptual mappings, provided in Excel format, and the code list mappings section relevant.  These mappings will enable them to understand the process from a business point of view and how it conforms to the eProcurement Ontology.  They may also find the SPARQL Queries section of use, to learn how to query the Contract Award Notices in Cellar.
 
 *Software Engineers* will find the information generally of interest as it will enable them to integrate mapping suites into processing pipelines.
 

@@ -8,10 +8,10 @@
 
 === An overview of Procurement Data
 
-Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found using one of the several ways of searching for notices available on the site.
+Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found using one of the several ways of searching for notices available on the site, the advanced, expert, or browse categories methods of searching.
 
-Alternatively, you can use this short info session on xref:attachment$Notice_Data/index.html[Notice Data] and xref:attachment$Searching_Notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
-This will give you an overview of what concepts can be found in a notice.
+As an aid, you can use these short info session on xref:attachment$Notice_Data/index.html[Notice Data] and xref:attachment$Searching_Notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
+This wshould give you an overview of what information can be found in a notice.
 
 === Converting Notice Data into rdf format
 
@@ -19,7 +19,7 @@ On the ted.europa.eu website you will soon realise that while servicing buyers a
 
 As part of the European Commission's strategy for data reuse and transparency, notice data is converted into RDF format using an automated "pipeline" service, described in technical detail in this documentation.
 
-The data, stored in the "CELLAR", the RDF database maintained by the Publications Office, enables anyone to query notice data as Linked Open Data using CELLAR's https://publications.europa.eu/webapi/rdf/sparql[SPARQL EndPoint].
+The data, stored in the "Cellar", the RDF database maintained by the Publications Office, enables anyone to query notice data as Linked Open Data using Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL EndPoint].
 
 
 === How RDF Data is queried

@@ -6,12 +6,10 @@
 
 
 This page demonstrates an example in the R language using Jupyter Notebook. R is
-software environment for statistical computing and graphic
-representation. In this case, R is the programming language used for
-writing notebook documents. To work with, it is
-necessary to insta R and Jupiter Notebook, it is necessary to install some tools and applications. After installation, R code can be used to perform a query on the CELLAR database and display the results in tabular format.
+software environment for statistical computing and graphic representation. 
+To use R, you must first install Python and Jupiter Notebook. After this installation, R code can be used to perform a query on the CELLAR database and display the results in tabular format.
 
-Before preceding ensure that Python and Jupyter Notebook is already installed. This can be done using tutorial in <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, this>> section.
+Python and Jupyter Notebook can be installed using the following tutorial: <<ODS:ROOT:sample_app/jupyter_notebook_python.adoc#, this>> section.
 
 
 To run the sample application using the R language follow the steps below:
@@ -94,7 +92,7 @@ This query is composed of:
 
 * The Where section is used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:
 
-** Specifying specific filters for output
+** Specifying filters for output
 
     VALUES ?NoticePublicationDate {
         "20230921"
