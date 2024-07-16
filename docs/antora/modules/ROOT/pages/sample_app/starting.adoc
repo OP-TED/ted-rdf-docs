@@ -8,7 +8,7 @@
 
 Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found using one of the several ways of searching for notices available on the site, the advanced, expert, or browse categories methods of searching.
 
-As an aid, you can use these short info session on xref:../../../query_central/attachment$Notice_Data/index.html[Notice Data] and xref:../../../query_central/attachment$Searching_Notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
+As an aid, you can use these short info session on xref:attachment$Notice_Data/index.html[Notice Data] and xref:attachment$Searching_Notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
 This wshould give you an overview of what information can be found in a notice.
 
 == Converting Notice Data into rdf format

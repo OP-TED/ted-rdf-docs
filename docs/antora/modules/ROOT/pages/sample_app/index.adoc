@@ -4,7 +4,22 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-include::../../../query_central/pages/index.adoc[]
+If you are new to eProcurement and SPARQL Queries, you might want to read the xref:../../../query_central/pages/starting.adoc[Starting out with SPARQL Queries] page first.
+
+In most cases you will start the new query process by having a specific scenario or context in which a question about EU public procurement is asked. The following steps then followed:
+
+== Examination of the scenario
+* A short investigation into the extent to which the current data offering can satisfy your question
+* Understanding data limitations
+* Refining the question
+
+== Identifying the information to be returned
+* Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information
+* Constructing the query
+
+== Executing the query
+* Running the query
+* Examining and refining the query results
 
 Sample appications are provided for you to try out using the following query methods:
 
@@ -21,9 +36,9 @@ The next most advanced method is submitting a query directly into the SPARQL End
 
 The last two options are for users with some knowledge of R and Python.
 
-include::../../../query_central/pages/starting.adoc[]
+include::starting.adoc[]
 
-include::../../../query_central/pages/tips.adoc[]
+include::tips.adoc[]
 
 ////
 == Prerequisites
