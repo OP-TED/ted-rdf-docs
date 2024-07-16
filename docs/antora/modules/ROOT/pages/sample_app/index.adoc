@@ -4,22 +4,28 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
+include::../../../query_central/pages/index.adoc[]
 
 Sample appications are provided for you to try out using the following query methods:
 
-Microsoft Excel
-The SPARQL EndPoint
-Python
-R
+* Microsoft Excel
+* Python
+* R
+* The SPARQL EndPoint
 
 If you are not a programmer and new to querying RDF data, you can start by using the Excel file provided to paste the sample query into and see the results.
 
 The Excel file contains a macro which connects to the SPARQL EndPoint, submits the query for you, and returns the results back into the spreadsheet. The spreadsheet also contains a sheet with a preformatted results dashboard that you can change as needed.
 
-The next most advanced method is submitting a query directly into the SPARQL EndPoint. Here you can choose the desired returned data format from the options, and deal with the formating of the results ias you wish.
+The next most advanced method is submitting a query directly into the SPARQL EndPoint. Here you can choose the desired returned data format from the options, and deal with the formating of the results as you wish.
 
-The last two options are for users with some knowledge of R and Python, and require the user to programme the connection to the SPARQL EndPoint using the API
+The last two options are for users with some knowledge of R and Python.
 
+include::../../../query_central/pages/starting.adoc[]
+
+include::../../../query_central/pages/tips.adoc[]
+
+////
 == Prerequisites
 
 To use TED-ODS sample apps, you will need the following:
@@ -38,23 +44,20 @@ The sample applications can be accessed via the menu on the left.
 
 The sample applications can be accessed via the menu on the left.
 
-////
+
 == Using MS Excel
 
 * <<SWS:ROOT:sample_app/ms_excel.adoc#, MS Excel Workbook>>
 
 Example of accessing data in a MS Excel workbook.
-////
 
-////
 == SPARQL Query examples
 
 * <<SWS:ROOT:sample_app/sparql_queries.adoc#, SPARQL Query examples>>
 
 Example of accessing data using SPARQL Query examples
 
-////
-////
+
 == Using Jupyter Notebook
 
 * <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, Jupyter Notebook - Python>>

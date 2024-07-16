@@ -31,7 +31,7 @@ A mapping suite within the TED Open Data Service is a set of mappings that defin
 [.tile]
 .Mapping Suites
 ****
-The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED Open Data Service) to convert TED notices available in XML format into RDF.
+The TED-RDF Mappings are the transformation rules needed by the TED-SWS Conversion Pipeline (both of which are part of the TED Open Data Service) to convert TED notices available in XML format into RDF.
 Mapping Suites and Mapping Suite Packages are explained in this section.
 
 
@@ -40,9 +40,9 @@ Mapping Suites and Mapping Suite Packages are explained in this section.
 
 
 [.tile]
-.Reusing Open Data Service Artefacts
+.Reusing TED Open Data
 ****
-This section provides a set of examples that demonstrate how to extract TED RDF data from Cellar using tools like Excel, Python, or R.
+This section demonstrates how to query TED RDF data using Excel, Python, and R, and directly via the Cellar SPARQL EndPoint.
 
 <<ODS:ROOT:sample_app/index.adoc#, Read the docs>>
 ****

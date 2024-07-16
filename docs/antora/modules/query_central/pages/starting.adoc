@@ -4,16 +4,14 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
-== Topics
-
-=== An overview of Procurement Data
+== An overview of Procurement Data
 
 Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found using one of the several ways of searching for notices available on the site, the advanced, expert, or browse categories methods of searching.
 
 As an aid, you can use these short info session on xref:attachment$Notice_Data/index.html[Notice Data] and xref:attachment$Searching_Notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
 This wshould give you an overview of what information can be found in a notice.
 
-=== Converting Notice Data into rdf format
+== Converting Notice Data into rdf format
 
 On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well who wish to buy or supply a package of goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
 
@@ -22,11 +20,11 @@ As part of the European Commission's strategy for data reuse and transparency, n
 The data, stored in the "Cellar", the RDF database maintained by the Publications Office, enables anyone to query notice data as Linked Open Data using Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL EndPoint].
 
 
-=== How RDF Data is queried
+== How RDF Data is queried
 
 RDF Data is queried using SPARQL, a query language specifically for RDF data. A guide for querying RDF data and constructing a query can be found #here# (update once the ePO guides are live). Once a query is ready, it is pasted into the SPARQL EndPoint's input field and executed.
 
-=== Links to online training resources for learning sparql:
+== Links to online training resources for learning sparql:
 
  There are many good resources on SPARQL and constructing SPARQL queries that you can use to familiarise yourself with:
 
@@ -41,11 +39,11 @@ RDF Data is queried using SPARQL, a query language specifically for RDF data. A 
  * Other web-based training courses on training sites like Udemy
  * Books from publishers such as O'Reilly, The Dummies Guide to, Morgan Kaufmann, etc.
 
-=== Links to Achilles's guides once live #change name#
+== Links to Achilles's guides once live #change name#
 
 Guides to using resources provided by the eProcurement Ontology to assist in constructing queries can be found #here#. These are specific to EU public procurement and will help find the term names or classes you will use in your queries.
 
-Some tips regarding queries can be found xref:tips.adoc[here].
+//Some tips regarding queries can be found xref:tips.adoc[here].
 //=== Flow diagramme of frequently used classes: buyer, seller, value, date, country, business size, cpv codes, lots
 
 

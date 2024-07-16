@@ -10,8 +10,7 @@ Jupyter Notebook is an application for creating and sharing
 computational documents. Python is a programming language for
 writing computational documents. To work with Jupyter Notebook and Python, it is
 necessary to install some tools and applications to run Python code that will
-perform a query to the CELLAR database and display the results in tabular
-format.
+query the Cellar database and display the results in a table.
 
 To run the sample application using Python follow the steps below:
 
