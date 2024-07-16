@@ -4,9 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-If you are new to eProcurement and SPARQL Queries, you might want to read the xref:../../../query_central/pages/starting.adoc[Starting out with SPARQL Queries] page first.
-
-In most cases you will start the new query process by having a specific scenario or context in which a question about EU public procurement is asked. The following steps then followed:
+In most cases you will start a new query process with a specific scenario or context in which a question about EU public procurement is asked. The following steps then follow:
 
 == Examination of the scenario
 * A short investigation into the extent to which the current data offering can satisfy your question
