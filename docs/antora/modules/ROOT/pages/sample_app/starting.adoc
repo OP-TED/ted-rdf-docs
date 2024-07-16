@@ -11,6 +11,9 @@ Public procurement data available for query comes from notice data. For a short 
 As an aid, you can use these short info sessions on xref:ROOT/sample_app/attachment$notice_data/index.html[Notice Data] and xref:ROOT/sample_app:attachment$searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
 This should give you an overview of what information can be found in a notice.
 
+xref:attachment$/notice_data/index.adoc[Notice Data]
+xref:attachment$notice_data/index.adoc[Notice Data]
+
 == Converting Notice Data into rdf format
 
 On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well who wish to buy or supply goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
@@ -24,14 +27,14 @@ The data, stored in the "Cellar", the RDF triplestore (database) maintained by t
 
 RDF Data is queried using SPARQL, a query language specifically for querying RDF data. A guide for querying RDF data and constructing a query can be found #here# (update once the ePO guides are live). Once a query is ready, it is pasted into the SPARQL EndPoint's input field and executed.
 
-== Links to online training resources for learning sparql:
+== Links to online training resources for learning sparql
 
- There are many good resources on SPARQL and constructing SPARQL queries that you can use to familiarise yourself with:
+There are many good resources on SPARQL and constructing SPARQL queries that you can use to familiarise yourself with:
 
- * The guides on the ePO page #(rdf & sparql/ ePO lesson/ etc n)#
+ * The guides on the ePO page #(rdf & sparql/ ePO lesson/ etc)#
  * https://www.w3.org/TR/sparql11-query/[W3C]
  * YouTube lectures:
- ** https://www.youtube.com/watch?v=zkr_2HR4Pcs&list=PLakGkiOE3_q8Fq46-TSE-Te1cvx8yLLUF[LINKED Data and SPARQL]
+ ** https://www.youtube.com/watch?v=zkr_2HR4Pcs&list=PLakGkiOE3_q8Fq46-TSE-Te1cvx8yLLUF[Linked Data and SPARQL]
  ** https://www.youtube.com/playlist?list=PLoOmvuyo5UAfY6jb46jCpMoqb-dbVewxg[Linked data Engineering]
  * Videos:
  ** https://www.youtube.com/watch?v=FvGndkpa4K0[SPARQL in 11 Minutes]
