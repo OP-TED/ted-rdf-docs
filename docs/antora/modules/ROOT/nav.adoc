@@ -20,11 +20,12 @@
 * xref:mapping_suite/toolchain.adoc[Toolchain]
 
 * [.separated]#**Reusing TED Open Data**#
-* xref:sample_app/sa_glossary.adoc[Glossary]
-* xref:sample_app/sparql_queries.adoc[SPARQL Queries]
+* xref:sample_app/index.adoc[Introduction]
 * xref:sample_app/ms_excel.adoc[MS Excel]
+* xref:sample_app/sparql_queries.adoc[SPARQL Queries]
 * xref:sample_app/jupyter_notebook_r.adoc[Jupyter Notebook - R]
 * xref:sample_app/jupyter_notebook_python.adoc[Jupyter Notebook - Python]
+* xref:sample_app/sa_glossary.adoc[Glossary]
 
 ////
 * [.separated]#**Query Central**#

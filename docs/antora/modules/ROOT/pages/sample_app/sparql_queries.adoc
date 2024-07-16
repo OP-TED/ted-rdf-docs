@@ -1,16 +1,18 @@
-:doctitle: SPARQL Queries
+:doctitle: SPARQL Queries using the SPARQL EndPoint
 :doccode: sws-main-prod-025
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
+////
 Using the https://publications.europa.eu/webapi/rdf/sparql[EU Procurement SPARQL endpoint], SPARQL queries can return EU procurement notice data in RDF format published by the Publications Office.
 
 SPARQL is a specialized query language designed for retrieving and manipulating data stored in RDF (Resource Description Framework) format. SPARQL stands for SPARQL Protocol and RDF Query Language.
 
 The data available covers Contract Award Notices published after 28/08/2023.  Data on eForm Result notices are not available yet.
+////
 
-A query is submitted to the SPARQL end point by replacing the text highlighted below in blue in the Query text box below with your own query:
+A query is submitted to the SPARQL EndPoint by replacing the text highlighted below in blue in the Query text box below with your own query:
 
 .End point user interface
 image::sparql.png[SPARQL End Point]
