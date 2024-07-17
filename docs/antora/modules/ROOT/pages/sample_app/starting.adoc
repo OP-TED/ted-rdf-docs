@@ -1,29 +1,8 @@
-:doctitle: Starting Querying the eProcurement data using SPARQL
+:doctitle: Start Querying the eProcurement data using SPARQL
 :doccode: ods-main-prod-102
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
-
-== An overview of Procurement Data
-
-Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found by opening the latest issue of the Official Journal Supplement, or by using one of the several ways of searching for notices available on the site: advanced, expert, or browse by subject.
-
-As an aid, you can use these short info sessions on xref:attachment$notice_data/index.html[Notice Data] and xref:attachment$searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
-
-xref:ROOT:attachment$notice_data/index.html[Notice Data]
-xref:ROOT::attachment$notice_data/index.html[Notice Data]
-xref::ROOT:attachment$notice_data/index.html[Notice Data]
-
-This should give you an overview of what information can be found in a notice.
-
-== Converting Notice Data into rdf format
-
-On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well who wish to buy or supply goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
-
-As part of the European Commission's strategy for data reuse and transparency, notice data is converted into RDF format using an automated "pipeline" service.
-
-The data, stored in the "Cellar", the RDF triplestore (database) maintained by the Publications Office, enables anyone to query notice data as Linked Open Data using Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL EndPoint].
-
 
 == How RDF Data is queried
 
@@ -47,6 +26,24 @@ There are many good resources on SPARQL and constructing SPARQL queries that you
 == Links to Achilles's guides once live #change name#
 
 Guides to using resources provided by the eProcurement Ontology to assist in constructing queries can be found #here#. These are specific to EU public procurement and will help find the term names or classes you will use in your queries.
+
+== An overview of Procurement Data
+
+Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found by opening the latest issue of the Official Journal Supplement, or by using one of the several ways of searching for notices available on the site: advanced, expert, or browse by subject.
+
+As an aid, you can use these short info sessions on xref:attachment$notice_data/index.html[Notice Data] and xref:attachment$searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
+
+This should give you an overview of what information can be found in a notice.
+
+== Converting Notice Data into rdf format
+
+On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well who wish to buy or supply goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
+
+As part of the European Commission's strategy for data reuse and transparency, notice data is converted into RDF format using an automated "pipeline" service.
+
+The data, stored in the "Cellar", the RDF triplestore (database) maintained by the Publications Office, enables anyone to query notice data as Linked Open Data using Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL EndPoint].
+
+
 
 //Some tips regarding queries can be found xref:tips.adoc[here].
 //=== Flow diagramme of frequently used classes: buyer, seller, value, date, country, business size, cpv codes, lots
