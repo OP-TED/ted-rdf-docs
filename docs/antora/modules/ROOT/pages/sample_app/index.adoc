@@ -6,18 +6,20 @@
 
 include::starting.adoc[]
 
+== Designing a Query
+
 Generally, you will start a new query process with a specific scenario or context in which a question about EU public procurement is asked. The following steps then follow:
 
-== Examination of the scenario
+=== Examination of the scenario
 * A short investigation into the extent to which the current data offering can satisfy your question
 * Understanding data limitations
 * Refining the question
 
-== Identifying the information to be returned
+=== Identifying the information to be returned
 * Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information
 * Constructing the query
 
-== Executing the query
+=== Executing the query
 * Running the query
 * Examining and refining the query results
 

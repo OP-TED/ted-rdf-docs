@@ -1,4 +1,4 @@
-:doctitle: Start Querying the eProcurement data using SPARQL
+:doctitle: Start Querying procurement data using SPARQL
 :doccode: ods-main-prod-102
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
@@ -8,7 +8,7 @@
 
 RDF Data is queried using SPARQL, a query language specifically for querying RDF data. A guide for querying RDF data and constructing a query can be found #here# (update once the ePO guides are live). Once a query is ready, it is pasted into the SPARQL EndPoint's input field and executed.
 
-== Links to online training resources for learning sparql
+== Links to online training resources for learning SPARQL
 
 There are many good resources on SPARQL and constructing SPARQL queries that you can use to familiarise yourself with:
 
@@ -27,7 +27,7 @@ There are many good resources on SPARQL and constructing SPARQL queries that you
 
 Guides to using resources provided by the eProcurement Ontology to assist in constructing queries can be found #here#. These are specific to EU public procurement and will help find the term names or classes you will use in your queries.
 
-== An overview of Procurement Data
+== Procurement Data
 
 Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found by opening the latest issue of the Official Journal Supplement, or by using one of the several ways of searching for notices available on the site: advanced, expert, or browse by subject.
 
@@ -35,7 +35,7 @@ As an aid, you can use these short info sessions on xref:attachment$notice_data/
 
 This should give you an overview of what information can be found in a notice.
 
-== Converting Notice Data into rdf format
+== Converting Notice Data into RDF format
 
 On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well who wish to buy or supply goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
 
