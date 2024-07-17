@@ -9,11 +9,7 @@
 
 The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The TED RDF data is stored in an RDF triple store named, "Cellar". The data in Cellar can be queried from Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], linked to from the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page]. 
 
-Currently, the service only converts contract award notices.
-
-NOTE: Contract award notices should not be confused with result notices in eForms.
-
-This project complies with the goals of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which aims to create a single market for data that allows data to flow freely within the EU, and across sectors, for the benefit of businesses, researchers, and public administrations.
+This project aligns with the goals of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which aims to create a single market for data that allows data to flow freely within the EU, and across sectors, for the benefit of businesses, researchers, and public administrations.
 
 
 The following topics are included in this version of the Open Data Service Documentation:

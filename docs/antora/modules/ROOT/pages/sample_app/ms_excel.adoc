@@ -14,7 +14,7 @@ and use the data. The methods described below work with TED notices and other ty
 
 == Using the Microsoft Excel sample file 
 
- The spreadsheet can be downloaded from https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[here].
+The spreadsheet can be downloaded from https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[here].
 
 In the file are the following sheets:
 

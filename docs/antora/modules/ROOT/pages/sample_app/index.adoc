@@ -40,7 +40,7 @@ The Excel file contains a macro which connects to the SPARQL EndPoint, submits t
 
 The next method is submitting a query directly into the SPARQL EndPoint. Here you can choose the desired returned data format from the options, and deal with the formating of the results as you wish.
 
-The last two query options are using Jupiter Notebook with either R and Python.
+The last two query options are using Jupyter Notebook with either R and Python.
 
 Read through the example applications and try them out in your own time. You will soon get an idea of which method suits you best.
 
