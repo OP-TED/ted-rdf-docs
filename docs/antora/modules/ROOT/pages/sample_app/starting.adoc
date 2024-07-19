@@ -6,13 +6,25 @@
 
 == How RDF data is queried
 
-RDF data is queried using SPARQL, a query language specifically for querying RDF data. A guide for querying RDF data and constructing a query can be found https://docs.ted.europa.eu/docs-staging/epo-home/guide.html[here]. Once a query is ready, it is pasted into the SPARQL EndPoint's input field and executed.
+RDF data is queried using SPARQL, a query language specifically for querying RDF data. A short info session on querying RDF data and constructing a query can be found below in the RDF Data section below. 
+
+Once a query is ready, it is pasted into the SPARQL EndPoint's input field and executed.
+
+Before you get to the point where you construct a query, there are a few topics worth reading through and getting familiar with.
+
+Read through the following paragraphs which explain the topics you will need to familiarise yourself with, and provide links to more information or training resources.
+
+Then there are some example queries that can be accessed via the menu on the left, which walk you through a few methods of running SPARQL queries. The example queries can be copied and pasted as is into any of the different query methods.
+
+== RDF Data
+
+RDF data has a specific format made up of a "semantic triple", explained in more detail in the info session on RDF linked in the online training resources section below. An info session is also available on Linked Open Data https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/LOD/index.html[here], which is linked RDF data that is licenced as open (for reuse).
 
 == Links to online training resources for learning SPARQL
 
 There are many good online resources on SPARQL and constructing SPARQL queries:
 
- * The guides on the ePO page for learning about RDF and SPARQL can be found in the ePO Docs https://docs.ted.europa.eu/docs-staging/epo-home/guide.html[here]
+ * The ginfo sessions on the ePO page for learning about RDF and SPARQL can be found in the ePO Docs https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/RDF/index.html[here]
  * https://www.w3.org/TR/sparql11-query/[W3C]
  * YouTube lectures:
  ** https://www.youtube.com/watch?v=zkr_2HR4Pcs&list=PLakGkiOE3_q8Fq46-TSE-Te1cvx8yLLUF[Linked Data and SPARQL]
@@ -37,7 +49,7 @@ This should give you an overview of what information can be found in a notice.
 
 == Converting Notice Data into RDF format
 
-On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well who wish to buy or supply goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
+On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well, who wish to buy or supply goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
 
 As part of the European Commission's strategy for data reuse and transparency, notice data is converted into RDF format using an automated "pipeline" service.
 
