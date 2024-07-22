@@ -3,7 +3,7 @@ pref:{
 acc:1,
 rkt:1,
 hsr:0,
-atp:true
+atp:false
 },
 si522:{
 name:'Image_1',
@@ -25464,11 +25464,11 @@ bookmarks:[]
 ,
 qs:'',
 iph:{
-2999:{
+3021:{
 ts:''
 }
 ,
-3021:{
+2999:{
 ts:''
 }
 
@@ -28074,7 +28074,14 @@ resources:['dr/0419.png']
 ,{
 slideID:6,
 ResourceList:{
-resources:['dr/02105.png','dr/02129.png','dr/02256.png','dr/02380.png','dr/02504.png','dr/02628.png','dr/02752.png']
+resources:['dr/02105.png','dr/02129.png','dr/02256.png','dr/02380.png','dr/02504.png','dr/02628.png','dr/02752.png','dr/02875.svg']
+}
+
+}
+,{
+slideID:8,
+ResourceList:{
+resources:['dr/0419.png']
 }
 
 }

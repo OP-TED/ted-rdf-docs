@@ -3,7 +3,7 @@ pref:{
 acc:1,
 rkt:1,
 hsr:0,
-atp:true
+atp:false
 },
 si526:{
 name:'Image_5',
@@ -62675,6 +62675,15 @@ ipiv:{
 
 }
 ,{
+ip:'dr/0558.png',
+ipiv:{
+360:1,
+600:1,
+972:1
+}
+
+}
+,{
 ip:'dr/0720.svg',
 ipiv:{
 360:1,
@@ -62712,14 +62721,14 @@ resources:['dr/0419.png']
 ,{
 slideID:4,
 ResourceList:{
-resources:['dr/01325.jpg','dr/01453.jpg','dr/01577.jpg','dr/01702.jpg','dr/01827.jpg','dr/01952.jpg']
+resources:['dr/01290.svg','dr/01303.svg','dr/01325.jpg','dr/01453.jpg','dr/01577.jpg','dr/01702.jpg','dr/01827.jpg','dr/01952.jpg','dr/02075.svg']
 }
 
 }
 ,{
 slideID:5,
 ResourceList:{
-resources:['dr/02311.png','dr/02438.png','dr/02562.png','dr/02686.png','dr/02810.png','dr/02934.png']
+resources:['dr/01290.svg','dr/01303.svg','dr/02075.svg','dr/02311.png','dr/02438.png','dr/02562.png','dr/02686.png','dr/02810.png','dr/02934.png']
 }
 
 }
@@ -62733,7 +62742,14 @@ resources:['dr/03306.png','dr/03434.png','dr/03559.png','dr/03683.jpg','dr/03807
 ,{
 slideID:7,
 ResourceList:{
-resources:['dr/01577.jpg','dr/02562.png','dr/02686.png','dr/02810.png','dr/02934.png','dr/04171.jpg']
+resources:['dr/01290.svg','dr/01303.svg','dr/01577.jpg','dr/02075.svg','dr/02562.png','dr/02686.png','dr/02810.png','dr/02934.png','dr/04171.jpg']
+}
+
+}
+,{
+slideID:9,
+ResourceList:{
+resources:['dr/0419.png']
 }
 
 }
