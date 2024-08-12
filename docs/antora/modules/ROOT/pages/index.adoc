@@ -7,13 +7,17 @@
 
 == Introduction
 
-The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The TED RDF data is stored in an RDF triple store named, "Cellar". The data in Cellar can be queried from Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], linked to from the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page]. 
+The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in an RDF triple store named the "Cellar", which is publicly available. OMaking this data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of e.g., EU businesses, researchers, and public administrations.
 
-This project aligns with the goals of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which aims to create a single market for data that allows data to flow freely within the EU, and across sectors, for the benefit of businesses, researchers, and public administrations.
+=== Reusing TED Open Data
 
+Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries. They can then submit them via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], linked to from the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page]. This section introduces the resources available and guides, that will help those interested in querying public procurement data.
 
-Click on the *Mapping Suites* section for an explanation on how the Open Data Service converts notice data into RDF, and the *Reusing TED Open Data* section to learn how to query public procurement RDF data.
+=== Mapping Suites 
 
+This section is for those who wish to use a service to convert xml data into RDF and deals with the creation of the mappings or mapping suites. This section is aimed at technical users wishing to create the rules for data conversion.
+
+ 
 ////
 == Mapping Suites
 A mapping suite within the TED Open Data Service is a set of mappings that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation in conformance with the eProcurement ontology. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which is referred to as a *mapping suite package*.A mapping suite can be further broken down into mapping suite packages, one per type of standard form mapped.
