@@ -26,7 +26,7 @@
 
 * xref:sample_app/ms_excel.adoc[Querying using the supplied MS Excel template]
 * xref:sample_app/sparql_queries.adoc[Querying directly via the SPARQL EndPoint]
-* xref:sample_app/jupyter_notebook_r.adoc[Querying using Jupyter Notebook and R]
+// * xref:sample_app/jupyter_notebook_r.adoc[Querying using Jupyter Notebook and R]
 * xref:sample_app/jupyter_notebook_python.adoc[Querying using Jupyter Notebook and Python]
 * xref:sample_app/sa_glossary.adoc[Glossary]
 
