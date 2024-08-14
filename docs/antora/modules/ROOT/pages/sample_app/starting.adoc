@@ -43,7 +43,8 @@ Guides to using resources provided by the eProcurement Ontology to assist in con
 
 Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found by opening the latest issue of the Official Journal Supplement, or by using one of the several ways of searching for notices available on the site: advanced, expert, or browse by subject.
 
-As an aid, you can use these short info sessions on xref::attachment$notice_data/index.html[Notice Data] and xref:attachment$searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
+As an aid, you can use these short info sessions on xref:ROOT:attachment$/notice_data/index.html[Notice Data] and xref:attachment$searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
+
 
 
 xref::..\attachment$\notice_data\index.html[test]
