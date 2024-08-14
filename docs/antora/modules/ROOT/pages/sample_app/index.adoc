@@ -25,7 +25,7 @@ Generally, you will start a new query process with a specific scenario or contex
 
 == The sample applications
 
-Sample appications are provided for you to try out using the following query methods:
+Sample applications are provided for you to try out using the following query methods:
 
 * Microsoft Excel
 * Python
@@ -38,7 +38,7 @@ If you are not a programmer and new to querying RDF data, you can start by using
 
 The Excel file contains a macro which connects to the SPARQL EndPoint, submits the query for you, and returns the results back into the spreadsheet. The spreadsheet also contains a sheet with a preformatted results dashboard that you can change as needed.
 
-The next method is submitting a query directly into the SPARQL EndPoint. Here you can choose the desired returned data format from the options, and deal with the formating of the results as you wish.
+The next method is submitting a query directly into the SPARQL EndPoint. Here you can choose the desired returned data format from the options, and deal with the formatting of the results as you wish.
 
 The last two query options are using Jupyter Notebook with either R and Python.
 
