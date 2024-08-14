@@ -7,15 +7,17 @@
 
 == Introduction
 
-The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in an RDF triple store named the "Cellar", which is publicly available. OMaking this data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of e.g., EU businesses, researchers, and public administrations.
+The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in the Publications Office's (OP) RDF triple store named the "Cellar", which is publicly available. Making this data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of   citizens, businesses, researchers, and public administrations, to name a few.
 
 === Reusing TED Open Data
 
-Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries. They can then submit them via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], linked to from the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page]. This section introduces the resources available and guides, that will help those interested in querying public procurement data.
+Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and return data of EU public procurement. Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], linked to from the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page]. 
+
+This section on reusing public procurement data introduces the resources available and guides that will help those interested in querying public procurement data improve their skills and queries..
 
 === Mapping Suites 
 
-This section is for those who wish to use a service to convert xml data into RDF and deals with the creation of the mappings or mapping suites. This section is aimed at technical users wishing to create the rules for data conversion.
+The Mapping Suites section is for those who wish to use a service to convert xml data into RDF, and deals with the creation of mappings or mapping suites. This section is aimed at technical users wishing to create the rules for data conversion from e.g., XML to RDF. This is the "behind the scenes" process that enables RDF data to be placed in the Cellar triple store for querying.
 
  
 ////
