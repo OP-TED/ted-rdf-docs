@@ -5,7 +5,7 @@
 :docdate: October 2023
 
 
-This page explains how to use procurement data accessed from *Cellar* with Microsoft Excel. A sample Excel file is provided for download that contains macros that connect to the endpoint, run the query, and return the results from within the file.
+Procurement data in *Cellar* can be queried with Microsoft Excel. A sample Excel file is provided online for download that can be used to paste a query into, which then connects to the endpoint, runs the query, and returns the results back into the Excel file.
 
 ////
 There are different ways to access TED notices in CELLAR 
@@ -14,17 +14,17 @@ and use the data. The methods described below work with TED notices and other ty
 
 == Using the Microsoft Excel sample file 
 
-The spreadsheet can be downloaded from https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[here].
+The Excel file can be downloaded https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[here].
 
 In the file are the following sheets:
 
-** Query - sheet for entering the SPARQL query
-** Result Query - sheet containing result table after querying
-** Sample analysis -  analysis of results (charts, ect) using data from Result Query sheet
+** Query - sheet for pasting into or creating the SPARQL query
+** Result Query - a sheet containing the results returned by the query
+** Sample analysis -  a sheet contains prefigured dashboard/ charts for the analysis of results returned to the Result Query sheet
 
-The following steps shows how to insert or update data using the sample app:
+The following steps shows how to insert or update data using the sample app: #review once rewritten/ no security stuff#
 
-. When opening the downloaded spreadsheet, and depending on the version of MS Excel used, a pop-up box might appear asking you to choose a privacy level. Set it to ignore privacy level checks: tick the checkbox to ignore Privacy Levels and then click "Save".
+////
 
 .Change privacy levels
 image::user_manual/ms_excell/image11.png[image,width=507,height=466]
@@ -51,6 +51,9 @@ image::user_manual/ms_excell/image9.png[image,width=907,height=466]
 .Sample analysis
 image::user_manual/ms_excell/image10.png[image,width=807,height=166]
 {nbsp}
+
+ . When opening the downloaded spreadsheet, and depending on the version of MS Excel used, a pop-up box might appear asking you to choose a privacy level. Set it to ignore privacy level checks: tick the checkbox to ignore Privacy Levels and then click "Save".
+////
 
 include::partial$feedback.adoc[]
 
