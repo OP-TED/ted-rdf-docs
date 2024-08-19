@@ -22,7 +22,7 @@ In the file are the following sheets:
 ** Result Query - a sheet containing the results returned by the query
 ** Sample analysis -  a sheet contains prefigured dashboard/ charts for the analysis of results returned to the Result Query sheet
 
-The following steps shows how to insert or update data using the sample app: #review once rewritten/ no security stuff#
+The following steps shows how to insert or update data using the sample app: #review once rewritten (no security stuff)#
 
 ////
 
