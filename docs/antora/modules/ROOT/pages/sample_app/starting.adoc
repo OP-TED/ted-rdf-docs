@@ -10,11 +10,9 @@ RDF data is queried using SPARQL, a query language specifically for querying RDF
 
 Once a query is ready, it is pasted into the SPARQL EndPoint's input field and executed.
 
-Before you get to the point where you construct a query, there are a few topics worth reading through and getting familiar with.
+Before you get to the point where you construct a query, there are a few topics worth reading through and getting familiar with. There are links below to more information or training resources.
 
-Read through the following paragraphs which explain the topics you will need to familiarise yourself with, and provide links to more information or training resources.
-
-Then there are some example queries that can be accessed via the menu on the left, which walk you through a few methods of running SPARQL queries. The example queries can be copied and pasted as is into any of the different query methods.
+There are also some example queries that can be accessed via the menu on the left, which walk you through a few methods of running SPARQL queries. The example queries can be copied and pasted, as is, into any of the different query methods.
 
 == RDF Data
 
@@ -45,7 +43,7 @@ Public procurement data available for query comes from notice data. For a short 
 
 As an aid, you can use these short info sessions on xref:ROOT:attachment$/notice_data/index.html[Notice Data] and xref:attachment$searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
 
-This should give you an overview of what information can be found in a notice.
+This should give you a good idea of the information that can be found in a notice.
 
 == Converting Notice Data into RDF format
 
