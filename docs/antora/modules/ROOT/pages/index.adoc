@@ -33,7 +33,7 @@ A mapping suite within the TED Open Data Service is a set of mappings that defin
 [.tile]
 .Reusing TED Open Data
 ****
-This section demonstrates how to query TED RDF data using Excel or Python, aor directly via the Cellar SPARQL EndPoint.
+This section demonstrates how to query TED RDF data using Excel or Python, or directly via the Cellar SPARQL EndPoint.
 
 <<ODS:ROOT:sample_app/index.adoc#, Read the docs>>
 ****
