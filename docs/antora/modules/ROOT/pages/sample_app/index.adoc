@@ -29,7 +29,7 @@ Sample applications are provided for you to try out using the following query me
 
 * Microsoft Excel
 * Python
-* R
+// * R
 * The SPARQL EndPoint
 
 You can access these via the menu on the left hand side under "Reusing TED Open Data". 

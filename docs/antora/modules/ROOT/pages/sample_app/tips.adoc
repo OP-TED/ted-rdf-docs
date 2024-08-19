@@ -8,9 +8,9 @@
 
 === What data is available (from which notices and over what time period)?
 
-Currently, the data available in Cellar is restricted to Contract Award Notices published between 1 September 2023 and 31 December 2023. #check dates#
+Currently, the data available in Cellar is restricted to Contract Award Notices published in the last quarter of 2023. More data will be available in due course.
 
-Contract Award Notices cover eForm Result Notices, Direct Award Pre-notifications (DAPs), and Contract Modification Notices. #check accuracy#
+//Contract Award Notices cover eForm Result Notices, Direct Award Pre-notifications (DAPs), and Contract Modification Notices. #check accuracy#
 
 === Lots
 
@@ -20,10 +20,13 @@ To clarify, you might want to add a column for lot number in your query.
  
 === Duplicate data in results
 
-Apart from the appearance of duplication caused by lots, there are other reasons why there might be a duplication in the results. Notices could be published more than one language, so unless you filter this in the query, the same notice might be listed several times in different languages. #check accuracy and other reasons#
+Apart from the appearance of duplication caused by lots, there are other reasons why there might be a duplication in the results. Notices could be published more than one language, so unless you filter this in the query, the same notice might be listed several times in different languages.
 
+////
 === Availability of ePO classes for querying 
 (#check if correct/ relevant#)
 
-The project to develop the eProcurement Ontology is quite advanced, however it is not yet complete. There are still some modules that are in development. Therefore, data from earlier notices might have been associated with an ePO class that might be different in a later version of the ontology. It is important to bear this in mind when choosing classes for a query. You will need to check the relevant version of the ontology and, going forward, possibly use more than one class in your query to cover all time periods.
+The project to develop the eProcurement Ontology is quite advanced, however it is not yet complete. There are still some modules that are in development. Therefore, data from earlier notices might have been associated with an ePO class that might be different in a later version of the ontology. It is important to bear this in mind when choosing classes for a query. You will need to check the relevant version of the ontology and, going forward, possibly use more than one class in your query to cover all time periods. 
+
+////
 
