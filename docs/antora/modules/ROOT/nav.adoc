@@ -6,11 +6,11 @@
 
 * xref:ODS::index.adoc[Home]
 //* xref:audience.adoc[Target Audience]
-* xref:docs\antora\modules\ROOT\attachments\index.html[html home]
+* link:{attachmentsdir}/index.html[html home]
 
 * [.separated]#**Querying Public procurement Notice Data**#
 * xref:sample_app/index.adoc[Introduction]
-* link:{attachmentsdir}/ROOT/index.html[html home]
+
 
 * *Query Methods*
 
