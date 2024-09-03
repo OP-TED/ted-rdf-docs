@@ -119,7 +119,6 @@ This section on reusing public procurement data introduces the resources and gui
 
 --
 
-'''
 === Try Submitting a query in the SPARQL EndPoint
 
 [sidebar]
