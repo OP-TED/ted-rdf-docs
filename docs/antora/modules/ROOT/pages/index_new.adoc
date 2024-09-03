@@ -1,0 +1,47 @@
+//:doctitle: The TED Open Data Service
+:doccode: sws-main-prod-001
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: September 2023
+
+
+= Welcome to the TED Open Data Service
+
+[sidebar]
+****
+Learn how to query public procurement RDF data, and create mappings to transform XML into RDF
+****
+
+[.tile-container]
+--
+
+[.tile2]
+.Query RDF Data
+****
+Learn how to query Public Procurement data using SPARQL
+
+<<ODS:ROOT:sample_app:index.adoc#, Click here>>
+****
+
+[.tile2]
+.Create mappings
+****
+Learn how to create mappings for your own XML to RDF conversion project
+
+<<ODS:ROOT:mapping_suite:index.adoc#, Click here>>
+****
+
+[.tile2]
+.Getting Started
+****
+Here you can find all the information and help to get you started
+
+<<ODS:ROOT:index.adoc#, Get started>>
+****
+
+--
+
+
+
+
+
