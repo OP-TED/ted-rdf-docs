@@ -5,10 +5,22 @@
 :docdate: October 2023
 
 * xref:ODS::index.adoc[Home]
-* xref:audience.adoc[Target Audience]
+//* xref:audience.adoc[Target Audience]
+* xref:docs\antora\modules\ROOT\attachments\index.html[html home]
 
+* [.separated]#**Querying Public procurement Notice Data**#
+* xref:sample_app/index.adoc[Introduction]
+* link:{attachmentsdir}/ROOT/index.html[html home]
 
-* [.separated]#**Mapping suite contents**#
+* *Query Methods*
+
+* xref:sample_app/ms_excel.adoc[Querying using the supplied MS Excel template]
+* xref:sample_app/sparql_queries.adoc[Querying directly via the SPARQL EndPoint]
+// * xref:sample_app/jupyter_notebook_r.adoc[Querying using Jupyter Notebook and R]
+* xref:sample_app/jupyter_notebook_python.adoc[Querying using Jupyter Notebook and Python]
+* xref:sample_app/sa_glossary.adoc[Glossary]
+
+* [.separated]#**Create XML to RDF mappings**#
 * xref:ODS::genref.adoc[General Reference]
 * xref:ODS::glossary.adoc[Glossary]
 * xref:mapping_suite/methodology.adoc[Methodology]
@@ -19,16 +31,6 @@
 * xref:mapping_suite/preparing-test-data.adoc[Data samples]
 * xref:mapping_suite/toolchain.adoc[Toolchain]
 
-* [.separated]#**Reusing TED Open Data**#
-* xref:sample_app/index.adoc[Introduction]
-
-* *Query Methods*
-
-* xref:sample_app/ms_excel.adoc[Querying using the supplied MS Excel template]
-* xref:sample_app/sparql_queries.adoc[Querying directly via the SPARQL EndPoint]
-// * xref:sample_app/jupyter_notebook_r.adoc[Querying using Jupyter Notebook and R]
-* xref:sample_app/jupyter_notebook_python.adoc[Querying using Jupyter Notebook and Python]
-* xref:sample_app/sa_glossary.adoc[Glossary]
 
 ////
 * [.separated]#**Query Central**#
