@@ -4,7 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: September 2023
 
-
+[.text-center]
 = Welcome to the TED Open Data Service
 
 [sidebar]
@@ -17,24 +17,26 @@ Learn how to query public procurement RDF data, and create mappings to transform
 
 [.tile2]
 .Query RDF Data
+
 ****
 Learn how to query Public Procurement data using SPARQL
 
-<<ODS:ROOT:sample_app:index.adoc#, Click here>>
+<<ODS:ROOT:sample_app:index.adoc#, Query Data>>
 ****
 
 [.tile2]
-.Create mappings
+.Create Mappings
 
+****
 Learn how to create mappings for your own XML to RDF conversion project
 
-<<ODS:ROOT:mapping_suite:index.adoc#, Click here>>
-
+<<ODS:ROOT:mapping_suite:index.adoc#, Create Mappings>>
+****
 
 [.tile2]
-.Getting Started
+.Get Started
 ****
-Here you can find all the information and help to get you started
+Information and help to get you started
 
 <<ODS:ROOT:index.adoc#, Get started>>
 ****
@@ -46,23 +48,19 @@ Here you can find all the information and help to get you started
 [sidebar]
 --
 The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in the Publications Office's (OP) RDF https://en.wikipedia.org/wiki/Triplestore[triple store] named the "Cellar", and is publicly available (open). Making this data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, to name a few.
+
 --
 
 === Querying TED Open Data
 [sidebar]
 --
 Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and return data about EU public procurement. Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
---
+
 
 This section on reusing public procurement data introduces the resources and guides available to help those interested in querying public procurement data improve their skills and write queries.
-
-=== Mapping Suites 
-[sidebar]
---
-The Mapping Suites section is for those who wish to use a service to convert xml data into RDF, and deals with the creation of mappings or mapping suites. This section is aimed at technical users wishing to create the rules for data conversion from XML to RDF. This is the "behind the scenes" process that precedes RDF data being placed in the Cellar triple store for querying.
 --
 
-== Learn how to query TED RDF data
+=== Learn how to query TED RDF data
 
 [.tile-container]
 --
@@ -89,10 +87,12 @@ The Mapping Suites section is for those who wish to use a service to convert xml
 
 [.tile3]
 
-****
 .Snippets
 
+****
+
 <<ODS:ROOT:snippets.adoc#, Click here>>
+
 ****
 
 
@@ -116,18 +116,31 @@ The Mapping Suites section is for those who wish to use a service to convert xml
 <<ODS:ROOT:index.adoc#, Get started>>
 
 ****
+
 --
 
-== Try Submitting a query in the SPARQL EndPoint
+'''
+=== Try Submitting a query in the SPARQL EndPoint
 
 [sidebar]
 .We supply the query, you see the results
 
 --
 
+[.text-center]
 (Link to a query and the EndPoint)
 
 --
+
+'''
+
+== Mapping Suites
+
+[sidebar]
+--
+The Mapping Suites section is for those who wish to use a service to convert xml data into RDF, and deals with the creation of mappings or mapping suites. This section is aimed at technical users wishing to create the rules for data conversion from XML to RDF. This is the "behind the scenes" process that precedes RDF data being placed in the Cellar triple store for querying.
+--
+
 
 == Resources for creating Mappings
 
@@ -135,7 +148,7 @@ The Mapping Suites section is for those who wish to use a service to convert xml
 
 === Code Examples: Mappings
 
-
+(add examples)
 
 
 
