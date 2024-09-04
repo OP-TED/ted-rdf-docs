@@ -152,7 +152,7 @@ The Mapping Suites section is for those who wish to use a service that converts 
 
 ****
 
-image::methodology.png[xref=mapping_suite/methodology.adoc,width=51,height=51]
+image::mapping.png[xref=mapping_suite/methodology.adoc,width=51,height=51]
 
 //<<ODS:ROOT:sample_app:tutorials.adoc#, Methodology>>
 
