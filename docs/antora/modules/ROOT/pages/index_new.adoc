@@ -38,7 +38,9 @@ Learn how to create mappings for your own XML to RDF conversion project
 ****
 Information and help to get you started
 
-<<ODS:ROOT:index.adoc#, Get started>>
+<<Querying TED Open Data,Start creating RDF Queries>>
+
+<<Mapping Suites, Start creating mapping Suites>>
 ****
 --
 
