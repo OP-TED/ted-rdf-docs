@@ -1,0 +1,5 @@
+:doctitle: Tutorials on Query Elements and Resources
+:doccode: sws-main-prod-020
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023

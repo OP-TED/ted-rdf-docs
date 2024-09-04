@@ -21,7 +21,7 @@ Learn how to query public procurement RDF data, and create mappings to transform
 ****
 Learn how to query Public Procurement data using SPARQL
 
-<<ODS:ROOT:sample_app:index.adoc#, Query Data>>
+<<ODS:ROOT:sample_app:starting.adoc#, Query Data>>
 ****
 
 [.tile2]
@@ -83,7 +83,7 @@ This section on reusing public procurement data introduces the resources and gui
 
 ****
 
-<<ODS:ROOT:guidance.adoc#, Click here>>
+<<ODS:ROOT:sample_app:guidance.adoc#, Click here>>
 
 ****
 
@@ -93,7 +93,7 @@ This section on reusing public procurement data introduces the resources and gui
 
 ****
 
-<<ODS:ROOT:snippets.adoc#, Click here>>
+<<ODS:ROOT:sample_app:snippets.adoc#, Click here>>
 
 ****
 
@@ -104,7 +104,7 @@ This section on reusing public procurement data introduces the resources and gui
 
 ****
 
-<<ODS:ROOT:index.adoc#, Click here>>
+<<ODS:ROOT:sample_app:scenarios.adoc#, Click here>>
 
 ****
 
@@ -115,16 +115,16 @@ This section on reusing public procurement data introduces the resources and gui
 
 ****
 
-<<ODS:ROOT:index.adoc#, Get started>>
+<<ODS:ROOT:sample_app:examples.adoc#, Get started>>
 
 ****
 
 --
 
-=== Try Submitting a query in the SPARQL EndPoint
+=== Try submitting a query in the SPARQL EndPoint
 
 [sidebar]
-.We supply the query, you see the results
+.Copy a query, submit it into the SPARQL Endpoint and see the results!
 
 --
 

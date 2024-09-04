@@ -1,0 +1,14 @@
+:doctitle: Reusable SPARQL Code Snippets
+:doccode: sws-main-prod-020
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
+* Buyer
+* Supplier
+* Country
+* CPV code
+* currency
+* Value
+* Date
+* Date Range
