@@ -143,19 +143,18 @@ The Mapping Suites section is for those who wish to use a service that converts 
 
 === Resources for creating Mappings
 
-[sidebar]
---
-
 [.tile-container]
 --
 
 [.tile6]
 
+.Methodology
+
 ****
 
-image:methodology.png[xref=docs\antora\modules\ROOT\pages\mapping_suite\methodology.adoc]
+image::methodology.png[xref=mapping_suite/methodology.adoc,width=51,height=51]
 
-<<ODS:ROOT:sample_app:tutorials.adoc#, Methodology>>
+//<<ODS:ROOT:sample_app:tutorials.adoc#, Methodology>>
 
 ****
 
@@ -165,7 +164,7 @@ image:methodology.png[xref=docs\antora\modules\ROOT\pages\mapping_suite\methodol
 
 ****
 
-<<ODS:ROOT:guidance.adoc#, Mappings>>
+image::mapping.png[xref=mapping_suite/index.adoc,width=51,height=51]
 
 ****
 
@@ -176,18 +175,18 @@ image:methodology.png[xref=docs\antora\modules\ROOT\pages\mapping_suite\methodol
 
 ****
 
-<<ODS:ROOT:snippets.adoc#, Mapping Suites>>
+image::mapping.png[xref=mapping_suite/mapping_suite_structure.adoc,width=51,height=51]
 
 ****
 
 
 [.tile6]
 
-.Code Lists
+.Repository Structure
 
 ****
 
-<<ODS:ROOT:index.adoc#, Code Lists>>
+image::mapping.png[xref=mapping_suite/repository_structure.adoc,width=51,height=51]
 
 ****
 
@@ -198,21 +197,20 @@ image:methodology.png[xref=docs\antora\modules\ROOT\pages\mapping_suite\methodol
 
 ****
 
-<<ODS:ROOT:index.adoc#, Toolchain>>
+image::mapping.png[xref=mapping_suite/toolchain.adoc,width=51,height=51]
 
 ****
 
 [.tile6]
 
-.Glossary
+.Preparing Test Data
 
 ****
 
-<<ODS:ROOT:index.adoc#, Glossary>>
+image::mapping.png[xref=mapping_suite/preparing-test-data.adoc,width=51,height=51]
 
 ****
 
---
 --
 
 === Code Examples
