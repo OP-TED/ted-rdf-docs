@@ -155,6 +155,8 @@ The Mapping Suites section is for those who wish to use a service to convert xml
 
 ****
 
+image:mapping.png[]
+
 <<ODS:ROOT:sample_app:tutorials.adoc#, Methodology>>
 
 ****
