@@ -21,7 +21,7 @@ Learn how to query public procurement RDF data, and create mappings to transform
 ****
 Learn how to query Public Procurement data using SPARQL
 
-<<ODS:ROOT:sample_app:starting.adoc#, Query Data>>
+xref:sample_app/starting.adoc[How RDF data is queried]
 ****
 
 [.tile2]
@@ -30,7 +30,7 @@ Learn how to query Public Procurement data using SPARQL
 ****
 Learn how to create mappings for your own XML to RDF conversion project
 
-<<ODS:ROOT:mapping_suite:index.adoc#, Create Mappings>>
+xref:mapping_suite/index.adoc[How Mappings are created]
 ****
 
 [.tile2]
@@ -45,11 +45,11 @@ Information and help to get you started
 --
 
 
-== What is the Open Data Service?
+== What is the TED Open Data Service?
 
 [sidebar]
 --
-The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in the Publications Office's (OP) RDF https://en.wikipedia.org/wiki/Triplestore[triple store] named the "Cellar", and is publicly available (open). Making this data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, to name a few.
+The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website into RDF format. The RDF data is stored in the Publications Office's (OP) RDF https://en.wikipedia.org/wiki/Triplestore[triple store] named the "Cellar", and is publicly available (open). Making this data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, to name a few.
 
 --
 
@@ -59,7 +59,7 @@ The TED Open Data Service continuously converts notices from the xml standard fo
 Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and return data about EU public procurement. Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
 
 
-This section on reusing public procurement data introduces the resources and guides available to help those interested in querying public procurement data improve their skills and write queries.
+This section on querying (reusing) public procurement data introduces the resources and guides available to help those interested in querying public procurement data improve their knowledge and skills around querying this data.
 --
 
 === Learn how to query TED RDF data
@@ -73,7 +73,7 @@ This section on reusing public procurement data introduces the resources and gui
 
 ****
 
-<<ODS:ROOT:sample_app:tutorials.adoc#, Click here>>
+xref:sample_app/tutorials.adoc[Tutorials on RDF and SPARQL]
 
 ****
 
@@ -83,7 +83,7 @@ This section on reusing public procurement data introduces the resources and gui
 
 ****
 
-<<ODS:ROOT:sample_app:guidance.adoc#, Click here>>
+xref:sample_app/guidance.adoc[Good practices]
 
 ****
 
@@ -93,7 +93,7 @@ This section on reusing public procurement data introduces the resources and gui
 
 ****
 
-<<ODS:ROOT:sample_app:snippets.adoc#, Click here>>
+xref:sample_app/snippets.adoc[Reusable code snippets for queries]
 
 ****
 
@@ -104,7 +104,7 @@ This section on reusing public procurement data introduces the resources and gui
 
 ****
 
-<<ODS:ROOT:sample_app:scenarios.adoc#, Click here>>
+xref:sample_app/scenarios.adoc[Turn your question into a Query]
 
 ****
 
@@ -115,7 +115,7 @@ This section on reusing public procurement data introduces the resources and gui
 
 ****
 
-<<ODS:ROOT:sample_app:examples.adoc#, Get started>>
+xref:sample_app/examples.adoc[Full query examples]
 
 ****
 

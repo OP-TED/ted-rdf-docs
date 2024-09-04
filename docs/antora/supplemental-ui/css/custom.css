@@ -52,7 +52,7 @@
     box-shadow: 2px 2px 2px #e1e1e1;
 }
 
-.tile .content .title {
+.tile, .tile2, .tile3 .content .title {
     font-size: 1.3em !important;
     text-align: left !important;
     font-style: normal;
@@ -65,7 +65,7 @@
     border-radius: 12px 12px 0 0 !important;
 }
 
-.tile .content {
+.tile, .tile2, .tile3 .content {
     font-size: 0.9em;
     display: flex;
     flex-direction: column;
@@ -92,7 +92,7 @@
     height: 100%;
 }
 
-.tile .content .title + .paragraph {
+.tile, .tile2, .tile3, .tile6  .content .title + .paragraph {
     flex-grow: 100;
 }
 
