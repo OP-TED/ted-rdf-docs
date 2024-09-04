@@ -137,7 +137,7 @@ This section on reusing public procurement data introduces the resources and gui
 
 [sidebar]
 --
-The Mapping Suites section is for those who wish to use a service to convert xml data into RDF, and deals with the creation of mappings or mapping suites. This section is aimed at technical users wishing to create the rules for data conversion from XML to RDF. This is the "behind the scenes" process that precedes RDF data being placed in the Cellar triple store for querying.
+The Mapping Suites section is for those who wish to use a service that converts XML data into RDF, and deals with the creation of mappings or mapping suites for this purpose. This section is aimed at technical users wishing to create rules for data conversion from XML to RDF. Mappings and mapping suites are part of the the "behind the scenes" process that precedes RDF data being placed in the OP's Cellar triple store for querying. Here the process converts TED Notice data, in XML format, into RDF triples that are stored in Cellar.
 --
 
 
@@ -151,11 +151,9 @@ The Mapping Suites section is for those who wish to use a service to convert xml
 
 [.tile6]
 
-.Methodology
-
 ****
 
-image:mapping.png[]
+image:methodology.png[xref=docs\antora\modules\ROOT\pages\mapping_suite\methodology.adoc]
 
 <<ODS:ROOT:sample_app:tutorials.adoc#, Methodology>>
 
@@ -170,6 +168,7 @@ image:mapping.png[]
 <<ODS:ROOT:guidance.adoc#, Mappings>>
 
 ****
+
 
 [.tile6]
 
@@ -213,6 +212,7 @@ image:mapping.png[]
 
 ****
 
+--
 --
 
 === Code Examples
