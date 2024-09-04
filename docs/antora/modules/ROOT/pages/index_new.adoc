@@ -56,10 +56,10 @@ The TED Open Data Service continuously converts notices from the xml standard fo
 === Querying TED Open Data
 [sidebar]
 --
-Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and return data about EU public procurement. Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
+Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries, and benefit from data on EU public procurement. Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
 
 
-This section on querying (reusing) public procurement data introduces the resources and guides available to help those interested in querying public procurement data improve their knowledge and skills around querying this data.
+This section on querying (reusing) public procurement data introduces the resources and guides available to help those interested improve their querying knowledge and skills.
 --
 
 === Learn how to query TED RDF data
@@ -124,12 +124,14 @@ xref:sample_app/examples.adoc[Full query examples]
 === Try submitting a query in the SPARQL EndPoint
 
 [sidebar]
-.Copy a query, submit it into the SPARQL Endpoint and see the results!
+.Choose a query below, these , copy it, and submit it into the SPARQL EndPoint to see the results!
 
 --
 
 [.text-center]
-(Link to a query and the EndPoint)
+xref::sample_app/examples.adoc[Query examples]
+
+https://publications.europa.eu/webapi/rdf/sparql[SPARQL EndPoint]
 
 --
 
