@@ -8,7 +8,7 @@
 //* xref:audience.adoc[Target Audience]
 * xref:ODS::index_new.adoc[New home]
 
-* [.separated]#**Querying Public procurement Notice Data**#
+* [.separated]#**Querying public procurement notice data**#
 * xref:sample_app/index.adoc[Introduction]
 
 

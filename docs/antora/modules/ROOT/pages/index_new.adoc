@@ -141,14 +141,87 @@ The Mapping Suites section is for those who wish to use a service to convert xml
 --
 
 
-== Resources for creating Mappings
+=== Resources for creating Mappings
 
-(add resources)
+[sidebar]
+--
 
-=== Code Examples: Mappings
+[.tile-container]
+--
+
+[.tile6]
+
+.Methodology
+
+****
+
+<<ODS:ROOT:sample_app:tutorials.adoc#, Methodology>>
+
+****
+
+[.tile6]
+
+.Mappings
+
+****
+
+<<ODS:ROOT:guidance.adoc#, Mappings>>
+
+****
+
+[.tile6]
+
+.Mapping Suites
+
+****
+
+<<ODS:ROOT:snippets.adoc#, Mapping Suites>>
+
+****
+
+
+[.tile6]
+
+.Code Lists
+
+****
+
+<<ODS:ROOT:index.adoc#, Code Lists>>
+
+****
+
+
+[.tile6]
+
+.Toolchain
+
+****
+
+<<ODS:ROOT:index.adoc#, Toolchain>>
+
+****
+
+[.tile6]
+
+.Glossary
+
+****
+
+<<ODS:ROOT:index.adoc#, Glossary>>
+
+****
+
+--
+
+=== Code Examples
+
+[sidebar]
+
+--
 
 (add examples)
 
+--
 
 
 
