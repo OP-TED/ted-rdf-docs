@@ -40,7 +40,7 @@ Information and help to get you started
 
 <<Querying TED Open Data,Start creating RDF Queries>>
 
-<<Mapping Suites, Start creating mapping Suites>>
+<<Mapping Suites, Start creating Mapping Suites>>
 ****
 --
 
@@ -83,7 +83,7 @@ xref:sample_app/tutorials.adoc[Tutorials on RDF and SPARQL]
 
 ****
 
-xref:sample_app/guidance.adoc[Good practices]
+xref:sample_app/guidance.adoc[Guidance and good practices]
 
 ****
 
@@ -93,7 +93,7 @@ xref:sample_app/guidance.adoc[Good practices]
 
 ****
 
-xref:sample_app/snippets.adoc[Reusable code snippets for queries]
+xref:sample_app/snippets.adoc[Reusable code snippets]
 
 ****
 
