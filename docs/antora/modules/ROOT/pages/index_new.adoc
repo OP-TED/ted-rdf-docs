@@ -156,7 +156,7 @@ The Mapping Suites section is for those who wish to use a service that converts 
 
 ****
 
-image::mapping.png[xref=mapping_suite/methodology.adoc,width=51,height=51]
+image::methodology.png[xref=mapping_suite/methodology.adoc,width=51,height=51]
 
 //<<ODS:ROOT:sample_app:tutorials.adoc#, Methodology>>
 
@@ -179,7 +179,7 @@ image::mapping.png[xref=mapping_suite/index.adoc,width=51,height=51]
 
 ****
 
-image::mapping.png[xref=mapping_suite/mapping_suite_structure.adoc,width=51,height=51]
+image::mapping_suites.png[xref=mapping_suite/mapping_suite_structure.adoc,width=51,height=51]
 
 ****
 
@@ -190,7 +190,7 @@ image::mapping.png[xref=mapping_suite/mapping_suite_structure.adoc,width=51,heig
 
 ****
 
-image::mapping.png[xref=mapping_suite/repository_structure.adoc,width=51,height=51]
+image::repository.png[xref=mapping_suite/repository_structure.adoc,width=51,height=51]
 
 ****
 
@@ -201,7 +201,7 @@ image::mapping.png[xref=mapping_suite/repository_structure.adoc,width=51,height=
 
 ****
 
-image::mapping.png[xref=mapping_suite/toolchain.adoc,width=51,height=51]
+image::toolchain.png[xref=mapping_suite/toolchain.adoc,width=51,height=51]
 
 ****
 
@@ -211,7 +211,7 @@ image::mapping.png[xref=mapping_suite/toolchain.adoc,width=51,height=51]
 
 ****
 
-image::mapping.png[xref=mapping_suite/preparing-test-data.adoc,width=51,height=51]
+image::testdata.png[xref=mapping_suite/preparing-test-data.adoc,width=51,height=51]
 
 ****
 
