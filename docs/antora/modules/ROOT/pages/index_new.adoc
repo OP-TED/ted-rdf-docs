@@ -124,7 +124,7 @@ xref:sample_app/examples.adoc[Full query examples]
 === Try submitting a query in the SPARQL EndPoint
 
 [sidebar]
-.Choose a query below, these , copy it, and submit it into the SPARQL EndPoint to see the results!
+.Choose a query below, copy it, and paste it into the SPARQL EndPoint to see the results!
 
 --
 
