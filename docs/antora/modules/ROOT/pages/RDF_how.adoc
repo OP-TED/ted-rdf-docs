@@ -1,0 +1,55 @@
+:doctitle: Overview RDF Queries
+:doccode: sws-main-prod-020
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2024
+
+== How RDF Data is Queried
+
+RDF Data is queried using a query language called SPARQL, or .... SPARQL Query Language. RDF data is stored in what is called triples, e.g., if the database had a list of people and their phone numbers, the triples would look like this:
+
+John - HasNumber - 555-123456
+Janet - HasNumber - 555-345678
+
+and so on. The data looks a little like a sentence with a subject (Name), predicate (HasNumber) and object (Number).
+
+There are many triples stored in such a database, for Name, there would be the usual personal details categories as well as information specific to that database. Many objects would be associated with John or Janet via different predicates.
+
+A SPARQL query has a specific structure that is set out in several sections:
+
+#insert image#
+
+=== Prefixes
+
+The first part, often called the "prefixes", contains the vocabularies used in the query. Vocabularies are a key feature of RDF data and SPARQL and work as follows:
+
+RDF data is built on common or standard definitions of concepts that are organised into vocabularies on a specific category, such as business organisations, personal relationship information, location, finance, and in our case, public procurement. Once a particular vocabulary is published, other entities who find the concept definitions appropriate adopt the use of the vocabulary. If they do so, they name them in the prefixes section of the query so everyone knows which definitions/ vocabulary are being used.
+
+When constructing a query, the person creating it needs to declare that a certain vocabulary's terms and definitions are being referred to. This is important for all users of the database and query constructors know what the definitions are. 
+
+Not only do they need to list the vocabularies, but they give each one a short abbreviation or "prefix" which means that from then on in the query, the prefix can be used instead of typing  a long line of text each time you refer to a vocabulary.
+
+#e.g.s from pp#
+
+=== Data fields returned
+
+The second section lists all the fields (terms/ concepts) that the query should return. Each field here becomes a column containing the data returned. These can be the contents of a field, or the contents of a variable that is defined in the next section.
+
+=== Specifying the data
+
+The third section is used to specify data based on the semantic connections between the fields specified above, and any filters or criteria the query constructor wants to apply to them. Going back to names and numbers above, it could be to find names that don't have a number, so that the person querying can find the missing data and enter it, or it could be to find the names and numbers in a specific location, or of a particular age group.
+
+
+== Running a query
+
+RDF databases or triple stores provide a URI into which a querier can submit a query, and receive their results. It looks a little like a web address for searching, except that it queries the specific triplestore to which it is attached. There are a few EndPoint interface applications that RDF triplestore managers can adopt and Cellar uses the Virtuoso EndPoint application.
+
+== Getting familiar with the Data
+
+You can use the TED website, where public buyers submit their calls for tenders, to familiarise yourself with the kind of fields or concepts, and format of the data contained in the Cellar triplestore. There is a search facility on the site offering a few different ways of searching. The date returned here is notice-based, and on current activity in calling for tenders, and not historical data on all activities. but it will give you a good idea about the fields available to query. This is the xml data before its conversion into RDF.
+
+Back to the triple store data, bear in mind that the OP is working on converting more types of current notice data into RDF, and adding historical data, so the data available now may not be complete.
+
+There are also tutorials, examples and other information and resources to help you get started.
+
+

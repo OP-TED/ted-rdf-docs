@@ -1,0 +1,7 @@
+:doctitle: Overview Mapping
+:doccode: sws-main-prod-020
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2024
+
+include::partial$methodology/mapping-lifecycle.adoc[]

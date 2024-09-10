@@ -21,7 +21,7 @@ Learn how to query public procurement RDF data, and create mappings to transform
 ****
 Learn how to query Public Procurement data using SPARQL
 
-xref:sample_app/starting.adoc[How RDF data is queried]
+xref:RDF_how.adoc[How RDF data is queried]
 ****
 
 [.tile2]
@@ -30,7 +30,7 @@ xref:sample_app/starting.adoc[How RDF data is queried]
 ****
 Learn how to create mappings for your own XML to RDF conversion project
 
-xref:mapping_suite/index.adoc[How Mappings are created]
+xref:mapping_how.adoc[How Mappings are created]
 ****
 
 [.tile2]
@@ -73,7 +73,7 @@ This section on querying (reusing) public procurement data introduces the resour
 
 ****
 
-xref:sample_app/tutorials.adoc[Tutorials on RDF and SPARQL]
+xref:sample_app/tutorials.adoc[Tutorials on RDF, Linked Open data, and SPARQL]
 
 ****
 
