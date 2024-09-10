@@ -6,14 +6,16 @@
 
 == How RDF Data is Queried
 
-RDF Data is queried using a query language called SPARQL, or .... SPARQL Query Language. RDF data is stored in what is called triples, e.g., if the database had a list of people and their phone numbers, the triples would look like this:
+RDF Data is queried using a query language called SPARQL, or .... SPARQL Query Language. RDF data is stored in what is called triples e.g., if the database had a list of people and their phone numbers, the triples would look like this:
 
-John - HasNumber - 555-123456
-Janet - HasNumber - 555-345678
+Mary - HasNumber - 555-123456 +
+Janet - HasNumber - 555-345678 +
+John - HasNumber - 555-234567
 
-and so on. The data looks a little like a sentence with a subject (Name), predicate (HasNumber) and object (Number).
 
-There are many triples stored in such a database, for Name, there would be the usual personal details categories as well as information specific to that database. Many objects would be associated with John or Janet via different predicates.
+The data looks a little like a sentence with a subject (Name), predicate (HasNumber) and object (Number).
+
+There are many triples stored in such a database, for Name, there would be the usual personal details categories as well as information specific to that database (music/ sports/ job). Many objects could be associated with John or Janet via different predicates.
 
 A SPARQL query has a specific structure that is set out in several sections:
 
@@ -23,13 +25,20 @@ A SPARQL query has a specific structure that is set out in several sections:
 
 The first part, often called the "prefixes", contains the vocabularies used in the query. Vocabularies are a key feature of RDF data and SPARQL and work as follows:
 
-RDF data is built on common or standard definitions of concepts that are organised into vocabularies on a specific category, such as business organisations, personal relationship information, location, finance, and in our case, public procurement. Once a particular vocabulary is published, other entities who find the concept definitions appropriate adopt the use of the vocabulary. If they do so, they name them in the prefixes section of the query so everyone knows which definitions/ vocabulary are being used.
+RDF data is built on common or standard definitions of concepts that are organised into vocabularies on a specific category, such as business organisations, personal relationship information, location, finance, and in our case, https://docs.ted.europa.eu/epo-home/index.html[public procurement]. Once a particular vocabulary is published, other entities who find the concept definitions appropriate adopt the use of the vocabulary. If they do so, they name them in the prefixes section of the query so everyone knows which definitions/ vocabularies are being used.
 
 When constructing a query, the person creating it needs to declare that a certain vocabulary's terms and definitions are being referred to. This is important for all users of the database and query constructors know what the definitions are. 
 
-Not only do they need to list the vocabularies, but they give each one a short abbreviation or "prefix" which means that from then on in the query, the prefix can be used instead of typing  a long line of text each time you refer to a vocabulary.
+Not only do they need to list the vocabularies, but they give each one a short abbreviation or "prefix" which means that from then on in the query, the prefix can be used instead of typing  a long line of text each time you refer to a vocabulary. Some of the https://op.europa.eu/en/web/eu-vocabularies/e-procurement[adopted vocabularies] in public procurement queries are:
 
-#e.g.s from pp#
+//cations/dublin-core/dc-rdf/[dcterms]="http://purl.org/dc/terms/" +
+https://www.w3.org/ns/legacy_person[person]="http://www.w3.org/ns/person#" +
+https://www.w3.org/TR/vocab-org/[org]="http://www.w3.org/ns/org#" +
+https://lov.linkeddata.es/dataset/lov/vocabs/foaf[foaf]="http://xmlns.com/foaf/0.1/" +
+https://www.w3.org/TR/skos-reference/[skos]="http://www.w3.org/2004/02/skos/core#"
+
+The prefix before the = sign is the abbreviation of the URI after the = sign.
+
 
 === Data fields returned
 
