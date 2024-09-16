@@ -19,7 +19,7 @@ There are many triples stored in such a database, for Name, there would be the u
 
 A SPARQL query has a specific structure that is set out in several sections:
 
-#insert image#
+image::../images/query_sections.jpg[]
 
 === Prefixes
 
