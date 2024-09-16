@@ -141,12 +141,13 @@ https://publications.europa.eu/webapi/rdf/sparql[SPARQL EndPoint]
 [sidebar]
 .Is your query not working or are you not sure how to approach a certain concept?
 
+--
+
 [.text-center]
 Post your question on the #GitHub query discussion# and ask the community for help.
 --
 
 '''
-
 
 == Mapping Suites
 
