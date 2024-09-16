@@ -25,8 +25,11 @@ Below are some examples of SPARQL queries that you can try out yourself in the h
 
 
 
-== Query: How many contract awards (count), published on a chosen date, were awarded to suppliers who are SMEs of a particular country?
+== Query: How many contract awards (count), published on the 5 September 2023, were to German SMEs (suppliers)?
 {nbsp}
+
+(date and country chosen randomly)
+
 
 This SPARQL query counts the number of distinct procurement notices that meet specific criteria related to publication date, country code (Germany), and business size (SME).
 
@@ -79,8 +82,10 @@ WHERE {
 
 
 
-== Query:  Which notices were published by Buyers from a particular country on a given date ?
+== Query:  Which notices were published by buyers from Germany on 5 September 2023?
 {nbsp}
+
+(date and country chosen randomly)
 
 This SPARQL query retrieves the contract award notices published on TED on 05-09-2023 by German buyers.
 
@@ -130,7 +135,7 @@ WHERE {
 }
 
 
-== Query: List all winners published on a specified date
+== Query: List all contract winners published on the 31 August 2023
 {nbsp}
 
 This SPARQL query retrieves information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
@@ -213,7 +218,9 @@ WHERE {
 }
 
 
-== Query: List the contract values for contract awards published on a particular date. Order the results by value descending and limit the results to one row (which is the highest value contract due to the order).
+== Query: Return the highest value contract awarded on the 23 September 2023. 
+
+This query lists the contract values for contract awards published on this date, orders the results by value descending, and limit the results to one row (which is the highest value contract due to the order).
 {nbsp}
 
 This SPARQL query returns the procurement notice, its publication date, the corresponding lot, and the highest awarded amount along with the currency code for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the date and then querying the RDF data based on that value. The query returns the information in descending order of the awarded amount, limiting the results to one row, with the effect that only the highest value is displayed.

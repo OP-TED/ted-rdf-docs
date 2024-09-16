@@ -8,28 +8,28 @@
 //* xref:audience.adoc[Target Audience]
 * xref:ODS::index_new.adoc[New home]
 
-* [.separated]#**Querying public procurement notice data**#
-* xref:sample_app/index.adoc[Introduction]
+* [.separated]#**Querying public procurement RDF data**#
+
+* xref:sample_app/tutorials.adoc[Tutorials: RDF, ePO, LOD]
+* xref:sample_app/guidance.adoc[Guidance: Notice Data; Data Familiarisation]
+* xref:sample_app/snippets.adoc[Reusable Query Snippets]
+* xref:sample_app/scenarios.adoc[From Question to Query]
+* xref:sample_app/examples.adoc[Featured Query Examples]
+* xref:sample_app/ms_excel.adoc[Introducing the Excel Query Tool]
 
 
-* *Query Methods*
-
-* xref:sample_app/ms_excel.adoc[Querying using the supplied MS Excel template]
-* xref:sample_app/sparql_queries.adoc[Querying directly via the SPARQL EndPoint]
-// * xref:sample_app/jupyter_notebook_r.adoc[Querying using Jupyter Notebook and R]
-* xref:sample_app/jupyter_notebook_python.adoc[Querying using Jupyter Notebook and Python]
-* xref:sample_app/sa_glossary.adoc[Glossary]
+* https://publications.europa.eu/webapi/rdf/sparql[Submit a query in the Cellar SPARQL EndPoint]
+* https://github.com/OP-TED/ted-rdf-docs[Ask the Community for query help]
 
 * [.separated]#**Create XML to RDF mappings**#
-* xref:ODS::genref.adoc[General Reference]
-* xref:ODS::glossary.adoc[Glossary]
-* xref:mapping_suite/methodology.adoc[Methodology]
-* xref:mapping_suite/repository-structure.adoc[Repository structure]
+* xref:mapping_suite/methodology.adoc[Mapping Methodology]
 * xref:mapping_suite/index.adoc[Mapping suites]
 * xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite package structure]
-* xref:mapping_suite/code-list-resources.adoc[Code list mappings]
-* xref:mapping_suite/preparing-test-data.adoc[Data samples]
+* xref:mapping_suite/repository-structure.adoc[Repository structure]
 * xref:mapping_suite/toolchain.adoc[Toolchain]
+* xref:mapping_suite/code-list-resources.adoc[Code list mappings]
+* xref:mapping_suite/preparing-test-data.adoc[Test Data samples]
+
 
 
 ////
@@ -38,10 +38,10 @@
 * xref:query_central:starting.adoc[Starting out with SPARQL Queries]
 * xref:query_central:snippets.adoc[Reusable snippets for SPARQL Queries]
 * xref:query_central:query1.adoc[Query examples]
-////
+
 
 * [.separated]#**Reference**#
 * xref:mapping_suite/versioning.adoc[Versioning]
-
+////
 
 
