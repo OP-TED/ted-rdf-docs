@@ -115,13 +115,40 @@ xref:sample_app/scenarios.adoc[Turn your question into a Query]
 
 ****
 
-xref:sample_app/examples.adoc[Full query examples]
+image::methodology.png[xref=mapping_suite/methodology.adoc,width=51,height=51]
 
 ****
 
 --
 
 === Try submitting a query in the SPARQL EndPoint
+
+[.tile-container]
+--
+
+[.tile2]
+
+.Copy a Query
+
+****
+
+image::query_tile.png[xref=sample_app/examples.adoc,width=102,height=102]
+
+****
+
+[.tile2]
+
+.Paste a query into the Cellar SPARQL EndPoint
+
+****
+
+image::endpoint.png[link=https://publications.europa.eu/webapi/rdf/sparql,width=102,height=102]
+
+****
+
+
+
+--
 
 [sidebar]
 .Choose a query below, copy it, and paste it into the SPARQL EndPoint to see the results!
