@@ -144,7 +144,7 @@ https://publications.europa.eu/webapi/rdf/sparql[SPARQL EndPoint]
 --
 
 [.text-center]
-Post your question on the #GitHub query discussion# and ask the community for help.
+Post your question on the #RDF query discussion forum# on GitHub and ask the community for help.
 --
 
 '''
