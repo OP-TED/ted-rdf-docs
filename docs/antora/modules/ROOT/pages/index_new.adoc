@@ -73,7 +73,7 @@ This section on querying (reusing) public procurement data introduces the resour
 
 ****
 
-xref:sample_app/tutorials.adoc[Tutorials on RDF, Linked Open data, and SPARQL]
+xref:sample_app/tutorials.adoc[Tutorials]
 
 ****
 
@@ -83,7 +83,7 @@ xref:sample_app/tutorials.adoc[Tutorials on RDF, Linked Open data, and SPARQL]
 
 ****
 
-xref:sample_app/guidance.adoc[Guidance and good practices]
+xref:sample_app/guidance.adoc[Guidance and tips]
 
 ****
 
@@ -115,18 +115,18 @@ xref:sample_app/scenarios.adoc[Turn your question into a Query]
 
 ****
 
-image::methodology.png[xref=mapping_suite/methodology.adoc,width=51,height=51]
+xref:sample_app/sparql_queries.adoc[Examples]
 
 ****
 
 --
-
+'''
 === Try submitting a query in the SPARQL EndPoint
 
 [.tile-container]
 --
 
-[.tile2]
+[.tile]
 
 .Copy a Query
 
@@ -136,7 +136,7 @@ image::query_tile.png[xref=sample_app/examples.adoc,width=102,height=102]
 
 ****
 
-[.tile2]
+[.tile]
 
 .Paste a query into the Cellar SPARQL EndPoint
 
@@ -150,19 +150,7 @@ image::endpoint.png[link=https://publications.europa.eu/webapi/rdf/sparql,width=
 
 --
 
-[sidebar]
-.Choose a query below, copy it, and paste it into the SPARQL EndPoint to see the results!
-
---
-
-[.text-center]
-xref::sample_app/examples.adoc[Query examples]
-
-https://publications.europa.eu/webapi/rdf/sparql[SPARQL EndPoint]
-
---
-
-
+'''
 === Ask the community for help
 
 [sidebar]
