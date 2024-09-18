@@ -11,7 +11,7 @@ The diagram in <<mapping-lifecycle>> describes the complete mapping development 
 [#mapping-lifecycle]
 .Mapping development lifecycle
 [reftext="Figure {counter:figure}",align="center"]
-image::mapping_development_lifecycle.png[]
+image::../../images/mapping_development_lifecycle.png[]
 
 The phases are as follows:
 
