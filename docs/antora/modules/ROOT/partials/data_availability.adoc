@@ -10,8 +10,8 @@ Data is currently available from *Contract Award Notices* in the above time peri
 
 NOTE: Data, which includes that generated daily going forward and data going back in time is being constantly added to Cellar
 
-See below for an overview of notice types and where they fit in in the public procurement process
+Notice types and where they fit in in the public procurement process
 
-#Insert image#
+image::../images/notice_types.jpg[]
 
-For an overview of what data can be extracted from a Contract Award Notice, you can use the search facility on the TED website, choosing "Advanced Search" (All Notices), then "Result", and look at the contents of a Contract Award Notice.
+For an overview of what data can be extracted from a Contract Award Notice, you can use the search facility on the https://ted.europa.eu/en/[TED website], choosing "Advanced Search" (All Notices), then "Result", and look at the contents of a Contract Award Notice.
