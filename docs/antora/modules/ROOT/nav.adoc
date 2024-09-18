@@ -6,7 +6,7 @@
 
 * xref:ODS::index.adoc[Home]
 //* xref:audience.adoc[Target Audience]
-* xref:ODS::index_new.adoc[New home]
+//* xref:ODS::index_new.adoc[New home]
 
 * [.separated]#**Querying public procurement RDF data**#
 
