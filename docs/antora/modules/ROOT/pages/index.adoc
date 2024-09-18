@@ -135,7 +135,7 @@ include::partial$data_availability.adoc[]
 
 ****
 
-image::query_tile.png[xref=sample_app/examples.adoc,width=220]
+image::query_tile.png[xref=sample_app/examples.adoc,width=240]
 
 ****
 
