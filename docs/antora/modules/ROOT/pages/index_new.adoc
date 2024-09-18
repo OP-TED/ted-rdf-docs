@@ -83,7 +83,7 @@ xref:sample_app/tutorials.adoc[Tutorials]
 
 ****
 
-xref:sample_app/guidance.adoc[Guidance and tips]
+xref:sample_app/guidance.adoc[Tips and Guidance]
 
 ****
 
@@ -120,6 +120,9 @@ xref:sample_app/sparql_queries.adoc[Examples]
 ****
 
 --
+
+include::partial$data_availability.adoc[]
+
 '''
 === Try submitting a query in the SPARQL EndPoint
 

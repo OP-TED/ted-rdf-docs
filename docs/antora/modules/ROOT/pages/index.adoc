@@ -7,11 +7,11 @@
 
 == Introduction
 
-The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in the Publications Office's (OP) RDF https://en.wikipedia.org/wiki/Triplestore[triple store] named the "Cellar", and is publicly available (open). Making this data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, to name a few.
+The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in the Publications Office's (OP) RDF https://en.wikipedia.org/wiki/Triplestore[triple store] named the "Cellar", and is publicly available (open). Making this data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, and other interested parties.
 
-=== Reusing TED Open Data
+=== Querying TED Open Data
 
-Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and return data about EU public procurement. Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page]. 
+Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and return data about EU public procurement. Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
 
 This section on reusing public procurement data introduces the resources and guides available to help those interested in querying public procurement data improve their skills and write queries.
 

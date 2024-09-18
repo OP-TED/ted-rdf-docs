@@ -1,5 +1,12 @@
-:doctitle: Guidance for Query Success
+:doctitle:Tips for Query Success
 :doccode: sws-main-prod-020
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
+
+Ideas:
+
+* Data Available (time periods and from which notices)
+* Approaches to data discovery: ePO CM & glossaries/ query (finding the classes to search by and what the data looks like)
+* Some tips re understanding the data (Lots, why data returned might appear duplicated)
+* Tidying up data returned (returned data is raw..., data into information)
