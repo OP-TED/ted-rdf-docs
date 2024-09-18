@@ -10,7 +10,7 @@
 
 * [.separated]#**Querying public procurement RDF data**#
 
-* xref: sample_app/data_availability.adoc[Current Data Availability]
+* xref:sample_app/data_availability.adoc[Current Data Availability]
 * xref:sample_app/tutorials.adoc[Tutorials: RDF, ePO, LOD]
 * xref:sample_app/guidance.adoc[Guidance: Notice Data; Data Familiarisation]
 * xref:sample_app/snippets.adoc[Reusable Query Snippets]
