@@ -149,21 +149,27 @@ image::endpoint.png[link=https://publications.europa.eu/webapi/rdf/sparql,width=
 
 ****
 
-
-
 --
 
 '''
-=== Ask the community for help
+=== 
+[.tile-container]
+--
 
-[sidebar]
-.Is your query not working or are you not sure how to approach a certain concept?
+[.tile0]
+
+.Ask the community for help
+
+****
+
+Need help with a query or understanding the data?
+
+Post your question on the https://github.com/OP-TED/ted-rdf-docs[RDF query discussion forum] and ask the community for help
+
+****
 
 --
 
-[.text-center]
-Post your question on the #RDF query discussion forum# on GitHub and ask the community for help.
---
 
 '''
 
