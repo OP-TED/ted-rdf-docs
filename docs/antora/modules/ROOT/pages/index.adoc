@@ -135,7 +135,7 @@ include::partial$data_availability.adoc[]
 
 ****
 
-image::query_tile.png[xref=sample_app/examples.adoc,width=240]
+image::query_tile.png[xref=sample_app/examples.adoc,width=260]
 
 ****
 
@@ -162,7 +162,7 @@ image::endpoint.png[link=https://publications.europa.eu/webapi/rdf/sparql,width=
 
 ****
 
-Need help with a query or understanding the data?
+Need help with a query or understanding the data? +
 
 Post your question on the https://github.com/OP-TED/ted-rdf-docs[RDF query discussion forum] and ask the community for help
 
