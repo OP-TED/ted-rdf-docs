@@ -152,7 +152,7 @@ image::endpoint.png[link=https://publications.europa.eu/webapi/rdf/sparql,width=
 --
 
 '''
-=== 
+
 [.tile-container]
 --
 
