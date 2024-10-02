@@ -29,10 +29,12 @@
 * xref:samples:query1.adoc[Query 4:]
 * xref:samples:query1.adoc[Query 5:]
 
+////
 * [.separated]#**Submit a query**#
 * https://publications.europa.eu/webapi/rdf/sparql[Submit a query via the Cellar SPARQL EndPoint]
 * xref:connecting:excel.adoc[Submit a query using Excel]
 * xref:connecting:python.adoc[Submit a query using Python]
+////
 
 
 * [.separated]#**Mapping XML data to RDF**#
