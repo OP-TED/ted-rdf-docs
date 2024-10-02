@@ -5,7 +5,45 @@
 :docdate: September 2023
 
 [.text-center]
-= TED Open Data
+= Welcome to the TED Open Data Service
+
+[sidebar]
+****
+Learn how to query public procurement RDF data, and create mappings to transform XML into RDF
+****
+
+[.tile-container]
+--
+
+[.tile2]
+.Query RDF Data
+
+****
+Learn how to query Public Procurement data using SPARQL
+
+xref:RDF_how.adoc[How RDF data is queried]
+****
+
+[.tile2]
+.Create Mappings
+
+****
+Learn how to create mappings for your own XML to RDF conversion project
+
+xref:mapping_how.adoc[How Mappings are created]
+****
+
+[.tile2]
+.Get Started
+****
+Information and help to get you started
+
+<<Querying TED Open Data,Start creating RDF Queries>>
+
+<<Mapping Suites, Start creating Mapping Suites>>
+****
+--
+
 
 == What is the TED Open Data Service?
 
@@ -15,48 +53,7 @@ The TED Open Data Service continuously converts notices from the xml standard fo
 
 --
 
-[.tile-container]
---
-
-[.tile]
-.Query TED RDF Data
-
-****
-Query TED RDF data using SPARQL
-
-xref:querying:index.adoc[Learn how to query TED RDF data]
-****
-
-[.tile]
-.Connecting to TED RDF data
-
-****
-Connect to TED RDF data using Excel or Python
-
-xref:connecting:index.adoc[How to connect to TED RDF data]
-****
-
-[.tile]
-.Sample Queries
-****
-Use or adapt the sample SPARQL queries available
-
-xref:samples:index.adoc.adoc[Browse the sample queries and try them yourself]
-****
-
-[.tile]
-.Convert XML to RDF
-****
-Create mappings to convert XML data to RDF
-
-xref:mapping:index.adoc.adoc[learn how to convert XML data into RDF]
-
-****
---
-
-////
 === Querying TED Open Data
-
 [sidebar]
 --
 Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries, and benefit from data on EU public procurement. Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
@@ -282,7 +279,6 @@ image::testdata.png[xref=mapping_suite/preparing-test-data.adoc,width=51,height=
 
 --
 
-////
 
 
 
