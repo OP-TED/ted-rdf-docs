@@ -5,44 +5,49 @@
 :docdate: October 2023
 
 * xref:ODS::index.adoc[Home]
-//* xref:audience.adoc[Target Audience]
-//* xref:ODS::index_new.adoc[New home]
 
-* [.separated]#**Querying public procurement RDF data**#
-
-* xref:sample_app/data_availability.adoc[Current Data Availability]
-* xref:sample_app/tutorials.adoc[Tutorials: RDF, ePO, LOD]
-* xref:sample_app/guidance.adoc[Guidance: Notice Data; Data Familiarisation]
-* xref:sample_app/snippets.adoc[Reusable Query Snippets]
-* xref:sample_app/scenarios.adoc[From Question to Query]
-* xref:sample_app/examples.adoc[Featured Query Examples]
-* xref:sample_app/ms_excel.adoc[Introducing the Excel Query Tool]
+* [.separated]#**Query TED RDF data**#
+* xref:querying:index.adoc[How to create Query TED RDF data]
+* xref:querying:tutorials.adoc[Tutorials: RDF, ePO, LOD]
+* xref:querying:guidance.adoc[Guidance: Notice Data; Data Familiarisation]
+* xref:querying:snippets.adoc[Reusable Query Snippets]
+* xref:querying:scenarios.adoc[From Question to Query]
+* xref:samples:examples.adoc[Featured Query Examples]
 
 
-* https://publications.europa.eu/webapi/rdf/sparql[Submit a query in the Cellar SPARQL EndPoint]
+* [.separated]#**Connecting to TED RDF Data**#
+* xref:connecting:index.adoc[Connecting to TED RDF data]
+* xref:connecting:excel.adoc[Connect using Excel]
+* xref:connecting:python.adoc[Connect using Python]
+* xref:connecting:sparql.adoc[Paste your query directly into the SPARQL Endpoint]
+
+* [.separated]#**Sample SPARQL Queries**#
+* xref:samples:index.adoc[Browse the sample queries]
+* xref:samples:query1.adoc[Query 1:]
+* xref:samples:query1.adoc[Query 2:]
+* xref:samples:query1.adoc[Query 3:]
+* xref:samples:query1.adoc[Query 4:]
+* xref:samples:query1.adoc[Query 5:]
+
+* [.separated]#**Submit a query**#
+* https://publications.europa.eu/webapi/rdf/sparql[Submit a query via the Cellar SPARQL EndPoint]
+* xref:connecting:excel.adoc[Submit a query using Excel]
+* xref:connecting:python.adoc[Submit a query using Python]
+
+
+* [.separated]#**Mapping XML data to RDF**#
+* xref:mapping:index.adoc[Overview of mapping XML to RDF]
+* xref:mapping:mapping_how.adoc[How to create mappings]
+* xref:mapping:methodology.adoc[Methodology]
+* xref:mapping:toolchain.adoc[Toolchain]
+* xref:mapping:genref.adoc[General Reference]
+* xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
+* xref:mapping:repository-structure.adoc[Repository structure]
+* xref:mapping:toolchain.adoc[Toolchain]
+* xref:mapping:code-list-resources.adoc[Code list mappings]
+* xref:mapping:preparing-test-data.adoc[Test Data samples]
+
+* [.separated]#**Information and Resources**#
+* xref:samples:data_availability.adoc[Current Data Availability]
 * https://github.com/OP-TED/ted-rdf-docs[Ask the Community for query help]
-
-* [.separated]#**Create XML to RDF mappings**#
-* xref:mapping_suite/methodology.adoc[Mapping Methodology]
-* xref:mapping_suite/index.adoc[Mapping suites]
-* xref:mapping_suite/mapping-suite-structure.adoc[Mapping suite package structure]
-* xref:mapping_suite/repository-structure.adoc[Repository structure]
-* xref:mapping_suite/toolchain.adoc[Toolchain]
-* xref:mapping_suite/code-list-resources.adoc[Code list mappings]
-* xref:mapping_suite/preparing-test-data.adoc[Test Data samples]
-
-
-
-////
-* [.separated]#**Query Central**#
-* xref:query_central:index.adoc[Query Central]
-* xref:query_central:starting.adoc[Starting out with SPARQL Queries]
-* xref:query_central:snippets.adoc[Reusable snippets for SPARQL Queries]
-* xref:query_central:query1.adoc[Query examples]
-
-
-* [.separated]#**Reference**#
-* xref:mapping_suite/versioning.adoc[Versioning]
-////
-
-
+* xref:mapping:versioning.adoc[Versioning]

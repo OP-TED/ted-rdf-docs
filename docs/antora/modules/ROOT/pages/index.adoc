@@ -11,9 +11,12 @@
 
 [sidebar]
 --
-The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website into RDF format. The RDF data is stored in the Publications Office's (OP) RDF https://en.wikipedia.org/wiki/Triplestore[triple store] named the "Cellar", and is publicly available (open). Making this data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, to name a few.
+The TED Open Data Service continuously converts notices from the XML standard form format available on the TED Website into RDF format. The RDF data is stored in the Publications Office's (OP) triple store named the "Cellar", and is publicly available or "open". 
+
+Making TED data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, to name a few.
 
 --
+
 
 [.tile-container]
 --
@@ -22,34 +25,35 @@ The TED Open Data Service continuously converts notices from the xml standard fo
 .Query TED RDF Data
 
 ****
-Query TED RDF data using SPARQL
+Querying TED RDF data using SPARQL
 
-xref:querying:index.adoc[Learn how to query TED RDF data]
+xref:querying:index.adoc[Resources and links for querying TED RDF data]
 ****
 
 [.tile]
-.Connecting to TED RDF data
+.Connect to TED RDF data
 
 ****
-Connect to TED RDF data using Excel or Python
+How to connect to TED RDF data using Excel or Python
 
 xref:connecting:index.adoc[How to connect to TED RDF data]
 ****
 
 [.tile]
-.Sample Queries
-****
-Use or adapt the sample SPARQL queries available
+.View Sample Queries
 
-xref:samples:index.adoc.adoc[Browse the sample queries and try them yourself]
+****
+Browse the sample queries provided
+
+xref:samples:index.adoc[Use or adapt the sample SPARQL queries available]
 ****
 
 [.tile]
-.Convert XML to RDF
+.Mapping Suites (XML to RDF)
 ****
-Create mappings to convert XML data to RDF
+Create mappings to convert XML data into RDF
 
-xref:mapping:index.adoc.adoc[learn how to convert XML data into RDF]
+xref:mapping:index.adoc[Convert XML data into RDF]
 
 ****
 --

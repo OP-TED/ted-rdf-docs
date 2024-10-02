@@ -1,0 +1,54 @@
+:doctitle: Navigation
+:doccode: sws-main-prod-004
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
+
+* xref:ODS::index.adoc[Home]
+
+* [.separated]#**Query TED RDF data**#
+* xref:querying:index.adoc[How to create Query TED RDF data]
+** xref:querying:tutorials.adoc[Tutorials: RDF, ePO, LOD]
+** xref:querying:guidance.adoc[Guidance: Notice Data; Data Familiarisation]
+** xref:querying:snippets.adoc[Reusable Query Snippets]
+** xref:querying:scenarios.adoc[From Question to Query]
+** xref:samples:examples.adoc[Featured Query Examples]
+
+
+* [.separated]#**Connecting to TED RDF Data**#
+** xref:connecting:index.adoc[Connecting to TED RDF data]
+** xref:connecting:excel.adoc[Connect using Excel]
+** xref:connecting:python.adoc[Connect using Python]
+** xref:connecting:sparql.adoc[Paste your query directly into the SPARQL Endpoint]
+
+* [.separated]#**Sample SPARQL Queries**#
+** xref:samples:index.adoc[Browse the sample queries]
+** xref:samples:query1.adoc[Query 1:]
+*I xref:samples:query1.adoc[Query 2:]
+** xref:samples:query1.adoc[Query 3:]
+** xref:samples:query1.adoc[Query 4:]
+** xref:samples:query1.adoc[Query 5:]
+
+** [.separated]#**Submit a query**#
+*** https://publications.europa.eu/webapi/rdf/sparql[Submit a query via the Cellar SPARQL EndPoint]
+*** xref:connecting:excel.adoc[Submit a query using Excel]
+*** xref:connecting:python.adoc[Submit a query using Python]
+
+
+* [.separated]#**Mapping XML data to RDF**#
+** xref:mapping:index.adoc[Overview of mapping XML to RDF]
+** xref:mapping:mapping_how.adoc[How to create mappings]
+** xref:mapping:methodology.adoc[Methodology]
+** xref:mapping:toolchain.adoc[Toolchain]
+** xref:mapping:genref.adoc[General Reference]
+** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
+** xref:mapping:repository-structure.adoc[Repository structure]
+** xref:mapping:toolchain.adoc[Toolchain]
+** xref:mapping:code-list-resources.adoc[Code list mappings]
+** xref:mapping:preparing-test-data.adoc[Test Data samples]
+
+* [.separated]#**Information and Resources**#
+** xref:samples:data_availability.adoc[Current Data Availability]
+** https://github.com/OP-TED/ted-rdf-docs[Ask the Community for query help]
+** xref:mapping:versioning.adoc[Versioning]
