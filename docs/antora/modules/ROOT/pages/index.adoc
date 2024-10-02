@@ -49,7 +49,7 @@ xref:samples:index.adoc[Use or adapt the sample SPARQL queries available]
 ****
 
 [.tile]
-.Mapping Suites (XML to RDF)
+.Create Mapping Suites (XML to RDF)
 ****
 Create mappings to convert XML data into RDF
 

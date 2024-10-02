@@ -7,12 +7,12 @@
 * xref:ODS::index.adoc[Home]
 
 * [.separated]#**Query TED RDF data**#
-* xref:querying:index.adoc[How to create Query TED RDF data]
+* xref:querying:index.adoc[How to query TED RDF data]
 * xref:querying:tutorials.adoc[Tutorials: RDF, ePO, LOD]
-* xref:querying:guidance.adoc[Guidance: Notice Data; Data Familiarisation]
-* xref:querying:snippets.adoc[Reusable Query Snippets]
-* xref:querying:scenarios.adoc[From Question to Query]
-* xref:samples:examples.adoc[Featured Query Examples]
+* xref:querying:guidance.adoc[Guidance: notice data, data familiarisation]
+* xref:querying:snippets.adoc[Reusable query snippets]
+* xref:querying:scenarios.adoc[From question to query]
+* xref:samples:examples.adoc[Featured query examples]
 
 
 * [.separated]#**Connecting to TED RDF Data**#
