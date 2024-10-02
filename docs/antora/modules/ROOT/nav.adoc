@@ -1,18 +1,13 @@
-:doctitle: Navigation
-:doccode: sws-main-prod-004
-:author: NPJ
-:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
-:docdate: October 2023
 
 * xref:ODS::index.adoc[Home]
 
 * [.separated]#**Query TED RDF data**#
 * xref:querying:index.adoc[How to query TED RDF data]
-* xref:querying:tutorials.adoc[Tutorials: RDF, ePO, LOD]
-* xref:querying:guidance.adoc[Guidance: notice data, data familiarisation]
-* xref:querying:snippets.adoc[Reusable query snippets]
-* xref:querying:scenarios.adoc[From question to query]
-* xref:samples:examples.adoc[Featured query examples]
+** xref:querying:tutorials.adoc[Tutorials: RDF, ePO, LOD]
+** xref:querying:guidance.adoc[Guidance: notice data, data familiarisation]
+** xref:querying:snippets.adoc[Reusable query snippets]
+** xref:querying:scenarios.adoc[From question to query]
+** xref:samples:examples.adoc[Featured query examples]
 
 
 * [.separated]#**Connecting to TED RDF Data**#

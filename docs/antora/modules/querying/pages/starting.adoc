@@ -32,7 +32,7 @@ RDF data has a specific format made up of a "semantic triple", explained in more
 
 There are many good online resources on SPARQL and constructing SPARQL queries:
 
- * The  https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/RDF/index.html[info sessions on the eProcurement Ontology for learning about RDF and SPARQL can be found in the ePO Docs.]
+ * The  https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/RDF/index.html[info sessions on the eProcurement Ontology for learning about RDF and SPARQL] can be found in the ePO Docs.
  * https://www.w3.org/TR/sparql11-query/[W3C]
  * YouTube lectures:
  ** https://www.youtube.com/watch?v=zkr_2HR4Pcs&list=PLakGkiOE3_q8Fq46-TSE-Te1cvx8yLLUF[Linked Data and SPARQL]
