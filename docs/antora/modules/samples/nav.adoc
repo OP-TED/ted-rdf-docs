@@ -25,8 +25,8 @@
 * [.separated]#**Sample SPARQL Queries**#
 ** xref:samples:index.adoc[Browse the sample queries]
 ** xref:samples:query1.adoc[Query 1:]
-*I xref:samples:query1.adoc[Query 2:]
-** xref:samples:query1.adoc[Query 3:]
+*I xref:samples:query2.adoc[Query 2:]
+** xref:samples:query3.adoc[Query 3:]
 ** xref:samples:query1.adoc[Query 4:]
 ** xref:samples:query1.adoc[Query 5:]
 
