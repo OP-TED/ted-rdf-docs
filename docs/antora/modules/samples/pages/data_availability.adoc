@@ -1,3 +1,3 @@
 :doctitle: Data Available
 
-include::partial$data_availability.adoc[]
+//include::partial$data_availability.adoc[]
