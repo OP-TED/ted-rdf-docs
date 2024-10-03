@@ -21,8 +21,8 @@
 ** xref:samples:query1.adoc[Query 1:]
 ** xref:samples:query1.adoc[Query 2:]
 ** xref:samples:query1.adoc[Query 3:]
-** xref:samples:query1.adoc[Query 4:]
-** xref:samples:query1.adoc[Query 5:]
+//** xref:samples:query1.adoc[Query 4:]
+//** xref:samples:query1.adoc[Query 5:]
 
 ////
 * [.separated]#**Submit a query**#
