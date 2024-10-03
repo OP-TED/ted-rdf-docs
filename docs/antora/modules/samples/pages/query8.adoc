@@ -1,4 +1,4 @@
-:doctitle: Query1: xyz
+:doctitle: Who are the winners for a given date?
 :doccode: ods-main-prod-201
 
 :author: NPJ
@@ -16,7 +16,55 @@
 * Constructing the query
 
 == The Query
+[SPARQL,console]
+----
 
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+SELECT DISTINCT
+?NoticeID
+?NoticePublicationDate
+?ProcedureNr
+?LotNr
+?WinnerLegalName
+?WinnerCountryCode
+?LotAwardedValue
+?LotAwardedValueCurrency
+?LotURI
+?NoticeURI
+WHERE {
+    VALUES ?NoticePublicationDate {
+        "20230831"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+    ?NoticeURI a epo:ResultNotice;
+               epo:hasPublicationDate ?NoticePublicationDate;
+               epo:hasID / epo:hasIdentifierValue ?NoticeID ;
+                           epo:refersToLot ?LotURI.
+    ?LotURI a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?LotURI;
+                     a epo:LotAwardOutcome;
+                     epo:hasAwardedValue ?LotAwardedValueURI ;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?LotAwardedValueURI a epo:MonetaryValue;
+                        epo:hasAmountValue ?LotAwardedValue;
+                        epo:hasCurrency ?LotAwardedValueCurrency.
+    OPTIONAL {
+        ?LotURI epo:hasID / epo:hasIdentifierValue ?LotNr .
+    }
+    ?ProcedureURI epo:hasProcurementScopeDividedIntoLot ?LotURI;
+                  a epo:Procedure ;
+                  epo:hasID / epo:hasIdentifierValue ?ProcedureNr .
+}
+----
 
 * Running the Query
 * Examining and refining the query results

@@ -1,4 +1,4 @@
-:doctitle: Query1: xyz
+:doctitle: How many tenders foresee subcontracting for a given date?
 :doccode: ods-main-prod-201
 
 :author: NPJ
@@ -16,7 +16,25 @@
 * Constructing the query
 
 == The Query
+[SPARQL,console]
+----
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 
+SELECT COUNT DISTINCT(?Notice) WHERE {
+
+     VALUES ?NoticePublicationDate  {
+        "20230905"
+    }
+
+    ?Notice epo:hasPublicationDate ?NoticePublicationDate .
+
+    ?Notice epo:refersToLot ?Lot .
+    ?Tender epo:isSubmittedForLot ?Lot .
+    ?Tender epo:foreseesSubcontracting ?Subcontrating .
+
+}
+
+----
 
 * Running the Query
 * Examining and refining the query results

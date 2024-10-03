@@ -1,4 +1,4 @@
-:doctitle: Query1: xyz
+:doctitle: Query notice by id
 :doccode: ods-main-prod-201
 
 :author: NPJ
@@ -17,6 +17,14 @@
 
 == The Query
 
+[source]
+----
+SELECT * WHERE {
+    graph <http://data.europa.eu/a4g/resource/2023/536107_2023> {
+        ?s ?p ?o .
+    }
+}
+----
 
 * Running the Query
 * Examining and refining the query results

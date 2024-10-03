@@ -1,4 +1,4 @@
-:doctitle: Query1: xyz
+:doctitle: How many Public Procurement METS packages have been published lately?
 :doccode: ods-main-prod-201
 
 :author: NPJ
@@ -17,6 +17,26 @@
 
 == The Query
 
+[source]
+----
+PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX cmr: <http://publications.europa.eu/ontology/cdm/cmr#>
+PREFIX purl: <http://purl.org/dc/elements/1.1/>
+
+SELECT COUNT(*) as ?notices_published_in_2023 WHERE {
+    ?work a <http://publications.europa.eu/ontology/cdm#procurement_public> .
+    ?work cdm:work_date_document ?dd.
+    ?work owl:sameAs ?psi.
+    ?work cmr:creationDate ?creation.
+    ?work cmr:lastModificationDate ?lastmodif .
+    ?expr cdm:expression_belongs_to_work ?work .
+    ?expr cdm:expression_uses_language ?lang .
+    ?manif cdm:manifestation_manifests_expression ?expr .
+    ?manif cdm:manifestation_type ?format.
+    ?item cdm:item_belongs_to_manifestation ?manif.
+    FILTER (str(?lastmodif) > '2023-08-09' && str(?lastmodif) < '2023-12-31')
+}
+----
 
 * Running the Query
 * Examining and refining the query results

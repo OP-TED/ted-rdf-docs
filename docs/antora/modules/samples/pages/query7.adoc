@@ -1,4 +1,4 @@
-:doctitle: Query1: xyz
+:doctitle: Which are the values of tenders for a given day?
 :doccode: ods-main-prod-201
 
 :author: NPJ
@@ -16,7 +16,31 @@
 * Constructing the query
 
 == The Query
+[SPARQL,console]
+----
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
 
+SELECT DISTINCT
+?Notice
+?PublicationDate
+?AwardetValue
+?LotAwardedValueCurrencyURI
+where {
+
+    VALUES ?PublicationDate {
+        "20230911"
+    }
+
+    ?Notice epo:hasPublicationDate ?PublicationDate;
+            epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot ;
+                     epo:hasAwardedValue / epo:hasAmountValue ?AwardetValue;
+                     epo:hasAwardedValue / epo:hasCurrency ?LotAwardedValueCurrencyURI.
+
+}
+
+----
 
 * Running the Query
 * Examining and refining the query results
