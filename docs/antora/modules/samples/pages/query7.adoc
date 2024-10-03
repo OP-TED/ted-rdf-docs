@@ -16,7 +16,8 @@
 * Constructing the query
 
 == The Query
-[SPARQL,console]
+
+[source]
 ----
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
