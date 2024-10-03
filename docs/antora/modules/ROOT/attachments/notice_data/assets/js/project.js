@@ -731,7 +731,7 @@ efph:{
 eflh:[],
 iflbx:false,
 ipflbx:true,
-text:'{"blocks":[{"key":"dgjjf","text":"Public Procurement Notice Data","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":30,"style":"tablet-fontSize:52"},{"offset":0,"length":30,"style":"fontStyle:normal"},{"offset":0,"length":30,"style":"hlnkt:wp"},{"offset":0,"length":30,"style":"defaultTextStrokeWidth:1px"},{"offset":0,"length":30,"style":"WebkitTextStrokeColor:#F1EEE6"},{"offset":0,"length":30,"style":"textOutlineEnable:false"},{"offset":0,"length":30,"style":"opacity:1"},{"offset":0,"length":30,"style":"defaultTextStrokeColor:#F1EEE6"},{"offset":0,"length":30,"style":"hlnke:true"},{"offset":0,"length":30,"style":"defaultTextShadow:none"},{"offset":0,"length":30,"style":"textShadow:none"},{"offset":0,"length":30,"style":"textShadowX:0px"},{"offset":0,"length":30,"style":"fontStretch:normal"},{"offset":0,"length":30,"style":"fontType:regular"},{"offset":0,"length":30,"style":"defaultBackgroundColor:#E8D01B"},{"offset":0,"length":30,"style":"textShadowY:4px"},{"offset":0,"length":30,"style":"letterSpacing:3%"},{"offset":0,"length":30,"style":"textShadowColor:#F1EEE61F"},{"offset":0,"length":30,"style":"textHighlightEnable:false"},{"offset":0,"length":30,"style":"textTransform:none"},{"offset":0,"length":30,"style":"desktop-fontSize:60"},{"offset":0,"length":30,"style":"color:#020C1C"},{"offset":0,"length":30,"style":"lineHeight:110%"},{"offset":0,"length":30,"style":"textShadowOpacity:none"},{"offset":0,"length":30,"style":"textDecoration:none"},{"offset":0,"length":30,"style":"borderBottomStyle:none"},{"offset":0,"length":30,"style":"textShadowEnable:false"},{"offset":0,"length":30,"style":"hlnk:"},{"offset":0,"length":30,"style":"fontWeight:normal"},{"offset":0,"length":30,"style":"textShadowBlur:8px"},{"offset":0,"length":30,"style":"fontFamily:Arial"},{"offset":0,"length":30,"style":"overridden:false"},{"offset":0,"length":30,"style":"WebkitTextStrokeWidth:1px"},{"offset":0,"length":30,"style":"backgroundColor:unset"},{"offset":0,"length":30,"style":"mobile-fontSize:44"}],"entityRanges":[],"data":{"listDepth":"0","listColor":"#666666","verticalAlignMarginBottom":"0px","listIndent":"100%","overridden":"false","marginLeft":"0px","verticalAlignMarginTop":"auto","listType":"S_Bullets08","textAlign":"center","marginBottom":"0%","presetId":"text-heading-2","listSize":"100%"}}],"entityMap":{}}',
+text:'{"blocks":[{"key":"dgjjf","text":"Public Procurement Notice Data","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":30,"style":"hlnkt:wp"},{"offset":0,"length":30,"style":"fontStyle:normal"},{"offset":0,"length":30,"style":"WebkitTextStrokeColor:#F1EEE6"},{"offset":0,"length":30,"style":"defaultTextStrokeWidth:1px"},{"offset":0,"length":30,"style":"textOutlineEnable:false"},{"offset":0,"length":30,"style":"letterSpacing:-4%"},{"offset":0,"length":30,"style":"opacity:1"},{"offset":0,"length":30,"style":"defaultTextStrokeColor:#F1EEE6"},{"offset":0,"length":30,"style":"hlnke:true"},{"offset":0,"length":30,"style":"defaultTextShadow:none"},{"offset":0,"length":30,"style":"textShadow:none"},{"offset":0,"length":30,"style":"textShadowX:0px"},{"offset":0,"length":30,"style":"fontStretch:normal"},{"offset":0,"length":30,"style":"fontType:regular"},{"offset":0,"length":30,"style":"defaultBackgroundColor:#E8D01B"},{"offset":0,"length":30,"style":"textShadowY:4px"},{"offset":0,"length":30,"style":"textShadowColor:#F1EEE61F"},{"offset":0,"length":30,"style":"desktop-fontSize:80"},{"offset":0,"length":30,"style":"textHighlightEnable:false"},{"offset":0,"length":30,"style":"textTransform:none"},{"offset":0,"length":30,"style":"color:#020C1C"},{"offset":0,"length":30,"style":"lineHeight:110%"},{"offset":0,"length":30,"style":"textShadowOpacity:none"},{"offset":0,"length":30,"style":"overridden:true"},{"offset":0,"length":30,"style":"textDecoration:none"},{"offset":0,"length":30,"style":"borderBottomStyle:none"},{"offset":0,"length":30,"style":"mobile-fontSize:60"},{"offset":0,"length":30,"style":"textShadowEnable:false"},{"offset":0,"length":30,"style":"hlnk:"},{"offset":0,"length":30,"style":"fontWeight:normal"},{"offset":0,"length":30,"style":"textShadowBlur:8px"},{"offset":0,"length":30,"style":"fontFamily:Arial"},{"offset":0,"length":30,"style":"tablet-fontSize:72"},{"offset":0,"length":30,"style":"backgroundColor:unset"},{"offset":0,"length":30,"style":"WebkitTextStrokeWidth:1px"}],"entityRanges":[],"data":{"listDepth":"0","listColor":"#666666","verticalAlignMarginBottom":"0px","listIndent":"100%","overridden":"true","marginLeft":"0px","verticalAlignMarginTop":"auto","listType":"S_Bullets08","textAlign":"left","marginBottom":"0%","presetId":"text-heading-2","listSize":"100%"}}],"entityMap":{}}',
 autoGrow:false,
 tbqt:0,
 trin:0,
@@ -33162,11 +33162,11 @@ bookmarks:[]
 ,
 qs:'',
 iph:{
-3163:{
+3141:{
 ts:''
 }
 ,
-3141:{
+3163:{
 ts:''
 }
 
@@ -62675,15 +62675,6 @@ ipiv:{
 
 }
 ,{
-ip:'dr/0558.png',
-ipiv:{
-360:1,
-600:1,
-972:1
-}
-
-}
-,{
 ip:'dr/0720.svg',
 ipiv:{
 360:1,
@@ -62721,14 +62712,14 @@ resources:['dr/0419.png']
 ,{
 slideID:4,
 ResourceList:{
-resources:['dr/01290.svg','dr/01303.svg','dr/01325.jpg','dr/01453.jpg','dr/01577.jpg','dr/01702.jpg','dr/01827.jpg','dr/01952.jpg','dr/02075.svg']
+resources:['dr/01325.jpg','dr/01453.jpg','dr/01577.jpg','dr/01702.jpg','dr/01827.jpg','dr/01952.jpg']
 }
 
 }
 ,{
 slideID:5,
 ResourceList:{
-resources:['dr/01290.svg','dr/01303.svg','dr/02075.svg','dr/02311.png','dr/02438.png','dr/02562.png','dr/02686.png','dr/02810.png','dr/02934.png']
+resources:['dr/02311.png','dr/02438.png','dr/02562.png','dr/02686.png','dr/02810.png','dr/02934.png']
 }
 
 }
@@ -62742,14 +62733,7 @@ resources:['dr/03306.png','dr/03434.png','dr/03559.png','dr/03683.jpg','dr/03807
 ,{
 slideID:7,
 ResourceList:{
-resources:['dr/01290.svg','dr/01303.svg','dr/01577.jpg','dr/02075.svg','dr/02562.png','dr/02686.png','dr/02810.png','dr/02934.png','dr/04171.jpg']
-}
-
-}
-,{
-slideID:9,
-ResourceList:{
-resources:['dr/0419.png']
+resources:['dr/01577.jpg','dr/02562.png','dr/02686.png','dr/02810.png','dr/02934.png','dr/04171.jpg']
 }
 
 }

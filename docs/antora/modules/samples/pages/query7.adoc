@@ -17,6 +17,8 @@
 
 == The Query
 
+TIP: Use the copy icon on the top right of the source block to copy the query to the clipboard
+
 [source]
 ----
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>

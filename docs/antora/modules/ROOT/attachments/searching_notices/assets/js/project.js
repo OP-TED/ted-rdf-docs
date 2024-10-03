@@ -28074,14 +28074,7 @@ resources:['dr/0419.png']
 ,{
 slideID:6,
 ResourceList:{
-resources:['dr/02105.png','dr/02129.png','dr/02256.png','dr/02380.png','dr/02504.png','dr/02628.png','dr/02752.png','dr/02875.svg']
-}
-
-}
-,{
-slideID:8,
-ResourceList:{
-resources:['dr/0419.png']
+resources:['dr/02105.png','dr/02129.png','dr/02256.png','dr/02380.png','dr/02504.png','dr/02628.png','dr/02752.png']
 }
 
 }
