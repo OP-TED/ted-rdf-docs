@@ -1,4 +1,4 @@
-:doctitle: Querying EU public procurement Data
+:doctitle: Querying EU Public Procurement Data
 :doccode: sws-main-prod-020
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
@@ -6,37 +6,33 @@
 
 Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries, and benefit from data on EU public procurement. 
 
-This section on querying public procurement data introduces the resources and guides available to help those interested improve their querying knowledge and skills.
+This section on querying public procurement data introduces the resources and guides available to help those interested improve their public procurement knowledge and querying skills.
 
-**xref:querying:starting.adoc[Getting Started] +
+xref:querying:starting.adoc[Getting Started] +
 An Overview of how to query RDF data
 
-** xref:querying:RDF_how.adoc[How to query TED RDF data] +
+xref:querying:RDF_how.adoc[How to query TED RDF data] +
 An Overview of how to query RDF data
 
-** xref:querying:tutorials.adoc[Online training resources] +
-Online resources for learning RRDF, SPARQL
+xref:querying:online_training.adoc[Online training resources] +
+Online resources for learning RRDF and SPARQL
 
-** xref:querying:notice_data.adoc[Notice data] +
+xref:querying:notice_data.adoc[Notice data] +
 The Information and fields in Notice data
 
-** xref:querying:epo.adoc[eProcurement Ontology resources] +
+xref:querying:epo.adoc[eProcurement Ontology resources] +
 The eProcurement Ontology Resources
 
-** xref:querying:snippets.adoc[Reusable query snippets] +
+xref:querying:snippets.adoc[Reusable query snippets] +
 Reusable SPARQL snippets for frequently used classes
 
-** xref:querying:scenarios.adoc[Scenarios: question to query] +
-Query Scenarios: from question to query
+xref:querying:scenarios.adoc[Scenarios: question to query] +
+Query Scenarios: from Question to Query
 
-** xref:samples:index.adoc[Browse the sample queries] +
+xref:samples:index.adoc[Browse the sample queries] +
 Sample Queries to get you started
 
-
 Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
-
-
-
 
 include::partial$feedback.adoc[]
 

@@ -2,9 +2,9 @@
 * xref:ODS::index.adoc[Home]
 
 * [.separated]#**Querying TED Open data**#
-** xref:querying:index.adoc[TED Open Data]
+* xref:querying:index.adoc[TED Open Data]
 ** xref:querying:starting.adoc[Getting Started]
-** xref:querying:RDF_how.adoc[How to query TED RDF data]
+** xref:querying:RDF_how.adoc[How to query TED Open data]
 ** xref:querying:structure.adoc[SPARQL Query Structure]
 ** xref:querying:tutorials.adoc[Online training resources]
 ** xref:querying:notice_data.adoc[Public procurement data]
@@ -13,8 +13,8 @@
 ** xref:querying:scenarios.adoc[Scenarios: question to query]
 ** xref:samples:index.adoc[Browse the sample queries]
 
-* [.separated]#**Connecting to TED Open Data**#
-** xref:connecting:index.adoc[Connecting to TED RDF data]
+* [.separated]#**Connecting to TED Open data**#
+* xref:connecting:index.adoc[Connection Methods]
 ** xref:connecting:sparql.adoc[Paste your query directly into the SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Python]
@@ -34,14 +34,13 @@
 
 
 * [.separated]#**Mapping XML data to RDF**#
-* xref:mapping:index.adoc[Overview of mapping XML to RDF]
+* xref:mapping:index.adoc[Mappings and Mapping Suites]
 ** xref:mapping:mapping_how.adoc[How to create mappings]
 ** xref:mapping:methodology.adoc[Methodology]
 ** xref:mapping:toolchain.adoc[Toolchain]
 ** xref:mapping:genref.adoc[General Reference]
 ** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
 ** xref:mapping:repository-structure.adoc[Repository structure]
-** xref:mapping:toolchain.adoc[Toolchain]
 ** xref:mapping:code-list-resources.adoc[Code list mappings]
 ** xref:mapping:preparing-test-data.adoc[Test Data samples]
 

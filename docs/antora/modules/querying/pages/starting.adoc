@@ -22,7 +22,7 @@ In the left-hand menu there are links to resources to help you get started.
 
 There are also some sample queries that can be accessed via the menu on the left, and a description of the methods ways of running SPARQL queries. The example queries can be copied and pasted, as is, into any of the different query methods.
 
-
+////
 == Converting notice data into RDF format
 
 On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well, who wish to buy or supply goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
@@ -31,5 +31,7 @@ As part of the European Commission's strategy for data reuse and transparency, n
 
 The data, stored in the "Cellar", the RDF triple store (database) maintained by the Publications Office, is open to anyone who wishes to query notice data as Linked Open Data using the query methods found in the menu on the left under "Connecting to RDF data".
 
-The section on creating mappings to convert XML data to RDF can also be found in the left-hand menu. 
+The section on creating mappings to convert XML data to RDF can also be found in the left-hand menu.
+
+////
 
