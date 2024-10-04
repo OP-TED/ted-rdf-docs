@@ -1,23 +1,27 @@
 
 * xref:ODS::index.adoc[Home]
 
-* [.separated]#**Query TED RDF data**#
-* xref:querying:index.adoc[How to query TED RDF data]
-** xref:querying:tutorials.adoc[Tutorials: RDF, ePO, LOD]
-** xref:querying:guidance.adoc[Guidance: notice data, data familiarisation]
+* [.separated]#**Querying TED Open data**#
+** xref:querying:index.adoc[TED Open Data]
+** xref:querying:starting.adoc[Getting Started]
+** xref:querying:RDF_how.adoc[How to query TED RDF data]
+** xref:querying:structure.adoc[SPARQL Query Structure]
+** xref:querying:tutorials.adoc[Online training resources]
+** xref:querying:notice_data.adoc[Public procurement data]
+** xref:querying:epo.adoc[eProcurement Ontology resources]
 ** xref:querying:snippets.adoc[Reusable query snippets]
-** xref:querying:scenarios.adoc[From question to query]
-** xref:samples:examples.adoc[Featured query examples]
+** xref:querying:scenarios.adoc[Scenarios: question to query]
+** xref:samples:index.adoc[Browse the sample queries]
 
-
-* [.separated]#**Connecting to TED RDF Data**#
+* [.separated]#**Connecting to TED Open Data**#
 * xref:connecting:index.adoc[Connecting to TED RDF data]
+** xref:connecting:sparql.adoc[Paste your query directly into the SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Python]
-** xref:connecting:sparql.adoc[Paste your query directly into the SPARQL Endpoint]
+
 
 * [.separated]#**Sample SPARQL Queries**#
-* xref:samples:index.adoc[Browse the sample queries]
+* xref:samples:index.adoc[Sample queries]
 ** xref:samples:query1.adoc[Query 1: Highest Value Contract]
 ** xref:samples:query2.adoc[Query 2: METS packages published]
 ** xref:samples:query3.adoc[Query 3: Query notice by id]
@@ -27,12 +31,6 @@
 ** xref:samples:query7.adoc[Query 7: Contract Values]
 ** xref:samples:query8.adoc[Query 8: Winners on a Date]
 
-////
-* [.separated]#**Submit a query**#
-* https://publications.europa.eu/webapi/rdf/sparql[Submit a query via the Cellar SPARQL EndPoint]
-* xref:connecting:excel.adoc[Submit a query using Excel]
-* xref:connecting:python.adoc[Submit a query using Python]
-////
 
 
 * [.separated]#**Mapping XML data to RDF**#

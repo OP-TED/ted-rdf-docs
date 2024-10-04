@@ -1,1 +1,7 @@
-samples homepage: tiles with categories/ list? TBD
+samples homepage:
+
+query1
+
+query 2
+
+etc

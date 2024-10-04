@@ -8,64 +8,28 @@
 
 RDF data is queried using SPARQL, a query language specifically for querying RDF data. 
 
-Once a query is ready, it is pasted into the SPARQL EndPoint's input field and executed.
+Once a query is ready, it is pasted into a SPARQL EndPoint input field and executed.
+
+An EndPoint is a URI connected to a RDF database or triple store that provides access to the data in it. Each triple store has its own EndPoint.
 
 Before you get to the point where you construct a query, there are a few topics worth reading through and getting familiar with such as: 
 
-* RDF Data
-* Writing SPARQL Queries
-* Understanding the data
-* Where the data is stored
-* How to get started
+* Understanding RDF Data
+* Writing SPARQL queries
+* Connecting to the data
 
-There are links below to online information or training resources.
+In the left-hand menu there are links to resources to help you get started.
 
-There are also some sample queries that can be accessed via the menu on the left, which walk you through a few ways of running SPARQL queries. The example queries can be copied and pasted, as is, into any of the different query methods.
+There are also some sample queries that can be accessed via the menu on the left, and a description of the methods ways of running SPARQL queries. The example queries can be copied and pasted, as is, into any of the different query methods.
 
-A short info session on querying RDF data and constructing a query can be found below in the RDF Data section below. 
 
-== RDF Data
-
-RDF data has a specific format made up of a "semantic triple", explained in more detail in the info session on RDF linked in the online training resources section below. An info session on https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/LOD/index.html[Linked Open Data] is also available. (linked open data is RDF data that is licenced as open i.e., for reuse).
-
-== Links to online training resources for learning SPARQL
-
-There are many good online resources on SPARQL and constructing SPARQL queries:
-
- * The  https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/RDF/index.html[info sessions on the eProcurement Ontology for learning about RDF and SPARQL] can be found in the ePO Docs.
- * https://www.w3.org/TR/sparql11-query/[W3C]
- * YouTube lectures:
- ** https://www.youtube.com/watch?v=zkr_2HR4Pcs&list=PLakGkiOE3_q8Fq46-TSE-Te1cvx8yLLUF[Linked Data and SPARQL]
- ** https://www.youtube.com/playlist?list=PLoOmvuyo5UAfY6jb46jCpMoqb-dbVewxg[Linked data Engineering]
- * Videos:
- ** https://www.youtube.com/watch?v=FvGndkpa4K0[SPARQL in 11 Minutes]
- ** https://www.youtube.com/watch?v=zteyEk9LADs&t=338s[RDF and OWL]
- * Other web-based training courses on training sites like Udemy.
- * Books from publishers such as O'Reilly, The Dummies Guide to, Morgan Kaufmann, etc.
-
-== Guides for using ePO resources when designing queries
-
-The https://docs.ted.europa.eu/epo-home/index.html[eProcurement Ontology} contains the names and definitions of all the concepts used in EU public procurement and provides very useful information for query builders in the form of glossaries (definitions) and conceptual models (concepts and their relationships to one another).
-
-https://docs.ted.europa.eu/docs-staging/epo-home/guide.html[Guides to using resources provided by the eProcurement Ontology to assist in constructing queries] are available. These are specific to EU public procurement and will explain how to find the exact concepts or classes you might want to use in your queries.
-
-xref:querying:snippets.adoc[Code snippets] are provided for frequently used concepts such as "buyer", "country","value", amongst others which you can copy and paste into your own queries to save time.
-
-Finally, some scenarios are introduced which demonstrate the process of going from a general idea for a query and honing it into a query using the resources available.
-
-== Procurement Data
-
-Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found by opening the latest issue of the Official Journal Supplement, or by using one of the several ways of searching for notices available on the site: advanced, expert, or browse by subject.
-
-As an aid, you can use these short info sessions on xref:ROOT:attachment$/notice_data/index.html[Notice Data] and xref:ROOT:attachment$/searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search options.
-
-This should give you a good idea of the information that can be found in a notice.
-
-== Converting Notice Data into RDF format
+== Converting notice data into RDF format
 
 On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well, who wish to buy or supply goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
 
 As part of the European Commission's strategy for data reuse and transparency, notice data is converted into RDF format using an automated "pipeline" service.
 
-The data, stored in the "Cellar", the RDF triple store (database) maintained by the Publications Office, is open to anyone wishes to query notice data as Linked Open Data using the query methods found in the menu on the left under "Connecting to RDF data".
+The data, stored in the "Cellar", the RDF triple store (database) maintained by the Publications Office, is open to anyone who wishes to query notice data as Linked Open Data using the query methods found in the menu on the left under "Connecting to RDF data".
+
+The section on creating mappings to convert XML data to RDF can also be found in the left-hand menu. 
 
