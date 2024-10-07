@@ -4,7 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-xref:querying:snippets.adoc[Code snippets] are provided for frequently used concepts such as "buyer", "country","value", amongst others, which you can copy and paste into your queries to save time.
+Code snippets are provided for frequently used concepts which you can copy and paste into your queries to save time.
 
 * Buyer
 * Supplier

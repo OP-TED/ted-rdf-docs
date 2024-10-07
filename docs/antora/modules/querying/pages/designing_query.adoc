@@ -13,7 +13,7 @@ Generally, you will start a new query process with a specific scenario or questi
 * Refining the question
 
 === Identifying the information to be returned
-* Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information
+* Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information required
 * Constructing the query
 
 === Executing the query
@@ -28,7 +28,7 @@ Sample queries are provided for you to try out using the following query methods
 * Microsoft Excel
 * Python
 
-More information on the methods of connecting to the data can be found under "Connecting to TED Open Data". 
+Ways to connect to the data can be found under "Connecting to TED Open Data". 
 
 
 //include::tips.adoc[]

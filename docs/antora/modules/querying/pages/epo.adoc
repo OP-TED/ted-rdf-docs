@@ -9,9 +9,50 @@ The ePO provides essential resources and artifacts to help those wishing to quer
 * Guides to using the eProcurement Ontology in constructing queries
 * Info sessions on some of the basic concepts
 
+[.tile-container]
+--
+
+[.tile]
+.Glossaries
+
+****
+The eProcurement Ontology Glossaries
+
+xref:EPO::glossaries.adoc[Search the ePO Glossaries]
+****
+
+[.tile]
+.Conceptual Models
+
+****
+Learn how to create mappings for your own XML to RDF conversion project
+
+xref:EPO::conceptual.adoc[Conceptual Models]
+****
+
+[.tile]
+.User Guides
+
+****
+Access the guides to the ePO resources
+
+xref:epo-home::guide.adoc[User Guides to the ePO Resources]
+****
+
+////
+[.tile]
+.Info Sessions
+
+****
+Access the info sessions on the ePO
+
+xref:mapping_how.adoc[How Mappings are created]
+****
+--
 Buttons: Browse the eProcurement Ontology resources:
 
 User Guides +
 Info sessions +
 Conceptual Models +
 Glossaries
+////

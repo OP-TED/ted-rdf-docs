@@ -1,6 +1,6 @@
 = Query Structure
 
-A SPARQL query has a specific structure that is set out in several sections:
+A SPARQL query has a specific structure that is set out in sections:
 
 image::sparql_query.png[]
 
@@ -8,13 +8,10 @@ image::sparql_query.png[]
 
 The first part, often called the "prefixes", contains the vocabularies used in the query. Vocabularies are a key feature of RDF data and SPARQL and work as follows:
 
-RDF data is built on common or standard definitions of concepts that are organised into vocabularies on a specific category, such as business organisations, personal relationship information, location, finance, and in our case, https://docs.ted.europa.eu/epo-home/index.html[public procurement]. Once a particular vocabulary is published, other entities who find the concept definitions appropriate adopt the use of the vocabulary. If they do so, they name them in the prefixes section of the query so everyone knows which definitions/ vocabularies are being used.
+RDF data is built on common or standard definitions of concepts that are organised into vocabularies on a specific category, such as business organisations, personal relationship information, location, finance, and in our case, https://docs.ted.europa.eu/epo-home/index.html[public procurement]. Once a particular vocabulary is published, other entities who find the concept definitions appropriate, adopt the use of the vocabulary. If they do so, they name them in the prefixes section of the query so everyone knows which definitions/ vocabularies are being used.
 
-When constructing a query, the person creating it needs to declare that a certain vocabulary's terms and definitions are being referred to. This is important for all users of the database and query constructors know what the definitions are. 
+Not only do query constructors need to list the vocabularies in a query, they also typically give each one a short abbreviation or "prefix" which means that from then on in the query, the prefix can be used instead of typing the full name of a vocabulary each time you refer to it. Some of the https://op.europa.eu/en/web/eu-vocabularies/e-procurement[adopted vocabularies] in public procurement queries are:
 
-Not only do they need to list the vocabularies, but they give each one a short abbreviation or "prefix" which means that from then on in the query, the prefix can be used instead of typing the full name each time you refer to a vocabulary. Some of the https://op.europa.eu/en/web/eu-vocabularies/e-procurement[adopted vocabularies] in public procurement queries are:
-
-//cations/dublin-core/dc-rdf/[dcterms]="http://purl.org/dc/terms/" +
 https://www.w3.org/ns/legacy_person[person]="http://www.w3.org/ns/person#" +
 https://www.w3.org/TR/vocab-org/[org]="http://www.w3.org/ns/org#" +
 https://lov.linkeddata.es/dataset/lov/vocabs/foaf[foaf]="http://xmlns.com/foaf/0.1/" +
@@ -25,11 +22,18 @@ The prefix before the = sign is the abbreviation of the URI after the = sign.
 
 == Data fields required
 
-The second section lists all the fields (terms/ concepts) that you wish the query should return. Each field here becomes a column in the results. These could be the contents of a field, or the contents of a variable that is defined in the next section.
+The second section lists all the fields (terms/ concepts) that you want the query to return. Each field here becomes a column in the results. These could be the contents of a field, or the contents of a variable that is defined in the next section.
 
 == Specifying the data
 
-The third section is used to specify data based on semantic connections between the fields specified above and any other concepts used to arrive at the exact field desired, plus any filters or criteria the query constructor wants to apply to them. 
+The third section is used to specify data based on semantic connections between the fields specified above, and any other concepts used to arrive at the exact field desired, plus any filters or criteria the query constructor wants to apply to them. 
 
 Going back to names and numbers used as the example in the how to query page, filters or criteria could be to find names that don't have a number, so that the person querying can find the missing data and add it, or it could be to find the names and numbers in a specific location, or of a particular age group.
 
+== Running the query
+
+Once the query is completed, it can be run in one or more of the methods described in "Connecting to TED open data".
+
+== The Results
+
+The results are returned in a table that looks very similar to any data base query. Depending on the form of the data returned (text, number, code, URI), some formatting might be required to display the data in a meaningful way.

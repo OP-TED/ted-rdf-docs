@@ -7,7 +7,7 @@
 ** xref:querying:designing_query.adoc[How to query TED Open data]
 ** xref:querying:structure.adoc[SPARQL Query Structure]
 ** xref:querying:online_training.adoc[Online training resources]
-** xref:querying:notice_data.adoc[Public procurement data]
+** xref:querying:notice_data.adoc[Notice data]
 ** xref:querying:epo.adoc[eProcurement Ontology resources]
 ** xref:querying:snippets.adoc[Reusable query snippets]
 ** xref:querying:scenarios.adoc[Scenarios: question to query]

@@ -1,7 +1,6 @@
-samples homepage:
+= Query Samples
 
-query1
+== query1
 
-query 2
+== query 2
 
-etc

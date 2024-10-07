@@ -12,7 +12,13 @@ NOTE: Data, which includes that generated daily going forward and data going bac
 
 Notice types and where they fit in in the public procurement process
 
-image::../images/notice_types.png[]
+image:../images/notice_types.png[]
+
+image::../ROOT/images/notice_types.png[]
+
+image:../ROOT/images/notice_types.png[]
+
+image:images/notice_types.png[]
 
 
 // ../../images/
