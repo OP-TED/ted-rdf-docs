@@ -13,5 +13,9 @@ Bear in mind that the OP is working on converting more types of current notice d
 
 You can use these short info sessions on https://docs.ted.europa.eu/docs-staging/ODS/_attachments/notice_data/index.html[Notice Data] and https://docs.ted.europa.eu/docs-staging/ODS/_attachments/searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search options.
 
+xref:attachment$LOD/index.html[Linked Open Data]
+
+xref:attachments$notice_data/index.html[notice data]
+
 
 
