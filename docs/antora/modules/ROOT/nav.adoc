@@ -42,6 +42,6 @@
 ** xref:mapping:preparing-test-data.adoc[Test Data samples]
 
 * [.separated]#**Information and Resources**#
-* xref:ROOT:data_availability.adoc[Current Data Availability]
+* xref:data_availability.adoc[Current Data Availability]
 * https://github.com/OP-TED/ted-rdf-docs[Ask the Community for query help]
 * xref:mapping:versioning.adoc[Versioning]

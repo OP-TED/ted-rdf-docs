@@ -32,7 +32,7 @@ xref:samples:index.adoc[Browse the sample queries] +
 Sample Queries to get you started
 
 xref:querying:submit.adoc[Executing your query] +
-Usin
+Executing your query via the SPARQL EndPoint, Excel or Python
 
 Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
 
