@@ -4,6 +4,8 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
+Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries, and benefit from data on EU public procurement. 
+
 == How RDF data is queried
 
 RDF data is queried using SPARQL, a query language specifically for querying RDF data. 
@@ -12,15 +14,34 @@ Once a query is ready, it is pasted into a SPARQL EndPoint input field and execu
 
 An EndPoint is a URI connected to a RDF database or triple store that provides access to the data in it. Each triple store has its own EndPoint.
 
-Before you get to the point where you construct a query, there are a few topics worth reading through and getting familiar with such as: 
 
-* Understanding RDF Data
-* Writing SPARQL queries
-* Connecting to the data
+Use the resources provided here to: 
 
-In the left-hand menu there are links to resources to help you get started.
+* Learn what resources are available to help you
+* Understand RDF Data
+* Write SPARQL queries
+* Connect to open public procurement data
 
-There are also some sample queries that can be accessed via the menu on the left, and a description of the methods ways of running SPARQL queries. The example queries can be copied and pasted, as is, into any of the different query methods.
+In the menu on the left there are links to resources to help you get started.
+
+There are also some sample queries available and a description of the methods ways of running SPARQL queries that you can try out yourself. The sample queries can be copied and pasted, as is, into any of the different query methods.
+
+
+=== RDF Data
+
+RDF data has a specific format made up of a "semantic triple", explained in more detail in the info session on RDF linked in the online training resources section below. An info session on https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/LOD/index.html[Linked Open Data] is also available. (linked open data is RDF data that is licenced as open i.e., for reuse).
+
+RDF Data is queried using a query language called SPARQL, or SPARQL Protocol and RDF Query Language. RDF data is stored in what is called triples e.g., if the database had a list of people and their phone numbers, the triples would look like this:
+
+Mary - HasNumber - 555-123456 +
+Janet - HasNumber - 555-345678 +
+John - HasNumber - 555-234567
+
+
+The data looks a little like a sentence with a subject (Name), predicate (HasNumber) and object (Number).
+
+There are many triples stored in such a database, for Name, there would be the usual personal details categories as well as information specific to that database (music/ sports/ job). Many objects could be associated with John or Janet via different predicates.
+
 
 ////
 == Converting notice data into RDF format

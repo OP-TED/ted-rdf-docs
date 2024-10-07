@@ -1,0 +1,44 @@
+:doctitle: RDF Queries
+:doccode: sws-main-prod-020
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2024
+
+== Designing a Query
+
+Generally, you will start a new query process with a specific scenario or question about EU public procurement. The following steps then follow.
+
+=== Examination of the scenario
+* A short investigation into the extent to which the current data offering can satisfy your question
+* Understanding data limitations
+* Refining the question
+
+=== Identifying the information to be returned
+* Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information
+* Constructing the query
+
+=== Executing the query
+* Running the query
+* Examining and refining the query results
+
+== The sample applications
+
+Sample queries are provided for you to try out using the following query methods:
+
+* Pasting the query directly into Cellar's SPARQL EndPoint
+* Microsoft Excel
+* Python
+
+You can learn how to use these methods of connecting to the data via the menu on the left hand side under "Connecting to TED Open Data". 
+
+
+//include::tips.adoc[]
+
+
+
+
+
+
+
+
+

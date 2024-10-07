@@ -4,18 +4,17 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries, and benefit from data on EU public procurement. 
 
-This section on querying public procurement data introduces the resources and guides available to help those interested improve their public procurement knowledge and querying skills.
+Querying EU Public Procurement Data introduces the resources and guides available to help those interested improve their public procurement knowledge and querying skills.
 
-xref:querying:starting.adoc[Getting Started] +
-An Overview of how to query RDF data
-
-xref:querying:RDF_how.adoc[How to query TED RDF data] +
-An Overview of how to query RDF data
+xref:querying:starting.adoc[Getting started] +
+The resources you need to start querying public procurement open data
 
 xref:querying:online_training.adoc[Online training resources] +
-Online resources for learning RRDF and SPARQL
+Online resources for learning RDF and SPARQL
+
+xref:querying:designing_query.adoc[Designing a query] +
+How to approach designing queries
 
 xref:querying:notice_data.adoc[Notice data] +
 The Information and fields in Notice data
@@ -32,9 +31,12 @@ Query Scenarios: from Question to Query
 xref:samples:index.adoc[Browse the sample queries] +
 Sample Queries to get you started
 
+xref:querying:submit.adoc[Executing your query] +
+Usin
+
 Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
 
-include::partial$feedback.adoc[]
+include::ROOT:partial$feedback.adoc[]
 
 
 

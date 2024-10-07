@@ -11,7 +11,7 @@
 
 [sidebar]
 --
-The TED Open Data Service continuously converts notices from the XML standard form format available on the TED Website into RDF format. The RDF data is stored in the Publications Office's (OP) triple store named the "Cellar", and is publicly available or "open". 
+The TED Open Data Service continuously converts notices from the XML standard form format available on the TED Website into RDF format. The data is stored in the Publications Office's (OP) triple store named the "Cellar", and is publicly available or "open". 
 
 Making TED data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, to name a few.
 
@@ -22,38 +22,38 @@ Making TED data open for querying is part of the https://digital-strategy.ec.eur
 --
 
 [.tile]
-.Query TED RDF Data
+.Query TED Open Data
 
 ****
-Querying TED RDF data using SPARQL
+Resources and links for querying TED Open data
 
-xref:querying:index.adoc[Resources and links for querying TED RDF data]
+xref:querying:index.adoc[Query TED open data using SPARQL]
 ****
 
 [.tile]
-.Connect to TED RDF data
+.Connect to TED Open Data
 
 ****
-How to connect to TED RDF data using Excel or Python
+Methods of connecting to TED open data
 
-xref:connecting:index.adoc[How to connect to TED RDF data]
+xref:connecting:index.adoc[Connecting to TED open data using Excel or Python]
 ****
 
 [.tile]
 .View Sample Queries
 
 ****
-Browse the sample queries provided
+Use or adapt the sample SPARQL queries available
 
-xref:samples:index.adoc[Use or adapt the sample SPARQL queries available]
+xref:samples:index.adoc[Browse the sample queries provided]
 ****
 
 [.tile]
 .Create Mapping Suites (XML to RDF)
 ****
-Create mappings to convert XML data into RDF
+Convert XML data into RDF
 
-xref:mapping:index.adoc[Convert XML data into RDF]
+xref:mapping:index.adoc[Create mappings to convert XML data into RDF]
 
 ****
 --

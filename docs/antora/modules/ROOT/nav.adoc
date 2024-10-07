@@ -1,10 +1,10 @@
 
 * xref:ODS::index.adoc[Home]
 
-* [.separated]#**Querying TED Open data**#
+* [.separated]#**Querying TED Open Data**#
 * xref:querying:index.adoc[TED Open Data]
 ** xref:querying:starting.adoc[Getting Started]
-** xref:querying:RDF_how.adoc[How to query TED Open data]
+** xref:querying:designing_query.adoc[How to query TED Open data]
 ** xref:querying:structure.adoc[SPARQL Query Structure]
 ** xref:querying:tutorials.adoc[Online training resources]
 ** xref:querying:notice_data.adoc[Public procurement data]
@@ -13,12 +13,11 @@
 ** xref:querying:scenarios.adoc[Scenarios: question to query]
 ** xref:samples:index.adoc[Browse the sample queries]
 
-* [.separated]#**Connecting to TED Open data**#
+* [.separated]#**Connecting to TED Open Data**#
 * xref:connecting:index.adoc[Connection Methods]
 ** xref:connecting:sparql.adoc[Paste your query directly into the SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Python]
-
 
 * [.separated]#**Sample SPARQL Queries**#
 * xref:samples:index.adoc[Sample queries]
@@ -30,8 +29,6 @@
 ** xref:samples:query6.adoc[Query 6: Contractors using Subcontractors]
 ** xref:samples:query7.adoc[Query 7: Contract Values]
 ** xref:samples:query8.adoc[Query 8: Winners on a Date]
-
-
 
 * [.separated]#**Mapping XML data to RDF**#
 * xref:mapping:index.adoc[Mappings and Mapping Suites]

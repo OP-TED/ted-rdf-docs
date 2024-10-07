@@ -1,16 +1,17 @@
 = notice data
 
 
-== Getting familiar with public rocurement Data
+== Getting familiar with public procurement Data
 
-Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found by opening the latest issue of the Official Journal Supplement, or by using one of the several ways of searching for notices available on the site: advanced, expert, or browse by subject.
-You can use the TED website, where public buyers submit their calls for tender, to familiarise yourself with the fields or concepts used in notices. The search possibilities on the TED website return data that give you an idea of the format of the data contained in the Cellar triple store. The date returned here is notice-based, and on current activity in EU public procurement tenders, and does not contain all the historical data, but it will give you an idea about the fields available to query. This is XML data before its conversion into RDF.
+Public procurement data available for query comes from notice data. You can use the https://ted.europa.eu/en/[TED website (ted.europa.eu)], where public buyers submit their calls for tender, to familiarise yourself with the fields or concepts contained in notices. 
 
-Bear in mind that the OP is working on converting more types of current notice data into RDF, and adding historical data, so the triple store data available will grow over time. Keep an eye on the data availability page to keep up to date.
+For a short introduction, go to the TED website and examine a notice. A notice can be examined by opening the latest issue of the Official Journal Supplement, or by using one of the several ways of searching for notices available on the site: advanced, expert, or browse by subject.
 
-As an aid, you can use these short info sessions on xref:ROOT:attachment$/notice_data/index.html[Notice Data] and xref:ROOT:attachment$/searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search options.
+Examining data in a notice will give you an idea of the kind and format of the data contained in the Cellar triple store. The date returned here is per notice, and covers currently active notices in EU public procurement tenders. It does not contain historical data, but it will give you an idea about the fields available to query. This is XML data before its conversion into RDF.
 
-This should give you a good idea of the information that can be found in a notice.
+Bear in mind that the OP is working on converting more types of current notice data into RDF, and adding historical data, so the data available in the Cellar triple store will grow over time. Keep an eye on the data availability page (left-hand menu) for updates.
+
+You can use these short info sessions on https://docs.ted.europa.eu/docs-staging/ODS/_attachments/notice_data/index.html[Notice Data] and https://docs.ted.europa.eu/docs-staging/ODS/_attachments/searching_notices/index.html[Searching Notices] to familiarise yourself with notices and how to use the ted.europa.eu search options.
 
 
 
