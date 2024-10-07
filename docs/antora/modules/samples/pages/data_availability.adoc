@@ -1,3 +1,0 @@
-:doctitle: Data Available
-
-include::ROOT:partial$data_availability.adoc[]
