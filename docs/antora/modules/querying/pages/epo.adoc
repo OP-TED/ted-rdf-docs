@@ -37,5 +37,19 @@ xref:EPO:conceptual.adoc[Conceptual Models]
 Access the guides to the ePO resources
 
 xref:epo-home:guide.adoc[User Guides to the ePO Resources]
+
 ****
+
+[.tile]
+.Conceptual Model and Glossary Usage
+
+****
+Using the Conceptual Model and Glossaries
+
+xref:epo-home:examples/ext1.adoc[Example 1: Who buys what from whom?]
+
+xref:epo-home:examples/ext2.adoc[Example 2: How many contractors are SMEs for a given country and given date?]
+
+****
+
 --
