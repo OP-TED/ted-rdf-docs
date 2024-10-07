@@ -6,6 +6,6 @@ NOTE: Data, which includes that generated daily going forward and data going bac
 
 Notice types and where they fit in in the public procurement process
 
-image::../images/notice_types.png[]
+image:../images/notice_types.png[]
 
 For an overview of what data can be extracted from a Contract Award Notice, you can use the search facility on the https://ted.europa.eu/en/[TED website], choosing "Advanced Search" (All Notices), then "Result", and look at the contents of a Contract Award Notice.
