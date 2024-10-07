@@ -1,4 +1,4 @@
-:doctitle: Which are the values of tenders for a given day?
+:doctitle: List the contract values awarded on a chosen day?
 :doccode: ods-main-prod-201
 
 :author: NPJ

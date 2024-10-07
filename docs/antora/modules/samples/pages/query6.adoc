@@ -1,4 +1,4 @@
-:doctitle: How many tenders foresee subcontracting for a given date?
+:doctitle: How many tenderers responding on a chosen date intend to use sub-contractors?
 :doccode: ods-main-prod-201
 
 :author: NPJ

@@ -1,4 +1,4 @@
-:doctitle: Query notice by id
+:doctitle: Find a notice by its ID
 :doccode: ods-main-prod-201
 
 :author: NPJ

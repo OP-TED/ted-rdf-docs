@@ -1,4 +1,4 @@
-:doctitle: How many Public Procurement METS packages have been published lately?
+:doctitle: How many Public Procurement METS packages were published over a chosen date range?
 :doccode: ods-main-prod-201
 
 :author: NPJ

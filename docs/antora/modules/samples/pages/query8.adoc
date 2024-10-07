@@ -1,4 +1,4 @@
-:doctitle: Who are the winners for a given date?
+:doctitle: List the contract winners on a chosen date?
 :doccode: ods-main-prod-201
 
 :author: NPJ

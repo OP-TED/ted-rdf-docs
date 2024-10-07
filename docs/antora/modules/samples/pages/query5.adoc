@@ -1,4 +1,4 @@
-:doctitle: How many contractors are SMEs for a given country and given date?
+:doctitle: How many contract winners are SMEs for a specific country and chosen date?
 :doccode: ods-main-prod-201
 
 :author: NPJ
