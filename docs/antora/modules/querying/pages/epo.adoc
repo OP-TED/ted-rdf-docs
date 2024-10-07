@@ -1,6 +1,17 @@
-= ePO
-== Guides for using ePO resources when designing queries
+= The eProcurement Ontology
 
-The https://docs.ted.europa.eu/epo-home/index.html[eProcurement Ontology] contains the names and definitions of all the concepts used in EU public procurement and provides very useful information for query builders in the form of glossaries (definitions) and conceptual models (concepts and their relationships to one another).
+The eProcurement Ontology (ePO) is the controlled vocabulary which formally describes the classes (concepts), attributes, relationships, and cardinalities of the language used in EU public procurement. The ontology is essential so that all contributing parties and reusers of the data can be certain that the concepts and definitions they use are the same.
 
-https://docs.ted.europa.eu/docs-staging/epo-home/guide.html[Guides to using resources provided by the eProcurement Ontology to assist in constructing queries] are available. These are specific to EU public procurement and will explain how to find the exact concepts or classes you might want to use in your queries.
+The ePO provides essential resources and artifacts to help those wishing to query the data:
+
+* Glossaries - searchable lists of classes and their definitions
+* Conceptual Models - visual representations of the classes and their relationships to each other, hierarchies, and cardinalities
+* Guides to using the eProcurement Ontology in constructing queries
+* Info sessions on some of the basic concepts
+
+Buttons: Browse the eProcurement Ontology resources:
+
+User Guides +
+Info sessions +
+Conceptual Models +
+Glossaries

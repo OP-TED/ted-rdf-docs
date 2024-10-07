@@ -1,10 +1,10 @@
-query structure
+= Query Structure
 
 A SPARQL query has a specific structure that is set out in several sections:
 
 image::sparql_query.png[]
 
-=== Prefixes
+== Prefixes
 
 The first part, often called the "prefixes", contains the vocabularies used in the query. Vocabularies are a key feature of RDF data and SPARQL and work as follows:
 
@@ -23,11 +23,13 @@ https://www.w3.org/TR/skos-reference/[skos]="http://www.w3.org/2004/02/skos/core
 The prefix before the = sign is the abbreviation of the URI after the = sign.
 
 
-=== Data fields returned
+== Data fields required
 
-The second section lists all the fields (terms/ concepts) that the query should return. Each field here becomes a column containing the data returned. These can be the contents of a field, or the contents of a variable that is defined in the next section.
+The second section lists all the fields (terms/ concepts) that you wish the query should return. Each field here becomes a column in the results. These could be the contents of a field, or the contents of a variable that is defined in the next section.
 
-=== Specifying the data
+== Specifying the data
 
-The third section is used to specify data based on the semantic connections between the fields specified above, and any filters or criteria the query constructor wants to apply to them. Going back to names and numbers above, it could be to find names that don't have a number, so that the person querying can find the missing data and enter it, or it could be to find the names and numbers in a specific location, or of a particular age group.
+The third section is used to specify data based on semantic connections between the fields specified above and any other concepts used to arrive at the exact field desired, plus any filters or criteria the query constructor wants to apply to them. 
+
+Going back to names and numbers used as the example in the how to query page, filters or criteria could be to find names that don't have a number, so that the person querying can find the missing data and add it, or it could be to find the names and numbers in a specific location, or of a particular age group.
 
