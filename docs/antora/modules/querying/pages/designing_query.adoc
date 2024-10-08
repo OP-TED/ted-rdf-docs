@@ -6,24 +6,23 @@
 
 == Designing a Query
 
-Generally, you will start a new query process with a specific scenario or question about EU public procurement. 
+Generally, you will start a new query process with a specific scenario or question about EU public procurement in mind. 
 
 === Examination of the scenario
-* A short investigation into how the current data offering can best satisfy your question
-* Refining the question
+* Then you will perform a short investigation into how the current data offering can best satisfy your question. This will help you refine your question
 
 === Identifying the information to be returned
-* Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information required
-* Constructing the query
+* After you have refined your question, you will use the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information you require and construct your query
 
 === Deciding which query method to choose
+Once you have finalised your query, you will choose which submission method to use:
+
 * Pasting the query directly into Cellar's SPARQL EndPoint
 * Using Microsoft Excel
 * Using Jupyter Notebooks and Python
 
 === Executing the query
-* Running the query
-* Examining and refining the query results
+Then you will run your query before examining and refining the query results
 
 == Sample Queries
 Sample queries are provided for you to try out using the different query methods. Ways to connect to the data can be found under "Connecting to TED Open Data". 

@@ -6,16 +6,16 @@
 
 == EU public procurement data
 
-EU public procurement data is made available for querying in RDF format. This is done via a pipeline that converts XML notice data into RDF format. The converted data is stored in a public procurement RDF database, also known as a triple store, called the "Cellar", maintained by the Publications Office.
+The EU makes public procurement data in RDF format available for querying. A pipeline process converts XML notice data into RDF format which is stored in a public procurement RDF database, also known as a triple store, called the "Cellar", maintained by the Publications Office.
 
-Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries, and retrieve public procurement data from Cellar.
+Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and retrieve public procurement data from Cellar.
 
 Public procurement data stored in Cellar is open to anyone who wishes to query notice data as Linked Open Data.
 
-== How RDF data is queried
+
+== RDF data
 
 RDF data has a specific format made up of a "semantic triple".
-
 
 If the triple store had data on people and their phone numbers, the triples would look like this:
 
@@ -28,15 +28,16 @@ The data look a little like a sentence with a subject (Name), predicate (HasNumb
 
 There are many triples stored in such a database. For Name, there would be the usual personal details categories as well as information specific to that database (music/ sports/ jobs/ procurement). Many objects could be associated with subjects via different predicates.
 
+== Queries
+
+Queries, written in a query language called SPARQL, are used to retrieve RDF data.
+
 
 == Executing a Query
 
 Once a query is ready, it is pasted into a SPARQL EndPoint and executed.
 
 A SPARQL EndPoint is a URI connected to a RDF triple store that provides access to the data in it. Each triple store has its own EndPoint. The EndPoint is presented to the public in the form of a webpage with a field, or textbox, into which a SPARQL query can be pasted. The query results are returned online in a table.
-
-Sample queries are available, as is a description of the various methods ways of running SPARQL queries, that you can try out for yourself. The sample queries can be used in any of the different query methods.
-
 
 The resources provided here can help you to: 
 
@@ -45,7 +46,9 @@ The resources provided here can help you to:
 * Write SPARQL queries
 * Connect to open public procurement data
 
-Links to these are in the left-hand menu.
+Sample queries are available, as is a description of the various methods ways of running SPARQL queries, that you can try out for yourself. The sample queries can be used in any of the different query methods.
+
+Links to all these resources are in the left-hand menu.
 
 
 
