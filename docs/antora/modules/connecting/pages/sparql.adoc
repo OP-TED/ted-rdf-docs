@@ -1,15 +1,18 @@
 = Querying Data directly in the Cellar SPARQL Endpoint
 
 == Cellar SPARQL Endpoint
+
 image::sparql3.png[]
 
 
 
-* HTML: 
+Results Formats:
 
-* HTML (basic browsing links):
+* HTML: Results in HTML format
 
-* Spreadsheet: Returns a HTML file
+* HTML (basic browsing links): Results in HTML format
+
+* Spreadsheet: Returns a HTML file that downloads locally
 
 * XML
 
