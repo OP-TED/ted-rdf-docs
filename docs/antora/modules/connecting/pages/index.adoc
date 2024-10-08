@@ -12,7 +12,7 @@ xref:connecting:sparql.adoc[How to query directly via the Cellar SPARQL EndPoint
 
 === Querying using Microsoft Excel
 
-Use Microsoft Excel to create a file with a permanent link to your query and update the data whenever you wish. You can also use Excel to create charts, graphs and other visual representations of the data easily.
+Use Microsoft Excel to create a file with a permanent link to your query and update the data from within Excel whenever you wish. You can also use Excel to create charts, graphs and other visual representations of the data easily.
 
 xref:connecting:excel.adoc[How to query using Microsoft Excel]
 
