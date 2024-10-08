@@ -1,18 +1,27 @@
-connecting homepage
+= Connecting to the data
 
 == Running a query
 
 RDF databases or triple stores provide a URI or EndPoint into which a data reuser can submit a query, and receive their results. It looks a little like a web address for searching, except that it queries the specific triple store to which it is attached. There are a few EndPoint interface applications that RDF triple store managers can adopt and Cellar uses the Virtuoso EndPoint application.
 
+=== Querying directly via the Cellar SPARQL EndPoint
+
 If you are not a programmer and new to querying RDF data, you can start by pasting a sample query directly into the SPARQL Endpoint and viewing the results online.
 
-Once the EndPoint has returned the results of the query, you can copy the url of the results page and paste it into Excel via the "Data" -> "from Web" menu functionality, and then save the spreadsheet. This will pull the results from the SPARQL EndPoint directly into Excel, and enable you to refresh the data in the future from Excel, where you can take advantage of Excel's data visualisation capabilities such as graphs or charts. 
+xref:connecting:sparql.adoc[How to query directly via the Cellar SPARQL EndPoint]
+
+=== Querying using Microsoft Excel
+
+text...
+
+xref:connecting:excel.adoc[How to query using Excel]
+
+
+=== Querying using Jupyter Notebooks and Python
 
 The most advanced method of extracting data is by using Python.
 
+xref:connecting:python.adoc[How to query using Jupiter Notebooks and Python]
+
+
 Use the resources and sample queries to try out these methods to see which suits you best.
-
-add endpoint image
-add video of query submission
-
-

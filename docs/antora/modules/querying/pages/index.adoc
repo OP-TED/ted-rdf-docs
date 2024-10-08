@@ -16,6 +16,9 @@ Online resources for learning RDF and SPARQL
 xref:querying:designing_query.adoc[Designing a query] +
 How to approach designing queries
 
+xref:querying:structure.adoc[SPARQL query structure] +
+How to approach designing queries
+
 xref:querying:notice_data.adoc[Notice data] +
 The Information and fields in Notice data
 

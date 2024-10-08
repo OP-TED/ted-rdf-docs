@@ -1,0 +1,6 @@
+= Querying the data using Excel
+
+
+Once the EndPoint has returned the results of the query, you can copy the url of the results page and paste it into Excel via the "Data" -> "from Web" menu functionality, and then save the spreadsheet. This will pull the results from the SPARQL EndPoint directly into Excel, and enable you to refresh the data in the future from Excel, where you can take advantage of Excel's data visualisation capabilities such as graphs or charts.
+
+insert video of excel query execution

@@ -16,19 +16,17 @@ Generally, you will start a new query process with a specific scenario or questi
 * Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information required
 * Constructing the query
 
+=== Deciding which query method to choose
+* Pasting the query directly into Cellar's SPARQL EndPoint
+* Using Microsoft Excel
+* Using Python
+
 === Executing the query
 * Running the query
 * Examining and refining the query results
 
 == Sample Queries
-
-Sample queries are provided for you to try out using the following query methods:
-
-* Pasting the query directly into Cellar's SPARQL EndPoint
-* Microsoft Excel
-* Python
-
-Ways to connect to the data can be found under "Connecting to TED Open Data". 
+Sample queries are provided for you to try out using the query methods. Ways to connect to the data can be found under "Connecting to TED Open Data". 
 
 
 //include::tips.adoc[]
