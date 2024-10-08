@@ -6,10 +6,10 @@
 
 == Designing a Query
 
-Generally, you will start a new query process with a specific scenario or question about EU public procurement. The following steps then follow.
+Generally, you will start a new query process with a specific scenario or question about EU public procurement. 
 
 === Examination of the scenario
-* A short investigation into the extent to which the current data offering can satisfy your question
+* A short investigation into how the current data offering can best satisfy your question
 * Refining the question
 
 === Identifying the information to be returned
@@ -19,14 +19,14 @@ Generally, you will start a new query process with a specific scenario or questi
 === Deciding which query method to choose
 * Pasting the query directly into Cellar's SPARQL EndPoint
 * Using Microsoft Excel
-* Using Python
+* Using Jupyter Notebooks and Python
 
 === Executing the query
 * Running the query
 * Examining and refining the query results
 
 == Sample Queries
-Sample queries are provided for you to try out using the query methods. Ways to connect to the data can be found under "Connecting to TED Open Data". 
+Sample queries are provided for you to try out using the different query methods. Ways to connect to the data can be found under "Connecting to TED Open Data". 
 
 
 //include::tips.adoc[]

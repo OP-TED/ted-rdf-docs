@@ -5,17 +5,12 @@
 
 Public procurement data available for query comes from notice data. You can use the https://ted.europa.eu/en/[TED website (ted.europa.eu)], where public buyers submit their calls for tender, to familiarise yourself with the fields or concepts contained in notices. 
 
-For a short introduction, go to the https://ted.europa.eu/en/[TED website] and examine a notice. A notice can be examined by opening the latest issue of the Official Journal Supplement, or by using one of the several ways of searching for notices available on the site: advanced, expert, or browse by subject.
+For a short introduction, go to the https://ted.europa.eu/en/[TED website] and examine a notice. A notice can be examined by opening the latest issue of the Official Journal Supplement and shoosing a notice to view, or by using one of the several ways of searching for notices available on the site: advanced, expert, or browse by subject.
 
-Examining data in a notice will give you an idea of the kind and format of the data contained in the Cellar triple store. The data returned here is per notice, and covers currently active notices in EU public procurement tenders. It does not contain historical data, but it will give you an idea about the fields available to query. This is XML data before its conversion into RDF.
+Examining data in a notice will give you an idea of the kind, and format of, the data contained in the Cellar triple store. The data returned here is per notice, and covers currently active notices in EU public procurement tenders. It does not contain historical data, but it will give you an idea about the fields available to query. This is XML data before its conversion into RDF.
 
 You can use these short info sessions on https://docs.ted.europa.eu/docs-staging/ODS/_attachments/notice_data/index.html[Notice Data] and https://docs.ted.europa.eu/docs-staging/ODS/_attachments/searching_notices/index.html[Searching Notices] to familiarise yourself with notices, and how to use the ted.europa.eu search options.
 
 == Data Availability
 
 What data is currently available can be found in the xref:ROOT:data_availability.adoc[Current Data Availability] link in the left-hand menu. Data is being added all the time; the Publications Office is working on converting more types of current notice data into RDF, and adding historical data, so the data available in the Cellar triple store will grow over time. Keep an eye on the data availability page for updates.
-
-
-
-
-
