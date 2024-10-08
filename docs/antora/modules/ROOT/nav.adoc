@@ -15,7 +15,7 @@
 
 * [.separated]#**Connecting to TED Open Data**#
 * xref:connecting:index.adoc[Connection Methods]
-** xref:connecting:sparql.adoc[Paste your query directly into the SPARQL Endpoint]
+** xref:connecting:sparql.adoc[Paste your query directly into the SPARQL EndPoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Python]
 

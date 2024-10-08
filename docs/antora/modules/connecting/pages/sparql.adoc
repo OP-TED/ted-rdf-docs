@@ -1,7 +1,37 @@
 = Querying Data directly in the Cellar SPARQL Endpoint
 
-add endpoint image
+== Cellar SPARQL Endpoint
+image::../images/sparql3.png[]
 
-choosing result format options
 
-add video of query submission
+
+* HTML: 
+
+* HTML (basic browsing links):
+
+* Spreadsheet: Returns a HTML file
+
+* XML
+
+* JSON:
+
+* Javascript:
+
+* Turtle:
+
+* RDF/XML:
+
+* N-triples
+
+* CSV:
+
+* TSV:
+
+The query (Query sample 3) is pasted into the "Query Text" field. This query returns a list of companies that have won a tender/ contract published on a certain date.
+This returns the results below:
+
+image::../images/results1.png[]
+
+Below is a short video of the query submission. The HTML results option will be used again in the Microsoft Excel query method.
+
+#add video of query submission#

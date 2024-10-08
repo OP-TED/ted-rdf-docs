@@ -17,7 +17,7 @@ Use Microsoft Excel to create a file with a permanent link to your query and upd
 xref:connecting:excel.adoc[How to query using Microsoft Excel]
 
 
-=== Querying using Jupyter Notebooks and Python
+=== Querying using Jupyter Notebook
 
 Technical users can connect to the data using Jupyter Notebooks and Python
 
