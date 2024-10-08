@@ -45,7 +45,7 @@ The resources provided here can help you to:
 * Write SPARQL queries
 * Connect to open public procurement data
 
-links to these are in the left-hand menu.
+Links to these are in the left-hand menu.
 
 
 
