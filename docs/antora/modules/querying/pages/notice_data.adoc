@@ -11,7 +11,7 @@ Examining data in a notice will give you an idea of the kind, and format of, the
 
 == Looking at Notice Data on the TED.europa.eu website:
 
-video::D3kjF7yhWnc[width=640,height=480,youtube]
+video::D3kjF7yhWnc[youtube, width=640,height=480]
 
 == Searching for Notices using the Advanced Search:
 
