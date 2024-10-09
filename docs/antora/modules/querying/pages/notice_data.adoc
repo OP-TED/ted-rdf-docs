@@ -11,19 +11,19 @@ Examining data in a notice will give you an idea of the kind, and format of, the
 
 == Looking at Notice Data on the TED.europa.eu website:
 
-video::D3kjF7yhWnc[youtube, width=720]
+video::D3kjF7yhWnc[youtube, width=720, height=540]
 
 == Searching for Notices using the Advanced Search:
 
-video::wxXFiVznBso[youtube, width=720]
+video::wxXFiVznBso[youtube, width=720, height=540]
 
 == Searching for Notices using the Expert Search:
 
-video::elr7GlShSUM?si[youtube, width=720]
+video::elr7GlShSUM?si[youtube, width=720, height=540]
 
 == Searching for Notices using the Browse by Subject Search:
 
-video::u2voFo_HAbw[youtube, width=720]
+video::u2voFo_HAbw[youtube, width=720, height=540]
 
 //You can use these short info sessions on https://docs.ted.europa.eu/docs-staging/ODS/_attachments/notice_data/index.html[Notice Data] and https://docs.ted.europa.eu/docs-staging/ODS/_attachments/searching_notices/index.html[Searching Notices] to familiarise yourself with notices, and how to use the ted.europa.eu search options.
 
