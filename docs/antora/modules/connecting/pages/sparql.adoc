@@ -4,7 +4,11 @@
 
 image::sparql3.png[]
 
+[sidebar]
+****
 The SPARQL EndPoint: https://publications.europa.eu/webapi/rdf/sparql
+****
+
 
 Results Formats:
 
