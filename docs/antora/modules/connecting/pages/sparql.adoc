@@ -8,31 +8,31 @@ The SPARQL EndPoint: https://publications.europa.eu/webapi/rdf/sparql
 
 Results Formats:
 
-* HTML: results in HTML format
+* HTML: results in HTML format in the browser window
 
-* HTML (basic browsing links): results in HTML format
+* HTML (basic browsing links): results in HTML format in the browser window
 
-* Spreadsheet: returns a HTML file that downloads locally
+* Spreadsheet: downloads a results HTML file
 
-* XML: a format for machine processing
+* XML: downloads a results XML file
 
-* JSON: a format for machine processing
+* JSON: produces a results JSON file in the browser window
 
-* Javascript: ?
+* Javascript: produces a results JSON table in the browser window
 
-* Turtle: a format relevant to data analysts or semantic engineers
+* Turtle: produces a results file in turtle syntax in the browser window
 
-* RDF/XML: a format relevant to data analysts or semantic engineers
+* RDF/XML: downloads a results file in RDF format 
 
-* N-triples: a format relevant to data analysts or semantic engineers
+* N-triples: produces a results file in n-triple format in the browser window
 
-* CSV: comma separated values
+* CSV: downloads a results comma separated values file
 
-* TSV: tab separated values
+* TSV: downloads a results tab separated values file
 
 The query is pasted into the "Query Text" field. This query returns a list of companies that have won a tender/ contract published on a certain date.
 
-This returns the results:
+This returns the results (here in HTML format):
 
 image::results1.png[]
 
