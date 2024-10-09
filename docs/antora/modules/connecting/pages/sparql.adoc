@@ -1,40 +1,41 @@
-= Querying Data directly in the Cellar SPARQL Endpoint
+= Submitting a query in the Cellar SPARQL Endpoint
 
 == Cellar SPARQL Endpoint
 
 image::sparql3.png[]
 
-
+The SPARQL EndPoint: https://publications.europa.eu/webapi/rdf/sparql
 
 Results Formats:
 
-* HTML: Results in HTML format
+* HTML: results in HTML format
 
-* HTML (basic browsing links): Results in HTML format
+* HTML (basic browsing links): results in HTML format
 
-* Spreadsheet: Returns a HTML file that downloads locally
+* Spreadsheet: returns a HTML file that downloads locally
 
-* XML
+* XML: a format for machine processing
 
-* JSON:
+* JSON: a format for machine processing
 
-* Javascript:
+* Javascript: ?
 
-* Turtle:
+* Turtle: a format relevant to data analysts or semantic engineers
 
-* RDF/XML:
+* RDF/XML: a format relevant to data analysts or semantic engineers
 
-* N-triples
+* N-triples: a format relevant to data analysts or semantic engineers
 
-* CSV:
+* CSV: comma separated values
 
-* TSV:
+* TSV: tab separated values
 
-The query (Query sample 3) is pasted into the "Query Text" field. This query returns a list of companies that have won a tender/ contract published on a certain date.
-This returns the results below:
+The query is pasted into the "Query Text" field. This query returns a list of companies that have won a tender/ contract published on a certain date.
+
+This returns the results:
 
 image::results1.png[]
 
-Below is a short video of the query submission. The HTML results option will be used again in the Microsoft Excel query method.
+=== A short video of this process
 
 #add video of query submission#

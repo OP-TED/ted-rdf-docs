@@ -6,7 +6,7 @@
 
 == EU public procurement data
 
-The EU makes public procurement data in RDF format available for querying. A pipeline process converts XML notice data into RDF format which is stored in a public procurement RDF database, also known as a triple store, called the "Cellar", maintained by the Publications Office.
+The EU makes public procurement data in RDF format available for querying. A pipeline process converts XML notice data into RDF format which is stored in a public procurement RDF database, or triple store, called the "Cellar". The database is maintained by the Publications Office.
 
 Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and retrieve public procurement data from Cellar.
 
