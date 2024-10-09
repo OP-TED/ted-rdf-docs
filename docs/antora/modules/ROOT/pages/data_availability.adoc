@@ -8,13 +8,13 @@
 
 Data is currently available from August 2023 to December 2023
 
-=== Notice TypesData is currently available from *Contract Award Notices* in the above time period
+=== Notice Data is currently available from *Contract Award Notices* in the above time period
 
 NOTE: Data, which includes that generated daily going forward and data going back in time is being constantly added to Cellar
 
 Notice types and where they fit in in the public procurement process
 
-image:../images/notice_types.png[]
+image::notice_types.png[]
 
 
 For an overview of what data can be extracted from a Contract Award Notice, you can use the search facility on the https://ted.europa.eu/en/[TED website], choosing "Advanced Search" (All Notices), then "Result", and look at the contents of a Contract Award Notice.
