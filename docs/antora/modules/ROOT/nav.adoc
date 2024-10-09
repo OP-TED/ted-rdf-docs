@@ -2,11 +2,11 @@
 * xref:ODS::index.adoc[Home]
 
 * [.separated]#**Querying TED Open Data**#
-* xref:querying:index.adoc[TED Open Data]
-** xref:querying:starting.adoc[Getting Started]
+* xref:querying:index.adoc[TED open data]
+** xref:querying:starting.adoc[Getting started]
 ** xref:querying:online_training.adoc[Online training resources]
-** xref:querying:designing_query.adoc[Designing a Query]
-** xref:querying:structure.adoc[SPARQL Query Structure]
+** xref:querying:designing_query.adoc[Designing a query]
+** xref:querying:structure.adoc[SPARQL query structure]
 ** xref:querying:notice_data.adoc[Notice data]
 ** xref:querying:epo.adoc[eProcurement Ontology resources]
 ** xref:querying:snippets.adoc[Reusable query snippets]
@@ -14,34 +14,34 @@
 ** xref:samples:index.adoc[Browse the sample queries]
 
 * [.separated]#**Connecting to TED Open Data**#
-* xref:connecting:index.adoc[Connection Methods]
+* xref:connecting:index.adoc[Connection methods]
 ** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Python]
 
 * [.separated]#**Sample SPARQL Queries**#
 * xref:samples:index.adoc[Sample queries]
-** xref:samples:query1.adoc[Query 1: Highest Value Contract on a date]
+** xref:samples:query1.adoc[Query 1: Highest value contract on a date]
 ** xref:samples:query2.adoc[Query 2: METS packages published on a date]
 ** xref:samples:query3.adoc[Query 3: Query notice by id]
 ** xref:samples:query4.adoc[Query 4: Notices published on a date]
 ** xref:samples:query5.adoc[Query 5: Contracts won by SMEs / date & country]
-** xref:samples:query6.adoc[Query 6: Contractors using Subcontractors/ date]
-** xref:samples:query7.adoc[Query 7: Contract Values on a date]
-** xref:samples:query8.adoc[Query 8: Contract Winners on a Date]
+** xref:samples:query6.adoc[Query 6: Contractors using subcontractors/ date]
+** xref:samples:query7.adoc[Query 7: Contract values on a date]
+** xref:samples:query8.adoc[Query 8: Contract winners on a Date]
 
 * [.separated]#**Mapping XML data to RDF**#
-* xref:mapping:index.adoc[Mappings and Mapping Suites]
+* xref:mapping:index.adoc[Mappings and mapping suites]
 ** xref:mapping:mapping_how.adoc[How to create mappings]
 ** xref:mapping:methodology.adoc[Methodology]
 ** xref:mapping:toolchain.adoc[Toolchain]
-** xref:mapping:genref.adoc[General Reference]
+** xref:mapping:genref.adoc[General reference]
 ** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
 ** xref:mapping:repository-structure.adoc[Repository structure]
 ** xref:mapping:code-list-resources.adoc[Code list mappings]
-** xref:mapping:preparing-test-data.adoc[Test Data samples]
+** xref:mapping:preparing-test-data.adoc[Test data samples]
 
 * [.separated]#**Information and Resources**#
-* xref:data_availability.adoc[Current Data Availability]
-* https://github.com/OP-TED/ted-rdf-docs[Ask the Community for query help]
+* xref:data_availability.adoc[Current data availability]
+* https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
 * xref:mapping:versioning.adoc[Versioning]
