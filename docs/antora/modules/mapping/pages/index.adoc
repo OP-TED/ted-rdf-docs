@@ -52,7 +52,7 @@ https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F25[/packag
 
 NB: the example provided here is for Standard Form F03 but can be applied in the same way for the mapping suites for the other forms covered by the mappings.
 
-a|Contains xref:mapping/mapping-suite-structure.adoc[mapping suite packages] organised based on the standard forms numbers. Their name is formed based on the form number (e.g. F03, F06) prefixed with package_ for readability. When the eForms are mapped, the corresponding appropriate organisation will be chosen.
+a|Contains xref:mapping:mapping-suite-structure.adoc[mapping suite packages] organised based on the standard forms numbers. Their name is formed based on the form number (e.g. F03, F06) prefixed with package_ for readability. When the eForms are mapped, the corresponding appropriate organisation will be chosen.
 
 | /mappings continued: subfolders
 a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_2021[/package_F03/test_data/form_number_F03_2021]
