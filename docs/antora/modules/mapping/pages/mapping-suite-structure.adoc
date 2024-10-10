@@ -212,5 +212,5 @@ After the execution of a mapping, the mapping package will be further enriched, 
 * `/output/<notice_file1>/<notice_file1>.ttl` the output of the transformation
 
 
-include::partial$feedback.adoc[]
+include::ROOT:partial$feedback.adoc[]
 
