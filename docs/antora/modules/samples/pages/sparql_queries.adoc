@@ -309,5 +309,5 @@ image::user_manual/sparql_queries/image2.png[image,width=801,height=84]
 
 ////
 
-include::partial$feedback.adoc[]
+include::ROOT:partial$feedback.adoc[]
 

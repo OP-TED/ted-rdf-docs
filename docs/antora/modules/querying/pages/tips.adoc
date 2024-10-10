@@ -28,3 +28,4 @@ The project to develop the eProcurement Ontology is quite advanced, however it i
 
 ////
 
+include::ROOT:partial$feedback.adoc[]

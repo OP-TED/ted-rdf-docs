@@ -33,4 +33,4 @@ https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas
 
 - [[gloss:xpath]] *XPath* - the XML Path Language (XPath) Version 1.0. See https://www.w3.org/TR/xpath-10/
 
-////
+include::ROOT:partial$feedback.adoc[]

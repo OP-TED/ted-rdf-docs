@@ -78,4 +78,4 @@ _Implications:_
 
 By adhering to the versioning rules outlined in this section, developers and maintainers can effectively manage versioning for mapping suites, ensuring compatibility and smooth transitions between different versions. These rules provide clear guidelines for when to increment major, minor and patch versions, considering the potential impact on SPARQL queries on the transformation output. Following these rules will help maintain consistency and compatibility across various systems that rely on the mapping suites.
 
-include::partial$feedback.adoc[]
+include::ROOT:partial$feedback.adoc[]

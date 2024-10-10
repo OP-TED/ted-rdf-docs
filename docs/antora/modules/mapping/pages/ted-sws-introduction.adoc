@@ -45,4 +45,4 @@ format) available on the TED Website into RDF format, publishes them
 into CELLAR and makes them available to the public through CELLAR’s
 SPARQL endpoint.
 
-include::partial$feedback.adoc[]
+include::ROOT:partial$feedback.adoc[]

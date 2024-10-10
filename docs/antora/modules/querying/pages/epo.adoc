@@ -53,3 +53,5 @@ https://docs.ted.europa.eu/epo-home/examples/ext2.adoc[Example 2: How many contr
 ****
 
 --
+
+include::ROOT:partial$feedback.adoc[]

@@ -27,3 +27,5 @@ The data can be refreshed at anytime by clicking on "Refresh" on the menu.
 === A short video of part 2 of this process
 
 #insert video of excel query execution#
+
+include::ROOT:partial$feedback.adoc[]

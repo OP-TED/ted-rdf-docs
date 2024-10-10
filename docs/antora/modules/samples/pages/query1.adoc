@@ -58,3 +58,5 @@ LIMIT 1
 
 * Running the Query (link to EndPoint)
 * Examining and refining the query results
+
+include::ROOT:partial$feedback.adoc[]

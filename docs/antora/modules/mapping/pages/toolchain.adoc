@@ -107,6 +107,6 @@ The https://github.com/rmlio/yarrrml-parser[RMLio/yarrrml-parser] library, avail
 
 The https://github.com/RMLio/rmlmapper-java[RMLio/rmlmapper-java] library, available on GitHub, allows the execution of a set of RML mappings on a set of data sources, to generate high quality RDF data.
 
-include::partial$feedback.adoc[]
+include::ROOT:partial$feedback.adoc[]
 
 

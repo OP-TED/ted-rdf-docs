@@ -40,4 +40,4 @@ https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/transfo
 |at-voc:direct-award-justification|URI|Used only when mapping to o a specific value from the EU voc
 |===
 
-include::partial$feedback.adoc[]
+include::ROOT:partial$feedback.adoc[]

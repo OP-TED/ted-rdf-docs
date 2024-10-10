@@ -28,4 +28,4 @@ a|*RDF* |Stands for Resource Description Framework. RDF is a standardized data m
 
 |===
 
-include::partial$feedback.adoc[]
+include::ROOT:partial$feedback.adoc[]

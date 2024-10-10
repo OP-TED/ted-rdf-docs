@@ -50,7 +50,7 @@ Sample queries are available, as is a description of the various methods ways of
 
 Links to all these resources are in the left-hand menu.
 
-
+include::ROOT:partial$feedback.adoc[]
 
 
 

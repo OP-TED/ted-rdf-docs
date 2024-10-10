@@ -27,7 +27,7 @@ Then you will run your query before examining and refining the query results
 == Sample queries
 Sample queries are provided for you to try out using the different query methods. Ways to connect to the data can be found under "Connecting to TED Open Data". 
 
-
+include::ROOT:partial$feedback.adoc[]
 //include::tips.adoc[]
 
 

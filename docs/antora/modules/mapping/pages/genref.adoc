@@ -13,4 +13,4 @@ A mapping suite within the TED Open Data Service is a set of mappings that defin
 
 Further information on mappings and mapping suites can be found xref:/mapping_suite/index.adoc[here]
 
-include::partial$feedback.adoc[]
+include::ROOT:partial$feedback.adoc[]

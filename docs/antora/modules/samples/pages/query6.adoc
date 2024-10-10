@@ -41,3 +41,5 @@ SELECT COUNT DISTINCT(?Notice) WHERE {
 
 * Running the Query
 * Examining and refining the query results
+
+include::ROOT:partial$feedback.adoc[]

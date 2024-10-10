@@ -42,3 +42,5 @@ SELECT COUNT(*) as ?notices_published_in_2023 WHERE {
 
 * Running the Query
 * Examining and refining the query results
+
+include::ROOT:partial$feedback.adoc[]

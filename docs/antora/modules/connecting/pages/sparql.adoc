@@ -43,3 +43,5 @@ image::results1.png[]
 === A short video of this process
 
 #add video of query submission#
+
+include::ROOT:partial$feedback.adoc[]

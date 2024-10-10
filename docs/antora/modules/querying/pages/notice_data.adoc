@@ -34,3 +34,5 @@ video::u2voFo_HAbw[youtube, width=720, height=540]
 == Data Availability
 
 What data is currently available can be found in the xref:ROOT:data_availability.adoc[Current Data Availability] link in the left-hand menu. Data is being added all the time. The Publications Office is working on converting more types of current notice data into RDF, and adding historical data, so the data available in the Cellar triple store will grow over time. Keep an eye on the data availability page for updates.
+
+include::ROOT:partial$feedback.adoc[]

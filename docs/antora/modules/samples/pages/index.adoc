@@ -4,3 +4,4 @@
 
 == query 2
 
+include::ROOT:partial$feedback.adoc[]
