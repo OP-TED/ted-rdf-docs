@@ -1,8 +1,10 @@
-= Querying the data using Jupyter Notebooks and Python
+= Querying the data using Jupyter Notebook and Python
 
 Note: This query method assumes knowledge of both Jupyter Notebooks and Python and that you have both installed and working on your machine.
 
 Description
 
 Set-up steps
+
+#Short video of the process#
 

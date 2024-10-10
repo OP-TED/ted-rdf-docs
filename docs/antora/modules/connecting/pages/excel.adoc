@@ -19,7 +19,7 @@ Once the EndPoint has returned the results of the query:
 . Go to the *Data* tab and choose "from Web" on the Data menu
 . Paste the copied query results into the window that pops up and click "OK". A new window will appear requiring you to choose the sheet you wish to look at. The sheet you want is the generated one, "Table 0"
 . Choose "Table 0" and click on "Transform Data"
-. The data will now open in a Power Query window where you can choose columns (and rows) to include or exclude, and other data manipulation as per the menu items.
+. The data will now open in a Power Query window where you can choose columns (and rows) to include or exclude, and perform other data manipulation as per the menu items.
 . Once you have chosen your required options, click "Close and Load". This will save your settings and return you to the new Excel sheet. Here you can rename the table and perform further data manipulation, create charts, etc.
 
 The data can be refreshed at anytime by clicking on "Refresh" on the menu.

@@ -21,7 +21,7 @@ xref:connecting:excel.adoc[How to query using Microsoft Excel]
 
 Technical users can connect to the data using Jupyter Notebooks and Python
 
-xref:connecting:python.adoc[How to query using Jupiter Notebooks and Python]
+xref:connecting:python.adoc[How to query using Jupiter Notebook and Python]
 
 
 Use the resources and sample queries to try out these methods to see which suits you best.

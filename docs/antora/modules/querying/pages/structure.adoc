@@ -35,6 +35,6 @@ Going back to names and numbers used as in the example on the how to query page,
 
 Once the query is completed, it can be run in one or more of the methods described in "Connecting to TED open data".
 
-== The Results
+== Results
 
 The results are returned in a table that looks very similar to any data base query. Depending on the form of the data returned (text, number, code, URI), some formatting might be required to display the data in a more readable way.

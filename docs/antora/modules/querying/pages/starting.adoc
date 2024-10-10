@@ -33,7 +33,7 @@ There are many triples stored in such a database. For Name, there would be the u
 Queries, written in a query language called SPARQL, are used to retrieve RDF data.
 
 
-== Executing a Query
+== Executing a query
 
 Once a query is ready, it is pasted into a SPARQL EndPoint and executed.
 

@@ -4,7 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2024
 
-== Designing a Query
+== Designing a query
 
 Generally, you will start a new query process with a specific scenario or question about EU public procurement in mind. 
 
@@ -24,7 +24,7 @@ Once you have finalised your query, you will choose which submission method to u
 === Executing the query
 Then you will run your query before examining and refining the query results
 
-== Sample Queries
+== Sample queries
 Sample queries are provided for you to try out using the different query methods. Ways to connect to the data can be found under "Connecting to TED Open Data". 
 
 

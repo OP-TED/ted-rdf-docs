@@ -42,7 +42,7 @@ Each subfolder contains:
 
 The RDF output e.g., 000163-2021.ttl
 
-Another subfolder /test_suite report which in turn contains different files for validating the transformation (see validating transformsations)
+Another subfolder /test_suite report which in turn contains different files for validating the transformation (see validating transformations)
 
 
 
