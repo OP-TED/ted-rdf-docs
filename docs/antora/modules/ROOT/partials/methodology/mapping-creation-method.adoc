@@ -8,7 +8,7 @@ The methodology described focuses on the steps and artefacts at the core of  <<m
 [#mapping-creation]
 .Mapping creation steps in the development lifecycle
 [reftext="Figure {counter:figure}",align="center"]
-image::mapping_creation.png[width=85%]
+image::ROOT:mapping_creation.png[width=85%]
 
 Following this theoretical framework, and learning from the manual creation of mappings, the mapping creation process has been enhanced and refined.
 
