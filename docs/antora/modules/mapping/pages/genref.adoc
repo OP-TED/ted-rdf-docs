@@ -9,8 +9,8 @@
 
 
 
-A mapping suite within the TED Open Data Service is a set of mappings that define how an XML document representing an e-Procurement notice is transformed into an equivalent RDF graph representation that uses classes defined by the eProcurement ontology. These mappings correspond to the different forms, and the relevant components of a mapping suite are organised into a package known as a *mapping suite package*. A mapping suite can be broken down further into mapping suite packages, one per type of standard form mapped.
 
-Further information on mappings and mapping suites can be found xref:/mapping_suite/index.adoc[here]
+
+Further information on mappings and mapping suites can be found xref:/mapping/index.adoc[here]
 
 include::ROOT:partial$feedback.adoc[]
