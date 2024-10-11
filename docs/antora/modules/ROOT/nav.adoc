@@ -45,6 +45,7 @@
 ** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
 ** xref:mapping:glossary.adoc[Glossary of terms]
 ** xref:mapping:code-list-resources.adoc[Code list mappings]
+** xref:mapping:prior.adoc[Recommended Prior Knowledge]
 
 * [.separated]#**Information and Resources**#
 * xref:data_availability.adoc[Current data availability]

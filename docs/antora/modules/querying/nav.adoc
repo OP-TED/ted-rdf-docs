@@ -46,7 +46,7 @@
 ** xref:mapping:repository-structure.adoc[Repository structure]
 ** xref:mapping:code-list-resources.adoc[Code list mappings]
 ** xref:mapping:preparing-test-data.adoc[Test Data samples]
-**  xref:mapping:prior.adoc[Recommended Prior Knowledge]
+
 
 * [.separated]#**Information and Resources**#
 * xref:samples:data_availability.adoc[Current Data Availability]
