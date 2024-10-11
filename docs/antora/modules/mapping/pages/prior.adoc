@@ -1,0 +1,31 @@
+= Recommended Prior knowledge
+
+It is assumed that the reader has a working knowledge of the following:
+
+== Semantic web technologies
+
+ A good understanding of Semantic Web concepts and technologies is crucial. This includes knowledge of RDF triples, ontologies, and linked data principles.
+
+== RDF, RML and SPARQL
+Familiarity with RDF (Resource Description Framework) and the RML (the RDF Mapping Language) is important, while experience with SPARQL (SPARQL Protocol and RDF Query Language) is highly beneficial. TED-ODS provides data in RDF format and utilizes SPARQL for querying.
+
+== EU Procurement data and familiarity with the eProcurement Ontology
+
+If the goal is to understand how  mappings are used to transform specific types of EU procurement data, such as contract notices or award notices, it's important to have a basic understanding of these concepts, and the associated https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].
+
+== Familiarity with spreadsheet editing tools 
+
+Since most of the conceptual mappings is done in a spreadsheet, working experience with spreadsheet editing tools such as MS Excel or Google Sheets, is beneficial.
+
+
+
+
+
+
+//include::TED-ODS-introduction.adoc[Old Introduction]
+
+//include::methodology.adoc[]
+
+//include::toolchain.adoc[]
+
+include::ROOT:partial$feedback.adoc[]
