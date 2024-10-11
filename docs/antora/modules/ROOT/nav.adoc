@@ -2,7 +2,8 @@
 * xref:ODS::index.adoc[Home]
 
 * [.separated]#**Querying TED Open Data**#
-* xref:querying:index.adoc[TED open data]
+* Querying TED Open data
+** xref:querying:index.adoc[Querying TED open data]
 ** xref:querying:starting.adoc[Getting started]
 ** xref:querying:online_training.adoc[Online training resources]
 ** xref:querying:designing_query.adoc[Designing a query]
@@ -14,13 +15,15 @@
 ** xref:samples:index.adoc[Browse the sample queries]
 
 * [.separated]#**Connecting to TED Open Data**#
-* xref:connecting:index.adoc[Connection methods]
+* Connection Methods
+** xref:connecting:index.adoc[Connection methods]
 ** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Python]
 
 * [.separated]#**Sample SPARQL Queries**#
-* xref:samples:index.adoc[Sample queries]
+
+* Sample queries
 ** xref:samples:query1.adoc[Query 1: Highest value contract on a date]
 ** xref:samples:query2.adoc[Query 2: METS packages published on a date]
 ** xref:samples:query3.adoc[Query 3: Query notice by id]
@@ -31,19 +34,17 @@
 ** xref:samples:query8.adoc[Query 8: Contract winners on a Date]
 
 * [.separated]#**Mapping XML data to RDF**#
-* xref:mapping:index.adoc[Mappings and mapping suites]
+* Mappings and mapping suites
+** xref:mapping:index.adoc[Introduction] 
 ** xref:mapping:repository-structure.adoc[Repository structure]
 ** xref:mapping:mapping_how.adoc[Methodology]
-//** xref:mapping:methodology.adoc[Methodology]
 ** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
+** xref:preparing-test-data.adoc[Preparing test data samples]
 ** xref:mapping:toolchain.adoc[Toolchain]
 ** xref:mapping:reusing.adoc[Reusing mappings]
 ** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
-* xref:mapping:glossary.adoc[Glossary of terms]
-
-
+** xref:mapping:glossary.adoc[Glossary of terms]
 ** xref:mapping:code-list-resources.adoc[Code list mappings]
-** xref:mapping:preparing-test-data.adoc[Test data samples]
 
 * [.separated]#**Information and Resources**#
 * xref:data_availability.adoc[Current data availability]
