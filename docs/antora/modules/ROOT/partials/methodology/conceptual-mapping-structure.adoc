@@ -14,7 +14,7 @@ It consists of several worksheets:
 * Misc: optional worksheets added by semantic engineers to manage additional information.
 
 == The Metadata sheet
-image::conmap1.png[]
+image::ROOT:conmap1.png[]
 
 |===
 |*Cell refs.*|*Header for content*|*Description*|*Notes*
@@ -37,7 +37,7 @@ Theoretically anything like this could be used: (,1.0],[1.2,)
 
 == The Resources sheet
 
-image::conmap2.png[]
+image::ROOT:conmap2.png[]
 
 |===
 |*Cell refs.*|*Header for content*|*Description*|*Notes*
@@ -48,7 +48,7 @@ image::conmap2.png[]
 
 
 === The Rules sheet
-image::conmap3.png[]
+image::ROOT:conmap3.png[]
 
 |===
 |*Cell refs.*|*Header for content*|*Description*|*Notes*
