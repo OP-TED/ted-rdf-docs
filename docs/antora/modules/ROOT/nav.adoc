@@ -3,7 +3,7 @@
 
 * [.separated]#**Querying TED Open Data**#
 * Querying TED Open data
-** xref:querying:index.adoc[Querying TED open data]
+** xref:querying:index.adoc[Introduction]
 ** xref:querying:starting.adoc[Getting started]
 ** xref:querying:online_training.adoc[Online training resources]
 ** xref:querying:designing_query.adoc[Designing a query]
@@ -16,7 +16,7 @@
 
 * [.separated]#**Connecting to TED Open Data**#
 * Connection Methods
-** xref:connecting:index.adoc[Connection methods]
+** xref:connecting:index.adoc[Introduction]
 ** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Python]
