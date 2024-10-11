@@ -32,12 +32,16 @@
 
 * [.separated]#**Mapping XML data to RDF**#
 * xref:mapping:index.adoc[Mappings and mapping suites]
-** xref:mapping:mapping_how.adoc[How to create mappings]
-** xref:mapping:methodology.adoc[Methodology]
-** xref:mapping:toolchain.adoc[Toolchain]
-** xref:mapping:genref.adoc[General reference]
-** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
 ** xref:mapping:repository-structure.adoc[Repository structure]
+** xref:mapping:mapping_how.adoc[Methodology]
+//** xref:mapping:methodology.adoc[Methodology]
+** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
+** xref:mapping:toolchain.adoc[Toolchain]
+** xref:mapping:reusing.adoc[Reusing mappings]
+** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
+* xref:mapping:glossary.adoc[Glossary of terms]
+
+
 ** xref:mapping:code-list-resources.adoc[Code list mappings]
 ** xref:mapping:preparing-test-data.adoc[Test data samples]
 
