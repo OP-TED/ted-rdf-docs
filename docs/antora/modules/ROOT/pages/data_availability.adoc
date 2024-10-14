@@ -12,7 +12,7 @@ Notice Data is currently available from *Contract Award Notices* in the above ti
 
 NOTE: Data, daily going forward and data going back in time is being constantly added to Cellar
 
-=== Figure 1: Notice types and where they fit in in the public procurement process
+=== Notice types, and where they fit in, in the public procurement process
 
 image::notice_types.png[]
 
