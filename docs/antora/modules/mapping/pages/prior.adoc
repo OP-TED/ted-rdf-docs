@@ -4,7 +4,7 @@ It is assumed that the reader has a working knowledge of the following:
 
 == Semantic web technologies
 
- A good understanding of Semantic Web concepts and technologies is crucial. This includes knowledge of RDF triples, ontologies, and linked data principles.
+A good understanding of Semantic Web concepts and technologies is crucial. This includes knowledge of RDF triples, ontologies, and linked data principles.
 
 == RDF, RML and SPARQL
 Familiarity with RDF (Resource Description Framework) and the RML (the RDF Mapping Language) is important, while experience with SPARQL (SPARQL Protocol and RDF Query Language) is highly beneficial. TED-ODS provides data in RDF format and utilizes SPARQL for querying.
