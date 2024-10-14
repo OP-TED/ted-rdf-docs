@@ -16,8 +16,8 @@
 ** xref:querying:notice_data.adoc[Public procurement data]
 ** xref:querying:epo.adoc[eProcurement Ontology resources]
 ** xref:querying:snippets.adoc[Reusable query snippets]
-** xref:querying:scenarios.adoc[Scenarios: question to query]
-** xref:samples:index.adoc[Browse the sample queries]
+//** xref:querying:scenarios.adoc[Scenarios: question to query]
+//** xref:samples:index.adoc[Browse the sample queries]
 
 * [.separated]#**Connecting to TED Open Data**#
 * xref:connecting:index.adoc[Connection Methods]

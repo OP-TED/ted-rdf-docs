@@ -6,6 +6,6 @@ Description
 
 Set-up steps
 
-#Short video of the process#
+//#Short video of the process#
 
 include::ROOT:partial$feedback.adoc[]
