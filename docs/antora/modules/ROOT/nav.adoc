@@ -16,13 +16,14 @@
 
 * [.separated]#**Connecting to TED Open Data**#
 * Connection Methods
-** xref:connecting:index.adoc[Introduction]
+** xref:connecting:index.adoc[Home]
 ** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
 * [.separated]#**Sample SPARQL Queries**#
 * Sample queries
+** xref:samples:index.adoc[Query List]
 ** xref:samples:query1.adoc[Query 1: Highest value contract on a date]
 ** xref:samples:query2.adoc[Query 2: METS packages published on a date]
 ** xref:samples:query3.adoc[Query 3: Query notice by id]
@@ -34,7 +35,7 @@
 
 * [.separated]#**Mapping XML data to RDF**#
 * Mappings and mapping suites
-** xref:mapping:index.adoc[Introduction] 
+** xref:mapping:index.adoc[Home] 
 ** xref:mapping:repository-structure.adoc[Repository structure]
 ** xref:mapping:mapping_how.adoc[Methodology]
 ** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
