@@ -10,8 +10,8 @@
 ** xref:querying:structure.adoc[SPARQL query structure]
 ** xref:querying:notice_data.adoc[Notice data]
 ** xref:querying:epo.adoc[eProcurement Ontology resources]
-** xref:querying:snippets.adoc[Reusable query snippets]
-** xref:querying:scenarios.adoc[Scenarios: question to query]
+//** xref:querying:snippets.adoc[Reusable query snippets]
+//** xref:querying:scenarios.adoc[Scenarios: question to query]
 ** xref:samples:index.adoc[Browse the sample queries]
 
 * [.separated]#**Connecting to TED Open Data**#
@@ -22,9 +22,7 @@
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
 * [.separated]#**Sample SPARQL Queries**#
-
 * Sample queries
-To be added as they become available
 ** xref:samples:query1.adoc[Query 1: Highest value contract on a date]
 ** xref:samples:query2.adoc[Query 2: METS packages published on a date]
 ** xref:samples:query3.adoc[Query 3: Query notice by id]

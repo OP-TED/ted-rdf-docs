@@ -25,16 +25,18 @@ The Information and fields in Notice data
 xref:querying:epo.adoc[eProcurement Ontology resources] +
 The eProcurement Ontology Resources
 
+////
 xref:querying:snippets.adoc[Reusable query snippets] +
 Reusable SPARQL snippets for frequently used classes
 
 xref:querying:scenarios.adoc[Scenarios: question to query] +
 Query Scenarios: from Question to Query
+////
 
 xref:samples:index.adoc[Browse the sample queries] +
 Sample Queries to get you started
 
-xref:querying:submit.adoc[Executing your query] +
+xref:connecting:index.adoc[Executing your query] +
 Executing your query via the SPARQL EndPoint, Excel or Python
 
 Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
