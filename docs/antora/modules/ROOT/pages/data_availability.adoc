@@ -12,11 +12,11 @@ Notice Data is currently available from *Contract Award Notices* in the above ti
 
 NOTE: Data, daily going forward and data going back in time is being constantly added to Cellar
 
-=== Notice types, and where they fit in, in the public procurement process
+=== Notice types and when they are published in the public procurement process
 
 image::notice_types.png[]
 
 
-For an overview of what data can be extracted from a particular notice, you can use the search facility on the https://ted.europa.eu/en/[TED website], choosing "Advanced Search" (All Notices), then "Result", and look at the contents of a notice.
+For an overview of what data can be extracted from a particular notice, you can use the search facility on the https://ted.europa.eu/en/[TED website], choosing "Advanced Search" (All Notices), and the type of notice you are interested in, and then look at the contents of a notice.
 
 include::ROOT:partial$feedback.adoc[]
