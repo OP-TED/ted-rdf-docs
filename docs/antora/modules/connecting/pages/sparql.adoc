@@ -1,8 +1,11 @@
 = Submitting a query in the Cellar SPARQL EndPoint
 
-== Cellar SPARQL Endpoint
+== Cellar SPARQL EndPoint
 
 image::sparql3.png[]
+
+
+== Link to the SPARQL EndPoint
 
 [sidebar]
 ****
