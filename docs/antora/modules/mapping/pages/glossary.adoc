@@ -10,7 +10,7 @@
 
 - [[gloss:mapping_package]] *Mapping package* - see xref:gloss:ms_package[*Mapping suite package*]
 
-- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organized in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some xref:gloss:test_data[test data], the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref::mapping_suite/mapping-suite-structure.adoc[Mapping Suite Structure].
+- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organized in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some xref:gloss:test_data[test data], the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref::mapping:mapping-suite-structure.adoc[Mapping Suite Structure].
 
 - [[gloss:notice]] *Notice*, short for *public procurement notice*, refers to a procurement notice published on xref:gloss:ted[TED]. To explore some of these notices please visit: https://ted.europa.eu/TED/
 
@@ -29,7 +29,7 @@
 - [[gloss:xsd]] *TED XML schema* refers to the XML schema (XSD) specified for validating the notices that are published according to the Regulation (EU) 2015/1986. For a full documentation of the various XSD schemas, and their versions, please check out:
 https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas
 
-- [[gloss:test_data]] *Test data* - a carefully selected, representative sample of real notices published on TED, which, together, cover all the different XPaths that can appear in the entire set of Public Procurement Data (PPD) of a certain type (i.e. created based on a specific Form, specific XSD version), and published in a certain date range. For more detailed documentation, please check out the xref:mapping_suite/preparing-test-data.adoc[] section
+- [[gloss:test_data]] *Test data* - a carefully selected, representative sample of real notices published on TED, which, together, cover all the different XPaths that can appear in the entire set of Public Procurement Data (PPD) of a certain type (i.e. created based on a specific Form, specific XSD version), and published in a certain date range. For more detailed documentation, please check out the xref:mapping:preparing-test-data.adoc[] section
 
 - [[gloss:xpath]] *XPath* - the XML Path Language (XPath) Version 1.0. See https://www.w3.org/TR/xpath-10/
 

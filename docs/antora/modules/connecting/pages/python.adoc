@@ -37,7 +37,7 @@ You can change the Date range directly in the query if you wish and then rerun t
 
 Some panda dataframes are provided that show the data in a table, some statistics about it, and a graph showing (in this case) a distribution of counties.
 
-#video#
+//#video#
 
 //#Short video of the process#
 

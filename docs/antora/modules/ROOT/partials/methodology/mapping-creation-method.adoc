@@ -144,17 +144,17 @@ IMPORTANT: The path to the source files should be specified relative to the RML 
 
 ====  Preparing test data
 
-The xref:mapping_suite/preparing-test-data.adoc[representative sample data selection chapter] should be referred to.
+The xref:mapping:preparing-test-data.adoc[representative sample data selection chapter] should be referred to.
 
 ==== Writing YARRRML Rules (optional)
 
-During the initial phase of the mapping creation process, the writing of the mapping rules in https://rml.io/yarrrml/spec/[YARRRML] (a human-readable text-based representation for declarative generation rules), instead of RML took place, because it seemed simpler, and the end result was more human friendly. However, as we gained more experience and confidence in how the mappings should be defined, we realised that writing RML rules directly could be even more powerful, and we started to rewrite all our YARRRML mapping rules into RML. If this transition proves to be successful, and writing RML rules directly will be more convenient, our process will not require writing YARRRML rules in the future. This is the reason for why this step is optional. It could be useful for small test cases, quick demos, or showcases, and in cases when some people are more familiar with YARRRML than RML. If people decide to write YARRRML rules, the next step will become unnecessary, as the RML rules will be automatically generated from the YARRRML rules, using xref:mapping_suite/toolchain.adoc[dedicated tools] that were developed for this purpose.
+During the initial phase of the mapping creation process, the writing of the mapping rules in https://rml.io/yarrrml/spec/[YARRRML] (a human-readable text-based representation for declarative generation rules), instead of RML took place, because it seemed simpler, and the end result was more human friendly. However, as we gained more experience and confidence in how the mappings should be defined, we realised that writing RML rules directly could be even more powerful, and we started to rewrite all our YARRRML mapping rules into RML. If this transition proves to be successful, and writing RML rules directly will be more convenient, our process will not require writing YARRRML rules in the future. This is the reason for why this step is optional. It could be useful for small test cases, quick demos, or showcases, and in cases when some people are more familiar with YARRRML than RML. If people decide to write YARRRML rules, the next step will become unnecessary, as the RML rules will be automatically generated from the YARRRML rules, using xref:mapping:toolchain.adoc[dedicated tools] that were developed for this purpose.
 
 Since this step is optional, we will not describe in detail the individual issues that need to be worked on, but they are in principle the same as the ones described in the next section.
 
 [#_writing_rml_rules]
 ==== Writing RML rules
-In the previous step the mapping rules were defined in YARRRML. This step consists of the simple action of executing xref:mapping_suite/toolchain.adoc[the tool that generates RML out of YARRRML].
+In the previous step the mapping rules were defined in YARRRML. This step consists of the simple action of executing xref:mapping:toolchain.adoc[the tool that generates RML out of YARRRML].
 
 Regardless of which file is chosen to be defined manually, YARRRML or RML, the goal of this step is to have an RML mapping file that should be able to convert an XML notice into a corresponding RDF graph.
 

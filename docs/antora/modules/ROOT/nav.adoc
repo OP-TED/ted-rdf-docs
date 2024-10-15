@@ -39,12 +39,11 @@
 ** xref:mapping:repository-structure.adoc[Repository structure]
 ** xref:mapping:mapping_how.adoc[Methodology]
 ** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
-** xref:preparing-test-data.adoc[Preparing test data samples]
+** xref:mapping:preparing-test-data.adoc[Preparing test data samples]
 ** xref:mapping:toolchain.adoc[Toolchain]
 ** xref:mapping:reusing.adoc[Reusing mappings]
 ** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
 ** xref:mapping:glossary.adoc[Glossary of terms]
-** xref:mapping:code-list-resources.adoc[Code list mappings]
 ** xref:mapping:prior.adoc[Recommended Prior Knowledge]
 
 * [.separated]#**Information and Resources**#

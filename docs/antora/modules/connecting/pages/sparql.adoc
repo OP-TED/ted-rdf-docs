@@ -39,11 +39,13 @@ The SPARQL EndPoint: https://publications.europa.eu/webapi/rdf/sparql
 
 The query is pasted into the "Query Text" field. The query demonstrated returns a list of companies that have won a tender/ contract where the notice that announced this was published on the requested date.
 
+== The Results
+
 This returns the results (here in HTML format):
 
 image::results1.png[]
 
-=== A short video of this process
+//=== A short video of this process
 
 //#add video of query submission#
 
