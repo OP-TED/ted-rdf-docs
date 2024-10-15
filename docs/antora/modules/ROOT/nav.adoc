@@ -19,7 +19,7 @@
 ** xref:connecting:index.adoc[Introduction]
 ** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
-** xref:connecting:python.adoc[Connect using Python]
+** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
 * [.separated]#**Sample SPARQL Queries**#
 
