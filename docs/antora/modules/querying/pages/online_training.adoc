@@ -13,4 +13,4 @@ There are many good online resources on SPARQL and constructing SPARQL queries:
  * Other web-based training courses on training sites like Udemy.
  * Books from publishers such as O'Reilly, The Dummies Guide to, Morgan Kaufmann, etc.
 
- include::ROOT:partial$feedback.adoc[]
+include::ROOT:partial$feedback.adoc[]

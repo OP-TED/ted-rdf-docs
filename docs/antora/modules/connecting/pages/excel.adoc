@@ -6,9 +6,11 @@ There are two parts to querying the data using Excel.
 
 The first part is shown on the page: xref:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]. 
 
-NOTE: When submitting your query, be sure that you choose the first results format option in the dropdown list: *HTML*
+NOTE: When submitting your query, be sure that you choose the first results format option in the dropdown list, *HTML*
 
 === A short video of part 1 this process
+
+//#insert sparql query link#
 
 == Part 2
 
@@ -26,6 +28,6 @@ The data can be refreshed at anytime by clicking on "Refresh" on the menu.
 
 === A short video of part 2 of this process
 
-#insert video of excel query execution#
+//#insert video of excel query execution#
 
 include::ROOT:partial$feedback.adoc[]

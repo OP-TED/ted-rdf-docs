@@ -23,7 +23,7 @@ If you do not have an environment set up you can run the notebook in a Google co
 . Click on "Open Colab"
 . In the pop-up window that appears, click on "Upload", and follow the instructions to either browse to, or drag and drop the notebook file you downloaded from the ted-rdf-docs repository in the first step above into the window. The notebook will open in the colab space.
 
-The Notebook contains the instructions to install the dependencies and run the query. Start at the top as follows.
+The Notebook contains the instructions to install the dependencies and run the query. Start at the top as follows:
 
 [start=5]
 . Where you see a code block with a [ ] at its top left, and on hovering over the [ ] a play arrow appears, click on the play arrow to execute the code. Start at the top and work your way down the notebook code blocks in order. A green tick will appear on the left of the [ ] when the step has completed.

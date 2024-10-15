@@ -3,7 +3,7 @@
 
 * [.separated]#**Querying TED Open Data**#
 * Querying TED Open data
-** xref:querying:index.adoc[Introduction]
+** xref:querying:index.adoc[Home]
 ** xref:querying:starting.adoc[Getting started]
 ** xref:querying:online_training.adoc[Online training resources]
 ** xref:querying:designing_query.adoc[Designing a query]
