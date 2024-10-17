@@ -1,5 +1,5 @@
 name: ODS
-version: ~
+version: 1.0
 title: TED Open Data Service
 start_page: ROOT:index.adoc
 asciidoc:
