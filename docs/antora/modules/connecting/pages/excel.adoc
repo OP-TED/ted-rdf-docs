@@ -2,7 +2,7 @@
 
 There are two parts to querying the data using Excel. 
 
-== Part 1
+== Step 1
 
 The first part is shown on the page: xref:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]. 
 
@@ -12,15 +12,15 @@ NOTE: When submitting your query, be sure that you choose the first results form
 
 //#insert sparql query link#
 
-== Part 2
+== Step 2
 
 Once the EndPoint has returned the results of the query:
 
 . Copy the url of the results page to the clipboard
 . Open a new spreadsheet in Microsoft Excel
 . Go to the *Data* tab and choose "from Web" on the Data menu
-. Paste the copied query results into the window that pops up and click "OK". A new window will appear requiring you to choose the sheet you wish to look at. The sheet you want is the generated one, "Table 0". (The table number might be different in your application)
-. Choose "Table 0" and click on "Transform Data"
+. Paste the copied query results into the window that pops up and click "OK". A new window will appear requiring you to choose the sheet you wish to look at. The sheet you want is the generated one, "Table x" (x will be a number: 0, 1, etc.The table number might be different in your application)
+. Choose "Table x" and click on "Transform Data"
 . The data will now open in a Power Query window where you can choose columns (and rows) to include or exclude, and perform other data manipulation as per the menu items.
 . Once you have chosen your required options, click "Close and Load". This will save your settings and return you to the new Excel sheet. Here you can rename the table and perform further data manipulation, create charts, etc.
 
