@@ -9,13 +9,13 @@
 
 == What is the TED Open Data Service?
 
-[sidebar]
---
+//[sidebar]
+//--
 The TED Open Data Service continuously converts notices from the XML standard form format available on the TED Website into RDF format. The data is stored in the Publications Office's (OP) triple store named the "Cellar", and is publicly available or "open". 
 
 Making TED data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] to connect EU data across sectors for the benefit of citizens, businesses, researchers, public administrations, and others.
 
---
+//--
 
 
 [.tile-container]
@@ -25,25 +25,25 @@ Making TED data open for querying is part of the https://digital-strategy.ec.eur
 .Query TED Open Data
 
 ****
-Resources and links for querying TED Open data
+Resources and links for querying TED Open Data
 
 xref:querying:index.adoc[Query TED open data using SPARQL]
 ****
 
 [.tile]
-.Connect to TED Open Data
+.Connect to the TED Open Data Service
 
 ****
-Methods of connecting to TED open data
+Methods of connecting to TED Open Data
 
 xref:connecting:index.adoc[Connect to TED open data]
 ****
 
 [.tile]
-.View Sample Queries
+.Example Query Library
 
 ****
-Use or adapt the sample SPARQL queries available
+Use or adapt the example SPARQL queries
 
 xref:samples:index.adoc[Browse the sample queries provided]
 ****

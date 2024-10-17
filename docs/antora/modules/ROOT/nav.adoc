@@ -1,7 +1,5 @@
 
 * xref:ODS::index.adoc[Home]
-
-* [.separated]#**Querying TED Open Data**#
 * Querying TED Open data
 ** xref:querying:index.adoc[Home]
 ** xref:querying:starting.adoc[Getting started]
@@ -10,20 +8,15 @@
 ** xref:querying:structure.adoc[SPARQL query structure]
 ** xref:querying:notice_data.adoc[Notice data]
 ** xref:querying:epo.adoc[eProcurement Ontology resources]
-//** xref:querying:snippets.adoc[Reusable query snippets]
-//** xref:querying:scenarios.adoc[Scenarios: question to query]
-** xref:samples:index.adoc[Browse the sample queries]
 
-* [.separated]#**Connecting to TED Open Data**#
-* Connection Methods
+* Connecting to TED Open Data
 ** xref:connecting:index.adoc[Home]
 ** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
-* [.separated]#**Sample SPARQL Queries**#
-* Sample queries
-** xref:samples:index.adoc[Query List]
+* Example Query Library
+** xref:samples:index.adoc[Home]
 ** xref:samples:query1.adoc[Query 1: Highest value contract on a date]
 ** xref:samples:query2.adoc[Query 2: METS packages published on a date]
 ** xref:samples:query3.adoc[Query 3: Query notice by id]
@@ -32,6 +25,13 @@
 ** xref:samples:query6.adoc[Query 6: Contractors using subcontractors/ date]
 ** xref:samples:query7.adoc[Query 7: Contract values on a date]
 ** xref:samples:query8.adoc[Query 8: Contract winners on a Date]
+//** xref:querying:snippets.adoc[Reusable query snippets]
+//** xref:querying:scenarios.adoc[Scenarios: question to query]
+//** xref:samples:index.adoc[Browse the sample queries]
+//* [.separated]#**Querying TED Open Data**#
+//* [.separated]#**Connecting to TED Open Data**#
+//* [.separated]#**Sample SPARQL Queries**#
+
 
 * [.separated]#**Mapping XML data to RDF**#
 * Mappings and mapping suites
