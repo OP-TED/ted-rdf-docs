@@ -46,6 +46,16 @@
 ** xref:mapping:glossary.adoc[Glossary of terms]
 ** xref:mapping:prior.adoc[Recommended Prior Knowledge]
 
+
+* [.separated]#**Downloading TED XML Notice Data**#
+* Access Methods
+** xref:reuse::download-xml.adoc[XML Downloads]
+** xref:reuse::download-direct.adoc[Direct downloads via html links]
+** xref:reuse::search-api.adoc[Downloads via the Search API]
+** xref:reuse::search-api-demo.adoc[Examples using the Search API]
+** xref:reuse::ftp.adoc[TED schemas archive]
+
+
 * [.separated]#**Information and Resources**#
 * xref:data_availability.adoc[Current data availability]
 * https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
