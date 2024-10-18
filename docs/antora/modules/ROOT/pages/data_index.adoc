@@ -22,7 +22,7 @@ Making TED data open for querying is part of the https://digital-strategy.ec.eur
 --
 
 [.tile]
-.Query TED Open Data
+.How to query TED Open Data
 
 ****
 Resources and links for querying TED Open Data

@@ -5,9 +5,9 @@
 :docdate: September 2023
 
 
-The Publications office makes two types of notice data available for querying and consumption, TED Notice Data in XML format, and TED Open Data in RDF format.
+The Publications Office provides notice data for querying and consumption in two formats: TED Notice Data in XML format, and TED Open Data in RDF format.
 
-TED notice data can be downloaded from the https://ted.europa.eu/en/[TED Website]. TED RDF data can be queried via the https://publications.europa.eu/webapi/rdf/sparql[eProcurement SPARQL EndPoint] using SPARQL query language.
+XML data can be downloaded from the https://ted.europa.eu/en/[TED Website]. RDF data can be queried via the https://publications.europa.eu/webapi/rdf/sparql[eProcurement SPARQL EndPoint] using SPARQL query language.
 
 
 
