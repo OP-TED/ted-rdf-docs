@@ -1,6 +1,7 @@
 name: ODS
 version: 1.0
 title: TED Open Data Service
+display_version: 1.0
 start_page: ROOT:index.adoc
 asciidoc:
   attributes:

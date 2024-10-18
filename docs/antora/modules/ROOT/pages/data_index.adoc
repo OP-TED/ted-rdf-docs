@@ -1,0 +1,33 @@
+:doctitle: TED Data
+:doccode: sws-main-prod-001
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: September 2023
+
+
+The Publications office makes two types of notice data available for querying and consumption, TED Notice Data in XML format, and TED Open Data in RDF format.
+
+TED notice data can be downloaded from the https://ted.europa.eu/en/[TED Website]. TED RDF data can be queried via the https://publications.europa.eu/webapi/rdf/sparql[eProcurement SPARQL EndPoint using SPARQL query language].
+
+
+
+
+[.tile-container]
+--
+
+[.tile]
+.TED Open Data
+
+****
+Query and connect to TED Open Data using SPARQL. Explore the example query library and find resources on how to create SPARQL queries. Learn how to create mappings to convert XML data into RDF.
+
+xref:ODS:index.adoc[Explore Ted Open Data]
+****
+
+[.tile]
+.TED XML Data
+****
+Learn how to download TED notices in various formats via the TED Website and API. Daily or monthly packages are available.
+
+xref:reuse:index.adoc[Download TED XML Data]
+****
