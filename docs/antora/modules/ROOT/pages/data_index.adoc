@@ -1,33 +1,59 @@
-:doctitle: TED Data
+//:doctitle: The TED Open Data Service
 :doccode: sws-main-prod-001
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: September 2023
 
+[.text-center]
+= TED Open Data
 
-The Publications office makes two types of notice data available for querying and consumption, TED Notice Data in XML format, and TED Open Data in RDF format.
+== What is the TED Open Data Service?
 
-TED notice data can be downloaded from the https://ted.europa.eu/en/[TED Website]. TED RDF data can be queried via the https://publications.europa.eu/webapi/rdf/sparql[eProcurement SPARQL EndPoint using SPARQL query language].
+//[sidebar]
+//--
+The TED Open Data Service continuously converts notices from the XML standard form format available on the TED Website into RDF format. The data is stored in the Publications Office's (OP) triple store named the "Cellar", and is publicly available or "open". 
 
+Making TED data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] to connect EU data across sectors for the benefit of citizens, businesses, researchers, public administrations, and others.
 
+//--
 
 
 [.tile-container]
 --
 
 [.tile]
-.TED Open Data
+.Query TED Open Data
 
 ****
-Query and connect to TED Open Data using SPARQL. Explore the example query library and find resources on how to create SPARQL queries. Learn how to create mappings to convert XML data into RDF.
+Resources and links for querying TED Open Data
 
-xref:ODS:index.adoc[Explore Ted Open Data]
+xref:querying:index.adoc[Query TED open data using SPARQL]
 ****
 
 [.tile]
-.TED XML Data
-****
-Learn how to download TED notices in various formats via the TED Website and API. Daily or monthly packages are available.
+.Connect to the TED Open Data Service
 
-xref:reuse:index.adoc[Download TED XML Data]
 ****
+Methods of connecting to TED Open Data
+
+xref:connecting:index.adoc[Connect to TED open data]
+****
+
+[.tile]
+.Example Query Library
+
+****
+Use or adapt the example SPARQL queries
+
+xref:samples:index.adoc[Browse the sample queries provided]
+****
+
+[.tile]
+.Create Mapping Suites (XML to RDF)
+****
+Convert XML data into RDF
+
+xref:mapping:index.adoc[Create mappings to convert XML data into RDF]
+
+****
+--
