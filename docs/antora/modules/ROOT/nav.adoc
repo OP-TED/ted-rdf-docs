@@ -3,7 +3,7 @@
 
 * [.separated]#**TED Open Data**#
 
-* *Querying TED Open data*
+* Querying TED Open data
 ** xref:querying:index.adoc[Home]
 ** xref:querying:starting.adoc[Getting started]
 ** xref:querying:online_training.adoc[Online training resources]
@@ -12,13 +12,13 @@
 ** xref:querying:notice_data.adoc[Notice data]
 ** xref:querying:epo.adoc[eProcurement Ontology resources]
 
-* *Connecting to TED Open Data*
+* Connecting to TED Open Data
 ** xref:connecting:index.adoc[Home]
 ** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
-* *Example Query Library*
+* Example Query Library
 ** xref:samples:index.adoc[Home]
 ** xref:samples:query1.adoc[Query 1: Highest value contract on a date]
 ** xref:samples:query2.adoc[Query 2: METS packages published on a date]
@@ -38,7 +38,7 @@
 
 //* [.separated]#**Mapping XML data to RDF**#
 //* Mappings and mapping suites
-* *Map XML data to RDF*
+* Map XML data to RDF
 ** xref:mapping:index.adoc[Home] 
 ** xref:mapping:repository-structure.adoc[Repository structure]
 ** xref:mapping:mapping_how.adoc[Methodology]
@@ -55,7 +55,7 @@
 
 * [.separated]#**TED XML Data**#
 
-* *Download TED XML Notice Data*
+* Download TED XML Notice Data
 ** xref:reuse::download-xml.adoc[XML Downloads]
 ** xref:reuse::download-direct.adoc[Direct downloads via html links]
 ** xref:reuse::search-api.adoc[Downloads via the Search API]
