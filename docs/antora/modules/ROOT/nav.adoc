@@ -56,11 +56,11 @@
 * [.separated]#**TED XML Data**#
 
 * Download TED XML Notice Data
-** xref:reuse::download-xml.adoc[XML Downloads]
-** xref:reuse::download-direct.adoc[Direct downloads via html links]
-** xref:reuse::search-api.adoc[Downloads via the Search API]
-** xref:reuse::search-api-demo.adoc[Examples using the Search API]
-** xref:reuse::ftp.adoc[TED schemas archive]
+** xref:reuse:download-xml.adoc[XML Downloads]
+** xref:reuse:download-direct.adoc[Direct downloads via html links]
+** xref:reuse:search-api.adoc[Downloads via the Search API]
+** xref:reuse:search-api-demo.adoc[Examples using the Search API]
+** xref:reuse:ftp.adoc[TED schemas archive]
 
 
 //* [.separated]#**Information and Resources**#
