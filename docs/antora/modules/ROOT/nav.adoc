@@ -1,7 +1,7 @@
 
 * xref:ODS::index.adoc[Home]
 
-[.separated]#**TED Open Data**#
+* [.separated]#**TED Open Data**#
 
 * *Querying TED Open data*
 ** xref:querying:index.adoc[Home]
@@ -53,7 +53,7 @@
 
 //* [.separated]#**Downloading TED XML Notice Data**#
 
-[.separated]#**TED XML Data**#
+* [.separated]#**TED XML Data**#
 
 * *Download TED XML Notice Data*
 ** xref:reuse::download-xml.adoc[XML Downloads]
@@ -64,7 +64,7 @@
 
 
 //* [.separated]#**Information and Resources**#
-[.separated]#**Resources**#
+* [.separated]#**Resources**#
 
 * xref:data_availability.adoc[Current data availability]
 * https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
