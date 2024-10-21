@@ -1,21 +1,23 @@
 :doctitle: Data Available
 
-
-
 == Data currently available
 
 === Time period and specific notice data
 
+==== Open data
 Data is currently available from August 2023 to December 2023
 
 Notice Data is currently available from *Contract Award Notices* in the above time period +
 
 NOTE: Data, daily going forward and data going back in time is being constantly added to Cellar
 
+==== XML notice data
+
+#XML notice data is available... #
+
 === Notice types and when they are published in the public procurement process
 
 image::notice_types.png[]
-
 
 For an overview of what data can be extracted from a particular notice, you can use the search facility on the https://ted.europa.eu/en/[TED website], choosing "Advanced Search" (All Notices), and the type of notice you are interested in, and then look at the contents of a notice.
 
