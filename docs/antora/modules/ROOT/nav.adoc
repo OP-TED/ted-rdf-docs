@@ -1,5 +1,8 @@
 
 * xref:ODS::index.adoc[Home]
+
+[.separated]#**TED Open Data**#
+
 * Querying TED Open data
 ** xref:querying:index.adoc[Home]
 ** xref:querying:starting.adoc[Getting started]
@@ -33,8 +36,9 @@
 //* [.separated]#**Sample SPARQL Queries**#
 
 
-* [.separated]#**Mapping XML data to RDF**#
-* Mappings and mapping suites
+//* [.separated]#**Mapping XML data to RDF**#
+//* Mappings and mapping suites
+* Map XML data to RDF
 ** xref:mapping:index.adoc[Home] 
 ** xref:mapping:repository-structure.adoc[Repository structure]
 ** xref:mapping:mapping_how.adoc[Methodology]
@@ -47,8 +51,11 @@
 ** xref:mapping:prior.adoc[Recommended Prior Knowledge]
 
 
-* [.separated]#**Downloading TED XML Notice Data**#
-* Access Methods
+//* [.separated]#**Downloading TED XML Notice Data**#
+
+[.separated]#**TED XML Data**#
+
+* Download TED XML Notice Data
 ** xref:reuse::download-xml.adoc[XML Downloads]
 ** xref:reuse::download-direct.adoc[Direct downloads via html links]
 ** xref:reuse::search-api.adoc[Downloads via the Search API]
@@ -57,7 +64,8 @@
 
 
 //* [.separated]#**Information and Resources**#
+[.separated]#**Resources**#
 
 * xref:data_availability.adoc[Current data availability]
 * https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
-* xref:mapping:versioning.adoc[Versioning]
+//** xref:mapping:versioning.adoc[Versioning]
