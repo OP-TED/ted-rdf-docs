@@ -56,7 +56,8 @@
 ** xref:reuse::ftp.adoc[TED schemas archive]
 
 
-* [.separated]#**Information and Resources**#
+//* [.separated]#**Information and Resources**#
+
 * xref:data_availability.adoc[Current data availability]
 * https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
 * xref:mapping:versioning.adoc[Versioning]
