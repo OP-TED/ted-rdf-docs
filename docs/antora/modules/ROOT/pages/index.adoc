@@ -29,6 +29,6 @@ xref:ODS::data_index.adoc[Explore TED Open Data]
 ****
 Learn how to download TED notices in various formats via the TED Website and API. Daily or monthly packages are available.
 
-xref:reuse::index.adoc[Download TED Notices]
+xref:reuse:index.adoc[Download TED Notices]
 ****
 --
