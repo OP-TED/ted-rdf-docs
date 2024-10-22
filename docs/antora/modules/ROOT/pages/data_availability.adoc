@@ -17,8 +17,8 @@ NOTE: Data, daily going forward and data going back in time is being constantly 
 
 === Notice types and when they are published in the public procurement process
 
-When submitting a notice online, an electronic version of the standard forms set out in the the https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R1780[legislation] determines what data fields must be filled out in which type of form. It also mandates what type of data they contain, and whether the field is mandatory or optional. This is explained in detail on the legislation page and, although complex, the detail is useful to know in which fields are available for query.
+When submitting a notice online, an electronic version of the standard forms set out in the the https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R1780[legislation] determines what data fields must be filled out in which type of form. It also mandates what type of data they contain, and whether the field is mandatory or optional. This is explained in detail on the legislation page and, although complex, the detail is useful in discovering which fields are available for query.
 
-For an overview of what data can be extracted from a particular notice, you can use the search facility on the https://ted.europa.eu/en/[TED website], choosing "Advanced Search" (All Notices), and the type of notice you are interested in, and then look at the contents of a notice.
+For an overview of what data can be extracted from a particular notice, you can also use the notice search facility available on the https://ted.europa.eu/en/[TED website]. Choose "Advanced Search" (All Notices), then the type of notice you are interested in, and then look at the contents of a notice from the list returned.
 
 include::ROOT:partial$feedback.adoc[]

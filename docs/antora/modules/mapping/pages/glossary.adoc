@@ -22,7 +22,7 @@
 
 - [[gloss:tm]] *Technical Mapping*, often abbreviated as *TM*, is set of RML rules that can be used to transform notice XML, into its which are split in multiple reusable modules that can be combined to represent a full RML
 
-- [[gloss:ted]] *Tenders Electronic Daily (TED)*, is an online portal that publishes hundreds of thousands of public procurement notices per year.  A cornerstone of European public procurement, TED helps economic operators find business opportunities from around the EU. For more information see: https://ted.europa.eu/TED/main/HomePage.do
+- [[gloss:ted]] *Tenders Electronic Daily (TED)*, is an online portal that publishes hundreds of thousands of public procurement notices per year.  A cornerstone of European public procurement, TED helps economic operators find business opportunities from around the EU. For more information see: https://ted.europa.eu.
 
 - [[gloss:stdForm]] *TED Standard Form* or *TED schema forms* refers to the "TED Standard forms for public procurement" described here: https://simap.ted.europa.eu/en_GB/web/simap/standard-forms-for-public-procurement. These forms are numbered F01-F08, F12-F25 and T01-T02, and must conform to a specific version the xref:gloss:xsd[TED XML Schema].
 
