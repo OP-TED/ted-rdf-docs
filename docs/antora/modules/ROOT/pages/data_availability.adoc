@@ -24,10 +24,9 @@ The format of schema XML data has changed over the years in line with changes in
 
 NOTE: XML Schema Data is available from 1993 to the present day.
 
-=== Notice types and when they are published in the public procurement process
-
-When submitting a notice online, an electronic version of the standard forms set out in the the https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R1780[legislation] determines what data fields must be filled out in which type of form. It also mandates what type of data they contain, and whether the field is mandatory or optional. This is explained in detail on the legislation page and, although complex, the detail is useful in discovering which fields are available for query.
+The legislation, updated from time to time - here the link to the https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R1780[Regulation (EU) 2019/1780] - that applies from the 14 November 2022, sets out which forms must be used in public procurement procedures, and the mandatory and optional fields that must be provided and filled in in the public procurement forms. These fields contain data that are eventually available for query. Although complex, the detail is useful in discovering which data are available for query.
 
 For an overview of what data can be extracted from a particular notice, you can also use the notice search facility available on the https://ted.europa.eu/en/[TED website]. Choose "Advanced Search" (All Notices), then the type of notice you are interested in, and then look at the contents of a notice from the list returned.
+
 
 include::ROOT:partial$feedback.adoc[]
