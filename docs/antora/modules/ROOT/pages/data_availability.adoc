@@ -2,22 +2,20 @@
 
 == Data currently available
 
-=== Time period and specific notice data
-
-==== TED Linked Open Data
+=== TED Linked Open Data
 Data is currently available from August 2023 to December 2023
 
 Notice Data is currently available from *Contract Award Notices* in the above time period +
 
 NOTE: Data, daily going forward and data going back in time is being constantly added to Cellar. Refer back to this page to check if there have been updates.
 
-==== TED XML Schema Notice Data
+=== TED XML Schema Notice Data
 
-The format of schema of XML data has changed over the years in line with changes in the legislation. "Schema" refers to the layout and fields of the notice form filled and therefore to notice data collected.
+The format of schema XML data has changed over the years in line with changes in the legislation. "Schema" refers to the fields required by law in the notice form and therefore to the data collected by the notice.
 
 * Schema 2.08 applied to notices published before 2016, which was the year the 2014 directive on public procurement was applied.
 * Schema 2.09 applies to notices published from 2016 until 1 February 2024 (non-EU Institutions) and 28 June 2024 (EU Institutions), when the transition period from schema 2.09 to eForms ended.
-* eForms started on the 22 November 2022, so there was a period where two versions of notice data apply, schema 2.09 and eForms (22 November 2022 to 28 June 2024).
+* eForms started on the 14 November 2022, so there was a transition period where two versions of notice data apply, schema 2.09 and eForms (22 November 2022 to 28 June 2024).
 
 === Notice types and when they are published in the public procurement process
 
