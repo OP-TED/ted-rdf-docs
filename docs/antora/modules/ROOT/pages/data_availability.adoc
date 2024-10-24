@@ -14,8 +14,8 @@ NOTE: Linked open data is being constantly added to Cellar. Refer back to this p
 The format of schema XML data has changed over the years in line with changes in the legislation. "Schema" refers to the fields required by law in the notice form and therefore to the data collected by the notice.
 
 * Schema 2.08 applied to notices published before 2016, which was the year the 2014 directive on public procurement was applied.
-* Schema 2.09 applies to notices published from 2016 until 1 February 2024 (non-EU Institutions) and 28 June 2024 (EU Institutions), when the transition period from schema 2.09 to eForms ended.
-* eForms started on the 14 November 2022, so there was a transition period where two versions of notice data apply, schema 2.09 and eForms (22 November 2022 to 28 June 2024).
+* Schema 2.09 applied to notices published from 2016 until 1 February 2024 (non-EU Institutions) and 28 June 2024 (EU Institutions), when the transition period from schema 2.09 to eForms ended.
+* eForms started on the 14 November 2022 and applies currently going forward. The transition period where two versions of notice data applied, schema 2.09 and eForms, was from the 22 November 2022 to the 28 June 2024.
 
 NOTE: XML Schema Data is available from 1993 to the present day.
 
