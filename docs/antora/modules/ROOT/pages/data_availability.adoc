@@ -1,15 +1,14 @@
-:doctitle: Data Available
+:doctitle: Data Currently Available
 
-== Data currently available
 
-=== TED Linked Open Data
+== TED Linked Open Data
 Data is currently available from August 2023 to December 2023
 
 Notice Data is currently available from *Contract Award Notices* in the above time period +
 
 NOTE: Linked open data is being constantly added to Cellar. Refer back to this page to check if there have been updates.
 
-=== TED XML Schema Notice Data
+== TED XML Schema Notice Data
 
 The format of schema XML data has changed over the years in line with changes in the legislation. "Schema" refers to the fields required by law in the notice form and therefore to the data collected by the notice.
 
