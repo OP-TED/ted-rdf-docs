@@ -58,8 +58,10 @@
 * Download TED XML Schema Data
 ** xref:reuse:download-xml.adoc[XML Downloads]
 ** xref:reuse:download-direct.adoc[Direct downloads via links]
+* Search via the Search API
 ** xref:reuse:search-api.adoc[Data via the Search API]
 ** xref:reuse:search-api-demo.adoc[Examples using the Search API]
+* Access the TED Schemas Archive Resources
 ** xref:reuse:ftp.adoc[TED xml schema data archive]
 
 

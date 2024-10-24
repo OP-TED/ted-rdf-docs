@@ -25,9 +25,9 @@ xref:ODS::data_index.adoc[Explore TED Open Data]
 ****
 
 [.tile]
-.TED Schema Data
+.TED XML Schema Data
 ****
-Learn how to download TED notices in various formats via the TED Website and API. Daily or monthly packages are available.
+Learn how to access TED XML schema data in various formats via download from the TED Website or search via the Search API. Daily or monthly packages are available.
 
 xref:reuse:index.adoc[Download TED Notices]
 ****
