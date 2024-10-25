@@ -18,9 +18,9 @@ The format of schema XML data has changed over the years in line with changes in
 ** http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0024[Directive 2014/24/EU] repealing Directive 2004/18/EC,
 ** http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0025[Directive 2014/25/EU] repealing  Directive 2004/17/EC,
 ** http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0023[Directive 2014/23/EU],
-** Regulation (EC) No 1370/2007,
+** Regulation (EC) No 1370/2007.
 
-* The eForms schema was implemented on the 14 November 2022 and applies to non-defence purchases from this date. The transition period where two versions of notice data applied, schema 2.09 and eForms, was from the 14 November 2022 to the 28 June 2024.
+* The eForms schema was implemented on the 14 November 2022 and applies to public procurement from this date. The transition period where two versions of notice data applied, schema 2.09 and eForms, was from the 14 November 2022 to the 28 June 2024.
 
 NOTE: XML Schema Data is available from 1993 to the present day.
 
