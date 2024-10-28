@@ -24,9 +24,13 @@ The format of schema XML data has changed over the years in line with changes in
 
 NOTE: XML Schema Data is available from 1993 to the present day.
 
-The legislation, updated from time to time - here the link to the https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R1780[Regulation (EU) 2019/1780] - that applies from the 14 November 2022, sets out which forms must be used in public procurement procedures, and the mandatory and optional fields that must be provided and filled in in the public procurement forms. These fields contain data that are eventually available for query. Although complex, the detail is useful in discovering which data are available for query.
+== Legislation directly affects data
 
-For an overview of what data can be extracted from a particular notice, you can also use the notice search facility available on the https://ted.europa.eu/en/[TED website]. Choose "Advanced Search" (All Notices), then the type of notice you are interested in, and then look at the contents of a notice from the list returned.
+The legislation, updated from time to time (here the link to the https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R1780[Regulation (EU) 2019/1780], that applies from the 14 November 2022), sets out which forms must be used in public procurement procedures, and the mandatory and optional fields that must be provided and filled in in the public procurement forms. These fields contain data that are eventually available for query. Although complex, the detail is useful in discovering which data are available for query. 
+
+NOTE: As these change slightly with amendments in legislation, the exact fields might not be carried through from the beginning of data collection to now, or their class names might have changed, or fields might have been added and removed along the way.
+
+For an overview of what data can be extracted from a notice in its current form, you can also use the notice search facility available on the https://ted.europa.eu/en/[TED website]. Choose "Advanced Search" (All Notices), then the type of notice you are interested in, and then look at the contents of a notice from the list returned.
 
 
 include::ROOT:partial$feedback.adoc[]
