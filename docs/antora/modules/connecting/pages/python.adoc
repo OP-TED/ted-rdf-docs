@@ -8,7 +8,7 @@ This example Jupiter Notebook example enables interaction with the eProcurement 
 
 The notebook can be downloaded from the link here:
 
-https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/import-into-dataframe.ipynb[Download Jupiter Notebook example]
+https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/import-into-dataframe.ipynb[Download the Jupiter Notebook example]
 
 == Running the Notebook and the query
 
@@ -28,14 +28,14 @@ The Notebook contains the instructions to install the dependencies and run the q
 [start=5]
 . Where you see a code block with a [ ] at its top left, and on hovering over the [ ] a play arrow appears, click on the play arrow to execute the code. Start at the top and work your way down the notebook code blocks in order. A green tick will appear on the left of the [ ] when the step has completed.
 
-There are two queries in this example. 
+There are two queries in this example Notebook. 
 
 * The first one is a simple count of notices published on a certain day
 * The second, more complex example, retrieves details from eProcurement notices published between September 1 and September 10, 2023 and extracts the legal names of buyers, their countries, and the awarded values for each related lot.
 
-You can change the Date range directly in the query if you wish and then rerun the blocks from there.
+You can change the date range directly in the query if you wish and then rerun the blocks from there.
 
-Some panda dataframes are provided that show the data in a table, some statistics about it, and a graph showing (in this case) a distribution of counties.
+Some panda dataframes are provided that show the data in a table, some statistics about it, and a graph showing the distribution of counties.
 
 //#video#
 
