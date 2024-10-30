@@ -47,7 +47,7 @@ image::results1.png[]
 
 == A short video of this query method
 
-video::kSINuHK27NE[youtube, width=720, height=540] +
+video::kSINuHK27NE[youtube, width=720, height=540]
 
 NOTE: Copying the results URL to the clipboard is only necessary if you are using it for the xref:excel.adoc[Excel query method].
 
