@@ -2,17 +2,16 @@
 
 There are two parts to querying the data using Excel. 
 
-== Step 1
+== Part 1 of this query method
 
-The first part is shown on the page: xref:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]. 
-
-NOTE: When submitting your query, be sure that you choose the first results format option in the dropdown list, *HTML*.
-
-=== A short video of part 1 this query method
+The first part is described on the page: xref:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint].
 
 video::kSINuHK27NE[youtube, width=720, height=540]
 
-== Step 2
+NOTE: When submitting your query, be sure that you choose the first results format option in the dropdown list, *HTML*.
+
+
+== Part 2 of this query method
 
 Once the EndPoint has returned the results of the query:
 
@@ -26,8 +25,6 @@ Once the EndPoint has returned the results of the query:
 . This will save your settings and return you to the new Excel sheet. Here you can rename the table and perform further data manipulation, create charts, etc.
 
 If you save this query in Excel, the data will be refreshed the net time you open the file. You can also refresh the data anytime by clicking on "Refresh" on the *Data* menu.
-
-//=== A short video of part 2 of this process
 
 video::5Ibap7o2hrc[youtube, width=720, height=540]
 
