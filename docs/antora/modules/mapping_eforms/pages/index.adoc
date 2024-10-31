@@ -1,4 +1,4 @@
-= TED-RDF eForms Mapping
+= TED eForm Mappings
 
 The TED-RDF eForms Mapping project prescribes packages (or _suites_) of data transformation rules and related artefacts, for digital public procurement notices published on the https://ted.europa.eu/en[Tenders Electronic Daily (TED) website] by the https://op.europa.eu/en/home[Publications Office of the European Union (OP)], based on the https://single-market-economy.ec.europa.eu/single-market/public-procurement/digital-procurement/eforms_en[eForms legislative standard].
 
