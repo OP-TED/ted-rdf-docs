@@ -31,4 +31,13 @@ Learn how to access TED XML schema data in various formats via download from the
 
 xref:reuse:index.adoc[Download TED Notices]
 ****
+
+[.tile]
+.Create Mapping Suites (XML to RDF)
+****
+Convert XML data into RDF
+
+xref:mapping:index.adoc[Create mappings to convert XML data into RDF]
+
+****
 --

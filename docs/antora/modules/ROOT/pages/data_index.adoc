@@ -48,12 +48,5 @@ Use or adapt the example SPARQL queries
 xref:samples:index.adoc[Browse the sample queries provided]
 ****
 
-[.tile]
-.Create Mapping Suites (XML to RDF)
-****
-Convert XML data into RDF
 
-xref:mapping:index.adoc[Create mappings to convert XML data into RDF]
-
-****
 --
