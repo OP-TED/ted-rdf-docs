@@ -24,7 +24,7 @@ The structures and folder descriptions are shown below.  The base of the folder 
 ****
 Mappings and Mapping Suites for converting Standard Form XLM data into RDF.
 
-xref:mapping:mapping_how.adoc[Map Standard Forms]
+xref:mapping:index_sf.adoc[Map Standard Forms]
 ****
 
 [.tile]
