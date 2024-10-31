@@ -50,9 +50,9 @@
 ** xref:reuse:ftp.adoc[TED xml schema data archive]
 
 * [.separated]#**Mapping XML data to RDF**#
-//* Mappings and mapping suites
+* xref:mapping:index.adoc[Home]
 * Mapping Standard Form XML data to RDF
-** xref:mapping:index.adoc[Home] 
+** xref:mapping:index_sf.adoc[Home] 
 ** xref:mapping:repository-structure.adoc[Repository structure]
 ** xref:mapping:mapping_how.adoc[Methodology]
 ** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
