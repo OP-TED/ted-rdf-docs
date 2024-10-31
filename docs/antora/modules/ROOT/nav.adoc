@@ -64,10 +64,10 @@
 ** xref:mapping:prior.adoc[Recommended Prior Knowledge]
 
 * Mapping eForm XML data to RDF
-** xref:mapping_eForms:index.adoc[Home] 
-** xref:mapping_eForms:methodology.adoc[Methodology]
-** xref:mapping_eForms:package_structure.adoc[Mapping Suite Structure]
-** xref:mapping_eForms:usage.adoc[Usage Instructions]
+** xref:mapping_eforms:index.adoc[Home] 
+** xref:mapping_eforms:methodology.adoc[Methodology]
+** xref:mapping_eforms:package_structure.adoc[Mapping Suite Structure]
+** xref:mapping_eforms:usage.adoc[Usage Instructions]
 
 //* [.separated]#**Information and Resources**#
 * [.separated]#**Resources**#
