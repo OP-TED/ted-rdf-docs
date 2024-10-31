@@ -1,0 +1,59 @@
+= How to use these mapping packages?
+
+The mapping packages provided in this project are to be used within the *version 2* of th https://github.com/OP-TED/ted-rdf-conversion-pipeline[TED-SWS Conversion Pipeline]. The pipeline documentation describes how such packages will be loaded and used in the transformation steps of the pipeline.
+//TODO provide a link to the antora documentation page, when the documentation provided in the word document will be made publicly available
+
+Below we provide some additional technical information about how these packages can be used outside or inside the pipeline.
+
+== Software Requirements
+
+Users need only to install the following external software tools, libraries
+and/or runtimes if developing and testing the RML mappings:
+
+- Java 11+ (tested up to 17)
+- RMLMapper-Java==v6.2.2
+
+RMLMapper is currently tied to v6.2.2 because of an
+https://github.com/RMLio/rmlmapper-java/issues/236[issue with conditional
+instantiation] (currently fixed but
+https://github.com/RMLio/rmlmapper-java/blob/144f9b4cb1ca3c7174f9453f28ec626996c19020/CHANGELOG.md[yet
+unreleased]).
+
+== Toolchain
+
+=== No custom tooling
+
+While there is a comprehensive set of https://docs.ted.europa.eu/SWS/mapping_suite/toolchain.html[command-line software tools for the SF mapping project], there is no such tooling provided for the eForms mapping project. The complete transformation cycle is supported in and carried out already by the https://github.com/OP-TED/ted-rdf-conversion-pipeline[pipeline].
+
+=== RMLMapper for development
+
+For development, simple https://github.com/RMLio/rmlmapper-java[RMLMapper] commands (which the SF tools use) can be employed directly, for example:
+
+```
+rmlmapper -m $MAPPINGS_FOLDER/* -s turtle > $OUTPUT_FILE
+```
+
+where the `$MAPPING_FOLDER` is a folder with RML files, and
+`$OUTPUT_FILE` is the desired RDF output file, usually suffixed with the `.ttl`
+extension (for the Turtle serialization as provided with the `-s` argument).
+
+The RML rules expect a data file path `data/source.xml` relative to where this
+command is run from. In the current package structure, this implies that a
+temporary `data` folder is created next to the `test_data` folder with a
+desired test data file (whether or not already bundled in the package) copied
+as `source.xml`, under `mappings/$PACKAGE_FOLDER`:
+
+```
+mappings
+mappings/package_cn_v1.9
+mappings/package_cn_v1.9/data
+mappings/package_cn_v1.9/data/source.xml
+mappings/package_cn_v1.9/test_data
+mappings/package_cn_v1.9/test_data/sdk_examples_cn
+mappings/package_cn_v1.9/test_data/sdk_examples_cn/cn_24_maximal.xml
+...
+```
+
+**Note:** Currently this transformation execution requires an Internet
+connection, due to the URI construction involving a remote HTTP web API call
+for xref:methodology.adoc#ref:uri-scheme[generating a seeded hash].

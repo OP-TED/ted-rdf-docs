@@ -9,6 +9,8 @@
 A mapping suite within the TED Open Data Service is a set of mappings that define how an XML document representing an eProcurement notice is transformed into an equivalent RDF graph representation that uses classes defined by the eProcurement ontology. These mappings correspond to the different notice forms, and the relevant components of a mapping suite are organised into a package known as a *mapping suite package*. A mapping suite can be broken down further into mapping suite packages, one per type of standard form mapped.
 
 == Mapping Suite Contents
-Transformation rules and other artefacts used for the mapping of Standard Forms and eForms for the TED Open Data Services (TED-ODS) system are organised in the ted-rdf-mapping repository.
-The repository structure and folder descriptions are shown below.  The base of the folder path is https://github.com/OP-TED/ted-rdf-mapping/tree/main/  however if the reader wants to see a specific release, then the path is adapted by replacing main by the given release. For example, if release 2.1.1-rc.1 is required, the path will be https://github.com/OP-TED/ted-rdf-mapping/tree/2.1.1-rc.1
+Transformation rules and other artefacts used for the mapping of Standard Forms are organised in the https://github.com/OP-TED/ted-rdf-mapping[ted-rdf-mapping repository], and the mapping of eForms are organised in the https://github.com/OP-TED/ted-rdf-mapping-eforms[ted-rdf-mapping-eforms] repository. 
 
+The structures and folder descriptions are shown below.  The base of the folder path is https://github.com/OP-TED/ted-rdf-mapping/tree/main/  however if the reader wants to see a specific release, then the path is adapted by replacing main by the given release. For example, if release 2.1.1-rc.1 is required, the path will be https://github.com/OP-TED/ted-rdf-mapping/tree/2.1.1-rc.1
+
+#Insert standard forms & eforms tiles#

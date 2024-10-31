@@ -36,21 +36,6 @@
 //* [.separated]#**Sample SPARQL Queries**#
 
 
-//* [.separated]#**Mapping XML data to RDF**#
-//* Mappings and mapping suites
-* Map XML data to RDF
-** xref:mapping:index.adoc[Home] 
-** xref:mapping:repository-structure.adoc[Repository structure]
-** xref:mapping:mapping_how.adoc[Methodology]
-** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
-** xref:mapping:preparing-test-data.adoc[Preparing test data samples]
-** xref:mapping:toolchain.adoc[Toolchain]
-** xref:mapping:reusing.adoc[Reusing mappings]
-** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
-** xref:mapping:glossary.adoc[Glossary of terms]
-** xref:mapping:prior.adoc[Recommended Prior Knowledge]
-
-
 //* [.separated]#**Downloading TED XML Notice Data**#
 
 * [.separated]#**TED XML Schema Data**#
@@ -64,6 +49,25 @@
 * Access the TED Schemas Archive Resources
 ** xref:reuse:ftp.adoc[TED xml schema data archive]
 
+* [.separated]#**Mapping XML data to RDF**#
+//* Mappings and mapping suites
+* Mapping Standard Form XML data to RDF
+** xref:mapping:index.adoc[Home] 
+** xref:mapping:repository-structure.adoc[Repository structure]
+** xref:mapping:mapping_how.adoc[Methodology]
+** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
+** xref:mapping:preparing-test-data.adoc[Preparing test data samples]
+** xref:mapping:toolchain.adoc[Toolchain]
+** xref:mapping:reusing.adoc[Reusing mappings]
+** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
+** xref:mapping:glossary.adoc[Glossary of terms]
+** xref:mapping:prior.adoc[Recommended Prior Knowledge]
+
+* Mapping eForm XML data to RDF
+** xref:mapping_eForms:index.adoc[Home] 
+** xref:mapping_eForms:methodology.adoc[Methodology]
+** xref:mapping_eForms:package_structure.adoc[Mapping Suite Structure]
+** xref:mapping_eForms:usage.adoc[Usage Instructions]
 
 //* [.separated]#**Information and Resources**#
 * [.separated]#**Resources**#
