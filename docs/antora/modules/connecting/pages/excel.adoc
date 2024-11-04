@@ -26,6 +26,6 @@ Once the EndPoint has returned the results of the query:
 
 If you save this query in Excel, the data will be refreshed the net time you open the file. You can also refresh the data anytime by clicking on "Refresh" on the *Data* menu.
 
-video::5Ibap7o2hrc[youtube, width=720, height=540]
+video::P9IgUoJ3L60[youtube, width=720, height=540]
 
 include::ROOT:partial$feedback.adoc[]
