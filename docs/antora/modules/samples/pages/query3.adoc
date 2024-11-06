@@ -7,6 +7,7 @@
 
 == The Scenario
 * Presentation of the scenario
+* Business value
 * A short discussion of the the extent to which the current data offering can assist/ Understanding data limitations
 * Refining the question
 
