@@ -47,7 +47,9 @@ image::results1.png[]
 
 == A short video of this query method
 
-video::P9IgUoJ3L60[youtube, width=720, height=540]
+video::SPARQL_query.mp4[width=720, height=540]
+
+//video::P9IgUoJ3L60[youtube, width=720, height=540]
 
 NOTE: Copying the results URL to the clipboard is only necessary if you are using it for the xref:excel.adoc[Excel query method].
 
