@@ -19,12 +19,12 @@ The structures and folder descriptions are shown below.  The base of the folder 
 --
 
 [.tile]
-.Mapping Standard Forms (SF)
+.Mapping Legacy Data
 
 ****
-Mappings and Mapping Suites for converting Standard Form XLM data into RDF.
+Mappings and Mapping Suites for converting Standard Form legacy XML data into RDF.
 
-xref:mapping:index_sf.adoc[Map Standard Forms]
+xref:mapping:index_sf.adoc[Map legacy data]
 ****
 
 [.tile]

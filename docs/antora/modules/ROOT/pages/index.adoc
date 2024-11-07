@@ -16,7 +16,7 @@ RDF data can be queried via the https://publications.europa.eu/webapi/rdf/sparql
 --
 
 [.tile]
-.TED Linked Open Data (RDF)
+.TED Open Data (RDF)
 
 ****
 Query and connect to TED Open Data using SPARQL. Explore the example query library and find resources on how to create SPARQL queries. Learn how to create mappings to convert XML data into RDF.
@@ -25,19 +25,27 @@ xref:ODS::data_index.adoc[Explore TED Open Data]
 ****
 
 [.tile]
-.TED XML Schema Data
+.TED Legacy Data (various formats)
 ****
-Learn how to access TED XML schema data in various formats via download from the TED Website or search via the Search API. Daily or monthly packages are available.
+Learn how to access TED legacy data in various formats via download from the TED Website or search via the Search API. Daily or monthly packages are available.
 
 xref:reuse:index.adoc[Download TED Notices]
 ****
 
 [.tile]
-.Create Mapping Suites (XML to RDF)
+.Create Mapping Suites (Legacy Data to RDF)
 ****
-Convert XML data into RDF
+Convert legacy data into RDF
 
-xref:mapping:index.adoc[Create mappings to convert XML data into RDF]
+xref:mapping:index.adoc[Create mappings to convert legacy data into RDF]
+
+****
+[.tile]
+.Create Mapping Suites (eForm Data to RDF)
+****
+Convert eForm data into RDF
+
+xref:mapping_eforms:index.adoc[Create mappings to convert eForm data into RDF]
 
 ****
 --
