@@ -26,6 +26,7 @@ xref:ODS::data_index.adoc[Explore TED Open Data]
 
 [.tile]
 .TED Legacy Data (various formats)
+
 ****
 Learn how to access TED legacy data in various formats via download from the TED Website or search via the Search API. 
 
@@ -34,18 +35,20 @@ xref:reuse:index.adoc[Download Legacy Data]
 
 [.tile]
 .Create Mapping Suites (Legacy Data to RDF)
-****
-Convert legacy data into RDF
 
-xref:mapping:index.adoc[Create mappings to convert legacy data into RDF]
+****
+Create mappings to convert legacy data into RDF
+
+xref:mapping:index.adoc[Convert legacy data into RDF]
 
 ****
 [.tile]
 .Create Mapping Suites (eForm Data to RDF)
-****
-Convert eForm data into RDF
 
-xref:mapping_eforms:index.adoc[Create mappings to convert eForm data into RDF]
+****
+Create mappings to convert eForm data into RDF
+
+xref:mapping_eforms:index.adoc[Convert eForm data into RDF]
 
 ****
 --
