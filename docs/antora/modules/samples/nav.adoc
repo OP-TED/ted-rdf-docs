@@ -30,11 +30,12 @@
 ** xref:samples:query1.adoc[Query 1: Highest Value Contract]
 ** xref:samples:query2.adoc[Query 2: METS packages published]
 ** xref:samples:query3.adoc[Query 3: Query notice by id]
-** xref:samples:query4.adoc[Query 4: Notices published]
-** xref:samples:query5.adoc[Query 5: Contracts won by SMEs]
-** xref:samples:query6.adoc[Query 6: Contractors using Subcontractors]
-** xref:samples:query7.adoc[Query 7: Contract Values]
-** xref:samples:query8.adoc[Query 8: Winners on a Date]
+//** xref:samples:query4.adoc[Query 4: Notices published]
+//** xref:samples:query5.adoc[Query 5: Contracts won by SMEs]
+//** xref:samples:query6.adoc[Query 6: Contractors using Subcontractors]
+//** xref:samples:query7.adoc[Query 7: Contract Values]
+//** xref:samples:query8.adoc[Query 8: Winners on a Date]
+** xref:snippets:index.adoc[Sample Snippets]
 
 * [.separated]#**Mapping XML data to RDF**#
 * xref:mapping:index.adoc[Mappings and Mapping Suites]

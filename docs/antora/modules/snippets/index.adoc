@@ -1,0 +1,119 @@
+= Snippets
+
+== Intro to be written
+
+== Query section logic/ indentation/ heirarchy
+=== Sample Snippets
+
+== Limit/ filter results by language (EN)
+
+This snippet shows limiting the results to those in English. This can be done for any language:
+
+Add this snippet in the WHERE section of the query (after the list of fields you wish the query to return under SELECT):
+
+[source]
+--
+FILTER(LANG(?WinnerLegalName) = 'en')
+--
+
+== Limit the results to a specified date 
+
+This snippet shows limiting the results to a specified date. Change this as required:
+
+Add this snippet in the WHERE section of the query (after the list of fields you wish the query to return under SELECT):
+
+[source]
+--
+{
+    VALUES ?NoticePublicationDate {
+        "20230921"
+    }
+--
+
+== Limit the results to a date range
+
+to be included
+
+== *?LotURI* and *?NoticePublicationDate* derived from _?Notice_:
+
+[source]
+--
+?Notice epo:hasPublicationDate ?NoticePublicationDate ;
+        epo:refersToLot ?LotURI.
+--
+
+== *?LotURI*, *?MonetaryValue* and *?TenderAwardOutcome* derived from from _?LotAwardOutcome_:           
+    
+[source]
+--   
+?LotAwardOutcome epo:describesLot ?LotURI ;
+                 epo:hasAwardedValue ?MonetaryValue ;
+                 epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+
+--
+
+== *?Winner* derived from _?TenderAwardOutcome_:
+
+[source]
+--   
+?TenderAwardOutcome a epo:TenderAwardOutcome;
+                    epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+--
+
+== *?WinnerLegalName* derived from _Winner_:
+
+[source]
+--  
+?Winner a org:Organization;
+        epo:hasLegalName ?WinnerLegalName.
+--
+
+== ?WinnerCountryCode* derived from _?Winner_: 
+(in this case, if a country code is available, therefore optional)
+
+[source]
+--     
+ 
+OPTIONAL {
+    ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+}
+--
+
+== *?LotAwardedValue* and *?LotAwardedValueCurrency* derived from _?MonetaryValue_:
+
+[source]
+-- 
+?MonetaryValue a epo:MonetaryValue;
+               epo:hasAmountValue ?LotAwardedValue;
+               epo:hasCurrency ?LotAwardedValueCurrency .
+--
+
+== *?Organization* and *?LegalName* are derived from _?Notice_
+
+[source]
+-- 
+?Notice epo:announcesRole ?Buyer .
+?Buyer epo:playedBy ?Organization .
+?Organization cccev:registeredAddress / epo:hasCountryCode ?countryCode .
+?Organization epo:hasLegalName ?LegalName .
+--
+
+
+== *?BusinessSize* is derived from _?Notice_
+
+[source]
+-- 
+?Notice epo:announcesRole ?Buyer .
+?Buyer epo:playedBy ?Organization .
+?Organization epo:hasBusinessSize ?BusinessSize .
+?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
+--
+
+== Contract Value and currency *(?AwardedValue* and *?LotAwardedValueCurrencyURI*) derived from _?Notice_
+[source]
+-- 
+?Notice epo:refersToLot ?Lot .
+?LotAwardOutcome epo:describesLot ?Lot ;
+                 epo:hasAwardedValue / epo:hasAmountValue ?AwardedValue;
+                 epo:hasAwardedValue / epo:hasCurrency ?LotAwardedValueCurrencyURI.
+--  

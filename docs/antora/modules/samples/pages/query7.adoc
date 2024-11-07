@@ -27,7 +27,7 @@ PREFIX cccev: <http://data.europa.eu/m8g/>
 SELECT DISTINCT
 ?Notice
 ?PublicationDate
-?AwardetValue
+?AwardedValue
 ?LotAwardedValueCurrencyURI
 where {
 
