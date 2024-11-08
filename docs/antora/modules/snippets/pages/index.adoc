@@ -117,3 +117,29 @@ OPTIONAL {
                  epo:hasAwardedValue / epo:hasAmountValue ?AwardedValue;
                  epo:hasAwardedValue / epo:hasCurrency ?LotAwardedValueCurrencyURI.
 --  
+
+== Search for a procurement object (type of goods supplied) by common procurement vocabulary (CPV) code: *?MainClassification* from _?ProcurementObject_
+
+(This example searches for *cpv 03410000: wood*)
+
+[source]
+-- 
+?ProcurementObject epo:hasPurpose ?Purpose .
+?Purpose epo:hasMainClassification ?MainClassification .
+FILTER(strstarts(str(?MainClassification), 'http://data.europa.eu/cpv/cpv/0341')) .
+--
+
+=== Enumerate the subtypes of the *?MainClassification CPV code*
+
+(This adds a column listing the type of wood for each record: soft wood, hard wood, etc.)
+
+[source]
+--
+?childMainClassification skos:broader+ ?MainClassification .
+?childMainClassification skos:inScheme <http://data.europa.eu/cpv/cpv> .
+?MainClassification skos:inScheme <http://data.europa.eu/cpv/cpv> .
+OPTIONAL { ?childMainClassification skos:prefLabel ?childMainClassificationLabel .
+FILTER (lang(?childMainClassificationLabel) = "en")  }  
+--
+
+NOTE: You can search through the CPV codes on the https://ted.europa.eu/en/advanced-search[ted.europa.eu website] using the Advanced Search and drilling down in the CPV field.
