@@ -120,7 +120,7 @@ OPTIONAL {
 
 == Search for a procurement object (type of goods supplied) by common procurement vocabulary (CPV) code: *?MainClassification* from _?ProcurementObject_
 
-(This example searches for *cpv 03410000: wood*)
+(This example searches for *cpv 0341xxxx: wood*)
 
 [source]
 -- 
