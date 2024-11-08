@@ -7,11 +7,11 @@ Some SPARQL code snippets are provided below for classes that are used often in 
 // == Query section logic/ indentation/ heirarchy
 == Sample Snippets
 
+These snippets will go into the WHERE section of the query (after the list of fields you wish the query to return under SELECT).
+
 === Limit/ filter results by language (EN)
 
-This snippet shows limiting the results to those in English. This can be done for any language:
-
-Add this snippet in the WHERE section of the query (after the list of fields you wish the query to return under SELECT):
+This snippet shows how to limit the results to those in English. This can be done for any language.
 
 [source]
 --
@@ -20,9 +20,7 @@ FILTER(LANG(?WinnerLegalName) = 'en')
 
 === Limit the results to a specified date 
 
-This snippet shows limiting the results to a specified date. Change this as required:
-
-Add this snippet in the WHERE section of the query (after the list of fields you wish the query to return under SELECT):
+This snippet shows limiting the results to a specified date. Change this as required.
 
 [source]
 --
@@ -31,9 +29,19 @@ VALUES ?NoticePublicationDate {
 }
 --
 
-//=== Limit the results to a date range
+////
+=== Limit the results to a date range
 
+VALUES ?NoticePublicationDate {
+     >= "2023-09-01" && < "2024-01-01" 
+  }
 
+or
+
+FILTER (?NoticePublicationDate < "2023-09-01"^^xsd:dateTime && ?NoticePublicationDate > "2024-01-01"^^xsd:dateTime)
+
+For Cristian to advise which would work
+////
 
 === *?LotURI* and *?NoticePublicationDate* derived from _?Notice_:
 
