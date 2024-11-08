@@ -1,11 +1,13 @@
-= Snippets
+= Commonly used public procurement SPARQL Snippets
 
-== Intro to be written
+== Introduction
 
-== Query section logic/ indentation/ heirarchy
-=== Sample Snippets
+Some SPARQL code snippets are provided below for classes that are used often in public procurement SPARQL queries. These are classes such as winner country, lot value, currency, date, winner business size, etc.
 
-== Limit/ filter results by language (EN)
+// == Query section logic/ indentation/ heirarchy
+== Sample Snippets
+
+=== Limit/ filter results by language (EN)
 
 This snippet shows limiting the results to those in English. This can be done for any language:
 
@@ -16,7 +18,7 @@ Add this snippet in the WHERE section of the query (after the list of fields you
 FILTER(LANG(?WinnerLegalName) = 'en')
 --
 
-== Limit the results to a specified date 
+=== Limit the results to a specified date 
 
 This snippet shows limiting the results to a specified date. Change this as required:
 
@@ -30,11 +32,11 @@ Add this snippet in the WHERE section of the query (after the list of fields you
     }
 --
 
-== Limit the results to a date range
+=== Limit the results to a date range
 
 to be included
 
-== *?LotURI* and *?NoticePublicationDate* derived from _?Notice_:
+=== *?LotURI* and *?NoticePublicationDate* derived from _?Notice_:
 
 [source]
 --
@@ -42,7 +44,7 @@ to be included
         epo:refersToLot ?LotURI.
 --
 
-== *?LotURI*, *?MonetaryValue* and *?TenderAwardOutcome* derived from from _?LotAwardOutcome_:           
+=== *?LotURI*, *?MonetaryValue* and *?TenderAwardOutcome* derived from from _?LotAwardOutcome_:           
     
 [source]
 --   
@@ -52,7 +54,7 @@ to be included
 
 --
 
-== *?Winner* derived from _?TenderAwardOutcome_:
+=== *?Winner* derived from _?TenderAwardOutcome_:
 
 [source]
 --   
@@ -60,7 +62,7 @@ to be included
                     epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
 --
 
-== *?WinnerLegalName* derived from _Winner_:
+== *?WinnerLegalName* derived from _?Winner_:
 
 [source]
 --  
@@ -68,7 +70,7 @@ to be included
         epo:hasLegalName ?WinnerLegalName.
 --
 
-== ?WinnerCountryCode* derived from _?Winner_: 
+=== *?WinnerCountryCode* derived from _?Winner_: 
 (in this case, if a country code is available, therefore optional)
 
 [source]
@@ -79,7 +81,7 @@ OPTIONAL {
 }
 --
 
-== *?LotAwardedValue* and *?LotAwardedValueCurrency* derived from _?MonetaryValue_:
+=== *?LotAwardedValue* and *?LotAwardedValueCurrency* derived from _?MonetaryValue_:
 
 [source]
 -- 
@@ -88,7 +90,7 @@ OPTIONAL {
                epo:hasCurrency ?LotAwardedValueCurrency .
 --
 
-== *?Organization* and *?LegalName* are derived from _?Notice_
+=== *?Organization* and *?LegalName* are derived from _?Notice_
 
 [source]
 -- 
@@ -99,7 +101,7 @@ OPTIONAL {
 --
 
 
-== *?BusinessSize* is derived from _?Notice_
+=== *?BusinessSize* is derived from _?Notice_
 
 [source]
 -- 
@@ -109,7 +111,7 @@ OPTIONAL {
 ?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
 --
 
-== Contract Value and currency *(?AwardedValue* and *?LotAwardedValueCurrencyURI*) derived from _?Notice_
+=== Contract Value and currency *(?AwardedValue* and *?LotAwardedValueCurrencyURI*) derived from _?Notice_
 [source]
 -- 
 ?Notice epo:refersToLot ?Lot .
@@ -120,7 +122,7 @@ OPTIONAL {
 
 == Search for a procurement object (type of goods supplied) by common procurement vocabulary (CPV) code: *?MainClassification* from _?ProcurementObject_
 
-(This example searches for *cpv 0341xxxx: wood*)
+(This example searches for *CPV 0341xxxx: wood*)
 
 [source]
 -- 
@@ -129,9 +131,9 @@ OPTIONAL {
 FILTER(strstarts(str(?MainClassification), 'http://data.europa.eu/cpv/cpv/0341')) .
 --
 
-=== Enumerate the subtypes of the *?MainClassification CPV code*
+==== Enumerate the subtypes of the *?MainClassification CPV code*
 
-(This adds a column listing the type of wood for each record: soft wood, hard wood, etc.)
+(This adds the subtype of wood for each record: soft wood, hard wood, etc.)
 
 [source]
 --
