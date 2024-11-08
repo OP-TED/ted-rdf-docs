@@ -62,7 +62,7 @@ to be included
                     epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
 --
 
-== *?WinnerLegalName* derived from _?Winner_:
+=== *?WinnerLegalName* derived from _?Winner_:
 
 [source]
 --  
@@ -101,7 +101,7 @@ OPTIONAL {
 --
 
 
-=== *?BusinessSize* is derived from _?Notice_
+=== *?BusinessSize* derived from _?Notice_
 
 [source]
 -- 
@@ -120,9 +120,9 @@ OPTIONAL {
                  epo:hasAwardedValue / epo:hasCurrency ?LotAwardedValueCurrencyURI.
 --  
 
-== Search for a procurement object (type of goods supplied) by common procurement vocabulary (CPV) code: *?MainClassification* from _?ProcurementObject_
+=== Procurement object by common procurement vocabulary (CPV) code.
 
-(This example searches for *CPV 0341xxxx: wood*)
+Search for a procurement object (type of goods supplied) by common procurement vocabulary (CPV) code: *?MainClassification* from _?ProcurementObject_. This example searches for *CPV 0341xxxx: wood*.
 
 [source]
 -- 
@@ -131,7 +131,9 @@ OPTIONAL {
 FILTER(strstarts(str(?MainClassification), 'http://data.europa.eu/cpv/cpv/0341')) .
 --
 
-==== Enumerate the subtypes of the *?MainClassification CPV code*
+Note: the code above can be substituted for any other CPV code that contains subcodes.
+
+==== Subtypes of the *?MainClassification CPV code*
 
 (This adds the subtype of wood for each record: soft wood, hard wood, etc.)
 
