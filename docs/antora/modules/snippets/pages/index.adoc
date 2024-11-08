@@ -26,15 +26,14 @@ Add this snippet in the WHERE section of the query (after the list of fields you
 
 [source]
 --
-{
-    VALUES ?NoticePublicationDate {
-        "20230921"
-    }
+VALUES ?NoticePublicationDate {
+    "20230921"
+}
 --
 
-=== Limit the results to a date range
+//=== Limit the results to a date range
 
-to be included
+
 
 === *?LotURI* and *?NoticePublicationDate* derived from _?Notice_:
 
