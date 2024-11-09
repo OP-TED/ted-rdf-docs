@@ -10,7 +10,7 @@ The methodology described focuses on the steps and artefacts at the core of  <<m
 [reftext="Figure {counter:figure}",align="center"]
 image::ROOT:mapping_creation.png[width=85%]
 
-Following this theoretical framework, and learning from the manual creation of mappings, the mapping creation process has been enhanced and refined.
+Following the theoretical framework, and learning from the manual creation of mappings, the mapping creation process has been enhanced and refined.
 
 The focus here is on describing the steps by which the *conceptual mapping* and the *technical mapping* are created.
 
@@ -150,7 +150,7 @@ The xref:mapping:preparing-test-data.adoc[representative sample data selection c
 
 During the initial phase of the mapping creation process, the writing of the mapping rules in https://rml.io/yarrrml/spec/[YARRRML] (a human-readable text-based representation for declarative generation rules), instead of RML took place, because it seemed simpler, and the end result was more human friendly. However, as we gained more experience and confidence in how the mappings should be defined, we realised that writing RML rules directly could be even more powerful, and we started to rewrite all our YARRRML mapping rules into RML. If this transition proves to be successful, and writing RML rules directly will be more convenient, our process will not require writing YARRRML rules in the future. This is the reason for why this step is optional. It could be useful for small test cases, quick demos, or showcases, and in cases when some people are more familiar with YARRRML than RML. If people decide to write YARRRML rules, the next step will become unnecessary, as the RML rules will be automatically generated from the YARRRML rules, using xref:mapping:toolchain.adoc[dedicated tools] that were developed for this purpose.
 
-Since this step is optional, we will not describe in detail the individual issues that need to be worked on, but they are in principle the same as the ones described in the next section.
+Since this step is optional, the individual issues that need to be worked on will not be described in detail , but they are in principle the same as the ones described in the next section.
 
 [#_writing_rml_rules]
 ==== Writing RML rules
@@ -160,9 +160,9 @@ Regardless of which file is chosen to be defined manually, YARRRML or RML, the g
 
 *In the rest of this section the assumption is made that the RML rules are being written manually*, as this is the solution that offers the greatest potential benefit, and the approach that is likely to be pursued in the future.
 
-The technical mappings are written in the https://rml.io/[RML mapping language]. The version of RML used is https://github.com/julianrojas87/rmlmapper-java[5.0.0-r362], which was recommended to us by Julian Rojas, its principal developer, in which the https://www.w3schools.com/xml/xpath_intro.asp[XPath] version https://www.w3.org/TR/xpath-31/[3.1] is supported.
+The technical mappings are written in the https://rml.io/[RML mapping language]. The version of RML used is https://github.com/julianrojas87/rmlmapper-java[5.0.0-r362], which was recommended to us by Julian Rojas, its principal developer, in which  https://www.w3schools.com/xml/xpath_intro.asp[XPath] version https://www.w3.org/TR/xpath-31/[3.1] is supported.
 
-===== prefix definition
+===== Prefix definition
 
 To specify the technical mappings in RML, the definition of the prefixes that are used in the mapping file must be defined first. For example for the ePO ontology, the epo prefix name is defined as follows:
 
@@ -171,7 +171,7 @@ To specify the technical mappings in RML, the definition of the prefixes that ar
 
 ----
 
-The prefix names and their values, which are used in the RML file, should be ALL maintained in the https://github.com/OP-TED/ted-rdf-conversion-pipeline/blob/feature/TED-311/ted_sws/resources/prefixes/prefixes.json[`prefixes.json`] resource file. If the content of that file is maintained and kept up to date consistently, the entire prefix declaration section of the RML file could be automatically generated, and re-generated when necessary. (Note: Besides the individual prefixes, the array that is the assigned value to the `rml_rules` key should be viewed).
+The prefix names and their values, which are used in the RML file, should ALL be maintained in the https://github.com/OP-TED/ted-rdf-conversion-pipeline/blob/feature/TED-311/ted_sws/resources/prefixes/prefixes.json[`prefixes.json`] resource file. If the content of that file is maintained and kept up to date consistently, the entire prefix declaration section of the RML file could be automatically generated, and re-generated when necessary. (Note: Besides the individual prefixes, the array that is the assigned value to the `rml_rules` key should be viewed).
 
 ===== TriplesMap
 
@@ -287,10 +287,10 @@ A join condition is represented by a resource that has exactly one value for eac
 
 === Document technical and philosophical issues
 
-While writing the mapping rules, make sure to document any issues that are not solvable, or that raise interesting questions.
+While writing the mapping rules, it is necessary to document any issues that are not solvable, or that raise interesting questions.
 //, in the https://docs.google.com/document/d/1nnvD6XXYPSDzv_VukDHswzYKd_-PDUMe7E-kUGHNcc8/edit?usp=sharing[Observations/Questions about mapping generation] Google doc.
 If warranted, a Jira task should be also created to address the given issue.
 
-Problems that were successfully resolved should be integrated into this guide as recommendations.  Deleting the issue from the “Problem description” document is NOT recommended, so that the different issues can be kept track of, and that thinking process that went into choosing the ultimate solution(s) is recorded.
+Problems that were successfully resolved should be integrated into this guide as recommendations. Deleting the issue from the “Problem description” document is NOT recommended, so that the different issues can be kept track of, and that thinking process that went into choosing the ultimate solution(s) is recorded.
 
 

@@ -58,5 +58,5 @@ Excel and an internet connection.
 To summarize, the TED Open Data Service (TED SWS) is a pipeline
 system that continuously converts the public procurement notices (in XML
 format) available on the TED Website into RDF format, publishes them
-into CELLAR and makes them available to the public through CELLAR’s
+into Cellar and makes them available to the public through Cellar’s
 SPARQL endpoint.

@@ -40,11 +40,9 @@ The query retrieves:
 The notice publication date, organization country and organization size can be changed to create other queries. To do this you can change values in the following section:
 
     VALUES (?NoticePublicationDate ?CountryCode ?BusinessSize) {
-            (
-            "20230905"
+            ("20230905"
             <http://publications.europa.eu/resource/authority/country/DEU>
-            <http://publications.europa.eu/resource/authority/economic-operator-size/sme>
-            )
+            <http://publications.europa.eu/resource/authority/economic-operator-size/sme>)
 
 * The value for publication date:
 
@@ -59,6 +57,7 @@ The notice publication date, organization country and organization size can be c
     <http://publications.europa.eu/resource/authority/economic-operator-size/sme>
 
 ==== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -67,15 +66,14 @@ SELECT
 (COUNT(DISTINCT ?Notice) as ?NrOfNotices)
 WHERE {
     VALUES (?NoticePublicationDate ?CountryCode ?BusinessSize) {
-            (
-            "20230905"
+            ("20230905"
             <http://publications.europa.eu/resource/authority/country/DEU>
-            <http://publications.europa.eu/resource/authority/economic-operator-size/sme>
-            )
+            <http://publications.europa.eu/resource/authority/economic-operator-size/sme>)
     }
     ?Notice epo:hasPublicationDate ?NoticePublicationDate .
-    ?Notice epo:announcesRole ?Buyer .
-    ?Buyer epo:playedBy ?Organization .
+    ?Notice epo:announcesRole ?Winner .
+    ?Winner a epo:Winner ;
+            epo:playedBy ?Organization .
     ?Organization epo:hasBusinessSize ?BusinessSize .
     ?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
 }
@@ -114,6 +112,7 @@ The publication date and organization country can be changed to create other que
     <http://publications.europa.eu/resource/authority/country/DEU>
 
 ==== Query text:
+==== Query text:
 
 [source,sparql]
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -129,7 +128,8 @@ WHERE {
     }
     ?Notice epo:hasPublicationDate ?PublicationDate .
     ?Notice epo:announcesRole ?Buyer .
-    ?Buyer epo:playedBy ?Organization .
+    ?Buyer a epo:Buyer ;
+            epo:playedBy ?Organization .
     ?Organization cccev:registeredAddress / epo:hasCountryCode ?countryCode .
     ?Organization epo:hasLegalName ?LegalName .
 }
@@ -150,24 +150,23 @@ The query retrieves:
 * The winners country code as URI
 * Lot value awarded to winner
 * The currency of the awarded value
-* Lot URI
-* Notice URI
 
 The notice publication date and winner legal name language can be changed to create other queries. To do this, change the following section:
 
     VALUES ?NoticePublicationDate {
-        "20230831"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
 * The value for publication date in example above:
 
- "20230831"
+ "20230905"
 
 * The value for winner legal name language in example above:
 
  'en'
 
+==== Query text:
 ==== Query text:
 
 [source,sparql]
@@ -175,29 +174,20 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 SELECT DISTINCT
-?NoticeID
-?NoticePublicationDate
-?ProcedureNr
-?LotNr
 ?WinnerLegalName
-?WinnerCountryCode
-?LotAwardedValue
-?LotAwardedValueCurrency
-?LotURI
-?NoticeURI
+(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SUM(?AwardedValue) as ?TotalAwardedValue)
+(?AwardedValueCurrency as ?AwardedValueCurrencyURI)
 WHERE {
     VALUES ?NoticePublicationDate {
-        "20230831"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
-    ?NoticeURI a epo:ResultNotice;
-               epo:hasPublicationDate ?NoticePublicationDate;
-               epo:hasID / epo:hasIdentifierValue ?NoticeID ;
-                           epo:refersToLot ?LotURI.
-    ?LotURI a epo:Lot.
-    ?LotAwardOutcome epo:describesLot ?LotURI;
-                     a epo:LotAwardOutcome;
-                     epo:hasAwardedValue ?LotAwardedValueURI ;
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot ;
+                     epo:hasAwardedValue ?MonetaryValue ;
                      epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
     ?TenderAwardOutcome a epo:TenderAwardOutcome;
                         epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
@@ -235,14 +225,14 @@ The query retrieves:
 
 The notice publication date and winner legal name language can be changed to create other queries. To do this, change the following section:
 
-    VALUES ?NoticePublicationDate {
-        "20230921"
+    VALUES (?NoticePublicationDate ?LotAwardedValueCurrency) {
+        ("20230905" <http://publications.europa.eu/resource/authority/currency/EUR>)
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
 * Existing value for publication date in example above:
 
- "20230921"
+ "20230905"
 
 * Existing value for winner legal name language in example above:
 
@@ -261,8 +251,8 @@ SELECT
 ?LotAwardedValue
 ?LotAwardedValueCurrency
 WHERE {
-    VALUES ?NoticePublicationDate {
-        "20230921"
+    VALUES (?NoticePublicationDate ?LotAwardedValueCurrency) {
+        ("20230905" <http://publications.europa.eu/resource/authority/currency/EUR>)
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
     ?Notice epo:hasPublicationDate ?NoticePublicationDate ;
@@ -283,6 +273,7 @@ WHERE {
 }
 ORDER BY DESC(?LotAwardedValue)
 LIMIT 1
+
 
 ////
 NOTE: Other examples of SPARQL queries can be found https://github.com/OP-TED/ted-rdf-docs/tree/main/queries[here].

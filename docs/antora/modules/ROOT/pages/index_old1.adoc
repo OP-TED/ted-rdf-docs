@@ -26,7 +26,7 @@ The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversi
 [.tile]
 .Sample Applications
 ****
-Sample application represents a set of examples that shows how to interact with TED RDF Data (available in CELLAR) using tools like Python, R or Excel.
+Sample application represents a set of examples that shows how to interact with TED RDF Data (available in Cellar) using tools like Python, R or Excel.
 
 <<SWS:ROOT:sample_app/index.adoc#, Read the docs>>
 ****

@@ -30,23 +30,23 @@ The following steps shows how to insert or update data using the sample app: #re
 image::user_manual/ms_excell/image11.png[image,width=507,height=466]
 
 [arabic, start=2]
-. In the opened Excel spreadsheet, paste the SPARQL query into the "Query" sheet.
+. In the Excel spreadsheet, paste the SPARQL query into the "Query" sheet.
 
 .Example SPARQL Query
 image::user_manual/ms_excell/image8.png[image,width=507,height=466]
 
-NOTE: After updating the query cell, the macros script will automatically trigger data updates. If the SPARQL query returns an empty result, MS Excel will create an error such as below
+NOTE: After updating the query cell, the macros script will automatically trigger data updates. If the SPARQL query returns an empty result, Excel will create an error as below:
 
 image::user_manual/ms_excell/image12.png[image,width=507,height=466]
 
 [arabic, start=3]
-. After data is updated, in the "Response Query" sheet you will find the updated table.
+. After the data is updated, the updated table will appear in the "Response Query" sheet.
 
 .Query result table
 image::user_manual/ms_excell/image9.png[image,width=907,height=466]
 
 [arabic, start=4]
-. In the "Sample analysis" sheet you can find an example of analysis of the query result. Press "Update tables" button to update the Pivot tables and plots.
+. In the "Sample analysis" sheet is an example of the analysis of the query result. Press the "Update tables" button to update the Pivot tables and plots.
 
 .Sample analysis
 image::user_manual/ms_excell/image10.png[image,width=807,height=166]

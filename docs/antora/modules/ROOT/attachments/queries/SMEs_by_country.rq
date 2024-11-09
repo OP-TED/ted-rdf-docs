@@ -11,8 +11,9 @@ WHERE {
             <http://publications.europa.eu/resource/authority/economic-operator-size/sme>)
     }
     ?Notice epo:hasPublicationDate ?NoticePublicationDate .
-    ?Notice epo:announcesRole ?Buyer .
-    ?Buyer epo:playedBy ?Organization .
+    ?Notice epo:announcesRole ?Winner .
+    ?Winner a epo:Winner ;
+            epo:playedBy ?Organization .
     ?Organization epo:hasBusinessSize ?BusinessSize .
     ?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
 }

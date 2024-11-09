@@ -19,7 +19,7 @@ Over time, different schema have been developed and there is a significant amoun
 
 === Contributing Resources
 
-To create these mappings a number of resources produced by earlier or concurrent TED projects were used. The following table contains some of these with short descriptions and links to where the resources can be found.
+To create these mappings, a number of resources produced by earlier or concurrent TED projects were used. The following table contains some of these with short descriptions and links to where the resources can be found.
 
 |===
 |*Resource Name*|*Description*
