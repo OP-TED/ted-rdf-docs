@@ -4,29 +4,20 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 SELECT DISTINCT
-?NoticeID
-?NoticePublicationDate
-?ProcedureNr
-?LotNr
 ?WinnerLegalName
-?WinnerCountryCode
-?LotAwardedValue
-?LotAwardedValueCurrency
-?LotURI
-?NoticeURI
+(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SUM(?AwardedValue) as ?TotalAwardedValue)
+(?AwardedValueCurrency as ?AwardedValueCurrencyURI)
 WHERE {
     VALUES ?NoticePublicationDate {
-        "20230831"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
-    ?NoticeURI a epo:ResultNotice;
-               epo:hasPublicationDate ?NoticePublicationDate;
-               epo:hasID / epo:hasIdentifierValue ?NoticeID ;
-                           epo:refersToLot ?LotURI.
-    ?LotURI a epo:Lot.
-    ?LotAwardOutcome epo:describesLot ?LotURI;
-                     a epo:LotAwardOutcome;
-                     epo:hasAwardedValue ?LotAwardedValueURI ;
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot ;
+                     epo:hasAwardedValue ?MonetaryValue ;
                      epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
     ?TenderAwardOutcome a epo:TenderAwardOutcome;
                         epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
@@ -35,13 +26,8 @@ WHERE {
     OPTIONAL {
         ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
     }
-    ?LotAwardedValueURI a epo:MonetaryValue;
-                        epo:hasAmountValue ?LotAwardedValue;
-                        epo:hasCurrency ?LotAwardedValueCurrency.
-    OPTIONAL {
-        ?LotURI epo:hasID / epo:hasIdentifierValue ?LotNr .
-    }
-    ?ProcedureURI epo:hasProcurementScopeDividedIntoLot ?LotURI;
-                  a epo:Procedure ;
-                  epo:hasID / epo:hasIdentifierValue ?ProcedureNr .
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
 }
+GROUP BY ?WinnerLegalName ?AwardedValueCurrency

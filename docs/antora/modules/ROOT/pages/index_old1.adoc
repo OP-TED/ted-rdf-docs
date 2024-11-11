@@ -1,10 +1,10 @@
 = TED-ODS End-User Documentation
 
-TED Open Data Service (TED-ODS) is a process pipeline system that continuously
-converts the public procurement notices (in XML format) published on the
-TED Website into RDF format based on the eProcurement Ontology, outputs
-the RDF data into a triple store (RDF database) called the "CELLAR", and makes the data available to the public
-through a https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint].
+TED Semantic Web Service (TED-SWS) is a pipeline system that continuously
+converts the public procurement notices (in XML format) available on the
+TED Website into RDF format based on the eProcurement Ontology, and publishes
+them into Cellar repository, hence making them available to the public
+through Cellar’s SPARQL endpoint.
 
 The TED Open Data Service (TED-ODS) connects the TED infrastructure for the collection and publication of public procurement notices with the infrastructure of http://data.europa.eu/[data.europa.eu] 
 to make public procurement data accessible and reusable as Linked Open Data (LOD). See xref:genref.adoc[the detailed motivation for the project]).
@@ -26,7 +26,7 @@ The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversi
 [.tile]
 .Sample Applications
 ****
-Sample application represents a set of examples that shows how to interact with TED RDF Data (available in CELLAR) using tools like Python, R or Excel.
+Sample application represents a set of examples that shows how to interact with TED RDF Data (available in Cellar) using tools like Python, R or Excel.
 
 <<SWS:ROOT:sample_app/index.adoc#, Read the docs>>
 ****

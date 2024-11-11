@@ -62,7 +62,7 @@ This is not an error, it is an expected False result. In this situation, the  SP
 
 * *Warning*: The XPATH to which the query is associated was NOT found in the XML notice, but the SPARQL query returned "True".
 
-This might be due to an error in the mapping or the query, but in most cases it indicates that the SPARQL query is "incomplete" i.e., too localized, and does not capture the full context of when a specific graph patterned should be matched. However, it matches some valid property paths in the output that were created from other XPATHs which have a similar ending.
+This might be due to an error in the mapping or the query, but in most cases it indicates that the SPARQL query is "incomplete" i.e., too localised, and does not capture the full context of when a specific graph patterned should be matched. However, it matches some valid property paths in the output that were created from other XPATHs which have a similar ending.
 
 * *Error*: The SPARQL query is incorrect. That means that the conceptual mapping has to be amended.
 

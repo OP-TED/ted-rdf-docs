@@ -5,48 +5,44 @@
 :docdate: October 2023
 
 
-Procurement data in *Cellar* can be queried with Microsoft Excel. A sample Excel file is provided online for download that can be used to paste a query into, which then connects to the endpoint, runs the query, and returns the results back into the Excel file.
+This page explains how to use procurement data accessed from *Cellar* with Microsoft Excel.
+// There are different ways to access TED notices in Cellar and use the data. The methods described below work with TED notices and other type of semantic assets.
 
-////
-There are different ways to access TED notices in CELLAR 
-and use the data. The methods described below work with TED notices and other type of semantic assets.
-////
+== Using sample data with macros in Microsoft Excel
 
-== Using the Microsoft Excel sample file 
+This chapter shows an example of spreadsheet in MS Excel with macros that is using TED-SWS data. The spreadsheet can be found in the https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[GitHub Repository].
 
-The Excel file can be downloaded https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[here].
+In this example you will see the following sheets:
 
-In the file are the following sheets:
+** Query - the sheet containing the SPARQL query
+** Result Query - the sheet containing the result table after querying
+** Sample analysis - an example with the analysis of the table from the Result Query sheet
 
-** Query - sheet for pasting into or creating the SPARQL query
-** Result Query - a sheet containing the results returned by the query
-** Sample analysis -  a sheet contains prefigured dashboard/ charts for the analysis of results returned to the Result Query sheet
+The following steps shows how to insert or update data using the sample application:
 
-The following steps shows how to insert or update data using the sample app: #review once rewritten (no security stuff)#
-
-////
+. When opening the downloaded spreadsheet, a pop-up box might appear asking you to choose a privacy level. Set it to Ignore Privacy Levels checks by ticking the checkbox, and then click "Save".
 
 .Change privacy levels
 image::user_manual/ms_excell/image11.png[image,width=507,height=466]
 
 [arabic, start=2]
-. In the opened Excel spreadsheet, paste the SPARQL query into the "Query" sheet.
+. In the Excel spreadsheet, paste the SPARQL query into the "Query" sheet.
 
 .Example SPARQL Query
 image::user_manual/ms_excell/image8.png[image,width=507,height=466]
 
-NOTE: After updating the query cell, the macros script will automatically trigger data updates. If the SPARQL query returns an empty result, MS Excel will create an error such as below
+NOTE: After updating the query cell, the macros script will automatically trigger data updates. If the SPARQL query returns an empty result, Excel will create an error as below:
 
 image::user_manual/ms_excell/image12.png[image,width=507,height=466]
 
 [arabic, start=3]
-. After data is updated, in the "Response Query" sheet you will find the updated table.
+. After the data is updated, the updated table will appear in the "Response Query" sheet.
 
 .Query result table
 image::user_manual/ms_excell/image9.png[image,width=907,height=466]
 
 [arabic, start=4]
-. In the "Sample analysis" sheet you can find an example of analysis of the query result. Press "Update tables" button to update the Pivot tables and plots.
+. In the "Sample analysis" sheet is an example of the analysis of the query result. Press the "Update tables" button to update the Pivot tables and plots.
 
 .Sample analysis
 image::user_manual/ms_excell/image10.png[image,width=807,height=166]

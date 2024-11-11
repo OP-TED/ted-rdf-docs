@@ -7,12 +7,11 @@
 ////
 Using the https://publications.europa.eu/webapi/rdf/sparql[EU Procurement SPARQL endpoint], SPARQL queries can return EU procurement notice data in RDF format published by the Publications Office.
 
-SPARQL is a specialized query language designed for retrieving and manipulating data stored in RDF (Resource Description Framework) format. SPARQL stands for SPARQL Protocol and RDF Query Language.
+SPARQL stands for "SPARQL Protocol and RDF Query Language". SPARQL queries retrieve and manipulate data stored in RDF (Resource Description Framework) format.  It allows users to write complex queries to retrieve specific information from RDF datasets.
 
-The data available covers Contract Award Notices published after 28/08/2023.  Data on eForm Result notices are not available yet.
-////
+//The data available covers Contract Award Notices published after 28/08/2023. Data on eForm Result notices are not yet available.
 
-A query is submitted to the SPARQL EndPoint by replacing the text highlighted below in blue in the Query text box below with your own query:
+A query is submitted to the SPARQL end point by replacing the text highlighted below in blue in the Query Text box below with the desired query:
 
 .End point user interface
 image::sparql.png[SPARQL End Point]
@@ -40,11 +39,9 @@ The query retrieves:
 The notice publication date, organization country and organization size can be changed to create other queries. To do this you can change values in the following section:
 
     VALUES (?NoticePublicationDate ?CountryCode ?BusinessSize) {
-            (
-            "20230905"
+            ("20230905"
             <http://publications.europa.eu/resource/authority/country/DEU>
-            <http://publications.europa.eu/resource/authority/economic-operator-size/sme>
-            )
+            <http://publications.europa.eu/resource/authority/economic-operator-size/sme>)
 
 * The value for publication date:
 
@@ -67,15 +64,14 @@ SELECT
 (COUNT(DISTINCT ?Notice) as ?NrOfNotices)
 WHERE {
     VALUES (?NoticePublicationDate ?CountryCode ?BusinessSize) {
-            (
-            "20230905"
+            ("20230905"
             <http://publications.europa.eu/resource/authority/country/DEU>
-            <http://publications.europa.eu/resource/authority/economic-operator-size/sme>
-            )
+            <http://publications.europa.eu/resource/authority/economic-operator-size/sme>)
     }
     ?Notice epo:hasPublicationDate ?NoticePublicationDate .
-    ?Notice epo:announcesRole ?Buyer .
-    ?Buyer epo:playedBy ?Organization .
+    ?Notice epo:announcesRole ?Winner .
+    ?Winner a epo:Winner ;
+            epo:playedBy ?Organization .
     ?Organization epo:hasBusinessSize ?BusinessSize .
     ?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
 }
@@ -129,7 +125,8 @@ WHERE {
     }
     ?Notice epo:hasPublicationDate ?PublicationDate .
     ?Notice epo:announcesRole ?Buyer .
-    ?Buyer epo:playedBy ?Organization .
+    ?Buyer a epo:Buyer ;
+            epo:playedBy ?Organization .
     ?Organization cccev:registeredAddress / epo:hasCountryCode ?countryCode .
     ?Organization epo:hasLegalName ?LegalName .
 }
@@ -142,27 +139,22 @@ This SPARQL query retrieves information about the winners of procurement lots fo
 
 The query retrieves:
 
-* Notice ID
-* Procedure ID
-* Notice publication date
-* Lot Number (optional, may be missing if it is not specified in the notice)
-* The legal name of the winner
-* The winners country code as URI
+
+* Winner Legal Name
+* Winner Country Code
 * Lot value awarded to winner
 * The currency of the awarded value
-* Lot URI
-* Notice URI
 
 The notice publication date and winner legal name language can be changed to create other queries. To do this, change the following section:
 
     VALUES ?NoticePublicationDate {
-        "20230831"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
 * The value for publication date in example above:
 
- "20230831"
+ "20230905"
 
 * The value for winner legal name language in example above:
 
@@ -175,29 +167,20 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 SELECT DISTINCT
-?NoticeID
-?NoticePublicationDate
-?ProcedureNr
-?LotNr
 ?WinnerLegalName
-?WinnerCountryCode
-?LotAwardedValue
-?LotAwardedValueCurrency
-?LotURI
-?NoticeURI
+(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SUM(?AwardedValue) as ?TotalAwardedValue)
+(?AwardedValueCurrency as ?AwardedValueCurrencyURI)
 WHERE {
     VALUES ?NoticePublicationDate {
-        "20230831"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
-    ?NoticeURI a epo:ResultNotice;
-               epo:hasPublicationDate ?NoticePublicationDate;
-               epo:hasID / epo:hasIdentifierValue ?NoticeID ;
-                           epo:refersToLot ?LotURI.
-    ?LotURI a epo:Lot.
-    ?LotAwardOutcome epo:describesLot ?LotURI;
-                     a epo:LotAwardOutcome;
-                     epo:hasAwardedValue ?LotAwardedValueURI ;
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot ;
+                     epo:hasAwardedValue ?MonetaryValue ;
                      epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
     ?TenderAwardOutcome a epo:TenderAwardOutcome;
                         epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
@@ -206,16 +189,11 @@ WHERE {
     OPTIONAL {
         ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
     }
-    ?LotAwardedValueURI a epo:MonetaryValue;
-                        epo:hasAmountValue ?LotAwardedValue;
-                        epo:hasCurrency ?LotAwardedValueCurrency.
-    OPTIONAL {
-        ?LotURI epo:hasID / epo:hasIdentifierValue ?LotNr .
-    }
-    ?ProcedureURI epo:hasProcurementScopeDividedIntoLot ?LotURI;
-                  a epo:Procedure ;
-                  epo:hasID / epo:hasIdentifierValue ?ProcedureNr .
+ ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
 }
+GROUP BY ?WinnerLegalName ?AwardedValueCurrency
 
 
 == Query: Return the highest value contract awarded on the 23 September 2023. 
@@ -235,18 +213,22 @@ The query retrieves:
 
 The notice publication date and winner legal name language can be changed to create other queries. To do this, change the following section:
 
-    VALUES ?NoticePublicationDate {
-        "20230921"
+    VALUES (?NoticePublicationDate ?LotAwardedValueCurrency) {
+        ("20230905" <http://publications.europa.eu/resource/authority/currency/EUR>)
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
 
 * Existing value for publication date in example above:
 
- "20230921"
+ "20230905"
 
 * Existing value for winner legal name language in example above:
 
  'en'
+
+* EXisting value for currency in example above:
+
+ <http://publications.europa.eu/resource/authority/currency/EUR>
 
 ==== Query text:
 
@@ -261,8 +243,8 @@ SELECT
 ?LotAwardedValue
 ?LotAwardedValueCurrency
 WHERE {
-    VALUES ?NoticePublicationDate {
-        "20230921"
+    VALUES (?NoticePublicationDate ?LotAwardedValueCurrency) {
+        ("20230905" <http://publications.europa.eu/resource/authority/currency/EUR>)
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
     ?Notice epo:hasPublicationDate ?NoticePublicationDate ;
@@ -283,6 +265,7 @@ WHERE {
 }
 ORDER BY DESC(?LotAwardedValue)
 LIMIT 1
+
 
 ////
 NOTE: Other examples of SPARQL queries can be found https://github.com/OP-TED/ted-rdf-docs/tree/main/queries[here].
