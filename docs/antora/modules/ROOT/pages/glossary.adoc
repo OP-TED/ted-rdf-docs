@@ -17,11 +17,14 @@ a|*Conceptual Mapping* (often abbreviated as CM)
 |*eForms*
 |eForms is the notification standard used for publishing public procurement procedures notices in the European Union, which replaces the Standard Forms (see below).  eForms are used to publish public procurement notices according to Regulation (EU) 2019/1780. For more information on this, see the https://docs.ted.europa.eu/eforms/latest/index.html[eForms SDK documentation].  The eForms conform to the TED SDK.
 
+a|*Cellar*
+a|Cellar is the Semantic Repository of the EU Publications Office, also referred to as the Triple Store, from where data can be reused via Sparql query using the https://publications.europa.eu/webapi/rdf/sparql[Sparql Endpoint].
+
 a|*Standard Forms*
 a|The predecessor to eForms which is used to publish public procurement notices on the TED website according to Regulation (EU) 2015/1986.   The different forms  conform to a specific version the TED XML Schema.
 
 a|*Mapping suite package*
-a|a collection of files, organized in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific Standard Form or eForm is being converted to RDF. This collection includes:
+a|a collection of files, organised in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific Standard Form or eForm is being converted to RDF. This collection includes:
 
 * the conceptual mapping (CM),
 * the technical mappings (realised as RML files) used for transforming the data
@@ -34,7 +37,7 @@ a|*Notice*
 a|Short for public procurement notice, refers to a procurement notice published on TED. To explore some of these notices see: https://ted.europa.eu/TED/.  Notices can be seen as eForms or Standard Forms containing the data of a specific procedure.
 
 a|*RDF Mapping Language (RML)*
-a|a generic mapping language defined to express customized mapping rules from heterogeneous data structures and serializations to the RDF data model. RML is defined as a superset of the W3C-standardized mapping language [R2RML] and follows exactly the same syntax as R2RML; therefore, RML mappings are themselves RDF graphs. For more information on RML, see https://rml.io/specs/rml/.
+a|a generic mapping language defined to express customised mapping rules from heterogeneous data structures and serializations to the RDF data model. RML is defined as a superset of the W3C-standardized mapping language [R2RML] and follows exactly the same syntax as R2RML; therefore, RML mappings are themselves RDF graphs. For more information on RML, see https://rml.io/specs/rml/.
 
 a|*Technical Mapping (TM)*
 a|a set of RML rules that can be used to transform an XML notice. The TM is split in multiple reusable modules that can be combined to represent a full RML.
