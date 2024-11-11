@@ -1,0 +1,20 @@
+site:
+  title: TED Open Data Service
+  start_page: ted-rdf-docs::index.adoc
+content:
+  edit_url: false
+  sources:
+    - url: C:\Users\paterni\Code\ted-rdf-docs\
+      branches: 
+      - new_main
+      # Use local path for testing. Example:
+      start_path: docs/antora
+
+asciidoc:
+  attributes:
+    page-toclevels: 6@
+ui:
+  bundle:
+    url: https://github.com/OP-TED/antora-eui/releases/download/ui-bundle/master/ui-bundle.zip
+    snapshot: true
+  supplemental_files: C:\Users\paterni\Code\supplemental-ui

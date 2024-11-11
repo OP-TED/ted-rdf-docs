@@ -1,0 +1,57 @@
+= The eProcurement Ontology
+
+The eProcurement Ontology (ePO) is the controlled vocabulary which formally describes the classes (concepts), attributes, relationships, and cardinalities  used in EU public procurement. The ontology is essential so that all contributing parties and reusers of the data can be certain that the concepts and definitions they use are the same and have the same meaning.
+
+The ePO provides essential resources and artifacts to help those wishing to query the data:
+
+* Glossaries - searchable lists of classes and their definitions
+* Conceptual Models - visual representations of the classes and their relationships to each other, hierarchies, and cardinalities
+* Guides to using the eProcurement Ontology in constructing queries
+* Info sessions on some of the basic concepts
+
+[.tile-container]
+--
+
+[.tile]
+.Glossaries
+
+****
+The eProcurement Ontology Glossaries
+
+xref:EPO::glossaries.adoc[Search the ePO Glossaries]
+****
+
+[.tile]
+.Conceptual Models
+
+****
+Learn how to create mappings for your own XML to RDF conversion project
+
+xref:EPO::conceptual.adoc[Navigate Conceptual Models]
+****
+
+[.tile]
+.User Guides
+
+****
+User Guides to the ePO Resources
+
+xref:epo-home::guide.adoc[Access the guides to the ePO resources]
+
+****
+
+[.tile]
+.Conceptual Model and Glossary Usage
+
+****
+Examples using the Conceptual Model and Glossaries
+
+https://docs.ted.europa.eu/epo-home/examples/ex1.html[Example 1: Who buys what from whom?]
+
+https://docs.ted.europa.eu/epo-home/examples/ext2.adoc[Example 2: How many contractors are SMEs for a given country and given date?]
+
+****
+
+--
+
+include::ROOT:partial$feedback.adoc[]

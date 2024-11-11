@@ -1,6 +1,7 @@
-name: SWS
-version: ~
-title: TED Semantic Web Service
+name: ODS
+version: 1.0
+title: TED Data
+display_version: '1.0'
 start_page: ROOT:index.adoc
 asciidoc:
   attributes:

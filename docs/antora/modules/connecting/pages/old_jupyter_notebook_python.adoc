@@ -1,0 +1,185 @@
+:doctitle: Jupyter Notebook - Python
+:doccode: sws-main-prod-021
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
+
+This document shows an example in Python using Jupyter Notebook.
+Jupyter Notebook is an application for creating and sharing
+computational documents. Python is a programming language for
+writing computational documents. To use Jupyter Notebook and Python, it may be
+necessary to install some tools and applications to run the Python query on the Cellar database, and display the results in tabular
+format.
+
+To run the sample application using Python, follow the steps below:
+
+[arabic]
+. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_python.ipynb[Download Jupyter Notebook ]
+
+
+[arabic, start=2]
+. Download & Install Python 3.8
+[loweralpha]
+.. Windows 64bit:
+https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe[[.underline]#download#]
+
+.. Windows 86bit:
+https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe[[.underline]#download#]
+
+. Open the Jupyter Notebook file with the code editor
+
+. In the code editor, select the Python interpreter that was installed in the previous step
+
+.Interpreter selection
+image::user_manual/jupyter_notebook/image1.png[image,width=817,height=204]
+
+
+[arabic, start=5]
+. Install dependencies
+
+* Use OS command line and run the following command
+
+[source, python]
+pip3 install sparqlwrapper pandas Jinja2 matplotlib
+
+NOTE: After installation, restart the kernel from Jupyter Notebook to update it with new dependencies. This can be done by clicking on the "Restart" button in the code editor.
+
+[arabic, start=6]
+. Run all Jupyter Notebook Cells
+
+.Button that runs all cells
+image::user_manual/jupyter_notebook/image2.png[image,width=501,height=84]
+
+[arabic, start=7]
+. After running all the cells in the Jupyter Notebook successfully, the results table can be viewed:
+
+.Results table
+image::user_manual/jupyter_notebook/image3.png[image,width=987,height=420]
+
+== Explaining the query
+
+**Question: Who are the winners for a given date?**
+
+This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
+
+This query is composed of:
+
+* The Prefix section: used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).
+
+    PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+    PREFIX org: <http://www.w3.org/ns/org#>
+    PREFIX cccev: <http://data.europa.eu/m8g/>
+
+* The Select section: responsible for specifying which variables or values are to be retrieved from the dataset.
+
+    SELECT DISTINCT
+    ?WinnerLegalName
+    (SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+    (SUM(?AwardedValue) as ?TotalAwardedValue)
+    (?AwardedValueCurrency as ?AwardedValueCurrencyURI)
+
+* The Where section: used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:
+
+** Specifying specific filters for output
+
+    VALUES ?NoticePublicationDate {
+        "20230905"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+
+** Defining notice according to EPO ontology
+
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+
+** Defining lot and lot award outcome according to EPO ontology
+
+    ?Lot a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?Lot;
+                     a epo:LotAwardOutcome;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+
+** Defining the winner according to EPO ontology
+
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+
+** Defining award value and currency according to EPO ontology
+
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
+
+
+* The Group By section: used to group the results by a specific variable. In the example above group by means that the results will be grouped by the winner legal name and the awarded value currency:
+
+    GROUP BY ?WinnerLegalName ?AwardedValueCurrency
+
+
+
+The query retrieves:
+
+* The legal name of the winner
+* The winners country code as URI
+* The value awarded to winner
+* The currency of the awarded value as URI
+
+The notice publication date and winner legal name language can be changed to create other queries. To do this, change the following section:
+
+
+    VALUES ?NoticePublicationDate {
+        "20230905"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+
+* Existing value for publication date in example above:
+
+ "20230905"
+
+* Existing value for winner legal name language in example above:
+
+ 'en'
+
+==== Query text
+
+[source,sparql]
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+SELECT DISTINCT
+?WinnerLegalName
+(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SUM(?AwardedValue) as ?TotalAwardedValue)
+(?AwardedValueCurrency as ?AwardedValueCurrencyURI)
+WHERE {
+    VALUES ?NoticePublicationDate {
+        "20230905"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot ;
+                     epo:hasAwardedValue ?MonetaryValue ;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
+}
+GROUP BY ?WinnerLegalName ?AwardedValueCurrency
+
+include::partial$feedback.adoc[]

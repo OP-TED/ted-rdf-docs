@@ -1,0 +1,5 @@
+//for converted documents on one adoc page - automatic contents generation. all lines must be directly under the page heading, no line spaces, but followed by a line space before the doc body starts.
+:sectnums:
+:toc:
+:toclevels: 4
+:toc-title: Contents

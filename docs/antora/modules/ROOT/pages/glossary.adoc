@@ -9,13 +9,13 @@
 |Term |Explanation
 
 a|*Conceptual Mapping* (often abbreviated as CM)
-|An abstract level mapping of XPaths in the input data to those ePO classes and properties that need to be instantiated the output RDF graph.  The conceptual model is in the form of an Excel file and is a valuable resource for the Procurement specialist that may not have an understanding of the technical files
+|An abstract level mapping of XPaths in the input data to those ePO classes and properties that need to be instantiated the output RDF graph.  The conceptual model is in the form of an Excel file and is a valuable resource for the Procurement specialist that may not have an understanding of the technical files.
 
 |*eProcurement Ontology (ePO)*
 |An ontology that defines the concepts and relations that are needed to fully describe the eProcurement domain of the European Union. For more information see the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology Documentation].
 
 |*eForms*
-|eForms is the notification standard used for publishing public procurement procedures notices in the European Union, which replaces the Standard Forms (see below).  eForms are used to publish public procurement notices according to Regulation (EU) 2019/1780. For more information on this, see the https://docs.ted.europa.eu/eforms/latest/index.html[eForms SDK documentation].  The eForms conform to the TED SDK
+|eForms is the notification standard used for publishing public procurement procedures notices in the European Union, which replaces the Standard Forms (see below).  eForms are used to publish public procurement notices according to Regulation (EU) 2019/1780. For more information on this, see the https://docs.ted.europa.eu/eforms/latest/index.html[eForms SDK documentation].  The eForms conform to the TED SDK.
 
 a|*Cellar*
 a|Cellar is the Semantic Repository of the EU Publications Office, also referred to as the Triple Store, from where data can be reused via Sparql query using the https://publications.europa.eu/webapi/rdf/sparql[Sparql Endpoint].
@@ -43,10 +43,10 @@ a|*Technical Mapping (TM)*
 a|a set of RML rules that can be used to transform an XML notice. The TM is split in multiple reusable modules that can be combined to represent a full RML.
 
 a|*Tenders Electronic Daily (TED)*
-a|an online portal that publishes public procurement notice see: https://ted.europa.eu/TED/main/HomePage.do
+a|an online portal that publishes public procurement notice see: https://ted.europa.eu.
 
 a|*Test data*
-a|a carefully selected, representative sample of real notices published on TED, which, together, cover all the different XPaths that can appear in a specific Standard Form or eForm and conforms to a specific XSD version, published in a certain date range. For more detailed documentation, please check out the mapping_suite/preparing-test-data.adoc section
+a|a carefully selected, representative sample of real notices published on TED, which, together, cover all the different XPaths that can appear in a specific Standard Form or eForm and conforms to a specific XSD version, published in a certain date range. For more detailed documentation, please check out the mapping_suite/preparing-test-data.adoc section.
 
 a|*XPath - the XML Path Language (XPath) Version 1.0.*
 a|See https://www.w3.org/TR/xpath-10/

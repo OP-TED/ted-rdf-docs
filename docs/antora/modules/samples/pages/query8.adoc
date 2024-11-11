@@ -1,0 +1,75 @@
+:doctitle: List the contract winners on a chosen date?
+:doccode: ods-main-prod-201
+
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+== The Scenario
+* Presentation of the scenario
+* A short discussion of the the extent to which the current data offering can assist/ Understanding data limitations
+* Refining the question
+
+== The information
+* Identifying the information to be returned
+* Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information
+* Constructing the query
+
+== The Query
+
+TIP: Use the copy icon on the top right of the source block to copy the query to the clipboard
+
+[source]
+----
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+SELECT DISTINCT
+?NoticeID
+?NoticePublicationDate
+?ProcedureNr
+?LotNr
+?WinnerLegalName
+?WinnerCountryCode
+?LotAwardedValue
+?LotAwardedValueCurrency
+?LotURI
+?NoticeURI
+WHERE {
+    VALUES ?NoticePublicationDate {
+        "20230831"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+    ?NoticeURI a epo:ResultNotice;
+               epo:hasPublicationDate ?NoticePublicationDate;
+               epo:hasID / epo:hasIdentifierValue ?NoticeID ;
+                           epo:refersToLot ?LotURI.
+    ?LotURI a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?LotURI;
+                     a epo:LotAwardOutcome;
+                     epo:hasAwardedValue ?LotAwardedValueURI ;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?LotAwardedValueURI a epo:MonetaryValue;
+                        epo:hasAmountValue ?LotAwardedValue;
+                        epo:hasCurrency ?LotAwardedValueCurrency.
+    OPTIONAL {
+        ?LotURI epo:hasID / epo:hasIdentifierValue ?LotNr .
+    }
+    ?ProcedureURI epo:hasProcurementScopeDividedIntoLot ?LotURI;
+                  a epo:Procedure ;
+                  epo:hasID / epo:hasIdentifierValue ?ProcedureNr .
+}
+----
+
+* Running the Query
+* Examining and refining the query results
+
+include::ROOT:partial$feedback.adoc[]

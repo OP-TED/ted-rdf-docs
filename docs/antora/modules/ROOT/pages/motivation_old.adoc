@@ -1,4 +1,4 @@
-# TED-SWS motivation
+# TED-ODS motivation
 
 In its Strategic Plan for 2020-2024, the Publications Office has
 defined specific Ojective 1 on the "European public procurement space"
@@ -39,7 +39,7 @@ flavours of the available XML schemas as well as to keep up with the
 schema's continuous evolution. Their search capabilities are therefore
 confined to a very limited set of metadata.
 
-The TED Semantic Web Service removes these barriers by providing one
+The TED Open Data Service removes these barriers by providing one
 common format for accessing and reusing all TED data. Coupled with the
 eProcurement Ontology, the TED data will also have semantics attached to
 them allowing users to directly link them with other datasets.

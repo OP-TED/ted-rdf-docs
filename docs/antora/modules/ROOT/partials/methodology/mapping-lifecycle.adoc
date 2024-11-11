@@ -2,27 +2,70 @@
 == Mapping development lifecycle
 :page-partial:
 
-This section provides a high-level overview of the stage of the mapping development lifecycle just before the mapping suites are ready to be used for transformation in production settings.
+The creation of a mapping is done in a sequence of phases and each phase has a main activity that must be completed before the next phase can occur.
+
+Below is a high-level overview of the stage of the mapping development lifecycle that prepares the mapping suites for use for transformations in production settings.
 
 The diagram in <<mapping-lifecycle>> describes the complete mapping development lifecycle.
 
 [#mapping-lifecycle]
 .Mapping development lifecycle
 [reftext="Figure {counter:figure}",align="center"]
-image::maping_development_lifecycle.png[]
+image::ROOT:mapping_development_lifecycle.png[]
 
-The process starts with the decision of **which notice type to map**. The notice classification schemes currently targeted are the https://simap.ted.europa.eu/web/simap/standard-forms-for-public-procurement["standard forms"], and the https://simap.ted.europa.eu/web/simap/eforms["eForms"]. New classification schemes will follow in the future.
+The phases are as follows:
+
+=== Decide which notice type to map
+
+The process starts with the decision as to **which notice type to map**. The notice classification schemes currently targeted are the https://simap.ted.europa.eu/web/simap/standard-forms-for-public-procurement["standard forms"], and the https://simap.ted.europa.eu/web/simap/eforms["eForms"]. New classification schemes will follow in the future.
+
+[start=2]
+=== Select a set of representative data to use for testing
 
 Once the target form is chosen, **a set of representative data is selected** which serves as the test set for the mapping.
 
-The notice classification scheme is usually subject to regulations, and described in multiple forms, PDF documents, XSD schemes, and other documents. All possible documentation and modelling artefacts are **analysed and used to produce a conceptual mapping** (described in the <<_conceptual-mapping-structure,Conceptual mapping structure>> section). This artefact, stored as a workbook, establishes the correspondence of the TED notice fields to XPath expressions and EPO structures.
+[start=3]
+=== Analyse the data and produce a conceptual mapping
+
+The notice classification scheme is usually subject to regulations and described in multiple forms, such as PDF documents and/ or XSD schemes, amongst other document types. All possible documentation and modelling artefacts are **analysed and used to produce a conceptual mapping** (described in the <<_conceptual-mapping-structure,Conceptual mapping structure>> section). This artefact, stored as a workbook, establishes the correspondence of the TED notice fields to XPath expressions and EPO structures.
+
+[start=4]
+=== Implement a corresponding technical mapping
 
 Once the conceptual mapping is established between the XPath expressions and ontology structures, **a corresponding technical mapping is implemented**. This technical mapping consists of a set of mapping rules expressed in https://rml.io/specs/rml/[RDF Mapping Language (RML)], and represents a translation of the conceptual mapping into a formal language which can be executed automatically by a transformation engine such as https://github.com/RMLio/rmlmapper-java[RMLMapper].
 
-Reading RML for revision or debugging purposes can be difficult. To simplify this process, the *RML files can be turned into a more human-friendly HTML report*. This detailed document can facilitate e.g., parsing the sets of conceptual and technical mapping rules to *check their completeness and/or consistency*. This check is a manual step but not the only quality assurance mechanism foreseen in the lifecycle process.
+== Other Artifacts
 
-The setup and conventions of the conceptual mapping file  permits the generation of several additional artefacts, specifically, *a set of SPARQL assertion queries*. These queries are used to assess whether the fields mapped in the conceptual mapping are in the same form in the RDF file generated from an XML notice.
+In the process, other useful artifacts are produced:
 
-To put the SPARQL assertions into practice, *sample data is transformed into RDF* automatically using the RML mapping rules. The *SPARQL queries are then applied* to each output resulting in validation reports indicating whether the individual queries generated a positive or negative result. The reports are then analysed for errors in the RML transformation rules or the conceptual mapping.
+* A HTML report on the RML files which is easier to read
 
-The final step is the assessment of the generated data: the *fingerprinting*. This procedure generates a report which *reconstructs the data shape instantiated in a particular notice*. This facilitates the identification of errors related to the eProcurement ontology.
+Reading RML for revision or debugging purposes can be difficult. To simplify this process, the *RML files can be turned into a more human-friendly HTML report*. This detailed document facilitates e.g., parsing sets of conceptual and technical mapping rules to *check their completeness and/or consistency*. This check is a manual step but not the only quality assurance mechanism foreseen in the lifecycle process.
+
+* A set of SPARQL assertion queries
+
+The setup and conventions of the conceptual mapping file permits the generation of several additional artefacts, specifically, *a set of SPARQL assertion queries*. These queries are used to assess whether fields mapped in the conceptual mapping are in the same form in the RDF file generated from an XML notice.
+
+To put the SPARQL assertions into practice, *sample data is transformed into RDF* automatically using the RML mapping rules. The *SPARQL queries are then applied* to each output producing validation reports that indicate whether the individual queries generated a positive or negative result. The reports are then analysed for errors in the RML transformation rules or the conceptual mapping.
+
+* A report which reconstructs the data shape instantiated in a particular notice 
+
+The final step is the assessment of the generated data, the *fingerprinting*. This procedure generates a report which *reconstructs the data shape instantiated in a particular notice*. This assists in identifying errors related to the EPO ontology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

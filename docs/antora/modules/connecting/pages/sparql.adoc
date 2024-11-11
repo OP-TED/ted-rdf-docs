@@ -1,0 +1,56 @@
+= Submitting a query in the Cellar SPARQL EndPoint
+
+== Cellar SPARQL EndPoint
+
+image::sparql3.png[]
+
+
+== Link to the SPARQL EndPoint
+
+[sidebar]
+****
+The SPARQL EndPoint: https://publications.europa.eu/webapi/rdf/sparql
+****
+
+
+== Results Formats
+
+* *HTML*: returns the results in HTML format in the browser window
+
+* *HTML (basic browsing links)*: returns the results in HTML format in the browser window
+
+* *Spreadsheet*: downloads a results HTML file
+
+* *XML*: downloads a results XML file
+
+* *JSON*: returns a results JSON file in the browser window
+
+* *Javascript*: returns a results JSON table in the browser window
+
+* *Turtle*: returns a results file in turtle syntax in the browser window
+
+* *RDF/XML*: downloads a results file in RDF format 
+
+* *N-triples*: returns a results file in n-triple format in the browser window
+
+* *CSV*: downloads a results comma separated values file
+
+* *TSV*: downloads a results tab separated values file
+
+The query is pasted into the "Query Text" field. The query demonstrated returns a list of companies that have won a tender/ contract where the notice that announced this was published on the requested date.
+
+== The Results
+
+This returns the results (here in HTML format):
+
+image::results1.png[]
+
+== A short video of this query method
+
+video::SPARQL_query.mp4[width=720, height=540]
+
+video::P9IgUoJ3L60[youtube, width=720, height=540]
+
+//NOTE: Copying the results URL to the clipboard is only necessary if you are using it for the xref:excel.adoc[Excel query method].
+
+include::ROOT:partial$feedback.adoc[]

@@ -1,0 +1,66 @@
+== Glossary
+
+*Mapping* A set of rules describing how information in one format or _model_
+corresponds to that in another. It results in a _translation_ of data
+structures (establishing relationships between data structures of different
+models), while keeping the meaning or _semantics_ of the data intact, even if
+_transformation_ of the data is required. However, _mapping_, _transforming_
+and _converting_ are sometimes used interchangeably -- the differences are only
+in technical scope (broadest to narrowest).
+
+*Transformation* The process of not just translating data from one structure to
+another, but also manipulating that data to fit the new structure or purpose,
+such as in the case of mapping between orthogonal data models (for example,
+conforming to an ontology). However, _mapping_, _transforming_ and _converting_
+are sometimes used interchangeably -- the differences are only in technical
+scope (broadest to narrowest).
+
+*Converting* The act of changing one data format into another, for example, XML
+to PDF, or WAV to MP3, which can involve some level of transformation of data
+structures or mapping between different data representation models. However,
+_mapping_, _transforming_ and _converting_ are sometimes used interchangeably
+-- the differences are only in technical scope (broadest to narrowest).
+
+*RDF* Resource Description Framework - A standard _graph_ data model for
+machine-readable knowledge representation, prescribing a declarative computer
+data markup language (with different notations or _serializations_ like
+`RDF/XML` and `Turtle`) for describing things and their relationships in simple
+three-element `<subject, predicate, object>` tuples, that can be used to
+establish a set of statements or facts, i.e. a _knowledge graph_.
+
+*SPARQL* A declarative computer database query language specifically designed
+for RDF databases or _triplestores_, allowing one to ask questions about the
+information stored in RDF graphs, analogue to what SQL is to traditional
+relational database management systems (RDBMS).
+
+*OWL* Web Ontology Language - A declarative computer data modeling language
+specifically designed for creating and expressing ontologies, built on top of
+the RDF-Schema knowledge representation standard. It provides a richer
+_vocabulary_ and more powerful logical constructs for defining complex
+relationships and constraints, enabling logical _reasoning and inference_ of
+instance data (deriving new facts from existing ones).
+
+*Ontology* A formalism for describing a domain of knowledge. It defines the
+concepts, their properties, and the relationships between them, not unlike a
+blueprint that specifies what things exist in a specific area and how they are
+connected. Ontologies can be expressed in the RDF or OWL language and be used
+to lend well-defined meaning, or _semantics_, to data in and reason about
+(infer facts from) _knowledge graphs_.
+
+*Knowledge Graph* A network of information where _nodes_ represent entities
+(like people, places, or things) and _edges_ represent the relationships
+between them, forming a _graph_ of knowledge (data as statements or facts),
+that can be expressed in RDF and be backed by one or more ontologies for shared
+understanding, reasoning and inference.
+
+*RML* RDF Mapping Language - An RDF-based declarative computer programming language for mapping data from various (semi-)structured sources to RDF and constructing _knowledge graphs_.
+
+*Mapping Suite* A set of RML mapping rules for XML-RDF conversion, along with related artefacts. Interchangeable with _mapping package_.
+
+*Mapping Package* A set of RML mapping rules for XML-RDF conversion, along with related artefacts. Interchangeable with _mapping suite_.
+
+*CELLAR* The central content and metadata repository of the Publications Office of the European Union, exposed via a SPARQL endpoint.
+
+*TED-SWS* A pipeline system that continuously converts public
+procurement notices (in XML format) on the TED website into RDF
+format and publishes them into CELLAR

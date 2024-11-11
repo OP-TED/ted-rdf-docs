@@ -1,0 +1,22 @@
+= Pubishers' Corner
+
+https://api.beta.tedv2.spikeseed.cloud/search/swagger-ui/index.html#[The TED Search API]
+
+https://beta.tedv2.spikeseed.cloud/en/sending-electronic-notices[Sending electronic Notices]
+
+'''
+
+=== eSenders
+
+https://beta.tedv2.spikeseed.cloud/en/publishers-corner/esenders/how-to-become-a-ted-esender[How to become an eSender]
+
+https://esentool.ted.europa.eu/[The eSentool]
+
+https://beta.tedv2.spikeseed.cloud/en/publishers-corner/esenders/list-of-ted-esenders[List of eSenders]
+
+'''
+
+https://enotices.ted.europa.eu/choiceLanguage[Access eNotices]
+
+https://esentool.ted.europa.eu/[Access eSentool]
+

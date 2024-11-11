@@ -1,0 +1,197 @@
+:doctitle: Jupyter Notebook - R
+:doccode: sws-main-prod-022
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
+
+This page shows an example in the R language using Jupyter Notebook. R is a
+software environment for statistical computing and graphical
+representation. In this example, R is the programming language used for
+writing notebook documents. To use R and Jupiter Notebook, it may first be necessary to install some tools and applications. Once installed, the R code can perform a query on the Cellar database, and display the results in tabular format.
+
+Before proceeding, ensure that Python and Jupyter Notebook are already installed. This can be done using the steps in the <<SWS:ROOT:sample_app/jupyter_notebook_python.adoc#, Jupyter Notebook - Python>> section.
+
+
+To run the sample application using R, follow the steps below:
+
+[arabic]
+. https://cran.r-project.org/bin/windows/base/R-4.3.1-win.exe[Download] & install R.
+
+[arabic, start=2]
+. https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_R.ipynb[Download the Jupyter Notebook example file].
+
+[arabic, start=3]
+.  https://cran.r-project.org/src/contrib/Archive/SPARQL/SPARQL_1.16.tar.gz[Download SPARQL package archive] and put it in same folder as Notebook file.
+
+[arabic, start=4]
+. Install the IRKernel:
+
+[loweralpha]
+.. Run R in the OS command line and type in:
+
+[source,bash]
+install.packages("IRkernel")
+install.packages('RCurl')
+install.packages('XML')
+
+[loweralpha, start=2]
+. In the window prompt, select the first option (mirror) and press OK.
+
+.Secure download mirrors
+image::user_manual/jupyter_notebook/image4.png[image,width=240,height=309]
+
+[loweralpha, start=3]
+. After the installation is completed, run the following command in the terminal.
+[source,bash]
+IRkernel::installspec()
+
+
+[arabic, start=5]
+. Open the Jupyter Notebook file with the code editor.
+
+. Select the R interpreter.
+
+.Interpreter selection
+image::user_manual/jupyter_notebook/image5.png[image,width=901,height=142]
+
+
+[arabic, start=7]
+. Run all Jupyter Notebook Cells.
+
+.Button that runs all cells
+image::user_manual/jupyter_notebook/image6.png[image,width=502,height=100]
+
+[arabic, start=8]
+. After running all the cells in the Jupyter Notebook successfully, the results table can be viewed:
+
+.Result Table
+image::user_manual/jupyter_notebook/image7.png[image,width=987,height=211]
+
+== Explaining the query
+
+**Question: Who are the winners for a given date?**
+
+This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.
+
+This query is composed of:
+
+* The Prefix section: used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).
+
+    PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+    PREFIX org: <http://www.w3.org/ns/org#>
+    PREFIX cccev: <http://data.europa.eu/m8g/>
+
+* The Select section: responsible for specifying which variables or values are to be retrieved from the dataset.
+
+    SELECT DISTINCT
+    ?WinnerLegalName
+    (SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+    (SUM(?AwardedValue) as ?TotalAwardedValue)
+    (?AwardedValueCurrency as ?AwardedValueCurrencyURI)
+
+* The Where section: used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:
+
+** Specifying filters for output
+
+    VALUES ?NoticePublicationDate {
+        "20230905"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+
+** Defining notice according to EPO ontology
+
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+
+** Defining lot and lot award outcome according to EPO ontology
+
+    ?Lot a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?Lot;
+                     a epo:LotAwardOutcome;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+
+** Defining the winner according to EPO ontology
+
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+
+** Defining award value and currency according to EPO ontology
+
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
+
+
+* The Group By section: used to group the results by a specific variable. In the example above group by means that the results will be grouped by the winner legal name and the awarded value currency:
+
+    GROUP BY ?WinnerLegalName ?AwardedValueCurrency
+
+
+
+The query retrieves:
+
+* The legal name of the winner
+* The winners country code as URI
+* The value awarded to winner
+* The currency of the awarded value as URI
+
+The notice publication date and winner legal name language can be changed to create other queries. To do this, change the following section:
+
+
+    VALUES ?NoticePublicationDate {
+        "20230905"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+
+* Existing value for publication date in example above:
+
+ "20230905"
+
+* Existing value for winner legal name language in example above:
+
+ 'en'
+
+==== Query text
+
+[source,sparql]
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+SELECT DISTINCT
+?WinnerLegalName
+(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SUM(?AwardedValue) as ?TotalAwardedValue)
+(?AwardedValueCurrency as ?AwardedValueCurrencyURI)
+WHERE {
+    VALUES ?NoticePublicationDate {
+        "20230905"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot ;
+                     epo:hasAwardedValue ?MonetaryValue ;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
+}
+GROUP BY ?WinnerLegalName ?AwardedValueCurrency
+
+
+include::partial$feedback.adoc[]

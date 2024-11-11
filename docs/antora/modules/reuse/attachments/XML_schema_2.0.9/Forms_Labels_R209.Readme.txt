@@ -1,0 +1,1 @@
+For an updated version of the forms labels for TED XML schema R2.0.9, please consult the file "Form labels R2.0.9 (zip)" at https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas

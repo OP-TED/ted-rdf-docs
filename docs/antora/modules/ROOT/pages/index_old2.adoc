@@ -1,0 +1,61 @@
+:doctitle: The TED Open Data Service
+:doccode: sws-main-prod-001
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
+
+== Introduction
+
+The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website, into RDF format.  The RDF data is stored in the Publications Office's (OP) RDF https://en.wikipedia.org/wiki/Triplestore[triple store] named the "Cellar", and is publicly available (open). Making this data open for querying is part of the https://digital-strategy.ec.europa.eu/en/policies/strategy-data[European Data Strategy] which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, and other interested parties.
+
+=== Querying TED Open Data
+
+Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and return data about EU public procurement. Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
+
+This section on reusing public procurement data introduces the resources and guides available to help those interested in querying public procurement data improve their skills and write queries.
+
+=== Mapping Suites 
+
+The Mapping Suites section is for those who wish to use a service to convert xml data into RDF, and deals with the creation of mappings or mapping suites. This section is aimed at technical users wishing to create the rules for data conversion from XML to RDF. This is the "behind the scenes" process that precedes RDF data being placed in the Cellar triple store for querying.
+
+ 
+////
+== Mapping Suites
+A mapping suite within the TED Open Data Service is a set of mappings that defines how an XML document representing an e-Procurement Notice will be transformed to an equivalent RDF graph representation in conformance with the eProcurement ontology. These mappings are materialized in different forms, as it will be explained later, and a mapping suite will have all its relevant components organized in a package, which is referred to as a *mapping suite package*.A mapping suite can be further broken down into mapping suite packages, one per type of standard form mapped.
+////
+
+
+
+[.tile-container]
+--
+
+[.tile]
+.Reusing TED Open Data
+****
+This section demonstrates how to query TED RDF data using Excel or Python, or directly via the Cellar SPARQL EndPoint.
+
+<<ODS:ROOT:sample_app/index.adoc#, Read the docs>>
+****
+
+[.tile]
+.Mapping Suites
+****
+The TED RDF Mappings are the transformation rules needed by the TED-SWS Conversion Pipeline (both of which are part of the TED Open Data Service) to convert TED notices available in XML format into RDF.
+Mapping Suites and Mapping Suite Packages are explained in this section.
+
+
+<<ODS:ROOT:mapping_suite/index.adoc#, Read the docs>>
+****
+--
+
+////
+== Audience
+
+This documentation is written for a wide audience, with different interests in the TED-ODS project, and different levels of expertise Semantic Web, EU e-Procurement and software infrastructure. More specifically this documentation can be of interest to:
+
+- *End-Users*, such as *Semantic Web Practitioners* or *Experts in eProcurement Domain*, who are interested in understanding how the RDF representation of the e-procurement notices look like, and how this representation conforms to the eProcurement Ontology (ePO).
+- *Software Engineers* interested in integrating mapping suite packages into processing pipelines;
+- *Semantic Engineers* interested in understanding and writing mappings from XML to RDF, in particular in the EU eProcurement domain;
+////
+

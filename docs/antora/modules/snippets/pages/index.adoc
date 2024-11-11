@@ -1,0 +1,156 @@
+= Commonly used public procurement SPARQL Snippets
+
+== Introduction
+
+Some SPARQL code snippets are provided below for classes that are used often in public procurement SPARQL queries. These are classes such as winner country, lot value, currency, date, winner business size, etc.
+
+// == Query section logic/ indentation/ heirarchy
+== Sample Snippets
+
+These snippets will go into the WHERE section of the query (after the list of fields you wish the query to return under SELECT).
+
+=== Limit/ filter results by language (EN)
+
+This snippet shows how to limit the results to those in English. This can be done for any language.
+
+[source]
+--
+FILTER(LANG(?WinnerLegalName) = 'en')
+--
+
+=== Limit the results to a specified date 
+
+This snippet shows limiting the results to a specified date. Change this as required.
+
+[source]
+--
+VALUES ?NoticePublicationDate {
+    "20230921"
+}
+--
+
+////
+=== Limit the results to a date range
+
+VALUES ?NoticePublicationDate {
+     >= "2023-09-01" && < "2024-01-01" 
+  }
+
+or
+
+FILTER (?NoticePublicationDate < "2023-09-01"^^xsd:dateTime && ?NoticePublicationDate > "2024-01-01"^^xsd:dateTime)
+
+For Cristian to advise which would work
+////
+
+=== *?LotURI* and *?NoticePublicationDate* derived from _?Notice_:
+
+[source]
+--
+?Notice epo:hasPublicationDate ?NoticePublicationDate ;
+        epo:refersToLot ?LotURI.
+--
+
+=== *?LotURI*, *?MonetaryValue* and *?TenderAwardOutcome* derived from from _?LotAwardOutcome_:           
+    
+[source]
+--   
+?LotAwardOutcome epo:describesLot ?LotURI ;
+                 epo:hasAwardedValue ?MonetaryValue ;
+                 epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+
+--
+
+=== *?Winner* derived from _?TenderAwardOutcome_:
+
+[source]
+--   
+?TenderAwardOutcome a epo:TenderAwardOutcome;
+                    epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+--
+
+=== *?WinnerLegalName* derived from _?Winner_:
+
+[source]
+--  
+?Winner a org:Organization;
+        epo:hasLegalName ?WinnerLegalName.
+--
+
+=== *?WinnerCountryCode* derived from _?Winner_: 
+(in this case, if a country code is available, therefore optional)
+
+[source]
+--     
+ 
+OPTIONAL {
+    ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+}
+--
+
+=== *?LotAwardedValue* and *?LotAwardedValueCurrency* derived from _?MonetaryValue_:
+
+[source]
+-- 
+?MonetaryValue a epo:MonetaryValue;
+               epo:hasAmountValue ?LotAwardedValue;
+               epo:hasCurrency ?LotAwardedValueCurrency .
+--
+
+=== *?Organization* and *?LegalName* are derived from _?Notice_
+
+[source]
+-- 
+?Notice epo:announcesRole ?Buyer .
+?Buyer epo:playedBy ?Organization .
+?Organization cccev:registeredAddress / epo:hasCountryCode ?countryCode .
+?Organization epo:hasLegalName ?LegalName .
+--
+
+
+=== *?BusinessSize* derived from _?Notice_
+
+[source]
+-- 
+?Notice epo:announcesRole ?Buyer .
+?Buyer epo:playedBy ?Organization .
+?Organization epo:hasBusinessSize ?BusinessSize .
+?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
+--
+
+=== Contract Value and currency *(?AwardedValue* and *?LotAwardedValueCurrencyURI*) derived from _?Notice_
+[source]
+-- 
+?Notice epo:refersToLot ?Lot .
+?LotAwardOutcome epo:describesLot ?Lot ;
+                 epo:hasAwardedValue / epo:hasAmountValue ?AwardedValue;
+                 epo:hasAwardedValue / epo:hasCurrency ?LotAwardedValueCurrencyURI.
+--  
+
+=== Procurement object by common procurement vocabulary (CPV) code.
+
+Search for a procurement object (type of goods supplied) by common procurement vocabulary (CPV) code: *?MainClassification* from _?ProcurementObject_. This example searches for *CPV 0341xxxx: wood*.
+
+[source]
+-- 
+?ProcurementObject epo:hasPurpose ?Purpose .
+?Purpose epo:hasMainClassification ?MainClassification .
+FILTER(strstarts(str(?MainClassification), 'http://data.europa.eu/cpv/cpv/0341')) .
+--
+
+Note: the code above can be substituted for any other CPV code that contains subcodes.
+
+==== Subtypes of the *?MainClassification CPV code*
+
+(This adds the subtype of wood for each record: soft wood, hard wood, etc.)
+
+[source]
+--
+?childMainClassification skos:broader+ ?MainClassification .
+?childMainClassification skos:inScheme <http://data.europa.eu/cpv/cpv> .
+?MainClassification skos:inScheme <http://data.europa.eu/cpv/cpv> .
+OPTIONAL { ?childMainClassification skos:prefLabel ?childMainClassificationLabel .
+FILTER (lang(?childMainClassificationLabel) = "en")  }  
+--
+
+NOTE: You can search through the CPV codes on the https://ted.europa.eu/en/advanced-search[ted.europa.eu website] using the Advanced Search and drilling down in the CPV field.

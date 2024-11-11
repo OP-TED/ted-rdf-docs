@@ -1,0 +1,5 @@
+//must be added to the footer of every page
+'''
+Any comments on the documentation?
+
+link:https://github.com/OP-TED/ted-bulkdownloads-docs/issues/new/choose[Click here to let us know]

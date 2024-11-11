@@ -1,0 +1,73 @@
+:doctitle: Start querying procurement data using SPARQL
+:doccode: ods-main-prod-102
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+== EU public procurement data
+
+The EU makes public procurement data in RDF format available for querying. A pipeline process converts XML notice data into RDF format which is stored in a public procurement RDF database, or triple store, called the "Cellar". The database is maintained by the Publications Office.
+
+Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and retrieve public procurement data from Cellar.
+
+Public procurement data stored in Cellar is open to anyone who wishes to query notice data as Linked Open Data.
+
+
+== RDF data
+
+RDF data has a specific format made up of a "semantic triple".
+
+If the triple store had data on people and their phone numbers, the triples would look like this:
+
+Mary - HasNumber - 555-123456 +
+Janet - HasNumber - 555-345678 +
+John - HasNumber - 555-234567
+
+
+The data look a little like a sentence with a subject (Name), predicate (HasNumber) and object (Number).
+
+There are many triples stored in such a database. For Name, there would be the usual personal details categories as well as information specific to that database (music/ sports/ jobs/ procurement). Many objects could be associated with subjects via different predicates.
+
+== Queries
+
+Queries, written in a query language called SPARQL, are used to retrieve RDF data.
+
+
+== Executing a query
+
+Once a query is ready, it is pasted into a SPARQL EndPoint and executed.
+
+A SPARQL EndPoint is a URI connected to a RDF triple store that provides access to the data in it. Each triple store has its own EndPoint. The EndPoint is presented to the public in the form of a webpage with a field, or textbox, into which a SPARQL query can be pasted. The query results are returned online in a table.
+
+The resources provided here can help you to: 
+
+* Learn what resources are available to help you start querying public procurement data
+* Understand RDF Data
+* Write SPARQL queries
+* Connect to open public procurement data
+
+Sample queries are available, as is a description of the various methods ways of running SPARQL queries, that you can try out for yourself. The sample queries can be used in any of the different query methods.
+
+Links to all these resources are in the left-hand menu.
+
+include::ROOT:partial$feedback.adoc[]
+
+
+
+
+
+
+
+////
+== Converting notice data into RDF format
+
+On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well, who wish to buy or supply goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.
+
+As part of the European Commission's strategy for data reuse and transparency, notice data is converted into RDF format using an automated "pipeline" service.
+
+ using the query methods found in the menu on the left under "Connecting to RDF data".
+
+The section on creating mappings to convert XML data to RDF can also be found in the left-hand menu.
+
+////
+

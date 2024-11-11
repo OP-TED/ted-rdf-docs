@@ -1,0 +1,7 @@
+{
+    "asciidoc.antora.enableAntoraSupport": true,
+    "cSpell.words": [
+        "reusers",
+        "xref"
+    ]
+}

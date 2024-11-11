@@ -1,0 +1,152 @@
+:doctitle: Downloading notice packages using a direct link
+:doccode: bdl-main-prod-003
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
+Packages of daily or monthly notice document packages can be downloaded via a direct html link.
+
+To download packages via a direct link, the URL needs to be formatted in a specific way:
+
+== The URL format for daily packages is as follows:
+
+\https://{ted-url}/packages/notice/daily/{yyyynnnnn},
+
+where *{yyyynnnnn}* is the *OJS number*.
+
+*Example:* to download the daily package of the OJS 1 / 2023, the URL would be:
+
+----
+
+"https://ted.europa.eu/packages/daily/202300001"
+----
+
+// "https://ted.europa.eu/packages/daily/202300001"
+
+
+== The URL format for monthly packages is as follows:
+
+\https://{ted-url}/packages/notice/monthly/{yyyy-n},
+
+where *{yyyy-n}* is *the year and the month*.
+
+*Example:* to download the monthly package of January 2023, the URL would be:
+
+----
+"https://ted.europa.eu/packages/monthly/2023-1"
+----
+// "https://ted.europa.eu/packages/monthly/2023-1"
+== Specifying file formats:
+
+=== Specifying the file format of a daily package, in this example, .tar.gz:
+
+{yyyymmdd}_{yyyynnn}.tar.gz,
+
+where {yyyymmdd} is the OJ S publication date, and {yyyynnn} is the OJ S number
+
+*Example:* daily package of the OJ S 1 / 2023:
+----
+*20230102_2023001.tar.gz*
+----
+=== Specifying the file format of a monthly package, in this example, tar.gz:
+
+{yyyy}_{mm}.tar.gz,
+
+where {yyyy} is the year and {mm} is the month
+
+*Example:* monthly package of January 2023
+----
+*2023_01.tar.gz*
+----
+
+NOTE: The xml packages contain xml files numbered in two ways:
+
+* eForms notices: the XML files have 8 digits followed by the year (e.g. 00654321_2022.xml)
+
+* TED schema notices: the XML files have 6 digits followed by the year (e.g. 123456_2022.xml)
+
+== Download notices in any format using direct links:
+
+Users can download a notice using a direct link in the formats listed below and in any EU official language:
+* HTML
+* HTML download
+* Signed PDF
+* Non-signed PDF
+* XML
+
+
+The format, "HTML download" is a feature introduced in late 2023. It removes the need for an API on the TED portal for rendering a notice.
+
+From late 2023 onwards, there will be only one API that can be used to render eForms notices in PDF or HTML, the
+https://viewer.ted.europa.eu/swagger-ui/index.html[Swagger UI]
+
+For more information, read the https://docs.ted.europa.eu/api/index.html[TED Developer Documentation].
+
+=== Procedure:
+
+* From any notice view page, click ‘*Show the direct links*’
+
+image::bulk3.png[]
+* A pop-up window will appear listing the available formats of the direct links:
+** HTML
+** HTML download
+** Signed PDF
+** Non-signed PDF
+** XML
+
+image::bulk4.png[]
+
+NOTE: The 'Signed PDF' link is only displayed when the user interface is set to the official language of the notice.
+
+//pg 10 of presentation:
+
+The format of the URLs of the direct link is as follows:
+
+	https://{ted-url}/{lang}/notice/{publication-number}/{format}
+
+where:
+
+* {lang} is the language
+* {publication-number} is the publication number
+* {format} can be :
+** html: to display the HTML download file
+** pdf: to download the notice as PDF
+** pdfs: to download the notice as signed PDF
+** xml: to download the notice as XML.
+
+The direct link of the notice view page is as follows:
+
+https://{ted-url}/{lang}/notice/-/detail/{publication-number}
+
+It retains backward compatibility with the current TED.
+
+*Examples:*
+----
+https://ted.europa.eu/udl?uri=TED:NOTICE:735065-2022:TEXT:EN:HTML
+
+https://ted.europa.eu/en/notice/-/detail/735065-2022
+----
+// "https://ted.europa.eu/udl?uri=TED:NOTICE:735065-2022:TEXT:EN:HTML"
+// "https://ted.europa.eu/en/notice/-/detail/735065-2022"
+*Examples of direct links to Notice 564613-2023 in English (en) and French (fr):*
+
+(for any other EU language, replace "en" or "fr" with the desired language code)
+----
+HTML:
+EN: https://ted.europa.eu/en/notice/-/detail/564613-2023
+FR: https://ted.europa.eu/fr/notice/-/detail/564613-2023
+
+HTML download:
+EN: https://ted.europa.eu/en/notice/564613-2023/html
+FR: https://ted.europa.eu/fr/notice/564613-2023/html
+
+Non-signed PDF:
+EN: https://ted.europa.eu/en/notice/564613-2023/pdf
+FR: https://ted.europa.eu/fr/notice/564613-2023/pdf
+
+Signed PDF:
+https://ted.europa.eu/en/notice/564613-2023/pdfs
+https://ted.europa.eu/fr/notice/564613-2023/pdfs
+----
+
+include::partial$feedback.adoc[]
