@@ -1,5 +1,5 @@
 :doctitle: Mapping Suite Glossary
-:doccode: sws-main-prod-005
+:doccode: ODS-ROOT-06
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023

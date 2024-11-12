@@ -1,5 +1,5 @@
 :doctitle: Reusing Mapping suite packages
-:doccode: sws-main-prod-016
+:doccode: ODS-MAPP-10
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023

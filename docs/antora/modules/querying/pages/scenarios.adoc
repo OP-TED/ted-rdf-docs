@@ -1,5 +1,5 @@
 :doctitle: Turning a Question about Data into a Query
-:doccode: sws-main-prod-020
+:doccode: ODS-QUER-07
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023

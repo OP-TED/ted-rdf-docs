@@ -1,5 +1,5 @@
 //:doctitle: The TED Open Data Service
-:doccode: sws-main-prod-001
+:doccode: ODS-ROOT-004
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: September 2023

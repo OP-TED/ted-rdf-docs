@@ -1,5 +1,8 @@
 :doctitle: Data Currently Available
-
+:doccode: ODS-ROOT-03
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
 
 == TED Linked Open Data
 Data is currently available from August 2023 to December 2023

@@ -1,4 +1,8 @@
-= Querying the data using Excel
+:doctitle: Querying the data using Excel
+:doccode: ODS-CONN-03
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: September 2023
 
 There are two parts to querying the data using Excel. 
 

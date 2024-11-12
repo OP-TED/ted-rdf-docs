@@ -1,5 +1,8 @@
-= Notice Data
-
+:doctitle: Notice Data
+:doccode: ODS-QUER-04
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
 
 == Getting familiar with public procurement data
 

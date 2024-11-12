@@ -1,6 +1,5 @@
 :doctitle: Find the highest value contract award published on a particular date
-:doccode: ods-main-prod-201
-
+:doccode: ODS-SAMP-02
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024

@@ -1,5 +1,5 @@
 :doctitle: Target Audience
-:doccode: sws-main-prod-002
+:doccode: ODS-ROOT-02
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023

@@ -1,5 +1,5 @@
 :doctitle: TED Data
-:doccode: sws-main-prod-001
+:doccode: ODS-ROOT-01
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: September 2023
