@@ -27,9 +27,9 @@
 
 * [.separated]#**Sample SPARQL Queries**#
 * xref:samples:index.adoc[Sample queries]
-** xref:samples:query1.adoc[Query 1: Highest Value Contract]
-** xref:samples:query2.adoc[Query 2: METS packages published]
-** xref:samples:query3.adoc[Query 3: Query notice by id]
+// ** xref:samples:contracts.adoc[Query 1: Highest Value Contract]
+// ** xref:samples:query2.adoc[Query 2: METS packages published]
+// ** xref:samples:query3.adoc[Query 3: Query notice by id]
 //** xref:samples:query4.adoc[Query 4: Notices published]
 //** xref:samples:query5.adoc[Query 5: Contracts won by SMEs]
 //** xref:samples:query6.adoc[Query 6: Contractors using Subcontractors]

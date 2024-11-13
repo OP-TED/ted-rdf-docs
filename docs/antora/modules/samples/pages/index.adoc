@@ -1,9 +1,8 @@
 = Query Samples
 
-== query1
+== Basic
 
-== query 2
 
-etc, tbc once queries finalised
+== Advanced
 
 include::ROOT:partial$feedback.adoc[]

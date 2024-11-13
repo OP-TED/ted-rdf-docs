@@ -1,0 +1,18 @@
+:doctitle: List the winners per day
+:doccode: ods-main-prod-201
+
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+include::./preamble.adoc[]
+
+[source, sparql]
+----
+include::../queries/winners-per-day.sparql[]
+----
+
+* Running the Query
+* Examining and refining the query results
+
+include::ROOT:partial$feedback.adoc[]

@@ -20,8 +20,8 @@
 
 * Example Query Library
 ** xref:samples:index.adoc[Home]
-** xref:samples:query1.adoc[Query 1: tbd]
-** xref:samples:query2.adoc[Query 2: tbd]
+** xref:samples:query-2.adoc[Query 1: tbd]
+** xref:samples:advanced-1.adoc[Query 2: tbd]
 ** xref:samples:query3.adoc[Query 3: tbd]
 ** xref:snippets:index.adoc[Sample Snippets]
 //** xref:samples:query4.adoc[Query 4: Notices published on a date]
@@ -53,7 +53,7 @@
 * [.separated]#**Mapping XML data to RDF**#
 * xref:mapping:index.adoc[Home]
 * Mapping Standard Form XML data to RDF
-** xref:mapping:index_sf.adoc[Home] 
+** xref:mapping:index_sf.adoc[Home]
 ** xref:mapping:repository-structure.adoc[Repository structure]
 ** xref:mapping:mapping_how.adoc[Methodology]
 ** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
@@ -65,7 +65,7 @@
 ** xref:mapping:prior.adoc[Recommended Prior Knowledge]
 
 * Mapping eForm XML data to RDF
-** xref:mapping_eforms:index.adoc[Home] 
+** xref:mapping_eforms:index.adoc[Home]
 ** xref:mapping_eforms:methodology.adoc[Methodology]
 ** xref:mapping_eforms:package_structure.adoc[Mapping Suite Structure]
 ** xref:mapping_eforms:usage.adoc[Usage Instructions]
