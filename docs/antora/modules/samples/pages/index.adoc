@@ -1,8 +1,5 @@
 = Query Samples
 
-== Basic
-
-
-== Advanced
+include::./query-list.adoc[]
 
 include::ROOT:partial$feedback.adoc[]
