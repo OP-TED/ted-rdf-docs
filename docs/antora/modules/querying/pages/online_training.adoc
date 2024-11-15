@@ -1,4 +1,8 @@
-= Links to online training resources for learning SPARQL
+:doctitle: Links to online training resources for learning SPARQL
+:doccode: ODS-QUER-05
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
 
 There are many good online resources on SPARQL and constructing SPARQL queries:
 

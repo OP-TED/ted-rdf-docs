@@ -1,55 +1,81 @@
 :doctitle: Mapping Suite Glossary
-:doccode: sws-main-prod-005
+:doccode: ODS-ROOT-06
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
+
+#New Table#
 
 [cols="1,3"]
 |===
 |Term |Explanation
 
-a|*Conceptual Mapping* (often abbreviated as CM)
-|An abstract level mapping of XPaths in the input data to those ePO classes and properties that need to be instantiated the output RDF graph.  The conceptual model is in the form of an Excel file and is a valuable resource for the Procurement specialist that may not have an understanding of the technical files.
+|*Business Questions (BQ)* | refer to specific inquiries or information needs that pertain to business operations, procurement activities, or related aspects. These questions are typically posed by organizations, researchers, or individuals seeking to gain insights, make informed decisions, or conduct analyses based on the data provided by TED-ODS.
 
-|*eProcurement Ontology (ePO)*
-|An ontology that defines the concepts and relations that are needed to fully describe the eProcurement domain of the European Union. For more information see the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology Documentation].
+|*Cellar* |is the Semantic Repository of the EU Publications Office, also referred to as the Triple Store, from where data can be reused via Sparql query using the https://publications.europa.eu/webapi/rdf/sparql[Sparql Endpoint].
 
-|*eForms*
-|eForms is the notification standard used for publishing public procurement procedures notices in the European Union, which replaces the Standard Forms (see below).  eForms are used to publish public procurement notices according to Regulation (EU) 2019/1780. For more information on this, see the https://docs.ted.europa.eu/eforms/latest/index.html[eForms SDK documentation].  The eForms conform to the TED SDK.
+|*Code Editor* |refers to a software tool or environment where users can write, edit, and execute code. It allows to easily create scripts or programs to retrieve data from TED-ODS and perform operations on the RDF data.
 
-a|*Cellar*
-a|Cellar is the Semantic Repository of the EU Publications Office, also referred to as the Triple Store, from where data can be reused via Sparql query using the https://publications.europa.eu/webapi/rdf/sparql[Sparql Endpoint].
+|*Conceptual Mapping* (often abbreviated as CM) |An abstract level mapping of XPaths in the input data to those ePO classes and properties that need to be instantiated the output RDF graph.  The conceptual model is in the form of an Excel file and is a valuable resource for the Procurement specialist that may not have an understanding of the technical files.
 
-a|*Standard Forms*
-a|The predecessor to eForms which is used to publish public procurement notices on the TED website according to Regulation (EU) 2015/1986.   The different forms  conform to a specific version the TED XML Schema.
+|*Converting* |The act of changing one data format into another, for example, XML to PDF, or WAV to MP3, which can involve some level of transformation of data structures or mapping between different data representation models. However, _mapping_, _transforming_ and _converting_ are sometimes used interchangeably -- the differences are only in technical scope (broadest to narrowest).
 
-a|*Mapping suite package*
-a|a collection of files, organised in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific Standard Form or eForm is being converted to RDF. This collection includes:
+|*eForms* |eForms is the notification standard used for publishing public procurement procedures notices in the European Union, which replaces the Standard Forms (see below).  eForms are used to publish public procurement notices according to Regulation (EU) 2019/1780. For more information on this, see the https://docs.ted.europa.eu/eforms/latest/index.html[eForms SDK documentation].  The eForms conform to the TED SDK.
 
-* the conceptual mapping (CM),
-* the technical mappings (realised as RML files) used for transforming the data
-* additional resources that are needed to complement the mappings,
-* test data (xml examples of notices)
-* the RDF format of the test data after transformation
-* validation queries and validation reports on the  RDF output. For more details please see the Mapping Suite Structure.
+|*eProcurement Ontology (ePO)* |An ontology that defines the concepts and relations that are needed to fully describe the eProcurement domain of the European Union. For more information see the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology Documentation].
 
-a|*Notice*
-a|Short for public procurement notice, refers to a procurement notice published on TED. To explore some of these notices see: https://ted.europa.eu/TED/.  Notices can be seen as eForms or Standard Forms containing the data of a specific procedure.
+|*Form* |To enable the publishing of the EU public procurement data in the Official Journal, the European Commission has created standard forms aligned with each of the EU legal bases in place for publishing this data, namely: the *TED schema forms* set out in Regulation (EU) 2015/1986, and the *eForms* set out in Regulation (EU) 2019/1780. In this documentation the term "form", if not otherwise specified, will refer to the Standard Form (see below)
 
-a|*RDF Mapping Language (RML)*
-a|a generic mapping language defined to express customised mapping rules from heterogeneous data structures and serializations to the RDF data model. RML is defined as a superset of the W3C-standardized mapping language [R2RML] and follows exactly the same syntax as R2RML; therefore, RML mappings are themselves RDF graphs. For more information on RML, see https://rml.io/specs/rml/.
+|*Jupyter Notebook* |An interactive computing environment that allows users to create and share documents containing live code, equations, visualizations, and explanatory text. It's particularly useful for working with data and performing data analysis, making it a valuable tool for xref:ROOT:mapping_suite/index.adoc[accessing and processing] data from TED-ODS.
 
-a|*Technical Mapping (TM)*
-a|a set of RML rules that can be used to transform an XML notice. The TM is split in multiple reusable modules that can be combined to represent a full RML.
+|*Jupyter Notebook Kernel* |Refers to the computational engine that executes the code within a Jupyter Notebook. It determines which programming language is used to run the code in the notebook. For example, if you're working with TED-ODS in a Jupyter Notebook, you might choose to use a Python kernel, which means that you'll be writing and executing Python code.
 
-a|*Tenders Electronic Daily (TED)*
-a|an online portal that publishes public procurement notice see: https://ted.europa.eu.
+|*Knowledge Graph* |A network of information where _nodes_ represent entities (like people, places, or things) and _edges_ represent the relationships between them, forming a _graph_ of knowledge (data as statements or facts), that can be expressed in RDF and be backed by one or more ontologies for shared understanding, reasoning and inference.
 
-a|*Test data*
-a|a carefully selected, representative sample of real notices published on TED, which, together, cover all the different XPaths that can appear in a specific Standard Form or eForm and conforms to a specific XSD version, published in a certain date range. For more detailed documentation, please check out the mapping_suite/preparing-test-data.adoc section.
+|*Mapping* |A set of rules describing how information in one format or _model_ corresponds to that in another. It results in a _translation_ of data structures (establishing relationships between data structures of different models), while keeping the meaning or _semantics_ of the data intact, even if _transformation_ of the data is required. However, _mapping_, _transforming_ and _converting_ are sometimes used interchangeably -- the differences are only in technical scope (broadest to narrowest).
 
-a|*XPath - the XML Path Language (XPath) Version 1.0.*
-a|See https://www.w3.org/TR/xpath-10/
+|*Mapping Package* |A set of RML mapping rules for XML-RDF conversion, along with related artefacts. Interchangeable with _mapping suite_.
+
+|*Mapping Suite Package* |is a collection of files, organised in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some test data (see below), the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref::mapping:mapping-suite-structure.adoc[Mapping Suite Structure].
+
+|*MS Excel* |Refers to Microsoft Excel, which is a widely used spreadsheet program developed by Microsoft used as a versatile tool for #handling and analysing# data obtained from TED-ODS.
+
+|*Notice*, |short for *public procurement notice*, refers to a procurement notice published on TED (see below). To explore some of these notices please visit: https://ted.europa.eu/TED/
+
+|*Ontology* |A formalism for describing a domain of knowledge. It defines the concepts, their properties, and the relationships between them, not unlike a blueprint that specifies what things exist in a specific area and how they are connected. Ontologies can be expressed in the RDF or OWL language and be used to lend well-defined meaning, or _semantics_, to data in and reason about (infer facts from) _knowledge graphs_.
+
+|*OWL* Web Ontology Language |- A declarative computer data modeling language specifically designed for creating and expressing ontologies, built on top of the RDF-Schema knowledge representation standard. It provides a richer _vocabulary_ and more powerful logical constructs for defining complex relationships and constraints, enabling logical _reasoning and inference_ of instance data (deriving new facts from existing ones).
+
+|*Python* |A widely used programming language that can be employed to #retrieve data and perform operations# on the RDF data provided by TED-ODS.
+
+|*R language* |Refers to a popular programming language and environment specifically relevant for statistical computing, #data analysis#, and graphical representation that is used to retrieve and perform operations on the RDF data provided by TED-ODS.
+
+|*RDF* Resource Description Framework - |A standard _graph_ data model for machine-readable knowledge representation, prescribing a declarative computer data markup language (with different notations or _serializations_ like `RDF/XML` and `Turtle`) for describing things and their relationships in simple three-element `<subject, predicate, object>` tuples, that can be used to establish a set of statements or facts, i.e. a _knowledge graph_.
+
+|*RDF Mapping Language (RML)* |is a generic mapping language defined to express customised mapping rules from heterogeneous data structures and serializations to the RDF data model. RML is defined as a superset of the W3C-standardised mapping language [R2RML] and follows exactly the same syntax as https://www.w3.org/TR/r2rml/[R2RML]; therefore, RML mappings are themselves RDF graphs. For more information on RML, please see https://rml.io/specs/rml/.
+
+|*SPARQL* |A declarative computer database query language specifically designed for RDF databases or _triplestores_, allowing one to ask questions about the information stored in RDF graphs, analogue to what SQL is to traditional relational database management systems (RDBMS).
+
+|*SPARQL Query* |Represents query language used to retrieve and manipulate data stored in RDF format.
+
+|*Standard Forms* |The predecessor to eForms which is used to publish public procurement notices on the TED website according to Regulation (EU) 2015/1986.   The different forms  conform to a specific version the TED XML Schema.
+
+|*Technical Mapping*, often abbreviated as *TM*, |is set of RML rules that can be used to transform notice XML, into its which are split in multiple reusable modules that can be combined to represent a full RML
+
+|*TED-SWS* |A pipeline system that continuously converts public procurement notices (in XML format) on the TED website into RDF format and publishes them into CELLAR
+
+|*Tenders Electronic Daily (TED)*, |is an online portal that publishes hundreds of thousands of public procurement notices per year.  A cornerstone of European public procurement, TED helps economic operators find business opportunities from around the EU. For more information see: https://ted.europa.eu.
+
+|*TED Standard Form* or *TED schema forms* |refers to the "TED Standard forms for public procurement" described here: https://simap.ted.europa.eu/en_GB/web/simap/standard-forms-for-public-procurement. These forms are numbered F01-F08, F12-F25 and T01-T02, and must conform to a specific version the TED XML Schema (see below).
+
+|*Test data* - |a carefully selected, representative sample of real notices published on TED, which, together, cover all the different XPaths that can appear in the entire set of Public Procurement Data (PPD) of a certain type (i.e. created based on a specific Form, specific XSD version), and published in a certain date range. For more detailed documentation, please check out the xref:mapping:preparing-test-data.adoc[] section
+
+|*Transformation* |The process of not just translating data from one structure to another, but also manipulating that data to fit the new structure or purpose, such as in the case of mapping between orthogonal data models (for example, conforming to an ontology). However, _mapping_, _transforming_ and _converting_ are sometimes used interchangeably -- the differences are only in technical scope (broadest to narrowest).
+
+|*TED XML schema* |refers to the XML schema (XSD) specified for validating the notices that are published according to the Regulation (EU) 2015/1986. For a full documentation of the various XSD schemas, and their versions, please check out: https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas
+
+|*XPath - |the XML Path Language (XPath) Version 1.0.*  See https://www.w3.org/TR/xpath-10/
 |===
 
-include::partial$feedback.adoc[]
+
+include:ROOT:partial$feedback.adoc[]

@@ -1,5 +1,5 @@
 :doctitle: Resources for Code List Mappings
-:doccode: sws-main-prod-011
+:doccode: ODS-MAP-03
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023

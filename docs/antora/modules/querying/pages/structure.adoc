@@ -1,4 +1,8 @@
-= Query Structure
+:doctitle: Query Structure
+:doccode: ODS-QUER-09
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
 
 A SPARQL query has a specific structure that is set out in sections:
 

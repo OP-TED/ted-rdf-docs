@@ -1,5 +1,5 @@
 :doctitle: TED schemas archive
-:doccode: bdl-main-prod-007
+:doccode: ODS-REUS-04
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023

@@ -1,4 +1,10 @@
-= Recommended Prior knowledge
+= 
+:doctitle: Recommended Prior knowledge
+:doccode: ODS-MAPP-08
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
 
 It is assumed that the reader has a working knowledge of the following:
 

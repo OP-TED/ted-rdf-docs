@@ -1,5 +1,5 @@
 :doctitle: Start querying procurement data using SPARQL
-:doccode: ods-main-prod-102
+:doccode: ODS-QUER-08
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024

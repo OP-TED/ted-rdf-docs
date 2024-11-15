@@ -1,5 +1,5 @@
 :doctitle: TED Standard Form Mappings
-:doccode: sws-main-prod-010
+:doccode: ODS-MAPP-02
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
