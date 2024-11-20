@@ -12,9 +12,9 @@ For a short introduction, go to the https://ted.europa.eu/en/[TED website] and e
 
 Examining data in a notice will give you an idea of the kind, and format of, the data contained in the Cellar triple store. The data returned on the TED website is per notice, and covers currently active notices in EU public procurement tenders. It does not contain historical data, but it will give you an idea about the fields available to query. This is XML data before its conversion into RDF.
 
-== Looking at notice data on the TED.europa.eu website: +
+//== Looking at notice data on the TED.europa.eu website: +
 
-video::D3kjF7yhWnc[youtube, width=720, height=540]
+//video::D3kjF7yhWnc[youtube, width=720, height=540]
 
 ////
 

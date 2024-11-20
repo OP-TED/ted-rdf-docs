@@ -10,7 +10,7 @@ There are two parts to querying the data using Excel.
 
 The first part is described on the page: xref:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint].
 
-video::P9IgUoJ3L60[youtube, width=720, height=540]
+//video::P9IgUoJ3L60[youtube, width=720, height=540]
 
 NOTE: When submitting your query, be sure that you choose the first results format option in the dropdown list, *HTML*.
 
@@ -30,6 +30,6 @@ Once the EndPoint has returned the results of the query:
 
 If you save this query in Excel, the data will be refreshed the net time you open the file. You can also refresh the data anytime by clicking on "Refresh" on the *Data* menu.
 
-video::G_7cCGQaICY[youtube, width=720, height=540]
+//video::G_7cCGQaICY[youtube, width=720, height=540]
 
 include::ROOT:partial$feedback.adoc[]
