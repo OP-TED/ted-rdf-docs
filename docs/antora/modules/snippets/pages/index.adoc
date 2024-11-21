@@ -1,4 +1,8 @@
-= Commonly used public procurement SPARQL Snippets
+:doctitle: Commonly used public procurement SPARQL Snippets
+:doccode: ods-main-prod-202
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2024
 
 == Introduction
 
@@ -29,19 +33,9 @@ VALUES ?NoticePublicationDate {
 }
 --
 
-////
 === Limit the results to a date range
 
-VALUES ?NoticePublicationDate {
-     >= "2023-09-01" && < "2024-01-01" 
-  }
-
-or
-
 FILTER (?NoticePublicationDate < "2023-09-01"^^xsd:dateTime && ?NoticePublicationDate > "2024-01-01"^^xsd:dateTime)
-
-For Cristian to advise which would work
-////
 
 === *?LotURI* and *?NoticePublicationDate* derived from _?Notice_:
 
@@ -78,7 +72,8 @@ For Cristian to advise which would work
 --
 
 === *?WinnerCountryCode* derived from _?Winner_: 
-(in this case, if a country code is available, therefore optional)
+
+NOTE: Not all records have a country code so if this was mandatory, the records without a code would not be returned. Therefore this is optional.
 
 [source]
 --     
@@ -107,7 +102,6 @@ OPTIONAL {
 ?Organization epo:hasLegalName ?LegalName .
 --
 
-
 === *?BusinessSize* derived from _?Notice_
 
 [source]
@@ -115,10 +109,10 @@ OPTIONAL {
 ?Notice epo:announcesRole ?Buyer .
 ?Buyer epo:playedBy ?Organization .
 ?Organization epo:hasBusinessSize ?BusinessSize .
-?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
+
 --
 
-=== Contract Value and currency *(?AwardedValue* and *?LotAwardedValueCurrencyURI*) derived from _?Notice_
+=== Contract Value and currency (*?AwardedValue* and *?LotAwardedValueCurrencyURI*) derived from _?Notice_
 [source]
 -- 
 ?Notice epo:refersToLot ?Lot .
@@ -142,7 +136,7 @@ Note: the code above can be substituted for any other CPV code that contains sub
 
 ==== Subtypes of the *?MainClassification CPV code*
 
-(This adds the subtype of wood for each record: soft wood, hard wood, etc.)
+(This adds the subtype of wood for each record: logs, soft wood, hard wood, etc.)
 
 [source]
 --
@@ -154,3 +148,4 @@ FILTER (lang(?childMainClassificationLabel) = "en")  }
 --
 
 NOTE: You can search through the CPV codes on the https://ted.europa.eu/en/advanced-search[ted.europa.eu website] using the Advanced Search and drilling down in the CPV field.
+
