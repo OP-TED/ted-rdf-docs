@@ -27,7 +27,6 @@
 
 
 * [.separated]#**TED XML Schema Data**#
-
 * Download TED XML Schema Data
 ** xref:reuse:download-xml.adoc[XML Downloads]
 ** xref:reuse:download-direct.adoc[Direct downloads via links]
@@ -48,7 +47,6 @@
 ** xref:mapping:toolchain.adoc[Toolchain]
 ** xref:mapping:reusing.adoc[Reusing mappings]
 ** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
-** xref:mapping:glossary.adoc[Glossary of terms]
 ** xref:mapping:prior.adoc[Recommended Prior Knowledge]
 
 * Mapping eForm XML data to RDF
@@ -57,10 +55,8 @@
 ** xref:mapping_eforms:package_structure.adoc[Mapping Suite Structure]
 ** xref:mapping_eforms:usage.adoc[Usage Instructions]
 
-//* [.separated]#**Information and Resources**#
 * [.separated]#**Resources**#
-
 * xref:data_availability.adoc[Current data availability]
 * xref:ROOT:glossary.adoc[Glossary]
-* https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
-//** xref:mapping:versioning.adoc[Versioning]
+//* https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
+

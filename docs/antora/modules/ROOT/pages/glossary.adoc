@@ -4,7 +4,6 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-#New Table#
 
 [cols="1,3"]
 |===
@@ -38,17 +37,17 @@
 
 |*Mapping Suite Package* |is a collection of files, organised in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some test data (see below), the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref::mapping:mapping-suite-structure.adoc[Mapping Suite Structure].
 
-|*MS Excel* |Refers to Microsoft Excel, which is a widely used spreadsheet program developed by Microsoft used as a versatile tool for #handling and analysing# data obtained from TED-ODS.
+|*MS Excel* |Refers to Microsoft Excel, which is a widely used spreadsheet program developed by Microsoft used as a versatile tool for handling and analysing data obtained from TED-ODS.
 
 |*Notice*, |short for *public procurement notice*, refers to a procurement notice published on TED (see below). To explore some of these notices please visit: https://ted.europa.eu/TED/
 
 |*Ontology* |A formalism for describing a domain of knowledge. It defines the concepts, their properties, and the relationships between them, not unlike a blueprint that specifies what things exist in a specific area and how they are connected. Ontologies can be expressed in the RDF or OWL language and be used to lend well-defined meaning, or _semantics_, to data in and reason about (infer facts from) _knowledge graphs_.
 
-|*OWL* Web Ontology Language |- A declarative computer data modeling language specifically designed for creating and expressing ontologies, built on top of the RDF-Schema knowledge representation standard. It provides a richer _vocabulary_ and more powerful logical constructs for defining complex relationships and constraints, enabling logical _reasoning and inference_ of instance data (deriving new facts from existing ones).
+|*OWL* Web Ontology Language |- A declarative computer data modelling language specifically designed for creating and expressing ontologies, built on top of the RDF-Schema knowledge representation standard. It provides a richer _vocabulary_ and more powerful logical constructs for defining complex relationships and constraints, enabling logical _reasoning and inference_ of instance data (deriving new facts from existing ones).
 
-|*Python* |A widely used programming language that can be employed to #retrieve data and perform operations# on the RDF data provided by TED-ODS.
+|*Python* |A widely used programming language that can be employed to retrieve data and perform operations on the RDF data provided by TED-ODS.
 
-|*R language* |Refers to a popular programming language and environment specifically relevant for statistical computing, #data analysis#, and graphical representation that is used to retrieve and perform operations on the RDF data provided by TED-ODS.
+|*R language* |Refers to a popular programming language and environment specifically relevant for statistical computing, data analysis, and graphical representation that is used to retrieve and perform operations on the RDF data provided by TED-ODS.
 
 |*RDF* Resource Description Framework - |A standard _graph_ data model for machine-readable knowledge representation, prescribing a declarative computer data markup language (with different notations or _serializations_ like `RDF/XML` and `Turtle`) for describing things and their relationships in simple three-element `<subject, predicate, object>` tuples, that can be used to establish a set of statements or facts, i.e. a _knowledge graph_.
 
@@ -74,8 +73,7 @@
 
 |*TED XML schema* |refers to the XML schema (XSD) specified for validating the notices that are published according to the Regulation (EU) 2015/1986. For a full documentation of the various XSD schemas, and their versions, please check out: https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas
 
-|*XPath - |the XML Path Language (XPath) Version 1.0.*  See https://www.w3.org/TR/xpath-10/
+|*XPath - |the XML Path Language (XPath) Version 1.0.* See https://www.w3.org/TR/xpath-10/
 |===
-
 
 include:ROOT:partial$feedback.adoc[]
