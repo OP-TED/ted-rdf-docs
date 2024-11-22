@@ -1,9 +1,9 @@
 
 * xref:ODS::index.adoc[Home]
 
-* [.separated]#**TED Linked Open Data**#
+* [.separated]#**TED Open Data**#
 
-* Querying TED Linked Open data
+* Querying TED Open data
 ** xref:querying:index.adoc[Home]
 ** xref:querying:starting.adoc[Getting started]
 ** xref:querying:online_training.adoc[Online training resources]
@@ -12,7 +12,7 @@
 ** xref:querying:notice_data.adoc[Notice data]
 ** xref:querying:epo.adoc[eProcurement Ontology resources]
 
-* Connecting to TED Linked Open Data
+* Connecting to TED Open Data
 ** xref:connecting:index.adoc[Home]
 ** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
