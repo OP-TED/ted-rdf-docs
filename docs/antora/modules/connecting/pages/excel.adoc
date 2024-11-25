@@ -17,7 +17,9 @@ NOTE: When submitting your query, be sure that you choose the first results form
 
 == Part 2 of this query method
 
-. Start by running the query in the SPARQL EndPoint
+. Start by running the query in the SPARQL EndPoint Copy the query below by clicking on the icon on the top right of the code block.
+
+[source,SPARQL]
 
 image:../images/1.excel_endpoint.png[]
 
@@ -58,7 +60,7 @@ image:../images/8.excel_remove_column.png[]
 
 . Once the data is loaded into a new spreadsheet, select the publicationNumber cell
 
-.	Click Insert, select Pivot Table, choose table 0 as The Table/Range and select New worksheet. This will open a new worksheet with an empty pivot table.
+. Click Insert, select Pivot Table, choose table 0 as The Table/Range and select New worksheet. This will open a new worksheet with an empty pivot table.
 
 #add image#
 
@@ -68,11 +70,12 @@ Now you can manipulate the pivot table to display, in this example,the number of
 . Choose the data for the pivot table: Select country and procedureType (country on top of procedureType) as Rows and publicationNumber for Values (it will be count of publicationNumbers). This will display the data in the pivot table.
 
 . Create a bar chart from the data: Select Row Labels. then click Insert, 2-D columns, and choose the Clustered Columns chart type - this will insert a new chart on the same page. You can drill down by selecting a specific country and showing the number of specific type of procedures for that country. If you switch the order of rows (procedureType on top of the country) then you can drill down by procedureType.
+
 . Filter the country by e.g., Luxembourg (Lux)
 
 image:../images/9.excel_pivot.png[]
 
-If you save this query in Excel, the data will be refreshed the next time you open the file. You can also refresh the data anytime by clicking on "Refresh" on the *Data* menu.
+TIP: If you save this query in Excel, the data will be refreshed the next time you open the file. You can also refresh the data anytime by clicking on "Refresh" on the *Data* menu.
 
 //video::G_7cCGQaICY[youtube, width=720, height=540]
 

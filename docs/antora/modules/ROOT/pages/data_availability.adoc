@@ -18,7 +18,7 @@ The processing of these eForm notices is against the eProcurement Ontology v4.
 
 === XML Notices
 
-A limited number of XML notices are available in Cellar. These were produced during the initial proof of concept.
+A limited number of XML notices are available in Cellar. These were produced during the initial SWS Pipeline proof of concept.
 
 * Contract Award Notices (CANs) from September 2023 to January 2024
 
