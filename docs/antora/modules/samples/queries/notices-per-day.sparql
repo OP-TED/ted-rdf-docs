@@ -2,27 +2,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT ?publicationNumber ?procedureType ?noticeType ?formType {
-
-    FILTER ( ?publicationDate = "2024-11-06"^^xsd:date)
-
+SELECT ?publicationNumber ?procedureType ?noticeType ?formType
+WHERE {
+  FILTER (?publicationDate = "2024-11-06"^^xsd:date)
+  GRAPH ?g {
     ?notice a epo:Notice ;
-        epo:hasPublicationDate ?publicationDate ;
-        epo:hasNoticePublicationNumber ?publicationNumber ;
-        epo:hasNoticeType ?noticeTypeUri ;
-        epo:hasFormType ?formTypeUri ;
-        epo:refersToProcedure [
-            a epo:Procedure ;
-            epo:hasProcedureType ?procedureTypeUri ;
-        ] .
-
-    ?noticeTypeUri skos:prefLabel ?noticeType .
-    FILTER(lang(?noticeType) = "en")
-
-    ?formTypeUri skos:prefLabel ?formType .
-    FILTER(lang(?formType) = "en")
-
-    ?procedureTypeUri skos:prefLabel ?procedureType .
-    FILTER(lang(?procedureType) = "en")
-
+            epo:hasPublicationDate ?publicationDate ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasNoticeType ?noticeTypeUri ;
+            epo:hasFormType ?formTypeUri ;
+            epo:refersToProcedure [
+         a epo:Procedure ;
+         epo:hasProcedureType ?procedureTypeUri
+       ] .
+  }
+  ?noticeTypeUri a skos:Concept ;
+                 skos:prefLabel ?noticeType .
+  FILTER (lang(?noticeType) = "en")
+  ?formTypeUri a skos:Concept ;
+               skos:prefLabel ?formType .
+  FILTER (lang(?formType) = "en")
+  ?procedureTypeUri a skos:Concept ;
+                    skos:prefLabel ?procedureType .
+  FILTER (lang(?procedureType) = "en")
 }
