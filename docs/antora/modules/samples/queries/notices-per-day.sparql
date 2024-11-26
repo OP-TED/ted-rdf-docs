@@ -12,16 +12,22 @@ WHERE {
             epo:hasNoticeType ?noticeTypeUri ;
             epo:hasFormType ?formTypeUri ;
             epo:refersToProcedure [
-         a epo:Procedure ;
-         epo:hasProcedureType ?procedureTypeUri
-       ] .
+                 a epo:Procedure ;
+                 epo:hasProcedureType ?procedureTypeUri
+           ] .
   }
+
+  # Retrieve the label in english for noticeTypeUri
   ?noticeTypeUri a skos:Concept ;
                  skos:prefLabel ?noticeType .
   FILTER (lang(?noticeType) = "en")
+
+  # Retrieve the label in english for formTypeUri
   ?formTypeUri a skos:Concept ;
                skos:prefLabel ?formType .
   FILTER (lang(?formType) = "en")
+
+  # Retrieve the label in english for procedureTypeUri
   ?procedureTypeUri a skos:Concept ;
                     skos:prefLabel ?procedureType .
   FILTER (lang(?procedureType) = "en")
