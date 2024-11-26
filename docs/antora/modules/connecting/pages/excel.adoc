@@ -17,18 +17,101 @@ NOTE: When submitting your query, be sure that you choose the first results form
 
 == Part 2 of this query method
 
-Once the EndPoint has returned the results of the query:
+. Start by running the query in the SPARQL EndPoint. Copy the query below by clicking on the icon on the top right of the code block.
 
-. Copy the url of the results page to the clipboard
-. Open a new spreadsheet in Microsoft Excel
-. Go to the *Data* tab and choose "from Web" on the Data menu
-. Paste the copied query results into the window that pops up and click "OK". A new window will appear requiring you to choose the sheet you wish to look at. The sheet you want is the generated one, "Table x" (x will be a number: 0, 1, etc.The table number might be different in your application)
-. Choose "Table x" and click on either "Load", or "Transform Data". 
-* "Load" will copy all columns as is into the Excel sheet. 
-* "Transform Data" will open a Power Query window that will allow you to delete the columns you do not wish to keep and to do some manipulation of the data before it is transferred to the Excel sheet. Click "Close and Load" when you are finished.
-. This will save your settings and return you to the new Excel sheet. Here you can rename the table and perform further data manipulation, create charts, etc.
+[source,SPARQL]
+----
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-If you save this query in Excel, the data will be refreshed the net time you open the file. You can also refresh the data anytime by clicking on "Refresh" on the *Data* menu.
+SELECT DISTINCT ?publicationNumber ?legalName ?procedureType ?country ?procedureTypeUri
+WHERE {
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+
+  GRAPH ?g {
+    ?notice 
+      		epo:hasPublicationDate ?publicationDate ;
+      		epo:refersToProcedure [ 
+        		epo:hasProcedureType ?procedureTypeUri ;
+          		a epo:Procedure
+    		];            
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/competition> ;
+            epo:announcesRole [ 
+              epo:playedBy [
+               epo:hasLegalName ?legalName ;
+               cccev:registeredAddress [
+                 epo:hasCountryCode ?countryUri
+               ]
+             ] 
+      ] 
+    }
+    ?procedureTypeUri a skos:Concept ;
+    	skos:prefLabel ?procedureType .
+    FILTER (lang(?procedureType) = "en")
+  
+  ?countryUri dc:identifier ?country .
+}
+----
+
+
+[start=2]
+. Once the EndPoint has returned the results of the query, copy the url of the results page to the clipboard
+
+image::2.excel_results.png[]
+
+[start=3]
+. Open a new spreadsheet in Microsoft Excel. Go to the *Data* tab and choose "from Web" on the Data menu
+
+image::3.excel_import.png[]
+
+[start=4]
+. Paste the copied query results into the window that pops up and click "OK". A new window will appear requiring you to choose the sheet you wish to look at. The sheet you want is the generated one, "Table 0". Choose "Table 0" and click on "Transform Data"
+
+image::4.excel_transform.png[]
+
+"Transform Data" will open a Power Query window that will allow you to delete the columns you do not wish to keep and to do some manipulation of the data before it is transferred to the Excel sheet. Click "Close and Load" when you are finished.
+
+
+
+[start=5]
+. Now you can perform some data manipulations in the spreadsheet like splitting columns by various parameters
+
+image::6.excel_split column copy.png[]
+
+Here we show splitting by number of characters
+
+image::7.excel_split_25_characters.png[]
+
+And removing/ deleting a column
+
+image::8.excel_remove_column.png[]
+
+[start=6]
+. From the ribbon menu, choose "Close and Load". This will save your settings and return you to the new pivot table.
+
+. Once the data is loaded into a new spreadsheet, select the publicationNumber cell
+
+. Click Insert, select Pivot Table, choose table 0 as The Table/Range and select New worksheet. This will open a new worksheet with an empty pivot table.
+
+image::5.excel_table0.png[]
+
+Now you can manipulate the pivot table to display, in this example,the number of competition notices, per procurement type, per country
+
+[start=7]
+. Choose the data for the pivot table: Select country and procedureType (country on top of procedureType) as Rows and publicationNumber for Values (it will be count of publicationNumbers). This will display the data in the pivot table.
+
+. Create a bar chart from the data: Select Row Labels. then click Insert, 2-D columns, and choose the Clustered Columns chart type - this will insert a new chart on the same page. You can drill down by selecting a specific country and showing the number of specific type of procedures for that country. If you switch the order of rows (procedureType on top of the country) then you can drill down by procedureType.
+
+. Filter the country by e.g., Luxembourg (Lux)
+
+image::9.excel_pivot.png[]
+
+TIP: If you save this query in Excel, the data will be refreshed the next time you open the file. You can also refresh the data anytime by clicking on "Refresh" on the *Data* menu.
 
 //video::G_7cCGQaICY[youtube, width=720, height=540]
 

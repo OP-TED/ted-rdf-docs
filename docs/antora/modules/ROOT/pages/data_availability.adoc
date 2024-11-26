@@ -1,17 +1,46 @@
-:doctitle: Data Currently Available
+:doctitle: Data Currently Available in Cellar
 :doccode: ODS-ROOT-03
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-== TED Linked Open Data
-Data is currently available from August 2023 to December 2023
+== Current Processing
 
-Notice Data is currently available from *Contract Award Notices* in the above time period +
+=== eForm Notices
 
-NOTE: Linked open data is being constantly added to Cellar. Refer back to this page to check if there have been updates.
+Two categories of data are being processed by the SWS pipeline currently:
 
-== TED XML Schema Notice Data
+* Daily eForm notices of form types 10 to 24, and 29, as of the 4 November 2024
+
+* The backlog of eForm notices of form types 10 to 24, and 29, from before the 4 November 2024 to the beginning of eForms (October 2023)
+
+The processing of these eForm notices is against the eProcurement Ontology v4.
+
+=== XML Notices
+
+A limited number of XML notices are available in Cellar. These were produced during the initial SWS Pipeline proof of concept.
+
+* Contract Award Notices (CANs) from September 2023 to January 2024
+
+The processing of these was against the eProcurement Ontology v3.1.
+
+== Planned processing
+
+=== eForm Notices
+
+With the https://docs.ted.europa.eu/epo-home/history.html[completion of the eProcurement Ontology], and with the mapping of the rest of the form types:
+
+* Daily eForm notices of all types as of April 2025
+
+* The backlog of all eForm notice types as of April 2025
+
+
+NOTE: Refer back to this page regularly to check if there have been updates. Use the xref:querying:epo.adoc[ePO resources] of the versions mentioned above to find the classes you wish to use in your queries.
+
+////
+== TED XML Data
+
+Limited data
 
 The format of schema XML data has changed over the years in line with changes in the legislation. "Schema" refers to the fields required by law in the notice form and therefore to the data collected by the notice.
 
@@ -25,7 +54,7 @@ The format of schema XML data has changed over the years in line with changes in
 
 * The eForms schema was implemented on the 14 November 2022 and applies to public procurement from this date. The transition period where two versions of notice data applied, schema 2.09 and eForms, was from the 14 November 2022 to the 28 June 2024.
 
-NOTE: XML Schema Data is available from 1993 to the present day.
+
 
 == Legislation affects data
 
@@ -35,5 +64,5 @@ NOTE: As these change slightly with amendments in legislation, the exact fields 
 
 For an overview of what data can be extracted from a notice in its current form, you can also use the notice search facility available on the https://ted.europa.eu/en/[TED website]. Choose "Advanced Search" (All Notices), then the type of notice you are interested in, and then look at the contents of a notice from the list returned.
 
-
+////
 include::ROOT:partial$feedback.adoc[]

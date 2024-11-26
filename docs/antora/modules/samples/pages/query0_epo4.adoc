@@ -1,0 +1,68 @@
+:doctitle: Return publication number, buyer, procedure type, and country
+:doccode: ODS-SAMP-0
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2024
+
+== The Query
+
+This query returns data on
+
+* Publication number (notice number)
+* The buyer's legal name
+* The procedure type (open/ negotiated)
+* The procedure type URI
+* The buyer's country
+
+The query enables the results to be pasted into an Excel spread sheet where they can be xref:connecting:excel.adoc[manipulated further in pivot tables]. This enables the data to be displayed in different ways:
+
+* notices per procurement type per country
+* percentage of notices per procurement type per country
+* percentage of notices per procurement type within a country
+* list of buyers per procurement type per country
+
+This query interrogates eForm data against v4 of the eProcurement Ontology.
+
+[source,SPARQL]
+----
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?publicationNumber ?legalName ?procedureType ?country ?procedureTypeUri
+WHERE {
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+
+  GRAPH ?g {
+    ?notice 
+      		epo:hasPublicationDate ?publicationDate ;
+      		epo:refersToProcedure [ 
+        		epo:hasProcedureType ?procedureTypeUri ;
+          		a epo:Procedure
+    		];            
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/competition> ;
+            epo:announcesRole [ 
+              epo:playedBy [
+               epo:hasLegalName ?legalName ;
+               cccev:registeredAddress [
+                 epo:hasCountryCode ?countryUri
+               ]
+             ] 
+      ] 
+    }
+    ?procedureTypeUri a skos:Concept ;
+    	skos:prefLabel ?procedureType .
+    FILTER (lang(?procedureType) = "en")
+  
+  ?countryUri dc:identifier ?country .
+}
+----
+
+Copy the query and run it in the https://publications.europa.eu/webapi/rdf/sparql[public procurement SPARQL End Point]
+
+
+include::ROOT:partial$feedback.adoc[]
