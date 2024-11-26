@@ -58,9 +58,6 @@ WHERE {
 }
 ----
 
-The query pasted into the SPARQL EndPoint
-
-image::1.excel_endpoint.png[]
 
 [start=2]
 . Once the EndPoint has returned the results of the query, copy the url of the results page to the clipboard
