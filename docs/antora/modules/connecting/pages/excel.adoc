@@ -49,7 +49,7 @@ image:../images/6.excel_split column copy.png[]
 
 Here we show splitting by number of characters
 
-image:../images/7.excel_split_25_carracters.png[]
+image:../images/7.excel_split_25_characters.png[]
 
 And removing/ deleting a column
 
