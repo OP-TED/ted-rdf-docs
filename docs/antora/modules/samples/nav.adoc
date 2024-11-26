@@ -26,7 +26,6 @@
 ** xref:connecting:python.adoc[Connect using Python]
 
 * [.separated]#**Sample SPARQL Queries**#
-* xref:samples:index.adoc[Sample queries]
 include::samples:query-list.adoc[]
 
 ** xref:snippets:index.adoc[Sample Snippets]
