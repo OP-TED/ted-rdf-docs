@@ -25,22 +25,22 @@ NOTE: When submitting your query, be sure that you choose the first results form
 
 ---
 
-image:../images/1.excel_endpoint.png[]
+image::1.excel_endpoint.png[]
 
 [start=2]
 . Once the EndPoint has returned the results of the query, copy the url of the results page to the clipboard
 
-image:../images/2.excel_results.png[]
+image::2.excel_results.png[]
 
 [start=3]
 . Open a new spreadsheet in Microsoft Excel. Go to the *Data* tab and choose "from Web" on the Data menu
 
-image:../images/3.excel_import.png[]
+image::3.excel_import.png[]
 
 [start=4]
 . Paste the copied query results into the window that pops up and click "OK". A new window will appear requiring you to choose the sheet you wish to look at. The sheet you want is the generated one, "Table 0". Choose "Table 0" and click on "Transform Data"
 
-image:../images/4.excel_transform.png[]
+image::4.excel_transform.png[]
 
 "Transform Data" will open a Power Query window that will allow you to delete the columns you do not wish to keep and to do some manipulation of the data before it is transferred to the Excel sheet. Click "Close and Load" when you are finished.
 
@@ -49,15 +49,15 @@ image:../images/4.excel_transform.png[]
 [start=5]
 . Now you can perform some data manipulations in the spreadsheet like splitting columns by various parameters
 
-image:../images/6.excel_split column copy.png[]
+image::6.excel_split column copy.png[]
 
 Here we show splitting by number of characters
 
-image:../images/7.excel_split_25_characters.png[]
+image::7.excel_split_25_characters.png[]
 
 And removing/ deleting a column
 
-image:../images/8.excel_remove_column.png[]
+image::8.excel_remove_column.png[]
 
 [start=6]
 . From the ribbon menu, choose "Close and Load". This will save your settings and return you to the new pivot table.
@@ -66,7 +66,7 @@ image:../images/8.excel_remove_column.png[]
 
 . Click Insert, select Pivot Table, choose table 0 as The Table/Range and select New worksheet. This will open a new worksheet with an empty pivot table.
 
-image:../images/5.excel_table0.png[]
+image::5.excel_table0.png[]
 
 Now you can manipulate the pivot table to display, in this example,the number of competition notices, per procurement type, per country
 
@@ -77,7 +77,7 @@ Now you can manipulate the pivot table to display, in this example,the number of
 
 . Filter the country by e.g., Luxembourg (Lux)
 
-image:../images/9.excel_pivot.png[]
+image::9.excel_pivot.png[]
 
 TIP: If you save this query in Excel, the data will be refreshed the next time you open the file. You can also refresh the data anytime by clicking on "Refresh" on the *Data* menu.
 

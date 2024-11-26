@@ -11,7 +11,7 @@ This query returns data on
 * Publication number (notice number)
 * The buyer's legal name
 * The procedure type (open/ negotiated)
-* The procedure typ eURI (used to extract the procedure type)
+* The procedure type URI
 * The buyer's country
 
 The query enables the results to be pasted into an Excel spread sheet where they can be xref:connecting:excel.adoc[manipulated further in pivot tables]. This enables the data to be displayed in different ways:

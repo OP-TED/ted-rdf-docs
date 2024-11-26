@@ -4,7 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-== Current Processing:
+== Current Processing
 
 === eForm Notices
 
@@ -24,7 +24,7 @@ A limited number of XML notices are available in Cellar. These were produced dur
 
 The processing of these was against the eProcurement Ontology v3.1.
 
-== Planned processing:
+== Planned processing
 
 === eForm Notices
 
