@@ -20,10 +20,43 @@ NOTE: When submitting your query, be sure that you choose the first results form
 . Start by running the query in the SPARQL EndPoint Copy the query below by clicking on the icon on the top right of the code block.
 
 [source,SPARQL]
----
+----
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
+SELECT DISTINCT ?publicationNumber ?legalName ?procedureType ?country ?procedureTypeUri
+WHERE {
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
 
----
+  GRAPH ?g {
+    ?notice 
+      		epo:hasPublicationDate ?publicationDate ;
+      		epo:refersToProcedure [ 
+        		epo:hasProcedureType ?procedureTypeUri ;
+          		a epo:Procedure
+    		];            
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/competition> ;
+            epo:announcesRole [ 
+              epo:playedBy [
+               epo:hasLegalName ?legalName ;
+               cccev:registeredAddress [
+                 epo:hasCountryCode ?countryUri
+               ]
+             ] 
+      ] 
+    }
+    ?procedureTypeUri a skos:Concept ;
+    	skos:prefLabel ?procedureType .
+    FILTER (lang(?procedureType) = "en")
+  
+  ?countryUri dc:identifier ?country .
+}
+----
 
 image::1.excel_endpoint.png[]
 
