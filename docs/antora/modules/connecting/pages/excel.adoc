@@ -20,6 +20,10 @@ NOTE: When submitting your query, be sure that you choose the first results form
 . Start by running the query in the SPARQL EndPoint Copy the query below by clicking on the icon on the top right of the code block.
 
 [source,SPARQL]
+---
+
+
+---
 
 image:../images/1.excel_endpoint.png[]
 

@@ -20,9 +20,9 @@
 
 * Example Query Library
 ** xref:samples:index.adoc[Home]
-** xref:samples:query1.adoc[Query 1: tbd]
-** xref:samples:query2.adoc[Query 2: tbd]
-** xref:samples:query3.adoc[Query 3: tbd]
+** xref:samples:query0_epo4.adoc[Query 1: notices per procurement type per country]
+// ** xref:samples:query2.adoc[Query 2: tbd]
+// ** xref:samples:query3.adoc[Query 3: tbd]
 ** xref:snippets:index.adoc[Sample Snippets]
 
 
