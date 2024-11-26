@@ -1,5 +1,5 @@
 :doctitle: Downloading notices using the Search API
-:doccode: bdl-main-prod-005
+:doccode: ODS-REUS-06
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023

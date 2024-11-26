@@ -1,5 +1,5 @@
 :doctitle: Downloading TED Notices in XML Format
-:doccode: bdl-main-prod-002
+:doccode: ODS-REUS-03
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023

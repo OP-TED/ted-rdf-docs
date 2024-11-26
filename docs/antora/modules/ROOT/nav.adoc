@@ -24,23 +24,9 @@
 ** xref:samples:advanced-1.adoc[Query 2: tbd]
 ** xref:samples:query3.adoc[Query 3: tbd]
 ** xref:snippets:index.adoc[Sample Snippets]
-//** xref:samples:query4.adoc[Query 4: Notices published on a date]
-//** xref:samples:query5.adoc[Query 5: Contracts won by SMEs / date & country]
-//** xref:samples:query6.adoc[Query 6: Contractors using subcontractors/ date]
-//** xref:samples:query7.adoc[Query 7: Contract values on a date]
-//** xref:samples:query8.adoc[Query 8: Contract winners on a Date]
-//** xref:querying:snippets.adoc[Reusable query snippets]
-//** xref:querying:scenarios.adoc[Scenarios: question to query]
-//** xref:samples:index.adoc[Browse the sample queries]
-//* [.separated]#**Querying TED Open Data**#
-//* [.separated]#**Connecting to TED Open Data**#
-//* [.separated]#**Sample SPARQL Queries**#
 
-
-//* [.separated]#**Downloading TED XML Notice Data**#
 
 * [.separated]#**TED XML Schema Data**#
-
 * Download TED XML Schema Data
 ** xref:reuse:download-xml.adoc[XML Downloads]
 ** xref:reuse:download-direct.adoc[Direct downloads via links]
@@ -61,7 +47,6 @@
 ** xref:mapping:toolchain.adoc[Toolchain]
 ** xref:mapping:reusing.adoc[Reusing mappings]
 ** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
-** xref:mapping:glossary.adoc[Glossary of terms]
 ** xref:mapping:prior.adoc[Recommended Prior Knowledge]
 
 * Mapping eForm XML data to RDF
@@ -70,9 +55,8 @@
 ** xref:mapping_eforms:package_structure.adoc[Mapping Suite Structure]
 ** xref:mapping_eforms:usage.adoc[Usage Instructions]
 
-//* [.separated]#**Information and Resources**#
 * [.separated]#**Resources**#
-
 * xref:data_availability.adoc[Current data availability]
-* https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
-//** xref:mapping:versioning.adoc[Versioning]
+* xref:ROOT:glossary.adoc[Glossary]
+//* https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
+

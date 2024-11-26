@@ -1,5 +1,5 @@
 :doctitle: Reusing TED Data
-:doccode: reu-main-prod-001
+:doccode: ODS-REUS-01
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023

@@ -1,4 +1,8 @@
-== Mapping Suite Structure
+:doctitle: eForms Mapping Suite Structure
+:doccode: ODS-EFOR-03
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2024
 
 The term "suite" or "package" can be used interchangeably.
 

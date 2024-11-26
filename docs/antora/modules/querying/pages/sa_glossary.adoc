@@ -1,5 +1,5 @@
 :doctitle: Glossary: Reusing Open Data Service
-:doccode: sws-main-prod-024
+:doccode: ODS-QUER-06
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023

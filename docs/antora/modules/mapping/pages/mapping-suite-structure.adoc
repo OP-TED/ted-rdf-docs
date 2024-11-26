@@ -1,5 +1,5 @@
 :doctitle: Mapping suite package structure
-:doccode: sws-main-prod-012
+:doccode: ODS-MAP-06
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
