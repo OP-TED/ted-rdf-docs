@@ -1,4 +1,4 @@
-:doctitle: Find the highest value contract award published on a particular date
+:doctitle: Return publication number, buyer,procedure type, and country
 :doccode: ODS-SAMP-0
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
