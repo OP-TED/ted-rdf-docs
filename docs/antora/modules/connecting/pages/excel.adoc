@@ -17,7 +17,7 @@ NOTE: When submitting your query, be sure that you choose the first results form
 
 == Part 2 of this query method
 
-. Start by running the query in the SPARQL EndPoint Copy the query below by clicking on the icon on the top right of the code block.
+. Start by running the query in the SPARQL EndPoint. Copy the query below by clicking on the icon on the top right of the code block.
 
 [source,SPARQL]
 ----
@@ -57,6 +57,8 @@ WHERE {
   ?countryUri dc:identifier ?country .
 }
 ----
+
+The query pasted into the SPARQL EndPoint
 
 image::1.excel_endpoint.png[]
 
