@@ -8,7 +8,7 @@
 
 === What data is available (from which notices and over what time period)?
 
-include::../../samples/data_availability.adoc[]
+include::ROOT:data_availability.adoc[]
 
 === Lots
 
@@ -21,6 +21,7 @@ To clarify, you might want to add a column for lot number in your query.
 Apart from the appearance of duplication caused by lots, there are other reasons why there might be a duplication in the results. Notices could be published more than one language, so unless you filter for language in the query, the same notice might be listed several times in different languages.
 
 ////
+
 === Availability of ePO classes for querying 
 (#check if correct/ relevant#)
 

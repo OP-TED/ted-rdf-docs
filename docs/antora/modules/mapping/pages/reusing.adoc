@@ -4,11 +4,11 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-=== Reusing Mapping suite packages
+= Reusing Mapping suite packages
 
 The structure of the package evolves during through the different phases of the mapping development process. Three phases of the mapping development are described in this section.
 
-==== Initial Phase
+== Initial Phase
 *Audience*: Semantic Engineers
 In the first, initial, phase, when the Semantic Engineers start working on a new mapping suite, they should set up a package folder structure similar to the one described below.
 
@@ -48,7 +48,7 @@ MPORTANT!!! In these rules the source XML is always referring to data/source.xml
 technical_mappings.yarrrml.yaml (optional) manually created, and used in earlier days of the mapping development, but currently not used
 ----
 
-=== Mapping suite package description for the Software Engineers
+== Mapping suite package description for the Software Engineers
 
 A package provided by the semantic engineers (SE) is enriched with additional artefacts that are generated automatically using the package expanding tools which take as input the artefacts provided by the SE. Here are some examples of these additional artefacts that are being generated:
 
@@ -95,7 +95,7 @@ After the package processing/expansion, the structure of the example mapping pac
     /validation/sparql/cm_assertions - SPARQL queries automatically generated from the conceptual mapping
 ----
 
-=== Mapping suite package description for the Semantic Engineers after the expansion
+== Mapping suite package description for the Semantic Engineers after the expansion
 
 After the “execution” of a mapping, the mapping package will be further enriched, and will contain additional files, as a result of running the mapping suite on the included test data.
 
