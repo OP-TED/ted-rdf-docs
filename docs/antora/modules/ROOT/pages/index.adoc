@@ -5,50 +5,47 @@
 :docdate: September 2023
 
 
-The Publications Office provides notice data for querying and consumption in two formats: TED Open Data in RDF format, and TED Notice Data in various formats.
+The Publications Office collects a wealth of public procurement data through the notices published in the Supplement of the Official Journal of the EU (OJS). This data is made available to the public as Linked Open Data (LOD) as well as other formats.
 
-RDF data can be queried via the https://publications.europa.eu/webapi/rdf/sparql[eProcurement SPARQL EndPoint] using SPARQL query language. Notice data can be downloaded from the https://ted.europa.eu/en/[TED Website]. 
+What is Linked Open Data?::
+Linked Open Data is a method of publishing structured data which places an emphasis on data interoperability, and semantic consistency. As a technology, it is based on the Resource Description Framework (RDF), which is a standard model for data interchange on the Web. 
++
+Linked Open Data, commonly referred to as "RDF data", can be queried using the SPARQL query language, and is designed to be easily linked to other data sources on the Web.
 
+What other formats are available?::
+TED notice data are also available in their original XML format, as well as in CSV format. These formats are available for download from the TED Website, and can be searched using the TED Search API.
 
-
+RDF data can be queried via the https://docs.ted.europa.eu/ted-open-data[TED Open Data Service] using SPARQL query language. Notice data can be downloaded from the https://ted.europa.eu/en/[TED Website]. 
 
 [.tile-container]
 --
 
 [.tile]
-.TED Open Data (RDF)
+.Linked Open Data
 
 ****
 Query and connect to TED Open Data using SPARQL. Explore the example query library and find resources on how to create SPARQL queries. 
 
-xref:ODS::data_index.adoc[Explore TED Open Data]
+xref:ODS::data_index.adoc[TED Open Data Service]
 ****
 
 [.tile]
-.TED Legacy Data (various formats)
+.Data Downloads in XML, CSV
 
 ****
-Learn how to access TED legacy data in various formats via download from the TED Website or search via the Search API. 
+Learn how to access TED data in various formats through direct downloads or the TED Search API.
 
-xref:reuse:index.adoc[Download Legacy Data]
+xref:reuse:index.adoc[TED XML, CSV Downloads]
 ****
 
 [.tile]
-.Create Mapping Suites (Legacy Data to RDF)
+.XML to RDF Conversion
 
 ****
-Create mappings to convert legacy data into RDF
+To convert notice XML documents to RDF we create appropriate using RML (the RDF Mapping Language). These mappings are made available for re-use. Find out how to re-use these mappings in your own projects.
 
-xref:mapping:index.adoc[Convert legacy data into RDF]
+xref:mapping_eforms:index.adoc[Convert eForms XML into RDF]
 
-****
-[.tile]
-.Create Mapping Suites (eForm Data to RDF)
-
-****
-Create mappings to convert eForm data into RDF
-
-xref:mapping_eforms:index.adoc[Convert eForm data into RDF]
-
+xref:mapping:index.adoc[Convert Standard XML (legacy) to RDF]
 ****
 --
