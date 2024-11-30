@@ -28,7 +28,7 @@ Familiarity with Spreadsheet editing tools:: Since most of the Conceptual mappin
 
 - [[gloss:mapping_package]] *Mapping package* - see xref:gloss:ms_package[*Mapping suite package*]
 
-- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organized in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some xref:gloss:test_data[test data], the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref::mapping_suite/mapping-suite-structure.adoc[Mapping Suite Structure].
+- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organized in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some xref:gloss:test_data[test data], the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref:mapping:mapping-suite-structure.adoc[Mapping Suite Structure].
 
 - [[gloss:notice]] *Notice*, short for *public procurement notice*, refers to a procurement notice published on xref:gloss:ted[TED]. To explore some of these notices please visit: https://ted.europa.eu/TED/
 
@@ -85,7 +85,7 @@ https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F25[/packag
 
 NB: the example provided here is for Standard Form F03 but can be applied in the same way for the mapping suites for the other forms covered by the mappings.
 
-a|Contains xref:mapping_suite/mapping-suite-structure.adoc[mapping suite packages] organised based on the standard forms numbers. Their name is formed based on the form number (e.g. F03, F06) prefixed with package_ for readability. When the eForms are mapped, the corresponding appropriate organisation will be chosen.
+a|Contains xref:mapping:mapping-suite-structure.adoc[mapping suite packages] organised based on the standard forms numbers. Their name is formed based on the form number (e.g. F03, F06) prefixed with package_ for readability. When the eForms are mapped, the corresponding appropriate organisation will be chosen.
 
 | /mappings continued: subfolders
 a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_2021[/package_F03/test_data/form_number_F03_2021]
