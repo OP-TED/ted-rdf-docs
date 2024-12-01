@@ -1,4 +1,4 @@
-:doctitle: TED eForm Mappings
+:doctitle: TED eForms Mappings
 :doccode: ODS-EFOR-02
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
@@ -10,7 +10,7 @@ Developing mappings for eForms still follows the https://docs.ted.europa.eu/SWS/
 
 === eForms SDK Field Definitions
 
-In contrast to SF, which had https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas-archive[XSD schemas] as the only cue for the underlying model, there is an https://github.com/OP-TED/eForms-SDK[eForms SDK] which prescribes eForm XML element https://developer.mozilla.org/en-US/docs/Web/XPath[XPaths] in terms of nodes and fields, which lends an easier framework for the management and comprehension of the http://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html[UBL]-based XML model behind elements used across the eForm notices. The notices themselves are categorized under https://docs.ted.europa.eu/eforms/latest/schema/documents-forms-and-notices.html[document, form and notice types and subtypes], such as Competition Notice, subtype 16 (EF16).
+In contrast to SF, which had https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas-archive[XSD schemas] as the only cue for the underlying model, there is an https://github.com/OP-TED/eForms-SDK[eForms SDK] which prescribes eForms XML element https://developer.mozilla.org/en-US/docs/Web/XPath[XPaths] in terms of nodes and fields, which lends an easier framework for the management and comprehension of the http://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html[UBL]-based XML model behind elements used across the eForms notices. The notices themselves are categorized under https://docs.ted.europa.eu/eforms/latest/schema/documents-forms-and-notices.html[document, form and notice types and subtypes], such as Competition Notice, subtype 16 (EF16).
 
 === Mapping Groups
 

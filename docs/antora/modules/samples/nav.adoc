@@ -53,7 +53,7 @@
 ** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
 ** xref:mapping:prior.adoc[Recommended Prior Knowledge]
 
-* Mapping eForm XML data to RDF
+* Mapping eForms XML data to RDF
 ** xref:mapping_eforms:index.adoc[Home] 
 ** xref:mapping_eforms:methodology.adoc[Methodology]
 ** xref:mapping_eforms:package_structure.adoc[Mapping Suite Structure]

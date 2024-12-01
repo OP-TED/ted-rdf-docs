@@ -9,7 +9,7 @@ Using the https://publications.europa.eu/webapi/rdf/sparql[EU Procurement SPARQL
 
 SPARQL stands for "SPARQL Protocol and RDF Query Language". SPARQL queries retrieve and manipulate data stored in RDF (Resource Description Framework) format.  It allows users to write complex queries to retrieve specific information from RDF datasets.
 
-//The data available covers Contract Award Notices published after 28/08/2023. Data on eForm Result notices are not yet available.
+//The data available covers Contract Award Notices published after 28/08/2023. Data on eForms Result notices are not yet available.
 
 A query is submitted to the SPARQL end point by replacing the text highlighted below in blue in the Query Text box below with the desired query:
 

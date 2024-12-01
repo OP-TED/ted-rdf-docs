@@ -21,7 +21,7 @@ The query enables the results to be pasted into an Excel spread sheet where they
 * percentage of notices per procurement type within a country
 * list of buyers per procurement type per country
 
-This query interrogates eForm data against v4 of the eProcurement Ontology.
+This query interrogates eForms data against v4 of the eProcurement Ontology.
 
 [source,SPARQL]
 ----
