@@ -28,7 +28,7 @@ The fields specified in the Metadata sheet are split into two section based on w
 
 *Metadata constraints:*
 
-- *eForms Subtype* - a comma separated list of eForm subtype IDs
+- *eForms Subtype* - a comma separated list of eForms subtype IDs
 - *Start date & End date* - the interval of time when an eForms notice is published. By default, they are empty
 - *eForms SDK version* - a comma separated list of eForms SDK versions. Only major and minor versions of the SDK are relevant, and not the patch numbers.
 

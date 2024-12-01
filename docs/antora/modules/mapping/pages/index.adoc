@@ -30,7 +30,7 @@ xref:mapping:index_sf.adoc[Map legacy data]
 [.tile]
 .Mapping eForms
 ****
-Mappings and Mapping Suites for converting eForm XLM data into RDF.
+Mappings and Mapping Suites for converting eForms XLM data into RDF.
 
 xref:mapping_eforms:index.adoc[Map eForms]
 ****

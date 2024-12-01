@@ -1,6 +1,6 @@
 name: ODS
 version: 1.0
-title: TED Data
+title: TED Open Data
 display_version: '1.0'
 start_page: ROOT:index.adoc
 asciidoc:

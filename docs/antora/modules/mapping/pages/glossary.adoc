@@ -8,7 +8,7 @@
 
 - [[gloss:epo]] *eProcurement Ontology (ePO)* is an ontology that defines the concepts and relations that are needed to fully describe the eProcurement domain of the EU. For more information check out the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology Documentation].
 
-- [[gloss:eForm]] *eForms* is the notification standard for public procurement procedures in the EU. For more information on this, see the https://docs.ted.europa.eu/eforms/latest/index.html[eForms SDK documentation]
+- [[gloss:eForms]] *eForms* is the notification standard for public procurement procedures in the EU. For more information on this, see the https://docs.ted.europa.eu/eforms/latest/index.html[eForms SDK documentation]
 
 - [[gloss:form]] *Form* - To enable the publishing of the EU public procurement data in the Official Journal, the European Commission has created standard forms aligned with each of the EU legal bases in place for publishing this data, namely: the *TED schema forms* set out in Regulation (EU) 2015/1986, and the *eForms* set out in Regulation (EU) 2019/1780. In this documentation the term "form", if not otherwise specified, will refer to xref:gloss:stdForm[Standard Form]
 
