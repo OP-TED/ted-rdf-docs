@@ -1,9 +1,8 @@
-:doctitle: TED Data
+:doctitle: TED Open Data
 :doccode: ODS-ROOT-01
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: September 2023
-
 
 The Publications Office collects a wealth of public procurement data through the notices published in the Supplement of the Official Journal of the EU (OJS). This data is made available to the public as Linked Open Data (LOD) as well as other formats.
 
