@@ -121,3 +121,4 @@ package.json
 *.ser
 .DS_Store
 .scannerwork/*
+antora-playbook-local.yml

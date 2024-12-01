@@ -1,4 +1,9 @@
-= How to use these mapping packages?
+
+:doctitle: Using eForms Mapping Packages
+:doccode: ODS-EFOR-04
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2024
 
 The mapping packages provided in this project are to be used within the *version 2* of th https://github.com/OP-TED/ted-rdf-conversion-pipeline[TED-SWS Conversion Pipeline]. The pipeline documentation describes how such packages will be loaded and used in the transformation steps of the pipeline.
 //TODO provide a link to the antora documentation page, when the documentation provided in the word document will be made publicly available

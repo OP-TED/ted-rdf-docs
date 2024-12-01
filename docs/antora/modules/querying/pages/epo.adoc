@@ -1,4 +1,9 @@
-= The eProcurement Ontology
+:doctitle: The eProcurement Ontology
+:doccode: ODS-QUER-03
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2024
+
 
 The eProcurement Ontology (ePO) is the controlled vocabulary which formally describes the classes (concepts), attributes, relationships, and cardinalities  used in EU public procurement. The ontology is essential so that all contributing parties and reusers of the data can be certain that the concepts and definitions they use are the same and have the same meaning.
 

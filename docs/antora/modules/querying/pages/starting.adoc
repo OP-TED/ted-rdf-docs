@@ -1,5 +1,5 @@
 :doctitle: Start querying procurement data using SPARQL
-:doccode: ods-main-prod-102
+:doccode: ODS-QUER-08
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
@@ -10,7 +10,7 @@ The EU makes public procurement data in RDF format available for querying. A pip
 
 Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries and retrieve public procurement data from Cellar.
 
-Public procurement data stored in Cellar is open to anyone who wishes to query notice data as Linked Open Data.
+Public procurement data stored in Cellar is open to anyone who wishes to query notice data as Open Data.
 
 
 == RDF data

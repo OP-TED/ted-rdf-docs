@@ -1,5 +1,5 @@
 :doctitle: Downloading notice packages using a direct link
-:doccode: bdl-main-prod-003
+:doccode: ODS-REUS-02
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023

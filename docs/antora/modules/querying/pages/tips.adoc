@@ -1,5 +1,5 @@
 :doctitle: Tips when querying eProcurement data using SPARQL
-:doccode: ods-main-prod-105
+:doccode: ODS-QUER-10
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024

@@ -1,5 +1,5 @@
 :doctitle: RDF Queries
-:doccode: sws-main-prod-020
+:doccode: ODS-QUER-02
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2024

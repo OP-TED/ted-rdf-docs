@@ -1,4 +1,8 @@
-= Glossary of mapping terms
+:doctitle: Glossary of mapping terms
+:doccode: ODS-MAP-04
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
 
 - [[gloss:cm]] *Conceptual Mapping*, often abbreviated as *CM*, is an abstract level mapping of XPaths in the input data to those ePO classes that need to be instantiated and properties are used to link the instances in the output RDF graph
 
@@ -10,13 +14,13 @@
 
 - [[gloss:mapping_package]] *Mapping package* - see xref:gloss:ms_package[*Mapping suite package*]
 
-- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organized in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some xref:gloss:test_data[test data], the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref::mapping-suite-structure.adoc[Mapping Suite Structure].
+- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organised in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some xref:gloss:test_data[test data], the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref:mapping:mapping-suite-structure.adoc[Mapping Suite Structure].
 
 - [[gloss:notice]] *Notice*, short for *public procurement notice*, refers to a procurement notice published on xref:gloss:ted[TED]. To explore some of these notices please visit: https://ted.europa.eu/TED/
 
 - [[gloss:package]] *Package* - often used as a short name for xref:gloss:ms_package[*Mapping suite package*]
 
-- [[gloss:rml]] *RDF Mapping Language (RML)* is a generic mapping language defined to express customized mapping rules from heterogeneous data structures and serializations to the RDF data model. RML is defined as a superset of the W3C-standardized mapping language [R2RML] and follows exactly the same syntax as https://www.w3.org/TR/r2rml/[R2RML]; therefore, RML mappings are themselves RDF graphs. For more information on RML, please see https://rml.io/specs/rml/.
+- [[gloss:rml]] *RDF Mapping Language (RML)* is a generic mapping language defined to express customised mapping rules from heterogeneous data structures and serializations to the RDF data model. RML is defined as a superset of the W3C-standardised mapping language [R2RML] and follows exactly the same syntax as https://www.w3.org/TR/r2rml/[R2RML]; therefore, RML mappings are themselves RDF graphs. For more information on RML, please see https://rml.io/specs/rml/.
 
 - *Standard Form* - see xref:gloss:stdForm[TED Standard Form]
 

@@ -1,6 +1,5 @@
 :doctitle: How many Public Procurement METS packages were published over a chosen date range?
-:doccode: ods-main-prod-201
-
+:doccode: ODS-SAMP-03
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
