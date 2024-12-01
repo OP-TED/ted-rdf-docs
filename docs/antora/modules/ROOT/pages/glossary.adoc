@@ -61,11 +61,11 @@
 
 |*Technical Mapping*, often abbreviated as *TM*, |is set of RML rules that can be used to transform notice XML, into its which are split in multiple reusable modules that can be combined to represent a full RML
 
-|*TED-SWS* |A pipeline system that continuously converts public procurement notices (in XML format) on the TED website into RDF format and publishes them into CELLAR
+|*TED Open Data Service* |A software pipeline that continuously retrieves new public procurement notices published the TED website as XML documents, converts them to RDF and publishes them into the RDF database of the Publications Office (Cellar).
 
 |*Tenders Electronic Daily (TED)*, |is an online portal that publishes hundreds of thousands of public procurement notices per year.  A cornerstone of European public procurement, TED helps economic operators find business opportunities from around the EU. For more information see: https://ted.europa.eu.
 
-|*TED Standard Form* or *TED schema forms* |refers to the "TED Standard forms for public procurement" described here: https://simap.ted.europa.eu/en_GB/web/simap/standard-forms-for-public-procurement. These forms are numbered F01-F08, F12-F25 and T01-T02, and must conform to a specific version the TED XML Schema (see below).
+|*TED Standard Forms* or *TED schema forms* |refers to the "TED Standard forms for public procurement" described here: https://simap.ted.europa.eu/en_GB/web/simap/standard-forms-for-public-procurement. These forms are numbered F01-F08, F12-F25 and T01-T02, and must conform to a specific version the TED XML Schema (see below).
 
 |*Test data* - |a carefully selected, representative sample of real notices published on TED, which, together, cover all the different XPaths that can appear in the entire set of Public Procurement Data (PPD) of a certain type (i.e. created based on a specific Form, specific XSD version), and published in a certain date range. For more detailed documentation, please check out the xref:mapping:preparing-test-data.adoc[] section
 

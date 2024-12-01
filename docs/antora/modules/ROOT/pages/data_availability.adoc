@@ -8,7 +8,7 @@
 
 === eForm Notices
 
-Two categories of data are being processed by the SWS pipeline currently:
+Two categories of data are being processed by the TED Open Data Service pipeline currently:
 
 * Daily eForm notices of form types 10 to 24, and 29, as of the 4 November 2024
 
@@ -18,7 +18,7 @@ The processing of these eForm notices is against the eProcurement Ontology v4.
 
 === XML Notices
 
-A limited number of XML notices are available in Cellar. These were produced during the initial SWS Pipeline proof of concept.
+A limited number of XML notices are available in Cellar. These were produced during the initial TED Open Data Service Pipeline proof of concept.
 
 * Contract Award Notices (CANs) from September 2023 to January 2024
 
