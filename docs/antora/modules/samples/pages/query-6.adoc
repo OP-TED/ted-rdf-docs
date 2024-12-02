@@ -32,6 +32,13 @@ The complete query in SPARQL is as follows:
 
 [source, sparql]
 ----
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
 SELECT DISTINCT ?publicationNumber ?legalName ?procedureType ?country
 WHERE {
 	FILTER (?publicationDate = "2024-11-04"^^xsd:date)
