@@ -7,6 +7,10 @@
 
 [source, sparql]
 ----
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+
 SELECT ?date ?journalNumber ?metsNamedGraph ?noticeNamedGraph ?accessUrl ?xmlSource
 WHERE {
 
@@ -39,6 +43,7 @@ WHERE {
             )) AS ?xmlSource)
   }
 }
+
 ----
 
 include::ROOT:partial$feedback.adoc[]

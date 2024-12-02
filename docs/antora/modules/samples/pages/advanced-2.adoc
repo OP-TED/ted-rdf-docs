@@ -7,6 +7,8 @@
 
 [source, sparql]
 ----
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+
 CONSTRUCT {
   ?s ?p ?o .
 }
