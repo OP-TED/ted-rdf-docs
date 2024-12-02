@@ -5,14 +5,9 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
-include::./preamble.adoc[]
-
 [source, sparql]
 ----
 include::../queries/mets-packages.sparql[]
 ----
-
-* Running the Query
-* Examining and refining the query results
 
 include::ROOT:partial$feedback.adoc[]
