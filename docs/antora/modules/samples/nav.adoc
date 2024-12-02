@@ -23,12 +23,7 @@
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
 * Example Query Library
-** xref:samples:index.adoc[Home]
-** xref:samples:query0_epo4.adoc[Query 1: notices per procurement type per country]
-// ** xref:samples:query2.adoc[Query 2: tbd]
-// ** xref:samples:query3.adoc[Query 3: tbd]
-** xref:snippets:index.adoc[Sample Snippets]
-
+include::samples:query-list.adoc[]
 
 * [.separated]#**TED XML Schema Data**#
 * Download TED XML Schema Data
