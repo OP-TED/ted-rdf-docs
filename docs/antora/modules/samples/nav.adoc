@@ -23,7 +23,12 @@
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
 * Example Query Library
-include::samples:query-list.adoc[]
+** xref:samples:query-1.adoc[Query 1: Notices published on a specific date]
+** xref:samples:query-2.adoc[Query 2: Contracts]
+** xref:samples:query-3.adoc[Query 3: Tender amounts]
+** xref:samples:query-4.adoc[Query 4: Winners]
+** xref:samples:query-5.adoc[Query 5: Notices published by buyers]
+** xref:samples:query-6.adoc[Query 6: Competition notices]
 
 * [.separated]#**TED XML Schema Data**#
 * Download TED XML Schema Data
