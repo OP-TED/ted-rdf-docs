@@ -1,0 +1,124 @@
+:doctitle: List competition notices, buyers and their countries on a chosen date
+:doccode: ods-main-prod-201
+
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+= List competition notices, buyers and their countries on a chosen date
+
+This query retrieves a list of publications, procedure types for competition notices published on November 4, 2024.
+
+== Output
+
+The query produces the following details for each competition notice:
+
+* Publication Number: The unique identifier for the competition notice.
+* Legal Name: The name of the buying organisation.
+* Procedure Type: The specific type of procurement procedure.
+* Country: The country of the buying organisation.
+
+== Filters Applied
+
+The query restricts results to:
+
+* Publication Date: Filters results to notices published on 2024-11-04.
+* Form Type: Restricts results to competition notices.
+* Procedure Type language: Only retrieves procedure type names in English.
+
+== Query
+
+The complete query in SPARQL is as follows:
+
+[source, sparql]
+----
+SELECT DISTINCT ?publicationNumber ?legalName ?procedureType ?country
+WHERE {
+	FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+	FILTER (?formType = <http://publications.europa.eu/resource/authority/form-type/competition>)
+
+  GRAPH ?g {
+    ?notice
+        epo:hasPublicationDate ?publicationDate ;
+        epo:refersToProcedure [
+            epo:hasProcedureType ?procedureTypeUri ;
+            a epo:Procedure
+        ] ;
+        epo:hasNoticePublicationNumber ?publicationNumber ;
+        epo:hasFormType ?formType ;
+        epo:announcesRole [
+            a epo:Buyer ;
+            epo:playedBy [
+                epo:hasLegalName ?legalName ;
+                cccev:registeredAddress [
+                    epo:hasCountryCode ?countryUri
+                ]
+            ]
+        ]
+    }
+    ?procedureTypeUri a skos:Concept ;
+        skos:prefLabel ?procedureType.
+    FILTER (lang(?procedureType) = "en")
+
+    ?countryUri dc:identifier ?country.
+}
+----
+
+- https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0D%0APREFIX+epo%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fa4g%2Fontology%23%3E%0D%0APREFIX+cccev%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fm8g%2F%3E%0D%0APREFIX+org%3A+%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Forg%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3FpublicationNumber+%3FlegalName+%3FprocedureType+%3Fcountry%0D%0AWHERE+%7B%0D%0A%09FILTER+%28%3FpublicationDate+%3D+%222024-11-04%22%5E%5Exsd%3Adate%29%0D%0A%09FILTER+%28%3FformType+%3D+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fresource%2Fauthority%2Fform-type%2Fcompetition%3E%29%0D%0A%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%3Fnotice%0D%0A++++++++epo%3AhasPublicationDate+%3FpublicationDate+%3B%0D%0A++++++++epo%3ArefersToProcedure+%5B%0D%0A++++++++++++epo%3AhasProcedureType+%3FprocedureTypeUri+%3B%0D%0A++++++++++++a+epo%3AProcedure%0D%0A++++++++%5D+%3B%0D%0A++++++++epo%3AhasNoticePublicationNumber+%3FpublicationNumber+%3B%0D%0A++++++++epo%3AhasFormType+%3FformType+%3B%0D%0A++++++++epo%3AannouncesRole+%5B%0D%0A++++++++++++a+epo%3ABuyer+%3B%0D%0A++++++++++++epo%3AplayedBy+%5B%0D%0A++++++++++++++++epo%3AhasLegalName+%3FlegalName+%3B%0D%0A++++++++++++++++cccev%3AregisteredAddress+%5B%0D%0A++++++++++++++++++++epo%3AhasCountryCode+%3FcountryUri%0D%0A++++++++++++++++%5D%0D%0A++++++++++++%5D%0D%0A++++++++%5D%0D%0A++++%7D%0D%0A++++%3FprocedureTypeUri+a+skos%3AConcept+%3B%0D%0A++++++++skos%3AprefLabel+%3FprocedureType.%0D%0A++++FILTER+%28lang%28%3FprocedureType%29+%3D+%22en%22%29%0D%0A%0D%0A++++%3FcountryUri+dc%3Aidentifier+%3Fcountry.%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+[Run the query online]
+
+== Structures Applied
+
+=== Competition Notice Identification
+
+The query specifically targets competition notices, which have a specific form type URI.
+
+[source, sparql]
+----
+FILTER (?formType = <http://publications.europa.eu/resource/authority/form-type/competition>)
+
+?notice
+    epo:hasFormType ?formType ;
+----
+
+=== Buyer Organisation Details
+
+The query extracts the legal name and country about organisations that play the epo:Buyer role.
+
+[source, sparql]
+----
+?notice
+    epo:announcesRole [
+        a epo:Buyer ;
+        epo:playedBy [
+            epo:hasLegalName ?legalName ;
+            cccev:registeredAddress [
+                epo:hasCountryCode ?countryUri
+            ]
+        ]
+    ]
+
+ ?countryUri dc:identifier ?country.
+----
+
+=== Procedure Type Labeling
+
+Procedure types are retrieved with English-language labels:
+
+[source, sparql]
+----
+?notice
+    epo:refersToProcedure [
+        epo:hasProcedureType ?procedureTypeUri ;
+        a epo:Procedure
+    ]
+
+?procedureTypeUri a skos:Concept ;
+    skos:prefLabel ?procedureType.
+FILTER (lang(?procedureType) = "en")
+----
+
+== Summary
+
+This query provides a list of buyers and their associated procurement procedure types for competition notices published on a specified date.
+
+include::ROOT:partial$feedback.adoc[]

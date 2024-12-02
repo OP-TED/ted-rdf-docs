@@ -1,0 +1,49 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?publicationNumber ?winnerLegalName  ?amount ?currency WHERE {
+
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date )
+  FILTER (?currencyUri = <http://publications.europa.eu/resource/authority/currency/EUR> )
+  FILTER (?rank = 1 )
+  FILTER (?awardStatusUri = <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w> )  # was selected
+
+  	?noticeUri a epo:Notice ;
+  		epo:hasPublicationDate ?publicationDate ;
+	  	epo:hasNoticePublicationNumber ?publicationNumber ;
+    	epo:announcesAwardDecision [
+      		a epo:AwardDecision ;
+    		epo:comprisesAwardOutcome [
+    			a epo:LotAwardOutcome ;
+      			epo:hasAwardStatus ?awardStatusUri ;
+         		epo:concernsLot ?lotUri ;
+                epo:comprisesTenderAwardOutcome [
+          			a epo:TenderAwardOutcome ;
+                	epo:hasAwardRank ?rank ;
+                    epo:concernsTender [
+                        a epo:Tender ;
+                        epo:isSubmitedBy [
+                              a epo:Tenderer ;
+                              epo:playedBy ?winnerUri
+                            ] ;
+                        epo:hasFinancialOfferValue [
+                            a epo:MonetaryValue ;
+                            epo:hasAmountValue ?amount ;
+                            epo:hasCurrency ?currencyUri ;
+
+                        ]
+                    ] ;
+      			]
+  			]
+  		] .
+
+  ?winnerUri epo:hasLegalName ?winnerLegalName .
+  ?currencyUri dc:identifier ?currency .
+
+} ORDER BY DESC(?amount)

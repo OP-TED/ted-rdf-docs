@@ -63,7 +63,7 @@ WHERE {
 }
 ```
 
-[Result](https://api.triplydb.com/s/nAZDkuaun):
+- [Run the query online](https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT+%3FIdentifier+%3Flabel+%0D%0AWHERE+%7B%0D%0A++++++++%3FIdentifier+skos%3Anotation+%2245216000%22+%3B%0D%0A++++++++++++skos%3AprefLabel+%3Flabel+.%0D%0A++++++++FILTER%28LANG%28%3Flabel%29+%3D+%27fr%27%29%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+):
 
 | Identifier                               | label                                                                                                                               |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -89,7 +89,7 @@ WHERE {
 }
 ```
 
-[Result](https://api.triplydb.com/s/Wt5GJtAZ0):
+- [Run the query online](https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT+%3FbroaderLabel+%3Flabel%0D%0AWHERE+%7B%0D%0A++++++++%3FIdentifier+skos%3Anotation+%2245216000%22+%3B%0D%0A++++++++++++skos%3AprefLabel+%3Flabel+%3B%0D%0A++++++++++++skos%3Abroader++%5B+skos%3AprefLabel+%3FbroaderLabel+%5D+.%0D%0A++++++++FILTER%28LANG%28%3Flabel%29+%3D+%27en%27%29%0D%0A++++++++FILTER%28LANG%28%3FbroaderLabel%29+%3D+%27en%27%29%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+)
 
 | broaderLabel               | label                                                                                                          |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -101,53 +101,57 @@ Now we know that the CPV concept "Construction work for buildings relating to la
 
 The Notices are described using the [eProcurement Ontology](https://docs.ted.europa.eu/EPO/latest/index.html), actively developed by the Publications Office.
 
-Notices are published daily. Let's say we want to find out how many notices were published on a specific date, say "2023-09-11":
+Notices are published daily. Let's say we want to find out how many notices were published on a specific date, say "2024-11-04":
 
 ```sparql
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 
 SELECT (COUNT(?Notice) AS ?NoticeCount) 
 WHERE {
     ?Notice a epo:Notice ;
-            epo:hasPublicationDate "20230911" .
+            epo:hasPublicationDate "2024-11-04"^^xsd:date .
 }
 ```
 
-[Result](https://api.triplydb.com/s/yvlfJCoq6):
+- [Run the query online](https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0APREFIX+epo%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fa4g%2Fontology%23%3E%0D%0A%0D%0ASELECT+%28COUNT%28%3FNotice%29+AS+%3FNoticeCount%29+%0D%0AWHERE+%7B%0D%0A++++%3FNotice+a+epo%3ANotice+%3B%0D%0A++++++++++++epo%3AhasPublicationDate+%222024-11-04%22%5E%5Exsd%3Adate+.%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+):
 
 | NoticeCount |
 | ----------- |
-| 1187        |
+| 2063        |
 
-This query reveals that 1,187 notices were published on September 11th, 2023.
+This query reveals that 2063 notices were published on November 4th, 2024.
 
 We might want to see the titles (procedure titles) associated with some of these notices. Let's limit the results to 10 titles in English:
 
 ```sparql
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 
 SELECT ?title
 WHERE {
-    ?notice epo:hasPublicationDate "20230911" ;
-            epo:refersToProcedure [ epo:hasTitle ?title ] .
-    FILTER(LANG(?title) = 'en')
-} LIMIT 10
+    ?notice epo:hasPublicationDate "2024-11-04"^^xsd:date ;
+            epo:refersToProcedure ?procedureURI .
+	?procedureURI dcterms:title ?title .
+  	FILTER(LANG(?title) = 'en')
+}  LIMIT 10
 ```
 
-[Result](https://api.triplydb.com/s/lrwVTJ_M8):
+- [Run the query online](https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+epo%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fa4g%2Fontology%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0APREFIX+dcterms%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A%0D%0ASELECT+%3Ftitle%0D%0AWHERE+%7B%0D%0A++++%3Fnotice+epo%3AhasPublicationDate+%222024-11-04%22%5E%5Exsd%3Adate+%3B%0D%0A++++++++++++epo%3ArefersToProcedure+%3FprocedureURI+.%0D%0A%09%3FprocedureURI+dcterms%3Atitle+%3Ftitle+.%0D%0A++%09FILTER%28LANG%28%3Ftitle%29+%3D+%27en%27%29%0D%0A%7D++LIMIT+10&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+)
 
-| title                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Construction All Risk (CAR) Insurance Hollandse Kust West beta                                                                                       |
-| SPD1/2023/025 - FRAMEWORK CONTRACT FOR THE PROVISION OF REDUCED ENVIRONMENT IMPACT CLEANING SERVICES TO MALTA LIBRARIES                              |
-| Disability Data Advocacy Consultancy                                                                                                                 |
-| Catering Services to The Ascension Catholic Academy Trust for St Ignatius Catholic Primary School and Our Lady of the Rosary Catholic Primary School |
-| Provision of services for fire safety, personal assistance and surveillance patrols at the site of the European Parliament in Luxembourg             |
-| Framework agreement for flowers                                                                                                                      |
-| Commercial brokerage services                                                                                                                        |
-| Multi-Disciplinary Design team to prepare integrated Urban Realm Design for Killarney Town Centre                                                    |
-| HVAC System - Upgrade Biosafety Level 3 (BSL-3) Laboratory Ecuador                                                                                   |
-| Slide printers for the Department of Pathology, Olavs Hospital Trust.                                                                                |
+| **Title**                                                                                                                                           |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| "Request for Tenders for IT support and maintenance services 2025/2026"@en                                                                          |
+| "UCDOPP5443 General Building Fabric Maintenance and Operation Services to University College Dublin"@en                                             |
+| "SPD8/2024/087 - Framework Contract For The Management Of Gypsum-Based Construction Materials For Recycling From Sites Managed And Operated By WSM Ltd"@en |
+| "2024/1394 Parallel framework agreements for external sun screening in Oslo."@en                                                                    |
+| "Helium recovery system"@en                                                                                                                         |
+| "Donegal County Council, Co designed Local Community Peace Action Plan, Cultural Connections Peace Programme, Glenties Municipal District"@en       |
+| "Competition for playground equipment"@en                                                                                                           |
+| "Service contract for winter maintenance"@en                                                                                                        |
+| "Service CFT for the provision of a proof of concept SMART on FHIR Risk Assessment Application RH"@en                                               |
+| "Framework agreement, Lifting and transport of rotary converters, transformers and other materials."@en                                             |
 
 ### Mixing datasets together
 
@@ -158,6 +162,7 @@ Scenario: Imagine we want to understand the distribution of CPVs used in notices
 The following query retrieves and groups data, revealing the distribution of CPVs for the notices published on that date:
 
 ```sparql
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>
@@ -168,7 +173,7 @@ WHERE {
     # The following segment returns notices published at a certain date, 
     # that refer to a procedure -> that have a purpose -> that is classified with a CPV 
     ?notice a epo:Notice ;
-            epo:hasPublicationDate "20230911";
+            epo:hasPublicationDate "2024-11-04"^^xsd:date;
             epo:refersToProcedure [ 
                 a epo:Procedure ;
                 epo:hasPurpose [
@@ -187,24 +192,25 @@ ORDER BY DESC(?noticeCount)
 LIMIT 10
 ```
 
-[Result](https://api.triplydb.com/s/BTqhK6CXz):
+- [Run the query online](https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0APREFIX+epo%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fa4g%2Fontology%23%3E%0D%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0APREFIX+euvoc%3A+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fontology%2Feuvoc%23%3E%0D%0APREFIX+at%3A+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fresource%2Fauthority%2Fconcept-status%2F%3E%0D%0A%0D%0ASELECT+++%28count%28%3Fnotice%29+as+%3FnoticeCount%29+%3FclassificationLabel%0D%0AWHERE+%7B%0D%0A++++%23+The+following+segment+returns+notices+published+at+a+certain+date%2C+%0D%0A++++%23+that+refer+to+a+procedure+-%3E+that+have+a+purpose+-%3E+that+is+classified+with+a+CPV+%0D%0A++++%3Fnotice+a+epo%3ANotice+%3B%0D%0A++++++++++++epo%3AhasPublicationDate+%222024-11-04%22%5E%5Exsd%3Adate%3B%0D%0A++++++++++++epo%3ArefersToProcedure+%5B+%0D%0A++++++++++++++++a+epo%3AProcedure+%3B%0D%0A++++++++++++++++epo%3AhasPurpose+%5B%0D%0A++++++++++++++++++++a+epo%3APurpose+%3B%0D%0A++++++++++++++++++++epo%3AhasMainClassification+%3FIdentifier+%3B++++++++++++++++++++%0D%0A++++++++++++++++%5D+%0D%0A++++++++++++%5D+.%0D%0A++++%23+For+such+CPV%2C+return+the+labels+in+english%0D%0A++++%3FIdentifier+a+skos%3AConcept+%3B%0D%0A%09%09%09++++skos%3AprefLabel+%3FclassificationLabel+%3B%0D%0A%09%09%09++++euvoc%3Astatus+at%3ACURRENT+.%0D%0A++++FILTER%28LANG%28%3FclassificationLabel%29+%3D+%27en%27%29%0D%0A%7D%0D%0AGROUP+BY+%3FclassificationLabel%0D%0AORDER+BY+DESC%28%3FnoticeCount%29%0D%0ALIMIT+10&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+)
 
-| noticeCount | classificationLabel                                                 |
-| ----------- | ------------------------------------------------------------------- |
-| 26          | Adult and other education services                                  |
-| 23          | Electricity                                                         |
-| 21          | Medical equipments                                                  |
-| 18          | Road transport services                                             |
-| 18          | Construction work                                                   |
-| 16          | Pharmaceutical products                                             |
-| 14          | Medical consumables                                                 |
-| 14          | IT services: consulting, software development, Internet and support |
-| 13          | Engineering services                                                |
-| 12          | Architectural, construction, engineering and inspection services    |
+
+| **noticeCount** | **classificationLabel**                                                                             |
+|------------------|----------------------------------------------------------------------------------------------------|
+| 730              | "Various office equipment and supplies"@en                                                        |
+| 730              | "Sport-related services"@en                                                                       |
+| 71               | "Construction work"@en                                                                            |
+| 71               | "Planting and maintenance services of green areas"@en                                             |
+| 68               | "Miscellaneous repair and maintenance services"@en                                                |
+| 68               | "Non-scheduled passenger transport"@en                                                            |
+| 66               | "Miscellaneous medical devices and products"@en                                                   |
+| 66               | "Detection and analysis apparatus"@en                                                             |
+| 65               | "Repair and maintenance services of motor vehicles and associated equipment"@en                   |
+| 50               | "IT services: consulting, software development, Internet and support"@en                          |
 
 Explanation of the Query:
 
-- Filtering Notices: The query retrieves notices published on "2023-09-11."
+- Filtering Notices: The query retrieves notices published on "2024-11-04."
 - Connecting Notices to Procedures: Notices refer to a procedure using the epo:refersToProcedure property.
 - Procedures and Purposes: It checks if the procedures have a purpose defined using the epo:hasPurpose property.
 - Purpose and Main Classification: It verifies if the purpose has a "main classification" linked using the epo:hasMainClassification property. This classification is most likely a CPV code.
@@ -213,7 +219,7 @@ Explanation of the Query:
 
 ## Importing your data
 
-You can use the [SPARQL endpoint](https://publications.europa.eu/webapi/rdf/sparql) to access and analyze data without the need of downloading all the notices. SPARQL queries act like precise search tools, retrieving only the specific information you require and then be imported within any application you are familiar with, such as Excel or Python. Look into the [examples] for more information.
+You can use the [SPARQL endpoint](https://data.ted.europa.eu/) to access and analyze data without the need of downloading all the notices. SPARQL queries act like precise search tools, retrieving only the specific information you require and then be imported within any application you are familiar with, such as Excel or Python. 
 
 ## Conclusion
 
