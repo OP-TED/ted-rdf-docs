@@ -30,7 +30,7 @@ video::elr7GlShSUM?si[youtube, width=720, height=540]
 
 video::u2voFo_HAbw[youtube, width=720, height=540]
 
- ////
+////
 
 //You can use these short info sessions on https://docs.ted.europa.eu/docs-staging/ODS/_attachments/notice_data/index.html[Notice Data] and https://docs.ted.europa.eu/docs-staging/ODS/_attachments/searching_notices/index.html[Searching Notices] to familiarise yourself with notices, and how to use the ted.europa.eu search options.
 

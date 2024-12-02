@@ -8,13 +8,13 @@
 
 - [[gloss:epo]] *eProcurement Ontology (ePO)* is an ontology that defines the concepts and relations that are needed to fully describe the eProcurement domain of the EU. For more information check out the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology Documentation].
 
-- [[gloss:eForm]] *eForms* is the notification standard for public procurement procedures in the EU. For more information on this, see the https://docs.ted.europa.eu/eforms/latest/index.html[eForms SDK documentation]
+- [[gloss:eForms]] *eForms* is the notification standard for public procurement procedures in the EU. For more information on this, see the https://docs.ted.europa.eu/eforms/latest/index.html[eForms SDK documentation]
 
 - [[gloss:form]] *Form* - To enable the publishing of the EU public procurement data in the Official Journal, the European Commission has created standard forms aligned with each of the EU legal bases in place for publishing this data, namely: the *TED schema forms* set out in Regulation (EU) 2015/1986, and the *eForms* set out in Regulation (EU) 2019/1780. In this documentation the term "form", if not otherwise specified, will refer to xref:gloss:stdForm[Standard Form]
 
 - [[gloss:mapping_package]] *Mapping package* - see xref:gloss:ms_package[*Mapping suite package*]
 
-- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organised in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some xref:gloss:test_data[test data], the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref::mapping:mapping-suite-structure.adoc[Mapping Suite Structure].
+- [[gloss:ms_package]] *Mapping suite package* is a collection of files, organised in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific TED Standard form) is being converted to RDF. This collection includes the conceptual mapping (CM), the technical mappings (realised as RML files), additional resources that are needed to complement the mappings, some xref:gloss:test_data[test data], the generated output from the test data, the validation queries and validation reports generated based on the mappings and on the generated RDF output. For more details please see the xref:mapping:mapping-suite-structure.adoc[Mapping Suite Structure].
 
 - [[gloss:notice]] *Notice*, short for *public procurement notice*, refers to a procurement notice published on xref:gloss:ted[TED]. To explore some of these notices please visit: https://ted.europa.eu/TED/
 
