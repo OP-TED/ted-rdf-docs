@@ -5,14 +5,83 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
-include::./preamble.adoc[]
+= Retrieving Winners for a Specific Date
+
+This query retrieves the winners of contracts published on November 4, 2024, filtered and sorted to meet specific criteria.
+
+== Output
+
+* Publication Number: The unique identifier for the notice.
+* Winner Legal Name: The name of the winning organization.
+* Amount and currency: The financial offer value and its corresponding currency.
+
+== Filters Applied
+
+* Publication Date: Filters results to contracts published on 2024-11-04.
+* Currency: Restricts the results to contracts involving transactions in Euros (EUR).
+* Winner Status: Selects only tenders with winning status.
+* Sorting: Orders the results by contract amount in descending order.
+
+== Query
+The complete query in SPARQL is as follows:
 
 [source, sparql]
 ----
 include::../queries/winners-per-day.sparql[]
 ----
 
-* Running the Query
-* Examining and refining the query results
+== Structures Applied
+
+=== Award Decisions and Outcomes
+
+The query uses a nested structure to retrieve award decisions and their outcomes:
+
+[source,sparql]
+----
+?noticeUri epo:announcesAwardDecision [
+           a epo:AwardDecision ;
+           epo:comprisesAwardOutcome [
+              a epo:LotAwardOutcome ;
+              epo:hasAwardStatus ?awardStatusUri ;
+               epo:concernsLot ?lotUri ;
+                ...
+          ]
+----
+
+=== Tenderer and Financial Information
+
+The structure links tenderers, tenders, and their financial details:
+
+[source,sparql]
+----
+epo:comprisesTenderAwardOutcome [
+  a epo:TenderAwardOutcome ;
+  epo:hasAwardRank ?rank ;
+  epo:concernsTender [
+    a epo:Tender ;
+    epo:isSubmitedBy [
+      a epo:Tenderer ;
+      epo:playedBy ?winnerUri
+    ] ;
+    epo:hasFinancialOfferValue [
+      a epo:MonetaryValue ;
+      epo:hasAmountValue ?amount ;
+      epo:hasCurrency ?currencyUri
+    ]
+  ]
+----
+
+=== Winner legal name
+
+The query retrieves the legal names of the tender:
+
+[source,sparql]
+----
+?winnerUri epo:hasLegalName ?winnerLegalName
+----
+
+== Summary
+
+This query retrieves information about the winners of contracts published on a specific date. The results include details such as publication number, winner's legal name, financial amounts, and currencies, focusing on first-ranked (winning) tenders.
 
 include::ROOT:partial$feedback.adoc[]

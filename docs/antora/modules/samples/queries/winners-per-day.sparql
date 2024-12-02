@@ -7,11 +7,12 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT ?publicationNumber ?lotUri ?rank ?winnerLegalName ?amount ?currency WHERE {
+SELECT ?publicationNumber ?winnerLegalName  ?amount ?currency WHERE {
 
   FILTER (?publicationDate = "2024-11-04"^^xsd:date )
   FILTER (?currencyUri = <http://publications.europa.eu/resource/authority/currency/EUR> )
   FILTER (?rank = 1 )
+  FILTER (?awardStatusUri = <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w> )  # was selected
 
   	?noticeUri a epo:Notice ;
   		epo:hasPublicationDate ?publicationDate ;
@@ -20,7 +21,7 @@ SELECT ?publicationNumber ?lotUri ?rank ?winnerLegalName ?amount ?currency WHERE
       		a epo:AwardDecision ;
     		epo:comprisesAwardOutcome [
     			a epo:LotAwardOutcome ;
-      			epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w> ; # was selected
+      			epo:hasAwardStatus ?awardStatusUri ;
          		epo:concernsLot ?lotUri ;
                 epo:comprisesTenderAwardOutcome [
           			a epo:TenderAwardOutcome ;
@@ -28,8 +29,8 @@ SELECT ?publicationNumber ?lotUri ?rank ?winnerLegalName ?amount ?currency WHERE
                     epo:concernsTender [
                         a epo:Tender ;
                         epo:isSubmitedBy [
-                                  a epo:Tenderer ;
-                                  epo:playedBy ?winnerUri
+                              a epo:Tenderer ;
+                              epo:playedBy ?winnerUri
                             ] ;
                         epo:hasFinancialOfferValue [
                             a epo:MonetaryValue ;
