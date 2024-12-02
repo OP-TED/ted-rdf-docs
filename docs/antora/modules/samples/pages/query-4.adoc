@@ -12,7 +12,7 @@ This query retrieves the winners of contracts published on November 4, 2024, fil
 == Output
 
 * Publication Number: The unique identifier for the notice.
-* Winner Legal Name: The name of the winning organization.
+* Winner Legal Name: The name of the winning organisation.
 * Amount and currency: The financial offer value and its corresponding currency.
 
 == Filters Applied

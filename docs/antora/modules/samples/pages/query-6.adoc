@@ -14,9 +14,9 @@ This query retrieves a list of publications, procedure types for competition not
 The query produces the following details for each competition notice:
 
 * Publication Number: The unique identifier for the competition notice.
-* Legal Name: The name of the buying organization.
+* Legal Name: The name of the buying organisation.
 * Procedure Type: The specific type of procurement procedure.
-* Country: The country of the buying organization.
+* Country: The country of the buying organisation.
 
 == Filters Applied
 
@@ -51,9 +51,9 @@ FILTER (?formType = <http://publications.europa.eu/resource/authority/form-type/
     epo:hasFormType ?formType ;
 ----
 
-=== Buyer Organization Details
+=== Buyer Organisation Details
 
-The query extracts the legal name and country about organizations that play the epo:Buyer role.
+The query extracts the legal name and country about organisations that play the epo:Buyer role.
 
 [source, sparql]
 ----

@@ -7,12 +7,12 @@
 
 = Retrieving Buyers for a Specific Date
 
-This query retrieves buyers of contracts published on November 4, 2024, providing details about the organizations and their countries.
+This query retrieves buyers of contracts published on November 4, 2024, providing details about the organisations and their countries.
 
 == Output
 
 * Publication Number: The unique identifier for the notice.
-* Legal Name: The name of the buying organization.
+* Legal Name: The name of the buying organisation.
 * Country: The country where the buyer is registered.
 
 == Filters Applied
@@ -34,7 +34,7 @@ include::../queries/notices-per-buyer-country.sparql[]
 
 === Notice and Buyer Relationships
 
-The query identifies organizations specifically playing the role of a buyer in contract notices. This is achieved through the epo:Buyer role, which captures organizations responsible for purchasing goods or services.
+The query identifies organisations specifically playing the role of a buyer in contract notices. This is achieved through the epo:Buyer role, which captures organisations responsible for purchasing goods or services.
 
 [source,sparql]
 ----
@@ -62,6 +62,6 @@ FILTER (lang(?country) = "en")
 
 == Summary
 
-This query retrieves information about buyers of contracts published on a specific date. The results include the publication number, the legal name of the buying organization, and the country where the organization is registered.
+This query retrieves information about buyers of contracts published on a specific date. The results include the publication number, the legal name of the buying organisation, and the country where the organisation is registered.
 
 include::ROOT:partial$feedback.adoc[]
