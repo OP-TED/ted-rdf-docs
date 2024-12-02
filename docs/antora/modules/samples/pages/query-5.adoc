@@ -5,14 +5,61 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
-include::./preamble.adoc[]
+= Retrieving Buyers for a Specific Date
+
+This query retrieves buyers of contracts published on November 4, 2024, providing details about the organizations and their countries.
+
+== Output
+
+* Publication Number: The unique identifier for the notice.
+* Legal Name: The name of the buying organization.
+* Country: The country where the buyer is registered.
+
+== Filters Applied
+
+Publication Date: Filters results to contracts published on 2024-11-04.
+Country language: Retrieves country names in English.
+
+== Query
+The complete query in SPARQL is as follows:
 
 [source, sparql]
 ----
 include::../queries/notices-per-buyer-country.sparql[]
 ----
 
-* Running the Query
-* Examining and refining the query results
+== Structures Applied
+
+=== Notice and Buyer Relationships
+
+The query identifies organizations specifically playing the role of a buyer in contract notices. This is achieved through the epo:Buyer role, which captures organizations responsible for purchasing goods or services.
+
+[source,sparql]
+----
+epo:announcesRole [
+    a epo:Buyer ;
+    epo:playedBy [
+        epo:hasLegalName ?legalName ;
+            cccev:registeredAddress [
+                epo:hasCountryCode ?countryUri
+            ]
+        ]
+]
+----
+
+=== Country Identification
+
+Countries are retrieved using their concept labels in English:
+
+[source,sparql]
+----
+?countryUri a skos:Concept ;
+skos:prefLabel ?country .
+FILTER (lang(?country) = "en")
+----
+
+== Summary
+
+This query retrieves information about buyers of contracts published on a specific date. The results include the publication number, the legal name of the buying organization, and the country where the organization is registered.
 
 include::ROOT:partial$feedback.adoc[]
