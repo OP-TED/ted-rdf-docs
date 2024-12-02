@@ -15,4 +15,6 @@
 ** xref:samples:advanced-1.adoc[Advanced 1: Named graphs]
 ** xref:samples:advanced-2.adoc[Advanced 2: RDF of a notice]
 
+
 include::ROOT:partial$feedback.adoc[]
+

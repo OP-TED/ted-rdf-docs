@@ -18,7 +18,10 @@
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
+ 
+
 * Example Query Library
+
 ** Common Queries
 *** xref:samples:query-1.adoc[Query 1: Notices published on a specific date]
 *** xref:samples:query-2.adoc[Query 2: Contracts]
@@ -29,6 +32,7 @@
 ** Advanced
 *** xref:samples:advanced-1.adoc[Advanced 1: Named graphs]
 *** xref:samples:advanced-2.adoc[Advanced 2: RDF of a notice]
+
 
 * [.separated]#**TED XML Schema Data**#
 * Download TED XML Schema Data
@@ -62,5 +66,5 @@
 * [.separated]#**Resources**#
 * xref:data_availability.adoc[Current data availability]
 * xref:ROOT:glossary.adoc[Glossary]
-//* https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
+
 
