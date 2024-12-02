@@ -1,10 +1,10 @@
-# TED SWS Documentation
+# TED Open Data Service - Documentation
 
-This repository is used for authoring the documentation of the TED Semantic Web Services (SWS). 
+This repository is used for authoring the documentation of the TED Open Data Service. 
 
-To read the TED SWS documentation please visit: https://docs.ted.europa.eu/
+To read the TED Open Data Service documentation please visit: https://docs.ted.europa.eu/ODS/
 
-# Contributing
+## Contributing
 You are more than welcome to help expand and mature this project. 
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.

@@ -1,0 +1,55 @@
+:doctitle: Downloading notices using the Search API
+:doccode: ODS-REUS-06
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
+Detailed documentation on using the Search API can be found on the Swagger UI Site:
+
+https://ted.europa.eu/api/documentation/index.html[]
+
+ 
+== The Search API offers two search modes
+
+=== Pagination mode
+
+Allows the retrieval of up to 15000 notice documents for a given query, using pagination.
+
+==== Limits
+* Maximum number of retrievable notices: 15k.
+* Maximum number of notices per page: 250.
+* Maximum number of fields per page: 10k.
+
+If a limit is reached, the search API will return an error.
+
+=== Iteration or Scroll mode
+
+Allows the retrieval of all notice documents for a given query, without limitations. With this mode, the user calls the search API to retrieve the first result page and a token. This token can then be included in the next query sent to the search API to retrieve the next result page.
+
+
+==== Limits
+* Maximum number of notices per page: 250.
+* Maximum number of fields per page: 10k.
+
+If a limit is reached, the search API will return an error. There is no limit on the number of retrievable notice documents.
+
+==== Request body of the notice search endpoint
+* query: Expert search query to filter and sort notices.
+* fields: Fields to return for each notice.
+* page: Result page number, used to paginate results.
+* limit: Maximum number of returned notices, used to paginate results.
+* scope: Search scope.
+* checkQuerySyntax: To check the syntax of the query.
+* paginationMode: PAGE_NUMBER or ITERATION.
+* iterationNextToken: token returned by the previous call to the search endpoint to retrieve the next result page.
+
+=== The Response File
+
+The response file contains the total number of notices documents that match the search, and a list of the results.
+
+Each result contains data of the fields specified in the request.
+
+Each item contains the list of URLs for the various formats and languages in which the corresponding notice is available.
+
+include::partial$feedback.adoc[]
+

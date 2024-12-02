@@ -1,0 +1,46 @@
+:doctitle: Examples using the Search API
+:doccode: ODS-REUS-05
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
+To submit a query, scroll down to the green search bar and click on the arrow on the right-hand side of the bar. The query window will open:
+
+image::bar1.png[]
+
+== Search mode: pagination
+
+*Example:*
+
+Find notices of the OJS 180/2023 where the place of performance is Germany; the result must contain the publication-number, the notice-title, the buyer-name, and the notice-type (form-type).
+
+The query submitted:
+
+image::pagin1.png[]
+
+Query confirmation by the server:
+
+image::pagin2.png[]
+
+The query response:
+
+image::pagin3.png[]
+
+== Search mode: iteration
+
+*Example:*
+Find notices where the place of performance is Luxembourg; the result must contain the publication-number.
+
+The query submitted:
+
+image::itter1.png[]
+
+Query confirmation by the server:
+
+image::itter2.png[]
+
+The query response:
+
+image::itter3.png[]
+
+include::partial$feedback.adoc[]

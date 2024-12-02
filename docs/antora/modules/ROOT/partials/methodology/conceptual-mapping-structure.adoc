@@ -2,19 +2,19 @@
 
 == Conceptual mapping structure
 
-This section describes the structure of the mapping file  created as a result of the described mapping process. The mapping file is an Excel workbook containing multiple worksheets. This workbook is generated from a Google Sheets document, where it can be prepared, revised, and refined by multiple contributors in a collaborative fashion.
+This section describes the structure of the mapping file  created as a result of the mapping process. The mapping file is an Excel workbook containing multiple worksheets. This workbook is generated from a Google Sheets document, where it can be prepared, revised, and refined by multiple contributors in collaboration.
 //The template for this spreadsheet is provided https://docs.google.com/spreadsheets/d/1iSk02YD7lfPByKnBDU4Z2XiBjY6zCqMP79uyydiQxxU/edit#gid=0[here].
 This template informs software developers and knowledge engineers of the mapping file content.
 
 It consists of several worksheets:
 
 * Metadata sheet: provides technical and descriptive information about the mapping suite.
-* Resources sheet: provides the list of resources used in the technical mappings. This list is used to populate the mapping suite with indicated resources files automatically.
+* Resources sheet: provides the list of resources used in the technical mappings. This list is used to populate the mapping suite from the indicated resources files automatically.
 * Rules sheet: provides the actual set of mapping rules.
-* Misc: there are optional worksheets added by semantic engineers to manage additional information.
+* Misc: optional worksheets added by semantic engineers to manage additional information.
 
 == The Metadata sheet
-image::conmap1.png[]
+image::ROOT:conmap1.png[]
 
 |===
 |*Cell refs.*|*Header for content*|*Description*|*Notes*
@@ -37,7 +37,7 @@ Theoretically anything like this could be used: (,1.0],[1.2,)
 
 == The Resources sheet
 
-image::conmap2.png[]
+image::ROOT:conmap2.png[]
 
 |===
 |*Cell refs.*|*Header for content*|*Description*|*Notes*
@@ -48,15 +48,15 @@ image::conmap2.png[]
 
 
 === The Rules sheet
-image::conmap3.png[]
+image::ROOT:conmap3.png[]
 
 |===
 |*Cell refs.*|*Header for content*|*Description*|*Notes*
 |*A:D*|*Conceptual mapping*||
 |A3:A|Standard Form Field ID (M)|The “identifier” of the field in the Standard Form PDF file. Usually the field number, such as _IV.1.1.1.2_, or the section name, e.g. “_Section IV_”|Mandatory
 |B3:B|Standard Form Field Name (M)|The name of the field in the Standard Form PDF|Mandatory
-|C3:C|eForm BT-ID (O)|The ID of the corresponding business term (BT) or business term group (BG) in eForms. The values are coming from the column B of this spreadsheet (or one of its equivalents): |Optional
-|D3:D|eForm BT Name (O)|The name of the corresponding business term (BT) or business term group (BG) in eForms. The values are coming from the column C of this spreadsheet (or one of its equivalents): |Optional
+|C3:C|eForms BT-ID (O)|The ID of the corresponding business term (BT) or business term group (BG) in eForms. The values are coming from the column B of this spreadsheet (or one of its equivalents): |Optional
+|D3:D|eForms BT Name (O)|The name of the corresponding business term (BT) or business term group (BG) in eForms. The values are coming from the column C of this spreadsheet (or one of its equivalents): |Optional
 |*E:F*|*Standard form technical mapping*||
 |E3:E|Base XPath (for anchoring) (M)|The “base” XPath that identifies an XML element and all of its sub-elements. It can be specified at the level of a section, or subsection, so that writing XPaths for form elements within that (sub)section will not have to repeat over and over again the “base” XPath.|Mandatory
 |F3:F|Field XPath (M)|The XPath that identifies the form element, which is relative to the “base” XPath that was specified for the closest  element above this one.|Mandatory

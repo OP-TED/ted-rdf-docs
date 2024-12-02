@@ -1,0 +1,18 @@
+//these are different per document, edit and add manually:
+
+//:doctitle:
+//:doccode: repo_branch_status_docnumber
+// e.g. epo_v4.0.0_prod_123 (draft/ review/prod/archived)
+//:author: author
+//:authoremail: author@email
+//:docdate: docdate
+
+//these are the same in each branch, just edit and then include partial:
+
+:this-version: main
+:this-version-tag: v{this-version}
+:git-repo-url: https://github.com/OP-TED/ePO
+:path-to-dist: /ascii_doc/modules/ROOT
+:url-tree: {git-repo-url}/tree/{this-version-tag}{path-to-dist}
+:url-blob: {git-repo-url}/blob/{this-version-tag}{path-to-dist}
+

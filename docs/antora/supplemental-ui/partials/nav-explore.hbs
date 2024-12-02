@@ -1,0 +1,46 @@
+<div class="nav-panel-explore{{#unless page.navigation}} is-active{{/unless}}" data-panel="explore">
+  {{#if page.component}}
+    {{#if page.componentVersion.version}}
+      {{#if (not (eq page.componentVersion.version "master"))}}
+      <div class="context">
+          <span class="title">{{page.component.title}}</span>
+          <span class="version">{{page.componentVersion.displayVersion}}</span>
+      </div>
+      {{else}}
+      <div class="context">
+          <span class="title dim">Select a product/version</span>
+          <span class="version">&nbsp;</span>
+      </div>
+      {{/if}}
+    {{else}}
+      <div class="context">
+          <span class="title dim">Select a product/version</span>
+          <span class="version">&nbsp;</span>
+      </div>
+    {{/if}}
+  {{/if}}
+  <ul class="components">
+    {{#each site.components}}
+    {{#if ./latest.version }}
+      {{#if (not (eq ./latest.version "master"))}}
+      <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
+        <a class="title" href="{{{relativize ./url}}}">{{{./title}}}</a>
+        <ul class="versions">
+          {{#each ./versions}}
+          {{#if this.version }}
+            {{#if (not (eq this.version "master"))}}
+            <li class="version
+                {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
+                {{~#if (eq this ../latest)}} is-latest{{/if}}">
+              <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+            </li>
+            {{/if}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </li>
+      {{/if}}
+    {{/if}}
+    {{/each}}
+  </ul>
+</div>

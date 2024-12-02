@@ -1,0 +1,11 @@
+:doctitle: Query Samples
+:doccode: ODS-SAMP-01
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: September 2023
+
+== query1: notices per procurement type per country
+
+etc, tbc once queries finalised
+
+include::ROOT:partial$feedback.adoc[]

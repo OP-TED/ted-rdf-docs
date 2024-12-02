@@ -1,0 +1,48 @@
+:doctitle: Querying EU Public Procurement Data
+:doccode: ODS-QUER-01
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
+
+Querying EU Public Procurement Data introduces the resources and guides available to help those interested improve their public procurement knowledge and querying skills.
+
+xref:querying:starting.adoc[Getting started] +
+The resources you need to start querying public procurement open data
+
+xref:querying:online_training.adoc[Online training resources] +
+Online resources for learning RDF and SPARQL
+
+xref:querying:designing_query.adoc[Designing a query] +
+How to approach designing queries
+
+xref:querying:structure.adoc[SPARQL query structure] +
+How to approach designing queries
+
+xref:querying:notice_data.adoc[Notice data] +
+The Information and fields in Notice data
+
+xref:querying:epo.adoc[eProcurement Ontology resources] +
+The eProcurement Ontology Resources
+
+////
+xref:querying:snippets.adoc[Reusable query snippets] +
+Reusable SPARQL snippets for frequently used classes
+
+xref:querying:scenarios.adoc[Scenarios: question to query] +
+Query Scenarios: from Question to Query
+////
+
+xref:samples:index.adoc[Browse the sample queries] +
+Sample Queries to get you started
+
+xref:connecting:index.adoc[Executing your query] +
+Executing your query via the SPARQL EndPoint, Excel or Python
+
+Queries can be submitted via Cellar's https://publications.europa.eu/webapi/rdf/sparql[SPARQL endpoint], for which there is a link on the https://op.europa.eu/en/web/eu-vocabularies[EU Vocabularies page].
+
+include::ROOT:partial$feedback.adoc[]
+
+
+
+

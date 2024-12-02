@@ -1,0 +1,68 @@
+:doctitle: Current Data Availability
+:doccode: ODS-ROOT-03
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
+== Current Processing
+
+=== eForms notices
+
+Two categories of data are being processed by the TED Open Data Service pipeline currently:
+
+* Daily eForms notices of form types 10 to 24, and 29, as of the 4 November 2024
+
+* The backlog of eForms notices of form types 10 to 24, and 29, from before the 4 November 2024 to the beginning of eForms (October 2023)
+
+These eForms notices are converted according to the specifications of eProcurement Ontology v4.
+
+=== XML Notices
+
+A limited number of XML notices are available in Cellar. These were produced during the initial TED Open Data Service Pipeline proof of concept.
+
+* Contract Award Notices (CANs) from September 2023 to January 2024
+
+The processing of these was against the eProcurement Ontology v3.1.
+
+== Planned processing
+
+=== eForms notices
+
+With the https://docs.ted.europa.eu/epo-home/history.html[completion of the eProcurement Ontology], and with the mapping of the rest of the form types:
+
+* Daily eForms notices of all types as of April 2025
+
+* The backlog of all eForms notice types as of April 2025
+
+
+NOTE: Refer back to this page regularly to check if there have been updates. Use the xref:querying:epo.adoc[ePO resources] of the versions mentioned above to find the classes you wish to use in your queries.
+
+////
+== TED XML Data
+
+Limited data
+
+The format of schema XML data has changed over the years in line with changes in the legislation. "Schema" refers to the fields required by law in the notice form and therefore to the data collected by the notice.
+
+* Schema 2.08 complies with http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32009L0081[Defence Directive 2009/81/EU] and applies since 2009 to the current day to notices published using forms 16, 17, 18, and 19 pertaining to defence related purchases. The current schema version is R2.0.8.S25. 
+* Schema 2.09 complies with the following directives and applied to notices published from 2016 until 1 February 2024 (non-EU Institutions) and 28 June 2024 (EU Institutions), when the transition period from schema 2.09 to eForms ended:
+
+** http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0024[Directive 2014/24/EU] repealing Directive 2004/18/EC,
+** http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0025[Directive 2014/25/EU] repealing  Directive 2004/17/EC,
+** http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0023[Directive 2014/23/EU],
+** Regulation (EC) No 1370/2007.
+
+* The eForms schema was implemented on the 14 November 2022 and applies to public procurement from this date. The transition period where two versions of notice data applied, schema 2.09 and eForms, was from the 14 November 2022 to the 28 June 2024.
+
+
+
+== Legislation affects data
+
+The legislation, updated from time to time (here the link to the https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R1780[Regulation (EU) 2019/1780] that applies from the 14 November 2022), sets out which forms must be used in public procurement procedures, and the mandatory and optional fields that must be provided and filled in in the public procurement forms. These fields contain data that are eventually available for query. Although complex, the detail is useful in discovering which data are available for query. 
+
+NOTE: As these change slightly with amendments in legislation, the exact fields might not be carried through from the beginning of data collection to now, or their class names might have changed. Fields might have been added and removed along the way.
+
+For an overview of what data can be extracted from a notice in its current form, you can also use the notice search facility available on the https://ted.europa.eu/en/[TED website]. Choose "Advanced Search" (All Notices), then the type of notice you are interested in, and then look at the contents of a notice from the list returned.
+
+////
+include::ROOT:partial$feedback.adoc[]

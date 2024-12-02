@@ -1,0 +1,3 @@
+include::connecting:index.adoc[]
+
+include::ROOT:partial$feedback.adoc[]

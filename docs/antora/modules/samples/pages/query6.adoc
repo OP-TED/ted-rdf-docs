@@ -1,0 +1,45 @@
+:doctitle: How many tenderers responding on a chosen date intend to use sub-contractors?
+:doccode: ods-main-prod-201
+
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+== The Scenario
+* Presentation of the scenario
+* A short discussion of the the extent to which the current data offering can assist/ Understanding data limitations
+* Refining the question
+
+== The information
+* Identifying the information to be returned
+* Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information
+* Constructing the query
+
+== The Query
+
+TIP: Use the copy icon on the top right of the source block to copy the query to the clipboard
+
+[source]
+----
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+
+SELECT COUNT DISTINCT(?Notice) WHERE {
+
+     VALUES ?NoticePublicationDate  {
+        "20230905"
+    }
+
+    ?Notice epo:hasPublicationDate ?NoticePublicationDate .
+
+    ?Notice epo:refersToLot ?Lot .
+    ?Tender epo:isSubmittedForLot ?Lot .
+    ?Tender epo:foreseesSubcontracting ?Subcontrating .
+
+}
+
+----
+
+* Running the Query
+* Examining and refining the query results
+
+include::ROOT:partial$feedback.adoc[]

@@ -1,0 +1,167 @@
+:doctitle: TED eForms Mappings
+:doccode: ODS-EFOR-02
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2024
+
+== Mapping Methodology
+
+Developing mappings for eForms still follows the https://docs.ted.europa.eu/SWS/mapping_suite/methodology.html[sound principles of conceptual agreement followed by technical implementation], divided into the distinct stages of _conceptual mapping_ ( CM ) using a dialect of https://www.w3.org/TR/sparql11-property-paths/[SPARQL Path] patterns, and _technical mapping_ ( TM ) using the https://rml.io/[RML mapping language].
+
+=== eForms SDK Field Definitions
+
+In contrast to SF, which had https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas-archive[XSD schemas] as the only cue for the underlying model, there is an https://github.com/OP-TED/eForms-SDK[eForms SDK] which prescribes eForms XML element https://developer.mozilla.org/en-US/docs/Web/XPath[XPaths] in terms of nodes and fields, which lends an easier framework for the management and comprehension of the http://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html[UBL]-based XML model behind elements used across the eForms notices. The notices themselves are categorized under https://docs.ted.europa.eu/eforms/latest/schema/documents-forms-and-notices.html[document, form and notice types and subtypes], such as Competition Notice, subtype 16 (EF16).
+
+=== Mapping Groups
+
+A new idea introduced into the mapping methodology is the notion of a Mapping Group (MG), which is a representation of RDF connections (relationships) and subject groupings in a simple, hyphen-delimited textual notation, in the form:
+
+```
+MG-\{TrailingClass\}-\{intermediateClassAndPropertyPath\}-\{RootClass\}
+```
+
+where, for example, the full path of an organisation's address might be:
+
+```
+MG-\{Address\}-\{hasAddress\}-\{Location\}-\{hasLocation\}-\{Organization\}
+```
+
+This serves to provide an indication of how RDF statements are logically grouped together to form the right (connected) instances, given that data for a given subject may be spread across completely different XPaths in the source XML. That is why, in the technical mapping, MGs are used to form the subject URIs of the RML rules (TriplesMaps), suffixed with the node name (as per the SDK) where the information comes from, for example:
+
+```
+tedm:MG-\{Address\}-\{hasAddress\}-\{Location\}-\{hasLocation\}-\{Organization\}_ND-Company a rr:TriplesMap
+```
+
+Different nodes usually require different subject templates or iterators, especially those which are located at entirely different or _orthogonal_ XPaths, requiring as many RML TriplesMaps with the same MG but different node names.
+
+
+=== Modular RML Mappings
+
+Given the large number of mappings that are necessry for the conversion of a certain eForms Notice (the CM contains around 500 entries for various fields and nodes that belong to a type of notice), a mapping package ends up containing 200+ RML TriplesMaps with 500+ predicateObjectMap, resulting in more than 11,000 lines of RML code. To be able to efficiently and properly manage this amount of information, we split it up into multiple RML files that are organized following a certain logic.
+
+The structure of the RML files (we call them _modules_ because they are modular
+files with RML rules that work together when combined) is based on the
+primary/root class of a set of mapping rules, which are part of one or more
+_Mapping Groups_ (MGs) that share such a root class (the final segment of an MG
+name). An MG represents a logical grouping of related instances/resources (like
+a `foaf:Person` with all of its properties _and_ relationships together with
+the instances of those relationships).
+
+.Multiple TriplesMaps in an RML Module
+====
+For example, the `LotGroup.rml.ttl` file (as it appears in a https://github.com/OP-TED/ted-rdf-mapping-eforms/blob/1.0.0-rc.3/mappings/package_cn_v1.9/transformation/mappings/LotGroup.rml.ttl[mapping package] created for the conversion of the Competition Notices, eForms subtypes 10-24) contains the following TriplesMaps:
+```
+tedm:MG-\{LotGroup\}_ND-\{LotsGroup\}
+tedm:MG-\{Identifier\}-\{identifier\}-\{LotGroup\}_ND-\{LotsGroup\}
+tedm:MG-\{Identifier\}-\{hasInternalIdentifier\}-\{LotGroup\}_ND-\{LotsGroupProcurementScope\}
+tedm:MG-\{LotGroup\}_ND-\{LotsGroupProcurementScope\}
+tedm:MG-\{MonetaryValue\}-\{hasEstimatedValue\}-\{LotGroup\}_ND-\{LotsGroupValueEstimate\}
+tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup\}_ND-\{LotsGroupValueEstimateExtension\}
+tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup\}_ND-\{LotsGroupFA\}
+tedm:MG-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{LotsGroupAwardCriterion\}
+tedm:MG-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{LotsGroupAwardFixedCriterionParameter\}
+tedm:MG-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{LotsGroupAwardWeightCriterionParameter\}
+tedm:MG-\{Constraint\}-\{hasConstraint\}-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{LotsGroupAwardThresholdCriterionParameter\}
+```
+Looking at the above example we can observe that, on one hand, a node `ND-LotsGroup` can have children fields that provide information for the generation of multiple insctances, e.g. an `epo:LotGroup` instance from `tedm:MG-\{LotGroup\}_ND-\{LotsGroup\}`, and an `adms:Identifier` instance from `tedm:MG-\{Identifier\}-\{identifier\}-\{LotGroup\}_ND-\{LotsGroup\}`. On the other hand, the full definition of the same EPO instance, can achieved by combining information provided in fields that are organized under different nodes, e.g. the MonetaryValue that represents the hasLaunchFrameworkAgreementMaximumValue property of a LotGroup can come both from fields that are chidren of the `ND-LotsGroupValueEstimateExtension` node and those that are children of the `ND-LotsGroupFA` node:
+```
+tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup\}_ND-\{LotsGroupValueEstimateExtension\},
+tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup\}_ND-\{LotsGroupFA\}
+```
+====
+
+Another advantage of creating modularized RML files, is that it allows us to easier handle the differences that appear in various SDK versions. Since fields and nodes can appear or disappear in any (major or minor) SDK version, we need to be able to write different RML mappings for different SDK versions. Some of these mapping are valid for all SDK version (that exist as of now), some are valid only for one particular SDK version, while others are valid up to or starting from a given SDK version. Our approach is to place these mappings in files whose name reflect the SDK versions for which they apply, and at the time when we create a mapping package for a given SDK version, we select oll the modeles that apply for that SDK version.
+
+.Multiple RML modules for mapping information about Lots
+====
+For example, the RML mappings that are necessary to transform notices encoded according to eForms SDK v1.8 are organized in https://github.com/OP-TED/ted-rdf-mapping-eforms/tree/1.0.0-rc.4/mappings/package_cn_v1.8/transformation/mappings[more than 30 files], from which the mappings for the Lot related information is organized in these files:
+
+```BASH
+Lot.rml.ttl                 # mappings valid accross all SDK versions
+Lot_v1.3-1.8.rml.ttl        # mappings valid up to SDK version 1.8 (inclusive)
+Lot_v1.4+.rml.ttl           # mappings valid for all SDK versions starting with v1.4
+Lot_v1.7+.rml.ttl           # mappings valid for all SDK versions starting with v1.7
+Lot_v1.8+.rml.ttl           # mappings valid for all SDK versions starting with v1.8
+Lot_v1.8-1.8.rml.ttl        # mappings valid for only SDK versions v1.8
+```
+
+====
+
+**Important Note: **
+The TriplesMaps in the various RML modules, especially those that represent version specific mappings, can spread accross multiple files. For example, a TriplesMap can have it logical source/iterator, its subject map, and its various predicat-object maps in several files, depending on what aspect is specified in a given SDK version and/or belongs to a given module. However, this information needs to be provided and organized in such a manner that when they are combined together in a package, the RML mappings should be valid, complete, correct and non-conflicting. E.g. every TriplesMap, after the modules are combined, should have one and only one logical source and subject map, and the subject map and all predicate-obect maps should work with the logical source that they are conbined with.
+
+[[ref:uri-scheme]]
+=== RDF URI Scheme
+
+The eForms RML mappings use the following URI scheme for the representing ePO ontology instances:
+
+```
+\{ns\}id_\{notice-id\}_\{concept\}_\{trailer\}
+```
+
+, where:
+
+* `\{ns\}` is a base namespace, in this case
+`http://data.europa.eu/a4g/resource/`
+* `\{concept\}` is either (i) an ontology fragment label or (ii) source
+element label, with a suffix or prefix
+* `\{trailer\}` is either (i) an ID value (if the resource has one) or
+(ii) an _online_ computed, deterministic hash
+* Root concepts such as `epo:Notice` end up to only the `\{concept\}`
+
+Expanding on some of the components for further clarity:
+
+* Whether a `concept` is an ontology fragment or source element label,
+and whether this label has a suffix (rarely) or prefix, depends on the
+subjective (human) evaluation of whether only having the class name is
+sufficient hint of what the URI represents.
+* The trailer, when a hash, is computed (seeded) with the XPath named
+element (e.g. `cbc:ID`) or (often relative) path (e.g. `path(cbc:ID)`)
+of what is being mapped, and therefore lends a unique identity to the
+URI. This yields reproducible URIs across RML TripleMaps, in case a
+resource needed to be instantiated at different XPaths, for whatever
+purpose.
+** A Lot or any other resource with an inherent ID, would simply have
+its `cbc:ID` value as the trailer, for
+e.g. `epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001`, which
+is very useful for linking purposes at orthogonal XPaths (e.g. wherever
+an `id-ref` is concerned, that ID could simply be used to produce a
+linkable URI without having to navigate XPaths).
+** Any other resource where there is no inherent ID would have a hash
+that is unique to the XPath it represents, e.g. an `epo:Purpose`
+instance, if instantiated at different XPaths for associating different
+attributes, would have the same URI across those instantiations,
+resulting in one unique instance and no duplication due to multiple
+mappings.
+*** The `adms:Identifier`, although having an ID, may still get a hash
+instead of ID in its trailer, as it may not have a short ID that is
+sensible to use/read (however we may not have enforced this rule
+strongly)
+
+There are exceptions to this policy, namely in the _trailer_ segment, as that
+is what lends uniqueness to a resource, and determines whether instances being
+created from subject URI templates in the technical RML rules are correct. The
+following are such exceptions:
+
+1. `epo:AgentInRole` instances, which
+https://github.com/OP-TED/ted-rdf-mapping-eforms/issues/31[require a carefully
+constructed URI] seeded with information about the related party (a
+`foaf:Agent`).
+
+2. `epo:AwardDecision` instances, which are hashed on the `cbc:AwardDate` to
+yield the same instance for awards on the same date across possibly repeating
+elements.
+
+3. External notices that are referred to, whose base IRI involves the ID of the
+respective notice, not the current one in scope.
+
+4. External resources that cannot be identified, such as the Framework
+Agreement contract representing `OPT-100-Contract Framework Notice Identifier`,
+for whom a proxy `epo:FrameworkAgreement` is created _without_ a trailer.
+
+**Note:** Wherever _URI_ is mentioned,
+https://www.w3.org/2001/Talks/0912-IUC-IRI/paper.html#:~:text=In%20principle%2C%20the%20definition%20of,us%2Dascii%20characters%20in%20URIs[IRI]
+is meant. Also, the generation of hashes is done _online_ against a
+remote HTTP web API endpoint offering this function, during
+transformation (which can otherwise be an offline process).
+

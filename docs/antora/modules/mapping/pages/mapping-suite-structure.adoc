@@ -1,0 +1,216 @@
+:doctitle: Mapping suite package structure
+:doccode: ODS-MAP-06
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2023
+
+
+
+== Mapping suite package structure
+
+This section describes the structure of a mapping suite package in GitHub. A package contains everything that is needed for the development and testing of a mapping suite that is applicable to a certain set of notices. After the package is finalised, it can be used by a process to apply it to a larger number of notices stored in a database, and transform these into RDF data.
+
+
+A package is represented by a well-defined folder structure. This folder structure is duplicated for every mapping developed. The listing of these packages is by Form number.
+
+The table below shows the structure of the https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03[F03 package], where /output refers to ted-rdf-mapping/mappings/package_F03/output, where package_F03 can be replaced by the identifier of the other packages mapped (F06,13, F21, F22, F23). The es16 package can be ignored.
+
+[cols="1,2,2"]
+
+|===
+
+|Folder|Subfolder|Description
+
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/output[/output]
+|/Noticeid/test_suite_report, where the NoticeID is the ID of the notice published on TED  for example:
+
+000163-2021/test_suite_report
+|Contains the semantic map of the concepts of the given notice (in this case, the F03 package).
+
+a|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/output[/output]
+cont.
+|https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/output/rml_report.html[rml_report/html]
+
+https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/output/shacl_validations.html[shacl_validations.html]
+
+https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/output/shacl_validations.json[shacl_validations.json]
+
+
+a|Each folder contains a subfolder for each of the rdf files produced from the sample data (see section on data sampling to understand the folder structure) which is named by the NoticeID of the sample concerned (eg 000163-2021)
+
+Each subfolder contains:
+
+The RDF output e.g., 000163-2021.ttl
+
+Another subfolder /test_suite report which in turn contains different files for validating the transformation (see validating transformations)
+
+
+
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data[/test_data]
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_2021[/test_data/form_number_F03_2021]
+
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S01[/test_data/form_number_F03_S01]
+
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S02[/test_data/form_number_F03_S02]
+
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S03[/test_data/form_number_F03_S03]
+
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S04[/test_data/form_number_F03_S04]
+
+https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S05[/test_data/form_number_F03_S05]
+
+a|Each folder contains the xml file as published on the TED website of the Notices to be transformed
+//(see section on data sampling to understand the folder structure).
+
+Each xml notice is named by the NoticeID of the sample concerned (eg 000163-2021)
+
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation[/transformation]
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation/mappings[/mappings]
+|Contains the rml files used for the transformation.  There is one rml file per section of each notice.
+
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation[/transformation]
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation/resources[/resources]
+|Contains files concerning the code list mappings
+
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation[/transformation]
+|https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/transformation/conceptual_mappings.xlsx[conceptual_mappings.xlsx]
+|Contains the initial conceptual mapping which is used to write the rml.
+
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation[/validation]
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/shacl[/shacl]
+|
+
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation[/validation]
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/sparql/cm_assertions[/sparql/assertions]
+|
+
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation[/validation]
+|https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/sparql/integration_tests[/sparql/integration_tests]
+|
+|===
+
+
+=== Mapping suite package description for Semantic Engineers
+
+When the Semantic Engineers start working on a new mapping suite, they first need to set up a package folder structure similar to the one described below. One package per form number is the accepted way to organise packages.
+
+*Challenge:* Are there better ways to deal with certain sections (sub-sections) that repeat across multiple forms? Consider Section I, for example, which in case of forms F03, F06, F25 contains “almost” the same information, therefore only one mapping should be written for it and RE-used in “final” form-mapping-packages. The problem is also discussed in a dedicated section below.
+
+The structure of an example mapping package folder structure is presented below:
+
+----
+/package_Fxx
+	/transformation
+		conceptual_mappings.xlsx
+		/mappings
+			*.rml.ttl
+		/resources
+			*.json, *.xml, *.csv
+	/test_data
+		*.xml
+----
+
+* `/package_Fxx` root folder of the mapping suite
+
+* `/transformation/conceptual_mappings.xlsx` manually created
+
+* `/transformation/resources`  additional resources possibly needed by the transformation rules; +
+The content of this folder should be automatically generated by the mapping package processor, based on the "Resources" sheet of the `conceptual_mappings.xlsx`, from the "source of truth" `ted-rdf-conversion-pipeline/TED-ODS/resources`.
+
+* `/transformation/mappings/*.rml.ttl` the relevant RML transformation rules, organised in module files, which are copied from the "source" mappings folder, according to the information specified in the "RML Modules" sheet of the `conceptual_mappings.xlsx`. **IMPORTANT!!!** In these rules the source XML is always referring to `data/source.xml`, which corresponds to the `../../data/source.xml` file that will be copied (and renamed) from the `test_data` folder at the time of the execution of the mapping.
+
+* `/test_data`  manually and carefully selected test data possibly grouped in suborders, e.g. `/test_data/batch-D1/*.xml`
+
+* `technical_mappings.yarrrml.yaml` (optional) manually created, and used in earlier days of the mapping development, but currently not used
+
+=== Mapping suite package description for the Software Engineers
+
+A package provided by semantic engineers (SE) is enriched with additional artefacts that are generated automatically using the package expanding tools which take as input the artefacts provided by the SE. Here are some examples of additional artefacts generated:
+
+* *Metadata* describing the parameters for selecting the notices that the mappings can be applied to, various version information, etc.
+* *SPARQL queries* that can be used to validate and/or test the generated outputs
+* *SHACL shapes* that can be used to validate and the structure of the generated outputs
+* New ones may be added at the time of writing this document
+
+After the package processing/expansion, the structure of the example mapping package presented in the previous subsection would look like this:
+
+----
+/package_Fxx
+	metadata.json
+	/transformation
+		conceptual_mappings.xlsx
+		/mappings
+			*.rml.ttl
+		/resources
+			*.json, *.xml, *.csv
+	/data
+		source.xml
+	/output
+		*.rdf
+	/validation
+		/sparql
+			/cm_assertions
+				*.rq
+		/shacl # this is a constant, when a SHACL is known (currently unknown)
+			*.shacl.ttl # data shape file(s)
+	/test_data # manually and carefully selected test data
+		*.xml
+
+----
+
+* `metadata.json` automatically generated from Metadata sheet of `conceptual_mapping.xlsx`
+
+* `/data` # this is a placeholder created at runtime to process the inputs. It serves only when the mapping suite is being tested, or executed by some script.
+
+* `source.xml` this file is generated during runtime by copying a given test data file
+
+* `/output` this is a placeholder created at runtime to store outputs. It serves only when the mapping suite is being tested, or executed by some script.
+
+* `/validation/sparql/cm_assertions` SPARQL queries automatically generated from the conceptual mapping
+
+=== Mapping suite package description for the Semantic Engineers after execution
+
+After the execution of a mapping, the mapping package will be further enriched, and will contain additional files, as a result of running the mapping suite on the included test data.
+
+----
+/package_Fxx
+	metadata.json
+	/transformation
+		conceptual_mappings.xlsx
+		/mappings
+			*.rml.ttl
+		/resources
+			*.json, *.xml, *.csv
+	/data
+		source.xml
+	/output
+		/<notice_file1>
+			<notice_file1>.ttl
+			/test_suite_report
+				*.ttl, *.html, *.json # e.g. sparql_cm_assertions.html, shacl_epo.html, xml_coverage.html
+		/<notice_file2>
+			...
+		/<notice_file3>
+			...
+	/validation
+		/sparql
+			/cm_assertions
+				*.rq
+		/shacl
+			/epo
+				ePO_shacl_shapes.rdf
+			shacl_result_query.rq
+	/test_data
+		<notice_file1>.xml
+		<notice_file2>.xml
+		<notice_file3>.xml
+		*.xml
+----
+
+* `/output/<notice_file1>` for each example file a folder is created that contains all the generated artefacts for that sample file
+* `/output/test_suite_report`  validation reports summarising all individual reports
+* `/output/<notice_file1>/<notice_file1>.ttl` the output of the transformation
+
+
+include::ROOT:partial$feedback.adoc[]
+

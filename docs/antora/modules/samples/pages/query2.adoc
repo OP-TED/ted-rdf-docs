@@ -1,0 +1,46 @@
+:doctitle: How many Public Procurement METS packages were published over a chosen date range?
+:doccode: ODS-SAMP-03
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+== The Scenario
+* Presentation of the scenario
+* Business value
+* A short discussion of the the extent to which the current data offering can assist/ Understanding data limitations
+* Refining the question
+
+== The information
+* Identifying the information to be returned
+* Using the eProcurement ontology (glossary and conceptual model) to identify the classes and class relationships that can be used to find the information
+* Constructing the query
+
+== The Query
+
+TIP: Use the copy icon on the top right of the source block to copy the query to the clipboard
+
+[source]
+----
+PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX cmr: <http://publications.europa.eu/ontology/cdm/cmr#>
+PREFIX purl: <http://purl.org/dc/elements/1.1/>
+
+SELECT COUNT(*) as ?notices_published_in_2023 WHERE {
+    ?work a <http://publications.europa.eu/ontology/cdm#procurement_public> .
+    ?work cdm:work_date_document ?dd.
+    ?work owl:sameAs ?psi.
+    ?work cmr:creationDate ?creation.
+    ?work cmr:lastModificationDate ?lastmodif .
+    ?expr cdm:expression_belongs_to_work ?work .
+    ?expr cdm:expression_uses_language ?lang .
+    ?manif cdm:manifestation_manifests_expression ?expr .
+    ?manif cdm:manifestation_type ?format.
+    ?item cdm:item_belongs_to_manifestation ?manif.
+    FILTER (str(?lastmodif) > '2023-08-09' && str(?lastmodif) < '2023-12-31')
+}
+----
+
+* Running the Query
+* Examining and refining the query results
+
+include::ROOT:partial$feedback.adoc[]

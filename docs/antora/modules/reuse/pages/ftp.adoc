@@ -1,0 +1,92 @@
+:doctitle: TED schemas archive
+:doccode: ODS-REUS-04
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
+This page contains the TED schemas archive resources
+
+xref:attachment$/TED-XML_general_description_v2.0_20160219.pdf[TED XML General Description]
+
+
+== XML schema 2.0.8
+
+xref:attachment$/XML_schema_2.0.8/Codif_Data_R208.zip[Codif_Data_R208 - zip file]
+
+xref:attachment$/XML_schema_2.0.8/Forms_Labels_R208.zip[Forms_Labels_R208 - zip file]
+
+xref:attachment$/XML_schema_2.0.8/Forms_Templates_R208.zip[Forms_Templates_R208 - zip file]
+
+xref:attachment$/XML_schema_2.0.8/NUTS_2016_mapping_final_20170713.xlsx[NUTS 2016 mapping final - Excel file]
+
+xref:attachment$/XML_schema_2.0.8/XML_Labels_Mapping_R208.zip[XML_Labels_Mapping_R208 - zip file]
+
+=== Archive - XML schema 2.0.8
+
+xref:attachment$/XML_schema_2.0.8/XSD_archive/TED_publication_R2.0.8.S02.E01_013-20140318.zip[TED_publication_R2.0.8.S02.E01_013-20140318 - zip file]
+
+xref:attachment$/XML_schema_2.0.8/XSD_archive/TED_publication_R2.0.8.S02.E01_014-20160526.zip[TED_publication_R2.0.8.S02.E01_014-20160526 - zip file]
+
+xref:attachment$/XML_schema_2.0.8/XSD_archive/TED_publication_R2.0.8.S02.E01_015-20161124.zip[TED_publication_R2.0.8.S02.E01_015-20161124 - zip file]
+
+xref:attachment$/XML_schema_2.0.8/XSD_archive/TED_publication_R2.0.8.S02.E01_015-20161124_changelog.xlsx[TED_publication_R2.0.8.S02.E01_015-20161124_changelog - Excel file]
+
+xref:attachment$/XML_schema_2.0.8/XSD_archive/TED_publication_R2.0.8.S03.E01_002-20161216.zip[TED_publication_R2.0.8.S03.E01_002-20161216 - zip file]
+
+xref:attachment$/XML_schema_2.0.8/XSD_archive/TED_publication_R2.0.8.S03.E01_002-20171128.zip[TED_publication_R2.0.8.S03.E01_002-20171128 - zip file]
+
+xref:attachment$/XML_schema_2.0.8/XSD_archive/TED_publication_R2.0.8.S03.E01_002-20171128_changelog.xlsx[NUTS 2016 mapping final - Excel file]
+
+xref:attachment$/XML_schema_2.0.8/XSD_archive/TED_publication_R2.0.8.S04.E01_003-20180515.zip[TED_publication_R2.0.8.S04.E01_003-20180515.zip - zip file]
+
+xref:attachment$/XML_schema_2.0.8/XSD_archive/TED_publication_R2.0.8.S04.E01_003-20180515_changelog.xlsx[TED_publication_R2.0.8.S04.E01_003-20180515_changelog - Excel file]
+
+xref:attachment$/XML_schema_2.0.8/XSD_current/TED_publication_R2.0.8.S05.E01_002-20201027.zip[TED_publication_R2.0.8.S05.E01_002-20201027 - zip file]
+
+== XML schema 2.0.9
+
+xref:attachment$/XML_schema_2.0.9/Codif_Data_R209.zip[Codif_Data_R209 - zip file]
+
+NOTE: For an updated version of the forms labels for TED XML schema R2.0.9, please consult the file https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas[Form labels R2.0.9 (zip)]
+
+xref:attachment$/XML_schema_2.0.9/Forms_Templates_R209.zip[Forms_Templates_R209 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XML_Labels_Mapping_R209.zip[XML_Labels_Mapping_R209 - zip file]
+
+=== Archive - XML schema 2.0.9
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S01.E01_014-20150909.zip[TED_publication_R2.0.9.S01.E01_014-20150909 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S01.E01_015-20151029.zip[TED_publication_R2.0.9.S01.E01_015-20151029 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S01.E01_017-20160113.zip[TED_publication_R2.0.9.S01.E01_017-20160113 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S01.E01_018-20160420.zip[TED_publication_R2.0.9.S01.E01_018-20160420 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S01.E01_019-20160603.zip[TED_publication_R2.0.9.S01.E01_019-20160603 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S01.E01_019-20160603_changelog.xlsx[TED_publication_R2.0.9.S01.E01_019-20160603_changelog - Excel file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S02.E01_003-20170123.zip[TED_publication_R2.0.9.S02.E01_003-20170123 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S02.E01_003-20170123_changelog.xlsx[TED_publication_R2.0.9.S02.E01_003-20170123_changelog - Excel file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S03.E01_006-20180608.zip[TED_publication_R2.0.9.S03.E01_006-20180608 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S03.E01_006-20180608_changelog.xlsx[TED_publication_R2.0.9.S03.E01_006-20180608_changelog - Excel file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S03.E01_007-20181030.zip[TED_publication_R2.0.9.S03.E01_007-20181030 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S03.E01_007-20181030_changelog.xlsx[TED_publication_R2.0.9.S03.E01_007-20181030_changelog - Excel file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S03.E01_009-20190628.zip[TED_publication_R2.0.9.S03.E01_009-20190628 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S03.E01_009-20190628_changelog.xlsx[TED_publication_R2.0.9.S03.E01_009-20190628_changelog - Excel file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S03.E01_010-20200224.zip[TED_publication_R2.0.9.S03.E01_010-20200224 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_archive/TED_publication_R2.0.9.S03.E01_010-20200224_changelog.xlsx[TED_publication_R2.0.9.S03.E01_010-20200224_changelog - Excel file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_current/TED_publication_R2.0.9.S04.E01_002-20201027.zip[TED_publication_R2.0.9.S04.E01_002-20201027 - zip file]
+
+xref:attachment$/XML_schema_2.0.9/XSD_current/TED_publication_R2.0.9.S05.E01_001-20210730.zip[TED_publication_R2.0.9.S05.E01_001-20210730 - zip file]

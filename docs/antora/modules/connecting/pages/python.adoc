@@ -1,0 +1,48 @@
+:doctitle: Querying the data using Jupyter Notebook and Python
+:doccode: ODS-CONN-04
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: September 2023
+
+//Note: This query method assumes knowledge of both Jupyter Notebooks and Python and that you have both installed and working on your machine.
+
+== Description
+
+This example Jupiter Notebook example enables interaction with the eProcurement open data endpoint using Python and SPARQL. It uses SPARQL to query the endpoint and the data analytical features of pandas DataFrames to analyse the data.
+
+The notebook can be downloaded from the link here:
+
+https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/import-into-dataframe.ipynb[Download the Jupiter Notebook example]
+
+== Running the Notebook and the query
+
+If you already have Python and Jupiter Notebooks set up and working in your developer environment, and are familiar with both applications, you can run the notebook from there.
+
+If you do not have an environment set up you can run the notebook in a Google colaboratory space online. This is a free hosted Jupyter Notebook service that does not require any setup on your machine. For this, you will need a google account.
+
+=== Running the Jupiter Notebook in a Google colaboratory space
+
+. Download the sample Jupiter Notebook, "import-into-dataframe.ipynb" available on https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/import-into-dataframe.ipynb
+. Navigate to https://colab.google/[Google's colaboratory]
+. Click on "Open Colab"
+. In the pop-up window that appears, click on "Upload", and follow the instructions to either browse to, or drag and drop the notebook file you downloaded from the ted-rdf-docs repository in the first step above into the window. The notebook will open in the colab space.
+
+The Notebook contains the instructions to install the dependencies and run the query. Start at the top as follows:
+
+[start=5]
+. Where you see a code block with a [ ] at its top left, and on hovering over the [ ] a play arrow appears, click on the play arrow to execute the code. Start at the top and work your way down the notebook code blocks in order. A green tick will appear on the left of the [ ] when the step has completed.
+
+There are two queries in this example Notebook. 
+
+* The first one is a simple count of notices published on a certain day
+* The second, more complex example, retrieves details from eProcurement notices published between September 1 and September 10, 2023 and extracts the legal names of buyers, their countries, and the awarded values for each related lot.
+
+You can change the date range directly in the query if you wish and then rerun the blocks from there.
+
+Some panda dataframes are provided that show the data in a table, some statistics about it, and a graph showing the distribution of counties.
+
+//#video#
+
+//#Short video of the process#
+
+include::ROOT:partial$feedback.adoc[]

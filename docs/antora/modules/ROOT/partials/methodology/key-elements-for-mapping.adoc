@@ -1,16 +1,16 @@
 
 ==  Key elements involved in the mapping process
-This section provides descriptions and references to the key elements (concepts or resources) that are involved in the creation of mappings, or to the mapping process itself.
+This section provides descriptions and references to the key elements (concepts or resources) that are involved in either the creation of mappings or the mapping process itself.
 
-The purpose of the mapping process is to generate a “mapping table” (described in the conceptual mapping artefact section) that can be processed by the automated workflow of the
+The purpose of the mapping process is to generate a *mapping table* (described in the conceptual mapping artefact section) that can be processed by the automated workflow of the
 //https://github.com/OP-TED/ted-rdf-conversion-pipeline
-TED-SWS. The mapping table is used to convert the TED XML input data into an RDF graph (the output of the mapping) that conforms with the eProcurement Ontology. The mapping table is encoded as a spreadsheet containing multiple worksheets.
+TED-ODS system. The mapping table is used to convert the TED XML input data into an RDF graph (the output of the mapping) that conforms with the eProcurement Ontology. The mapping table is encoded as a spreadsheet containing multiple worksheets.
 //, whose structure is described elsewhere.
 
 
 === Notices to be mapped
 
-The inputs for the transformation process are *XML files* that contain TED notice data. These data are structured according to the https://simap.ted.europa.eu/web/simap/standard-forms-for-public-procurement[“Standard Forms”]  published by the European Commission. There are 23 standard forms defined (numbered 1-8, 12-25, T1 and T2), whose PDF versions can be found here: https://simap.ted.europa.eu/standard-forms-for-public-procurement[https://simap.ted.europa.eu/standard-forms-for-public-procurement].
+The inputs for the transformation process are *XML files* that contain TED notice data. These data are structured according to the https://simap.ted.europa.eu/web/simap/standard-forms-for-public-procurement[Standard Forms]  published by the European Commission. There are 23 standard forms defined (numbered 1-8, 12-25, T1 and T2), whose PDF versions can be found here: https://simap.ted.europa.eu/standard-forms-for-public-procurement[https://simap.ted.europa.eu/standard-forms-for-public-procurement].
 
 The XML files must conform to the official Publication Schema.
 //TED XML format defined by https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas[TED XML Schema] (XSD).
@@ -45,16 +45,14 @@ To create these mappings, a number of resources produced by earlier or concurren
 
 The output of the XML notice transformation is an *RDF graph* instantiating the https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology], containing a number of RDF triples where the subjects, predicates and objects of the triples are either:
 
-* *unique Internationalized Resource Identifiers (IRIs)*
-//generated in a deterministic fashion,
-that can identify the notice or the different component parts of a notice. These IRIs (or sometimes blank nodes) are used in multiple triples as subjects OR objects to build an *RDF graph*;
+* *unique Internationalized Resource Identifiers (IRIs)* that identify either the notice or different components of a notice. These IRIs (or sometimes blank nodes) are used in multiple triples as subjects OR objects to build an *RDF graph*;
 * *IRIs* representing *controlled vocabulary terms* or *entities in the ePO ontology*;
 * *Literals* representing numbers, boolean values, or strings. The string values are often encoded as multilingual strings of type +rdf:langString+., to facilitate the representation of textual values in multiple European languages.
 
 === Mapping files produced
 
-The key element enabling transformation automation are the mapping files: *conceptual* and *technical* mappings that are developed according to the mapping creation methodology.
+The key element enabling transformation automation is the mapping files: *conceptual* and *technical* mappings that are developed according to the mapping creation methodology.
 
-The mapping rules are organised in mapping suites, described in the xref:mapping_suite/mapping-suite-structure.adoc[Mapping Suite Structure].
+The mapping rules are organised in mapping suites, described in the xref:mapping:mapping-suite-structure.adoc[Mapping Suite Structure].
 
 

@@ -1,0 +1,41 @@
+:doctitle: Downloading TED Notices in XML Format
+:doccode: ODS-REUS-03
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
+To download XML files (packages) via the https://ted.europa.eu/en/[TED Website]:
+
+. From the https://ted.europa.eu/en/[TED Website] home page, and under "Reuse notices" click on "Developers' corner for Reusers".
+
+image::reuse.png[]
+
+Select "Download XML notices in bulk" from the sub-menu and click on the link "XML bulk download" link.
+
+[start=2]
+. From ‘Download XML notices in bulk’ page:
+.. select the tab ‘Daily packages’ or ‘Monthly packages’
+
+image::bulk2.png[]
+
+.. select the year and month required
+.. scroll down the page to select the package
+.. click on the Download button to download the package
+
+
+NOTE:
+
+====
+*Daily packages:* files containing all the notices in xml format submitted on a particular day.
+
+*Monthly packages:* files containing all the notices, in xml format, submitted in a particular  month.
+
+(No need to sign in to download the daily or monthly packages.)
+====
+
+IMPORTANT:
+====
+The ftp service is not available on the https://ted.europa.eu/en/[TED Website]. Archived schema resources can be found via the link in the left-hand menu.
+====
+
+include::partial$feedback.adoc[]

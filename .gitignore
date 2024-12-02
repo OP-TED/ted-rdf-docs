@@ -1,3 +1,5 @@
+antora-playbook-local.yml
+
 /.saxon/
 /.tox/
 /.saxon/
@@ -119,3 +121,4 @@ package.json
 *.ser
 .DS_Store
 .scannerwork/*
+antora-playbook-local.yml
