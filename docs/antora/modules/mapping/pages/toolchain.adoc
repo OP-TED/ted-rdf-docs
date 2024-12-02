@@ -4,7 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-
+= The Toolchain used in the Mapping Development Process
 
 The mapping artefacts, including the various mapping suite packages that developed in the process described in this document, are stored and maintained in the https://github.com/OP-TED/ted-rdf-mapping[OP-TED/ted-rdf-mapping] GitHub repository.
 
@@ -14,16 +14,14 @@ that can be run on the mapping suites to produce various outputs.
 //In order to run these CLIs the TED-ODS project needs to be installed in the rdf-mapping environment. This can be done by following the *installation instructions* provided https://github.com/OP-TED/ted-rdf-conversion-pipeline#installation--usage[here]. The documentation for the usage of these CLI tools can be found https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html[here], however we will provide below some more details about the most relevant ones.
 
 //After the installation,
-The following CLIs are available (the name of the tools to be executed on the command line are specified in parentheses).
+== The following CLIs are available (the name of the tools to be executed on the command line are specified in parentheses).
 
 === Resources Injector (resources_injector)
 This CLI injects the requested resources listed on the "Resources" spreadsheet of the Conceptual Mappings into the MappingSuite. Each Form has a resources list that represents the controlled value that are needed in the mapping process.
 
 //Consult the authority tables used in the EPO available from the https://op.europa.eu/en/web/eu-vocabularies/authority-tables[EU Vocabularies].
 
-
 //For more detailed documentation on its usage please check out the https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html#_cmd_resources_injector[dedicated section in the Mapping Suite CLI Toolchain] documentation.
-
 
 === RML Modules Injector (rml_modules_injector)
 This CLI injects the technical mappings modules
@@ -33,7 +31,6 @@ into the mapping suite. Each form has a module list that is needed in order to r
 The modules names are listed on the "RML_Modules" spreadsheet of the Conceptual Mappings.
 
 //For more detailed documentation on its usage please check out the https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html#_cmd_rml_modules_injector[dedicated section in the Mapping Suite CLI Toolchain] documentation.
-
 
 === SPARQL Test Generator (sparql_generator)
 
@@ -98,7 +95,7 @@ This CLI runs all the necessary CLIs mentioned above in a logical order, to full
 
 //For more detailed documentation on its usage please check out the https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html#_cmd_mapping_suite_processor[dedicated section in the Mapping Suite CLI Toolchain] documentation.
 
-=== Other relevant tools and libraries
+== Other relevant tools and libraries
 Other relevant tools that are used in the mapping process that worth mentioning, are:
 
 https://rml.io/yarrrml/matey/#[Matey]: a browser-based application that helps writing YARRRML rules, and converting them to RML rules that can be also executed online. Matey uses the yarrrml-parser (described next) in the backend.

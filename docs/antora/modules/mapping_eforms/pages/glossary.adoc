@@ -59,8 +59,6 @@ understanding, reasoning and inference.
 
 *Mapping Package* A set of RML mapping rules for XML-RDF conversion, along with related artefacts. Interchangeable with _mapping suite_.
 
-*CELLAR* The central content and metadata repository of the Publications Office of the European Union, exposed via a SPARQL endpoint.
+*Cellar* The central content and metadata repository of the Publications Office of the European Union, exposed via a SPARQL endpoint.
 
-*TED-SWS* A pipeline system that continuously converts public
-procurement notices (in XML format) on the TED website into RDF
-format and publishes them into CELLAR
+|*TED Open Data Service* |A software pipeline that continuously retrieves new public procurement notices published the TED website as XML documents, converts them to RDF and publishes them into the RDF database of the Publications Office (Cellar).

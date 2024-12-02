@@ -9,7 +9,7 @@ Using the https://publications.europa.eu/webapi/rdf/sparql[EU Procurement SPARQL
 
 SPARQL stands for "SPARQL Protocol and RDF Query Language". SPARQL queries retrieve and manipulate data stored in RDF (Resource Description Framework) format.  It allows users to write complex queries to retrieve specific information from RDF datasets.
 
-//The data available covers Contract Award Notices published after 28/08/2023. Data on eForm Result notices are not yet available.
+//The data available covers Contract Award Notices published after 28/08/2023. Data on eForms Result notices are not yet available.
 
 A query is submitted to the SPARQL end point by replacing the text highlighted below in blue in the Query Text box below with the desired query:
 
@@ -283,12 +283,12 @@ The following instruction explains how to query Virtuoso SPARQL Query Endpoint u
 . As shown in _Figure 1_, Insert the query in the "Query Text" box and press "Run Query" button
 
 .Querying TED-ODS data using Virtuoso SPARQL Query endpoint
-image::user_manual/sparql_queries/image1.png[image,width=601,height=84]
+image::ROOT:user_manual/sparql_queries/image1.png[image,width=601,height=84]
 
 The result of the query is displayed as a data table (_Figure 2_).
 
 .Query result table
-image::user_manual/sparql_queries/image2.png[image,width=801,height=84]
+image::ROOT:user_manual/sparql_queries/image2.png[image,width=801,height=84]
 
 ////
 

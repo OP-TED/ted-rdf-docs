@@ -10,25 +10,23 @@ To download packages via a direct link, the URL needs to be formatted in a speci
 
 == The URL format for daily packages is as follows:
 
-\https://{ted-url}/packages/notice/daily/{yyyynnnnn},
+\https://\{ted-url\}/packages/notice/daily/\{yyyynnnnn\},
 
-where *{yyyynnnnn}* is the *OJS number*.
+where *\{yyyynnnnn\}* is the *OJS number*.
 
 *Example:* to download the daily package of the OJS 1 / 2023, the URL would be:
 
 ----
-
 "https://ted.europa.eu/packages/daily/202300001"
 ----
 
 // "https://ted.europa.eu/packages/daily/202300001"
 
-
 == The URL format for monthly packages is as follows:
 
-\https://{ted-url}/packages/notice/monthly/{yyyy-n},
+\https://\{ted-url\}/packages/notice/monthly/\{yyyy-n\},
 
-where *{yyyy-n}* is *the year and the month*.
+where *\{yyyy-n\}* is *the year and the month*.
 
 *Example:* to download the monthly package of January 2023, the URL would be:
 
@@ -36,23 +34,25 @@ where *{yyyy-n}* is *the year and the month*.
 "https://ted.europa.eu/packages/monthly/2023-1"
 ----
 // "https://ted.europa.eu/packages/monthly/2023-1"
+
 == Specifying file formats:
 
 === Specifying the file format of a daily package, in this example, .tar.gz:
 
-{yyyymmdd}_{yyyynnn}.tar.gz,
+\{yyyymmdd\}_\{yyyynnn\}.tar.gz,
 
-where {yyyymmdd} is the OJ S publication date, and {yyyynnn} is the OJ S number
+where \{yyyymmdd\} is the OJ S publication date, and \{yyyynnn\} is the OJ S number
 
 *Example:* daily package of the OJ S 1 / 2023:
 ----
 *20230102_2023001.tar.gz*
 ----
+
 === Specifying the file format of a monthly package, in this example, tar.gz:
 
-{yyyy}_{mm}.tar.gz,
+\{yyyy\}_\{mm\}.tar.gz,
 
-where {yyyy} is the year and {mm} is the month
+where \{yyyy\} is the year and \{mm\} is the month
 
 *Example:* monthly package of January 2023
 ----
@@ -73,7 +73,6 @@ Users can download a notice using a direct link in the formats listed below and 
 * Signed PDF
 * Non-signed PDF
 * XML
-
 
 The format, "HTML download" is a feature introduced in late 2023. It removes the need for an API on the TED portal for rendering a notice.
 
@@ -102,13 +101,13 @@ NOTE: The 'Signed PDF' link is only displayed when the user interface is set to 
 
 The format of the URLs of the direct link is as follows:
 
-	https://{ted-url}/{lang}/notice/{publication-number}/{format}
+	https://\{ted-url\}/\{lang\}/notice/\{publication-number\}/\{format\}
 
 where:
 
-* {lang} is the language
-* {publication-number} is the publication number
-* {format} can be :
+* \{lang\} is the language
+* \{publication-number\} is the publication number
+* \{format\} can be :
 ** html: to display the HTML download file
 ** pdf: to download the notice as PDF
 ** pdfs: to download the notice as signed PDF
@@ -116,7 +115,7 @@ where:
 
 The direct link of the notice view page is as follows:
 
-https://{ted-url}/{lang}/notice/-/detail/{publication-number}
+https://\{ted-url\}/\{lang\}/notice/-/detail/\{publication-number\}
 
 It retains backward compatibility with the current TED.
 
@@ -128,6 +127,7 @@ https://ted.europa.eu/en/notice/-/detail/735065-2022
 ----
 // "https://ted.europa.eu/udl?uri=TED:NOTICE:735065-2022:TEXT:EN:HTML"
 // "https://ted.europa.eu/en/notice/-/detail/735065-2022"
+
 *Examples of direct links to Notice 564613-2023 in English (en) and French (fr):*
 
 (for any other EU language, replace "en" or "fr" with the desired language code)

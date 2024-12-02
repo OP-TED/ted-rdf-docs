@@ -5,43 +5,61 @@
 :docdate: October 2023
 
 
-* xref:ODS::index.adoc[Home]
+* [.separated]#**TED Open Data**#
 
-* [.separated]#**Querying TED Open Data**#
-* xref:querying:index.adoc[TED Open Data]
-** xref:querying:starting.adoc[Getting Started]
-** xref:querying:designing_query.adoc[How to query TED Open data]
-** xref:querying:structure.adoc[SPARQL Query Structure]
+* Querying TED Open data
+** xref:querying:index.adoc[Home]
+** xref:querying:starting.adoc[Getting started]
 ** xref:querying:online_training.adoc[Online training resources]
-** xref:querying:notice_data.adoc[Public procurement data]
+** xref:querying:designing_query.adoc[Designing a query]
+** xref:querying:structure.adoc[SPARQL query structure]
+** xref:querying:notice_data.adoc[Notice data]
 ** xref:querying:epo.adoc[eProcurement Ontology resources]
-** xref:querying:snippets.adoc[Reusable query snippets]
-** xref:querying:scenarios.adoc[Scenarios: question to query]
-** xref:samples:index.adoc[Browse the sample queries]
 
-* [.separated]#**Connecting to TED Open Data**#
-* xref:connecting:index.adoc[Connection Methods]
-** xref:connecting:sparql.adoc[Paste your query directly into the SPARQL Endpoint]
+* Connecting to TED Open Data
+** xref:connecting:index.adoc[Home]
+** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
-** xref:connecting:python.adoc[Connect using Python]
+** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
-* [.separated]#**Sample SPARQL Queries**#
-include::samples:query-list.adoc[]
-
+* Example Query Library
+** xref:samples:index.adoc[Home]
+** xref:samples:query0_epo4.adoc[Query 1: notices per procurement type per country]
+// ** xref:samples:query2.adoc[Query 2: tbd]
+// ** xref:samples:query3.adoc[Query 3: tbd]
 ** xref:snippets:index.adoc[Sample Snippets]
 
-* [.separated]#**Mapping XML data to RDF**#
-* xref:mapping:index.adoc[Mappings and Mapping Suites]
-** xref:mapping:mapping_how.adoc[How to create mappings]
-** xref:mapping:methodology.adoc[Methodology]
-** xref:mapping:toolchain.adoc[Toolchain]
-** xref:mapping:genref.adoc[General Reference]
-** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
-** xref:mapping:repository-structure.adoc[Repository structure]
-** xref:mapping:code-list-resources.adoc[Code list mappings]
-** xref:mapping:preparing-test-data.adoc[Test Data samples]
 
-* [.separated]#**Information and Resources**#
-* xref:samples:data_availability.adoc[Current Data Availability]
-* https://github.com/OP-TED/ted-rdf-docs[Ask the Community for query help]
-* xref:mapping:versioning.adoc[Versioning]
+* [.separated]#**TED XML Schema Data**#
+* Download TED XML Schema Data
+** xref:reuse:download-xml.adoc[XML Downloads]
+** xref:reuse:download-direct.adoc[Direct downloads via links]
+* Search via the Search API
+** xref:reuse:search-api.adoc[Data via the Search API]
+** xref:reuse:search-api-demo.adoc[Examples using the Search API]
+* Access the TED Schemas Archive Resources
+** xref:reuse:ftp.adoc[TED xml schema data archive]
+
+* [.separated]#**Mapping XML data to RDF**#
+* xref:mapping:index.adoc[Home]
+* Mapping Standard Form XML data to RDF
+** xref:mapping:index_sf.adoc[Home]
+** xref:mapping:repository-structure.adoc[Repository structure]
+** xref:mapping:mapping_how.adoc[Methodology]
+** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
+** xref:mapping:preparing-test-data.adoc[Preparing test data samples]
+** xref:mapping:toolchain.adoc[Toolchain]
+** xref:mapping:reusing.adoc[Reusing mappings]
+** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
+** xref:mapping:prior.adoc[Recommended Prior Knowledge]
+
+* Mapping eForms XML data to RDF
+** xref:mapping_eforms:index.adoc[Home]
+** xref:mapping_eforms:methodology.adoc[Methodology]
+** xref:mapping_eforms:package_structure.adoc[Mapping Suite Structure]
+** xref:mapping_eforms:usage.adoc[Usage Instructions]
+
+* [.separated]#**Resources**#
+* xref:data_availability.adoc[Current data availability]
+* xref:ROOT:glossary.adoc[Glossary]
+//* https://github.com/OP-TED/ted-rdf-docs[Ask the community for query help]
