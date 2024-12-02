@@ -6,6 +6,6 @@
 
 == query1: notices per procurement type per country
 
-etc, tbc once queries finalised
+Click xref:samples:query0_epo4.adoc[here] to access the query
 
 include::ROOT:partial$feedback.adoc[]
