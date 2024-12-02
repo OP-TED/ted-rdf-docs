@@ -7,7 +7,19 @@
 
 [source, sparql]
 ----
-include::../queries/notice-per-publication-number.sparql[]
+CONSTRUCT {
+  ?s ?p ?o .
+}
+WHERE {
+  FILTER (?publicationNumber = "00665936-2024")
+  GRAPH ?g {
+    ?Notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?publicationNumber .
+  }
+  GRAPH ?g {
+    ?s ?p ?o .
+  }
+}
 ----
 
 include::ROOT:partial$feedback.adoc[]
