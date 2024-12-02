@@ -27,6 +27,15 @@ The complete query in SPARQL is as follows:
 
 [source, sparql]
 ----
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
 SELECT ?publicationNumber ?winnerLegalName  ?amount ?currency WHERE {
 
   FILTER (?publicationDate = "2024-11-04"^^xsd:date )
@@ -67,6 +76,7 @@ SELECT ?publicationNumber ?winnerLegalName  ?amount ?currency WHERE {
   ?currencyUri dc:identifier ?currency .
 
 } ORDER BY DESC(?amount)
+
 
 ----
 

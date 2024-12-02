@@ -28,6 +28,10 @@ The complete query written in SPARQL is as follows:
 
 [source,sparql]
 ----
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
 SELECT ?publicationNumber ?procedureType ?noticeType ?formType
 WHERE {
   FILTER (?publicationDate = "2024-11-06"^^xsd:date)
@@ -58,6 +62,7 @@ WHERE {
                     skos:prefLabel ?procedureType .
   FILTER (lang(?procedureType) = "en")
 }
+
 ----
 
 * https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0APREFIX+epo%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fa4g%2Fontology%23%3E%0D%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT+%3FpublicationNumber+%3FprocedureType+%3FnoticeType+%3FformType%0D%0AWHERE+%7B%0D%0A++FILTER+%28%3FpublicationDate+%3D+%222024-11-06%22%5E%5Exsd%3Adate%29%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%3Fnotice+a+epo%3ANotice+%3B%0D%0A++++++++++++epo%3AhasPublicationDate+%3FpublicationDate+%3B%0D%0A++++++++++++epo%3AhasNoticePublicationNumber+%3FpublicationNumber+%3B%0D%0A++++++++++++epo%3AhasNoticeType+%3FnoticeTypeUri+%3B%0D%0A++++++++++++epo%3AhasFormType+%3FformTypeUri+%3B%0D%0A++++++++++++epo%3ArefersToProcedure+%5B%0D%0A+++++++++++++++++a+epo%3AProcedure+%3B%0D%0A+++++++++++++++++epo%3AhasProcedureType+%3FprocedureTypeUri%0D%0A+++++++++++%5D+.%0D%0A++%7D%0D%0A%0D%0A++%23+Retrieve+the+label+in+english+for+noticeTypeUri%0D%0A++%3FnoticeTypeUri+a+skos%3AConcept+%3B%0D%0A+++++++++++++++++skos%3AprefLabel+%3FnoticeType+.%0D%0A++FILTER+%28lang%28%3FnoticeType%29+%3D+%22en%22%29%0D%0A%0D%0A++%23+Retrieve+the+label+in+english+for+formTypeUri%0D%0A++%3FformTypeUri+a+skos%3AConcept+%3B%0D%0A+++++++++++++++skos%3AprefLabel+%3FformType+.%0D%0A++FILTER+%28lang%28%3FformType%29+%3D+%22en%22%29%0D%0A%0D%0A++%23+Retrieve+the+label+in+english+for+procedureTypeUri%0D%0A++%3FprocedureTypeUri+a+skos%3AConcept+%3B%0D%0A++++++++++++++++++++skos%3AprefLabel+%3FprocedureType+.%0D%0A++FILTER+%28lang%28%3FprocedureType%29+%3D+%22en%22%29%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+[Run the query online]
