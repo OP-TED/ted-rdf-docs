@@ -1,4 +1,4 @@
-:doctitle: List notices published by Buyers from a specific country on a chosen date
+:doctitle: Retrieving Buyers for a Specific Date
 :doccode: ods-main-prod-201
 
 :author: NPJ

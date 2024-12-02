@@ -5,7 +5,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: July 2024
 
-= Retrieving Competition Notices: Procedure Types and Buyers
+= List competition notices, buyers and their countries on a chosen date
 
 This query retrieves a list of publications, procedure types for competition notices published on November 4, 2024.
 
