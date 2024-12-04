@@ -32,6 +32,7 @@
 ** Advanced
 *** xref:samples:advanced-1.adoc[Advanced 1: Named graphs]
 *** xref:samples:advanced-2.adoc[Advanced 2: RDF of a notice]
+** xref:snippets:index.adoc[SPARQL Snippets]
 
 
 * [.separated]#**TED XML Schema Data**#
@@ -66,5 +67,6 @@
 * [.separated]#**Resources**#
 * xref:data_availability.adoc[Current data availability]
 * xref:ROOT:glossary.adoc[Glossary]
+* https://github.com/OP-TED/ted-open-data/discussions[ Join the discussions]
 
 
