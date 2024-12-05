@@ -168,7 +168,7 @@ PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 SELECT DISTINCT
 ?WinnerLegalName
-(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SAMPLE(?WinnerCountryCode) as ?WinnersCountryCodeURI)
 (SUM(?AwardedValue) as ?TotalAwardedValue)
 (?AwardedValueCurrency as ?AwardedValueCurrencyURI)
 WHERE {

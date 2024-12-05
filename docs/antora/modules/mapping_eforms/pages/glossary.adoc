@@ -33,7 +33,7 @@ for RDF databases or _triplestores_, allowing one to ask questions about the
 information stored in RDF graphs, analogue to what SQL is to traditional
 relational database management systems (RDBMS).
 
-*OWL* Web Ontology Language - A declarative computer data modeling language
+*OWL* Web Ontology Language - A declarative computer data modelling language
 specifically designed for creating and expressing ontologies, built on top of
 the RDF-Schema knowledge representation standard. It provides a richer
 _vocabulary_ and more powerful logical constructs for defining complex

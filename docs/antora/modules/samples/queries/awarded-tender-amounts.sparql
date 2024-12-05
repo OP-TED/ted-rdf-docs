@@ -24,7 +24,7 @@ WHERE {
            a epo:TenderAwardOutcome ;
            epo:concernsTender [
              a epo:Tender ;
-             epo:isSubmitedBy [
+             epo:isSubmittedBy [
                a epo:Tenderer ;
                epo:playedBy [
                  epo:hasLegalName ?legalName
