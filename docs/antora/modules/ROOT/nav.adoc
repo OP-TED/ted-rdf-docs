@@ -1,10 +1,10 @@
 
+
 * xref:ODS::index.adoc[Home]
 
 * [.separated]#**TED Open Data**#
 
-* Querying TED Open data
-** xref:querying:index.adoc[Home]
+* xref:querying:index.adoc[Querying TED Open data]
 ** xref:querying:starting.adoc[Getting started]
 ** xref:querying:online_training.adoc[Online training resources]
 ** xref:querying:designing_query.adoc[Designing a query]
@@ -12,42 +12,31 @@
 ** xref:querying:notice_data.adoc[Notice data]
 ** xref:querying:epo.adoc[eProcurement Ontology resources]
 
-* Connecting to TED Open Data
-** xref:connecting:index.adoc[Home]
+* xref:connecting:index.adoc[Connecting to TED Open Data]
 ** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
- 
-
-* Example Query Library
-
-** Common Queries
-*** xref:samples:query-1.adoc[Query 1: Notices published on a specific date]
-*** xref:samples:query-2.adoc[Query 2: Contracts]
-*** xref:samples:query-3.adoc[Query 3: Tender amounts]
-*** xref:samples:query-4.adoc[Query 4: Winners]
-*** xref:samples:query-5.adoc[Query 5: Notices published by buyers]
-*** xref:samples:query-6.adoc[Query 6: Competition notices]
-** Advanced
-*** xref:samples:advanced-1.adoc[Advanced 1: Named graphs]
-*** xref:samples:advanced-2.adoc[Advanced 2: RDF of a notice]
-
+* xref:samples:index.adoc[Example Query Library]
+** xref:samples:query-1.adoc[Query 1: Notices published on a specific date]
+** xref:samples:query-2.adoc[Query 2: Contracts]
+** xref:samples:query-3.adoc[Query 3: Tender amounts]
+** xref:samples:query-4.adoc[Query 4: Winners]
+** xref:samples:query-5.adoc[Query 5: Notices published by buyers]
+** xref:samples:query-6.adoc[Query 6: Competition notices]
+** xref:samples:advanced-1.adoc[Advanced 1: Named graphs]
+** xref:samples:advanced-2.adoc[Advanced 2: RDF of a notice]
+** xref:snippets:index.adoc[SPARQL Snippets]
 
 * [.separated]#**TED XML Schema Data**#
-* Download TED XML Schema Data
-** xref:reuse:download-xml.adoc[XML Downloads]
-** xref:reuse:download-direct.adoc[Direct downloads via links]
-* Search via the Search API
-** xref:reuse:search-api.adoc[Data via the Search API]
-** xref:reuse:search-api-demo.adoc[Examples using the Search API]
-* Access the TED Schemas Archive Resources
-** xref:reuse:ftp.adoc[TED xml schema data archive]
+* xref:reuse:download-xml.adoc[XML Downloads]
+* xref:reuse:download-direct.adoc[Direct downloads via links]
+* xref:reuse:search-api.adoc[Data via the Search API]
+* xref:reuse:search-api-demo.adoc[Examples using the Search API]
+* xref:reuse:ftp.adoc[TED xml schema data archive]
 
 * [.separated]#**Mapping XML data to RDF**#
-* xref:mapping:index.adoc[Home]
-* Mapping Standard Form XML data to RDF
-** xref:mapping:index_sf.adoc[Home]
+* xref:mapping:index_sf.adoc[Mapping Standard Form XML data to RDF]
 ** xref:mapping:repository-structure.adoc[Repository structure]
 ** xref:mapping:mapping_how.adoc[Methodology]
 ** xref:mapping:mapping-suite-structure.adoc[Mapping suite package structure]
@@ -57,8 +46,7 @@
 ** xref:mapping:code-list-resources.adoc[Resources for mapping code lists]
 ** xref:mapping:prior.adoc[Recommended Prior Knowledge]
 
-* Mapping eForms XML data to RDF
-** xref:mapping_eforms:index.adoc[Home]
+* xref:mapping_eforms:index.adoc[Mapping eForms XML data to RDF]
 ** xref:mapping_eforms:methodology.adoc[Methodology]
 ** xref:mapping_eforms:package_structure.adoc[Mapping Suite Structure]
 ** xref:mapping_eforms:usage.adoc[Usage Instructions]
@@ -66,5 +54,5 @@
 * [.separated]#**Resources**#
 * xref:data_availability.adoc[Current data availability]
 * xref:ROOT:glossary.adoc[Glossary]
-
+* https://github.com/OP-TED/ted-open-data/discussions[Join the discussions]
 

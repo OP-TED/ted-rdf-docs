@@ -4,35 +4,32 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
 
-== Current Processing
+[cols="1,1"]
+|===
+|eForms |Standard Forms (TEDXML)
 
-=== eForms notices
+a|* conform to the eProcurement Ontology V4 +
+(to be upgraded to ePO v5 in 2025)
+a|* conform to the eProcurement Ontology v3.1 +
+(to be upgraded to ePO v5 after eForms)
 
-Two categories of data are being processed by the TED Open Data Service pipeline currently:
+a|*Current transformation*
 
 * Daily eForms notices of form types 10 to 24, and 29, as of the 4 November 2024
 
-* The backlog of eForms notices of form types 10 to 24, and 29, from before the 4 November 2024 to the beginning of eForms (October 2023)
+* The backlog of eForms notices of form types 10 to 24, and 29, from before the 4 November 2024 to the beginning of eForms (October 2023) 
 
-These eForms notices are converted according to the specifications of eProcurement Ontology v4.
+a|*Current transformation*
 
-=== XML Notices
+* A limited number of XML notices are available in Cellar. These were produced during the initial TED Open Data Service Pipeline proof of concept.
 
-A limited number of XML notices are available in Cellar. These were produced during the initial TED Open Data Service Pipeline proof of concept.
+* Form types F3, F6, F21, F22, F23, F25
 
-* Contract Award Notices (CANs) from September 2023 to January 2024
+|Remaining notice subtypes: in development until March 2025; transformation to be completed by the end of 2025.
 
-The processing of these was against the eProcurement Ontology v3.1.
+|Support for the remaining form types coming in 2026
+|===
 
-== Planned processing
-
-=== eForms notices
-
-With the https://docs.ted.europa.eu/epo-home/history.html[completion of the eProcurement Ontology], and with the mapping of the rest of the form types:
-
-* Daily eForms notices of all types as of April 2025
-
-* The backlog of all eForms notice types as of April 2025
 
 
 NOTE: Refer back to this page regularly to check if there have been updates. Use the xref:querying:epo.adoc[ePO resources] of the versions mentioned above to find the classes you wish to use in your queries.
