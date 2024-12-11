@@ -1,0 +1,117 @@
+:doctitle: Notices published on a specific date
+:doccode: ods-main-prod-201
+
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+= Notices published on a specific date
+
+This query retrieves all procurement notices that were published on a specific date.
+
+== Output
+
+The results include key details about each notice:
+
+* *Publication Number*: A unique identifier for each notice.
+* *Notice Type*: The category of notice (e.g., contract notice, prior information notice).
+* *Form Type*: The document or form used in the procurement process.
+* *Procedure Type*: The classification of the procurement procedure.
+
+== Filters Applied
+
+* *Publication Date*: Limits results to notices published on `2024-11-04`.
+
+== Query
+
+The complete query written in SPARQL is as follows:
+
+[source,sparql]
+----
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?publicationNumber ?procedureType ?noticeType ?formType
+WHERE {
+  FILTER (?publicationDate = "2024-11-06"^^xsd:date)
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasNoticeType ?noticeTypeUri ;
+            epo:hasFormType ?formTypeUri ;
+            epo:refersToProcedure [
+                 a epo:Procedure ;
+                 epo:hasProcedureType ?procedureTypeUri
+           ] .
+  }
+
+  # Retrieve the label in english for noticeTypeUri
+  ?noticeTypeUri a skos:Concept ;
+                 skos:prefLabel ?noticeType .
+  FILTER (lang(?noticeType) = "en")
+
+  # Retrieve the label in english for formTypeUri
+  ?formTypeUri a skos:Concept ;
+               skos:prefLabel ?formType .
+  FILTER (lang(?formType) = "en")
+
+  # Retrieve the label in english for procedureTypeUri
+  ?procedureTypeUri a skos:Concept ;
+                    skos:prefLabel ?procedureType .
+  FILTER (lang(?procedureType) = "en")
+}
+
+----
+
+* https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0APREFIX+epo%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fa4g%2Fontology%23%3E%0D%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT+%3FpublicationNumber+%3FprocedureType+%3FnoticeType+%3FformType%0D%0AWHERE+%7B%0D%0A++FILTER+%28%3FpublicationDate+%3D+%222024-11-06%22%5E%5Exsd%3Adate%29%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%3Fnotice+a+epo%3ANotice+%3B%0D%0A++++++++++++epo%3AhasPublicationDate+%3FpublicationDate+%3B%0D%0A++++++++++++epo%3AhasNoticePublicationNumber+%3FpublicationNumber+%3B%0D%0A++++++++++++epo%3AhasNoticeType+%3FnoticeTypeUri+%3B%0D%0A++++++++++++epo%3AhasFormType+%3FformTypeUri+%3B%0D%0A++++++++++++epo%3ArefersToProcedure+%5B%0D%0A+++++++++++++++++a+epo%3AProcedure+%3B%0D%0A+++++++++++++++++epo%3AhasProcedureType+%3FprocedureTypeUri%0D%0A+++++++++++%5D+.%0D%0A++%7D%0D%0A%0D%0A++%23+Retrieve+the+label+in+english+for+noticeTypeUri%0D%0A++%3FnoticeTypeUri+a+skos%3AConcept+%3B%0D%0A+++++++++++++++++skos%3AprefLabel+%3FnoticeType+.%0D%0A++FILTER+%28lang%28%3FnoticeType%29+%3D+%22en%22%29%0D%0A%0D%0A++%23+Retrieve+the+label+in+english+for+formTypeUri%0D%0A++%3FformTypeUri+a+skos%3AConcept+%3B%0D%0A+++++++++++++++skos%3AprefLabel+%3FformType+.%0D%0A++FILTER+%28lang%28%3FformType%29+%3D+%22en%22%29%0D%0A%0D%0A++%23+Retrieve+the+label+in+english+for+procedureTypeUri%0D%0A++%3FprocedureTypeUri+a+skos%3AConcept+%3B%0D%0A++++++++++++++++++++skos%3AprefLabel+%3FprocedureType+.%0D%0A++FILTER+%28lang%28%3FprocedureType%29+%3D+%22en%22%29%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+[Run the query online]
+
+== Structures Applied
+
+=== Notice Metadata
+
+The query extracts key metadata for each notice as follows:
+
+[source,sparql]
+----
+    ?notice a epo:Notice ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasNoticeType ?noticeTypeUri ;
+            epo:hasFormType ?formTypeUri ;
+            epo:refersToProcedure [
+                 a epo:Procedure ;
+                 epo:hasProcedureType ?procedureTypeUri
+           ] .
+----
+
+The extracted metadata includes:
+
+* *Publication Number*: A unique identifier for the notice.
+* *Notice Type*: The category of notice (e.g., contract notice, prior information notice).
+* *Form Type*: The specific document or form used in the procurement process.
+* *Procedure Type*: The classification of the procurement procedure.
+
+=== Label Extraction
+
+The metadata values are identified by URIs, which are then translated into human-readable labels, leveraging multilingual descriptions provided by the https://op.europa.eu/en/web/eu-vocabularies/authority-tables[EU Vocabularies].
+
+For example, the structure to get the labels of a procedure type in english is as follows:
+
+[source,sparql]
+----
+  ?procedureTypeUri a skos:Concept ;
+                    skos:prefLabel ?procedureType .
+  FILTER (lang(?procedureType) = "en")
+----
+
+This method is applied to other metadata fields, including the notice type and form type.
+
+== Summary
+
+This query retrieves procurement notices published on a specific date (e.g., *November 4, 2024*).
+It filters results based on the publication date and extracts key metadata, including the publication number, notice type, form type, and procedure type.
+The query also uses multilingual labels from the EU Vocabularies to make metadata more accessible.
+
+include::ROOT:partial$feedback.adoc[]

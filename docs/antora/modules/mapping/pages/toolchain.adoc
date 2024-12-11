@@ -76,7 +76,7 @@ This tool extracts the relevant metadata from the conceptual mapping file (by de
 //For more detailed documentation on its usage please check out the https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html#_cmd_metadata_generator[dedicated section in the Mapping Suite CLI Toolchain] documentation.
 
 === YARRRML to RML Converter (yarrrml2rml_converter)
-This command line tool allows the conversion of a mapping expressed in the more user-friendly YARRRML syntax to RML. This is a very useful tool, especially at initial phases of the mapping development, or for newcomers, as it is easier and faster to write YARRRML rules than RML rules. This tool is not used anymore in the current development process as, due to technical reasons, the mappings are developed directly in RML, not in YARRRML.
+This command line tool allows the conversion of a mapping expressed in the more user-friendly YARRRML syntax to RML. This is a very useful tool, especially at initial phases of the mapping development, or for newcomers, as it is easier and faster to write YARRRML rules than RML rules. This tool is not used any more in the current development process as, due to technical reasons, the mappings are developed directly in RML, not in YARRRML.
 
 //For more detailed documentation on its usage please check out the https://docs.ted.europa.eu/rdf-conversion/mapping_suite_cli_toolchain.html#_cmd_yarrrml2rml_converter[dedicated section in the Mapping Suite CLI Toolchain] documentation.
 

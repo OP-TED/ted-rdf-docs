@@ -1,0 +1,94 @@
+:doctitle: Retrieving Buyers for a Specific Date
+:doccode: ods-main-prod-201
+
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+= Retrieving Buyers for a Specific Date
+
+This query retrieves buyers of contracts published on November 4, 2024, providing details about the organisations and their countries.
+
+== Output
+
+* Publication Number: The unique identifier for the notice.
+* Legal Name: The name of the buying organisation.
+* Country: The country where the buyer is registered.
+
+== Filters Applied
+
+Publication Date: Filters results to contracts published on 2024-11-04.
+Country language: Retrieves country names in English.
+
+== Query
+The complete query in SPARQL is as follows:
+
+[source, sparql]
+----
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?publicationNumber ?legalName ?country
+WHERE {
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:announcesRole [
+         a epo:Buyer ;
+         epo:playedBy [
+           epo:hasLegalName ?legalName ;
+           cccev:registeredAddress [
+             epo:hasCountryCode ?countryUri
+           ]
+         ]
+       ] .
+  }
+  ?countryUri a skos:Concept ;
+              skos:prefLabel ?country .
+  FILTER (lang(?country) = "en")
+}
+----
+
+* https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0D%0APREFIX+epo%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fa4g%2Fontology%23%3E%0D%0APREFIX+cccev%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fm8g%2F%3E%0D%0APREFIX+org%3A+%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Forg%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3FpublicationNumber+%3FlegalName+%3Fcountry%0D%0AWHERE+%7B%0D%0A++FILTER+%28%3FpublicationDate+%3D+%222024-11-04%22%5E%5Exsd%3Adate%29%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%3Fnotice+a+epo%3ANotice+%3B%0D%0A++++++++++++epo%3AhasPublicationDate+%3FpublicationDate+%3B%0D%0A++++++++++++epo%3AhasNoticePublicationNumber+%3FpublicationNumber+%3B%0D%0A++++++++++++epo%3AannouncesRole+%5B%0D%0A+++++++++a+epo%3ABuyer+%3B%0D%0A+++++++++epo%3AplayedBy+%5B%0D%0A+++++++++++epo%3AhasLegalName+%3FlegalName+%3B%0D%0A+++++++++++cccev%3AregisteredAddress+%5B%0D%0A+++++++++++++epo%3AhasCountryCode+%3FcountryUri%0D%0A+++++++++++%5D%0D%0A+++++++++%5D%0D%0A+++++++%5D+.%0D%0A++%7D%0D%0A++%3FcountryUri+a+skos%3AConcept+%3B%0D%0A++++++++++++++skos%3AprefLabel+%3Fcountry+.%0D%0A++FILTER+%28lang%28%3Fcountry%29+%3D+%22en%22%29%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+[Run the query online]
+
+== Structures Applied
+
+=== Notice and Buyer Relationships
+
+The query identifies organisations specifically playing the role of a buyer in contract notices. This is achieved through the epo:Buyer role, which captures organisations responsible for purchasing goods or services.
+
+[source,sparql]
+----
+epo:announcesRole [
+    a epo:Buyer ;
+    epo:playedBy [
+        epo:hasLegalName ?legalName ;
+            cccev:registeredAddress [
+                epo:hasCountryCode ?countryUri
+            ]
+        ]
+]
+----
+
+=== Country Identification
+
+Countries are retrieved using their concept labels in English:
+
+[source,sparql]
+----
+?countryUri a skos:Concept ;
+skos:prefLabel ?country .
+FILTER (lang(?country) = "en")
+----
+
+== Summary
+
+This query retrieves information about buyers of contracts published on a specific date. The results include the publication number, the legal name of the buying organisation, and the country where the organisation is registered.
+
+include::ROOT:partial$feedback.adoc[]

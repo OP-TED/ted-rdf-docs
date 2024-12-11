@@ -1,0 +1,139 @@
+:doctitle: List the winners per day
+:doccode: ods-main-prod-201
+
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+= Retrieving Winners for a Specific Date
+
+This query retrieves the winners of contracts published on November 4, 2024, filtered and sorted to meet specific criteria.
+
+== Output
+
+* Publication Number: The unique identifier for the notice.
+* Winner Legal Name: The name of the winning organisation.
+* Amount and currency: The financial offer value and its corresponding currency.
+
+== Filters Applied
+
+* Publication Date: Filters results to contracts published on 2024-11-04.
+* Currency: Restricts the results to contracts involving transactions in Euros (EUR).
+* Winner Status: Selects only tenders with winning status.
+* Sorting: Orders the results by contract amount in descending order.
+
+== Query
+The complete query in SPARQL is as follows:
+
+[source, sparql]
+----
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?publicationNumber ?winnerLegalName  ?amount ?currency WHERE {
+
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date )
+  FILTER (?currencyUri = <http://publications.europa.eu/resource/authority/currency/EUR> )
+  FILTER (?rank = 1 )
+  FILTER (?awardStatusUri = <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w> )  # was selected
+
+  	?noticeUri a epo:Notice ;
+  		epo:hasPublicationDate ?publicationDate ;
+	  	epo:hasNoticePublicationNumber ?publicationNumber ;
+    	epo:announcesAwardDecision [
+      		a epo:AwardDecision ;
+    		epo:comprisesAwardOutcome [
+    			a epo:LotAwardOutcome ;
+      			epo:hasAwardStatus ?awardStatusUri ;
+         		epo:concernsLot ?lotUri ;
+                epo:comprisesTenderAwardOutcome [
+          			a epo:TenderAwardOutcome ;
+                	epo:hasAwardRank ?rank ;
+                    epo:concernsTender [
+                        a epo:Tender ;
+                        epo:isSubmitedBy [
+                              a epo:Tenderer ;
+                              epo:playedBy ?winnerUri
+                            ] ;
+                        epo:hasFinancialOfferValue [
+                            a epo:MonetaryValue ;
+                            epo:hasAmountValue ?amount ;
+                            epo:hasCurrency ?currencyUri ;
+
+                        ]
+                    ] ;
+      			]
+  			]
+  		] .
+
+  ?winnerUri epo:hasLegalName ?winnerLegalName .
+  ?currencyUri dc:identifier ?currency .
+
+} ORDER BY DESC(?amount)
+
+
+----
+
+* https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+epo%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fa4g%2Fontology%23%3E%0D%0APREFIX+cccev%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fm8g%2F%3E%0D%0APREFIX+dcterms%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT+%3FpublicationNumber+%3FwinnerLegalName++%3Famount+%3Fcurrency+WHERE+%7B%0D%0A%0D%0A++FILTER+%28%3FpublicationDate+%3D+%222024-11-04%22%5E%5Exsd%3Adate+%29%0D%0A++FILTER+%28%3FcurrencyUri+%3D+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fresource%2Fauthority%2Fcurrency%2FEUR%3E+%29%0D%0A++FILTER+%28%3Frank+%3D+1+%29%0D%0A++FILTER+%28%3FawardStatusUri+%3D+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fresource%2Fauthority%2Fwinner-selection-status%2Fselec-w%3E+%29++%23+was+selected%0D%0A%0D%0A++%09%3FnoticeUri+a+epo%3ANotice+%3B%0D%0A++%09%09epo%3AhasPublicationDate+%3FpublicationDate+%3B%0D%0A%09++%09epo%3AhasNoticePublicationNumber+%3FpublicationNumber+%3B%0D%0A++++%09epo%3AannouncesAwardDecision+%5B%0D%0A++++++%09%09a+epo%3AAwardDecision+%3B%0D%0A++++%09%09epo%3AcomprisesAwardOutcome+%5B%0D%0A++++%09%09%09a+epo%3ALotAwardOutcome+%3B%0D%0A++++++%09%09%09epo%3AhasAwardStatus+%3FawardStatusUri+%3B%0D%0A+++++++++%09%09epo%3AconcernsLot+%3FlotUri+%3B%0D%0A++++++++++++++++epo%3AcomprisesTenderAwardOutcome+%5B%0D%0A++++++++++%09%09%09a+epo%3ATenderAwardOutcome+%3B%0D%0A++++++++++++++++%09epo%3AhasAwardRank+%3Frank+%3B%0D%0A++++++++++++++++++++epo%3AconcernsTender+%5B%0D%0A++++++++++++++++++++++++a+epo%3ATender+%3B%0D%0A++++++++++++++++++++++++epo%3AisSubmitedBy+%5B%0D%0A++++++++++++++++++++++++++++++a+epo%3ATenderer+%3B%0D%0A++++++++++++++++++++++++++++++epo%3AplayedBy+%3FwinnerUri%0D%0A++++++++++++++++++++++++++++%5D+%3B%0D%0A++++++++++++++++++++++++epo%3AhasFinancialOfferValue+%5B%0D%0A++++++++++++++++++++++++++++a+epo%3AMonetaryValue+%3B%0D%0A++++++++++++++++++++++++++++epo%3AhasAmountValue+%3Famount+%3B%0D%0A++++++++++++++++++++++++++++epo%3AhasCurrency+%3FcurrencyUri+%3B%0D%0A%0D%0A++++++++++++++++++++++++%5D%0D%0A++++++++++++++++++++%5D+%3B%0D%0A++++++%09%09%09%5D%0D%0A++%09%09%09%5D%0D%0A++%09%09%5D+.%0D%0A%0D%0A++%3FwinnerUri+epo%3AhasLegalName+%3FwinnerLegalName+.%0D%0A++%3FcurrencyUri+dc%3Aidentifier+%3Fcurrency+.%0D%0A%0D%0A%7D+ORDER+BY+DESC%28%3Famount%29%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+[Run the query online]
+
+== Structures Applied
+
+=== Award Decisions and Outcomes
+
+The query uses a nested structure to retrieve award decisions and their outcomes:
+
+[source,sparql]
+----
+?noticeUri epo:announcesAwardDecision [
+           a epo:AwardDecision ;
+           epo:comprisesAwardOutcome [
+              a epo:LotAwardOutcome ;
+              epo:hasAwardStatus ?awardStatusUri ;
+               epo:concernsLot ?lotUri ;
+                ...
+          ]
+----
+
+=== Tenderer and Financial Information
+
+The structure links tenderers, tenders, and their financial details:
+
+[source,sparql]
+----
+epo:comprisesTenderAwardOutcome [
+  a epo:TenderAwardOutcome ;
+  epo:hasAwardRank ?rank ;
+  epo:concernsTender [
+    a epo:Tender ;
+    epo:isSubmitedBy [
+      a epo:Tenderer ;
+      epo:playedBy ?winnerUri
+    ] ;
+    epo:hasFinancialOfferValue [
+      a epo:MonetaryValue ;
+      epo:hasAmountValue ?amount ;
+      epo:hasCurrency ?currencyUri
+    ]
+  ]
+----
+
+=== Winner legal name
+
+The query retrieves the legal names of the tender:
+
+[source,sparql]
+----
+?winnerUri epo:hasLegalName ?winnerLegalName
+----
+
+== Summary
+
+This query retrieves information about the winners of contracts published on a specific date. The results include details such as publication number, winner's legal name, financial amounts, and currencies, focusing on first-ranked (winning) tenders.
+
+include::ROOT:partial$feedback.adoc[]

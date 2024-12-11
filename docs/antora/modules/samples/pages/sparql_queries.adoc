@@ -36,7 +36,7 @@ The query retrieves:
 
 * The number of distinct procurement notices. (Using "DISTINCT" in the query SELECT statement eliminates duplicate results)
 
-The notice publication date, organization country and organization size can be changed to create other queries. To do this you can change values in the following section:
+The notice publication date, organisation country and organisation size can be changed to create other queries. To do this you can change values in the following section:
 
     VALUES (?NoticePublicationDate ?CountryCode ?BusinessSize) {
             ("20230905"
@@ -47,11 +47,11 @@ The notice publication date, organization country and organization size can be c
 
     "20230905"
 
-* The value (code) for organization country:
+* The value (code) for organisation country:
 
     <http://publications.europa.eu/resource/authority/country/DEU>
 
-* The value for organization size:
+* The value for organisation size:
 
     <http://publications.europa.eu/resource/authority/economic-operator-size/sme>
 
@@ -71,7 +71,7 @@ WHERE {
     ?Notice epo:hasPublicationDate ?NoticePublicationDate .
     ?Notice epo:announcesRole ?Winner .
     ?Winner a epo:Winner ;
-            epo:playedBy ?Organization .
+            epo:playedBy ?Organisation .
     ?Organization epo:hasBusinessSize ?BusinessSize .
     ?Organization cccev:registeredAddress / epo:hasCountryCode ?CountryCode .
 }
@@ -93,9 +93,9 @@ The query retrieves:
 
 * The name of the buyer.
 
-It does so by specifying a set of values and then querying the RDF data based on those values. The query returns information about the notices, the organizations (buyers), and their legal names.
+It does so by specifying a set of values and then querying the RDF data based on those values. The query returns information about the notices, the organisations (buyers), and their legal names.
 
-The publication date and organization country can be changed to create other queries. To do this, change the following section:
+The publication date and organisation country can be changed to create other queries. To do this, change the following section:
 
     VALUES (?PublicationDate ?countryCode) {
             ("20230905" <http://publications.europa.eu/resource/authority/country/DEU>)
@@ -105,7 +105,7 @@ The publication date and organization country can be changed to create other que
 
             "20230905"
 
-* The value for organization country in example above:
+* The value for organisation country in example above:
 
     <http://publications.europa.eu/resource/authority/country/DEU>
 
@@ -168,7 +168,7 @@ PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 SELECT DISTINCT
 ?WinnerLegalName
-(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SAMPLE(?WinnerCountryCode) as ?WinnersCountryCodeURI)
 (SUM(?AwardedValue) as ?TotalAwardedValue)
 (?AwardedValueCurrency as ?AwardedValueCurrencyURI)
 WHERE {
@@ -196,7 +196,7 @@ WHERE {
 GROUP BY ?WinnerLegalName ?AwardedValueCurrency
 
 
-== Query: Return the highest value contract awarded on the 23 September 2023. 
+== Query: Return the highest value contract awarded on the 23 September 2023.
 
 This query lists the contract values for contract awards published on this date, orders the results by value descending, and limit the results to one row (which is the highest value contract due to the order).
 {nbsp}

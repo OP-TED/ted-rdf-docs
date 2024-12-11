@@ -1,0 +1,157 @@
+:doctitle: Retrieving Contracts for a Specific Date
+:doccode: ods-main-prod-201
+
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: July 2024
+
+= Retrieving Contracts for a Specific Date
+
+This query retrieves contracts published on *November 4, 2024*, filtered and sorted to meet specific criteria.
+
+== Output
+
+* *Contract Title*: The title of the contract.
+* *Conclusion Date*: The date when the contract was finalized.
+* *Lot Information*: The associated lots for each contract.
+* *Financial Information*: The contract amount and its corresponding currency.
+
+== Filters Applied
+
+* *Publication Date*: Filters results to contracts published on `2024-11-04`.
+* *Currency*: Restricts the results to contracts involving transactions in Euros (EUR).
+* *Sorting*: Orders the results by contract amount in descending order.
+
+== Query
+
+The complete query in SPARQL is as follows:
+
+[source,sparql]
+----
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?contractTitle ?conclusionDate ?lotUri ?amount ?currency
+WHERE {
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+  FILTER (?currencyUri = <http://publications.europa.eu/resource/authority/currency/EUR>)
+  ?noticeUri a epo:Notice ;
+             epo:refersToLot ?lotUri ;
+             epo:hasPublicationDate ?publicationDate ;
+             epo:hasNoticePublicationNumber ?publicationNumber .
+  ?contractUri a epo:Contract ;
+               dct:title ?contractTitle ;
+               epo:hasContractConclusionDate ?conclusionDate ;
+               epo:includesTender [
+       a epo:Tender ;
+       epo:isSubmittedForLot ?lotUri ;
+       epo:hasFinancialOfferValue [
+         a epo:MonetaryValue ;
+         epo:hasAmountValue ?amount ;
+         epo:hasCurrency ?currencyUri
+       ]
+     ] .
+  ?currencyUri dc:identifier ?currency .
+}
+ORDER BY DESC(?amount)
+----
+
+* https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+dct%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+epo%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fa4g%2Fontology%23%3E%0D%0APREFIX+cccev%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2Fm8g%2F%3E%0D%0APREFIX+dcterms%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT+%3FcontractTitle+%3FconclusionDate+%3FlotUri+%3Famount+%3Fcurrency%0D%0AWHERE+%7B%0D%0A++FILTER+%28%3FpublicationDate+%3D+%222024-11-04%22%5E%5Exsd%3Adate%29%0D%0A++FILTER+%28%3FcurrencyUri+%3D+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fresource%2Fauthority%2Fcurrency%2FEUR%3E%29%0D%0A++%3FnoticeUri+a+epo%3ANotice+%3B%0D%0A+++++++++++++epo%3ArefersToLot+%3FlotUri+%3B%0D%0A+++++++++++++epo%3AhasPublicationDate+%3FpublicationDate+%3B%0D%0A+++++++++++++epo%3AhasNoticePublicationNumber+%3FpublicationNumber+.%0D%0A++%3FcontractUri+a+epo%3AContract+%3B%0D%0A+++++++++++++++dct%3Atitle+%3FcontractTitle+%3B%0D%0A+++++++++++++++epo%3AhasContractConclusionDate+%3FconclusionDate+%3B%0D%0A+++++++++++++++epo%3AincludesTender+%5B%0D%0A+++++++a+epo%3ATender+%3B%0D%0A+++++++epo%3AisSubmittedForLot+%3FlotUri+%3B%0D%0A+++++++epo%3AhasFinancialOfferValue+%5B%0D%0A+++++++++a+epo%3AMonetaryValue+%3B%0D%0A+++++++++epo%3AhasAmountValue+%3Famount+%3B%0D%0A+++++++++epo%3AhasCurrency+%3FcurrencyUri%0D%0A+++++++%5D%0D%0A+++++%5D+.%0D%0A++%3FcurrencyUri+dc%3Aidentifier+%3Fcurrency+.%0D%0A%7D%0D%0AORDER+BY+DESC%28%3Famount%29%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+[Run the query online]
+
+== Structures Applied
+
+=== Notices and Lots
+
+Notices are linked to specific lots using the property `epo:refersToLot`.
+This relationship associates each notice with its corresponding lot(s) as shown below:
+
+[source,sparql]
+----
+?noticeUri epo:refersToLot ?lotUri .
+----
+
+=== Contracts and Lots
+
+Contracts are tied to lots and include details such as contract title, conclusion date, and financial offer values.
+The structure is as follows:
+
+[source,sparql]
+----
+?contractUri a epo:Contract ;
+             dct:title ?contractTitle ;
+             epo:hasContractConclusionDate ?conclusionDate ;
+             epo:includesTender [
+  a epo:Tender ;
+  epo:isSubmittedForLot ?lotUri ;
+  epo:hasFinancialOfferValue [
+    a epo:MonetaryValue ;
+    epo:hasAmountValue ?amount ;
+    epo:hasCurrency ?currencyUri
+  ]
+] .
+----
+
+=== Award Decision and Outcomes
+
+Notices may also announce award decisions linked to specific lots, as seen in the following structure:
+
+[source,sparql]
+----
+?noticeUri epo:announcesAwardDecision [
+         a epo:AwardDecision ;
+         epo:comprisesAwardOutcome ?awardOutcome .
+    ]
+----
+
+Award outcomes are linked to lots, as shown below:
+
+[source,sparql]
+----
+?awardOutcome a epo:LotAwardOutcome ;
+              epo:concernsLot ?lotUri ;
+----
+
+=== Tenderers, Tenders, and Financial Information
+
+Each lot is associated with tenders containing information about the tenderer, their financial offers, and the link to the award decision.
+The relationship is shown below:
+
+[source,sparql]
+----
+?awardOutcome epo:comprisesTenderAwardOutcome [
+  a epo:TenderAwardOutcome ;
+  epo:concernsTender ?tenderUri .
+] .
+----
+
+Tenderers and financial details are linked through the following structure:
+
+[source,sparql]
+----
+?tenderUri a epo:Tender ;
+           epo:isSubmitedBy [
+             a epo:Tenderer ;
+             epo:playedBy [
+               epo:hasLegalName ?legalName
+             ]
+           ] ;
+           epo:hasFinancialOfferValue [
+             a epo:MonetaryValue ;
+             epo:hasAmountValue ?amount ;
+             epo:hasCurrency ?currencyUri
+           ] .
+----
+
+== Summary
+
+This query efficiently retrieves contract information for a specific publication date.
+The results include details such as contract title, conclusion date, financial amounts, and currencies.
+
+include::ROOT:partial$feedback.adoc[]

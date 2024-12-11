@@ -1,0 +1,37 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?publicationNumber ?legalName ?procedureType ?country
+WHERE {
+	FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+	FILTER (?formType = <http://publications.europa.eu/resource/authority/form-type/competition>)
+
+  GRAPH ?g {
+    ?notice
+        epo:hasPublicationDate ?publicationDate ;
+        epo:refersToProcedure [
+            epo:hasProcedureType ?procedureTypeUri ;
+            a epo:Procedure
+        ] ;
+        epo:hasNoticePublicationNumber ?publicationNumber ;
+        epo:hasFormType ?formType ;
+        epo:announcesRole [
+            a epo:Buyer ;
+            epo:playedBy [
+                epo:hasLegalName ?legalName ;
+                cccev:registeredAddress [
+                    epo:hasCountryCode ?countryUri
+                ]
+            ]
+        ]
+    }
+    ?procedureTypeUri a skos:Concept ;
+        skos:prefLabel ?procedureType.
+    FILTER (lang(?procedureType) = "en")
+
+    ?countryUri dc:identifier ?country.
+}
