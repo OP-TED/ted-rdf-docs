@@ -35,7 +35,10 @@ VALUES ?NoticePublicationDate {
 
 === Limit the results to a date range
 
+[source]
+--
 FILTER (?NoticePublicationDate < "2023-09-01"^^xsd:dateTime && ?NoticePublicationDate > "2024-01-01"^^xsd:dateTime)
+--
 
 === *?LotURI* and *?NoticePublicationDate* derived from _?Notice_:
 
