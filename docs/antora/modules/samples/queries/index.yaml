@@ -1,0 +1,12 @@
+queries:
+ - category: Common Queries
+   title: Amounts Awarded per Notice
+   description: This query returns the values awarded for the all notices published on a specified date.
+   sparql: awarded-tender-amounts.sparql
+
+ - category: Common Queries
+   title: Competition notices, buyers and their countries on a specified date
+   description: This query retrieves the list of competition notices, including their buyers and procedure types published on a specified day
+   sparql: competition-notices.sparql
+
+
