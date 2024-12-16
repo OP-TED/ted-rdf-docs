@@ -8,7 +8,7 @@
 
 Some SPARQL code snippets are provided below for classes that are used often in public procurement SPARQL queries. These are classes such as winner country, lot value, currency, date, winner business size, etc.
 
-// == Query section logic/ indentation/ heirarchy
+// == Query section logic/ indentation/ hierarchy
 == Sample Snippets
 
 These snippets will go into the WHERE section of the query (after the list of fields you wish the query to return under SELECT).
@@ -35,7 +35,10 @@ VALUES ?NoticePublicationDate {
 
 === Limit the results to a date range
 
+[source]
+--
 FILTER (?NoticePublicationDate < "2023-09-01"^^xsd:dateTime && ?NoticePublicationDate > "2024-01-01"^^xsd:dateTime)
+--
 
 === *?LotURI* and *?NoticePublicationDate* derived from _?Notice_:
 

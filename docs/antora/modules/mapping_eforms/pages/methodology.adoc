@@ -6,7 +6,7 @@
 
 == Mapping Methodology
 
-Developing mappings for eForms still follows the https://docs.ted.europa.eu/SWS/mapping_suite/methodology.html[sound principles of conceptual agreement followed by technical implementation], divided into the distinct stages of _conceptual mapping_ ( CM ) using a dialect of https://www.w3.org/TR/sparql11-property-paths/[SPARQL Path] patterns, and _technical mapping_ ( TM ) using the https://rml.io/[RML mapping language].
+Developing mappings for eForms still follows the https://docs.ted.europa.eu/ODS/mapping_suite/methodology.html[sound principles of conceptual agreement followed by technical implementation], divided into the distinct stages of _conceptual mapping_ ( CM ) using a dialect of https://www.w3.org/TR/sparql11-property-paths/[SPARQL Path] patterns, and _technical mapping_ ( TM ) using the https://rml.io/[RML mapping language].
 
 === eForms SDK Field Definitions
 
@@ -37,7 +37,7 @@ Different nodes usually require different subject templates or iterators, especi
 
 === Modular RML Mappings
 
-Given the large number of mappings that are necessry for the conversion of a certain eForms Notice (the CM contains around 500 entries for various fields and nodes that belong to a type of notice), a mapping package ends up containing 200+ RML TriplesMaps with 500+ predicateObjectMap, resulting in more than 11,000 lines of RML code. To be able to efficiently and properly manage this amount of information, we split it up into multiple RML files that are organized following a certain logic.
+Given the large number of mappings that are necessary for the conversion of a certain eForms Notice (the CM contains around 500 entries for various fields and nodes that belong to a type of notice), a mapping package ends up containing 200+ RML TriplesMaps with 500+ predicateObjectMap, resulting in more than 11,000 lines of RML code. To be able to efficiently and properly manage this amount of information, we split it up into multiple RML files that are organized following a certain logic.
 
 The structure of the RML files (we call them _modules_ because they are modular
 files with RML rules that work together when combined) is based on the
@@ -63,7 +63,7 @@ tedm:MG-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{L
 tedm:MG-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{LotsGroupAwardWeightCriterionParameter\}
 tedm:MG-\{Constraint\}-\{hasConstraint\}-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{LotsGroupAwardThresholdCriterionParameter\}
 ```
-Looking at the above example we can observe that, on one hand, a node `ND-LotsGroup` can have children fields that provide information for the generation of multiple insctances, e.g. an `epo:LotGroup` instance from `tedm:MG-\{LotGroup\}_ND-\{LotsGroup\}`, and an `adms:Identifier` instance from `tedm:MG-\{Identifier\}-\{identifier\}-\{LotGroup\}_ND-\{LotsGroup\}`. On the other hand, the full definition of the same EPO instance, can achieved by combining information provided in fields that are organized under different nodes, e.g. the MonetaryValue that represents the hasLaunchFrameworkAgreementMaximumValue property of a LotGroup can come both from fields that are chidren of the `ND-LotsGroupValueEstimateExtension` node and those that are children of the `ND-LotsGroupFA` node:
+Looking at the above example we can observe that, on one hand, a node `ND-LotsGroup` can have children fields that provide information for the generation of multiple instances, e.g. an `epo:LotGroup` instance from `tedm:MG-\{LotGroup\}_ND-\{LotsGroup\}`, and an `adms:Identifier` instance from `tedm:MG-\{Identifier\}-\{identifier\}-\{LotGroup\}_ND-\{LotsGroup\}`. On the other hand, the full definition of the same EPO instance, can achieved by combining information provided in fields that are organized under different nodes, e.g. the MonetaryValue that represents the hasLaunchFrameworkAgreementMaximumValue property of a LotGroup can come both from fields that are children of the `ND-LotsGroupValueEstimateExtension` node and those that are children of the `ND-LotsGroupFA` node:
 ```
 tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup\}_ND-\{LotsGroupValueEstimateExtension\},
 tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup\}_ND-\{LotsGroupFA\}
@@ -77,7 +77,7 @@ Another advantage of creating modularized RML files, is that it allows us to eas
 For example, the RML mappings that are necessary to transform notices encoded according to eForms SDK v1.8 are organized in https://github.com/OP-TED/ted-rdf-mapping-eforms/tree/1.0.0-rc.4/mappings/package_cn_v1.8/transformation/mappings[more than 30 files], from which the mappings for the Lot related information is organized in these files:
 
 ```BASH
-Lot.rml.ttl                 # mappings valid accross all SDK versions
+Lot.rml.ttl                 # mappings valid across all SDK versions
 Lot_v1.3-1.8.rml.ttl        # mappings valid up to SDK version 1.8 (inclusive)
 Lot_v1.4+.rml.ttl           # mappings valid for all SDK versions starting with v1.4
 Lot_v1.7+.rml.ttl           # mappings valid for all SDK versions starting with v1.7
@@ -88,7 +88,7 @@ Lot_v1.8-1.8.rml.ttl        # mappings valid for only SDK versions v1.8
 ====
 
 **Important Note: **
-The TriplesMaps in the various RML modules, especially those that represent version specific mappings, can spread accross multiple files. For example, a TriplesMap can have it logical source/iterator, its subject map, and its various predicat-object maps in several files, depending on what aspect is specified in a given SDK version and/or belongs to a given module. However, this information needs to be provided and organized in such a manner that when they are combined together in a package, the RML mappings should be valid, complete, correct and non-conflicting. E.g. every TriplesMap, after the modules are combined, should have one and only one logical source and subject map, and the subject map and all predicate-obect maps should work with the logical source that they are conbined with.
+The TriplesMaps in the various RML modules, especially those that represent version specific mappings, can spread across multiple files. For example, a TriplesMap can have it logical source/iterator, its subject map, and its various predicate-object maps in several files, depending on what aspect is specified in a given SDK version and/or belongs to a given module. However, this information needs to be provided and organized in such a manner that when they are combined together in a package, the RML mappings should be valid, complete, correct and non-conflicting. E.g. every TriplesMap, after the modules are combined, should have one and only one logical source and subject map, and the subject map and all predicate-object maps should work with the logical source that they are combined with.
 
 [[ref:uri-scheme]]
 === RDF URI Scheme

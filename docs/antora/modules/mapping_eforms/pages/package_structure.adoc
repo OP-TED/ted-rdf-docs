@@ -12,7 +12,7 @@ The most relevant, but small, difference is related to the representation of the
 
 == The eForms Metadata sheet
 
-The content of the "Metadata" sheet of an eForms Conceptual Mapping (which is slighly different from the https://docs.ted.europa.eu/SWS/mapping_suite/methodology.html#_the_metadata_sheet[Metadata sheet] of a Standard Forms CM) looks like this:
+The content of the "Metadata" sheet of an eForms Conceptual Mapping (which is slightly different from the https://docs.ted.europa.eu/SWS/mapping_suite/methodology.html#_the_metadata_sheet[Metadata sheet] of a Standard Forms CM) looks like this:
 
 image:metadata_sheet.png[]
 
