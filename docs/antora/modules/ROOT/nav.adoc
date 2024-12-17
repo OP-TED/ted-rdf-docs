@@ -34,6 +34,7 @@
 * xref:reuse:search-api.adoc[Data via the Search API]
 * xref:reuse:search-api-demo.adoc[Examples using the Search API]
 * xref:reuse:ftp.adoc[TED xml schema data archive]
+* xref:reuse:field-list.adoc[List of Search Fields]
 
 * [.separated]#**Mapping XML data to RDF**#
 * xref:mapping:index_sf.adoc[Mapping Standard Form XML data to RDF]

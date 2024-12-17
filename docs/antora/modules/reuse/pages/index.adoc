@@ -23,3 +23,9 @@ Download notices via the Search API
 See some examples of how to use the Search API
 * xref:ftp.adoc[TED schemas archive] +
 This page contains the TED schemas archive resources
+
+== List of search fields used on the TED Site
+
+A comprehensive list of search fields used on the TED website can be viewed via the link below
+
+* xref:field-list.adoc[Search field list]
