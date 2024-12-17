@@ -1,6 +1,8 @@
 = Search fields used on the TED website
 
-xlsx and csv versions of the following table can also be downloaded here:
+PDF, xlsx and csv versions of the following table can also be downloaded here:
+
+xref:attachment$List_of_search_fields.pdf[Search Field List (PDF format)]
 
 xref:attachment$List_of_search_fields.xlsx[Search Field List (xlsx format)]
 
