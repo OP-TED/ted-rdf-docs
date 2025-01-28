@@ -20,7 +20,7 @@ RDF data can be queried via the https://docs.ted.europa.eu/ted-open-data[TED Ope
 --
 
 [.tile]
-. Query Linked Open Data
+.Query Linked Open Data
 
 ****
 Query and connect to TED Open Data using SPARQL. Explore the example query library and find resources on how to create SPARQL queries. 
