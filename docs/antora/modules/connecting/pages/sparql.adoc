@@ -49,12 +49,12 @@ This returns the results (here in HTML format):
 
 image::results1.png[]
 
-// == A short video of this query method
+== A short video of this query method
 
 // video::SPARQL_query.mp4[width=720, height=540]
 
-//video::P9IgUoJ3L60[youtube, width=720, height=540]
+video::NEvWrGC9PAo[youtube, width=720, height=540]
 
-//NOTE: Copying the results URL to the clipboard is only necessary if you are using it for the xref:excel.adoc[Excel query method].
+NOTE: Copying the results URL to the clipboard is only necessary if you are using it for the xref:excel.adoc[Excel query method].
 
 include::ROOT:partial$feedback.adoc[]
