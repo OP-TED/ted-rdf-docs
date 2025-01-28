@@ -22,9 +22,11 @@ See some examples of how to use the Search API
 * xref:download-xml.adoc[Download XML notices in bulk] +
 Bulk downloads in FTP format
 * https://data.europa.eu/data/datasets/ted-csv?locale=en[TED subsets in CSV format]
+Download yearly bundles in CSV format
 * xref:ftp.adoc[TED schemas archive] +
-This page contains the TED schemas archive resources
-* xref:calendar.adoc[Download the release calendar[]]
+The TED schemas archive resources
+* xref:calendar.adoc[Download the release calendar]
+Download the list of the OJS releases per year
 
 == List of search fields used on the TED Site
 
