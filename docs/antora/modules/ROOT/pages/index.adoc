@@ -20,7 +20,7 @@ RDF data can be queried via the https://docs.ted.europa.eu/ted-open-data[TED Ope
 --
 
 [.tile]
-.Linked Open Data
+. Query Linked Open Data
 
 ****
 Query and connect to TED Open Data using SPARQL. Explore the example query library and find resources on how to create SPARQL queries. 
@@ -29,12 +29,12 @@ xref:ODS::data_index.adoc[TED Open Data Service]
 ****
 
 [.tile]
-.Data Downloads in XML, CSV
+.Reusing TED Data from the TED Website
 
 ****
 Learn how to access TED data in various formats through direct downloads or the TED Search API.
 
-xref:reuse:index.adoc[TED XML, CSV Downloads]
+xref:reuse:index.adoc[Reusing TED Data from the TED Website]
 ****
 
 [.tile]
