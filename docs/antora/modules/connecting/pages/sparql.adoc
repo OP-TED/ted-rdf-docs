@@ -53,13 +53,11 @@ image::results1.png[]
 
 // video::SPARQL_query.mp4[width=720, height=540]
 
-video::NEvWrGC9PAo[youtube, width=720, height=540]
+//https://youtu.be/NaS7i5RH0-U
 
-video::NEvWrGC9PAo[youtube]
+video::NaS7i5RH0-U[youtube, width=900, height=675]
 
-video::NEvWrGC9PAo[youtube, width=900]
 
-video::NEvWrGC9PAo[youtube, width=1024]
 
 NOTE: Copying the results URL to the clipboard is only necessary if you are using it for the xref:excel.adoc[Excel query method].
 
