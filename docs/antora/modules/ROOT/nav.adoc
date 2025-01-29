@@ -30,12 +30,14 @@
 
 * [.separated]#**TED XML Schema Data**#
 * xref:reuse:index.adoc[Reusing TED XML schema data]
-** xref:reuse:download-xml.adoc[XML Downloads]
+** xref:reuse:search-api.adoc[Data via the search API]
+** xref:reuse:search-api-demo.adoc[Examples using the search API]
 ** xref:reuse:download-direct.adoc[Direct downloads via links]
-** xref:reuse:search-api.adoc[Data via the Search API]
-** xref:reuse:search-api-demo.adoc[Examples using the Search API]
+** xref:reuse:download-xml.adoc[Bulk XML downloads]
+** xref:calendar.adoc[Download the release calendar]
+** https://data.europa.eu/data/datasets/ted-csv?locale=en[TED subsets in CSV format]
 ** xref:reuse:ftp.adoc[TED xml schema data archive]
-** xref:reuse:field-list.adoc[List of Search Fields]
+** xref:reuse:field-list.adoc[List of search fields]
 
 * [.separated]#**Mapping XML data to RDF**#
 * xref:mapping:index_sf.adoc[Mapping Standard Form XML data to RDF]
