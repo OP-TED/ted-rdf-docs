@@ -49,14 +49,9 @@ This returns the results (here in HTML format):
 
 image::results1.png[]
 
-//== A short video of this query method
+== A short video of this query method
 
-// video::SPARQL_query.mp4[width=720, height=540]
-
-//https://youtu.be/NaS7i5RH0-U
-
-//video::NaS7i5RH0-U[youtube, width=900, height=675]
-
+A https://www.youtube.com/watch?v=NEvWrGC9PAo[short video of this method] is available on the Publications Office YouTube channel.
 
 
 NOTE: Copying the results URL to the clipboard is only necessary if you are using it for the xref:excel.adoc[Excel query method].
