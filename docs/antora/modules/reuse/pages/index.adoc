@@ -1,4 +1,4 @@
-:doctitle: Reusing TED Data
+:doctitle: Reusing TED Data from the TED Website
 :doccode: ODS-REUS-01
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
