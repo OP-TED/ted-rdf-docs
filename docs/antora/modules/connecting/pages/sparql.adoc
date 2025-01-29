@@ -49,10 +49,11 @@ This returns the results (here in HTML format):
 
 image::results1.png[]
 
+////
 == A short video of this query method
 
 A https://www.youtube.com/watch?v=NEvWrGC9PAo[short video of this method] is available on the Publications Office YouTube channel.
-
+////
 
 NOTE: Copying the results URL to the clipboard is only necessary if you are using it for the xref:excel.adoc[Excel query method].
 
