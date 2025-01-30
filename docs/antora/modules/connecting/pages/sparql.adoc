@@ -6,8 +6,9 @@
 
 == TED SPARQL EndPoint
 
-image::sparql3.png[]
+//image::sparql3.png[]
 
+image::ted_endpoint.png[link=https://data.ted.europa.eu,width=720,height=540]
 
 == Link to the TED SPARQL EndPoint
 
@@ -16,7 +17,7 @@ image::sparql3.png[]
 The TED SPARQL EndPoint: https://data.ted.europa.eu/
 ****
 
-image::ted_endpoint.png[link=https://data.ted.europa.eu,width=720,height=540]
+
 
 == Results Formats
 
@@ -56,6 +57,6 @@ image::ted_endpoint_results.png[]
 A https://www.youtube.com/watch?v=NEvWrGC9PAo[short video of this method] is available on the Publications Office YouTube channel.
 ////
 
-NOTE: Copying the results URL to the clipboard is only necessary if you are using it for the xref:excel.adoc[Excel query method].
+NOTE: Copy the results URL to the clipboard if you are using it for the xref:excel.adoc[Excel query method].
 
 include::ROOT:partial$feedback.adoc[]
