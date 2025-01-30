@@ -15,7 +15,8 @@ image::sparql3.png[]
 ****
 The TED SPARQL EndPoint: https://data.ted.europa.eu/
 ****
-image::ted_endpoint.png[link=https://data.ted.europa.eu]
+
+image::ted_endpoint.png[link=https://data.ted.europa.eu,width=720,height=540]
 
 == Results Formats
 
