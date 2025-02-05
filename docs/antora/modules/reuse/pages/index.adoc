@@ -4,10 +4,10 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023
 
-.Survey: Use of the documentation
+.Survey: Reusing TED Data documentation
 ****
 
-Let us know how and why you use the documentation, and what tasks you use it for. Access the survey here:
+We are conducting a survey on how you find the documentation on the *Reusing TED Data* documentation. We would really appreciate you filling in the survey and giving us your feedback.  You can access the survey here:
 
 https://ec.europa.eu/eusurvey/runner/670dc92b-c6ef-94d5-3af0-c54d65b0ad6d[Reuse docs survey]
 
