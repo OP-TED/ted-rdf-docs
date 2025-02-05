@@ -1,20 +1,22 @@
-:doctitle: Submitting a query in the Cellar SPARQL EndPoint
+:doctitle: Submitting a query in the TED SPARQL EndPoint
 :doccode: ODS-CONN-02
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: September 2023
 
-== Cellar SPARQL EndPoint
+== TED SPARQL EndPoint
 
-image::sparql3.png[]
+//image::sparql3.png[]
 
+image::ted_endpoint.png[link=https://data.ted.europa.eu,width=720,height=540]
 
-== Link to the SPARQL EndPoint
+== Link to the TED SPARQL EndPoint
 
 [sidebar]
 ****
-The SPARQL EndPoint: https://publications.europa.eu/webapi/rdf/sparql
+The TED SPARQL EndPoint: https://data.ted.europa.eu/
 ****
+
 
 
 == Results Formats
@@ -47,7 +49,7 @@ The query is pasted into the "Query Text" field. The query demonstrated returns 
 
 This returns the results (here in HTML format):
 
-image::results1.png[]
+image::ted_endpoint_results.png[]
 
 ////
 == A short video of this query method
@@ -55,6 +57,6 @@ image::results1.png[]
 A https://www.youtube.com/watch?v=NEvWrGC9PAo[short video of this method] is available on the Publications Office YouTube channel.
 ////
 
-NOTE: Copying the results URL to the clipboard is only necessary if you are using it for the xref:excel.adoc[Excel query method].
+NOTE: Copy the results URL to the clipboard if you are using it for the xref:excel.adoc[Excel query method].
 
 include::ROOT:partial$feedback.adoc[]
