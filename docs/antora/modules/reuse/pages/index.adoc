@@ -1,9 +1,18 @@
-:doctitle: Reusing TED Data from the TED Website
+:doctitle: Reusing TED Data
 :doccode: ODS-REUS-01
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023
 
+.Survey: Use of the documentation
+****
+
+Let us know how and why you use the documentation, and what tasks you use it for. Access the survey here:
+
+https://ec.europa.eu/eusurvey/runner/670dc92b-c6ef-94d5-3af0-c54d65b0ad6d[Reuse docs survey]
+
+Thank-you for your time. Your feedback will help us create documentation that helps you use the data better.
+****
 
 Download of notices in xml format, in daily or monthly packages, can be done from the https://ted.europa.eu/en/[TED Website]. Notices are also available in html, html download, signed pdf,
 unsigned pdf, and xml, using direct links.
@@ -13,24 +22,20 @@ In addition, the Search API can be used in different modes to query notice data.
 
 == Access Methods
 
-* xref:search-api.adoc[Search and retrieve data published on the TED portal (TED search API] +
+* xref:download-xml.adoc[XML Downloads] +
+Bulk downloads in FTP format
+* xref:download-direct.adoc[Direct downloads via html links] +
+Download bulk notice packages using a direct link
+* xref:search-api.adoc[Downloads via Search API] +
 Download notices via the Search API
 * xref:search-api-demo.adoc[Examples using the Search API] +
 See some examples of how to use the Search API
-* xref:download-direct.adoc[Downloads notices in various formats using direct links] +
-Download bulk notice packages using a direct link
-* xref:download-xml.adoc[Download XML notices in bulk] +
-Bulk downloads in FTP format
-* xref:calendar.adoc[Download the release calendar] +
-Download the list of the OJS releases per year
-* https://data.europa.eu/data/datasets/ted-csv?locale=en[TED subsets in CSV format] +
-Download yearly bundles in CSV format
 * xref:ftp.adoc[TED schemas archive] +
-The TED schemas archive resources
-
+This page contains the TED schemas archive resources
 
 == List of search fields used on the TED Site
 
 A comprehensive list of search fields used on the TED website can be viewed via the link below
 
 * xref:field-list.adoc[Search field list]
+
