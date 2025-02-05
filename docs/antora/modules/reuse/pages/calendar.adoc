@@ -1,0 +1,23 @@
+:doctitle: Download the release calendar
+:doccode: ODS-REUS-10
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
+
+You can download the list of the OJ S releases per year via the page Release calendar on the TED website.
+
+
+The format of the URLs to download the release calendar is as follows:
+
+\https://ted.europa.eu/{lang}/release-calendar/-/download/file/{format}/{year}
+
+where:
+
+{lang} is the language (e.g. en, de)
+{format} can be: XLS, PDF, CSV
+{year} is the year (e.g. 2023, 2024)
+
+Example: https://ted.europa.eu/en/release-calendar/-/download/file/XLS/2024
+
+include::partial$feedback.adoc[]
