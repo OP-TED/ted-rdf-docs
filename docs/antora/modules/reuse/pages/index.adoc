@@ -13,15 +13,13 @@ In addition, the Search API can be used in different modes to query notice data.
 
 == Access Methods
 
-* xref:search-api.adoc[Search and retrieve data published on the TED portal (TED search API] +
-Download notices via the Search API
-* xref:search-api-demo.adoc[Examples using the Search API] +
-See some examples of how to use the Search API
-* xref:download-direct.adoc[Downloads notices in various formats using direct links] +
+* https://ted.europa.eu/en/simap/developers-corner-for-reusers#search-retrieve-data[Download notices via the Search API] +
+Search and retrieve data published on the TED portal using the TED search API
+* https://ted.europa.eu/en/simap/developers-corner-for-reusers#download-notices-various-formats[Downloads notices in various formats using direct links] +
 Download bulk notice packages using a direct link
-* xref:download-xml.adoc[Download XML notices in bulk] +
+* https://ted.europa.eu/en/simap/developers-corner-for-reusers#download-xml-notices[Download XML notices in bulk] +
 Bulk downloads in FTP format
-* xref:calendar.adoc[Download the release calendar] +
+* https://ted.europa.eu/en/simap/developers-corner-for-reusers#download-release-calendar[Download the release calendar] +
 Download the list of the OJS releases per year
 * https://data.europa.eu/data/datasets/ted-csv?locale=en[TED subsets in CSV format] +
 Download yearly bundles in CSV format

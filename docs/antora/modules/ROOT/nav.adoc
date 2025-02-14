@@ -28,13 +28,13 @@
 ** xref:samples:advanced-2.adoc[Advanced 2: RDF of a notice]
 ** xref:snippets:index.adoc[SPARQL Snippets]
 
-* [.separated]#**TED XML Schema Data**#
-* xref:reuse:index.adoc[Reusing TED XML schema data]
-** xref:reuse:search-api.adoc[Data via the search API]
-** xref:reuse:search-api-demo.adoc[Examples using the search API]
-** xref:reuse:download-direct.adoc[Direct downloads via links]
-** xref:reuse:download-xml.adoc[Bulk XML downloads]
-** xref:calendar.adoc[Download the release calendar]
+* [.separated]#**TED XML Data**#
+* xref:reuse:index.adoc[Reusing TED XML data]
+** https://ted.europa.eu/en/simap/developers-corner-for-reusers#search-retrieve-data[Search and retrieve data via the search API]
+//** xref:reuse:search-api-demo.adoc[Examples using the search API]
+** https://ted.europa.eu/en/simap/developers-corner-for-reusers#download-notices-various-formats[Downloads using direct links]
+** https://ted.europa.eu/en/simap/developers-corner-for-reusers#download-xml-notices[Download XML notices in bulk]
+** https://ted.europa.eu/en/simap/developers-corner-for-reusers#download-release-calendar[Download the release calendar]
 ** https://data.europa.eu/data/datasets/ted-csv?locale=en[TED subsets in CSV format]
 ** xref:reuse:ftp.adoc[TED xml schema data archive]
 ** xref:reuse:field-list.adoc[List of search fields]
