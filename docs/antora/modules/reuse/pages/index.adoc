@@ -6,9 +6,9 @@
 
 .Survey: Reusing TED Data documentation
 ****
-We are conducting a survey on how you find the documentation on the *Reusing TED Data* documentation. We would really appreciate you filling in the survey and giving us your feedback.  You can access the survey here:
+We are conducting a survey on how useful you find the *Reusing TED XML Data* documentation. We are really interested in your thoughts and feelings about it, and would appreciate you filling in the survey and telling us.  You can access the survey here:
 
-https://ec.europa.eu/eusurvey/runner/670dc92b-c6ef-94d5-3af0-c54d65b0ad6d[Reusing TED DATA: Survey of the Documentation ]
+https://ec.europa.eu/eusurvey/runner/670dc92b-c6ef-94d5-3af0-c54d65b0ad6d[Reusing TED XML DATA: Survey of the Documentation ]
 
 Thank-you for your time. Your feedback will help us create documentation that helps you use the data better.
 ****
