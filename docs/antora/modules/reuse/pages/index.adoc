@@ -1,12 +1,12 @@
-:doctitle: Reusing TED Data from the TED Website
+:doctitle: Reusing TED XML Data from the TED Website
 :doccode: ODS-REUS-01
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023
 
-.Survey: Reusing TED Data documentation
+.Survey
 ****
-We are conducting a survey on how useful you find the *Reusing TED XML Data* documentation. We are really interested in your thoughts and feelings about it, and would appreciate you filling in the survey and telling us.  You can access the survey here:
+A survey is underway on how helpful you find the *Reusing TED XML Data* documentation. We are really interested in your thoughts and feelings about it, and would appreciate you filling in the survey and telling us.  You can access the survey here:
 
 https://ec.europa.eu/eusurvey/runner/670dc92b-c6ef-94d5-3af0-c54d65b0ad6d[Reusing TED XML DATA: Survey of the Documentation ]
 
