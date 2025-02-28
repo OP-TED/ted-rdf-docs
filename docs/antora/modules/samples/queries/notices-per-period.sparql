@@ -1,6 +1,6 @@
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?publicationNumber ?noticeType ?formType 
 
@@ -13,7 +13,7 @@ WHERE {
 		epo:hasPublicationDate ?publicationDate ;
 	    epo:hasNoticePublicationNumber ?publicationNumber ;
 	    epo:hasNoticeType ?noticeTypeUri ;
-	    epo:hasFormType ?formTypeUri ;
+	    epo:hasFormType ?formTypeUri .
 	
     ?noticeTypeUri skos:prefLabel ?noticeType .
   	FILTER(lang(?noticeType) = "en")
