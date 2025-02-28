@@ -34,4 +34,4 @@ WHERE {
   
   ?mainActivityUri skos:prefLabel ?mainActivity .
   FILTER(lang(?mainActivity) = "en")
-}
+} LIMIT 20
