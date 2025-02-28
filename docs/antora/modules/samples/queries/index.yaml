@@ -3,7 +3,7 @@ queries:
  - category: Notices
    title: Notices published on a specific date
    description: This query retrieves all procurement notices that were published on a specific date.
-   sparql: notices.sparql
+   sparql: notices-per-day.sparql
 
  - category: Notices
    title: Notices published on a specific period
@@ -17,41 +17,60 @@ queries:
 
 
 
+ - category: Tenders
+   title: Amounts awarded by Tender
+   description: This query retrieves information about awarded tenders from procurement notices published on a specific date.
+   sparql: awarded-tender-amounts.sparql 
+
+
+
  - category: Contracts
    title: Contracts published on a specific date
    description: This query retrieves contracts published on a specific date, filtered and sorted to meet specific criteria.
    sparql: contracts-per-day.sparql   
 
  - category: Contracts
-   title: List of winners per 
+   title: List of winners per day
    description: This query retrieves the winners of contracts published on a specific date, filtered and sorted to meet specific criteria.
    sparql: winners-per-day.sparql   
 
  - category: Contracts
    title: Buyers for a specific date
    description: This query retrieves buyers of contracts published on a specific date, providing details about the organisations and their countries.
-   sparql: notice-per-buyer-country.sparql 
-
-
-
- - category: Tenders
-   title: Amounts awarded by Tender
-   description: This query retrieves information about awarded tenders from procurement notices published on a specific date. It focuses on extracting metadata such as the publication number, associated lots, tenderer details, and financial information.
-   sparql: awarded-tender-amounts.sparql 
+   sparql: notices-per-buyer-country.sparql 
 
 
 
  - category: Procedures
-   title: Lots associated to a procedure
-   description: This query retrieves the lots associated to a specified procedure.
+   title: Estimated amounts of procedures published on a specific date
+   description: This query retrieves the estimated amounts and currencies foreseen in procedures published on a specific date.
+   sparql: procedures-estimated-amounts.sparql   
+
+ - category: Procedures
+   title: Purpose of procedures published on a specific date
+   description: This query retrieves the Common Procurement Vocabulary (CPV) codes of procedures published on a specific date.
+   sparql: procedures-purpose.sparql   
+
+ - category: Procedures
+   title: Place of performance of procedures published on a specific date
+   description: This query retrieves the place of performance of procedures published on a specific date.
+   sparql: procedures-place-of-performance.sparql   
+
+ - category: Procedures
+   title: Broad place of performance of procedures published on a specific date
+   description: This query retrieves the broad place of performance of procedures published on a specific date.
+   sparql: procedures-broad-place-of-performance.sparql   
+
+ - category: Procedures
+   title: Lots associated to a specific procedure
+   description: This query retrieves the lots associated to a specific procedure.
    sparql: lots-associated-to-procedure.sparql    
    
 
 
-
  - category: Organizations
    title: Organizations and their roles for notices published on a specific date
-   description: This query retrieves information about organizations that played a role on procurement notices published on a specific date. It focuses on extracting metadata such as the publication number, associated lots, tenderer details, and financial information.
+   description: This query retrieves information about organizations that play a role on procurement notices published on a specific date.
    sparql: organizations-per-day.sparql 
 
 
