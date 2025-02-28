@@ -84,3 +84,4 @@ queries:
    title: Named graphs published on a specified period
    description: This query retrieves the named graphs published on a specified period.
    sparql: named-graphs-per-period.sparql    
+ 
