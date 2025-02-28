@@ -1,0 +1,14 @@
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT *
+
+WHERE {
+  
+  VALUES (?procedureUri) { 
+    (<http://data.europa.eu/a4g/resource/id_611c038a-7a02-45be-85f4-23c68291b0c6_Procedure_6dcsBnuV4FTNoRpTZHckqN>) 
+  }
+
+  ?procedureUri a epo:Procedure ;
+  		epo:hasProcurementScopeDividedIntoLot ?lotUri .
+}

@@ -1,12 +1,87 @@
 queries:
- - category: Common Queries
-   title: Amounts Awarded per Notice
-   description: This query returns the values awarded for the all notices published on a specified date.
-   sparql: awarded-tender-amounts.sparql
 
- - category: Common Queries
-   title: Competition notices, buyers and their countries on a specified date
-   description: This query retrieves the list of competition notices, including their buyers and procedure types published on a specified day
+ - category: Notices
+   title: Notices published on a specific date
+   description: This query retrieves all procurement notices that were published on a specific date.
+   sparql: notices-per-day.sparql
+
+ - category: Notices
+   title: Notices published on a specific period
+   description: This query retrieves all procurement notices that were published on a specific period.
+   sparql: notices-per-period.sparql
+
+ - category: Notices
+   title: Competition notices, buyers and their countries on a specific date
+   description: This query retrieves the list of competition notices, including their buyers and procedure types published on a specific day.
    sparql: competition-notices.sparql
 
 
+
+ - category: Tenders
+   title: Amounts awarded by Tender
+   description: This query retrieves information about awarded tenders from procurement notices published on a specific date.
+   sparql: awarded-tender-amounts.sparql 
+
+
+
+ - category: Contracts
+   title: Contracts published on a specific date
+   description: This query retrieves contracts published on a specific date, filtered and sorted to meet specific criteria.
+   sparql: contracts-per-day.sparql   
+
+ - category: Contracts
+   title: List of winners per day
+   description: This query retrieves the winners of contracts published on a specific date, filtered and sorted to meet specific criteria.
+   sparql: winners-per-day.sparql   
+
+ - category: Contracts
+   title: Buyers for a specific date
+   description: This query retrieves buyers of contracts published on a specific date, providing details about the organisations and their countries.
+   sparql: notices-per-buyer-country.sparql 
+
+
+
+ - category: Procedures
+   title: Estimated amounts of procedures published on a specific date
+   description: This query retrieves the estimated amounts and currencies foreseen in procedures published on a specific date.
+   sparql: procedures-estimated-amounts.sparql   
+
+ - category: Procedures
+   title: Purpose of procedures published on a specific date
+   description: This query retrieves the Common Procurement Vocabulary (CPV) codes of procedures published on a specific date.
+   sparql: procedures-purpose.sparql   
+
+ - category: Procedures
+   title: Place of performance of procedures published on a specific date
+   description: This query retrieves the place of performance of procedures published on a specific date.
+   sparql: procedures-place-of-performance.sparql   
+
+ - category: Procedures
+   title: Broad place of performance of procedures published on a specific date
+   description: This query retrieves the broad place of performance of procedures published on a specific date.
+   sparql: procedures-broad-place-of-performance.sparql   
+
+ - category: Procedures
+   title: Lots associated to a specific procedure
+   description: This query retrieves the lots associated to a specific procedure.
+   sparql: lots-associated-to-procedure.sparql    
+   
+
+
+ - category: Organizations
+   title: Organizations and their roles for notices published on a specific date
+   description: This query retrieves information about organizations that play a role on procurement notices published on a specific date.
+   sparql: organizations-per-day.sparql 
+
+
+
+ - category: Advanced queries
+   title: Retrieve the RDF of a notice with a specific publication number
+   description: This query retrieves the RDF of a notice with a specific publication number.
+   sparql: notice-per-publication-number.sparql
+
+ - category: Advanced queries
+   title: Named graphs published on a specified period
+   description: This query retrieves the named graphs published on a specified period.
+   sparql: named-graphs-per-period.sparql    
+ 
