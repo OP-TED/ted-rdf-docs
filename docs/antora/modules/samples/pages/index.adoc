@@ -2,19 +2,96 @@
 :doccode: ODS-SAMP-01
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
-:docdate: September 2023
+:docdate: March 2025
 
-* Common Queries
-** xref:samples:query-1.adoc[Query 1: Notices published on a specific date]
-** xref:samples:query-2.adoc[Query 2: Contracts]
-** xref:samples:query-3.adoc[Query 3: Tender amounts]
-** xref:samples:query-4.adoc[Query 4: Winners]
-** xref:samples:query-5.adoc[Query 5: Notices published by buyers]
-** xref:samples:query-6.adoc[Query 6: Competition notices]
-* Advanced Advanced
-** xref:samples:advanced-1.adoc[Advanced 1: Named graphs]
-** xref:samples:advanced-2.adoc[Advanced 2: RDF of a notice]
+All queries can be accessed and tried out on the https://data.ted.europa.eu/[Open Data Service: Query Library]
 
+[cols="1,2,3,1"]
+|===
+
+|Category |Title |Description |Sparql
+
+|Notices
+|Notices published on a specific date
+|This query retrieves all procurement notices that were published on a specific date
+|notices-per-day.sparql
+
+|Notices
+|Notices published on a specific period
+|This query retrieves all procurement notices that were published on a specific period.
+|notices-per-period.sparql
+
+|Notices
+|Competition notices, buyers and their countries on a specific date
+|This query retrieves the list of competition notices, including their buyers and procedure types published on a specific day.
+|competition-notices.sparql
+
+|Tenders
+|Amounts awarded by Tender
+|his query retrieves information about awarded tenders from procurement notices published on a specific date
+|awarded-tender-amounts.sparql 
+
+|Contracts
+|Contracts published on a specific date
+|This query retrieves contracts published on a specific date, filtered and sorted to meet specific criteria
+|contracts-per-day.sparql  
+
+|Contracts
+|Contracts published on a specific date
+|This query retrieves contracts published on a specific date, filtered and sorted to meet specific criteria
+|contracts-per-day.sparql 
+
+|Contracts
+|List of winners per day
+|This query retrieves the winners of contracts published on a specific date, filtered and sorted to meet specific criteria
+|winners-per-day.sparql 
+
+|Contracts
+|Buyers for a specific date
+|This query retrieves buyers of contracts published on a specific date, providing details about the organisations and their countries
+|notices-per-buyer-country.sparql 
+
+|Procedures
+|Estimated amounts of procedures published on a specific date
+|This query retrieves the estimated amounts and currencies foreseen in procedures published on a specific date
+|procedures-estimated-amounts.sparql 
+
+|Procedures
+|Purpose of procedures published on a specific date
+|This query retrieves the Common Procurement Vocabulary (CPV) codes of procedures published on a specific date
+|procedures-purpose.sparql 
+
+|Procedures
+|Place of performance of procedures published on a specific date
+|his query retrieves the place of performance of procedures published on a specific date
+|procedures-place-of-performance.sparql
+
+|Procedures
+|Broad place of performance of procedures published on a specific date
+|This query retrieves the broad place of performance of procedures published on a specific date
+|procedures-broad-place-of-performance.sparql
+
+|Procedures
+|Lots associated to a specific procedure
+|This query retrieves the lots associated to a specific procedure.
+|lots-associated-to-procedure.sparql 
+
+|Organizations
+|Organizations and their roles for notices published on a specific date
+|This query retrieves information about organizations that play a role on procurement notices published on a specific date
+|organizations-per-day.sparql 
+
+|Advanced queries
+|Retrieve the RDF of a notice with a specific publication number
+|This query retrieves the RDF of a notice with a specific publication number
+|notice-per-publication-number.sparql
+
+|Advanced queries
+|Named graphs published on a specified period
+|This query retrieves the named graphs published on a specified period
+|named-graphs-per-period.sparql  
+
+|===
 
 include::ROOT:partial$feedback.adoc[]
 
