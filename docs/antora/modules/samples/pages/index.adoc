@@ -9,7 +9,7 @@ All queries can be accessed and tried out on the https://data.ted.europa.eu/[Ope
 [cols="1,2,3,1"]
 |===
 
-|Category |Title |Description |Sparql
+s|Category s|Title s|Description s|Sparql
 
 |Notices
 |Notices published on a specific date
