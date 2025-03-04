@@ -6,8 +6,8 @@ queries:
    sparql: notices-per-day.sparql
 
  - category: Notices
-   title: Notices published on a specific period
-   description: This query retrieves all procurement notices that were published on a specific period.
+   title: Notices published during a specific period
+   description: This query retrieves all procurement notices that were published during a specific period.
    sparql: notices-per-period.sparql
 
  - category: Notices

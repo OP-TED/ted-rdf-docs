@@ -1,7 +1,8 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?publicationNumber ?lotUri ?legalName ?amount
+SELECT ?publicationNumber ?lotUri ?legalName ?amount ?currencyUri
 
 WHERE {
 
@@ -36,5 +37,6 @@ WHERE {
          ]
        ]
      ] .
+  ?currencyUri dc:identifier ?currency .
 }
 ORDER BY DESC(?amount)
