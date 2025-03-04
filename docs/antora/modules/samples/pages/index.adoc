@@ -17,8 +17,8 @@ s|Category s|Title s|Description s|Sparql
 |notices-per-day.sparql
 
 |Notices
-|Notices published on a specific period
-|This query retrieves all procurement notices that were published on a specific period.
+|Notices published during a specific period
+|This query retrieves all procurement notices that were published during a specific period.
 |notices-per-period.sparql
 
 |Notices
@@ -28,7 +28,7 @@ s|Category s|Title s|Description s|Sparql
 
 |Tenders
 |Amounts awarded by Tender
-|his query retrieves information about awarded tenders from procurement notices published on a specific date
+|This query retrieves information about awarded tenders from procurement notices published on a specific date
 |awarded-tender-amounts.sparql 
 
 |Contracts
