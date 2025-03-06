@@ -6,13 +6,13 @@
 
 The term "suite" or "package" can be used interchangeably.
 
-The structure of a eForms mapping suite is similar to the structure of the Standard Forms (SF) mapping suite, which is documented https://docs.ted.europa.eu/SWS/mapping_suite/mapping-suite-structure.html[here].
+The structure of a eForms mapping suite is similar to the structure of the Standard Forms (SF) mapping suite, which is documented https://docs.ted.europa.eu/ODS/mapping_suite/mapping-suite-structure.html[here].
 
 The most relevant, but small, difference is related to the representation of the metadata, both in the Excel spreadsheet that encodes the Conceptual Mapping (CM) (`conceptual_mappings.xlsx`), as in the generated `metadata.json` file.
 
 == The eForms Metadata sheet
 
-The content of the "Metadata" sheet of an eForms Conceptual Mapping (which is slightly different from the https://docs.ted.europa.eu/SWS/mapping_suite/methodology.html#_the_metadata_sheet[Metadata sheet] of a Standard Forms CM) looks like this:
+The content of the "Metadata" sheet of an eForms Conceptual Mapping (which is slightly different from the https://docs.ted.europa.eu/ODS/mapping_suite/methodology.html#_the_metadata_sheet[Metadata sheet] of a Standard Forms CM) looks like this:
 
 image:metadata_sheet.png[]
 

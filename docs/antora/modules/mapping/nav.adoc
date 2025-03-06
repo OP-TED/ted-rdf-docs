@@ -1,5 +1,5 @@
 :doctitle: Navigation
-:doccode: sws-main-prod-004
+:doccode: ODS-MAP-004
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023

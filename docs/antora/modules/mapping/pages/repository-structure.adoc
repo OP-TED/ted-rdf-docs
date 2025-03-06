@@ -1,5 +1,5 @@
 :doctitle: Repository structure
-:doccode: ODS-MAPP-09
+:doccode: ODS-MAP-09
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023

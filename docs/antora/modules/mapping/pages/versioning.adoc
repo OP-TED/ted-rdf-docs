@@ -1,5 +1,5 @@
 :doctitle: Mapping Suite Versioning Rules
-:doccode: ODS-MAPP-012
+:doccode: ODS-MAP-012
 :author: Meaningfy
 :authoremail:
 :docdate: October 2023
