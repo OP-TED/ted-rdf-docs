@@ -6,7 +6,7 @@
 
 == Mapping Methodology
 
-Developing mappings for eForms still follows the https://docs.ted.europa.eu/ODS/mapping_suite/methodology.html[sound principles of conceptual agreement followed by technical implementation], divided into the distinct stages of _conceptual mapping_ ( CM ) using a dialect of https://www.w3.org/TR/sparql11-property-paths/[SPARQL Path] patterns, and _technical mapping_ ( TM ) using the https://rml.io/[RML mapping language].
+Developing mappings for eForms still follows the xref:mapping:mapping_how.adoc[sound principles of conceptual agreement followed by technical implementation], divided into the distinct stages of _conceptual mapping_ ( CM ) using a dialect of https://www.w3.org/TR/sparql11-property-paths/[SPARQL Path] patterns, and _technical mapping_ ( TM ) using the https://rml.io/[RML mapping language].
 
 === eForms SDK Field Definitions
 
