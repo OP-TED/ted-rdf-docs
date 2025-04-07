@@ -1,3 +1,10 @@
+:doctitle: TED eForms Mappings
+:doccode: ODS-EFOR-05
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: October 2024
+
+
 == Glossary
 
 *Mapping* A set of rules describing how information in one format or _model_

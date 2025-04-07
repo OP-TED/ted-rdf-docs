@@ -1,5 +1,5 @@
 :doctitle: Mapping Methodology
-:doccode: ODS-MAPP-05
+:doccode: ODS-MAP-05
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2024
