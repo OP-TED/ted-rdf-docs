@@ -1,0 +1,13 @@
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (count(?notice) as ?count)
+
+WHERE {
+
+  FILTER (?publicationDate >= "2024-11-06"^^xsd:date)
+  FILTER (?publicationDate <= "2024-11-07"^^xsd:date)
+
+  ?notice a epo:Notice ;
+          epo:hasPublicationDate ?publicationDate .
+}
