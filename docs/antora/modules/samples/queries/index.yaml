@@ -1,6 +1,11 @@
 queries:
 
  - category: Notices
+   title: Number of notices published in a specific date range
+   description: This query retrieves the number of notices that were published in a specific date range.
+   sparql: number-of-notices-per-day.sparql
+
+ - category: Notices
    title: Notices published on a specific date
    description: This query retrieves all procurement notices that were published on a specific date.
    sparql: notices-per-day.sparql
