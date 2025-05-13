@@ -33,7 +33,7 @@
 ** xref:samples:advanced-1.adoc[Advanced 1: Named graphs]
 ** xref:samples:advanced-2.adoc[Advanced 2: RDF of a notice]
 ////
-* xref:snippets:index.adoc[SPARQL Snippets]
+
 
 * [.separated]#**TED XML Schema Data**#
 * Download TED XML Schema Data
