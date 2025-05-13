@@ -21,13 +21,18 @@
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
-* [.separated]#**Example Query Library**#
-** xref:samples:query-1.adoc[Query 1: Notices published on a specific date]
+* https://data.ted.europa.eu/[Query Library]
+////
+** xref:samples:index.adoc[List of available Queries]
 ** xref:samples:query-2.adoc[Query 2: Contracts]
 ** xref:samples:query-3.adoc[Query 3: Tender amounts]
 ** xref:samples:query-4.adoc[Query 4: Winners]
 ** xref:samples:query-5.adoc[Query 5: Notices published by buyers]
 ** xref:samples:query-6.adoc[Query 6: Competition notices]
+** xref:samples:advanced-1.adoc[Advanced 1: Named graphs]
+** xref:samples:advanced-2.adoc[Advanced 2: RDF of a notice]
+////
+* xref:snippets:index.adoc[SPARQL Snippets]
 
 * [.separated]#**TED XML Schema Data**#
 * Download TED XML Schema Data

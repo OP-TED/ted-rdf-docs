@@ -18,7 +18,7 @@
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 
 
-* xref:samples:index.adoc[Example Query Library]
+* https://data.ted.europa.eu/[Query Library]
 ////
 ** xref:samples:index.adoc[List of available Queries]
 ** xref:samples:query-2.adoc[Query 2: Contracts]
