@@ -31,29 +31,29 @@ queries:
 
  - category: Contracts
    title: Contracts published on a specific date
-   description: This query retrieves information about contracts (Contract title, Conclusion date, Lot and Estimated values) published on a specific date.
+   description: This query retrieves information about contracts (Contract title, Conclusion date, Lot and Estimated values) published in procurement notices on a specific date.
    sparql: contracts-per-day.sparql   
 
 
 
  - category: Procedures
    title: Estimated amounts of procedures published on a specific date
-   description: This query retrieves the estimated amounts and currencies foreseen in procedures published on a specific date.
+   description: This query retrieves the estimated amount of a procedure as published in a notice on a specific date.
    sparql: procedures-estimated-amounts.sparql   
 
  - category: Procedures
    title: Purpose of procedures published on a specific date
-   description: This query retrieves the Common Procurement Vocabulary (CPV) codes of procedures published on a specific date.
+   description: This query retrieves the Common Procurement Vocabulary (CPV) codes of procedures as published in notices on a specific date.
    sparql: procedures-purpose.sparql   
 
  - category: Procedures
    title: Place of performance of procedures published on a specific date
-   description: This query retrieves the place of performance of procedures published on a specific date.
+   description: This query retrieves the place of performance of procedures as published in notices on a specific date.
    sparql: procedures-place-of-performance.sparql   
 
  - category: Procedures
    title: Broad place of performance of procedures published on a specific date
-   description: This query retrieves the broad place of performance of procedures published on a specific date.
+   description: This query retrieves where indicated whether the broad place of performance is given as Anywhere, Anywhere in the given country, Anywhere in the European Economic Area, when provided in a given notice published on a specific date.
    sparql: procedures-broad-place-of-performance.sparql   
 
  - category: Procedures
@@ -65,7 +65,7 @@ queries:
 
  - category: Organisations
    title: Organisations and their roles for notices published on a specific date
-   description: This query retrieves information about organizations that play a role on procurement notices published on a specific date.
+   description: This query retrieves information about organisations that are announced in procurement notices published on a specific date.
    sparql: organizations-per-day.sparql 
 
  - category: Organisations
@@ -75,7 +75,7 @@ queries:
 
  - category: Organisations
    title: Buyers for a specific date
-   description: This query retrieves information about buyers (Publication number,  Legal name, Legal type, Main activity and Country) mentioned in procurement notices published on a specific date.
+   description: This query retrieves information about buyers (Legal name, Legal type, Main activity and Country) mentioned in procurement notices published on a specific date.
    sparql: notices-per-buyer-country.sparql 
 
 
