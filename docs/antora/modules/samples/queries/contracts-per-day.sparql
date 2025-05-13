@@ -3,7 +3,7 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?contractTitle ?conclusionDate ?lotUri ?amount ?currency
+SELECT ?contractTitle ?conclusionDate ?lotUri ?estimatedValue ?currency
 
 WHERE {
 
@@ -23,10 +23,10 @@ WHERE {
        epo:isSubmittedForLot ?lotUri ;
        epo:hasFinancialOfferValue [
          a epo:MonetaryValue ;
-         epo:hasAmountValue ?amount ;
+         epo:hasAmountValue ?estimatedValue ;
          epo:hasCurrency ?currencyUri
        ]
      ] .
   ?currencyUri dc:identifier ?currency .
 }
-ORDER BY DESC(?amount)
+ORDER BY DESC(?estimatedValue)
