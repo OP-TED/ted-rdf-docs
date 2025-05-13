@@ -1,8 +1,8 @@
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?date ?journalNumber ?metsNamedGraph ?noticeNamedGraph ?accessUrl ?xmlSource
+
 WHERE {
 
   FILTER (?date >= "2024-11-04T00:00:00"^^xsd:dateTime &&

@@ -33,5 +33,6 @@
         "xref",
         "YARRRML",
         "youtube"
-    ]
+    ],
+    "asciidoc.antora.enableAntoraSupport": true
 }

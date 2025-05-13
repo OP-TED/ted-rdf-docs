@@ -1,0 +1,27 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?publicationNumber ?country  
+
+WHERE {
+
+  	FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
+
+  	?noticeUri a epo:Notice ;
+  		epo:hasPublicationDate ?publicationDate ;
+	  	epo:hasNoticePublicationNumber ?publicationNumber ;
+	  	epo:refersToProcedure ?procedureUri .
+
+     ?procedureUri epo:foreseesContractSpecificTerm [
+        		a epo:ContractTerm ;
+        		epo:definesSpecificPlaceOfPerformance [
+                    a dcterms:Location ;
+                    epo:hasCountryCode ?countryUri
+                ]
+          ] .
+      
+    ?countryUri skos:prefLabel ?country .
+  	FILTER(lang(?country) = "en")
+}
