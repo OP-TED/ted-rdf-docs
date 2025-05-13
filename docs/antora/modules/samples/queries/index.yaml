@@ -2,47 +2,37 @@ queries:
 
  - category: Notices
    title: Number of notices published in a specific date range
-   description: This query retrieves the number of notices that were published in a specific date range.
+   description: This query retrieves the number of procurement notices that were published in a specific date range.
    sparql: number-of-notices-per-day.sparql
 
  - category: Notices
-   title: Notices published on a specific date
-   description: This query retrieves all procurement notices that were published on a specific date.
+   title: Information about notices published on a specific date
+   description: This query retrieves information (Publication number, Procedure type, Notice type and Form type) about all procurement notices that were published on a specific date.
    sparql: notices-per-day.sparql
 
  - category: Notices
-   title: Notices published during a specific period
-   description: This query retrieves all procurement notices that were published during a specific period.
+   title: Information about notices published during a specific period
+   description: This query retrieves information (Publication number, Procedure type, Notice type and Form type) about all procurement notices that were published during a specific period.
    sparql: notices-per-period.sparql
 
  - category: Notices
-   title: Competition notices, buyers and their countries on a specific date
-   description: This query retrieves the list of competition notices, including their buyers and procedure types published on a specific day.
+   title: Information about competition notices published on a specific date
+   description: This query retrieves information (Publication number, Procedure type, Buyer Legal name and Buyer country) about all competition notices published on a specific day.
    sparql: competition-notices.sparql
 
 
 
  - category: Tenders
-   title: Amounts awarded by Tender
-   description: This query retrieves information about awarded tenders from procurement notices published on a specific date.
+   title: Amounts awarded by tender
+   description: This query retrieves the amount awarded per tender announced in result notices published on a specific date.
    sparql: awarded-tender-amounts.sparql 
 
 
 
  - category: Contracts
    title: Contracts published on a specific date
-   description: This query retrieves contracts published on a specific date, filtered and sorted to meet specific criteria.
+   description: This query retrieves information about contracts (Contract title, Conclusion date, Lot and Estimated values) published on a specific date.
    sparql: contracts-per-day.sparql   
-
- - category: Contracts
-   title: List of winners per day
-   description: This query retrieves the winners of contracts published on a specific date, filtered and sorted to meet specific criteria.
-   sparql: winners-per-day.sparql   
-
- - category: Contracts
-   title: Buyers for a specific date
-   description: This query retrieves buyers of contracts published on a specific date, providing details about the organisations and their countries.
-   sparql: notices-per-buyer-country.sparql 
 
 
 
@@ -73,10 +63,20 @@ queries:
    
 
 
- - category: Organizations
-   title: Organizations and their roles for notices published on a specific date
+ - category: Organisations
+   title: Organisations and their roles for notices published on a specific date
    description: This query retrieves information about organizations that play a role on procurement notices published on a specific date.
    sparql: organizations-per-day.sparql 
+
+ - category: Organisations
+   title: List of winners published on a specific date
+   description: This query retrieves information about awarded tenders (Publication number, Winner legal name,  Amount and  Currency) published on a specific date.
+   sparql: winners-per-day.sparql   
+
+ - category: Organisations
+   title: Buyers for a specific date
+   description: This query retrieves information about buyers (Publication number,  Legal name, Legal type, Main activity and Country) mentioned in procurement notices published on a specific date.
+   sparql: notices-per-buyer-country.sparql 
 
 
 
