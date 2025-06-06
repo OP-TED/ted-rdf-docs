@@ -1,5 +1,5 @@
 :doctitle: Preparing Test Data
-:doccode: ODS-MAPP-07
+:doccode: ODS-MAP-07
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023

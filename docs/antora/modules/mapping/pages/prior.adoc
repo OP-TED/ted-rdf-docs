@@ -1,6 +1,6 @@
 = 
 :doctitle: Recommended Prior knowledge
-:doccode: ODS-MAPP-08
+:doccode: ODS-MAP-08
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023

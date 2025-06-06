@@ -28,7 +28,7 @@ unreleased]).
 
 === No custom tooling
 
-While there is a comprehensive set of https://docs.ted.europa.eu/SWS/mapping_suite/toolchain.html[command-line software tools for the SF mapping project], there is no such tooling provided for the eForms mapping project. The complete transformation cycle is supported in and carried out already by the https://github.com/OP-TED/ted-rdf-conversion-pipeline[pipeline].
+While there is a comprehensive set of https://docs.ted.europa.eu/ODS/mapping_suite/toolchain.html[command-line software tools for the SF mapping project], there is no such tooling provided for the eForms mapping project. The complete transformation cycle is supported in and carried out already by the https://github.com/OP-TED/ted-rdf-conversion-pipeline[pipeline].
 
 === RMLMapper for development
 

@@ -1,5 +1,5 @@
 :doctitle: Mapping Suites
-:doccode: ODS-MAPP-01
+:doccode: ODS-MAP-01
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: October 2023
