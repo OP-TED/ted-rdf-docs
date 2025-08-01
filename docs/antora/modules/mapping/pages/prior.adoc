@@ -1,4 +1,3 @@
-= 
 :doctitle: Recommended Prior knowledge
 :doccode: ODS-MAP-08
 :author: NPJ
