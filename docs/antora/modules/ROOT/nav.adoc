@@ -20,9 +20,8 @@
 ** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
-
-
-* https://data.ted.europa.eu/[Query Library]
+** https://data.ted.europa.eu/[TED Open Data Editor]
+** https://docs.ted.europa.eu/ted-open-data-explorer/[TED Open Data Explorer]
 ////
 ** xref:samples:index.adoc[List of available Queries]
 ** xref:samples:query-2.adoc[Query 2: Contracts]
