@@ -23,16 +23,16 @@ queries:
 
 
  - category: Tenders
-   title: Amounts awarded by tender
+   title: Amounts awarded by tender.
    description: This query retrieves the amount awarded per tender announced in result notices published on a specific date.
    sparql: awarded-tender-amounts.sparql 
 
 
 
- - category: Contracts
-   title: Contracts published on a specific date
-   description: This query retrieves information about contracts (Contract title, Conclusion date, Lot and Estimated values) published in procurement notices on a specific date.
-   sparql: contracts-per-day.sparql   
+# - category: Contracts
+#   title: Contracts published on a specific date
+#   description: This query retrieves information about contracts (Contract title, Conclusion date, Lot and Estimated values) published in procurement notices on a specific date.
+#   sparql: contracts-per-day.sparql   
 
 
 

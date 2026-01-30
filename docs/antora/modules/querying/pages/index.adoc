@@ -31,10 +31,10 @@ Reusable SPARQL snippets for frequently used classes
 
 xref:querying:scenarios.adoc[Scenarios: question to query] +
 Query Scenarios: from Question to Query
-////
 
 xref:samples:index.adoc[Browse the sample queries] +
 Sample Queries to get you started
+////
 
 xref:connecting:index.adoc[Executing your query] +
 Executing your query via the SPARQL EndPoint, Excel or Python

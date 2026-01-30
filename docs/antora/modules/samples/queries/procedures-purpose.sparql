@@ -1,22 +1,30 @@
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?publicationNumber ?CPV  
+SELECT DISTINCT ?publicationDate  ?publicationNumber ?procedureIdentifier ?procedureMainCPVCode ?procedureMainCPV  
 
 WHERE {
-  	?noticeUri a epo:Notice ;
-  		epo:hasPublicationDate ?publicationDate ;
-	  	epo:hasNoticePublicationNumber ?publicationNumber ;
-	  	epo:refersToProcedure ?procedureUri .
-
-	?procedureUri epo:hasPurpose [ 
-	        	a epo:Purpose ;
-	     		epo:hasMainClassification ?CPVUri
-	     	] .
-
-    ?CPVUri skos:prefLabel ?CPV .
-  	FILTER(lang(?CPV) = "en")
+    
+    FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
+  
+  	GRAPH ?g {
+    
+    	?notice a epo:Notice ;
+  				epo:hasNoticePublicationNumber ?publicationNumber ;
+  				epo:hasPublicationDate ?publicationDate .
+    
+    	{?procedure a epo:Procedure ;
+    				adms:identifier / skos:notation ?procedureIdentifier ;
+      	    		epo:hasPurpose ?procedurePurpose .
+      
+      	 ?procedurePurpose epo:hasMainClassification ?procedureMainCPVUri .
+     	} 
+    }
 	
-  	FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
+   	?procedureMainCPVUri dc:identifier ?procedureMainCPVCode ; 
+               			 skos:prefLabel ?procedureMainCPV . 
+	FILTER(lang(?procedureMainCPV) = "en")	
 }

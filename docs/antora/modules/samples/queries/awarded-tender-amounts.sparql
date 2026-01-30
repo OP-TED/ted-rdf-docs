@@ -1,42 +1,60 @@
+PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX m8g: <http://data.europa.eu/m8g/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?publicationNumber ?lotUri ?legalName ?amount ?currencyUri
+SELECT ?procedureIdentifier ?publicationDate ?publicationNumber ?tenderIdentifier ?tendererLegalName ?offerAmountValue ?currency ?lotGroupIdentifier ?lotIdentifier
 
 WHERE {
-
-  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
-  FILTER (?currencyUri = <http://publications.europa.eu/resource/authority/currency/EUR>)
   
-  ?noticeUri a epo:Notice ;
-             epo:hasPublicationDate ?publicationDate ;
-             epo:hasNoticePublicationNumber ?publicationNumber ;
-             epo:announcesAwardDecision [
-       a epo:AwardDecision ;
-       epo:comprisesAwardOutcome [
-         a epo:LotAwardOutcome ;
-         epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w> ;
-         epo:concernsLot ?lotUri ;
-         epo:comprisesTenderAwardOutcome [
-           a epo:TenderAwardOutcome ;
-           epo:concernsTender [
-             a epo:Tender ;
-             epo:isSubmitedBy [
-               a epo:Tenderer ;
-               epo:playedBy [
-                 epo:hasLegalName ?legalName
-               ]
-             ] ;
-             epo:hasFinancialOfferValue [
-               a epo:MonetaryValue ;
-               epo:hasAmountValue ?amount ;
-               epo:hasCurrency ?currencyUri
-             ]
-           ]
-         ]
-       ]
-     ] .
-  ?currencyUri dc:identifier ?currency .
+  values (?procedureIdentifier) {("d4f39891-4114-4199-829b-57437df27872")}
+  
+  GRAPH ?g {
+    
+    {?procedure a epo:Procedure;  
+                adms:identifier/skos:notation ?procedureIdentifier .
+    }
+    
+    ?notice a epo:Notice ; 
+            epo:hasPublicationDate ?publicationDate ;
+            epo:hasNoticePublicationNumber  ?publicationNumber . 
+    
+     
+    {?tender a epo:Tender ; 
+             adms:identifier / skos:notation ?tenderIdentifier ;
+             epo:isSubmitedBy ?tenderer ;
+             epo:hasFinancialOfferValue ?OfferValue .
+      
+     ?OfferValue epo:hasAmountValue ?offerAmountValue ;
+                 epo:hasCurrency ?currencyUri .
+           
+     ?tenderer  epo:playedBy / epo:hasLegalName ?tendererLegalName .
+    }
+    
+    optional {
+      ?tender epo:isSubmittedForLot  ?lot .
+      
+      optional {
+        ?lot adms:identifier / skos:notation ?lotIdentifier.
+      }
+    }
+    
+    optional {
+      ?tender epo:isSubjectToGrouping ?lotGroup .     
+    
+      ?lotGroup epo:setsGroupingContextForLot ?lot  .
+    
+      optional {?lotGroup adms:identifier / skos:notation ?lotGroupIdentifier.}
+    
+      optional {?lot adms:identifier / skos:notation ?lotIdentifier.}
+    }     
+  }
+
+  ?currencyUri skos:prefLabel ?currency . FILTER (lang(?currency) = "en")
+  
 }
-ORDER BY DESC(?amount)
+ORDER BY ?publicationNumber ?lotGroupIdentifier ?lotIdentifier
+

@@ -1,24 +1,35 @@
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?publicationNumber ?amountValue ?currency  
+SELECT  ?publicationDate ?publicationNumber ?formType ?procedureIdentifier ?procedureEstimatedAmount ?currency 
 
 WHERE {
-
-  	FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
-
-  	?noticeUri a epo:Notice ;
-  		epo:hasPublicationDate ?publicationDate ;
-	  	epo:hasNoticePublicationNumber ?publicationNumber ;
-	  	epo:refersToProcedure ?procedureUri .
-
-	?procedureUri epo:hasEstimatedValue [ 
-	        	a epo:MonetaryValue ;
-	     		epo:hasCurrency ?currencyUri ; 
-	     		epo:hasAmountValue ?amountValue 
-	     	] .
-
-    ?currencyUri skos:prefLabel ?currency .
-  	FILTER(lang(?currency) = "en")
+  
+  FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
+  
+  GRAPH ?g {
+    
+  	?notice a epo:Notice ;
+  			epo:hasFormType ?formTypeUri ;
+  			epo:hasPublicationDate ?publicationDate ;
+  			epo:hasNoticePublicationNumber ?publicationNumber .
+  
+  	{?procedure a epo:Procedure ;
+    			adms:identifier / skos:notation ?procedureIdentifier ;
+    			epo:hasEstimatedValue ?procedureEstimatedValue .
+        
+     ?procedureEstimatedValue epo:hasAmountValue ?procedureEstimatedAmount ;
+                              epo:hasCurrency ?currencyUri .      
+  	} 
+  }
+  
+  ?formTypeUri skos:prefLabel ?formType . 
+  FILTER (lang(?formType) = "en")
+  
+  ?currencyUri skos:prefLabel ?currency . 
+  FILTER (lang(?currency) = "en")  
 }
+  
