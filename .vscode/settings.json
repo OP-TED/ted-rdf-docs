@@ -34,5 +34,6 @@
         "YARRRML",
         "youtube"
     ],
-    "asciidoc.antora.enableAntoraSupport": true
+    "asciidoc.antora.enableAntoraSupport": true,
+    "makefile.configureOnOpen": false
 }

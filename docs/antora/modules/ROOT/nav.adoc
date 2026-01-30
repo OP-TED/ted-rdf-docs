@@ -17,22 +17,11 @@
 ** xref:querying:epo.adoc[eProcurement Ontology resources]
 
 * xref:connecting:index.adoc[Connecting to TED Open Data]
-** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
+** xref:connecting:sparql.adoc[Submitting a query in the TED SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 ** https://data.ted.europa.eu/[TED Open Data Editor]
 ** https://docs.ted.europa.eu/ted-open-data-explorer/[TED Open Data Explorer]
-////
-** xref:samples:index.adoc[List of available Queries]
-** xref:samples:query-2.adoc[Query 2: Contracts]
-** xref:samples:query-3.adoc[Query 3: Tender amounts]
-** xref:samples:query-4.adoc[Query 4: Winners]
-** xref:samples:query-5.adoc[Query 5: Notices published by buyers]
-** xref:samples:query-6.adoc[Query 6: Competition notices]
-** xref:samples:advanced-1.adoc[Advanced 1: Named graphs]
-** xref:samples:advanced-2.adoc[Advanced 2: RDF of a notice]
-////
-
 
 * [.separated]#**TED XML Data**#
 * xref:reuse:index.adoc[Reusing TED XML data]

@@ -9,11 +9,11 @@
 
 RDF databases or triple stores provide a URI or EndPoint into which a data reuser can submit a query, and receive their results. It looks a little like a web address for searching, except that it queries the specific triple store to which it is attached. There are a few EndPoint interface applications that RDF triple store managers can adopt and Cellar uses the Virtuoso EndPoint application.
 
-=== Querying directly via the Cellar SPARQL EndPoint
+=== Querying directly via the TED SPARQL EndPoint
 
-If you are new to querying RDF data, you can start by pasting a sample query directly into the SPARQL Endpoint. You can view the results online and/ or download them in a variety of formats.
+If you are new to querying RDF data, you can start by pasting a sample query directly into the TED SPARQL Endpoint. You can view the results online and/ or download them in a variety of formats.
 
-xref:connecting:sparql.adoc[How to query directly via the Cellar SPARQL EndPoint]
+xref:connecting:sparql.adoc[How to query directly via the TED SPARQL EndPoint]
 
 === Querying using Microsoft Excel
 

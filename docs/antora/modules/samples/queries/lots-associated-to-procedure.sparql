@@ -1,14 +1,31 @@
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT *
+SELECT distinct ?procedureIdentifier ?lotIdentifier ?lotTitle ?lotMainCPVCode ?lotMainCPV
 
 WHERE {
   
-  VALUES (?procedureUri) { 
-    (<http://data.europa.eu/a4g/resource/id_611c038a-7a02-45be-85f4-23c68291b0c6_Procedure_6dcsBnuV4FTNoRpTZHckqN>) 
+  VALUES (?procedureIdentifier) {
+    ("c9fc740a-2b2e-42a9-9fee-fb4965914b6b")
+  }
+   
+  GRAPH ?g {
+
+    ?procedure a epo:Procedure ;
+    		       adms:identifier / skos:notation ?procedureIdentifier ;
+  		         epo:hasProcurementScopeDividedIntoLot ?lot .
+    
+    ?lot adms:identifier / skos:notation ?lotIdentifier ;        
+         epo:hasPurpose / epo:hasMainClassification ?lotMainCPVUri .
+    
+    optional { ?lot dcterms:title ?lotTitle .}
   }
 
-  ?procedureUri a epo:Procedure ;
-  		epo:hasProcurementScopeDividedIntoLot ?lotUri .
+  ?lotMainCPVUri dc:identifier ?lotMainCPVCode ; 
+                 skos:prefLabel ?lotMainCPV . FILTER(lang(?lotMainCPV) = "en")	
 }
+ORDER BY ASC(?lotIdentifier)
