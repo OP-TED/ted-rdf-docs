@@ -2,21 +2,21 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>  
 
-SELECT ?publicationNumber ?role ?legalName 
+SELECT distinct ?publicationNumber ?legalName ?role 
 
 WHERE {
 
-    FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
-    FILTER(lang(?legalName) = "en")
+  FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
+  FILTER(lang(?legalName) = "en")
 
+  GRAPH ?g {
     ?notice a epo:Notice ;
   	        epo:hasNoticePublicationNumber ?publicationNumber ;
             epo:hasPublicationDate ?publicationDate ;
-            epo:announcesRole [  
-                a ?role ; 
-                  epo:playedBy [
-                    a org:Organization ;
-                      epo:hasLegalName ?legalName ;
-                ] 
-	        ] .
+            epo:announcesRole | epo:refersToRole ?agentInRole .
+  
+  	?agentInRole a ?role ;
+            epo:playedBy / epo:hasLegalName ?legalName .
+  }         
 }
+

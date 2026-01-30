@@ -17,7 +17,7 @@
 
 * Connecting to TED Open Data
 ** xref:connecting:index.adoc[Home]
-** xref:connecting:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint]
+** xref:connecting:sparql.adoc[Submitting a query in the TED SPARQL Endpoint]
 ** xref:connecting:excel.adoc[Connect using Excel]
 ** xref:connecting:python.adoc[Connect using Jupyter Notebook and Python]
 

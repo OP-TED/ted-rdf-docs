@@ -8,7 +8,7 @@ There are two parts to querying the data using Excel.
 
 == Part 1 of this query method
 
-The first part is described on the page: xref:sparql.adoc[Submitting a query in the Cellar SPARQL Endpoint].
+The first part is described on the page: xref:sparql.adoc[Submitting a query in the TED SPARQL Endpoint].
 
 //video::P9IgUoJ3L60[youtube, width=720, height=540]
 
@@ -17,7 +17,7 @@ NOTE: When submitting your query, be sure that you choose the first results form
 
 == Part 2 of this query method
 
-. Start by running the query in the SPARQL EndPoint. Copy the query below by clicking on the icon on the top right of the code block.
+. Start by running the query in the TED SPARQL EndPoint. Copy the query below by clicking on the icon on the top right of the code block.
 
 [source,SPARQL]
 ----
