@@ -1,3 +1,7 @@
+# Retrieve notices published during a specific period with their procedure type,
+# notice type, and form type.
+# Change the start and end dates below to adjust the period.
+
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -11,21 +15,25 @@ WHERE {
   FILTER (?publicationDate >= ?startDate && ?publicationDate <= ?endDate)
 
   GRAPH ?g {
+    # Get notice details
     ?notice a epo:Notice ;
             epo:hasPublicationDate ?publicationDate ;
             epo:hasNoticePublicationNumber ?publicationNumber ;
             epo:hasNoticeType ?noticeTypeUri ;
-            epo:hasFormType ?formTypeUri .
-    
+            epo:hasFormType ?formTypeUri ;
+            epo:refersToProcedure ?procedure .
+
+    # Get procedure type
     ?procedure epo:hasProcedureType ?procedureTypeUri .
   }
 
-  ?noticeTypeUri skos:prefLabel ?noticeType . 
+  # Resolve labels in English
+  ?noticeTypeUri skos:prefLabel ?noticeType .
   FILTER (lang(?noticeType) = "en")
-  
-  ?formTypeUri skos:prefLabel ?formType . 
+
+  ?formTypeUri skos:prefLabel ?formType .
   FILTER (lang(?formType) = "en")
-  
-  ?procedureTypeUri skos:prefLabel ?procedureType . 
+
+  ?procedureTypeUri skos:prefLabel ?procedureType .
   FILTER (lang(?procedureType) = "en")
 }

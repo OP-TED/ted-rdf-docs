@@ -1,22 +1,27 @@
-PREFIX epo: <http://data.europa.eu/a4g/ontology#>  
-PREFIX org: <http://www.w3.org/ns/org#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>  
+# Retrieve organisations and their roles for notices published on a specific date.
+# Returns: publication number, organisation name, and role type (e.g. Buyer, Tenderer).
+# Change the date below to query a different day.
 
-SELECT distinct ?publicationNumber ?legalName ?role 
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?publicationNumber ?legalName ?role
 
 WHERE {
 
-  FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
   FILTER(lang(?legalName) = "en")
 
   GRAPH ?g {
+    # Get notice and its associated roles (both announced and referred)
     ?notice a epo:Notice ;
-  	        epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
             epo:hasPublicationDate ?publicationDate ;
             epo:announcesRole | epo:refersToRole ?agentInRole .
-  
-  	?agentInRole a ?role ;
-            epo:playedBy / epo:hasLegalName ?legalName .
-  }         
-}
 
+    # Get the organisation playing the role
+    ?agentInRole a ?role ;
+                 epo:playedBy / epo:hasLegalName ?legalName .
+  }
+}

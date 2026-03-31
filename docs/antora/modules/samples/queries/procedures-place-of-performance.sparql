@@ -1,29 +1,35 @@
+# Retrieve the place of performance (country) of procedures published on a specific date.
+# Returns: publication date, procedure identifier, and country code.
+# Change the date below to query a different day.
+
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?publicationDate ?procedureIdentifier ?countryCode 
+SELECT DISTINCT ?publicationDate ?procedureIdentifier ?countryCode
 
 WHERE {
-  
-	FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
-  
-  	GRAPH ?g {
-    
-    	?notice a epo:Notice ;
-  				epo:hasPublicationDate ?publicationDate .
-    
-     	{?procedure a epo:Procedure ;
-    				adms:identifier / skos:notation ?procedureIdentifier ;
-      	    		epo:foreseesContractSpecificTerm ?procedureContractTerm .
-      
-      	 ?procedureContractTerm epo:definesSpecificPlaceOfPerformance ?location .
-      
-      	 ?location epo:hasCountryCode ?countryCodeUri .
-      }
+
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+
+  GRAPH ?g {
+    # Get notice and link to procedure
+    ?notice a epo:Notice ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:refersToProcedure ?procedure .
+
+    # Get procedure place of performance via contract term
+    { ?procedure a epo:Procedure ;
+                 adms:identifier / skos:notation ?procedureIdentifier ;
+                 epo:foreseesContractSpecificTerm ?procedureContractTerm .
+
+      ?procedureContractTerm epo:definesSpecificPlaceOfPerformance ?location .
+      ?location epo:hasCountryCode ?countryCodeUri .
     }
-	
-   ?countryCodeUri dc:identifier ?countryCode .  	
+  }
+
+  # Resolve country code
+  ?countryCodeUri dc:identifier ?countryCode .
 }

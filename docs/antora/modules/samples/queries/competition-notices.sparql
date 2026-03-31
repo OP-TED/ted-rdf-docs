@@ -1,3 +1,7 @@
+# Retrieve competition notices published on a specific date, including
+# procedure type, buyer name, and buyer country.
+# Change the date below to query a different day.
+
 PREFIX cccev: <http://data.europa.eu/m8g/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -7,33 +11,39 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT DISTINCT ?publicationDate ?publicationNumber ?formType ?procedureType ?legalName ?country
 
 WHERE {
- 
-	FILTER (?publicationDate = "2024-11-04"^^xsd:date)
-	FILTER (?formTypeUri = <http://publications.europa.eu/resource/authority/form-type/competition>)
+
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+  # Filter for competition notices only
+  FILTER (?formTypeUri = <http://publications.europa.eu/resource/authority/form-type/competition>)
 
   GRAPH ?g {
+    # Get notice details and link to procedure and buyer
     ?notice a epo:Notice ;
             epo:hasPublicationDate ?publicationDate ;
             epo:hasNoticePublicationNumber ?publicationNumber ;
-            epo:hasFormType ?formTypeUri .
-    
+            epo:hasFormType ?formTypeUri ;
+            epo:refersToProcedure ?procedure ;
+            epo:announcesRole | epo:refersToRole ?agentInRole .
+
+    # Get procedure type
     ?procedure epo:hasProcedureType ?procedureTypeUri .
-    
-    {?agentInRole a epo:Buyer ;
-        				  epo:playedBy ?organization .
-    
-     ?organization epo:hasLegalName ?legalName ;
-                   cccev:registeredAddress / epo:hasCountryCode ?countryUri .
-    }  
+
+    # Get buyer organisation and country
+    { ?agentInRole a epo:Buyer ;
+                   epo:playedBy ?organization .
+
+      ?organization epo:hasLegalName ?legalName ;
+                    cccev:registeredAddress / epo:hasCountryCode ?countryUri .
+    }
   }
-  
-  ?formTypeUri skos:prefLabel ?formType . 
+
+  # Resolve labels in English
+  ?formTypeUri skos:prefLabel ?formType .
   FILTER (lang(?formType) = "en")
-  
-  ?procedureTypeUri skos:prefLabel ?procedureType . 
+
+  ?procedureTypeUri skos:prefLabel ?procedureType .
   FILTER (lang(?procedureType) = "en")
-  
-  ?countryUri  skos:prefLabel ?country . 
+
+  ?countryUri skos:prefLabel ?country .
   FILTER (lang(?country) = "en")
 }
-

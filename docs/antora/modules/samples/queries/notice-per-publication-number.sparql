@@ -1,3 +1,7 @@
+# Retrieve the full RDF graph of a notice by its publication number.
+# Returns all triples from the notice's named graph.
+# Change the publication number below to retrieve a different notice.
+
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 
 CONSTRUCT {
@@ -6,13 +10,16 @@ CONSTRUCT {
 
 WHERE {
 
+  # Change this to the publication number you want to look up
   FILTER (?publicationNumber = "00665936-2024")
 
+  # Find the named graph for this notice
   GRAPH ?g {
-    ?Notice a epo:Notice ;
+    ?notice a epo:Notice ;
             epo:hasNoticePublicationNumber ?publicationNumber .
   }
-  
+
+  # Return all triples from that graph
   GRAPH ?g {
     ?s ?p ?o .
   }

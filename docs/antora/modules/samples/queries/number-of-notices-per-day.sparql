@@ -1,3 +1,6 @@
+# Count the number of distinct notices published within a date range.
+# Change the dates below to adjust the range.
+
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -5,13 +8,13 @@ SELECT (count(distinct ?noticePublicationNumber) as ?count)
 
 WHERE {
 
+  # Date range filter
   FILTER (?publicationDate >= "2024-11-06"^^xsd:date)
   FILTER (?publicationDate <= "2024-11-07"^^xsd:date)
 
   GRAPH ?g {
-    
     ?notice a epo:Notice ;
-            epo:hasNoticePublicationNumber ?noticePublicationNumber ; 
-            epo:hasPublicationDate ?publicationDate .         
+            epo:hasNoticePublicationNumber ?noticePublicationNumber ;
+            epo:hasPublicationDate ?publicationDate .
   }
 }

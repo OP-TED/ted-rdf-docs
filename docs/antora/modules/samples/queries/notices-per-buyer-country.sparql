@@ -1,37 +1,46 @@
-PREFIX cccev: <http://data.europa.eu/m8g/>
-PREFIX epo: <http://data.europa.eu/a4g/ontology#>  
-PREFIX org: <http://www.w3.org/ns/org#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>  
+# Retrieve buyers from specific countries for notices published on a specific date.
+# Returns: publication number, buyer name, country, legal type, and main activity.
+# Change the date and country filter below to adjust the query.
 
-SELECT ?publicationNumber ?publicationDate ?legalName ?country ?legalType ?mainActivity  
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?publicationNumber ?publicationDate ?legalName ?country ?legalType ?mainActivity
 
 WHERE {
-      
-     FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
-     FILTER(REGEX(?countryUri, "(LUX|DEU)$"))
-  
+
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+  # Filter by country code (LUX = Luxembourg, DEU = Germany)
+  FILTER(REGEX(?countryUri, "(LUX|DEU)$"))
+
   GRAPH ?g {
-      ?notice a epo:Notice ;
-  	          epo:hasNoticePublicationNumber ?publicationNumber ;
-              epo:hasPublicationDate ?publicationDate  .  
-    
-      {?buyer a epo:Buyer ; 
-              epo:playedBy ?organization .
-      
-       ?organization epo:hasLegalName ?legalName ;
-                     cccev:registeredAddress / epo:hasCountryCode ?countryUri;
-                     epo:hasBuyerLegalType ?legalTypeUri ;
-                     epo:hasMainActivity ?mainActivityUri .
-      }     
-  } 
-  
-  ?countryUri skos:prefLabel ?country . 
+    # Get notice details and link to buyer
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:announcesRole | epo:refersToRole ?buyer .
+
+    # Get buyer organisation details
+    { ?buyer a epo:Buyer ;
+             epo:playedBy ?organization .
+
+      ?organization epo:hasLegalName ?legalName ;
+                    cccev:registeredAddress / epo:hasCountryCode ?countryUri ;
+                    epo:hasBuyerLegalType ?legalTypeUri ;
+                    epo:hasMainActivity ?mainActivityUri .
+    }
+  }
+
+  # Resolve labels in English
+  ?countryUri skos:prefLabel ?country .
   FILTER(lang(?country) = "en")
- 
-  ?legalTypeUri skos:prefLabel ?legalType . 
-  FILTER(lang(?legalType) = "en")  
- 
-  ?mainActivityUri skos:prefLabel ?mainActivity . 
+
+  ?legalTypeUri skos:prefLabel ?legalType .
+  FILTER(lang(?legalType) = "en")
+
+  ?mainActivityUri skos:prefLabel ?mainActivity .
   FILTER(lang(?mainActivity) = "en")
-} 
+}

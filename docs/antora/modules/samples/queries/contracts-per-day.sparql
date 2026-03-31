@@ -1,3 +1,7 @@
+# Retrieve contracts published on a specific date, filtered by EUR currency.
+# Returns: contract title, conclusion date, lot, estimated value, and currency.
+# Change the date and currency filter below to adjust the query.
+
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -8,25 +12,29 @@ SELECT ?contractTitle ?conclusionDate ?lotUri ?estimatedValue ?currency
 WHERE {
 
   FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+  # Only EUR amounts
   FILTER (?currencyUri = <http://publications.europa.eu/resource/authority/currency/EUR>)
 
+  # Get notice and its lots
   ?noticeUri a epo:Notice ;
              epo:refersToLot ?lotUri ;
              epo:hasPublicationDate ?publicationDate ;
              epo:hasNoticePublicationNumber ?publicationNumber .
 
+  # Get contracts linked to the lot via tender
   ?contractUri a epo:Contract ;
                dct:title ?contractTitle ;
                epo:hasContractConclusionDate ?conclusionDate ;
                epo:includesTender [
-       a epo:Tender ;
-       epo:isSubmittedForLot ?lotUri ;
-       epo:hasFinancialOfferValue [
-         a epo:MonetaryValue ;
-         epo:hasAmountValue ?estimatedValue ;
-         epo:hasCurrency ?currencyUri
-       ]
-     ] .
+                   a epo:Tender ;
+                   epo:isSubmittedForLot ?lotUri ;
+                   epo:hasFinancialOfferValue [
+                       a epo:MonetaryValue ;
+                       epo:hasAmountValue ?estimatedValue ;
+                       epo:hasCurrency ?currencyUri
+                   ]
+               ] .
+
   ?currencyUri dc:identifier ?currency .
 }
 ORDER BY DESC(?estimatedValue)
