@@ -2,6 +2,10 @@
 # Returns: publication number, tender identifier, tenderer name, amount, currency,
 # and optionally the lot and lot group identifiers.
 # Change the procedure identifier below to query a different procedure.
+#
+# Note: The notice, procedure, and tender are linked implicitly through
+# the named graph. Adding explicit links (e.g. epo:announcesRole) would
+# make the query more precise but significantly slower with the OPTIONAL blocks.
 
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
@@ -20,27 +24,25 @@ WHERE {
 
   GRAPH ?g {
     # Get the procedure by its identifier
-    { ?procedure a epo:Procedure ;
-                 adms:identifier / skos:notation ?procedureIdentifier .
-    }
+    ?procedure a epo:Procedure ;
+               adms:identifier / skos:notation ?procedureIdentifier .
 
-    # Link notice to procedure explicitly
+    # Get notice and link to procedure
     ?notice a epo:Notice ;
             epo:hasPublicationDate ?publicationDate ;
             epo:hasNoticePublicationNumber ?publicationNumber ;
             epo:refersToProcedure ?procedure .
 
     # Get tender details: identifier, tenderer name, and financial offer
-    { ?tender a epo:Tender ;
-              adms:identifier / skos:notation ?tenderIdentifier ;
-              epo:isSubmitedBy ?tenderer ;
-              epo:hasFinancialOfferValue ?offerValue .
+    ?tender a epo:Tender ;
+            adms:identifier / skos:notation ?tenderIdentifier ;
+            epo:isSubmitedBy ?tenderer ;
+            epo:hasFinancialOfferValue ?offerValue .
 
-      ?offerValue epo:hasAmountValue ?offerAmountValue ;
-                  epo:hasCurrency ?currencyUri .
+    ?offerValue epo:hasAmountValue ?offerAmountValue ;
+                epo:hasCurrency ?currencyUri .
 
-      ?tenderer epo:playedBy / epo:hasLegalName ?tendererLegalName .
-    }
+    ?tenderer epo:playedBy / epo:hasLegalName ?tendererLegalName .
 
     # Optionally get the lot the tender was submitted for
     OPTIONAL {

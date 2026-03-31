@@ -17,10 +17,11 @@ WHERE {
   FILTER(REGEX(?countryUri, "(LUX|DEU)$"))
 
   GRAPH ?g {
-    # Get notice details
+    # Get notice details and link to buyer
     ?notice a epo:Notice ;
             epo:hasNoticePublicationNumber ?publicationNumber ;
-            epo:hasPublicationDate ?publicationDate .
+            epo:hasPublicationDate ?publicationDate ;
+            epo:announcesRole | epo:refersToRole ?buyer .
 
     # Get buyer organisation details
     { ?buyer a epo:Buyer ;

@@ -17,12 +17,13 @@ WHERE {
   FILTER (?formTypeUri = <http://publications.europa.eu/resource/authority/form-type/competition>)
 
   GRAPH ?g {
-    # Get notice details
+    # Get notice details and link to procedure and buyer
     ?notice a epo:Notice ;
             epo:hasPublicationDate ?publicationDate ;
             epo:hasNoticePublicationNumber ?publicationNumber ;
             epo:hasFormType ?formTypeUri ;
-            epo:refersToProcedure ?procedure .
+            epo:refersToProcedure ?procedure ;
+            epo:announcesRole | epo:refersToRole ?agentInRole .
 
     # Get procedure type
     ?procedure epo:hasProcedureType ?procedureTypeUri .
