@@ -52,6 +52,7 @@
 
 * [.separated]#**Resources**#
 * xref:data_availability.adoc[Current data availability]
+* xref:samples:index.adoc[Query Library]
 * xref:ROOT:glossary.adoc[Glossary]
 * https://github.com/OP-TED/ted-open-data/discussions[Join the discussions]
 

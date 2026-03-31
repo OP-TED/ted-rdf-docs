@@ -1,0 +1,25 @@
+= Contributing to the Query Library
+:doctitle: Contributing to the Query Library
+:doccode: ODS-ROOT-09
+
+The Query Library provides example SPARQL queries that are displayed in the https://data.ted.europa.eu/[TED Open Data Service]. Contributions from the community are welcome.
+
+== How you can help
+
+* *Add comments* to existing queries to make them easier to understand
+* *Fix or improve* existing queries (e.g. adding explicit joins for better performance)
+* *Contribute new queries* that demonstrate useful data retrieval patterns
+
+== How to contribute
+
+. Create a branch from `develop` in the https://github.com/OP-TED/ted-rdf-docs[ted-rdf-docs] repository
+. Add or edit `.sparql` files in the https://github.com/OP-TED/ted-rdf-docs/tree/main/docs/antora/modules/samples/queries[queries directory]
+. Update `index.yaml` if adding a new query (with category, title, and description)
+. Test your query on the https://data.ted.europa.eu/[TED Open Data Service]
+. Open a pull request targeting `develop`
+
+Your changes will be published with the next release.
+
+== Writing guidelines
+
+For detailed instructions on query format, commenting conventions, prefix usage, and best practices, see the https://github.com/OP-TED/ted-rdf-docs/blob/main/docs/antora/modules/samples/queries/CONTRIBUTING.md[Query Library contributing guide].
