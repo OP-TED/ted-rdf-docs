@@ -14,6 +14,11 @@ queries:
    title: Information about notices published during a specific period
    description: This query retrieves information (Publication number, Procedure type, Notice type and Form type) about all procurement notices that were published during a specific period.
    sparql: notices-per-period.sparql
+   
+ - category: Notices
+   title: Information about number of notices published per year
+   description: This query retrieves the count (number of notices) per publication year.
+   sparql: notices-per-year.sparql
 
  - category: Notices
    title: Information about competition notices published on a specific date

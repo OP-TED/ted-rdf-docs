@@ -1,3 +1,7 @@
+# Retrieve the lots associated to a specific procedure.
+# Returns: procedure identifier, lot identifier, lot title, and main CPV code.
+# Change the procedure identifier below to query a different procedure.
+
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -5,27 +9,31 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT distinct ?procedureIdentifier ?lotIdentifier ?lotTitle ?lotMainCPVCode ?lotMainCPV
+SELECT DISTINCT ?procedureIdentifier ?lotIdentifier ?lotTitle ?lotMainCPVCode ?lotMainCPV
 
 WHERE {
-  
+
+  # Change this to the procedure you want to look up
   VALUES (?procedureIdentifier) {
     ("c9fc740a-2b2e-42a9-9fee-fb4965914b6b")
   }
-   
-  GRAPH ?g {
 
+  GRAPH ?g {
+    # Get procedure and its lots
     ?procedure a epo:Procedure ;
-    		       adms:identifier / skos:notation ?procedureIdentifier ;
-  		         epo:hasProcurementScopeDividedIntoLot ?lot .
-    
-    ?lot adms:identifier / skos:notation ?lotIdentifier ;        
+               adms:identifier / skos:notation ?procedureIdentifier ;
+               epo:hasProcurementScopeDividedIntoLot ?lot .
+
+    # Get lot details and CPV classification
+    ?lot adms:identifier / skos:notation ?lotIdentifier ;
          epo:hasPurpose / epo:hasMainClassification ?lotMainCPVUri .
-    
-    optional { ?lot dcterms:title ?lotTitle .}
+
+    OPTIONAL { ?lot dcterms:title ?lotTitle . }
   }
 
-  ?lotMainCPVUri dc:identifier ?lotMainCPVCode ; 
-                 skos:prefLabel ?lotMainCPV . FILTER(lang(?lotMainCPV) = "en")	
+  # Resolve CPV code and label
+  ?lotMainCPVUri dc:identifier ?lotMainCPVCode ;
+                 skos:prefLabel ?lotMainCPV .
+  FILTER(lang(?lotMainCPV) = "en")
 }
 ORDER BY ASC(?lotIdentifier)

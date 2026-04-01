@@ -1,92 +1,23 @@
-:doctitle: Query Samples
+= Query Library
+:doctitle: Query Library
 :doccode: ODS-SAMP-01
-:author: NPJ
-:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
-:docdate: March 2025
 
-All queries can be accessed and tried out on the https://data.ted.europa.eu/[Open Data Service: Query Library]
+The Query Library is a collection of example SPARQL queries that demonstrate how to retrieve public procurement data from the TED Open Data Service.
 
-[cols="1,2,3"]
-|===
+== Browse and run queries
 
-s|Category s|Title s|Description 
+All queries are available in the https://data.ted.europa.eu/[TED Open Data Service] under the *Query Library* tab. You can browse the examples by category, preview the SPARQL code, and run any query directly from the editor.
 
-|Notices
-|Notices published on a specific date
-|This query retrieves all procurement notices that were published on a specific date
+The queries are organised by category and cover topics such as notices, tenders, procedures, organisations, and more.
 
+== Contributing
 
-|Notices
-|Notices published during a specific period
-|This query retrieves all procurement notices that were published during a specific period.
+We welcome contributions to the Query Library. You can help by:
 
+* Adding comments to existing queries to make them easier to understand
+* Fixing or improving existing queries
+* Contributing new queries that demonstrate useful data retrieval patterns
 
-|Notices
-|Competition notices, buyers and their countries on a specific date
-|This query retrieves the list of competition notices, including their buyers and procedure types published on a specific day.
-
-
-|Tenders
-|Amounts awarded by Tender
-|This query retrieves information about awarded tenders from procurement notices published on a specific date
-
-
-|Contracts
-|Contracts published on a specific date
-|This query retrieves contracts published on a specific date, filtered and sorted to meet specific criteria
-
-
-|Contracts
-|List of winners per day
-|This query retrieves the winners of contracts published on a specific date, filtered and sorted to meet specific criteria
-
-
-|Contracts
-|Buyers for a specific date
-|This query retrieves buyers of contracts published on a specific date, providing details about the organisations and their countries
-
-
-|Procedures
-|Estimated amounts of procedures published on a specific date
-|This query retrieves the estimated amounts and currencies foreseen in procedures published on a specific date
-
-
-|Procedures
-|Purpose of procedures published on a specific date
-|This query retrieves the Common Procurement Vocabulary (CPV) codes of procedures published on a specific date
-
-
-|Procedures
-|Place of performance of procedures published on a specific date
-|his query retrieves the place of performance of procedures published on a specific date
-
-
-|Procedures
-|Broad place of performance of procedures published on a specific date
-|This query retrieves the broad place of performance of procedures published on a specific date
-
-
-|Procedures
-|Lots associated to a specific procedure
-|This query retrieves the lots associated to a specific procedure.
-
-
-|Organizations
-|Organizations and their roles for notices published on a specific date
-|This query retrieves information about organizations that play a role on procurement notices published on a specific date
-
-
-|Advanced queries
-|Retrieve the RDF of a notice with a specific publication number
-|This query retrieves the RDF of a notice with a specific publication number
-
-
-|Advanced queries
-|Named graphs published on a specified period
-|This query retrieves the named graphs published on a specified period
-  
-
-|===
+To contribute, create a branch from `develop` in the https://github.com/OP-TED/ted-rdf-docs[ted-rdf-docs] repository and submit a pull request. For detailed instructions on file format, writing conventions, and how to submit your queries, see the xref:samples:contributing.adoc[Query Library contributing guide].
 
 include::ROOT:partial$feedback.adoc[]
-

@@ -1,3 +1,9 @@
+# Retrieve named graphs (notice metadata) published during a specific period.
+# Uses CDM (Common Data Model) metadata to find notice graphs and constructs
+# links to the TED website and XML source.
+# Returns: date, journal number, METS graph, notice graph, TED URL, and XML URL.
+# Change the date range below to adjust the period.
+
 PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -5,15 +11,17 @@ SELECT ?date ?journalNumber ?metsNamedGraph ?noticeNamedGraph ?accessUrl ?xmlSou
 
 WHERE {
 
+  # Date range filter (uses dateTime, not date)
   FILTER (?date >= "2024-11-04T00:00:00"^^xsd:dateTime &&
           ?date <= "2024-11-05T23:59:59"^^xsd:dateTime)
 
   GRAPH ?metsNamedGraph {
+    # Get procurement metadata from CDM
     ?s a cdm:procurement_public .
     ?s cdm:procurement_public_number_document_in_official-journal ?journalNumber .
     ?s cdm:work_date_document ?date .
 
-    # Construct the target URI based on date and journal number
+    # Construct the notice named graph URI
     BIND(IRI(CONCAT(
                "http://data.europa.eu/a4g/resource/",
                STR(YEAR(xsd:dateTime(?date))), "/",
@@ -21,12 +29,14 @@ WHERE {
                STR(YEAR(xsd:dateTime(?date)))
             )) AS ?noticeNamedGraph)
 
+    # Construct the TED website URL for this notice
     BIND(IRI(CONCAT(
                "https://ted.europa.eu/en/notice/-/detail/",
                ?journalNumber, "-",
                STR(YEAR(xsd:dateTime(?date)))
             )) AS ?accessUrl)
 
+    # Construct the XML source URL for this notice
     BIND(IRI(CONCAT(
                "https://ted.europa.eu/en/notice/",
                ?journalNumber, "-",

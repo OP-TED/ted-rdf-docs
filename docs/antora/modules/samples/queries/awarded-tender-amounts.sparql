@@ -1,3 +1,12 @@
+# Retrieve the amounts awarded per tender for a specific procedure.
+# Returns: publication number, tender identifier, tenderer name, amount, currency,
+# and optionally the lot and lot group identifiers.
+# Change the procedure identifier below to query a different procedure.
+#
+# Note: The notice, procedure, and tender are linked implicitly through
+# the named graph. Adding explicit links (e.g. epo:announcesRole) would
+# make the query more precise but significantly slower with the OPTIONAL blocks.
+
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
@@ -9,52 +18,49 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?procedureIdentifier ?publicationDate ?publicationNumber ?tenderIdentifier ?tendererLegalName ?offerAmountValue ?currency ?lotGroupIdentifier ?lotIdentifier
 
 WHERE {
-  
-  values (?procedureIdentifier) {("d4f39891-4114-4199-829b-57437df27872")}
-  
+
+  # Change this to the procedure you want to look up
+  VALUES (?procedureIdentifier) { ("d4f39891-4114-4199-829b-57437df27872") }
+
   GRAPH ?g {
-    
-    {?procedure a epo:Procedure;  
-                adms:identifier/skos:notation ?procedureIdentifier .
-    }
-    
-    ?notice a epo:Notice ; 
+    # Get the procedure by its identifier
+    ?procedure a epo:Procedure ;
+               adms:identifier / skos:notation ?procedureIdentifier .
+
+    # Get notice and link to procedure
+    ?notice a epo:Notice ;
             epo:hasPublicationDate ?publicationDate ;
-            epo:hasNoticePublicationNumber  ?publicationNumber . 
-    
-     
-    {?tender a epo:Tender ; 
-             adms:identifier / skos:notation ?tenderIdentifier ;
-             epo:isSubmitedBy ?tenderer ;
-             epo:hasFinancialOfferValue ?OfferValue .
-      
-     ?OfferValue epo:hasAmountValue ?offerAmountValue ;
-                 epo:hasCurrency ?currencyUri .
-           
-     ?tenderer  epo:playedBy / epo:hasLegalName ?tendererLegalName .
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:refersToProcedure ?procedure .
+
+    # Get tender details: identifier, tenderer name, and financial offer
+    ?tender a epo:Tender ;
+            adms:identifier / skos:notation ?tenderIdentifier ;
+            epo:isSubmitedBy ?tenderer ;
+            epo:hasFinancialOfferValue ?offerValue .
+
+    ?offerValue epo:hasAmountValue ?offerAmountValue ;
+                epo:hasCurrency ?currencyUri .
+
+    ?tenderer epo:playedBy / epo:hasLegalName ?tendererLegalName .
+
+    # Optionally get the lot the tender was submitted for
+    OPTIONAL {
+      ?tender epo:isSubmittedForLot ?lot .
+      OPTIONAL { ?lot adms:identifier / skos:notation ?lotIdentifier . }
     }
-    
-    optional {
-      ?tender epo:isSubmittedForLot  ?lot .
-      
-      optional {
-        ?lot adms:identifier / skos:notation ?lotIdentifier.
-      }
+
+    # Optionally get the lot group
+    OPTIONAL {
+      ?tender epo:isSubjectToGrouping ?lotGroup .
+      ?lotGroup epo:setsGroupingContextForLot ?lot .
+      OPTIONAL { ?lotGroup adms:identifier / skos:notation ?lotGroupIdentifier . }
+      OPTIONAL { ?lot adms:identifier / skos:notation ?lotIdentifier . }
     }
-    
-    optional {
-      ?tender epo:isSubjectToGrouping ?lotGroup .     
-    
-      ?lotGroup epo:setsGroupingContextForLot ?lot  .
-    
-      optional {?lotGroup adms:identifier / skos:notation ?lotGroupIdentifier.}
-    
-      optional {?lot adms:identifier / skos:notation ?lotIdentifier.}
-    }     
   }
 
-  ?currencyUri skos:prefLabel ?currency . FILTER (lang(?currency) = "en")
-  
+  # Resolve currency label
+  ?currencyUri skos:prefLabel ?currency .
+  FILTER (lang(?currency) = "en")
 }
 ORDER BY ?publicationNumber ?lotGroupIdentifier ?lotIdentifier
-

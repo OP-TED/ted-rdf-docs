@@ -1,44 +1,54 @@
+# Retrieve winning tenderers and their awarded amounts for a specific date.
+# Filters for EUR currency, rank 1 (winner), and "selected" award status.
+# Returns: publication number, winner name, amount, and currency.
+# Change the date and currency filter below to adjust the query.
+
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?publicationNumber ?winnerLegalName  ?amount ?currency WHERE {
+SELECT ?publicationNumber ?winnerLegalName ?amount ?currency
 
-  FILTER (?publicationDate = "2024-11-04"^^xsd:date )
-  FILTER (?currencyUri = <http://publications.europa.eu/resource/authority/currency/EUR> )
-  FILTER (?rank = 1 )
-  FILTER (?awardStatusUri = <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w> )  # Was selected
+WHERE {
 
-  	?noticeUri a epo:Notice ;
-  		epo:hasPublicationDate ?publicationDate ;
-	  	epo:hasNoticePublicationNumber ?publicationNumber ;
-    	epo:announcesAwardDecision [
-      		a epo:AwardDecision ;
-    		epo:comprisesAwardOutcome [
-    			a epo:LotAwardOutcome ;
-      			epo:hasAwardStatus ?awardStatusUri ;
-         		epo:concernsLot ?lotUri ;
-                epo:comprisesTenderAwardOutcome [
-          			a epo:TenderAwardOutcome ;
-                	epo:hasAwardRank ?rank ;
-                    epo:concernsTender [
-                        a epo:Tender ;
-                        epo:isSubmitedBy [
-                              a epo:Tenderer ;
-                              epo:playedBy ?winnerUri
-                            ] ;
-                        epo:hasFinancialOfferValue [
-                            a epo:MonetaryValue ;
-                            epo:hasAmountValue ?amount ;
-                            epo:hasCurrency ?currencyUri ;
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+  # Only EUR amounts
+  FILTER (?currencyUri = <http://publications.europa.eu/resource/authority/currency/EUR>)
+  # Only first-ranked (winning) tenders
+  FILTER (?rank = 1)
+  # Only tenders with "selected as winner" status
+  FILTER (?awardStatusUri = <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w>)
 
-                        ]
-                    ] ;
-      			]
-  			]
-  		] .
+  # Traverse from notice through award decision to tender and winner
+  ?noticeUri a epo:Notice ;
+      epo:hasPublicationDate ?publicationDate ;
+      epo:hasNoticePublicationNumber ?publicationNumber ;
+      epo:announcesAwardDecision [
+          a epo:AwardDecision ;
+          epo:comprisesAwardOutcome [
+              a epo:LotAwardOutcome ;
+              epo:hasAwardStatus ?awardStatusUri ;
+              epo:concernsLot ?lotUri ;
+              epo:comprisesTenderAwardOutcome [
+                  a epo:TenderAwardOutcome ;
+                  epo:hasAwardRank ?rank ;
+                  epo:concernsTender [
+                      a epo:Tender ;
+                      epo:isSubmitedBy [
+                          a epo:Tenderer ;
+                          epo:playedBy ?winnerUri
+                      ] ;
+                      epo:hasFinancialOfferValue [
+                          a epo:MonetaryValue ;
+                          epo:hasAmountValue ?amount ;
+                          epo:hasCurrency ?currencyUri
+                      ]
+                  ]
+              ]
+          ]
+      ] .
 
   ?winnerUri epo:hasLegalName ?winnerLegalName .
   ?currencyUri dc:identifier ?currency .
-
-} ORDER BY DESC(?amount)
+}
+ORDER BY DESC(?amount)

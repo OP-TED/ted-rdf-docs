@@ -1,30 +1,38 @@
+# Retrieve the CPV (Common Procurement Vocabulary) codes of procedures
+# published on a specific date.
+# Returns: publication number, procedure identifier, CPV code, and CPV label.
+# Change the date below to query a different day.
+
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?publicationDate  ?publicationNumber ?procedureIdentifier ?procedureMainCPVCode ?procedureMainCPV  
+SELECT DISTINCT ?publicationDate ?publicationNumber ?procedureIdentifier ?procedureMainCPVCode ?procedureMainCPV
 
 WHERE {
-    
-    FILTER ( ?publicationDate = "2024-11-04"^^xsd:date)
-  
-  	GRAPH ?g {
-    
-    	?notice a epo:Notice ;
-  				epo:hasNoticePublicationNumber ?publicationNumber ;
-  				epo:hasPublicationDate ?publicationDate .
-    
-    	{?procedure a epo:Procedure ;
-    				adms:identifier / skos:notation ?procedureIdentifier ;
-      	    		epo:hasPurpose ?procedurePurpose .
-      
-      	 ?procedurePurpose epo:hasMainClassification ?procedureMainCPVUri .
-     	} 
+
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+
+  GRAPH ?g {
+    # Get notice and link to procedure
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:refersToProcedure ?procedure .
+
+    # Get procedure purpose and main CPV classification
+    { ?procedure a epo:Procedure ;
+                 adms:identifier / skos:notation ?procedureIdentifier ;
+                 epo:hasPurpose ?procedurePurpose .
+
+      ?procedurePurpose epo:hasMainClassification ?procedureMainCPVUri .
     }
-	
-   	?procedureMainCPVUri dc:identifier ?procedureMainCPVCode ; 
-               			 skos:prefLabel ?procedureMainCPV . 
-	FILTER(lang(?procedureMainCPV) = "en")	
+  }
+
+  # Resolve CPV code and label
+  ?procedureMainCPVUri dc:identifier ?procedureMainCPVCode ;
+                       skos:prefLabel ?procedureMainCPV .
+  FILTER(lang(?procedureMainCPV) = "en")
 }
