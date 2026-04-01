@@ -5,15 +5,21 @@
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-select  ?year (count(distinct ?publicationNumber) as ?numberOfNotices)
-WHERE 
-{ 
- GRAPH ?g { 
- FILTER (?publicationDate >= "2024-01-01"^^xsd:date && ?publicationDate <= "2026-03-31"^^xsd:date)  
-   ?notice a epo:Notice;
-         epo:hasPublicationDate ?publicationDate;   
-         epo:hasNoticePublicationNumber  ?publicationNumber. 
-   BIND(YEAR(?publicationDate) AS ?year) }
+SELECT ?year (COUNT(DISTINCT ?publicationNumber) AS ?numberOfNotices)
+
+WHERE {
+
+  # Date range filter
+  FILTER (?publicationDate >= "2024-01-01"^^xsd:date && ?publicationDate <= "2026-03-31"^^xsd:date)
+
+  GRAPH ?g {
+    # Get notice publication details
+    ?notice a epo:Notice ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:hasNoticePublicationNumber ?publicationNumber .
+
+    BIND(YEAR(?publicationDate) AS ?year)
+  }
 }
 GROUP BY ?year
 ORDER BY ?year
