@@ -10,11 +10,11 @@ What is Linked Open Data?::
 Linked Open Data is a method of publishing structured data which places an emphasis on data interoperability, and semantic consistency. As a technology, it is based on the Resource Description Framework (RDF), which is a standard model for data interchange on the Web. 
 +
 Linked Open Data, commonly referred to as "RDF data", can be queried using the SPARQL query language, and is designed to be easily linked to other data sources on the Web.
++
+RDF data can be queried via the https://data.ted.europa.eu/[TED Open Data Service] using SPARQL query language.
 
-What other formats are available?::
-TED notice data are also available in their original XML format, as well as in CSV format. These formats are available for download from the TED Website, and can be searched using the TED Search API.
-
-RDF data can be queried via the https://docs.ted.europa.eu/ted-open-data[TED Open Data Service] using SPARQL query language. Notice data can be downloaded from the https://ted.europa.eu/en/[TED Website]. 
+Reuse TED Data from the TED Website::
+TED notice data are also available in their original XML format, as well as HTML, and PDF. These formats are available for download from the TED Website, and can be searched using the https://ted.europa.eu/api/documentation/index.html[TED Search API].Notice data can be downloaded from the https://ted.europa.eu/en/[TED Website]. 
 
 [.tile-container]
 --

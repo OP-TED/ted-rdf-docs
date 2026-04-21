@@ -20,8 +20,6 @@ Download bulk notice packages using a direct link
 Bulk downloads in FTP format
 * https://ted.europa.eu/en/simap/developers-corner-for-reusers#download-release-calendar[Download the release calendar] +
 Download the list of the OJS releases per year
-* https://data.europa.eu/data/datasets/ted-csv?locale=en[TED subsets in CSV format] +
-Download yearly bundles in CSV format
 * xref:ftp.adoc[TED schemas archive] +
 The TED schemas archive resources
 
