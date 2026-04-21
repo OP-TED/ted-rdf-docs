@@ -1,0 +1,27 @@
+# Retrieves the count of contracts per currency for a specific date range.
+# Returns: contract currency and the number of contracts, ordered by highest count.
+# Change the date range as per your requirements.
+
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?contractCurrency (COUNT(DISTINCT ?tender) AS ?numberOfContracts)
+WHERE {
+  FILTER (?contractConclusionDate >= "2025-01-01"^^xsd:date &&
+          ?contractConclusionDate <= "2025-01-31"^^xsd:date)
+
+  GRAPH ?g {
+    ?contract a epo:Contract ;
+              epo:hasContractConclusionDate ?contractConclusionDate ;
+              epo:includesTender ?tender .
+
+    ?tender epo:hasFinancialOfferValue ?offerValue .
+
+    ?offerValue epo:hasCurrency ?contractCurrencyURI .
+  }
+
+  ?contractCurrencyURI dc:identifier ?contractCurrency .
+}
+GROUP BY ?contractCurrency
+ORDER BY DESC(?numberOfContracts)

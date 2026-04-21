@@ -1,0 +1,26 @@
+# Retrieves the top 10 buyers by notice count for a specific date range.
+# Returns: buyer name and the notice count, ordered by highest count.
+# Change the date range as per your requirements.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?buyerName (COUNT(DISTINCT ?publicationNumber) AS ?noticeCount)
+WHERE {
+  FILTER (?publicationDate >= "2025-12-01"^^xsd:date && ?publicationDate <= "2025-12-31"^^xsd:date)
+
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:refersToRole ?buyer .
+
+    ?buyer a epo:Buyer ;
+           epo:playedBy ?organization .
+
+    ?organization epo:hasLegalName ?buyerName .
+  }
+}
+GROUP BY ?buyerName
+ORDER BY DESC(?noticeCount)
+LIMIT 10

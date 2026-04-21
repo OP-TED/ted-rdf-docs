@@ -1,0 +1,13 @@
+# Retrieves the minimum and maximum publication dates and the count of distinct publication dates.
+# Returns: minimum publication date, maximum publication date, and the count of distinct publication dates.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+
+SELECT (MIN(?publicationDate) AS ?minDate) (MAX(?publicationDate) AS ?maxDate) (COUNT(DISTINCT ?publicationDate) AS ?count)
+WHERE {
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?noticePublicationNumber ;
+            epo:hasPublicationDate ?publicationDate .
+  }
+}

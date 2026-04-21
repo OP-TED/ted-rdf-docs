@@ -1,0 +1,30 @@
+# Retrieves the count of notices that have more than one buyer (joint procurement) for a specific date.
+# Returns: the total number of such notices.
+# Change the publication date as per your requirements.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (COUNT(DISTINCT ?publicationNumber) AS ?noticeCount)
+WHERE {
+  {
+    SELECT ?publicationNumber (COUNT(DISTINCT ?legalName) AS ?buyersCount)
+    WHERE {
+      FILTER (?publicationDate = "2025-07-29"^^xsd:date)
+
+      GRAPH ?g {
+        ?notice a epo:Notice ;
+                epo:hasNoticePublicationNumber ?publicationNumber ;
+                epo:hasPublicationDate ?publicationDate ;
+                epo:refersToRole ?buyer .
+
+        ?buyer a epo:Buyer ;
+               epo:playedBy ?organization .
+
+        ?organization epo:hasLegalName ?legalName .
+      }
+    }
+    GROUP BY ?publicationNumber
+    HAVING (COUNT(DISTINCT ?legalName) > 1)
+  }
+}

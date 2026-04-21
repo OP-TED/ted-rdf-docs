@@ -1,0 +1,22 @@
+# Retrieves the count of distinct notices per month for a specific date range.
+# Returns: month (YYYY-MM) and the number of notices.
+# Change the date range as per your requirements.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?month (COUNT(DISTINCT ?publicationNumber) AS ?numberOfNotices)
+WHERE {
+  FILTER (?publicationDate >= "2024-01-01"^^xsd:date &&
+          ?publicationDate <= "2026-03-31"^^xsd:date)
+
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:hasNoticePublicationNumber ?publicationNumber .
+
+    BIND(SUBSTR(STR(?publicationDate), 1, 7) AS ?month)
+  }
+}
+GROUP BY ?month
+ORDER BY ?month

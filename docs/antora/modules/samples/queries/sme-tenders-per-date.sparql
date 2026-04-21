@@ -1,0 +1,23 @@
+# Retrieves the total number of tenders from SMEs per publication date for a specific date range.
+# Returns: publication date and the total number of tenders from SMEs.
+# Change the date range as per your requirements.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?pubDate (SUM(?noOfTendersFromSMEs) AS ?totalNoOfTendersFromSMEs)
+WHERE {
+  FILTER (?pubDate >= "2025-01-01"^^xsd:date &&
+          ?pubDate <= "2025-01-31"^^xsd:date)
+
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?pubNum ;
+            epo:hasPublicationDate ?pubDate .
+
+    ?sSI a epo:SubmissionStatisticalInformation ;
+         epo:hasSMEReceivedTenders ?noOfTendersFromSMEs .
+  }
+}
+GROUP BY ?pubDate
+ORDER BY ?pubDate
