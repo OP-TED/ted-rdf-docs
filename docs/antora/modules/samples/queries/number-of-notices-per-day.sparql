@@ -4,7 +4,7 @@
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT (count(distinct ?noticePublicationNumber) as ?count)
+SELECT (COUNT(DISTINCT ?noticePublicationNumber) as ?count)
 
 WHERE {
 
