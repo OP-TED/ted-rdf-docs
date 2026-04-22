@@ -23,8 +23,6 @@ WHERE {
               epo:hasContractConclusionDate ?contractConclusionDate ;
               epo:includesTender ?tender .
 
-# Single 't' in isSubmitedBy is intentional as this is how it is currently in data.
-# Once the data is reprocessed and stored with correct spelling, query has to be updated
     ?tender epo:isSubmitedBy ?tenderer .
 
     ?tenderer a epo:Tenderer ;
