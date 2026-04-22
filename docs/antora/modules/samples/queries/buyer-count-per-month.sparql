@@ -5,7 +5,7 @@
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?month (COUNT(DISTINCT ?buyerName) AS ?buyerCount)
+SELECT ?month (COUNT(DISTINCT ?organisation) AS ?buyerCount)
 WHERE {
   FILTER (?publicationDate >= "2025-01-01"^^xsd:date &&
           ?publicationDate <= "2025-12-31"^^xsd:date)
@@ -17,8 +17,6 @@ WHERE {
 
     ?buyer a epo:Buyer ;
            epo:playedBy ?organisation .
-
-    ?organisation epo:hasLegalName ?buyerName .
 
     BIND(SUBSTR(STR(?publicationDate), 1, 7) AS ?month)
   }

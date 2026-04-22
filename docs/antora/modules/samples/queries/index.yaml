@@ -81,11 +81,6 @@ queries:
    sparql: named-graphs-per-period.sparql    
  
  - category: Stats
-   title: Information about number of notices published per year
-   description: This query retrieves the count (number of notices) per publication year.
-   sparql: count-of-notices-per-year.sparql
-
- - category: Stats
    title: Information about number of notices published for a date range
    description: This query retrieves the count (number of notices) per publication date for a date range.
    sparql: count-of-notices-date-range.sparql
