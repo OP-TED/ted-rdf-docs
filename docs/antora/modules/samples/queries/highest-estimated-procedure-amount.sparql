@@ -1,0 +1,27 @@
+# Retrieves the notice with the highest estimated procedure amount in EUR for a specific date range.
+# Returns: publication date, publication number, and the estimated procedure amount.
+# Change the date range as per your requirements.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?publicationDate ?publicationNumber ?procedureEstimatedAmount
+WHERE {
+  FILTER (?publicationDate >= "2025-12-01"^^xsd:date)
+  FILTER (?publicationDate <= "2025-12-07"^^xsd:date)
+
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:refersToProcedure ?procedure .
+
+    ?procedure a epo:Procedure ;
+               epo:hasEstimatedValue ?procedureEstimatedValue .
+
+    ?procedureEstimatedValue epo:hasAmountValue ?procedureEstimatedAmount ;
+                             epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+  }
+}
+ORDER BY DESC(?procedureEstimatedAmount)
+LIMIT 1

@@ -16,30 +16,19 @@ queries:
    sparql: notices-per-period.sparql
    
  - category: Notices
-   title: Information about number of notices published per year
-   description: This query retrieves the count (number of notices) per publication year.
-   sparql: notices-per-year.sparql
-
- - category: Notices
    title: Information about competition notices published on a specific date
    description: This query retrieves information (Publication number, Procedure type, Buyer Legal name and Buyer country) about all competition notices published on a specific day.
    sparql: competition-notices.sparql
-
-
 
  - category: Tenders
    title: Amounts awarded by tender.
    description: This query retrieves the amount awarded per tender announced in result notices published on a specific date.
    sparql: awarded-tender-amounts.sparql 
 
-
-
 # - category: Contracts
 #   title: Contracts published on a specific date
 #   description: This query retrieves information about contracts (Contract title, Conclusion date, Lot and Estimated values) published in procurement notices on a specific date.
 #   sparql: contracts-per-day.sparql   
-
-
 
  - category: Procedures
    title: Estimated amounts of procedures published on a specific date
@@ -66,8 +55,6 @@ queries:
    description: This query retrieves the lots associated to a specific procedure.
    sparql: lots-associated-to-procedure.sparql    
    
-
-
  - category: Organisations
    title: Organisations and their roles for notices published on a specific date
    description: This query retrieves information about organisations that are announced in procurement notices published on a specific date.
@@ -83,8 +70,6 @@ queries:
    description: This query retrieves information about buyers (Legal name, Legal type, Main activity and Country) mentioned in procurement notices published on a specific date.
    sparql: notices-per-buyer-country.sparql 
 
-
-
  - category: Advanced queries
    title: Retrieve the RDF of a notice with a specific publication number
    description: This query retrieves the RDF of a notice with a specific publication number.
@@ -95,3 +80,97 @@ queries:
    description: This query retrieves the named graphs published on a specified period.
    sparql: named-graphs-per-period.sparql    
  
+ - category: Stats
+   title: Information about number of notices published for a date range
+   description: This query retrieves the count (number of notices) per publication date for a date range.
+   sparql: count-of-notices-date-range.sparql
+
+ - category: Stats
+   title: Publication date statistics
+   description: This query retrieves the minimum and maximum publication dates and the count of distinct publication dates.
+   sparql: publication-date-stats.sparql
+
+ - category: Stats
+   title: Total notice count
+   description: This query retrieves the total count of distinct notices.
+   sparql: total-notice-count.sparql
+
+ - category: Stats
+   title: Notice count per form type
+   description: This query retrieves the count of notices per form type for a specific date range.
+   sparql: notice-count-per-form-type.sparql
+
+ - category: Stats
+   title: Notice count per date and notice type
+   description: This query retrieves the count of notices per publication date and notice type for a specific date range.
+   sparql: notice-count-per-date-and-notice-type.sparql
+
+ - category: Stats
+   title: Notice count per date and procedure type
+   description: This query retrieves the count of notices per publication date and procedure type for a specific date range.
+   sparql: notice-count-per-date-and-procedure-type.sparql
+
+ - category: Stats
+   title: Highest estimated procedure amount
+   description: This query retrieves the notice with the highest estimated procedure amount in EUR for a specific date range.
+   sparql: highest-estimated-procedure-amount.sparql
+
+ - category: Stats
+   title: Notice count per buyer
+   description: This query retrieves the count of notices per buyer for a specific date, ordered by highest count.
+   sparql: notice-count-per-buyer.sparql
+
+ - category: Stats
+   title: Joint procurement notice count
+   description: This query retrieves the count of notices that have more than one buyer (joint procurement) for a specific date.
+   sparql: joint-procurement-notice-count.sparql
+
+ - category: Stats
+   title: Top buyers by notice count
+   description: This query retrieves the top 10 buyers by notice count for a specific date range.
+   sparql: top-buyers-by-notice-count.sparql
+
+ - category: Stats
+   title: Buyer count per month
+   description: This query retrieves the count of distinct buyers per month for a specific year.
+   sparql: buyer-count-per-month.sparql
+
+ - category: Stats
+   title: Tenderer count per month
+   description: This query retrieves the count of distinct tenderers per month.
+   sparql: tenderer-count-per-month.sparql 
+
+ - category: Stats
+   title: Winner count per contract conclusion month
+   description: This query retrieves the count of distinct winners per contract conclusion month for a specific year, joining contracts to notices through lots.
+   sparql: winner-count-per-contract-month.sparql
+
+ - category: Stats
+   title: Notice count per month
+   description: This query retrieves the count of distinct notices per month for a specific date range.
+   sparql: notice-count-per-month.sparql
+
+ - category: Stats
+   title: Notice count per year
+   description: This query retrieves the count of distinct notices per year for a specific date range.
+   sparql: notice-count-per-year.sparql
+
+ - category: Stats
+   title: Top buyer countries by notice count
+   description: This query retrieves the top 10 buyer countries by notice count for a specific date range.
+   sparql: top-buyer-countries-by-notice-count.sparql
+
+ - category: Stats
+   title: Top winners by contract count
+   description: This query retrieves the top 10 winners by contract count for a specific date range, joining contracts to notices through lots.
+   sparql: top-winners-by-contract-count.sparql
+
+ - category: Stats
+   title: SME tenders per date
+   description: This query retrieves the total number of tenders from SMEs per publication date for a specific date range.
+   sparql: sme-tenders-per-date.sparql
+
+ - category: Stats
+   title: Contract count per currency
+   description: This query retrieves the count of contracts per currency for a specific date range.
+   sparql: contract-count-per-currency.sparql

@@ -1,0 +1,23 @@
+# Retrieves the count (number of notices) per date range
+# Returns: publication date and the count per date.
+# Change the range of the publication dates as per your requirements.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?pubDate (COUNT(DISTINCT ?noticePublicationNumber) AS ?NoticeCount)
+WHERE {
+
+  FILTER (
+    ?pubDate >= "2025-12-01"^^xsd:date &&
+    ?pubDate <= "2025-12-07"^^xsd:date
+  )
+
+  GRAPH ?g {
+    ?Notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?noticePublicationNumber ;
+            epo:hasPublicationDate ?pubDate .
+  }
+}
+GROUP BY ?pubDate
+ORDER BY ?pubDate

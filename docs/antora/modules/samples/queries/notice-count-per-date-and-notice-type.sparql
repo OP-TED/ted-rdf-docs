@@ -1,0 +1,26 @@
+# Retrieves the count of notices per publication date and notice type for a specific date range.
+# Returns: publication date, notice type, and the notice count.
+# Change the date range as per your requirements.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?publicationDate ?noticeType (COUNT(DISTINCT ?noticePublicationNumber) AS ?NoticeCount)
+WHERE {
+  VALUES (?startDate ?endDate) { ("2025-12-01"^^xsd:date "2025-12-07"^^xsd:date) }
+
+  FILTER (?publicationDate >= ?startDate && ?publicationDate <= ?endDate)
+
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:hasNoticePublicationNumber ?noticePublicationNumber ;
+            epo:hasNoticeType ?noticeTypeUri .
+  }
+
+  ?noticeTypeUri skos:prefLabel ?noticeType .
+  FILTER (LANG(?noticeType) = "en")
+}
+GROUP BY ?publicationDate ?noticeType
+ORDER BY ?publicationDate DESC(?NoticeCount)
