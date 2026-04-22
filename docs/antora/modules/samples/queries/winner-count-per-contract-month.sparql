@@ -1,0 +1,41 @@
+# Retrieves the count of distinct winner organisations per contract conclusion month for a specific year.
+# Joins contracts to notices through lots. Handles both individual organisations and members of organisation groups.
+# Returns: contract conclusion month (YYYY-MM) and the number of winner organisations.
+# Change the date range as per your requirements.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?contractConclusionMonth (COUNT(DISTINCT ?organization) AS ?numberOfWinners)
+WHERE {
+  FILTER (?contractConclusionDate >= "2025-01-01"^^xsd:date &&
+          ?contractConclusionDate <= "2025-12-31"^^xsd:date)
+  #FILTER(?publicationNumber = '00153462-2026')
+
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:refersToLot ?lot .
+
+    ?contract a epo:Contract ;
+              epo:hasLotReference ?lot ;
+              epo:hasContractConclusionDate ?contractConclusionDate ;
+              epo:includesTender ?tender .
+
+    ?tender epo:isSubmitedBy ?tenderer .
+
+    ?tenderer a epo:Tenderer ;
+              epo:playedBy ?org .
+
+    { ?org a org:Organization .
+      BIND(?org AS ?organization) }
+    UNION
+    { ?org a epo:OrganisationGroup ;
+           epo:hasMember ?organization . }
+
+    BIND(SUBSTR(STR(?contractConclusionDate), 1, 7) AS ?contractConclusionMonth)
+  }
+}
+GROUP BY ?contractConclusionMonth
+ORDER BY ?contractConclusionMonth

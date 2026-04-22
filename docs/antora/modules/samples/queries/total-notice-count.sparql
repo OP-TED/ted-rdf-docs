@@ -1,0 +1,12 @@
+# Retrieves the total count of notices.
+# Returns: the total number of distinct notices.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+
+SELECT (COUNT(DISTINCT ?noticePublicationNumber) AS ?count)
+WHERE {
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?noticePublicationNumber .
+  }
+}

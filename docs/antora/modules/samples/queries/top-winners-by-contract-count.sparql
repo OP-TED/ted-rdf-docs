@@ -1,0 +1,41 @@
+# Retrieves the top 10 winners by contract count for a specific date range.
+# Joins contracts to notices through lots. Handles both individual organisations and organisation groups.
+# Returns: winner name and the number of contracts, ordered by highest count.
+# Change the date range as per your requirements.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?winnerName (COUNT(DISTINCT ?contract) AS ?numberOfContracts)
+WHERE {
+  FILTER (?contractConclusionDate >= "2025-01-01"^^xsd:date &&
+          ?contractConclusionDate <= "2025-01-10"^^xsd:date)
+
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:refersToLot ?lot .
+
+    ?contract a epo:Contract ;
+              epo:hasLotReference ?lot ;
+              epo:hasContractConclusionDate ?contractConclusionDate ;
+              epo:includesTender ?tender .
+
+    ?tender epo:isSubmitedBy ?tenderer .
+
+    ?tenderer a epo:Tenderer ;
+              epo:playedBy ?org .
+
+    OPTIONAL {
+      { ?org a org:Organization ;
+             epo:hasLegalName ?winnerName . }
+      UNION
+      { ?org a epo:OrganisationGroup ;
+             epo:hasMember / epo:hasLegalName ?winnerName . }
+    }
+  }
+}
+GROUP BY ?winnerName
+ORDER BY DESC(?numberOfContracts)
+LIMIT 10
