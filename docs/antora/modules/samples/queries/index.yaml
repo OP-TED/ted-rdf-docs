@@ -174,3 +174,8 @@ queries:
    title: Contract count per currency
    description: This query retrieves the count of contracts per currency for a specific date range.
    sparql: contract-count-per-currency.sparql
+
+ - category: Contracts
+   title: Contracts awarded by EU institutions
+   description: This query retrieves contracts awarded by EU institutions and bodies, including procedure type, buyer name, lot and framework agreement type.
+   sparql: contracts-awarded-by-eu-inst.sparql
