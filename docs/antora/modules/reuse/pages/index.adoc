@@ -17,7 +17,7 @@ Search and retrieve data published on the TED portal using the TED search API
 * https://ted.europa.eu/en/simap/developers-corner-for-reusers#download-notices-various-formats[Downloads notices in various formats using direct links] +
 Download bulk notice packages using a direct link
 * https://ted.europa.eu/en/simap/developers-corner-for-reusers#download-xml-notices[Download XML notices in bulk] +
-Bulk downloads in FTP format
+Download XML notices in bulk via HTTPS
 * https://ted.europa.eu/en/simap/developers-corner-for-reusers#download-release-calendar[Download the release calendar] +
 Download the list of the OJS releases per year
 * xref:ftp.adoc[TED schemas archive] +
