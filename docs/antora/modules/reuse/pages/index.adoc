@@ -9,6 +9,23 @@ unsigned pdf, and xml, using direct links.
 
 In addition, the Search API can be used in different modes to query notice data. Click on the links below for more detail on the various download methods.
 
+////
+== Newsletter
+
+* xref:newsletter.adoc[The latest newsletter] +
+Read the latest reuse data news
+
+== Getting started
+
+* https://docs.ted.europa.eu/eforms/latest/schema/schemas.html[Understanding data structure] +
+Info on schemas, notice xml structure, notice information, and more
+* xref:searching.adoc[Searching for and retrieving xml data] +
+The different methods for accessing data
+* xref:get_started_api.adoc[Using the search API] +
+Start using the Search API
+* xref:tips_api.adoc[Search API tips and examples] +
+Tips and examples to help start using the Search API
+////
 
 == Access Methods
 
