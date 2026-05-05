@@ -10,7 +10,7 @@ Known Issues & Limitations documents the currently known issues, limitations, an
 
 === Do not use ?notice count
 
-There is a mismatch between the count of distinct notices based on notice id and distinct count of notices based on notice publication numbers. It is because of the logic used for identifying a notice (UUID without version number). That is, the notice UUID (without the version number) can be used by more than one published notice. This issue will be fixed in the future. Currently, when we count the number of distinct notices using notice object it could be less than the distinct count of notices based on notice publication numbers.   
+There is a mismatch between the count of distinct notices based on notice id and distinct count of notices based on notice publication numbers. It is because of the current logic used for identifying a notice (UUID without version number). That is, the notice UUID (without the version number) can be used by more than one published notice. This issue will be fixed in the future. Currently, when we count the number of distinct notices using notice object it could be less than the distinct count of notices based on notice publication numbers.   
 
 For example, for the notice - https://ted.europa.eu/en/notice/-/detail/00176184-2026 , 00176184-2026 is the publication number and a2add710-2c39-45f3-ae16-4edf2f5c191c is the notice UUID without the version number. 
 
@@ -36,8 +36,8 @@ For example, for the notice - https://ted.europa.eu/en/notice/-/detail/00176184-
 
 === Old forms (or non-eForms) data not available
 
-Though it is mentioned as the start date of the data is 1st of March 2023, it is to be noted that the old forms data is not available within the named graphs. 
-Also, all of the queries provided in the explore (previouly query library) works only for eForms. 
+Though it is mentioned that the start date of the data is from 1st of March 2023, it is to be noted that the old forms data is not available within the named graphs. 
+Also, all of the queries provided in the explore (previouly query library) works only for eForms. To fetch old forms data, additional logic is required. 
 
 == ePO
 
@@ -67,18 +67,18 @@ The property `epo:isSubmitedBy` is misspelled in the current data (single 't' in
 # ?tender epo:isSubmittedBy ?tenderer .
 ----
 
-=== Missing contractor information in some notices
+=== Missing winner information in some notices
 
-Some result notices do not include contractor (tenderer) information. This means queries that require contractor details may return fewer results than expected.
+Some result notices do not include winner (tenderer) information. This means queries that require winner details may return fewer results than expected.
 
-**Workaround:** Use `OPTIONAL` when fetching contractor information to avoid losing the entire notice from results.
+**Workaround:** Use `OPTIONAL` when fetching winner information to avoid losing the entire notice from results.
 
 [source,sparql]
 ----
 OPTIONAL {
   ?tenderer a epo:Tenderer ;
             epo:playedBy ?org .
-  ?org epo:hasLegalName ?contractorName .
+  ?org epo:hasLegalName ?winnerName .
 }
 ----
 
@@ -86,24 +86,25 @@ OPTIONAL {
 
 === Timeout on large date ranges
 
-Queries spanning more than 6 months of data may time out on the public SPARQL endpoint, especially when combined with multiple joins (e.g., notice → lot → contract → tender → tenderer).
+Queries spanning more than 6 months of data may time out, especially when combined with multiple joins (e.g., notice → lot → contract → tender → tenderer).
 
-**Workaround:** Break large queries into smaller date ranges and combine results client-side.
+== Data and data quality
 
-=== Federated queries may be unreliable
+=== Currencies
 
-Federated queries using `SERVICE` to external endpoints (e.g., Wikidata) may time out or fail intermittently due to network latency and endpoint availability.
+Currently, financial values are only available in original currencies (as it is present in the eForms). This limitation prevents the users to compare financial values across notices. 
+In the future, open data service may provide financial values in euros in addition to the original currency. 
 
-**Workaround:** Execute queries against each endpoint separately and join results in Python or another client tool.
+=== Data quality issues
 
-== Data Availability
+Data quality issues present in source / original XML files are also present in the triples in the open data service. No data cleansing done when transforming from XML to RDF triples. 
 
-=== Historical data coverage
+=== Winning tender
 
-Not all historical notices are available in RDF format. Coverage begins from 2015 onwards, with more complete data from 2020.
+Currently, there is no indicator to indicate whether a tender is a winning tender. A tender linked to the settled contract is considered as the winning tender. 
 
-=== eForms data
+=== Missing direct relationship between contract and notice
 
-Notices submitted via eForms may have a different data structure compared to older TED XML notices. Some properties available in XML-based notices may not yet be mapped in eForms-based data.
+Currently, there is no direct relationship between settled contract section and notice or buyer in the tripes. The indirect relationship is through the lot. 
 
 include::ROOT:partial$feedback.adoc[]
