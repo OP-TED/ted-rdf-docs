@@ -1,0 +1,109 @@
+:doctitle: Known Issues & Limitations
+:doccode: ODS-KIL-01
+:author: TED Open Data Team
+:docdate: May 2026
+
+
+Known Issues & Limitations documents the currently known issues, limitations, and workarounds when working with TED Open Data service.
+
+== Notices
+
+=== Do not use ?notice count
+
+There is a mismatch between the count of distinct notices based on notice id and distinct count of notices based on notice publication numbers. It is because of the logic used for identifying a notice (UUID without version number). That is, the notice UUID (without the version number) can be used by more than one published notice. This issue will be fixed in the future. Currently, when we count the number of distinct notices using notice object it could be less than the distinct count of notices based on notice publication numbers.   
+
+For example, for the notice - https://ted.europa.eu/en/notice/-/detail/00176184-2026 , 00176184-2026 is the publication number and a2add710-2c39-45f3-ae16-4edf2f5c191c is the notice UUID without the version number. 
+
+**Workaround:** Use distinct count of publication numbers to count the number of distinct notices. 
+
+[source,sparql]
+----
+# Use this  
+(COUNT(DISTINCT ?noticePublicationNumber) AS ?NoticeCount) .
+
+# NOT this  
+(COUNT(DISTINCT ?notice) AS ?NoticeCount) .
+
+# Assuming your query pattern is as below
+ GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?noticePublicationNumber ;
+             epo:hasPublicationDate ?pubDate .
+  }
+
+
+----
+
+=== Old forms (or non-eForms) data not available
+
+Though it is mentioned as the start date of the data is 1st of March 2023, it is to be noted that the old forms data is not available within the named graphs. 
+Also, all of the queries provided in the explore (previouly query library) works only for eForms. 
+
+== ePO
+
+=== Version of ePO used is 4.2
+
+The current data (triples) in open data service are processed as per version 4.2 of ePO (eprocurement ontology). The latest version of ePO is 5.2. In the future, data will be reprocessed to match the latest version of ePO. 
+
+
+=== Some relationships are not available in the data
+
+Not all of the relationships provided in ePO are available in the data in open data service. It is best to view the available relationships / tripes using the inspect option to verify the available relationships in the data. 
+
+== Data Quality Issues
+
+=== Typo in property name: `isSubmitedBy`
+
+The property `epo:isSubmitedBy` is misspelled in the current data (single 't' instead of `isSubmittedBy`). This affects queries that traverse from a Tender to a Tenderer.
+
+**Workaround:** Use `epo:isSubmitedBy` (with single 't') in your queries until the data is reprocessed.
+
+[source,sparql]
+----
+# Use this (current data)
+?tender epo:isSubmitedBy ?tenderer .
+
+# NOT this (correct spelling, but won't match current data)
+# ?tender epo:isSubmittedBy ?tenderer .
+----
+
+=== Missing contractor information in some notices
+
+Some result notices do not include contractor (tenderer) information. This means queries that require contractor details may return fewer results than expected.
+
+**Workaround:** Use `OPTIONAL` when fetching contractor information to avoid losing the entire notice from results.
+
+[source,sparql]
+----
+OPTIONAL {
+  ?tenderer a epo:Tenderer ;
+            epo:playedBy ?org .
+  ?org epo:hasLegalName ?contractorName .
+}
+----
+
+== Query Performance Limitations
+
+=== Timeout on large date ranges
+
+Queries spanning more than 6 months of data may time out on the public SPARQL endpoint, especially when combined with multiple joins (e.g., notice → lot → contract → tender → tenderer).
+
+**Workaround:** Break large queries into smaller date ranges and combine results client-side.
+
+=== Federated queries may be unreliable
+
+Federated queries using `SERVICE` to external endpoints (e.g., Wikidata) may time out or fail intermittently due to network latency and endpoint availability.
+
+**Workaround:** Execute queries against each endpoint separately and join results in Python or another client tool.
+
+== Data Availability
+
+=== Historical data coverage
+
+Not all historical notices are available in RDF format. Coverage begins from 2015 onwards, with more complete data from 2020.
+
+=== eForms data
+
+Notices submitted via eForms may have a different data structure compared to older TED XML notices. Some properties available in XML-based notices may not yet be mapped in eForms-based data.
+
+include::ROOT:partial$feedback.adoc[]
