@@ -2,6 +2,9 @@
 # Returns: publication number, date, title, buyer name, procedure type, contract identifier,
 #          lot identifier, and framework agreement type.
 # Change the publication year or FILTER as per your requirements.
+# Note 1: Here it is attempted to get the same results as that is provided in the TED site - https://ted.europa.eu/en/simap/contracts-awarded-by-eu-institutions?year=2026&eu-institution=ALL
+# Note 2: Query takes too long (around 5 minutes up until tender was added). Performance issues should be fixed
+# Note 3: TED provides both old forms and eForms whereas this query is only for eForms.
 
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX blt: <http://publications.europa.eu/resource/authority/buyer-legal-type/>
@@ -9,12 +12,13 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX org:<http://www.w3.org/ns/org>
 
-SELECT ?publicationNumber ?publicationDate ?title ?buyerName ?procedureType
-       ?contractIdentifier ?lotIdentifier ?frameworkAgreementType
+SELECT ?publicationNumber ?publicationDate ?title ?buyerName ?procedureType ?frameworkAgreementType
+       ?contractIdentifier ?contractTitle ?lotIdentifier #?winner 
 WHERE {
   FILTER (?publicationYear = 2026)
-  #FILTER (?publicationNumber IN ("00149112-2026", "00182888-2026", "00000612-2026"))
+ # FILTER (?publicationNumber IN ("00149112-2026", "00182888-2026", "00000612-2026"))
   FILTER (?buyerLegalType IN (blt:eu-ins-bod-ag, blt:body-pl))
 
   GRAPH ?g {
@@ -44,15 +48,30 @@ WHERE {
 
     ?contract a epo:Contract ;
               adms:identifier / skos:notation ?contractIdentifier ;
+              dcterms:title ?contractTitle; 
+              epo:includesTender  ?tender; 
               epo:hasLotReference ?lot .
-  }
+    
+    ?tender a epo:Tender;
+            epo:isSubmittedForLot ?lot;
+            epo:isSubmitedBy ?tenderer;
+            epo:hasFinancialOfferValue ?financialOfferValue.
+
+    #?tenderer a epo:Tenderer;
+    #          epo:playedBy ?org.
+   # ?org a org:Organization;  
+   #     epo:hasLegalName ?winner.
+              
+
+}
 
   ?procedureTypeURI skos:prefLabel ?procedureType .
   FILTER (LANG(?procedureType) = "en")
 
-  ?frameworkAgreementTypeURI skos:prefLabel ?frameworkAgreementType .
+ ?frameworkAgreementTypeURI skos:prefLabel ?frameworkAgreementType .
   FILTER (LANG(?frameworkAgreementType) = "en")
 
+ # FILTER(LANG(?winner) ='en') 
   BIND(YEAR(?publicationDate) AS ?publicationYear)
 }
-LIMIT 1000
+LIMIT 10
