@@ -43,7 +43,7 @@ Also, all of the queries provided in the explore (previouly query library) works
 
 === Version of ePO used is 4.2
 
-The current data (triples) in open data service are processed as per version 4.2 of ePO (eprocurement ontology). The latest version of ePO is 5.2. In the future, data will be reprocessed to match the latest version of ePO. 
+The current data (triples) in open data service are processed as per version 4.2 of ePO (eProcurement Ontology). The latest version of ePO is 5.2. In the future, data will be reprocessed to match the latest version of ePO. 
 
 
 === Some relationships are not available in the data
