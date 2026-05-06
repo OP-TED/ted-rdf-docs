@@ -48,7 +48,7 @@ The current data (triples) in open data service are processed as per version 4.2
 
 === Some relationships are not available in the data
 
-Not all of the relationships provided in ePO are available in the data in open data service. It is best to view the available relationships / tripes using the inspect option to verify the available relationships in the data. 
+Not all of the relationships provided in ePO are available in the data in open data service. It is best to view the available relationships / triples using the inspect option to verify the available relationships in the data. 
 
 === Org vs Org group spelling
 
