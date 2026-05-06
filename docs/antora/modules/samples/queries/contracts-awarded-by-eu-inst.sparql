@@ -13,6 +13,7 @@ PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX org:<http://www.w3.org/ns/org>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?publicationNumber ?publicationDate ?title ?buyerName ?procedureType ?frameworkAgreementType
        ?contractIdentifier ?contractTitle ?lotIdentifier #?winner 
@@ -22,13 +23,14 @@ WHERE {
   FILTER (?buyerLegalType IN (blt:eu-ins-bod-ag, blt:body-pl))
 
   GRAPH ?g {
-    ?notice a epo:Notice ;
+    ?notice a epo:Notice, epo:ResultNotice ;
             epo:hasNoticePublicationNumber ?publicationNumber ;
-            epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/result> ;
+            #epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/result> ;
             epo:hasPublicationDate ?publicationDate ;
             epo:refersToProcedure ?procedure ;
             epo:refersToRole ?buyer ;
             epo:refersToLot ?lot .
+          #  epo:announcesContract ?contract.
 
     ?lot epo:isSubjectToLotSpecificTerm ?frameworkAgreementTerm .
     ?lot adms:identifier / skos:notation ?lotIdentifier .
@@ -52,7 +54,7 @@ WHERE {
               epo:includesTender  ?tender; 
               epo:hasLotReference ?lot .
     
-    ?tender a epo:Tender;
+   ?tender a epo:Tender;
             epo:isSubmittedForLot ?lot;
             epo:isSubmitedBy ?tenderer;
             epo:hasFinancialOfferValue ?financialOfferValue.
