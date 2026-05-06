@@ -52,6 +52,7 @@
 
 * [.separated]#**Information and Resources**#
 * xref:samples:data_availability.adoc[Current Data Availability]
+* xref:querying:known_issues.adoc[Known Issues & Limitations]
 * https://github.com/OP-TED/ted-rdf-docs[Ask the Community for query help]
 
 * xref:mapping:versioning.adoc[Versioning]
