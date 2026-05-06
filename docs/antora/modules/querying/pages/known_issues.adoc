@@ -106,7 +106,7 @@ In the future, open data service may provide financial values in euros in additi
 
 === Data quality issues
 
-Data quality issues present in source / original XML files are also present in the triples in the open data service. No data cleansing done when transforming from XML to RDF triples. 
+Data quality issues present in source / original XML files are also present in the triples in the open data service. No data cleansing is done when transforming from XML to RDF triples. 
 
 === Winning tender
 
