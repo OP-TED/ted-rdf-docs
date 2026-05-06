@@ -1,0 +1,57 @@
+# Retrieves the number of notices per million population for each buyer country.
+# Joins TED notice counts per buyer country with Wikidata population data using a federated query.
+# Returns: buyer country, notice count, population, and notices per million population.
+# Change the date range as per your requirements.
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX m8g: <http://data.europa.eu/m8g/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?buyerCountry ?noticeCount ?population (ROUND(?noticeCount / (?population / 1000000)) AS ?noNoticesPerMillion)
+WHERE {
+  # --- TED DATA ---
+  {
+    SELECT ?buyerCountry (COUNT(DISTINCT ?publicationNumber) AS ?noticeCount)
+    WHERE {
+      FILTER (?publicationDate >= "2025-12-01"^^xsd:date &&
+              ?publicationDate <= "2025-12-31"^^xsd:date)
+
+      GRAPH ?g {
+        ?notice a epo:Notice ;
+                epo:hasNoticePublicationNumber ?publicationNumber ;
+                epo:hasPublicationDate ?publicationDate ;
+                epo:refersToRole ?buyer .
+
+        ?buyer a epo:Buyer ;
+               epo:playedBy ?organization .
+
+        ?organization epo:hasLegalName ?buyerName ;
+                      m8g:registeredAddress ?regAdd .
+
+        ?regAdd epo:hasCountryCode ?buyerCountryCode .
+      }
+
+      ?buyerCountryCode skos:prefLabel ?buyerCountry .
+      FILTER (LANG(?buyerCountry) = "en")
+    }
+    GROUP BY ?buyerCountry
+    ORDER BY DESC(?noticeCount)
+    LIMIT 30
+  }
+
+  # --- WIKIDATA SERVICE ---
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?country wdt:P31 wd:Q6256 ;
+             rdfs:label ?wdCountryLabel ;
+             wdt:P1082 ?population .
+    FILTER (LANG(?wdCountryLabel) = "en")
+  }
+
+  # --- JOIN ---
+  FILTER (LCASE(?buyerCountry) = LCASE(?wdCountryLabel))
+}
+ORDER BY DESC(?noticeCount)

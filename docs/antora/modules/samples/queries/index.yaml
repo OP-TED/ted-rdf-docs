@@ -174,3 +174,8 @@ queries:
    title: Contract count per currency
    description: This query retrieves the count of contracts per currency for a specific date range.
    sparql: contract-count-per-currency.sparql
+
+ - category: Federated queries
+   title: Notices per million population by buyer country
+   description: This federated query joins TED notice counts per buyer country with Wikidata population data to calculate notices per million population.
+   sparql: notices-per-million-population-buyer-country.sparql
