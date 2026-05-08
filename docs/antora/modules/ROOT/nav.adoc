@@ -23,6 +23,8 @@
 ** https://data.ted.europa.eu/[TED Open Data Editor]
 ** https://docs.ted.europa.eu/ted-open-data-explorer/[TED Open Data Explorer]
 
+* xref:querying:known_issues.adoc[Known Issues & Limitations]
+
 * [.separated]#**TED XML Data**#
 * xref:reuse:index.adoc[Reusing TED XML data]
 ** https://ted.europa.eu/en/simap/developers-corner-for-reusers#search-retrieve-data[Search and retrieve data via the search API]
