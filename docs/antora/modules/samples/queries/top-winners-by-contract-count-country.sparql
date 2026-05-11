@@ -1,0 +1,47 @@
+# Provides the top N (10 based on the limit set) winners for a year and country based on the number of contracts (tenders won)
+# Replace year and country code as per your requirements
+# Country code can be checked from here - http://publications.europa.eu/resource/authority/country
+
+PREFIX cc: <http://publications.europa.eu/resource/authority/country/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX m8g: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?winnerName (COUNT(DISTINCT ?contract) AS ?numberOfContracts)
+WHERE {
+  FILTER (YEAR(?contractConclusionDate) = 2025)
+  #FILTER (STR(?winnerCountry) = "Greece")
+  FILTER (?winnerCountryCode = cc:DEU)
+
+  GRAPH ?g {
+    ?contract a epo:Contract ;
+              epo:hasLotReference ?lot ;
+              epo:hasContractConclusionDate ?contractConclusionDate ;
+              epo:includesTender ?tender .
+
+    ?tender epo:isSubmitedBy ?tenderer ;
+            epo:isSubmittedForLot ?lot .
+
+    ?tenderer a epo:Tenderer ;
+              epo:playedBy ?winnerOrg .
+
+    {
+      ?winnerOrg a org:Organization ;
+                 epo:hasLegalName ?winnerName ;
+                 m8g:registeredAddress / epo:hasCountryCode ?winnerCountryCode .
+    }
+    UNION
+    {
+      ?winnerOrg a epo:OrganisationGroup ;
+                 epo:hasMember / epo:hasLegalName ?winnerName ;
+                 m8g:registeredAddress / epo:hasCountryCode ?winnerCountryCode .
+    }
+  }
+
+  #?winnerCountryCode skos:prefLabel ?winnerCountry
+  #FILTER (LANG(?winnerCountry) = "en")
+}
+GROUP BY ?winnerName
+ORDER BY DESC(?numberOfContracts)
+LIMIT 10
