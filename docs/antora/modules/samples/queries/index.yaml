@@ -179,3 +179,8 @@ queries:
    title: Notices per million population by buyer country
    description: This federated query joins TED notice counts per buyer country with Wikidata population data to calculate notices per million population.
    sparql: notices-per-million-population-buyer-country.sparql
+
+ - category: Stats
+   title: Top winners by contract count per country
+   description: This query retrieves the top N winners for a year and country based on the number of contracts (tenders won).
+   sparql: top-winners-by-contract-count-country.sparql
