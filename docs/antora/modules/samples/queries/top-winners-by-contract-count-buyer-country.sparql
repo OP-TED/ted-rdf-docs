@@ -1,0 +1,52 @@
+#For a given year and buyer country, this query fetches the top N (10 based on the limit set) winners based on the number of contracts
+#It considers only those cases where there is a contract conclusion date
+#Replace contract conclusion year and country code as per your requirements in the below query in the filters provided
+#Country code can be checked at https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country
+#Currently, this query takes about 40 seconds, we are working to improve the performance
+
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX m8g: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cc: <http://publications.europa.eu/resource/authority/country/>
+
+SELECT ?winnerName (COUNT(DISTINCT ?contract) AS ?numberOfContracts)
+WHERE {
+  FILTER (YEAR(?contractConclusionDate) = 2025)
+  FILTER (?buyerCountryCode = cc:GRC)
+
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:refersToLot ?lot ;
+            epo:refersToRole ?buyer .
+
+    ?buyer a epo:Buyer ;
+           epo:playedBy ?buyerOrg .
+
+    ?buyerOrg m8g:registeredAddress / epo:hasCountryCode ?buyerCountryCode .
+
+    ?contract a epo:Contract ;
+              epo:hasLotReference ?lot ;
+              epo:hasContractConclusionDate ?contractConclusionDate ;
+              epo:includesTender ?tender .
+
+    ?tender epo:isSubmitedBy ?tenderer ;
+            epo:isSubmittedForLot ?lot .
+
+    ?tenderer a epo:Tenderer ;
+              epo:playedBy ?winnerOrg .
+
+    {
+      ?winnerOrg a org:Organization ;
+                 epo:hasLegalName ?winnerName .
+    }
+    UNION
+    {
+      ?winnerOrg a epo:OrganisationGroup ;
+                 epo:hasMember / epo:hasLegalName ?winnerName .
+    }
+  }
+}
+GROUP BY ?winnerName
+ORDER BY DESC(?numberOfContracts)
+LIMIT 10

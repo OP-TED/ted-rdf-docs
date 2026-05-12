@@ -184,3 +184,18 @@ queries:
    title: Top winners by contract count per country
    description: This query retrieves the top N winners for a year and country based on the number of contracts (tenders won).
    sparql: top-winners-by-contract-count-country.sparql
+
+ - category: Stats
+   title: Top winners by tender count per country
+   description: This query retrieves the top N winners for a year and country based on the number of tenders won.
+   sparql: top-winners-by-tender-count-country.sparql
+
+ - category: Stats
+   title: Top winners by contract count per buyer country
+   description: This query retrieves the top N winners for a year and buyer country based on the number of contracts (tenders won).
+   sparql: top-winners-by-contract-count-buyer-country.sparql
+
+ - category: Stats
+   title: Top winners by contract count per buyer country (by publication date)
+   description: This query retrieves the top N winners for a year and buyer country based on the number of contracts, using publication date instead of contract conclusion date.
+   sparql: top-winners-by-contract-count-buyer-country-pub-date.sparql
