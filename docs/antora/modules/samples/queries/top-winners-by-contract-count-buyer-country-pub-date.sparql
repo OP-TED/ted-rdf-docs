@@ -4,7 +4,6 @@
 #Country code can be checked at https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country
 
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX m8g: <http://data.europa.eu/m8g/>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cc: <http://publications.europa.eu/resource/authority/country/>
@@ -15,7 +14,7 @@ WHERE {
   FILTER (?buyerCountryCode = cc:GRC)
 
   GRAPH ?g {
-    ?notice a epo:Notice ;
+    ?notice a epo:ResultNotice ;
             epo:hasPublicationDate ?publicationDate ;
             epo:refersToLot ?lot ;
             epo:refersToRole ?buyer .

@@ -2,12 +2,10 @@
 #It considers only those cases where there is a contract conclusion date
 #Replace contract conclusion year and country code as per your requirements in the below query in the filters provided
 #Country code can be checked at https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country
-#Currently, this query takes about 40 seconds, we are working to improve the performance
+#Currently, this query takes about 40 to 70 seconds, we are working to improve the performance
 
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX m8g: <http://data.europa.eu/m8g/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX cc:<http://publications.europa.eu/resource/authority/country/>
 
