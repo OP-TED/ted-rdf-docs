@@ -39,6 +39,11 @@ For example, for the notice - https://ted.europa.eu/en/notice/-/detail/00176184-
 Though it is mentioned that the start date of the data is from 1st of March 2023, it is to be noted that the standard forms data is not available within the named graphs. 
 Also, all of the queries provided in the explore (query library) tab works only for eForms. To fetch standard forms data, additional logic is required. Publication date is in string (STR) format for standard forms whereas it is in date format for eForms data. 
 
+=== Unable to inspect standard forms (or non-eForms) 
+
+Currently it is not possible to inspect standard forms. For example, publication number 516873-2023 though available in the repository, is not available for inspection.  
+
+
 == ePO
 
 === Version of ePO used is 4.2
