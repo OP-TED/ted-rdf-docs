@@ -8,9 +8,9 @@ Known Issues & Limitations documents the currently known issues, limitations, an
 
 == Notices
 
-=== Do not use ?notice count
+=== Notice count: Do not use ?notice count
 
-There is a mismatch between the count of distinct notices based on notice id and distinct count of notices based on notice publication numbers. It is because of the current logic used for identifying a notice (UUID without version number). That is, the notice UUID (without the version number) can be used by more than one published notice. This issue will be fixed in the future. Currently, when we count the number of distinct notices using notice object it could be less than the distinct count of notices based on notice publication numbers.   
+There is a mismatch between the count of distinct notices based on the notice id and distinct count of notices based on notice publication numbers. It is because of the current logic used for identifying a notice (UUID without version number). That is, the notice UUID (without the version number) can be used by more than one published notice. This issue will be fixed in the future. Currently, when we count the number of distinct notices using notice object it could be less than the distinct count of notices based on notice publication numbers.   
 
 For example, for the notice - https://ted.europa.eu/en/notice/-/detail/00176184-2026 , 00176184-2026 is the publication number and a2add710-2c39-45f3-ae16-4edf2f5c191c is the notice UUID without the version number. 
 
@@ -34,10 +34,15 @@ For example, for the notice - https://ted.europa.eu/en/notice/-/detail/00176184-
 
 ----
 
-=== Old forms (or non-eForms) data not available
+=== Standard forms (or non-eForms) data not available
 
-Though it is mentioned that the start date of the data is from 1st of March 2023, it is to be noted that the old forms data is not available within the named graphs. 
-Also, all of the queries provided in the explore (previouly query library) works only for eForms. To fetch old forms data, additional logic is required. 
+Though it is mentioned that the start date of the data is from 1st of March 2023, it is to be noted that the standard forms data is not available within the named graphs. 
+Also, all of the queries provided in the explore (query library) tab works only for eForms. To fetch standard forms data, additional logic is required. Publication date is in string (STR) format for standard forms whereas it is in date format for eForms data. 
+
+=== Unable to inspect standard forms (or non-eForms) 
+
+Currently it is not possible to inspect standard forms. For example, publication number 516873-2023 though available in the repository, is not available for inspection.  
+
 
 == ePO
 
@@ -48,14 +53,11 @@ The current data (triples) in open data service are processed as per version 4.2
 
 === Some relationships are not available in the data
 
-Not all of the relationships provided in ePO are available in the data in open data service. It is best to view the available relationships / triples using the inspect option to verify the available relationships in the data. 
+Not all of the relationships provided in the ePO are available in the data in open data service. It is best to view the available relationships / triples using the inspect option to verify the available relationships in the data. 
 
 === Org vs Org group spelling
 
 Note that there is a difference in spelling between Organization and Organisation group. This is because Organization is from the org schema and Organisation group is from ePO. 
-
-
-== Data Quality Issues
 
 === Typo in property name: `isSubmitedBy`
 
@@ -70,21 +72,6 @@ The property `epo:isSubmitedBy` is misspelled in the current data (single 't' in
 
 # NOT this (correct spelling, but won't match current data)
 # ?tender epo:isSubmittedBy ?tenderer .
-----
-
-=== Missing winner information in some notices
-
-Some result notices do not include winner (tenderer) information. This means queries that require winner details may return fewer results than expected.
-
-**Workaround:** Use `OPTIONAL` when fetching winner information to avoid losing the entire notice from results.
-
-[source,sparql]
-----
-OPTIONAL {
-  ?tenderer a epo:Tenderer ;
-            epo:playedBy ?org .
-  ?org epo:hasLegalName ?winnerName .
-}
 ----
 
 == Query Performance Limitations
@@ -111,6 +98,21 @@ Data quality issues present in source / original XML files are also present in t
 === Winning tender
 
 Currently, there is no indicator to indicate whether a tender is a winning tender. A tender linked to the settled contract is considered as the winning tender. 
+
+=== Missing winner information in some notices
+
+Some result notices do not include winner (tenderer) information. This means queries that require winner details may return fewer results than expected.
+
+**Workaround:** Use `OPTIONAL` when fetching winner information to avoid losing the entire notice from results.
+
+[source,sparql]
+----
+OPTIONAL {
+  ?tenderer a epo:Tenderer ;
+            epo:playedBy ?org .
+  ?org epo:hasLegalName ?winnerName .
+}
+----
 
 === Missing direct relationship between contract and notice
 
