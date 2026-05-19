@@ -8,16 +8,19 @@
 |===
 |eForms |Standard Forms (TEDXML)
 
-a|* conform to the eProcurement Ontology V4 +
-(to be upgraded to ePO v5 in 2025)
-a|* conform to the eProcurement Ontology v3.1 +
-(to be upgraded to ePO v5 after eForms)
+a|* From 1st March 2023 until current day - 1 
+
+a|* From 28th August 2023 until 26th January 2024
+
+a|* conforms to the eProcurement Ontology V4 +
+(to be upgraded to ePO v5)
+
+a|* conforms to the eProcurement Ontology v3.1 +
+(to be upgraded to ePO v5)
 
 a|*Current transformation*
 
-* Daily eForms notices of form types 10 to 24, and 29, as of the 4 November 2024
-
-* The backlog of eForms notices of form types 10 to 24, and 29, from before the 4 November 2024 to the beginning of eForms (October 2023) 
+* Daily eForms notices of all SDK versions except 1.14
 
 a|*Current transformation*
 
@@ -25,7 +28,7 @@ a|*Current transformation*
 
 * Form types F3, F6, F21, F22, F23, F25
 
-|Remaining notice subtypes: in development until March 2025; transformation to be completed by the end of 2025.
+|Support for SDK version 1.14 coming in 2026
 
 |Support for the remaining form types coming in 2026
 |===
