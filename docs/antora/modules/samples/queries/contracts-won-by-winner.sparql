@@ -1,0 +1,60 @@
+# For a given winner name and publication year, this query fetches all winning contract details.
+# Winner name match is case insensitive.
+# Replace the winner name and publication year as per your requirements.
+
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?publicationNumber ?publicationDate ?buyerName ?tenderAmount ?tenderCurrency
+       ?lotIdentifier ?contractIdentifier
+WHERE {
+  FILTER (YEAR(?publicationDate) = 2025)
+  FILTER (LCASE(STR(?winnerName)) = LCASE("European Commission"))
+
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:refersToLot ?lot ;
+            epo:refersToRole ?buyer .
+
+    ?buyer a epo:Buyer ;
+           epo:playedBy ?buyerOrg .
+
+    ?buyerOrg epo:hasLegalName ?buyerName .
+
+    ?contract a epo:Contract ;
+              adms:identifier / skos:notation ?contractIdentifier ;
+              epo:hasLotReference ?lot ;
+              epo:includesTender ?tender .
+
+    ?lot adms:identifier / skos:notation ?lotIdentifier .
+
+    ?tender epo:isSubmitedBy ?tenderer ;
+            epo:isSubmittedForLot ?lot ;
+            epo:hasFinancialOfferValue ?financialOfferValue .
+
+    ?financialOfferValue epo:hasAmountValue ?tenderAmount ;
+                         epo:hasCurrency ?tenderCurrencyURI .
+
+    ?tenderer a epo:Tenderer ;
+              epo:playedBy ?winnerOrg .
+
+    {
+      ?winnerOrg a org:Organization ;
+                 epo:hasLegalName ?winnerName .
+    }
+    UNION
+    {
+      ?winnerOrg a epo:OrganisationGroup ;
+                 epo:hasMember / epo:hasLegalName ?winnerName .
+    }
+  }
+
+  ?tenderCurrencyURI dc:identifier ?tenderCurrency .
+}
+ORDER BY ?publicationDate

@@ -199,3 +199,8 @@ queries:
    title: Top winners by contract count per buyer country (by publication date)
    description: This query retrieves the top N winners for a year and buyer country based on the number of contracts, using publication date instead of contract conclusion date.
    sparql: top-winners-by-contract-count-buyer-country-pub-date.sparql
+
+ - category: Tenders
+   title: Contracts won by a specific winner
+   description: This query retrieves all winning contract details for a given winner name and publication year, with case insensitive matching.
+   sparql: contracts-won-by-winner.sparql
