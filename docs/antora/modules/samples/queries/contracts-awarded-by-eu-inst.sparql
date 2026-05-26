@@ -18,12 +18,15 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
 SELECT ?publicationNumber ?publicationDate ?title ?buyerName ?procedureType ?frameworkAgreementType
        ?contractIdentifier ?contractTitle  ?lotIdentifier ?winner ?tenderValue ?tenderCurrency 
 WHERE {
+graph ?g{
   ?notice a epo:Notice, epo:ResultNotice ;
           epo:hasNoticePublicationNumber ?publicationNumber ;
           epo:hasPublicationDate ?publicationDate ;
           epo:refersToProcedure ?procedure ;
           epo:refersToRole ?buyer ;
           epo:refersToLot ?lot .
+
+FILTER (?publicationDate>='2026-01-01'^^xsd:date && ?publicationDate<='2026-01-10'^^xsd:date)
 
   ?lot epo:isSubjectToLotSpecificTerm ?frameworkAgreementTerm .
   ?lot adms:identifier / skos:notation ?lotIdentifier .
@@ -34,7 +37,8 @@ WHERE {
   ?buyer a epo:Buyer ;
          epo:playedBy ?org .
 
-  ?org epo:hasBuyerLegalType ?buyerLegalType ;
+VALUES ?buyerLegalType { blt:eu-ins-bod-ag blt:body-pl }
+?org epo:hasBuyerLegalType ?buyerLegalType ;
        epo:hasLegalName ?buyerName .
 
   ?procedure a epo:Procedure ;
@@ -60,16 +64,14 @@ WHERE {
 
 #?org2 a org:Organization. #this line is slowing down
 OPTIONAL {?org2 epo:hasLegalName ?winner.}
-
+}
 
   ?procedureTypeURI skos:prefLabel ?procedureType .
   FILTER (LANG(?procedureType) = "en")
 
   ?frameworkAgreementTypeURI skos:prefLabel ?frameworkAgreementType .
   FILTER (LANG(?frameworkAgreementType) = "en")
-  FILTER (YEAR(?publicationDate) = 2026)
-  FILTER (?buyerLegalType IN (blt:eu-ins-bod-ag, blt:body-pl))
-
+  
 ?tenderCurrencyURI dc:identifier ?tenderCurrency .
 }
 LIMIT 10
