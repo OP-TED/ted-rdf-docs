@@ -1,9 +1,10 @@
 # Retrieves contracts awarded by EU institutions and bodies.
 # Returns: publication number, date, title, buyer name, procedure type, contract identifier,
 #          lot identifier, framework agreement type, contract value and currency.
-# Change the publication year or FILTER as per your requirements.
+# Change the publication date range as per your requirements.
 # Note 1: Here it is attempted to get the same results as that is provided in the TED site - https://ted.europa.eu/en/simap/contracts-awarded-by-eu-institutions?year=2026&eu-institution=ALL
 # Note 2: TED provides both old forms and eForms whereas this query is only for eForms.
+# Note 3: Currently, this query times out when limit is removed or increased to 100
 
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX blt: <http://publications.europa.eu/resource/authority/buyer-legal-type/>
