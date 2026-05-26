@@ -1,0 +1,121 @@
+:doctitle: Known Issues & Limitations
+:doccode: ODS-KIL-01
+:author: TED Open Data Team
+:docdate: May 2026
+
+
+Known Issues & Limitations documents the currently known issues, limitations, and workarounds when working with TED Open Data service.
+
+== Notices
+
+=== Notice count: Do not use ?notice count
+
+There is a mismatch between the count of distinct notices based on the notice id and distinct count of notices based on notice publication numbers. It is because of the current logic used for identifying a notice (UUID without version number). That is, the notice UUID (without the version number) can be used by more than one published notice. This issue will be fixed in the future. Currently, when we count the number of distinct notices using notice object it could be less than the distinct count of notices based on notice publication numbers.   
+
+For example, for the notice - https://ted.europa.eu/en/notice/-/detail/00176184-2026 , 00176184-2026 is the publication number and a2add710-2c39-45f3-ae16-4edf2f5c191c is the notice UUID without the version number. 
+
+**Workaround:** Use distinct count of publication numbers to count the number of distinct notices. 
+
+[source,sparql]
+----
+# Use this  
+(COUNT(DISTINCT ?noticePublicationNumber) AS ?NoticeCount) .
+
+# NOT this  
+(COUNT(DISTINCT ?notice) AS ?NoticeCount) .
+
+# Assuming your query pattern is as below
+ GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasNoticePublicationNumber ?noticePublicationNumber ;
+             epo:hasPublicationDate ?pubDate .
+  }
+
+
+----
+
+=== Standard forms (or non-eForms) data not available
+
+Though it is mentioned that the start date of the data is from 1st of March 2023, it is to be noted that the standard forms data is not available within the named graphs. 
+Also, all of the queries provided in the explore (query library) tab works only for eForms. To fetch standard forms data, additional logic is required. Publication date is in string (STR) format for standard forms whereas it is in date format for eForms data. 
+
+=== Unable to inspect standard forms (or non-eForms) 
+
+Currently it is not possible to inspect standard forms. For example, publication number 516873-2023 though available in the repository, is not available for inspection.  
+
+
+== ePO
+
+=== Version of ePO used is 4.2
+
+The current data (triples) in open data service are processed as per version 4.2 of ePO (eProcurement Ontology). The latest version of ePO is 5.2. In the future, data will be reprocessed to match the latest version of ePO. 
+
+
+=== Some relationships are not available in the data
+
+Not all of the relationships provided in the ePO are available in the data in open data service. It is best to view the available relationships / triples using the inspect option to verify the available relationships in the data. 
+
+=== Org vs Org group spelling
+
+Note that there is a difference in spelling between Organization and Organisation group. This is because Organization is from the org schema and Organisation group is from ePO. 
+
+=== Typo in property name: `isSubmitedBy`
+
+The property `epo:isSubmitedBy` is misspelled in the current data (single 't' instead of `isSubmittedBy`). This affects queries that traverse from a Tender to a Tenderer.
+
+**Workaround:** Use `epo:isSubmitedBy` (with single 't') in your queries until the data is reprocessed.
+
+[source,sparql]
+----
+# Use this (current data)
+?tender epo:isSubmitedBy ?tenderer .
+
+# NOT this (correct spelling, but won't match current data)
+# ?tender epo:isSubmittedBy ?tenderer .
+----
+
+== Query Performance Limitations
+
+=== Timeout on large date ranges
+
+Queries spanning more than 6 months of data may time out, especially when combined with multiple joins (e.g., notice → lot → contract → tender → tenderer).
+
+=== No caching of results
+
+The results of the executed SPARQL queries are not cached. So, everytime a query is run, even if the same query is run repeatedly, the data is fetched from the triplestore. 
+
+== Data and data quality
+
+=== Currencies
+
+Currently, financial values are only available in original currencies (as it is present in the eForms). This limitation prevents the users to compare financial values across notices. 
+In the future, open data service may provide financial values in euros in addition to the original currency. 
+
+=== Data quality issues
+
+Data quality issues present in source / original XML files are also present in the triples in the open data service. No data cleansing is done when transforming from XML to RDF triples. 
+
+=== Winning tender
+
+Currently, there is no indicator to indicate whether a tender is a winning tender. A tender linked to the settled contract is considered as the winning tender. 
+
+=== Missing winner information in some notices
+
+Some result notices do not include winner (tenderer) information. This means queries that require winner details may return fewer results than expected.
+
+**Workaround:** Use `OPTIONAL` when fetching winner information to avoid losing the entire notice from results.
+
+[source,sparql]
+----
+OPTIONAL {
+  ?tenderer a epo:Tenderer ;
+            epo:playedBy ?org .
+  ?org epo:hasLegalName ?winnerName .
+}
+----
+
+=== Missing direct relationship between contract and notice
+
+Currently, there is no direct relationship between settled contract section and notice or buyer in the tripes. The indirect relationship is through the lot. 
+
+include::ROOT:partial$feedback.adoc[]
