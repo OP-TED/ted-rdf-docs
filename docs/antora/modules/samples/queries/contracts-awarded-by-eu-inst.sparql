@@ -37,7 +37,7 @@ WHERE {
             epo:refersToRole ?buyer ;
             epo:refersToLot ?lot .
 
-    FILTER(?publicationDate >= '2026-01-06'^^xsd:date && ?publicationDate <= '2026-01-06'^^xsd:date)
+    FILTER(?publicationDate >= '2026-01-05'^^xsd:date && ?publicationDate <= '2026-01-05'^^xsd:date)
 
     # Lot
     ?lot adms:identifier / skos:notation ?lotIdentifier .
