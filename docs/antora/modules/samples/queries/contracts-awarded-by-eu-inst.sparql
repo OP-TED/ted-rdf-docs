@@ -2,9 +2,10 @@
 # Returns: publication number, date, title, buyer name, procedure type, contract identifier,
 #          lot identifier, framework agreement type, contract value and currency.
 # Change the publication date range as per your requirements.
-# Note 1: Here it is attempted to get the same results as that is provided in the TED site - https://ted.europa.eu/en/simap/contracts-awarded-by-eu-institutions?year=2026&eu-institution=ALL
-# Note 2: TED provides both old forms and eForms whereas this query is only for eForms.
-# Note 3: Currently, this query times out when limit is removed or increased to 100
+# Notes: 1: Here it is attempted to get the same results as that is provided in the TED site -
+#          https://ted.europa.eu/en/simap/contracts-awarded-by-eu-institutions?year=2026&eu-institution=ALL
+# 2: TED provides both old forms and eForms whereas this query currently fetches only eForms.
+# 3: Query executes successfully with LIMIT 1000 or for a single date range 
 
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX blt: <http://publications.europa.eu/resource/authority/buyer-legal-type/>
@@ -12,67 +13,79 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX org: <http://www.w3.org/ns/org>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
-SELECT ?publicationNumber ?publicationDate ?title ?buyerName ?procedureType ?frameworkAgreementType
-       ?contractIdentifier ?contractTitle  ?lotIdentifier ?winner ?tenderValue ?tenderCurrency 
+SELECT DISTINCT ?publicationNumber ?publicationDate ?title ?buyerName ?procedureType
+       ?frameworkAgreementType ?contractIdentifier ?contractTitle
+       ?lotIdentifier ?winner ?tenderValue ?tenderCurrency
 WHERE {
-graph ?g{
-  ?notice a epo:Notice, epo:ResultNotice ;
-          epo:hasNoticePublicationNumber ?publicationNumber ;
-          epo:hasPublicationDate ?publicationDate ;
-          epo:refersToProcedure ?procedure ;
-          epo:refersToRole ?buyer ;
-          epo:refersToLot ?lot .
+  GRAPH ?g {
+    # Start with buyer legal type filter (most selective)
+    ?org epo:hasBuyerLegalType ?buyerLegalType ;
+         epo:hasLegalName ?buyerName .
+         
+    VALUES ?buyerLegalType { blt:eu-ins-bod-ag blt:body-pl }
+     
+    ?buyer a epo:Buyer ;
+           epo:playedBy ?org .
 
-FILTER (?publicationDate>='2026-01-01'^^xsd:date && ?publicationDate<='2026-01-10'^^xsd:date)
+    # Notice with date filter applied early
+    ?notice a epo:ResultNotice ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:refersToProcedure ?procedure ;
+            epo:refersToRole ?buyer ;
+            epo:refersToLot ?lot .
 
-  ?lot epo:isSubjectToLotSpecificTerm ?frameworkAgreementTerm .
-  ?lot adms:identifier / skos:notation ?lotIdentifier .
+    FILTER(?publicationDate >= '2026-01-06'^^xsd:date && ?publicationDate <= '2026-01-06'^^xsd:date)
 
-  ?frameworkAgreementTerm a epo:FrameworkAgreementTerm ;
-                         epo:hasFrameworkAgreementType ?frameworkAgreementTypeURI .
+    # Lot
+    ?lot adms:identifier / skos:notation ?lotIdentifier .
 
-  ?buyer a epo:Buyer ;
-         epo:playedBy ?org .
+    # Procedure
+    ?procedure a epo:Procedure ;
+               dcterms:title ?title ;
+               epo:hasProcedureType ?procedureTypeURI .
 
-VALUES ?buyerLegalType { blt:eu-ins-bod-ag blt:body-pl }
-?org epo:hasBuyerLegalType ?buyerLegalType ;
-       epo:hasLegalName ?buyerName .
+    # Contract
+    ?contract a epo:Contract ;
+              adms:identifier / skos:notation ?contractIdentifier ;
+              dcterms:title ?contractTitle ;
+              epo:hasLotReference ?lot .
 
-  ?procedure a epo:Procedure ;
-             dcterms:title ?title ;
-             epo:hasProcedureType ?procedureTypeURI .
+    # Framework agreement (optional)
+    OPTIONAL {
+      ?lot epo:isSubjectToLotSpecificTerm ?frameworkAgreementTerm .
+      ?frameworkAgreementTerm a epo:FrameworkAgreementTerm ;
+                              epo:hasFrameworkAgreementType ?frameworkAgreementTypeURI .
+    }
 
-  ?contract a epo:Contract ;
-            adms:identifier / skos:notation ?contractIdentifier ;
-            dcterms:title ?contractTitle ;
-            epo:includesTender ?tender ;
-            epo:hasLotReference ?lot .
+    # Tender + winner + value (single optional block)
+    OPTIONAL {
+      ?contract epo:includesTender ?tender .
+      ?tender a epo:Tender ;
+              epo:isSubmittedForLot ?lot ;
+              epo:isSubmitedBy ?tenderer ;
+              epo:hasFinancialOfferValue ?financialOfferValue .
 
-  ?tender a epo:Tender ;
-          epo:isSubmittedForLot ?lot ;
-          epo:isSubmitedBy ?tenderer ;
-          epo:hasFinancialOfferValue ?financialOfferValue .
+      ?financialOfferValue epo:hasAmountValue ?tenderValue ;
+                           epo:hasCurrency ?tenderCurrencyURI .
 
- ?financialOfferValue epo:hasAmountValue ?tenderValue ;
-                         epo:hasCurrency ?tenderCurrencyURI .
+      ?tenderer a epo:Tenderer ;
+                epo:playedBy / epo:hasLegalName ?winner .
+    }
+  }
 
- ?tenderer a epo:Tenderer;
-           epo:playedBy ?org2.
-
-#?org2 a org:Organization. #this line is slowing down
-OPTIONAL {?org2 epo:hasLegalName ?winner.}
-}
-
+  # Resolve labels outside the graph (small lookups)
   ?procedureTypeURI skos:prefLabel ?procedureType .
-  FILTER (LANG(?procedureType) = "en")
+  FILTER(LANG(?procedureType) = "en")
 
-  ?frameworkAgreementTypeURI skos:prefLabel ?frameworkAgreementType .
-  FILTER (LANG(?frameworkAgreementType) = "en")
-  
-?tenderCurrencyURI dc:identifier ?tenderCurrency .
+  OPTIONAL {
+    ?frameworkAgreementTypeURI skos:prefLabel ?frameworkAgreementType .
+    FILTER(LANG(?frameworkAgreementType) = "en")
+  }
+
+  OPTIONAL { ?tenderCurrencyURI dc:identifier ?tenderCurrency . }
 }
-LIMIT 10
+#LIMIT 1000
+
