@@ -179,3 +179,8 @@ queries:
    title: Notices per million population by buyer country
    description: This federated query joins TED notice counts per buyer country with Wikidata population data to calculate notices per million population.
    sparql: notices-per-million-population-buyer-country.sparql
+
+ - category: Contracts
+   title: Contracts awarded by EU institutions
+   description: This query retrieves contracts awarded by EU institutions and bodies, including procedure type, buyer name, lot and framework agreement type.
+   sparql: contracts-awarded-by-eu-inst.sparql
