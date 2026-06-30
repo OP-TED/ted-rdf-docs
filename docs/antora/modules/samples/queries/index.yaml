@@ -182,5 +182,5 @@ queries:
 
  - category: Contracts
    title: Contracts awarded by EU institutions
-   description: This query retrieves contracts awarded by EU institutions and bodies, including procedure type, buyer name, lot and framework agreement type.
+   description: This query retrieves contracts awarded by EU institutions and bodies, including procedure type, buyer name, lot and framework agreement type. Query executes successfully with LIMIT 1000 or for a single date range. Refer to the known issues and limitations page - https://docs.ted.europa.eu/ODS/latest/querying/known_issues.html .
    sparql: contracts-awarded-by-eu-inst.sparql
