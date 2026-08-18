@@ -13,13 +13,9 @@ Please discuss significant changes via a [GitHub issue](https://github.com/OP-TE
 
 ## Contributing to the Query Library
 
-The Query Library provides example SPARQL queries that are displayed directly in the [TED Open Data Service](https://data.ted.europa.eu/). You can help by:
+The Query Library has moved to its own dedicated repository: [OP-TED/ted-open-data-examples](https://github.com/OP-TED/ted-open-data-examples).
 
-- **Adding comments** to existing queries to make them easier to understand
-- **Fixing or improving** existing queries (e.g. adding explicit joins for better performance)
-- **Contributing new queries** that demonstrate useful data retrieval patterns
-
-The query files are located in [`docs/antora/modules/samples/queries/`](docs/antora/modules/samples/queries/). See the [Query Library CONTRIBUTING guide](docs/antora/modules/samples/queries/CONTRIBUTING.md) for detailed instructions on file format, writing guidelines, and how to submit your queries.
+To contribute queries, please visit that repository and follow its [contributing guide](https://github.com/OP-TED/ted-open-data-examples/blob/main/CONTRIBUTING.md).
 
 ## Licence
 

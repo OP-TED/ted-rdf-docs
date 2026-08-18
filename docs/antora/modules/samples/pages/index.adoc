@@ -10,6 +10,10 @@ All queries are available in the https://data.ted.europa.eu/[TED Open Data Servi
 
 The queries are organised by category and cover topics such as notices, tenders, procedures, organisations, and more.
 
+== Source repository
+
+The Query Library source code has moved to its own dedicated repository: https://github.com/OP-TED/ted-open-data-examples[OP-TED/ted-open-data-examples].
+
 == Contributing
 
 We welcome contributions to the Query Library. You can help by:
@@ -18,6 +22,6 @@ We welcome contributions to the Query Library. You can help by:
 * Fixing or improving existing queries
 * Contributing new queries that demonstrate useful data retrieval patterns
 
-To contribute, create a branch from `develop` in the https://github.com/OP-TED/ted-rdf-docs[ted-rdf-docs] repository and submit a pull request. For detailed instructions on file format, writing conventions, and how to submit your queries, see the xref:samples:contributing.adoc[Query Library contributing guide].
+To contribute, create a branch from `develop` in the https://github.com/OP-TED/ted-open-data-examples[ted-open-data-examples] repository and submit a pull request. For detailed instructions on file format, writing conventions, and how to submit your queries, see the https://github.com/OP-TED/ted-open-data-examples/blob/main/CONTRIBUTING.md[Query Library contributing guide].
 
 include::ROOT:partial$feedback.adoc[]
