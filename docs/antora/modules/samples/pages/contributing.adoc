@@ -1,6 +1,5 @@
 = Contributing to the Query Library
 :doctitle: Contributing to the Query Library
-:doccode: ODS-ROOT-09
 
 The Query Library provides example SPARQL queries that are displayed in the https://data.ted.europa.eu/[TED Open Data Service]. Contributions from the community are welcome.
 
