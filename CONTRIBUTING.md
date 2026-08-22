@@ -19,7 +19,7 @@ The Query Library provides example SPARQL queries that are displayed directly in
 - **Fixing or improving** existing queries (e.g. adding explicit joins for better performance)
 - **Contributing new queries** that demonstrate useful data retrieval patterns
 
-The query files are located in [`docs/antora/modules/samples/queries/`](docs/antora/modules/samples/queries/). See the [Query Library CONTRIBUTING guide](docs/antora/modules/samples/queries/CONTRIBUTING.md) for detailed instructions on file format, writing guidelines, and how to submit your queries.
+The queries are no longer kept here. They live in [OP-TED/ted-open-data-examples](https://github.com/OP-TED/ted-open-data-examples), which the service reads directly, and contributions go there — see its [contributing guide](https://github.com/OP-TED/ted-open-data-examples/blob/main/CONTRIBUTING.md) for the file format, the writing guidelines and how to submit a query.
 
 ## Licence
 
