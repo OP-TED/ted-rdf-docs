@@ -18,6 +18,8 @@ We welcome contributions to the Query Library. You can help by:
 * Fixing or improving existing queries
 * Contributing new queries that demonstrate useful data retrieval patterns
 
-To contribute, create a branch from `develop` in the https://github.com/OP-TED/ted-rdf-docs[ted-rdf-docs] repository and submit a pull request. For detailed instructions on file format, writing conventions, and how to submit your queries, see the xref:samples:contributing.adoc[Query Library contributing guide].
+The queries are kept in their own repository, https://github.com/OP-TED/ted-open-data-examples[OP-TED/ted-open-data-examples], which the service reads directly. A query reaches everyone once it is published there, and no release of the service is needed for it.
+
+For the file format, the writing conventions and how to submit a query, see the https://github.com/OP-TED/ted-open-data-examples/blob/main/CONTRIBUTING.md[contributing guide] in that repository.
 
 include::ROOT:partial$feedback.adoc[]

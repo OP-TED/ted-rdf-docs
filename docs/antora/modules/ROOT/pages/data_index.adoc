@@ -1,8 +1,5 @@
 :doctitle: TED Open Data Service
 :doccode: ODS-ROOT-004
-:author: NPJ
-:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
-:docdate: September 2023
 
 [.text-center]
 = TED Open Data Service
@@ -39,16 +36,5 @@ Methods of connecting to TED Open Data
 
 xref:connecting:index.adoc[Connect to TED open data]
 ****
-
-////
-[.tile]
-.Example Query Library
-
-****
-Use or adapt the example SPARQL queries
-
-xref:samples:index.adoc[Browse the sample queries provided]
-****
-////
 
 --
