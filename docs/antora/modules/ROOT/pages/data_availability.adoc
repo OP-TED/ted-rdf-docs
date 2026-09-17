@@ -1,8 +1,6 @@
 :doctitle: Current Data Availability
 :doccode: ODS-ROOT-03
-:author: NPJ
-:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
-:docdate: October 2023
+
 
 [cols="1,1"]
 |===
@@ -18,19 +16,15 @@ a|* conforms to the eProcurement Ontology V4 +
 a|* conforms to the eProcurement Ontology v3.1 +
 (to be upgraded to ePO v5)
 
-a|*Current transformation*
+a|* Daily eForms notices of all SDK versions until 1.14 (included)
 
-* Daily eForms notices of all SDK versions except 1.14
-
-a|*Current transformation*
-
-* A limited number of XML notices are available in Cellar. These were produced during the initial TED Open Data Service Pipeline proof of concept.
+a|* A limited number of XML notices are available in Cellar. These were produced during the initial TED Open Data Service Pipeline proof of concept.
 
 * Form types F3, F6, F21, F22, F23, F25
 
-|Support for SDK version 1.14 coming in 2026
+a|* Support for SDK version 1.15 coming in 2026
 
-|Support for the remaining form types coming in 2026
+a|* Support for the remaining form types coming in 2026
 |===
 
 
