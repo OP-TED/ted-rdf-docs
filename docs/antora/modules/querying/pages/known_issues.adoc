@@ -1,7 +1,7 @@
 :doctitle: Known Issues & Limitations
-:doccode: ODS-KIL-01
+:doccode: ODS-KIL-02
 :author: TED Open Data Team
-:docdate: May 2026
+:docdate: Nov 2026
 
 
 Known Issues & Limitations documents the currently known issues, limitations, and workarounds when working with TED Open Data service.
@@ -10,7 +10,7 @@ Known Issues & Limitations documents the currently known issues, limitations, an
 
 === Notice count: Do not use ?notice count
 
-There is a mismatch between the count of distinct notices based on the notice id and distinct count of notices based on notice publication numbers. It is because of the current logic used for identifying a notice (UUID without version number). That is, the notice UUID (without the version number) can be used by more than one published notice. This issue will be fixed in the future. Currently, when we count the number of distinct notices using notice object it could be less than the distinct count of notices based on notice publication numbers.   
+There is a mismatch between the count of distinct notices based on the notice id and distinct count of notices based on notice publication numbers. It is because of the current logic used for identifying a notice (UUID without version number). That is, the notice UUID (without the version number) can be used by more than one published notice. This issue will be fixed in the future. Currently, when we count the number of distinct notices using notice object, it could be less than the distinct count of notices based on notice publication numbers.   
 
 For example, for the notice - https://ted.europa.eu/en/notice/-/detail/00176184-2026 , 00176184-2026 is the publication number and a2add710-2c39-45f3-ae16-4edf2f5c191c is the notice UUID without the version number. 
 
@@ -34,26 +34,23 @@ For example, for the notice - https://ted.europa.eu/en/notice/-/detail/00176184-
 
 ----
 
-=== Standard forms (or non-eForms) data not available
+=== Standard forms (or non-eForms) data not fully available
 
-Though it is mentioned that the start date of the data is from 1st of March 2023, it is to be noted that the standard forms data is not available within the named graphs. 
-Also, all of the queries provided in the explore (query library) tab works only for eForms. To fetch standard forms data, additional logic is required. Publication date is in string (STR) format for standard forms whereas it is in date format for eForms data. 
-
-=== Unable to inspect standard forms (or non-eForms) 
-
-Currently it is not possible to inspect standard forms. For example, publication number 516873-2023 though available in the repository, is not available for inspection.  
+Though it is mentioned that the start date of the data is from 1st of March 2023, it is to be noted that all of the standard forms data is not available within the named graphs. 
+Also, all of the queries provided in the explore (query library) tab works only for eForms. To fetch standard forms data, additional logic is required. Publication date is in string (STR) format for standard forms whereas it is in date format for eForms data. Work is in progress to map and load the standard forms data. 
+Previously, it was not possible to inspect any of the standard forms. Now it is possible. For example, try publication number 516873-2023.   
 
 
 == ePO
 
 === Version of ePO used is 4.2
 
-The current data (triples) in open data service are processed as per version 4.2 of ePO (eProcurement Ontology). The latest version of ePO is 5.2. In the future, data will be reprocessed to match the latest version of ePO. 
+The current eForm data (triples) in open data service are processed as per version 4.2 of ePO (eProcurement Ontology). The latest version of ePO is 5.2 and work is in progress to release newer versions of ePO. In the future, data will be reprocessed to match the latest version of ePO. 
 
 
 === Some relationships are not available in the data
 
-Not all of the relationships provided in the ePO are available in the data in open data service. It is best to view the available relationships / triples using the inspect option to verify the available relationships in the data. 
+Not all of the relationships provided in the ePO are available in the data in the TED open data service. It is best to view the available relationships / triples using the inspect option to verify the available relationships in the data. 
 
 === Org vs Org group spelling
 
@@ -89,11 +86,11 @@ The results of the executed SPARQL queries are not cached. So, everytime a query
 === Currencies
 
 Currently, financial values are only available in original currencies (as it is present in the eForms). This limitation prevents the users to compare financial values across notices. 
-In the future, open data service may provide financial values in euros in addition to the original currency. 
+In the future, open data service may provide financial values in euros in addition to the original currency. As a temporary solution, exchange rates are provided using the currency-conversion snippet. Please refer the help page at https://data.ted.europa.eu/ for more details. 
 
 === Data quality issues
 
-Data quality issues present in source / original XML files are also present in the triples in the open data service. No data cleansing is done when transforming from XML to RDF triples. 
+Data quality issues present in source (original XML files) are also present in the triples in the open data service. No data cleansing is done when transforming from XML to RDF triples. 
 
 === Winning tender
 
