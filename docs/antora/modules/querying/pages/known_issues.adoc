@@ -1,7 +1,7 @@
 :doctitle: Known Issues & Limitations
 :doccode: ODS-KIL-01
 :author: TED Open Data Team
-:docdate: Nov 2026
+:docdate: November 2026
 
 
 This page lists known issues, limitations and workarounds when working with the TED Open Data Service.
@@ -32,14 +32,6 @@ GRAPH ?g {
 (COUNT(DISTINCT ?notice) AS ?noticeCount)
 ----
 
-=== Standard forms (or non-eForms) data not fully available
-
-Not all of the standard forms data is available within the named graphs. For the period covered, see xref:ROOT:data_availability.adoc[Current data availability]. Work is in progress to map and load the remaining standard forms data.
-
-* *Querying:* the queries in the *Explore* (Query Library) tab work only for eForms. To fetch standard forms data, additional logic is required. For example, the publication date is a string for standard forms, but a date for eForms.
-* *Inspecting:* standard forms notices can be inspected. For example, try publication number 516873-2023.
-
-
 == ePO
 
 === Versions of ePO used: 4.2 (eForms) and 3.1 (standard forms)
@@ -68,18 +60,18 @@ Class names use different spellings depending on the vocabulary they come from:
 
 Use the exact spelling of each class in your queries. 
 
-=== Typo in property name: `isSubmitedBy`
+=== Property name spelling: `isSubmitedBy`
 
-The property `epo:isSubmitedBy` is misspelled in the current data (single 't' instead of `isSubmittedBy`). This affects queries that traverse from a Tender to a Tenderer.
+In ePO 4.2, the property linking a tender to its tenderer is spelled `epo:isSubmitedBy` (single 't'). Queries that use `isSubmittedBy` will not match the data.
 
-**Workaround:** Use `epo:isSubmitedBy` (with single 't') in your queries until the data is reprocessed.
+**Workaround:** Use `epo:isSubmitedBy` (with single 't') in your queries.
 
 [source,sparql]
 ----
-# Use this (current data)
+# Use this
 ?tender epo:isSubmitedBy ?tenderer .
 
-# NOT this (correct spelling, but won't match current data)
+# NOT this (won't match the data)
 # ?tender epo:isSubmittedBy ?tenderer .
 ----
 
@@ -94,6 +86,13 @@ Queries spanning more than 6 months of data may time out, especially when combin
 The results of executed SPARQL queries are not cached. Every time a query is run, even if it is the same query, the data is fetched from the triplestore. 
 
 == Data and data quality
+
+=== Standard forms (or non-eForms) data not fully available
+
+Not all of the standard forms data is available within the named graphs. For the period covered, see xref:ROOT:data_availability.adoc[Current data availability]. Work is in progress to map and load the remaining standard forms data.
+
+* *Querying:* the queries in the *Explore* (Query Library) tab work only for eForms. To fetch standard forms data, additional logic is required. For example, the publication date is a string for standard forms, but a date for eForms.
+* *Inspecting:* standard forms notices can be inspected. For example, try publication number 516873-2023.
 
 === Currencies
 
