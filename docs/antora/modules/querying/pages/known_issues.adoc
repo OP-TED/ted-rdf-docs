@@ -6,13 +6,15 @@
 
 This page lists known issues, limitations and workarounds when working with the TED Open Data Service.
 
+The SPARQL snippets on this page are partial patterns. They use the `epo:` prefix, which is declared as `PREFIX epo: <http://data.europa.eu/a4g/ontology#>`.
+
 == Notices
 
 === Notice count: count publication numbers, not `?notice`
 
-Counting distinct notices using the notice object can give a lower number than counting distinct notice publication numbers. This is because a notice is currently identified by its UUID without the version number, and the same UUID can be used by more than one published notice. This issue will be fixed in the future.   
+Counting distinct notices using `?notice` can give a lower number than counting distinct notice publication numbers. This is because a notice is currently identified by its UUID without the version number, and the same UUID can be used by more than one published notice. This issue will be fixed in the future.   
 
-For example, for the notice https://ted.europa.eu/en/notice/-/detail/00176184-2026[00176184-2026], 00176184-2026 is the publication number and a2add710-2c39-45f3-ae16-4edf2f5c191c is the notice UUID without the version number. 
+For example, the notice with publication number https://ted.europa.eu/en/notice/-/detail/00176184-2026[00176184-2026] has the notice UUID `a2add710-2c39-45f3-ae16-4edf2f5c191c` (without the version number).
 
 **Workaround:** Count distinct publication numbers to get the number of distinct notices.
 
@@ -43,13 +45,13 @@ The current eForms data (triples) in the TED Open Data Service is processed acco
 
 Not all of the relationships defined in ePO are available in the data in the TED Open Data Service. To check which relationships are available, inspect a notice and look at its triples.
 
-=== Missing direct relationship between contract and notice
+=== Missing direct relationship between contract and notice or buyer
 
-Currently, there is no direct relationship between the settled contract section and the notice or buyer in the triples. The indirect relationship is through the lot. 
+There is no direct relationship in the triples between a contract (`epo:Contract`) and its notice or buyer. The indirect relationship is through the lot.
 
 === Winning tender
 
-Currently, there is no indicator of whether a tender is a winning tender. A tender linked to the settled contract is considered the winning tender. 
+There is no indicator of whether a tender is a winning tender. A tender linked to a contract (`epo:Contract`) is considered the winning tender.
 
 === Class name spelling: `Organization` vs `OrganisationGroup`
 
@@ -85,7 +87,7 @@ Queries spanning more than 6 months of data may time out, especially when combin
 
 The results of executed SPARQL queries are not cached. Every time a query is run, even if it is the same query, the data is fetched from the triplestore. 
 
-== Data and data quality
+== Data availability and quality
 
 === Standard forms (or non-eForms) data not fully available
 
@@ -96,7 +98,7 @@ Not all of the standard forms data is available within the named graphs. For the
 
 === Currencies
 
-Currently, financial values are only available in their original currencies, as published in the notices. This prevents users from comparing financial values across notices.
+Financial values are only available in their original currencies, as published in the notices. This prevents users from comparing financial values across notices.
 
 **Workaround:** Use the currency-conversion snippet, which provides exchange rates: type `currency` in the query editor to insert it. The snippet uses the latest exchange rates, not the rates on the publication date of the notice. For more details, refer to the help page of the https://data.ted.europa.eu/[TED Open Data Service].
 
@@ -108,7 +110,7 @@ Data quality issues in the source XML files are carried over to the triples in t
 
 === Missing winner information in some notices
 
-Some result notices do not include winner (tenderer) information. This means queries that require winner details may return fewer results than expected.
+Some result notices do not include information about the winning tenderer. This means queries that require winner details may return fewer results than expected.
 
 **Workaround:** Use `OPTIONAL` when fetching winner information to avoid losing the entire notice from results.
 
